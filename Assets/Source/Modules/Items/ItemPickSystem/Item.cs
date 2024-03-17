@@ -11,6 +11,18 @@ namespace Modules.Items.ItemPickSystem
 
         public event Action Picked;
 
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.TryGetComponent(out Player _))
+                _canPicked = true;
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.TryGetComponent(out Player _))
+                _canPicked = false;
+        }
+
         private void OnDestroy()
         {
             _input.Received -= OnReceived;
@@ -26,19 +38,10 @@ namespace Modules.Items.ItemPickSystem
         private void OnReceived()
         {
             if (_canPicked)
+            {
                 Picked?.Invoke();
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.TryGetComponent(out Player _))
-                _canPicked = true;
-        }
-
-        private void OnTriggerExit(Collider other)
-        {
-            if (other.TryGetComponent(out Player _))
-                _canPicked = false;
+                Debug.Log(1);
+            }
         }
     }
 }
