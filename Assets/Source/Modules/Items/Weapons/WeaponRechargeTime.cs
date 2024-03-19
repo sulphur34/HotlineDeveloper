@@ -5,14 +5,14 @@ namespace Modules.Items.Weapons
 {
     internal class WeaponRechargeTime
     {
-        internal bool Recharged { get; private set; } = true;
-
         private readonly WaitForSeconds _waitForSeconds;
 
         internal WeaponRechargeTime(float value)
         {
             _waitForSeconds = new WaitForSeconds(value);
         }
+
+        internal bool Recharged { get; private set; } = true;
 
         internal IEnumerator WaitRecharged()
         {

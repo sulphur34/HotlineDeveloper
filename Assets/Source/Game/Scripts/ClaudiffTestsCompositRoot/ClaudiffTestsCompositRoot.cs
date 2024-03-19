@@ -1,6 +1,8 @@
 using Modules.CoroutineStarterSystem;
 using Modules.Items.ItemPickSystem;
 using Modules.Items.Weapons;
+using Modules.Items.Weapons.Ammunition;
+using Modules.Items.Weapons.InputSystem;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -15,9 +17,11 @@ public class ClaudiffTestsCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<IPickable>();
         builder.RegisterComponentInHierarchy<IItemSelectionInput>();
 
+        builder.RegisterComponentInHierarchy<IWeaponAmmunitionView>();
         builder.RegisterInstance(_weaponConfigFabric);
-        builder.RegisterEntryPoint<ShotDesktopInput>().As(typeof(ShotDesktopInput));
+        builder.RegisterEntryPoint<ShotDesktopInput>().As(typeof(IShotInput));
         builder.Register<Weapon>(Lifetime.Singleton);
+
         builder.RegisterBuildCallback(container => container.Resolve<Weapon>());
     }
 }

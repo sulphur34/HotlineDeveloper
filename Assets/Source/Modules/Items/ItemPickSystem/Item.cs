@@ -38,10 +38,7 @@ namespace Modules.Items.ItemPickSystem
         private void OnReceived()
         {
             if (_canPicked)
-            {
                 Picked?.Invoke();
-                Debug.Log(1);
-            }
         }
     }
 }

@@ -6,6 +6,7 @@ namespace Modules.Items.Weapons
     internal class WeaponConfig : ScriptableObject
     {
         [field: SerializeField] internal Bullet BulletPrefab { get; private set; }
+        [field: SerializeField] internal uint BulletsCount { get; private set; }
         [field: SerializeField] internal float BulletSpeed { get; private set; }
         [field: SerializeField] internal float RechargeTime { get; private set; }
     }
