@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Modules.MoveSystem;
+using UnityEngine;
 
-namespace Source.MoveSystem
+namespace Modules.MoveSystem
 {
     [RequireComponent(typeof(Rigidbody))]
     public class TestControler : MonoBehaviour
@@ -11,22 +12,22 @@ namespace Source.MoveSystem
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody>();
-            _mover = new Mover(_rigidbody, 5, 10);
+            _mover = new Mover(_rigidbody, 15, 10);
         }
 
         private void FixedUpdate()
         {
             if (Input.GetKey(KeyCode.W))
-                _mover.Move(Vector3.forward);
+                _mover.MoveHorizontal(Vector2.up);
             
             if (Input.GetKey(KeyCode.A))
-                _mover.Move(Vector3.left);
+                _mover.MoveHorizontal(Vector2.left);
             
             if (Input.GetKey(KeyCode.D))
-                _mover.Move(Vector3.right);
+                _mover.MoveHorizontal(Vector2.right);
             
             if (Input.GetKey(KeyCode.S))
-                _mover.Move(Vector3.back);
+                _mover.MoveHorizontal(Vector2.down);
 
             float mouseX = Input.GetAxis("Mouse X");
             

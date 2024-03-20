@@ -2,12 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27b5db7a-b918-4bd4-b47c-121f4f888e4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/3D murderer.unitypackage.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Actions/Attack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Actions/Attack.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Actions/Patrol.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Actions/Patrol.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Conditions/IsAlertByShot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Conditions/IsAlertByShot.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Conditions/IsVisible.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Conditions/IsVisible.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/IDamage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/IDamage.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorBricks/Conditions/System/Perception/IsTargetCloseAndInSight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorBricks/Conditions/System/Perception/IsTargetCloseAndInSight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnemyBehavior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnemyBehavior.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/Damage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/Damage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/Health.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/Health.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/IDamage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/IDamage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/IDamageable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/IDamageable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/IDamager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/IDamager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/MoveSystem.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/MoveSystem/IMover.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/MoveSystem/IMover.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/MoveSystem/Mover.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/MoveSystem/Mover.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/MoveSystem/TestController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/MoveSystem/TestController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wander.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wander.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +41,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/56/e4a4086d/Brick.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/b3/b394449b/GOCondition.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/a1/0d2baaa1/BasePrimitiveAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/97436df440ca462884c5332c1d8ebbe7941e00/92/abbfccf3/ProfilerWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/e3/ca5adc0b/PrimitiveAction.cs" root0="SKIP_HIGHLIGHTING" />
@@ -50,10 +76,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1912">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7312">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="1912" />
+      <option name="pid" value="7312" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -72,6 +98,7 @@
       <workItem from="1710772612106" duration="74000" />
       <workItem from="1710773249819" duration="2907000" />
       <workItem from="1710835226491" duration="11423000" />
+      <workItem from="1710920598680" duration="7426000" />
     </task>
     <servers />
   </component>
@@ -86,7 +113,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature-character-behaviour" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -110,6 +149,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Conditions/IsVisible.cs</url>
+          <line>21</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Characters\Enemies\EnemyBehavior\Conditions\IsVisible.cs" initialLine="21" containingFunctionPresentation="method 'Check'">
+            <startOffsets>
+              <option value="520" />
+            </startOffsets>
+            <endOffsets>
+              <option value="598" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
