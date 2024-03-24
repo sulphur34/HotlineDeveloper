@@ -1,6 +1,6 @@
 ﻿namespace Modules.Items.Weapons.Ammunition
 {
-    public interface IWeaponAmmunitionView 
+    internal interface IWeaponAmmunitionView 
     {
         void UpdateCount(uint count);
     }

@@ -9,12 +9,14 @@ namespace Modules.Items.Weapons
         [field: SerializeField] internal WeaponConfig Pistol { get; private set; }
         [field: SerializeField] internal WeaponConfig Shotgun { get; private set; }
 
-        internal WeaponConfig Get(Weapon weapon)
+        internal WeaponConfig Get(ShotStrategy shotStrategy)
         {
-            switch (weapon)
+            switch (shotStrategy)
             {
-                case Weapon:
+                case PistolStrategy:
                     return Pistol;
+                case ShotgunStrategy:
+                    return Shotgun;
                 default:
                     throw new ArgumentException();
             }

@@ -1,54 +1,40 @@
 using System;
-using Modules.CoroutineStarterSystem;
 using Modules.Items.Weapons.Ammunition;
-using Modules.Items.Weapons.InputSystem;
-using VContainer;
-using Object = UnityEngine.Object;
+using UnityEngine;
 
 namespace Modules.Items.Weapons
 {
-    public class Weapon : IDisposable
+    internal class Weapon : IDisposable
     {
-        private readonly WeaponConfig _config;
-        private readonly IShotInput _input;
-        private readonly CoroutineStarter _coroutineStarter;
+        private readonly ShotStrategy _shotStrategy;
+        private readonly MonoBehaviour _coroutineStarter;
         private readonly WeaponRechargeTime _rechargeTime;
         private readonly WeaponAmmunition _ammunition;
         private readonly WeaponAmmunitionPresenter _ammunitionPresenter;
 
-        [Inject]
-        internal Weapon(WeaponConfigFabric fabric, IShotInput input, CoroutineStarter coroutineStarter, IWeaponAmmunitionView ammunitionView)
-        { 
-            _config = fabric.Get(this);
-            _input = input;
+        internal Weapon(ShotStrategy shotStrategy, MonoBehaviour coroutineStarter, WeaponConfig config, IWeaponAmmunitionView ammunitionView)
+        {
+            _shotStrategy = shotStrategy;
             _coroutineStarter = coroutineStarter;
-            _rechargeTime = new WeaponRechargeTime(_config.RechargeTime);
-            _ammunition = new WeaponAmmunition(_config.BulletsCount);
+            _rechargeTime = new WeaponRechargeTime(config.RechargeTime);
+            _ammunition = new WeaponAmmunition(config.BulletsCount);
             _ammunitionPresenter = new WeaponAmmunitionPresenter(_ammunition, ammunitionView);
-
-            _input.Received += OnReceived;
         }
 
         public void Dispose()
         {
-            _input.Received -= OnReceived;
             _ammunitionPresenter.Dispose();
         }
 
-        private void Shot()
-        {
-            Bullet bullet = Object.Instantiate(_config.BulletPrefab);
-            bullet.Init(_config.BulletSpeed);
-
-            _ammunition.Remove();
-            _rechargeTime.Discharge();
-            _coroutineStarter.StartRoutine(_rechargeTime.WaitRecharged());
-        }
-
-        private void OnReceived()
+        internal void Shot()
         {
             if (_ammunition.Count > 0 && _rechargeTime.Recharged)
-                Shot();
+            {
+                _shotStrategy.Shot();
+                _ammunition.Remove();
+                _rechargeTime.Discharge();
+                _coroutineStarter.StartCoroutine(_rechargeTime.WaitRecharged());
+            }
         }
     }
 }
