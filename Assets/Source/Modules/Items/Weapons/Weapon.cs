@@ -12,7 +12,7 @@ namespace Modules.Items.Weapons
         private readonly WeaponAmmunition _ammunition;
         private readonly WeaponAmmunitionPresenter _ammunitionPresenter;
 
-        internal Weapon(ShotStrategy shotStrategy, MonoBehaviour coroutineStarter, WeaponConfig config, IWeaponAmmunitionView ammunitionView)
+        internal Weapon(ShotStrategy shotStrategy, MonoBehaviour coroutineStarter, WeaponConfig config, WeaponAmmunitionView ammunitionView)
         {
             _shotStrategy = shotStrategy;
             _coroutineStarter = coroutineStarter;

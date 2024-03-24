@@ -8,7 +8,6 @@ namespace Modules.Items.Weapons
     public class WeaponSetup : MonoBehaviour
     {
         [SerializeField] private ShotStrategy _shotStrategy;
-        [SerializeField] private WeaponAmmunitionView _weaponAmmunition;
 
         private WeaponPresenter _presenter;
 
@@ -18,11 +17,11 @@ namespace Modules.Items.Weapons
         }
 
         [Inject]
-        private void Construct(WeaponConfigFabric fabric, IShotInput shotInput)
+        private void Construct(WeaponConfigFabric fabric, IShotInput shotInput, WeaponAmmunitionView ammunitionView)
         {
             WeaponConfig config = fabric.Get(_shotStrategy);
             _shotStrategy.Init(config);
-            Weapon weapon = new Weapon(_shotStrategy, this, config, _weaponAmmunition);
+            Weapon weapon = new Weapon(_shotStrategy, this, config, ammunitionView);
             _presenter = new WeaponPresenter(weapon, shotInput);
         }
     }
