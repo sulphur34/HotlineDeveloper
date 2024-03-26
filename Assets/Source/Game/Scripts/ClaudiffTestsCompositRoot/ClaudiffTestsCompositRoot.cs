@@ -1,4 +1,4 @@
-using Modules.CoroutineStarterSystem;
+using Modules.BulletPoolSystem;
 using Modules.Items.ItemPickSystem;
 using Modules.Items.Weapons;
 using Modules.Items.Weapons.Ammunition;
@@ -9,18 +9,17 @@ using VContainer.Unity;
 
 public class ClaudiffTestsCompositRoot : LifetimeScope
 {
-    [SerializeField] private WeaponConfigFabric _weaponConfigFabric;
+    [SerializeField] private WeaponConfigFactory _weaponConfigFactory;
     [SerializeField] private GameObject _weaponSetupsParent;
 
     protected override void Configure(IContainerBuilder builder)
     {
-        builder.RegisterComponentInHierarchy<CoroutineStarter>();
-        builder.RegisterComponentInHierarchy<IPickable>();
         builder.RegisterComponentInHierarchy<IItemSelectionInput>();
+        builder.RegisterComponentInHierarchy<IPickable>();
 
-        builder.RegisterInstance(_weaponConfigFabric);
+        builder.RegisterInstance(_weaponConfigFactory);
         builder.RegisterComponentInHierarchy<WeaponAmmunitionView>();
-        builder.RegisterEntryPoint<ShotDesktopInput>().As(typeof(IShotInput));
+        builder.RegisterEntryPoint<ShotDesktopInput>().As<IShotInput>();
 
         builder.RegisterBuildCallback(container =>
         {

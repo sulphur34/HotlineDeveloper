@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Modules.BulletSystem;
+using UnityEngine;
 
 namespace Modules.Items.Weapons
 {

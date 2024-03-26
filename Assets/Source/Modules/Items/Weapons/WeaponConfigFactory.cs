@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Modules.Items.Weapons
 {
     [CreateAssetMenu(fileName = "Weapon Config Fabric")]
-    public class WeaponConfigFabric : ScriptableObject
+    public class WeaponConfigFactory : ScriptableObject
     {
         [field: SerializeField] internal WeaponConfig Pistol { get; private set; }
         [field: SerializeField] internal WeaponConfig Shotgun { get; private set; }
