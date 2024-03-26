@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Modules.Items.Weapons.Ammunition
 {
-    internal class WeaponAmmunitionView : MonoBehaviour, IWeaponAmmunitionView
+    public class WeaponAmmunitionView : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _text;
 

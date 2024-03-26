@@ -5,9 +5,9 @@ namespace Modules.Items.Weapons.Ammunition
     internal class WeaponAmmunitionPresenter : IDisposable
     {
         private readonly WeaponAmmunition _ammunition;
-        private readonly IWeaponAmmunitionView _view;
+        private readonly WeaponAmmunitionView _view;
 
-        internal WeaponAmmunitionPresenter(WeaponAmmunition ammunition, IWeaponAmmunitionView view)
+        internal WeaponAmmunitionPresenter(WeaponAmmunition ammunition, WeaponAmmunitionView view)
         {
             _ammunition = ammunition;
             _view = view;

@@ -18,7 +18,6 @@ namespace Modules.Items.Weapons
         public void Dispose()
         {
             _input.Received -= OnReceived;
-            _weapon.Dispose();
         }
 
         private void OnReceived()
