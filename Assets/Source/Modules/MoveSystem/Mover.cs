@@ -1,18 +1,21 @@
 ﻿using UnityEngine;
+using VContainer;
 
 namespace Modules.MoveSystem
 {
-    public class Mover : IMover
+    [RequireComponent(typeof(Rigidbody))]
+    public class Mover : IMovable
     {
         private Rigidbody _rigidbody;
         private float _moveMoveSpeed;
         private float _rotationSpeed;
 
-        public Mover(Rigidbody rigidbody, float moveSpeed = 1, float rotationSpeed = 1)
+        
+        public Mover(Rigidbody rigidbody, MoverConfig config)
         {
             _rigidbody = rigidbody;
-            _moveMoveSpeed = moveSpeed;
-            _rotationSpeed = rotationSpeed;
+            _moveMoveSpeed = config.MoveSpeed;
+            _rotationSpeed = config.RotationSpeed;
         }
 
         public void RotateHorizontal(float rotationValue)

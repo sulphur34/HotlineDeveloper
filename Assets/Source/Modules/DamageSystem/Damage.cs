@@ -1,14 +1,8 @@
-﻿namespace Source.DamageSystem
+namespace Modules.DamageSystem
 {
-    public class Damage : IDamage
+    public class Damage
     {
-        public Damage(float value, bool isLethal)
-        {
-            Value = value;
-            IsLethal = isLethal;
-        }
-
-        public float Value { get; }
-        public bool IsLethal { get; }
+        public float Value { get; private set; }        
+        public bool IsLethal { get; private set; }
     }
 }

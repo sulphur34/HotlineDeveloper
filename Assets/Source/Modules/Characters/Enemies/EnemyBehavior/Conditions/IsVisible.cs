@@ -29,11 +29,9 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
             RaycastHit hit;
             if (Physics.Linecast(gameObject.transform.position, target.transform.position, out hit))
             {
-                Debug.DrawRay(gameObject.transform.position, target.transform.position, Color.red);
                 float diffAngle = Vector3.Angle(direction, gameObject.transform.forward);
                 bool isVisible = hit.collider.gameObject == target && diffAngle < angle * 0.5f;
                 
-                Debug.Log(direction.magnitude + " " + isClose + "-" + diffAngle + " " + isVisible);
                 return isVisible;
             }
             

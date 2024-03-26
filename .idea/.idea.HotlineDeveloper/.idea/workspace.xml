@@ -2,36 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27b5db7a-b918-4bd4-b47c-121f4f888e4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Actions/Patrol.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Actions/Patrol.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Conditions/IsAlertByShot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Conditions/IsAlertByShot.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Conditions/IsVisible.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Conditions/IsVisible.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/IDamage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/IDamage.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BehaviorBricks/Conditions/System/Perception/IsTargetCloseAndInSight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorBricks/Conditions/System/Perception/IsTargetCloseAndInSight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyBehavior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnemyBehavior.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/Damage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/Damage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/Health.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/Health.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/IDamage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/IDamage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/IDamageable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/IDamageable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/IDamager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/DamageSystem/IDamager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/MoveSystem.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/MoveSystem/IMover.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/MoveSystem/IMover.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/MoveSystem/Mover.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/MoveSystem/Mover.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/MoveSystem/TestController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/MoveSystem/TestController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wander.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wander.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Chase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Chase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/CompositeRoot/CompositeRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/CompositeRoot/CompositeRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Characters/CharacterSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/CharacterSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/Mover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/Mover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/MoverSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/MoverSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,12 +17,27 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Game/CompositeRoot/CompositeRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/Mover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/56/e4a4086d/Brick.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/b3/b394449b/GOCondition.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/a1/0d2baaa1/BasePrimitiveAction.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/97436df440ca462884c5332c1d8ebbe7941e00/92/abbfccf3/ProfilerWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/e3/ca5adc0b/PrimitiveAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/Characters/Character.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c1702c564a404518b8e1e7f6fea9b84014c00/6a/ef223920/IContainerBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/a1/0d2baaa1/BasePrimitiveAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5b4d64329c244b82a41e50d0be224d7616200/90/a8a29527/IContainerBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/97436df440ca462884c5332c1d8ebbe7941e00/92/abbfccf3/ProfilerWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Unity/PlayerLoopRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -63,6 +56,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="rider.run.widget.enabled.cache" value="false" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -76,10 +70,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7312">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="14728">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="7312" />
+      <option name="pid" value="14728" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -99,6 +93,11 @@
       <workItem from="1710773249819" duration="2907000" />
       <workItem from="1710835226491" duration="11423000" />
       <workItem from="1710920598680" duration="7426000" />
+      <workItem from="1711392603580" duration="324000" />
+      <workItem from="1711392994866" duration="2452000" />
+      <workItem from="1711448671252" duration="24566000" />
+      <workItem from="1711527487864" duration="3148000" />
+      <workItem from="1711533414322" duration="16033000" />
     </task>
     <servers />
   </component>
@@ -165,5 +164,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

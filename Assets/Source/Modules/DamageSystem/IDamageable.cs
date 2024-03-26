@@ -1,6 +1,6 @@
-﻿namespace Source.DamageSystem
+﻿namespace Modules.DamageSystem
 {
-    public interface IDamageable
+    public interface IDamageable 
     {
         public void TakeDamage(Damage damage);
     }
