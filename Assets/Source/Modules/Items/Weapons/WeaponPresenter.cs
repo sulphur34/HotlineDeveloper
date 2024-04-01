@@ -5,24 +5,33 @@ namespace Modules.Items.Weapons
 {
     internal class WeaponPresenter : IDisposable
     {
-        private readonly Weapon _weapon;
+        private readonly IAttacker _attacker;
         private readonly IShotInput _input;
 
-        internal WeaponPresenter(Weapon weapon, IShotInput input)
+        internal WeaponPresenter(IAttacker attacker, IShotInput input)
         {
-            _weapon = weapon;
+            _attacker = attacker;
             _input = input;
             _input.Received += OnReceived;
+            _attacker.Attacked += OnAttacked;
         }
 
         public void Dispose()
         {
             _input.Received -= OnReceived;
+            _attacker.Attacked -= OnAttacked;
         }
+
+        protected virtual void RunAfterAttack() { }
 
         private void OnReceived()
         {
-            _weapon.Shot();
+            _attacker.Attack();
+        }
+
+        private void OnAttacked()
+        {
+            RunAfterAttack();
         }
     }
 }

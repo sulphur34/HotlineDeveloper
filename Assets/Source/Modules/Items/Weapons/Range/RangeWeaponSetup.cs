@@ -4,9 +4,9 @@ using Modules.Items.Weapons.InputSystem;
 using UnityEngine;
 using VContainer;
 
-namespace Modules.Items.Weapons
+namespace Modules.Items.Weapons.Range
 {
-    public class WeaponSetup : MonoBehaviour
+    public class RangeWeaponSetup : MonoBehaviour
     {
         [SerializeField] private ShotStrategy _shotStrategy;
 
@@ -31,7 +31,7 @@ namespace Modules.Items.Weapons
             WeaponAmmunition ammunition = new WeaponAmmunition(config.BulletsCount);
             _ammunitionPresenter = new WeaponAmmunitionPresenter(ammunition, ammunitionView);
 
-            Weapon weapon = new Weapon(_shotStrategy, this, config.RechargeTime, ammunition);
+            RangeWeapon weapon = new RangeWeapon(this, config.RechargeTime, _shotStrategy, ammunition);
             _weaponPresenter = new WeaponPresenter(weapon, shotInput);
         }
     }
