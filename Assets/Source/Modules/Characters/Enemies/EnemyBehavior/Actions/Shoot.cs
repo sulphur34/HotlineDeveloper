@@ -1,6 +1,7 @@
 using BehaviorDesigner.Runtime.Tasks;
 using Modules.DamageSystem;
 using Source.Modules.InputSystem;
+using UnityEngine;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 {
@@ -8,13 +9,12 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
     [TaskName("Shoot")]
     public class Shoot : Action
     {
-        public event System.Action AttackReceived;
+        private AiInput _input;
         
         public override TaskStatus OnUpdate()
         {
-            AttackReceived?.Invoke();
+            Debug.Log("piu-piu");
             return TaskStatus.Running;
         }
-
     }
 }
