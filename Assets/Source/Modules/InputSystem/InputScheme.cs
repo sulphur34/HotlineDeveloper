@@ -8,7 +8,6 @@ namespace Source.Modules.InputSystem
     {
         public InputScheme(IMoveInput moveInput, IRotateInput rotateInput, IAttackInput attackInput, IFinishOffInput finishOffInput)
         {
-            Debug.Log("VContainer on InputScheme");
             MoveInput = moveInput;
             RotateInput = rotateInput;
             AttackInput = attackInput;

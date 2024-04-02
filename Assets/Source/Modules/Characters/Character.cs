@@ -13,7 +13,6 @@ namespace Modules.Characters
         [Inject]
         public void Construct(InputScheme inputScheme)
         {
-            Debug.Log("VContainer on Character");
             _movable = GetComponent<IMovable>();
         }
     }

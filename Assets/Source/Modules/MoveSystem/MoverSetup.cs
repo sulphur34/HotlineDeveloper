@@ -14,8 +14,8 @@ namespace Modules.MoveSystem
         public void Construct(MoverConfig moverConfig, IMoveInput moveInput, IRotateInput rotateInput)
         {
             _rigidbody = GetComponent<Rigidbody>();
-            Mover mover = new Mover(_rigidbody, moverConfig);
-            _moverPresenter = new MoverPresenter(mover, moveInput, rotateInput);
+            RigidbodyMover rigidbodyMover = new RigidbodyMover(_rigidbody, moverConfig);
+            _moverPresenter = new MoverPresenter(rigidbodyMover, moveInput, rotateInput);
         }
 
         public void OnDestroy()

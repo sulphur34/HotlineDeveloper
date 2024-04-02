@@ -1,4 +1,5 @@
 using Modules.Characters;
+using Modules.Characters.Enemies.EnemyBehavior.Actions;
 using Modules.DamageSystem;
 using Modules.MoveSystem;
 using Source.Modules.InputSystem;
@@ -11,7 +12,7 @@ namespace Game.CompositeRoot
     public class CompositeRoot : LifetimeScope
     {
         [SerializeField] private MoverConfig _moverConfig;
-        
+
         protected override void Configure(IContainerBuilder builder)
         {
             InputConfigure(builder);
@@ -28,7 +29,10 @@ namespace Game.CompositeRoot
         {
             builder.Register<TestMoveController>(Lifetime.Singleton).AsImplementedInterfaces();
             builder.Register<TestAttackController>(Lifetime.Singleton).AsImplementedInterfaces();
-            builder.Register<InputScheme>(Lifetime.Singleton);
+            // builder.Register<MoveToTarget>(Lifetime.Transient).AsImplementedInterfaces();
+            // builder.Register<RotateToTarget>(Lifetime.Transient).AsImplementedInterfaces();
+            // builder.Register<InputScheme>(Lifetime.Singleton);
+            // builder.RegisterComponentInHierarchy<AiInput>().AsImplementedInterfaces();
         }
     }
 }
