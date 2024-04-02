@@ -2,50 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27b5db7a-b918-4bd4-b47c-121f4f888e4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Actions/MoveToTarget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Actions/MoveToTarget.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Actions/RotateToTarget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Actions/RotateToTarget.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Actions/Shoot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Actions/Shoot.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Actions/Track.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Enemies/EnemyBehavior/Actions/Track.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/AiInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/CharacterControllerMover.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/CharacterControllerMover.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IPickInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IPickInput.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/PickerSystem.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Editor/BehaviorDesigner.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Behavior Designer/Editor/BehaviorDesigner.Editor.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/BehaviorDesigner.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/BehaviorDesigner.Runtime.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/AudioSource/SetPan.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/AudioSource/SetPan.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/AudioSource/SetPanLevel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/AudioSource/SetPanLevel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/Light/GetIntensity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/Light/GetIntensity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/Light/SetShadowSoftness.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/Light/SetShadowSoftness.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/Light/SetShadowSoftnessFade.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/Light/SetShadowSoftnessFade.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/ParticleSystem/GetEmissionRate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/ParticleSystem/GetEmissionRate.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/ParticleSystem/SetEmissionRate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/ParticleSystem/SetEmissionRate.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/Physics2D/Raycast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Unity/Physics2D/Raycast.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Variables/SharedGameObjectList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Variables/SharedGameObjectList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Variables/SharedTransformList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Variables/SharedTransformList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/CompositeRoot/CompositeRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/CompositeRoot/CompositeRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Characters/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/TestAttackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/TestAttackController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/TestAttackController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/TestAttackController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/InputScheme.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/InputScheme.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/Mover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/RigidbodyMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/Mover.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/RigidbodyMover.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/IAttackInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IAttackInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/IAttackInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IAttackInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/IFinishOffInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IFinishOffInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/IFinishOffInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IFinishOffInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/IMoveInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IMoveInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/IMoveInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IMoveInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/IRotateInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IRotateInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/IRotateInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IRotateInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/TestMoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/TestMoveController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/CharacterControllerMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/Mover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/CharacterControllerMover.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/Mover.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/MoverPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/MoverPresenter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/MoverSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/MoverSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/TestMoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/TestMoveController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/TestMoveController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/TestMoveController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/CharacterTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/CharacterTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/CharacterTestScene/NavMesh-Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/CharacterTestScene/NavMesh-Terrain.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/CharacterTestScene/NavMesh-Terrain.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/CharacterTestScene/NavMesh-Terrain.asset.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +121,7 @@
       <workItem from="1711701510782" duration="21120000" />
       <workItem from="1711801132783" duration="6161000" />
       <workItem from="1711957138102" duration="19612000" />
-      <workItem from="1712046012493" duration="12358000" />
+      <workItem from="1712046012493" duration="15880000" />
     </task>
     <servers />
   </component>

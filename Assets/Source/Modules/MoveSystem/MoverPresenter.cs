@@ -4,13 +4,13 @@ namespace Modules.MoveSystem
 {
     internal class MoverPresenter
     {
-        private readonly RigidbodyMover _rigidbodyMover;
+        private readonly Mover _mover;
         private IMoveInput _moveInput;
         private IRotateInput _rotateInput;
 
-        public MoverPresenter(RigidbodyMover rigidbodyMover, IMoveInput moveInput, IRotateInput rotateInput)
+        public MoverPresenter(Mover mover, IMoveInput moveInput, IRotateInput rotateInput)
         {
-            _rigidbodyMover = rigidbodyMover;
+            _mover = mover;
             _moveInput = moveInput;
             _moveInput.MoveReceived += OnMove;
             _rotateInput = rotateInput;
@@ -25,12 +25,12 @@ namespace Modules.MoveSystem
 
         private void OnMove(Vector2 direction)
         {
-            _rigidbodyMover.MoveHorizontal(direction);
+            _mover.MoveHorizontal(direction);
         }
 
         private void OnRotate(float rotationValue)
         {
-            _rigidbodyMover.RotateHorizontal(rotationValue);
+            _mover.RotateHorizontal(rotationValue);
         }
     }
 }

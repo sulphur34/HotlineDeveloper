@@ -4,18 +4,17 @@ using VContainer;
 
 namespace Modules.MoveSystem
 {
-    [RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(CharacterController))]
     public class MoverSetup : MonoBehaviour
     {
         private MoverPresenter _moverPresenter;
-        private Rigidbody _rigidbody;
 
         [Inject]
         public void Construct(MoverConfig moverConfig, IMoveInput moveInput, IRotateInput rotateInput)
         {
-            _rigidbody = GetComponent<Rigidbody>();
-            RigidbodyMover rigidbodyMover = new RigidbodyMover(_rigidbody, moverConfig);
-            _moverPresenter = new MoverPresenter(rigidbodyMover, moveInput, rotateInput);
+            var characterController = GetComponent<CharacterController>();
+            Mover mover = new Mover(characterController, transform, moverConfig);
+            _moverPresenter = new MoverPresenter(mover, moveInput, rotateInput);
         }
 
         public void OnDestroy()

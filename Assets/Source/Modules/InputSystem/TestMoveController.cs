@@ -5,12 +5,12 @@ using VContainer.Unity;
 
 namespace Modules.MoveSystem
 {
-    public class TestMoveController : IMoveInput, IRotateInput, ITickable
+    public class TestMoveController : IMoveInput, IRotateInput, IFixedTickable
     {
         public event Action<Vector2> MoveReceived;
         public event Action<float> RotationReceived;
 
-        public void Tick()
+        public void FixedTick()
         {
             if (Input.GetKey(KeyCode.W))
                 MoveReceived?.Invoke(Vector2.up);
