@@ -22,9 +22,9 @@ namespace Modules.Items.Weapons.Range
         }
 
         [Inject]
-        private void Construct(WeaponConfigFactory factory, IShotInput shotInput, WeaponAmmunitionView ammunitionView)
+        private void Construct(RangeWeaponConfigFactory factory, IShotInput shotInput, WeaponAmmunitionView ammunitionView)
         {
-            WeaponConfig config = factory.Get(_shotStrategy);
+            RangeWeaponConfig config = factory.Get(_shotStrategy);
             _bulletPool = new BulletPool(config.BulletPrefab, transform);
             _shotStrategy.Init(config, _bulletPool);
 

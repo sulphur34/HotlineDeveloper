@@ -1,5 +1,6 @@
 ﻿using Modules.BulletPoolSystem;
 using Modules.BulletSystem;
+using Modules.Items.Weapons.Range;
 using UnityEngine;
 
 namespace Modules.Items.Weapons
@@ -8,7 +9,7 @@ namespace Modules.Items.Weapons
     {
         [SerializeField] private BulletSpawnPoint _bulletSpawnPoint;
         
-        private WeaponConfig _config;
+        private RangeWeaponConfig _config;
         private BulletPool _bulletPool;
 
         protected float BulletSpeed => _config.BulletSpeed;
@@ -21,7 +22,7 @@ namespace Modules.Items.Weapons
 
         internal abstract void Shot();
 
-        internal void Init(WeaponConfig config, BulletPool bulletPool)
+        internal void Init(RangeWeaponConfig config, BulletPool bulletPool)
         {
             _config = config;
             _bulletPool = bulletPool;

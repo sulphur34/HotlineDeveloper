@@ -1,10 +1,10 @@
 ﻿using Modules.BulletSystem;
 using UnityEngine;
 
-namespace Modules.Items.Weapons
+namespace Modules.Items.Weapons.Range
 {
-    [CreateAssetMenu(fileName = "Weapon Config")]
-    internal class WeaponConfig : ScriptableObject
+    [CreateAssetMenu(fileName = "Range Weapon Config")]
+    internal class RangeWeaponConfig : ScriptableObject
     {
         [field: SerializeField] internal Bullet BulletPrefab { get; private set; }
         [field: SerializeField] internal uint BulletsCount { get; private set; }
