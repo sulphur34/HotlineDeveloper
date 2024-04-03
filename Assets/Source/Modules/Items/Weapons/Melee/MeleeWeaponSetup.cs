@@ -20,8 +20,10 @@ namespace Modules.Items.Weapons.Melee
         [Inject]
         private void Construct(IShotInput shotInput)
         {
-            MeleeWeapon meleeWeapon = new MeleeWeapon(this, _attakeTime, _collider, _attakeTime);
-            _weaponPresenter = new MeleeWeaponPresenter(meleeWeapon, shotInput, _meleeWeaponView);
+            MeleeAttackModule attackModule = new MeleeAttackModule(_collider, _attakeTime, this);
+            WeaponRechargeTime rechargeTime = new WeaponRechargeTime(_attakeTime);
+            Weapon weapon = new Weapon(this, rechargeTime, attackModule);
+            _weaponPresenter = new MeleeWeaponPresenter(weapon, shotInput, _meleeWeaponView);
         }
     }
 }

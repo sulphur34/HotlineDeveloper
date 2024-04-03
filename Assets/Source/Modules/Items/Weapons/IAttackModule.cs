@@ -2,10 +2,8 @@
 
 namespace Modules.Items.Weapons
 {
-    internal interface IAttacker
+    internal interface IAttackModule
     {
-        event Action Attacked;
-
         void Attack();
     }
 }

@@ -1,40 +1,32 @@
 using System;
-using System.Collections;
 using UnityEngine;
 
 namespace Modules.Items.Weapons
 {
-    internal abstract class Weapon : IAttacker
+    internal class Weapon
     {
         private readonly MonoBehaviour _coroutineStarter;
         private readonly WeaponRechargeTime _rechargeTime;
+        private readonly IAttackModule _attackModule;
 
-        internal Weapon(MonoBehaviour coroutineStarter, float rechargeTime)
+        internal Weapon(MonoBehaviour coroutineStarter, WeaponRechargeTime rechargeTime, IAttackModule attackModule)
         {
             _coroutineStarter = coroutineStarter;
-            _rechargeTime = new WeaponRechargeTime(rechargeTime);
+            _rechargeTime = rechargeTime;
+            _attackModule = attackModule;
         }
 
-        public event Action Attacked;
+        internal event Action Attacked;
 
-        protected abstract bool CanAttack { get; }
-
-        public void Attack()
+        internal void Attack()
         {
-            if (CanAttack && _rechargeTime.Recharged)
+            if (_rechargeTime.Recharged)
             {
-                RealizeAttack();
+                _attackModule.Attack();
                 _rechargeTime.Discharge();
                 _coroutineStarter.StartCoroutine(_rechargeTime.WaitRecharged());
                 Attacked?.Invoke();
             }
-        }
-
-        protected abstract void RealizeAttack();
-
-        protected void StartCoroutine(IEnumerator routine)
-        {
-            _coroutineStarter.StartCoroutine(routine);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Modules.Items.Weapons.Melee
     {
         private readonly MeleeWeaponView _meleeWeaponView;
 
-        internal MeleeWeaponPresenter(IAttacker attacker, IShotInput input, MeleeWeaponView meleeWeaponView) : base(attacker, input) 
+        internal MeleeWeaponPresenter(Weapon weapon, IShotInput input, MeleeWeaponView meleeWeaponView) : base(weapon, input) 
         {
             _meleeWeaponView = meleeWeaponView;
         }

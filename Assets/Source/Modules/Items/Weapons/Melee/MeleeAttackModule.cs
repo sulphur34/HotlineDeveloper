@@ -1,28 +1,27 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 namespace Modules.Items.Weapons.Melee
 {
-    internal class MeleeWeapon : Weapon
+    internal class MeleeAttackModule : IMeleeAttackModule
     {
         private readonly Collider _collider;
         private readonly float _attakeTime;
+        private readonly MonoBehaviour _monoBehaviour;
 
-        public MeleeWeapon(
-            MonoBehaviour coroutineStarter, 
-            float rechargeTime, 
-            Collider collider, 
-            float attakeTime) : base(coroutineStarter, rechargeTime)
+        public MeleeAttackModule(Collider collider, float attakeTime, MonoBehaviour monoBehaviour)
         {
             _collider = collider;
             _attakeTime = attakeTime;
+            _monoBehaviour = monoBehaviour;
         }
 
-        protected override bool CanAttack => true;
+        public event Action Attacked;
 
-        protected override void RealizeAttack()
+        public void Attack()
         {
-            StartCoroutine(DisableAttack());
+            _monoBehaviour.StartCoroutine(DisableAttack());
         }
 
         private IEnumerator DisableAttack()

@@ -10,7 +10,7 @@ namespace Modules.Items.Weapons.InputSystem
 
         public void Tick()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
                 Received?.Invoke();
         }
     }

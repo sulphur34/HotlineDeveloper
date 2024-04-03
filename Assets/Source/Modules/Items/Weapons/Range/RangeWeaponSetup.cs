@@ -31,7 +31,9 @@ namespace Modules.Items.Weapons.Range
             WeaponAmmunition ammunition = new WeaponAmmunition(config.BulletsCount);
             _ammunitionPresenter = new WeaponAmmunitionPresenter(ammunition, ammunitionView);
 
-            RangeWeapon weapon = new RangeWeapon(this, config.RechargeTime, _shotStrategy, ammunition);
+            RangeAttackModule rangeWeapon = new RangeAttackModule(_shotStrategy, ammunition);
+            WeaponRechargeTime rechargeTime = new WeaponRechargeTime(config.RechargeTime);
+            Weapon weapon = new Weapon(this, rechargeTime, rangeWeapon);
             _weaponPresenter = new WeaponPresenter(weapon, shotInput);
         }
     }
