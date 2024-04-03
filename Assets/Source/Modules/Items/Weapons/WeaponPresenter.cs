@@ -13,25 +13,16 @@ namespace Modules.Items.Weapons
             _weapon = weapon;
             _input = input;
             _input.Received += OnReceived;
-            _weapon.Attacked += OnAttacked;
         }
 
         public void Dispose()
         {
             _input.Received -= OnReceived;
-            _weapon.Attacked -= OnAttacked;
         }
-
-        protected virtual void RunAfterAttack() { }
 
         private void OnReceived()
         {
             _weapon.Attack();
-        }
-
-        private void OnAttacked()
-        {
-            RunAfterAttack();
         }
     }
 }

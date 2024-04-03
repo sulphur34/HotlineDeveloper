@@ -1,10 +1,9 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
 namespace Modules.Items.Weapons.Melee
 {
-    internal class MeleeAttackModule : IMeleeAttackModule
+    internal class MeleeAttackModule : IAttackModule
     {
         private readonly Collider _collider;
         private readonly float _attakeTime;
@@ -17,10 +16,9 @@ namespace Modules.Items.Weapons.Melee
             _monoBehaviour = monoBehaviour;
         }
 
-        public event Action Attacked;
-
         public void Attack()
         {
+            _collider.enabled = true;
             _monoBehaviour.StartCoroutine(DisableAttack());
         }
 

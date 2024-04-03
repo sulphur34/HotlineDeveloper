@@ -6,7 +6,6 @@ namespace Modules.Items.Weapons.Melee
 {
     public class MeleeWeaponSetup : MonoBehaviour
     {
-        [SerializeField] private MeleeWeaponView _meleeWeaponView;
         [SerializeField] private Collider _collider;
         [SerializeField] private float _attakeTime;
            
@@ -23,7 +22,7 @@ namespace Modules.Items.Weapons.Melee
             MeleeAttackModule attackModule = new MeleeAttackModule(_collider, _attakeTime, this);
             WeaponRechargeTime rechargeTime = new WeaponRechargeTime(_attakeTime);
             Weapon weapon = new Weapon(this, rechargeTime, attackModule);
-            _weaponPresenter = new MeleeWeaponPresenter(weapon, shotInput, _meleeWeaponView);
+            _weaponPresenter = new WeaponPresenter(weapon, shotInput);
         }
     }
 }

@@ -3,7 +3,7 @@ using System;
 
 namespace Modules.Items.Weapons.Range
 {
-    internal class RangeAttackModule : IRangeAttackModule
+    internal class RangeAttackModule : IAttackModule
     {
         private readonly ShotStrategy _shotStrategy;
         private readonly WeaponAmmunition _ammunition;
