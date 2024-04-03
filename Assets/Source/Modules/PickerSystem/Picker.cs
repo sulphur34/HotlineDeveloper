@@ -9,18 +9,22 @@ namespace Modules.PickerSystem
         private float _pickRadius;
         private Vector3 _pickPosition;
         private Transform _transform;
-        
-        public event Action<IPickable> Picked;
+        private Transform _itemPlaceholder;
 
-        public Picker(PickerConfig config, Transform transform)
+        private Transform _item;
+        
+        public event Action<Transform> Picked;
+
+        public Picker(PickerConfig config, Transform transform, Transform itemPlaceholder)
         {
             _pickRadius = config.PickRadius;
             _transform = transform;
+            _itemPlaceholder = itemPlaceholder;
         }
 
         public void Pick()
         {
-            IPickable pickable = GetNearestItem();
+            Transform pickable = GetNearestItem();
             
             if (pickable == null)
                 return;
@@ -28,15 +32,19 @@ namespace Modules.PickerSystem
             Picked?.Invoke(pickable);
         }
 
-        private IPickable GetNearestItem()
+        private void EquipItem(Transform pickable)
         {
-            IPickable item = Physics.OverlapSphere(_pickPosition, _pickRadius)
+            pickable.SetParent(_itemPlaceholder);
+        }
+
+        private Transform GetNearestItem()
+        {
+            _item = Physics.OverlapSphere(_pickPosition, _pickRadius)
                 .Where(collider => collider.GetComponent<IPickable>() != null)
                 .OrderBy(collider => (collider.transform.position - _transform.position).magnitude)
-                .Select(collider => collider.GetComponent<IPickable>())
-                .FirstOrDefault();
+                .FirstOrDefault().transform;
 
-            return item;
+            return _item;
         }
     }
 }

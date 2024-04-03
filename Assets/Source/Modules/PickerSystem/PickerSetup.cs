@@ -7,6 +7,7 @@ namespace Modules.PickerSystem
 {
     public class PickerSetup : MonoBehaviour
     {
+        [SerializeField] private Transform _itemPlaceholder;
         private IPickInput _pickInput;
         private PickerPresenter _pickerPresenter;
         private Transform _transform;
@@ -15,7 +16,7 @@ namespace Modules.PickerSystem
         public void Construct(PickerConfig config, IPickInput pickInput)
         {
             _transform = transform;
-            Picker picker = new Picker(config,_transform);
+            Picker picker = new Picker(config,_transform, _itemPlaceholder);
         }
 
         public void OnDestroy()
