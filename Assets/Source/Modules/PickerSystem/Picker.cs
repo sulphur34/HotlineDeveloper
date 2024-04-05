@@ -12,7 +12,7 @@ namespace Modules.PickerSystem
         private Transform _itemPlaceholder;
 
         private Transform _item;
-        
+
         public event Action<Transform> Picked;
 
         public Picker(PickerConfig config, Transform transform, Transform itemPlaceholder)
@@ -25,10 +25,10 @@ namespace Modules.PickerSystem
         public void Pick()
         {
             Transform pickable = GetNearestItem();
-            
+
             if (pickable == null)
                 return;
-            
+
             Picked?.Invoke(pickable);
         }
 
@@ -42,7 +42,8 @@ namespace Modules.PickerSystem
             _item = Physics.OverlapSphere(_pickPosition, _pickRadius)
                 .Where(collider => collider.GetComponent<IPickable>() != null)
                 .OrderBy(collider => (collider.transform.position - _transform.position).magnitude)
-                .FirstOrDefault().transform;
+                .FirstOrDefault()
+                ?.transform;
 
             return _item;
         }

@@ -4,14 +4,15 @@ using UnityEngine;
 
 namespace Modules.DamageSystem
 {
-    internal class Consciousness : IKnockable
+    public class Condition : IKnockable
     {
         private WaitForSeconds _waitForSeconds;
         public bool IsConscious { get; private set; }
 
+        public event Action Knoked;
         public event Action Recovered;
     
-        public Consciousness(float recoverTime)
+        public Condition(float recoverTime)
         {
             _waitForSeconds = new WaitForSeconds(recoverTime);
         }
@@ -19,6 +20,7 @@ namespace Modules.DamageSystem
         public void Knockout()
         {
             IsConscious = false;
+            Knoked?.Invoke();
         }
 
         public IEnumerator Recovering()
