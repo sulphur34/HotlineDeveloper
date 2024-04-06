@@ -1,22 +1,23 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using System;
+using Cysharp.Threading.Tasks;
+using System.Threading;
 
 namespace Modules.Items.Weapons
 {
     internal class WeaponRechargeTime
     {
-        private readonly WaitForSeconds _waitForSeconds;
+        private readonly float _delay;
 
-        internal WeaponRechargeTime(float value)
+        internal WeaponRechargeTime(float delay)
         {
-            _waitForSeconds = new WaitForSeconds(value);
+            _delay = delay;
         }
 
         internal bool Recharged { get; private set; } = true;
 
-        internal IEnumerator WaitRecharged()
+        internal async UniTask WaitRecharged(CancellationToken cancellationToken)
         {
-            yield return _waitForSeconds;
+            await UniTask.Delay(TimeSpan.FromSeconds(_delay), cancellationToken: cancellationToken);
             Recharged = true;
         }
 

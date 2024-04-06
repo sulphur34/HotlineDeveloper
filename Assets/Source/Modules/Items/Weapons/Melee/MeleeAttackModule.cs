@@ -1,4 +1,6 @@
-using System.Collections;
+using System;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace Modules.Items.Weapons.Melee
@@ -7,24 +9,24 @@ namespace Modules.Items.Weapons.Melee
     {
         private readonly Collider _collider;
         private readonly float _attakeTime;
-        private readonly MonoBehaviour _monoBehaviour;
+        private readonly CancellationToken _cancellationToken;
 
-        public MeleeAttackModule(Collider collider, float attakeTime, MonoBehaviour monoBehaviour)
+        public MeleeAttackModule(Collider collider, float attakeTime, CancellationToken cancellationToken)
         {
             _collider = collider;
             _attakeTime = attakeTime;
-            _monoBehaviour = monoBehaviour;
+            _cancellationToken = cancellationToken;
         }
 
         public void Attack()
         {
             _collider.enabled = true;
-            _monoBehaviour.StartCoroutine(DisableAttack());
+            DisableAttack();
         }
 
-        private IEnumerator DisableAttack()
+        private async UniTask DisableAttack()
         {
-            yield return new WaitForSeconds(_attakeTime);
+            await UniTask.Delay(TimeSpan.FromSeconds(_attakeTime), cancellationToken: _cancellationToken);
             _collider.enabled = false;
         }
     }

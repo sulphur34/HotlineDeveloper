@@ -1,5 +1,4 @@
 ﻿using Modules.Items.Weapons.Ammunition;
-using System;
 
 namespace Modules.Items.Weapons.Range
 {
@@ -13,8 +12,6 @@ namespace Modules.Items.Weapons.Range
             _shotStrategy = shotStrategy;
             _ammunition = ammunition;
         }
-
-        public event Action Attacked;
 
         public void Attack()
         {

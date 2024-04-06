@@ -1,19 +1,19 @@
 using System;
-using UnityEngine;
+using System.Threading;
 
 namespace Modules.Items.Weapons
 {
     internal class Weapon
     {
-        private readonly MonoBehaviour _coroutineStarter;
         private readonly WeaponRechargeTime _rechargeTime;
         private readonly IAttackModule _attackModule;
+        private readonly CancellationToken _cancellationToken;
 
-        internal Weapon(MonoBehaviour coroutineStarter, WeaponRechargeTime rechargeTime, IAttackModule attackModule)
+        internal Weapon(WeaponRechargeTime rechargeTime, IAttackModule attackModule, CancellationToken cancellationToken)
         {
-            _coroutineStarter = coroutineStarter;
             _rechargeTime = rechargeTime;
             _attackModule = attackModule;
+            _cancellationToken = cancellationToken;
         }
 
         internal event Action Attacked;
@@ -24,7 +24,7 @@ namespace Modules.Items.Weapons
             {
                 _attackModule.Attack();
                 _rechargeTime.Discharge();
-                _coroutineStarter.StartCoroutine(_rechargeTime.WaitRecharged());
+                _rechargeTime.WaitRecharged(_cancellationToken);
                 Attacked?.Invoke();
             }
         }

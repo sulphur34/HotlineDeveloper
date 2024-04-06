@@ -1,4 +1,5 @@
-﻿using Modules.BulletPoolSystem;
+﻿using Cysharp.Threading.Tasks;
+using Modules.BulletPoolSystem;
 using Modules.Items.Weapons.Ammunition;
 using Modules.Items.Weapons.InputSystem;
 using UnityEngine;
@@ -33,7 +34,7 @@ namespace Modules.Items.Weapons.Range
 
             RangeAttackModule rangeWeapon = new RangeAttackModule(_shotStrategy, ammunition);
             WeaponRechargeTime rechargeTime = new WeaponRechargeTime(config.RechargeTime);
-            Weapon weapon = new Weapon(this, rechargeTime, rangeWeapon);
+            Weapon weapon = new Weapon(rechargeTime, rangeWeapon, this.GetCancellationTokenOnDestroy());
             _weaponPresenter = new WeaponPresenter(weapon, shotInput);
         }
     }
