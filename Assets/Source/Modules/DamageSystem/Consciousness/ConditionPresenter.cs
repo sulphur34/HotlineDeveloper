@@ -2,32 +2,32 @@ namespace Modules.DamageSystem
 {
     public class ConditionPresenter
     {
-        private Condition _condition;
-        private ConditionView _conditionView;
+        private Consciouness _consciouness;
+        private ConsciounessView _consciounessView;
         
-        public ConditionPresenter(Condition condition, ConditionView conditionView)
+        public ConditionPresenter(Consciouness consciouness, ConsciounessView consciounessView)
         {
-            _condition = condition;
-            _conditionView = conditionView;
+            _consciouness = consciouness;
+            _consciounessView = consciounessView;
 
-            _condition.Knoked += OnKnockedOut;
-            _condition.Recovered += OnRecover;
+            _consciouness.Knoked += OnKnockedOut;
+            _consciouness.Recovered += OnRecover;
         }
 
         private void OnKnockedOut()
         {
-            _conditionView.OnKnockedOut();
+            _consciounessView.OnKnockedOut();
         }
 
         private void OnRecover()
         {
-            _conditionView.OnRecover();
+            _consciounessView.OnRecover();
         }
 
         public void Dispose()
         {
-            _condition.Knoked -= OnKnockedOut;
-            _condition.Recovered -= OnRecover;
+            _consciouness.Knoked -= OnKnockedOut;
+            _consciouness.Recovered -= OnRecover;
         }
     }
 }

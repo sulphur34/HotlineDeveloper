@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Modules.DamageSystem
 {
-    public class Condition : IKnockable
+    public class Consciouness : IKnockable
     {
         private WaitForSeconds _waitForSeconds;
         public bool IsConscious { get; private set; }
@@ -12,7 +12,7 @@ namespace Modules.DamageSystem
         public event Action Knoked;
         public event Action Recovered;
     
-        public Condition(float recoverTime)
+        public Consciouness(float recoverTime)
         {
             _waitForSeconds = new WaitForSeconds(recoverTime);
         }

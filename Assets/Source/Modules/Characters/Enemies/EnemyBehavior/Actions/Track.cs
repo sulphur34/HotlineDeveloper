@@ -10,6 +10,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
     {
         public SharedGameObject Target;
         public SharedVector3 LastTargetPosition;
+        public SharedBool HasLastTargetPosition;
 
         private Transform _targetTransform;
         
@@ -24,6 +25,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
                 return TaskStatus.Failure;
 
             LastTargetPosition.Value = _targetTransform.position;
+            HasLastTargetPosition.Value = true;
             return TaskStatus.Running;
         }
     }
