@@ -7,8 +7,6 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
     {
         public SharedGameObject Target;
         
-        
-
         public override void OnAwake()
         {
             
