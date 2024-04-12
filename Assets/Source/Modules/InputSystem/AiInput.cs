@@ -1,10 +1,7 @@
 using System;
-using System.Numerics;
 using Modules.DamageSystem;
-using Modules.MoveSystem;
 using Source.Modules.InputSystem.Interfaces;
 using UnityEngine;
-using Vector2 = UnityEngine.Vector2;
 
 namespace Source.Modules.InputSystem
 {

@@ -1,4 +1,3 @@
-using Modules.MoveSystem;
 using Source.Modules.InputSystem.Interfaces;
 using UnityEngine;
 using VContainer;
@@ -16,7 +15,7 @@ namespace Modules.PickerSystem
         public void Construct(PickerConfig config, IPickInput pickInput)
         {
             _transform = transform;
-            Picker picker = new Picker(config,_transform, _itemPlaceholder);
+            Picker picker = new Picker(config);
         }
 
         public void OnDestroy()

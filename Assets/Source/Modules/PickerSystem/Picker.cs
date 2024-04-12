@@ -4,22 +4,19 @@ using UnityEngine;
 
 namespace Modules.PickerSystem
 {
-    public class Picker : IPicker
+    public class Picker : MonoBehaviour, IPicker
     {
-        private float _pickRadius;
-        private Vector3 _pickPosition;
-        private Transform _transform;
-        private Transform _itemPlaceholder;
+        private float _radius;
+        private Transform _position;
 
         private Transform _item;
 
         public event Action<Transform> Picked;
 
-        public Picker(PickerConfig config, Transform transform, Transform itemPlaceholder)
+        public Picker(PickerConfig config)
         {
-            _pickRadius = config.PickRadius;
-            _transform = transform;
-            _itemPlaceholder = itemPlaceholder;
+            _radius = config.Radius;
+            _position = config.Position;
         }
 
         public void Pick()
@@ -32,16 +29,11 @@ namespace Modules.PickerSystem
             Picked?.Invoke(pickable);
         }
 
-        private void EquipItem(Transform pickable)
-        {
-            pickable.SetParent(_itemPlaceholder);
-        }
-
         private Transform GetNearestItem()
         {
-            _item = Physics.OverlapSphere(_pickPosition, _pickRadius)
-                .Where(collider => collider.GetComponent<IPickable>() != null)
-                .OrderBy(collider => (collider.transform.position - _transform.position).magnitude)
+            _item = Physics.OverlapSphere(_position.position, _radius)
+                .Where(collider => collider.GetComponent<IPickable>() != null && collider.transform != _item)
+                .OrderBy(collider => (collider.transform.position - _position.position).magnitude)
                 .FirstOrDefault()
                 ?.transform;
 
