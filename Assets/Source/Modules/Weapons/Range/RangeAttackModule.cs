@@ -1,6 +1,6 @@
-﻿using Modules.Items.Weapons.Ammunition;
+﻿using Modules.Weapons.Ammunition;
 
-namespace Modules.Items.Weapons.Range
+namespace Modules.Weapons.Range
 {
     internal class RangeAttackModule : IAttackModule
     {

@@ -1,7 +1,9 @@
 using Modules.Items.ItemPickSystem;
-using Modules.Items.Weapons.Ammunition;
-using Modules.Items.Weapons.InputSystem;
-using Modules.Items.Weapons.Range;
+using Modules.PlayerWeaponsHandler;
+using Modules.Weapons.Ammunition;
+using Modules.Weapons.InputSystem;
+using Modules.Weapons.Range;
+using Modules.WeaponItemSystem;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -19,6 +21,8 @@ public class ClaudiffTestsCompositRoot : LifetimeScope
         builder.RegisterInstance(_weaponConfigFactory);
         builder.RegisterComponentInHierarchy<WeaponAmmunitionView>();
         builder.RegisterEntryPoint<ShotDesktopInput>().As<IShotInput>();
+        builder.RegisterEntryPoint<DesktopWeaponItemInput>().As<IWeaponItemInput>();
+        builder.RegisterComponentInHierarchy<PlayerWeaponHandler>();
 
         builder.RegisterBuildCallback(container =>
         {

@@ -1,7 +1,7 @@
 ﻿using Modules.BulletSystem;
 using UnityEngine;
 
-namespace Modules.Items.Weapons
+namespace Modules.Weapons
 {
     internal class ShotgunStrategy : ShotStrategy
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Modules.Items.Weapons.Ammunition
+namespace Modules.Weapons.Ammunition
 {
     internal class WeaponAmmunitionPresenter : IDisposable
     {

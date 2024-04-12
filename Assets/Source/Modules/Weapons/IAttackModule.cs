@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Modules.Items.Weapons
+﻿namespace Modules.Weapons
 {
-    internal interface IAttackModule
+    public interface IAttackModule
     {
         void Attack();
     }

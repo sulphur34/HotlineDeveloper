@@ -1,9 +1,9 @@
 ﻿using Modules.BulletPoolSystem;
 using Modules.BulletSystem;
-using Modules.Items.Weapons.Range;
+using Modules.Weapons.Range;
 using UnityEngine;
 
-namespace Modules.Items.Weapons
+namespace Modules.Weapons
 {
     internal abstract class ShotStrategy : MonoBehaviour
     {

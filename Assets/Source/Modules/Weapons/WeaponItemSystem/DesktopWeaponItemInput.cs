@@ -2,15 +2,15 @@
 using UnityEngine;
 using VContainer.Unity;
 
-namespace Modules.Weapons.InputSystem
+namespace Modules.WeaponItemSystem
 {
-    public class ShotDesktopInput : IShotInput, ITickable
+    public class DesktopWeaponItemInput : IWeaponItemInput, ITickable
     {
         public event Action Received;
 
         public void Tick()
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(1))
                 Received?.Invoke();
         }
     }

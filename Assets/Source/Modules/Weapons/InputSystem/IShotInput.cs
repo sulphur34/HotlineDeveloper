@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Modules.Items.Weapons.InputSystem
+namespace Modules.Weapons.InputSystem
 {
     public interface IShotInput
     {

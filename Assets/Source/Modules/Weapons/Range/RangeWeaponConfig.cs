@@ -1,7 +1,7 @@
 ﻿using Modules.BulletSystem;
 using UnityEngine;
 
-namespace Modules.Items.Weapons.Range
+namespace Modules.Weapons.Range
 {
     [CreateAssetMenu(fileName = "Range Weapon Config")]
     internal class RangeWeaponConfig : ScriptableObject

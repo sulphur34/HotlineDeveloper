@@ -1,9 +1,9 @@
 using System;
 using System.Threading;
 
-namespace Modules.Items.Weapons
+namespace Modules.Weapons
 {
-    internal class Weapon
+    public class Weapon
     {
         private readonly WeaponRechargeTime _rechargeTime;
         private readonly IAttackModule _attackModule;

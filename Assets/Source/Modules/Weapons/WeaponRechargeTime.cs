@@ -2,7 +2,7 @@
 using Cysharp.Threading.Tasks;
 using System.Threading;
 
-namespace Modules.Items.Weapons
+namespace Modules.Weapons
 {
     internal class WeaponRechargeTime
     {

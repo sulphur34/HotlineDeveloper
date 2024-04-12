@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-namespace Modules.Items.Weapons.Ammunition
+namespace Modules.Weapons.Ammunition
 {
     public class WeaponAmmunitionView : MonoBehaviour
     {

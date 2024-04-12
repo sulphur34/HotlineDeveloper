@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Modules.Items.Weapons.Range
+namespace Modules.Weapons.Range
 {
     [CreateAssetMenu(fileName = "Range Weapon Config Fabric")]
     public class RangeWeaponConfigFactory : ScriptableObject

@@ -3,7 +3,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Modules.Items.Weapons.Melee
+namespace Modules.Weapons.Melee
 {
     internal class MeleeAttackModule : IAttackModule
     {
