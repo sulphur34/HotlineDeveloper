@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using VContainer;
 
@@ -5,18 +6,18 @@ namespace Modules.DamageSystem
 {
     public class ConsciounessSetup : MonoBehaviour
     {
-        private ConditionPresenter _conditionPresenter;
+        private ConsciounessPresenter _consciounessPresenter;
 
         [Inject]
-        public void Construct(ConsciounessConfig config, ConditionPresenter conditionPresenter, ConsciounessView consciounessView)
+        public void Construct(ConsciounessConfig config, ConsciounessPresenter consciounessPresenter, ConsciounessView consciounessView)
         {
-            Consciouness consciouness = new Consciouness(config.RecoverTime);
-            _conditionPresenter = new ConditionPresenter(consciouness, consciounessView);
+            Consciouness consciouness = new Consciouness(config.RecoverTime, this.GetCancellationTokenOnDestroy());
+            _consciounessPresenter = new ConsciounessPresenter(consciouness, consciounessView);
         }
 
         private void OnDestroy()
         {
-            _conditionPresenter.Dispose();
+            _consciounessPresenter.Dispose();
         }
     }
 }

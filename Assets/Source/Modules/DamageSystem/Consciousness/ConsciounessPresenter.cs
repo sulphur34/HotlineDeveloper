@@ -1,11 +1,11 @@
 namespace Modules.DamageSystem
 {
-    public class ConditionPresenter
+    public class ConsciounessPresenter
     {
         private Consciouness _consciouness;
         private ConsciounessView _consciounessView;
         
-        public ConditionPresenter(Consciouness consciouness, ConsciounessView consciounessView)
+        public ConsciounessPresenter(Consciouness consciouness, ConsciounessView consciounessView)
         {
             _consciouness = consciouness;
             _consciounessView = consciounessView;
