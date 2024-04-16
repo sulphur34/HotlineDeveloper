@@ -14,9 +14,9 @@ namespace Modules.PlayerWeaponsHandler
         private IShotInput _shotInput;
         private IWeaponItemInput _weaponItemInput;
 
-        private readonly List<WeaponItem> _lastWeaponsInRadius = new List<WeaponItem>();
+        [SerializeField] private List<WeaponItem> _lastWeaponsInRadius = new List<WeaponItem>();
 
-        private WeaponItem LastWeaponInRadius => _lastWeaponsInRadius[^1];
+        private WeaponItem LastWeaponInRadius => HasWeaponItemsInRaduis ? _lastWeaponsInRadius[^1] : null;
         private bool HasWeaponItemsInRaduis => _lastWeaponsInRadius.Count > 0;
 
         private void Start()
@@ -40,8 +40,8 @@ namespace Modules.PlayerWeaponsHandler
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.TryGetComponent(out WeaponItem _))
-                _lastWeaponsInRadius.Remove(LastWeaponInRadius);
+            if (other.TryGetComponent(out WeaponItem weaponItem))
+                _lastWeaponsInRadius.Remove(weaponItem);
         }
 
         [Inject]
@@ -53,30 +53,34 @@ namespace Modules.PlayerWeaponsHandler
 
         private void OnWeaponItemInputReceived()
         {
-            if (HasWeaponItemsInRaduis == false)
+            if (_currentWeaponItem == null && HasWeaponItemsInRaduis == false)
                 return;
 
-            if (_currentWeaponItem.Equipped)
+            if (_currentWeaponItem != null && _currentWeaponItem.Equipped)
             {
                 _currentWeaponItem.Throw();
 
-                if (_lastWeaponsInRadius.Count > 0)
+                if (HasWeaponItemsInRaduis)
                 {
-                    _currentWeaponItem = LastWeaponInRadius;
-                    _currentWeaponItem.Equip(_container);
-                    _lastWeaponsInRadius.Remove(_currentWeaponItem);
+                    EquipWeaponItem();
                     return;
                 }
 
+                _currentWeaponItem = null;
                 _shotInput.Received -= OnShotInputReceived;
             }
             else
             {
-                _currentWeaponItem = LastWeaponInRadius;
-                _currentWeaponItem.Equip(_container);
-                _lastWeaponsInRadius.Remove(_currentWeaponItem);
+                EquipWeaponItem();
                 _shotInput.Received += OnShotInputReceived;
             }
+        }
+
+        private void EquipWeaponItem()
+        {
+            _currentWeaponItem = LastWeaponInRadius;
+            _currentWeaponItem.Equip(_container);
+            _lastWeaponsInRadius.Remove(_currentWeaponItem);
         }
 
         private void OnShotInputReceived()
