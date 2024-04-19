@@ -3,11 +3,6 @@ using UnityEngine.InputSystem;
 
 public class MobileInput : InputController
 {
-    protected override Vector2 OnMove()
-    {
-        return _playerInput.PlayerMobile.Move.ReadValue<Vector2>();
-    }
-    
     private void OnEnable()
     {
         _playerInput.PlayerMobile.Attack.performed += OnAttack;
@@ -16,6 +11,11 @@ public class MobileInput : InputController
         _playerInput.Enable();
     }
     
+    protected override Vector2 OnMove()
+    {
+        return _playerInput.PlayerMobile.Move.ReadValue<Vector2>();
+    }
+
     protected override Vector2 OnRotate()
     {
         return _playerInput.PlayerMobile.Rotate.ReadValue<Vector2>();

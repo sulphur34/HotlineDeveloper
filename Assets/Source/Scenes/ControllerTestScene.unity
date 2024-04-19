@@ -325,7 +325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 681224789}
-  - component: {fileID: 681224791}
+  - component: {fileID: 681224790}
   m_Layer: 0
   m_Name: DesktopInput
   m_TagString: Untagged
@@ -348,7 +348,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &681224791
+--- !u!114 &681224790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 681224788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcb195959b0ef984c9aae102b0a4cf32, type: 3}
+  m_Script: {fileID: 11500000, guid: 33b63159525c0cb4fb573597965833ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &705507993
@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8281868d8a968c14b9d5c7dd0c40f54c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputController: {fileID: 1299569146}
+  _inputController: {fileID: 681224790}
 --- !u!1 &1573063197
 GameObject:
   m_ObjectHideFlags: 0

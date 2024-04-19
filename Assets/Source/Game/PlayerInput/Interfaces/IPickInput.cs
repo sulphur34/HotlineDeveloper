@@ -4,6 +4,6 @@ namespace Source.Modules.InputSystem.Interfaces
 {
     public interface IPickInput
     {
-        event Action PickRecieved;
+        event Action PickReceived;
     }
 }

@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 
 public class DesktopInputController : InputController
 {
-    private Vector2 _vectorOne = new Vector2(1.0f, 1.0f);
-    private float _screenToVirtualMultiplier = 2f;
+    private readonly Vector2 _vectorOne = new Vector2(1.0f, 1.0f);
+    private readonly float _screenToVirtualMultiplier = 2f;
     
     private void OnEnable()
     {
@@ -30,6 +30,6 @@ public class DesktopInputController : InputController
 
     protected override Vector2 OnLook()
     {
-        return _playerInput.PlayerDesktop.Move.ReadValue<Vector2>();
+        return _playerInput.PlayerDesktop.Look.ReadValue<Vector2>();
     }
 }

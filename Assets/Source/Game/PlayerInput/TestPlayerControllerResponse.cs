@@ -18,10 +18,10 @@ public class TestPlayerControllerResponse : MonoBehaviour
         _inputController.MoveReceived += OnMove;
         _inputController.RotationReceived += OnRotate;
         _inputController.AttackReceived += OnAttack;
-        _inputController.PickRecieved += OnPick;
-        _inputController.FinishRecieved += OnFinish;
-        _inputController.LookRecieved += OnLook;
-        _inputController.LookRecieved += OnLook;
+        _inputController.PickReceived += OnPick;
+        _inputController.FinishReceived += OnFinish;
+        _inputController.LookReceived += OnLook;
+        _inputController.LookReceived += OnLook;
     }
 
     private void OnFinish()
@@ -41,7 +41,6 @@ public class TestPlayerControllerResponse : MonoBehaviour
 
     private void OnRotate(Vector2 direction)
     {
-        // Debug.Log(direction);
         Vector2 normalized = direction.normalized;
         float angleRadians = Mathf.Atan2(normalized.x, normalized.y);
         float angleDegrees = angleRadians * Mathf.Rad2Deg;
@@ -55,6 +54,7 @@ public class TestPlayerControllerResponse : MonoBehaviour
 
     private void OnLook(Vector2 direction)
     {
-        
+        if (direction.magnitude > 0)
+            Debug.Log("Look");
     }
 }
