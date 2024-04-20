@@ -23,7 +23,7 @@ public class MobileInput : InputController
 
     protected override Vector2 OnLook()
     {
-        return _playerInput.PlayerMobile.Rotate.ReadValue<Vector2>();
+        return _playerInput.PlayerMobile.Move.ReadValue<Vector2>();
     }
 
     protected override void OnAttack(InputAction.CallbackContext context)

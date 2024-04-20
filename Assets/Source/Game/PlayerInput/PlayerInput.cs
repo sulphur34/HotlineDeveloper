@@ -261,7 +261,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""name"": ""Look"",
                     ""type"": ""Value"",
                     ""id"": ""7ab4ac53-6ade-472f-8e95-7afd3fe5e603"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true

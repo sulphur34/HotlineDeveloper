@@ -54,7 +54,7 @@ public class TestPlayerControllerResponse : MonoBehaviour
 
     private void OnLook(Vector2 direction)
     {
-        if (direction.magnitude > 0)
+        if (direction.magnitude > 0.9)
             Debug.Log("Look");
     }
 }
