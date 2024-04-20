@@ -1,4 +1,5 @@
 using Modules.Weapons;
+using System;
 using UnityEngine;
 
 namespace Modules.WeaponItemSystem
@@ -8,20 +9,22 @@ namespace Modules.WeaponItemSystem
         [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private float _force;
 
-        private Weapon _weapon;
+        private Action _attack;
         private Transform _startContainer;
 
+        public WeaponType Type { get; private set; }
         public bool Equipped { get; private set; }
 
-        public void Init(Weapon weapon)
+        public void Init(Action attack, WeaponType type)
         {
-            _weapon = weapon;
+            _attack = attack;
+            Type = type;
             _startContainer = transform.parent;
         }
 
         public void Attack()
         {
-            _weapon.Attack();
+            _attack?.Invoke();
         }
 
         public void Equip(Transform container)

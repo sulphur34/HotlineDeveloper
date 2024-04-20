@@ -10,14 +10,15 @@ namespace Modules.PlayerWeaponsHandler
     {
         [SerializeField] private Transform _container;
 
+        private readonly List<WeaponItem> _lastWeaponsInRadius = new List<WeaponItem>();
+
         private WeaponItem _currentWeaponItem;
         private IShotInput _shotInput;
         private IWeaponItemInput _weaponItemInput;
 
-        [SerializeField] private List<WeaponItem> _lastWeaponsInRadius = new List<WeaponItem>();
-
         private WeaponItem LastWeaponInRadius => HasWeaponItemsInRaduis ? _lastWeaponsInRadius[^1] : null;
         private bool HasWeaponItemsInRaduis => _lastWeaponsInRadius.Count > 0;
+        private bool CurrentWeaponItemIsEmpty => _currentWeaponItem == null;
 
         private void Start()
         {
@@ -53,10 +54,10 @@ namespace Modules.PlayerWeaponsHandler
 
         private void OnWeaponItemInputReceived()
         {
-            if (_currentWeaponItem == null && HasWeaponItemsInRaduis == false)
+            if (CurrentWeaponItemIsEmpty && HasWeaponItemsInRaduis == false)
                 return;
 
-            if (_currentWeaponItem != null && _currentWeaponItem.Equipped)
+            if (CurrentWeaponItemIsEmpty == false && _currentWeaponItem.Equipped)
             {
                 _currentWeaponItem.Throw();
 
