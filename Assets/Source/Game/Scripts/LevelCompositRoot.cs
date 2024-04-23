@@ -1,23 +1,19 @@
-using Modules.Items.ItemPickSystem;
 using Modules.PlayerWeaponsHandler;
 using Modules.Weapons.Ammunition;
 using Modules.Weapons.InputSystem;
 using Modules.Weapons.Range;
-using Modules.WeaponItemSystem;
+using Modules.Weapons.WeaponItemSystem;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-public class ClaudiffTestsCompositRoot : LifetimeScope
+public class LevelCompositRoot : LifetimeScope
 {
     [SerializeField] private RangeWeaponConfigFactory _weaponConfigFactory;
     [SerializeField] private GameObject _weaponSetupsParent;
 
     protected override void Configure(IContainerBuilder builder)
     {
-        builder.RegisterComponentInHierarchy<IItemSelectionInput>();
-        builder.RegisterComponentInHierarchy<IPickable>();
-
         builder.RegisterInstance(_weaponConfigFactory);
         builder.RegisterComponentInHierarchy<WeaponAmmunitionView>();
         builder.RegisterEntryPoint<ShotDesktopInput>().As<IShotInput>();

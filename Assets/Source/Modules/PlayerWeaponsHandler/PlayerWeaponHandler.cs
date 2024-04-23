@@ -1,8 +1,8 @@
 using Modules.Weapons.InputSystem;
-using Modules.WeaponItemSystem;
 using UnityEngine;
 using VContainer;
 using System.Collections.Generic;
+using Modules.Weapons.WeaponItemSystem;
 
 namespace Modules.PlayerWeaponsHandler
 {
@@ -60,6 +60,7 @@ namespace Modules.PlayerWeaponsHandler
             if (CurrentWeaponItemIsEmpty == false && _currentWeaponItem.Equipped)
             {
                 _currentWeaponItem.Throw();
+                _lastWeaponsInRadius.Remove(_currentWeaponItem);
 
                 if (HasWeaponItemsInRaduis)
                 {

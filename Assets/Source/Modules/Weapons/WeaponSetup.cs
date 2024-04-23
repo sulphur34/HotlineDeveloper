@@ -1,5 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
-using Modules.WeaponItemSystem;
+using Modules.Weapons.WeaponItemSystem;
+using Modules.Weapons.WeaponTypeSystem;
 using UnityEngine;
 
 namespace Modules.Weapons

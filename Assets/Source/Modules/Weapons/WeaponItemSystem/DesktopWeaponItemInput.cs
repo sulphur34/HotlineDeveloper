@@ -2,7 +2,7 @@
 using UnityEngine;
 using VContainer.Unity;
 
-namespace Modules.WeaponItemSystem
+namespace Modules.Weapons.WeaponItemSystem
 {
     public class DesktopWeaponItemInput : IWeaponItemInput, ITickable
     {

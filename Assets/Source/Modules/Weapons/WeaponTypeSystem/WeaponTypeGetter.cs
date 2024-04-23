@@ -2,7 +2,7 @@
 using Modules.Weapons.Range;
 using System;
 
-namespace Modules.Weapons
+namespace Modules.Weapons.WeaponTypeSystem
 {
     internal class WeaponTypeGetter
     {

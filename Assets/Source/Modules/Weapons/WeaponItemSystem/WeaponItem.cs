@@ -1,12 +1,14 @@
-using Modules.Weapons;
+using Modules.Weapons.WeaponTypeSystem;
 using System;
+using UnityEditor.Presets;
 using UnityEngine;
 
-namespace Modules.WeaponItemSystem
+namespace Modules.Weapons.WeaponItemSystem
 {
     public class WeaponItem : MonoBehaviour
     {
         [SerializeField] private Rigidbody _rigidbody;
+        [SerializeField] private Preset _rigidbodyPreset;
         [SerializeField] private float _force;
 
         private Action _attack;
@@ -35,7 +37,8 @@ namespace Modules.WeaponItemSystem
         public void Throw()
         {
             SetEquipped(false, null);
-            _rigidbody.useGravity = true;
+            _rigidbody = gameObject.AddComponent<Rigidbody>();
+            _rigidbodyPreset.ApplyTo(_rigidbody);
             _rigidbody.AddForce(transform.forward * _force, ForceMode.Impulse);
             transform.SetParent(_startContainer);
         }
@@ -43,11 +46,14 @@ namespace Modules.WeaponItemSystem
         private void SetEquipped(bool value, Transform container)
         {
             Equipped = value;
-            _rigidbody.useGravity = false;
             transform.SetParent(container);
 
             if (container != null)
+            {
+                Destroy(_rigidbody);
                 transform.position = container.position;
+                transform.forward = container.forward;
+            }
         }
     }
 }
