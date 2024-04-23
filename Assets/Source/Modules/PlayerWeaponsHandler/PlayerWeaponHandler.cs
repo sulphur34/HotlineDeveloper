@@ -1,23 +1,28 @@
-using Modules.Weapons.InputSystem;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using VContainer;
-using System.Collections.Generic;
+using Modules.Weapons.InputSystem;
 using Modules.Weapons.WeaponItemSystem;
 
 namespace Modules.PlayerWeaponsHandler
 {
     public class PlayerWeaponHandler : MonoBehaviour
     {
-        [SerializeField] private Transform _container;
-
         private readonly List<WeaponItem> _lastWeaponsInRadius = new List<WeaponItem>();
+
+        [SerializeField] private Transform _container;
 
         private WeaponItem _currentWeaponItem;
         private IShotInput _shotInput;
         private IWeaponItemInput _weaponItemInput;
 
+        public event Action<WeaponItem> WeaponPicked;
+
         private WeaponItem LastWeaponInRadius => HasWeaponItemsInRaduis ? _lastWeaponsInRadius[^1] : null;
+
         private bool HasWeaponItemsInRaduis => _lastWeaponsInRadius.Count > 0;
+
         private bool CurrentWeaponItemIsEmpty => _currentWeaponItem == null;
 
         private void Start()
@@ -82,6 +87,7 @@ namespace Modules.PlayerWeaponsHandler
         {
             _currentWeaponItem = LastWeaponInRadius;
             _currentWeaponItem.Equip(_container);
+            WeaponPicked?.Invoke(_currentWeaponItem);
             _lastWeaponsInRadius.Remove(_currentWeaponItem);
         }
 
