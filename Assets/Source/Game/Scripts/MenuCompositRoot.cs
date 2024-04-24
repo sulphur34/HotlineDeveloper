@@ -4,7 +4,7 @@ using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-public class MenuCompositionRoot : LifetimeScope
+public class MenuCompositRoot : LifetimeScope
 {
     [SerializeField] private LevelSelectionElement[] _levelSelectionElements;
     [SerializeField] private PressedButton _levelSelectionButton;

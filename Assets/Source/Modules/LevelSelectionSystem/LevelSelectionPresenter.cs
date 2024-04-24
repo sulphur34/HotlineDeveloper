@@ -35,7 +35,7 @@ namespace LevelSelectionSystem
             if (_lastSelectedElement == null) 
                 return;
 
-            _levelSceneLoader.Load(_lastSelectedElement.Level);
+            _levelSceneLoader.Load(_lastSelectedElement.LevelNumberForLoad);
         }
 
         private void OnElementPressed(LevelSelectionElement levelSelectionElement)
