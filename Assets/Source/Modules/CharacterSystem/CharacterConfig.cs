@@ -10,7 +10,5 @@ namespace Modules.Characters
     {
         [field: SerializeField] public Character CharacterPrefab { get; private set; }
         [field: SerializeField] public HealthConfig HealthConfig { get; private set; }
-        [field: SerializeField] public PickerConfig PickerConfig { get; private set; }
-        [field: SerializeField] public EquipperConfig EquipperConfig { get; private set; }
     }
 }
