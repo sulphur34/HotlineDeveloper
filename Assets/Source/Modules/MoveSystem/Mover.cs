@@ -9,7 +9,6 @@ namespace Modules.MoveSystem
         private float _moveMoveSpeed;
         private float _rotationSpeed;
 
-
         public Mover(CharacterController characterController, Transform transform, MoverConfig config)
         {
             _characterController = characterController;
@@ -18,14 +17,17 @@ namespace Modules.MoveSystem
             _rotationSpeed = config.RotationSpeed;
         }
 
-        public void RotateHorizontal(float rotationValue)
+        public void RotateHorizontal(Vector2 direction)
         {
-            _transform.Rotate(new Vector3(0f, rotationValue * _rotationSpeed, 0f));
+            Vector2 normalized = direction.normalized;
+            float angleRadians = Mathf.Atan2(normalized.x, normalized.y);
+            float angleDegrees = angleRadians * Mathf.Rad2Deg;
+            _transform.eulerAngles = new Vector3(0f, angleDegrees, 0f);
         }
 
         public void MoveHorizontal(Vector2 direction)
         {
-            _characterController.Move(new Vector3(direction.x, 0f, direction.y));
+            _characterController.Move(new Vector3(direction.x, 0f, direction.y) * _moveMoveSpeed * Time.deltaTime);
         }
     }
 }

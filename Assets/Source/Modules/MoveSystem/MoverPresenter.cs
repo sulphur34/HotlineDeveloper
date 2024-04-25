@@ -1,3 +1,4 @@
+using Source.Modules.InputSystem.Interfaces;
 using UnityEngine;
 
 namespace Modules.MoveSystem
@@ -28,9 +29,9 @@ namespace Modules.MoveSystem
             _mover.MoveHorizontal(direction);
         }
 
-        private void OnRotate(float rotationValue)
+        private void OnRotate(Vector2 direction)
         {
-            _mover.RotateHorizontal(rotationValue);
+            _mover.RotateHorizontal(direction);
         }
     }
 }

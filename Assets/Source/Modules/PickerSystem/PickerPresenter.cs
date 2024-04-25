@@ -11,12 +11,12 @@ namespace Modules.PickerSystem
         {
             _picker = picker;
             _pickInput = pickInput;
-            _pickInput.PickRecieved += OnPick;
+            _pickInput.PickReceived += OnPick;
         }
         
         public void Dispose()
         {
-            _pickInput.PickRecieved -= OnPick;
+            _pickInput.PickReceived -= OnPick;
         }
 
         private void OnPick()

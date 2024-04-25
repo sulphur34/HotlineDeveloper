@@ -16,8 +16,8 @@ public class LevelCompositRoot : LifetimeScope
     {
         builder.RegisterInstance(_weaponConfigFactory);
         builder.RegisterComponentInHierarchy<WeaponAmmunitionView>();
-        builder.RegisterEntryPoint<ShotDesktopInput>().As<IShotInput>();
-        builder.RegisterEntryPoint<DesktopWeaponItemInput>().As<IWeaponItemInput>();
+        // builder.RegisterEntryPoint<ShotDesktopInput>().As<IShotInput>();
+        // builder.RegisterEntryPoint<DesktopWeaponItemInput>().As<IWeaponItemInput>();
         builder.RegisterComponentInHierarchy<PlayerWeaponHandler>();
 
         builder.RegisterBuildCallback(container =>

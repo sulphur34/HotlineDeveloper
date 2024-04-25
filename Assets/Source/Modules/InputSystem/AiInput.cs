@@ -1,5 +1,4 @@
 using System;
-using Modules.DamageSystem;
 using Source.Modules.InputSystem.Interfaces;
 using UnityEngine;
 
@@ -8,7 +7,7 @@ namespace Source.Modules.InputSystem
     public class AiInput : MonoBehaviour, IAttackInput, IPickInput
     {
         public event Action AttackReceived;
-        public event Action PickRecieved;
+        public event Action PickReceived;
         
         public void ReceiveAttack()
         {
@@ -17,7 +16,7 @@ namespace Source.Modules.InputSystem
 
         public void RecievePick()
         {
-            PickRecieved?.Invoke();
+            PickReceived?.Invoke();
         }
     }
 }

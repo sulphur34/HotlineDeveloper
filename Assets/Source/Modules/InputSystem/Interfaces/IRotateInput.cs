@@ -1,9 +1,10 @@
 using System;
+using UnityEngine;
 
-namespace Modules.MoveSystem
+namespace Source.Modules.InputSystem.Interfaces
 {
     public interface IRotateInput
     {
-        event Action<float> RotationReceived;
+        event Action<Vector2> RotationReceived;
     }
 }

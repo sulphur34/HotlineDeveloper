@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using VContainer;
-using Modules.Weapons.InputSystem;
 using Modules.Weapons.WeaponItemSystem;
+using Source.Modules.InputSystem.Interfaces;
 
 namespace Modules.PlayerWeaponsHandler
 {
@@ -14,8 +14,8 @@ namespace Modules.PlayerWeaponsHandler
         [SerializeField] private Transform _container;
 
         private WeaponItem _currentWeaponItem;
-        private IShotInput _shotInput;
-        private IWeaponItemInput _weaponItemInput;
+        private IAttackInput _shotInput;
+        private IPickInput _weaponItemInput;
 
         public event Action<WeaponItem> WeaponPicked;
 
@@ -25,17 +25,12 @@ namespace Modules.PlayerWeaponsHandler
 
         private bool CurrentWeaponItemIsEmpty => _currentWeaponItem == null;
 
-        private void Start()
-        {
-            _weaponItemInput.Received += OnWeaponItemInputReceived;
-        }
-
         private void OnDestroy()
         {
             if (HasWeaponItemsInRaduis && LastWeaponInRadius.Equipped)
-                _shotInput.Received -= OnShotInputReceived;
+                _shotInput.AttackReceived -= OnShotInputReceived;
 
-            _weaponItemInput.Received -= OnWeaponItemInputReceived;
+            _weaponItemInput.PickReceived -= OnWeaponItemInputReceived;
         }
 
         private void OnTriggerEnter(Collider other)
@@ -51,10 +46,11 @@ namespace Modules.PlayerWeaponsHandler
         }
 
         [Inject]
-        public void Constructe(IShotInput shotInput, IWeaponItemInput weaponItemInput)
+        public void Construct(IAttackInput shotInput, IPickInput weaponItemInput)
         {
             _shotInput = shotInput;
             _weaponItemInput = weaponItemInput;
+            _weaponItemInput.PickReceived += OnWeaponItemInputReceived;
         }
 
         private void OnWeaponItemInputReceived()
@@ -74,12 +70,12 @@ namespace Modules.PlayerWeaponsHandler
                 }
 
                 _currentWeaponItem = null;
-                _shotInput.Received -= OnShotInputReceived;
+                _shotInput.AttackReceived -= OnShotInputReceived;
             }
             else
             {
                 EquipWeaponItem();
-                _shotInput.Received += OnShotInputReceived;
+                _shotInput.AttackReceived += OnShotInputReceived;
             }
         }
 

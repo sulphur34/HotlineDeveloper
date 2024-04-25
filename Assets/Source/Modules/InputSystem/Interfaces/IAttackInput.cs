@@ -1,6 +1,6 @@
 using System;
 
-namespace Modules.DamageSystem
+namespace Source.Modules.InputSystem.Interfaces
 {
     public interface  IAttackInput
     {

@@ -1,6 +1,6 @@
 using Modules.Weapons.WeaponTypeSystem;
 using System;
-using UnityEditor.Presets;
+// using UnityEditor.Presets;
 using UnityEngine;
 
 namespace Modules.Weapons.WeaponItemSystem
@@ -8,7 +8,7 @@ namespace Modules.Weapons.WeaponItemSystem
     public class WeaponItem : MonoBehaviour
     {
         [SerializeField] private Rigidbody _rigidbody;
-        [SerializeField] private Preset _rigidbodyPreset;
+        // [SerializeField] private Preset _rigidbodyPreset;
         [SerializeField] private float _force;
 
         private Transform _startContainer;
@@ -44,7 +44,7 @@ namespace Modules.Weapons.WeaponItemSystem
         {
             SetEquipped(false, null);
             _rigidbody = gameObject.AddComponent<Rigidbody>();
-            _rigidbodyPreset.ApplyTo(_rigidbody);
+            // _rigidbodyPreset.ApplyTo(_rigidbody);
             _rigidbody.AddForce(transform.forward * _force, ForceMode.Impulse);
             transform.SetParent(_startContainer);
         }
