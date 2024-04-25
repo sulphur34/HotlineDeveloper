@@ -1,8 +1,9 @@
+using UnityEngine;
 using VContainer;
 
 namespace Modules.DamageSystem
 {
-    public class HealthSetup
+    public class HealthSetup : MonoBehaviour
     {
         private HealthPresenter _healthPresenter;
 

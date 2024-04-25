@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Modules.DamageSystem
 {
-    public class ConsciounessView : MonoBehaviour
+    public class ConsciousnessView : MonoBehaviour
     {
         public void OnKnockedOut()
         {

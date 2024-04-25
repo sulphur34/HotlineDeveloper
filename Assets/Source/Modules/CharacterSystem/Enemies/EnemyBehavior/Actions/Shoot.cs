@@ -12,7 +12,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
         
         public override TaskStatus OnUpdate()
         {
-            Debug.Log("piu-piu");
+            _input.ReceiveAttack();
             return TaskStatus.Running;
         }
     }

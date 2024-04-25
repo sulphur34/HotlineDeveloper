@@ -4,16 +4,16 @@ using Cysharp.Threading.Tasks;
 
 namespace Modules.DamageSystem
 {
-    public class Consciouness : IKnockable
+    public class Consciousness : IKnockable
     {
         private float _recoverTime;
         private CancellationToken _cancellationToken;
         public bool IsConscious { get; private set; }
 
-        public event Action Knoked;
+        public event Action Knocked;
         public event Action Recovered;
     
-        public Consciouness(float recoverTime, CancellationToken cancellationToken)
+        public Consciousness(float recoverTime, CancellationToken cancellationToken)
         {
             _recoverTime = recoverTime;
             _cancellationToken = cancellationToken;
@@ -22,7 +22,7 @@ namespace Modules.DamageSystem
         public void Knockout()
         {
             IsConscious = false;
-            Knoked?.Invoke();
+            Knocked?.Invoke();
             Recovering(_cancellationToken);
         }
         

@@ -2,32 +2,32 @@ namespace Modules.DamageSystem
 {
     public class ConsciounessPresenter
     {
-        private Consciouness _consciouness;
-        private ConsciounessView _consciounessView;
+        private Consciousness _consciousness;
+        private ConsciousnessView _consciousnessView;
         
-        public ConsciounessPresenter(Consciouness consciouness, ConsciounessView consciounessView)
+        public ConsciounessPresenter(Consciousness consciousness, ConsciousnessView consciousnessView)
         {
-            _consciouness = consciouness;
-            _consciounessView = consciounessView;
+            _consciousness = consciousness;
+            _consciousnessView = consciousnessView;
 
-            _consciouness.Knoked += OnKnockedOut;
-            _consciouness.Recovered += OnRecover;
+            _consciousness.Knocked += OnKnockedOut;
+            _consciousness.Recovered += OnRecover;
         }
 
         private void OnKnockedOut()
         {
-            _consciounessView.OnKnockedOut();
+            _consciousnessView.OnKnockedOut();
         }
 
         private void OnRecover()
         {
-            _consciounessView.OnRecover();
+            _consciousnessView.OnRecover();
         }
 
         public void Dispose()
         {
-            _consciouness.Knoked -= OnKnockedOut;
-            _consciouness.Recovered -= OnRecover;
+            _consciousness.Knocked -= OnKnockedOut;
+            _consciousness.Recovered -= OnRecover;
         }
     }
 }
