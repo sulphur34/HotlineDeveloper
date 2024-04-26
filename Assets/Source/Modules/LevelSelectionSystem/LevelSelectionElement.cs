@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace LevelSelectionSystem
+namespace Modules.LevelSelectionSystem
 {
     public class LevelSelectionElement : MonoBehaviour, IPointerDownHandler
     {

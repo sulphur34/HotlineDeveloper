@@ -2,13 +2,13 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace LevelSelectionSystem
+namespace Modules.PressedButtonSystem
 {
     public class PressedButton : MonoBehaviour
     {
         [SerializeField] private Button _button;
 
-        internal event Action Pressed;
+        public event Action Pressed;
 
         private void OnEnable()
         {

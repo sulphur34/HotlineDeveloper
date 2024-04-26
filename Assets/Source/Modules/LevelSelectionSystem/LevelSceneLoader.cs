@@ -2,7 +2,7 @@
 using Modules.SceneLoaderSystem;
 using VContainer;
 
-namespace LevelSelectionSystem
+namespace Modules.LevelSelectionSystem
 {
     public class LevelSceneLoader
     {

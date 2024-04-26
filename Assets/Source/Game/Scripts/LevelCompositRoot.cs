@@ -1,3 +1,4 @@
+using Modules.LevelsSystem;
 using Modules.PlayerWeaponsHandler;
 using Modules.Weapons.Ammunition;
 using Modules.Weapons.InputSystem;
@@ -19,6 +20,10 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterEntryPoint<ShotDesktopInput>().As<IShotInput>();
         builder.RegisterEntryPoint<DesktopWeaponItemInput>().As<IWeaponItemInput>();
         builder.RegisterComponentInHierarchy<PlayerWeaponHandler>();
+
+   /*     Debug.Log("sd");
+        Level level = Parent.Container.Resolve<Level>();
+        Debug.Log(level.Number);*/
 
         builder.RegisterBuildCallback(container =>
         {
