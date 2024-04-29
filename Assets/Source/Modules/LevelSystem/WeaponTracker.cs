@@ -1,15 +1,17 @@
 using System.Collections.Generic;
 using System.Linq;
-using Source.Modules.Weapons.WeaponItemSystem;
+using Modules.Weapons.WeaponItemSystem;
 using UnityEngine;
+using VContainer;
 
-public class WeaponTracker
+public class WeaponTracker : MonoBehaviour
 {
     private List<WeaponItem> _weapons;
 
-    public WeaponTracker()
+    [Inject]
+    public void Construct()
     {
-        _weapons = new List<WeaponItem>();
+        _weapons = GetComponentsInChildren<WeaponItem>().ToList();
     }
 
     public void Add(WeaponItem weaponItem)

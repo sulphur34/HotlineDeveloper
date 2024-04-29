@@ -150,7 +150,8 @@ GameObject:
   - component: {fileID: 8820199428909444304}
   - component: {fileID: 2604438988264029305}
   - component: {fileID: 4153011134442891479}
-  - component: {fileID: 7145970850997414210}
+  - component: {fileID: 3287763019353598331}
+  - component: {fileID: 7334675164101894443}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -247,10 +248,10 @@ CharacterController:
   serializedVersion: 3
   m_Height: 2
   m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
+  m_SlopeLimit: 2
+  m_StepOffset: 0
+  m_SkinWidth: 0.1
+  m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2604438988264029305
 MonoBehaviour:
@@ -276,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e986a9db6b7b74f9f2b452477ee94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7145970850997414210
+--- !u!114 &3287763019353598331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -285,10 +286,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 2129565968935300381}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d763576cd042b5b46aa2a9a635c2642a, type: 3}
+  m_Script: {fileID: 11500000, guid: 421afdf1deb9cb545b7a11b9b07b4022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _container: {fileID: 4248681961386523685}
+--- !u!114 &7334675164101894443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129565968935300381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10d16bd502042e2b0a644e262eaaf69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _container: {fileID: 0}
 --- !u!1 &6026335555432146164
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5856850213048622657
 Transform:
   m_ObjectHideFlags: 0
@@ -390,7 +403,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

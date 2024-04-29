@@ -1,6 +1,8 @@
+using UnityEngine;
+
 namespace Modules.Characters.Enemies
 {
-    public class Enemy
+    public class Enemy : MonoBehaviour
     {
         
     }

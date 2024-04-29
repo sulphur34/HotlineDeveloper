@@ -1,4 +1,5 @@
 using BehaviorDesigner.Runtime.Tasks;
+using Modules.Characters.Enemies.EnemyBehavior.Variables;
 using Modules.PlayerWeaponsHandler;
 using Source.Modules.InputSystem;
 
@@ -6,10 +7,10 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 {
     public class Pick : Action
     {
-        private AiInput _aiInput;
+        public SharedAiInput AiInput;
         public override TaskStatus OnUpdate()
         {
-            _aiInput.RecievePick();
+            AiInput.Value.RecievePick();
             return TaskStatus.Success;
         }
     }

@@ -53,7 +53,6 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
             _navMeshAgent.SetDestination(nextPoint);
             _navMeshAgent.isStopped = false;
             _isActive = true;
-            Debug.Log(_navMeshAgent.remainingDistance);
         }
     }
 }

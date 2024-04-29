@@ -7,23 +7,21 @@ using Source.Modules.InputSystem.Interfaces;
 
 namespace Modules.PlayerWeaponsHandler
 {
-    public class PlayerWeaponHandler : MonoBehaviour
+    public class WeaponHandler : MonoBehaviour
     {
         private readonly List<WeaponItem> _lastWeaponsInRadius = new List<WeaponItem>();
 
         [SerializeField] private Transform _container;
 
         private WeaponItem _currentWeaponItem;
-        private IAttackInput _shotInput;
-        private IPickInput _weaponItemInput;
+        protected IAttackInput _shotInput;
+        protected IPickInput _weaponItemInput;
 
         public event Action<WeaponItem> WeaponPicked;
 
+        public bool CurrentWeaponItemIsEmpty => _currentWeaponItem == null;
         private WeaponItem LastWeaponInRadius => HasWeaponItemsInRaduis ? _lastWeaponsInRadius[^1] : null;
-
         private bool HasWeaponItemsInRaduis => _lastWeaponsInRadius.Count > 0;
-
-        private bool CurrentWeaponItemIsEmpty => _currentWeaponItem == null;
 
         private void OnDestroy()
         {
@@ -45,15 +43,7 @@ namespace Modules.PlayerWeaponsHandler
                 _lastWeaponsInRadius.Remove(weaponItem);
         }
 
-        [Inject]
-        public void Construct(IAttackInput shotInput, IPickInput weaponItemInput)
-        {
-            _shotInput = shotInput;
-            _weaponItemInput = weaponItemInput;
-            _weaponItemInput.PickReceived += OnWeaponItemInputReceived;
-        }
-
-        private void OnWeaponItemInputReceived()
+        protected void OnWeaponItemInputReceived()
         {
             if (CurrentWeaponItemIsEmpty && HasWeaponItemsInRaduis == false)
                 return;

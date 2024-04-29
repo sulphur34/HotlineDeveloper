@@ -10,6 +10,7 @@ namespace Modules.Weapons.WeaponItemSystem
         [SerializeField] private Rigidbody _rigidbody;
         // [SerializeField] private Preset _rigidbodyPreset;
         [SerializeField] private float _force;
+        [SerializeField] private float _rotationForce;
 
         private Transform _startContainer;
 
@@ -43,9 +44,13 @@ namespace Modules.Weapons.WeaponItemSystem
         public void Throw()
         {
             SetEquipped(false, null);
-            _rigidbody = gameObject.AddComponent<Rigidbody>();
+            
+            if( _rigidbody == null)
+                _rigidbody = gameObject.AddComponent<Rigidbody>();
+            
             // _rigidbodyPreset.ApplyTo(_rigidbody);
             _rigidbody.AddForce(transform.forward * _force, ForceMode.Impulse);
+            _rigidbody.AddTorque(Vector3.up * _rotationForce);
             transform.SetParent(_startContainer);
         }
 

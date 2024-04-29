@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 namespace Modules.MoveSystem
 {
     public class Mover : IMovable
     {
+        private readonly float _gravityModifier = -0.08f;
         private CharacterController _characterController;
         private Transform _transform;
         private float _moveMoveSpeed;
@@ -27,7 +29,18 @@ namespace Modules.MoveSystem
 
         public void MoveHorizontal(Vector2 direction)
         {
-            _characterController.Move(new Vector3(direction.x, 0f, direction.y) * _moveMoveSpeed * Time.deltaTime);
+            _characterController.Move(new Vector3(direction.x, _gravityModifier, direction.y) * _moveMoveSpeed * Time.deltaTime);
+        }
+        
+        private void AlignWithGround()
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(_transform.position, Vector3.down, out hit))
+            {
+                Debug.Log(hit.distance);
+                
+                _transform.up = hit.normal;
+            }
         }
     }
 }

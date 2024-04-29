@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Source.Modules.InputSystem
 {
-    public class AiInput : MonoBehaviour, IAttackInput, IPickInput
+    public class AiInput : IAttackInput, IPickInput
     {
         public event Action AttackReceived;
         public event Action PickReceived;
