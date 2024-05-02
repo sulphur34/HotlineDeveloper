@@ -12,8 +12,6 @@ using Source.Modules.InputSystem;
 public class LevelCompositRoot : LifetimeScope
 {
     [SerializeField] private MoverConfig _moverConfig;
-    [SerializeField] private HealthConfig _healthConfig;
-    [SerializeField] private ConsciousnessConfig _consciousnessConfig;
     [SerializeField] private RangeWeaponConfigFactory _weaponConfigFactory;
     [SerializeField] private WeaponTracker _weaponTracker;
     [SerializeField] private BehaviorConfig _behaviorConfig;
@@ -51,8 +49,7 @@ public class LevelCompositRoot : LifetimeScope
 
     private void DamageConfigure(IContainerBuilder builder)
     {
-        builder.RegisterInstance(_healthConfig);
-        builder.RegisterInstance(_consciousnessConfig);
+        
     }
 
     private void WeaponConfigure(IContainerBuilder builder)

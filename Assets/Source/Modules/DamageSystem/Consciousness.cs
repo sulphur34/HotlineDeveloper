@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 
 namespace Modules.DamageSystem
 {
-    public class Consciousness : IKnockable
+    public class Consciousness
     {
         private float _recoverTime;
         private CancellationToken _cancellationToken;
@@ -19,18 +19,18 @@ namespace Modules.DamageSystem
             _cancellationToken = cancellationToken;
         }
 
-        public void Knockout()
+        public void Knockout(Action onKnockedCallback, Action onRecoveredCallback)
         {
             IsConscious = false;
-            Knocked?.Invoke();
-            Recovering(_cancellationToken);
+            onKnockedCallback?.Invoke();
+            Recovering(_cancellationToken, onRecoveredCallback);
         }
-        
-        public async UniTask Recovering(CancellationToken cancellationToken)
+
+        private async UniTask Recovering(CancellationToken cancellationToken, Action onRecoveredCallback)
         {
             await UniTask.Delay(TimeSpan.FromSeconds(_recoverTime), cancellationToken: cancellationToken);
             IsConscious = true;
-            Recovered?.Invoke();
+            onRecoveredCallback?.Invoke();
         }
     }
 }

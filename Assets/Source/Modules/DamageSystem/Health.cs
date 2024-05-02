@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Modules.DamageSystem
 {
-    public class Health : IDamageable
+    public class Health
     {
         private readonly float _minHealth;
         private readonly float _maxHealth;
@@ -19,10 +19,7 @@ namespace Modules.DamageSystem
             _isDead = false;
         }
 
-        public event Action Died;
-        public event Action<float> Changed;
-
-        public void TakeDamage(float damage)
+        public void TakeDamage(float damage, Action<float> onChangedCallback, Action onDieCallback)
         {
             if (damage < 0)
                 throw new ArgumentOutOfRangeException();
@@ -31,18 +28,18 @@ namespace Modules.DamageSystem
                 return;
 
             _currentHealth = Mathf.Clamp(_currentHealth -= damage, _minHealth, _maxHealth);
-            Changed?.Invoke(_currentHealth);
+            onChangedCallback?.Invoke(_currentHealth);
 
             if (_currentHealth <= _minHealth)
             {
                 _isDead = true;
-                Died?.Invoke();
+                onDieCallback?.Invoke();
             }
         }
 
-        public void Execute()
+        public void Execute(Action<float> OnChangedCallback, Action OnDieCallback)
         {
-            TakeDamage(_currentHealth);
+            TakeDamage(_currentHealth, OnChangedCallback, OnDieCallback);
         }
     }
 }
