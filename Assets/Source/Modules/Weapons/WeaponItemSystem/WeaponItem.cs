@@ -3,7 +3,6 @@ using System;
 using UnityEditor.Presets;
 using UnityEngine;
 
-
 namespace Modules.Weapons.WeaponItemSystem
 {
     public class WeaponItem : MonoBehaviour

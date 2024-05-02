@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Modules.LevelsSystem;
+using System;
+using System.Collections.Generic;
 using UnityEngine.Scripting;
 
 namespace Modules.SavingsSystem
@@ -8,5 +10,7 @@ namespace Modules.SavingsSystem
     {
         [field: Preserve]
         public uint CurrentLevel = 1;
+        [field: Preserve]
+        public List<Level> Levels;
     }
 }

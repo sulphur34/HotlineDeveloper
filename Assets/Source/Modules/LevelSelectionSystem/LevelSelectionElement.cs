@@ -15,6 +15,9 @@ namespace Modules.LevelSelectionSystem
         [SerializeField] private TextMeshProUGUI _levelName;
 
         public event Action<LevelSelectionElement> Pressed;
+        public event Action<LevelSelectionElement> Selected;
+
+        public bool IsSelected { get; private set; }
 
         public uint LevelNumberForLoad => _config.LevelNumber;
 
@@ -28,11 +31,14 @@ namespace Modules.LevelSelectionSystem
         public void Select()
         {
             _outline.SetActive(true);
+            IsSelected = true;
+            Selected?.Invoke(this);
         }
 
         public void Deselect()
         {
             _outline.SetActive(false);
+            IsSelected = false;
         }
 
         public void OnPointerDown(PointerEventData eventData)

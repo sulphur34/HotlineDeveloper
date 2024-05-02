@@ -4,6 +4,7 @@ using UnityEngine;
 using VContainer;
 using Modules.Weapons.InputSystem;
 using Modules.Weapons.WeaponItemSystem;
+using Modules.SceneLoaderSystem;
 
 namespace Modules.PlayerWeaponsHandler
 {
@@ -25,11 +26,6 @@ namespace Modules.PlayerWeaponsHandler
 
         private bool CurrentWeaponItemIsEmpty => _currentWeaponItem == null;
 
-        private void Start()
-        {
-            _weaponItemInput.Received += OnWeaponItemInputReceived;
-        }
-
         private void OnDestroy()
         {
             if (HasWeaponItemsInRaduis && LastWeaponInRadius.Equipped)
@@ -49,12 +45,19 @@ namespace Modules.PlayerWeaponsHandler
             if (other.TryGetComponent(out WeaponItem weaponItem))
                 _lastWeaponsInRadius.Remove(weaponItem);
         }
-
-        [Inject]
-        public void Constructe(IShotInput shotInput, IWeaponItemInput weaponItemInput)
+        private SceneLoader sceneLoade;
+        private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+                sceneLoade.Load("Menu", UnityEngine.SceneManagement.LoadSceneMode.Single);
+        }
+        [Inject]
+        public void Constructe(IShotInput shotInput, IWeaponItemInput weaponItemInput, SceneLoader sceneLoader)
+        {
+            sceneLoade = sceneLoader;
             _shotInput = shotInput;
             _weaponItemInput = weaponItemInput;
+            _weaponItemInput.Received += OnWeaponItemInputReceived;
         }
 
         private void OnWeaponItemInputReceived()

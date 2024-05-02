@@ -8,18 +8,18 @@ namespace Modules.SavingsSystem
     {
         private const string SaveDataPrefsKey = "SaveDataPrefsKey";
 
-        public void Save(Action<SaveData> callback)
+        public void Save(Action<SaveData> dataChanges)
         {
             if (Application.isEditor || PlayerAccount.IsAuthorized == false)
             {
-                SaveToPrefs(callback);
+                SaveToPrefs(dataChanges);
                 return;
             }
 
             PlayerAccount.GetCloudSaveData(data =>
             {
                 SaveData saveData = JsonUtility.FromJson<SaveData>(data);
-                callback?.Invoke(saveData);
+                dataChanges?.Invoke(saveData);
                 PlayerAccount.SetCloudSaveData(JsonUtility.ToJson(saveData));
             });
         }
@@ -39,10 +39,10 @@ namespace Modules.SavingsSystem
             });
         }
 
-        private void SaveToPrefs(Action<SaveData> callback)
+        private void SaveToPrefs(Action<SaveData> dataChanges)
         {
             SaveData saveData = LoadFromPrefs();
-            callback?.Invoke(saveData);
+            dataChanges?.Invoke(saveData);
             string saveDataJson = JsonUtility.ToJson(saveData);
             PlayerPrefs.SetString(SaveDataPrefsKey, saveDataJson);
             PlayerPrefs.Save();

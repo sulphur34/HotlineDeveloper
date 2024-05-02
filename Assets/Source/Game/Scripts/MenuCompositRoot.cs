@@ -2,35 +2,38 @@ using Modules.FadeSystem;
 using Modules.LevelSelectionSystem;
 using Modules.LevelsSystem;
 using Modules.PressedButtonSystem;
-using Modules.SavingsSystem;
+using Modules.SaveHandlers;
+using System.Linq;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
 public class MenuCompositRoot : LifetimeScope
 {
-    private readonly SaveSystem _saveSystem = new SaveSystem();
-
     [SerializeField] private LevelSelectionElement[] _levelSelectionElements;
     [SerializeField] private PressedButton _levelSelectionButton;
+
+    protected override void OnDestroy()
+    {
+        Dispose();
+    }
 
     protected override void Configure(IContainerBuilder builder)
     {
         builder.RegisterInstance(_levelSelectionElements);
         builder.RegisterInstance(_levelSelectionButton);
-        builder.RegisterComponentInHierarchy<LevelSelectionSetup>();
         builder.RegisterComponentInHierarchy<Fade>();
         builder.Register<LevelSceneLoader>(Lifetime.Singleton);
-
-        _saveSystem.Load(data =>
-        {
-            Level currentLevel = new Level(data.CurrentLevel);
-            builder.RegisterInstance(currentLevel);
-        });
+        builder.Register<LevelSelectionPresenter>(Lifetime.Singleton);
+        builder.Register<SelectedLevelSaveHandler>(Lifetime.Singleton);
 
         builder.RegisterBuildCallback(container =>
         {
-            container.Resolve<LevelSceneLoader>();
+            Level lastLoadedLevel = container.Resolve<Level>();
+            LevelSelectionElement levelSelectionElement = _levelSelectionElements.FirstOrDefault(element => element.LevelNumberForLoad == lastLoadedLevel.Number);
+            levelSelectionElement.Select();
+            container.Resolve<LevelSelectionPresenter>();
+            container.Resolve<SelectedLevelSaveHandler>();
         });
     }
 }

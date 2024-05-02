@@ -1,5 +1,8 @@
+using Modules.FadeSystem;
 using Modules.LevelsSystem;
+using Modules.PauseMenu;
 using Modules.PlayerWeaponsHandler;
+using Modules.SaveHandlers;
 using Modules.Weapons.Ammunition;
 using Modules.Weapons.InputSystem;
 using Modules.Weapons.Range;
@@ -13,6 +16,11 @@ public class LevelCompositRoot : LifetimeScope
     [SerializeField] private RangeWeaponConfigFactory _weaponConfigFactory;
     [SerializeField] private GameObject _weaponSetupsParent;
 
+    protected override void OnDestroy()
+    {
+        Dispose();
+    }
+
     protected override void Configure(IContainerBuilder builder)
     {
         builder.RegisterInstance(_weaponConfigFactory);
@@ -21,9 +29,14 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterEntryPoint<DesktopWeaponItemInput>().As<IWeaponItemInput>();
         builder.RegisterComponentInHierarchy<PlayerWeaponHandler>();
 
-   /*     Debug.Log("sd");
-        Level level = Parent.Container.Resolve<Level>();
-        Debug.Log(level.Number);*/
+        builder.RegisterComponentInHierarchy<Fade>();
+
+        builder.RegisterComponentInHierarchy<LevelHandler>();
+        builder.Register<LevelSaveHandler>(Lifetime.Singleton);
+
+        builder.Register<PauseSetter>(Lifetime.Singleton);
+        builder.RegisterComponentInHierarchy<LoadSceneButton>();
+        builder.RegisterComponentInHierarchy<RestartLevelButton>();
 
         builder.RegisterBuildCallback(container =>
         {

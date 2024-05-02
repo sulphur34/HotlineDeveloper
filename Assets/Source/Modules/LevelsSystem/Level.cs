@@ -1,55 +1,30 @@
-using Modules.SavingsSystem;
 using System;
 using UnityEngine;
 
 namespace Modules.LevelsSystem
 {
-    public class LevelHandler : MonoBehaviour
-    {
-        private readonly SaveSystem _saveSystem = new SaveSystem();
-
-        private Level _level;
-
-        private void OnDestroy()
-        {
-            _level.Completed -= OnCompleted;
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.K))
-                _level.Complete();
-        }
-
-        public void Init(Level level)
-        {
-            _level = level;
-            _level.Completed += OnCompleted;
-        }
-
-        private void OnCompleted()
-        {
-            _saveSystem.Save(savedData =>
-            {
-                if (_level.Number == savedData.CurrentLevel)
-                    savedData.CurrentLevel++;
-            });
-        }
-    }
-
+    [Serializable]
     public class Level
     {
-        public Level(uint number)
-        {
-            Number = number;
-        }
+        private const uint MinNumber = 1;
 
         public event Action Completed;
 
-        public uint Number { get; private set; } = 1;
+        [field: SerializeField] public uint Number { get; private set; } = 1;
+
+        [field: SerializeField] public bool IsCompleted { get; private set; }
+
+        public void SetNumber(uint number)
+        {
+            if (number < MinNumber)
+                throw new ArgumentException();
+
+            Number = number;
+        }
 
         public void Complete()
         {
+            IsCompleted = true;
             Completed?.Invoke();
         }
     }
