@@ -2,69 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27b5db7a-b918-4bd4-b47c-121f4f888e4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverPresenter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverPresenter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSetup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSetup.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageStrategy.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageStrategy/DamageStrategies.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageStrategy/DamageStrategies.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageStrategy/IDamageStrategy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageStrategy/IDamageStrategy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageStrategy/KnockoutImmuneStrategy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageStrategy/KnockoutImmuneStrategy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageStrategy/MeleeImmuneDamageStrategy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageStrategy/MeleeImmuneDamageStrategy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageStrategy/NormalDamageStrategy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageStrategy/NormalDamageStrategy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageableConfig.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageableConfig.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/IDamageReceiver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/IDamageReceiver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/Conditions/IsDead.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/Conditions/IsDead.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/Conditions/IsKnocked.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/Conditions/IsKnocked.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/LevelCompositRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/LevelCompositRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/CharacterConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/CharacterConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/CharacterSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/CharacterSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Agava.DamageSystem.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Agava.DamageSystem.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness/ConsciounessPresenter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness/ConsciounessPresenter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness/Consciousness.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness/Consciousness.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness/ConsciousnessConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness/ConsciousnessConfig.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness/ConsciousnessSetup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness/ConsciousnessSetup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness/ConsciousnessView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness/ConsciousnessView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness/IKnockable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness/IKnockable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health/Health.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health/HealthConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health/HealthConfig.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health/HealthPresenter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health/HealthPresenter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health/HealthSetup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health/HealthSetup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health/HealthView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health/HealthView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health/IDamageable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health/IDamageable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/HealthConfig.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/HealthConfig/Boss Health Config 2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/HealthConfig/Boss Health Config 2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/HealthConfig/Simple Health Config.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/HealthConfig/Simple Health Config.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/HealthConfig/Strong Health Config 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/HealthConfig/Strong Health Config 1.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +158,7 @@
       <workItem from="1714636576767" duration="16192000" />
       <workItem from="1714673800617" duration="3060000" />
       <workItem from="1714718920142" duration="15912000" />
-      <workItem from="1714742687325" duration="2045000" />
+      <workItem from="1714742687325" duration="3900000" />
     </task>
     <servers />
   </component>
