@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime;
 using Modules.Characters.Enemies.EnemyBehavior.Variables;
+using Modules.DamageSystem;
 using Modules.PlayerWeaponsHandler;
 using Source.Modules.InputSystem;
 using UnityEngine;
@@ -11,18 +12,25 @@ namespace Modules.Characters.Enemies.EnemyBehavior
     [RequireComponent(typeof(EnemyWeaponHandler), typeof(BehaviorManager.BehaviorTree))]
     public class BehaviorSetup : MonoBehaviour
     {
+        public const string AiInputName = "AiInput";
+        public const string WeaponTrackerName = "WeaponTracker";
+        public const string TargetName = "Target";
+        public const string DamageReceiverName = "DamageReceiver";
+
         private BehaviorTree _behaviorTree;
         private BehaviorConfig _behaviorConfig;
         private WeaponTracker _weaponTracker;
         private EnemyWeaponHandler _enemyWeaponHandler;
         private Player _player;
         private AiInput _aiInput;
+        private DamageReceiverView _damageReceiver;
 
         [Inject]
         public void Construct(BehaviorConfig behaviorConfig, WeaponTracker weaponTracker, Player player)
         {
             _aiInput = new AiInput();
             _enemyWeaponHandler = GetComponent<EnemyWeaponHandler>();
+            _damageReceiver = GetComponent<DamageReceiverView>();
             _enemyWeaponHandler.Initialize(_aiInput);
             _behaviorTree = GetComponent<BehaviorTree>();
             _behaviorConfig = behaviorConfig;
@@ -40,9 +48,10 @@ namespace Modules.Characters.Enemies.EnemyBehavior
             SetVariable(_behaviorConfig.VisualDistance);
             SetVariable(_behaviorConfig.FieldOfViewAngle);
             SetVariable(_behaviorConfig.HearingDistance);
-            SetVariable(new KeyValuePair<string,AiInput>("AiInput", _aiInput));
-            SetGlobalVariable(new KeyValuePair<string,WeaponTracker>("WeaponTracker", _weaponTracker), new SharedWeaponTracker());
-            SetGlobalVariable(new KeyValuePair<string,GameObject>("Target", _player.gameObject), new SharedGameObject());
+            SetVariable(new KeyValuePair<string,AiInput>(AiInputName, _aiInput));
+            SetVariable(new KeyValuePair<string,DamageReceiverView>(DamageReceiverName, _damageReceiver));
+            SetGlobalVariable(new KeyValuePair<string,WeaponTracker>(WeaponTrackerName, _weaponTracker), new SharedWeaponTracker());
+            SetGlobalVariable(new KeyValuePair<string,GameObject>(TargetName, _player.gameObject), new SharedGameObject());
         }
 
         private void SetVariable<T>(KeyValuePair<string, T> variableData)

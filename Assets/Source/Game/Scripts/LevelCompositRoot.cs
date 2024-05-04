@@ -7,6 +7,7 @@ using Modules.MoveSystem;
 using Modules.PlayerWeaponsHandler;
 using Modules.Weapons.Ammunition;
 using Modules.Weapons.Range;
+using Source.Modules.DamageSystem;
 using Source.Modules.InputSystem;
 
 public class LevelCompositRoot : LifetimeScope
@@ -15,6 +16,8 @@ public class LevelCompositRoot : LifetimeScope
     [SerializeField] private RangeWeaponConfigFactory _weaponConfigFactory;
     [SerializeField] private WeaponTracker _weaponTracker;
     [SerializeField] private BehaviorConfig _behaviorConfig;
+    [SerializeField] private DamageableConfig _damageableConfig;
+    
 
     protected override void Configure(IContainerBuilder builder)
     {
@@ -49,7 +52,8 @@ public class LevelCompositRoot : LifetimeScope
 
     private void DamageConfigure(IContainerBuilder builder)
     {
-        
+        builder.RegisterComponentInHierarchy<DamageReceiverSetup>();
+        builder.RegisterInstance(_damageableConfig);
     }
 
     private void WeaponConfigure(IContainerBuilder builder)

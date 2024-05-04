@@ -1,6 +1,4 @@
-using Modules.Characters;
-
-namespace Source.Modules.DamageSystem
+namespace Modules.DamageSystem
 {
     public class DamageReceiverPresenter
     {

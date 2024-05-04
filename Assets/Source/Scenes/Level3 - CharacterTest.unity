@@ -292,6 +292,7 @@ MonoBehaviour:
   _weaponConfigFactory: {fileID: 11400000, guid: 726e345fe5bd56f4486c8acdb99fb2e4, type: 2}
   _weaponTracker: {fileID: 1616779574}
   _behaviorConfig: {fileID: 11400000, guid: 3b9df4bbf477fb64cb6534e21bfd08d4, type: 2}
+  _damageableConfig: {fileID: 11400000, guid: c58c38b3bd43df443a2be02a2ad2ac6d, type: 2}
 --- !u!1 &69393173
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,8 +347,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 326262787}
   _bulletsNumber: 5
-  _minAngle: -35
-  _maxAngle: 35
+  _minAngle: -10
+  _maxAngle: 10
 --- !u!114 &69393176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,8 +558,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 1095787501}
   _bulletsNumber: 5
-  _minAngle: -35
-  _maxAngle: 35
+  _minAngle: -10
+  _maxAngle: 10
 --- !u!114 &179325724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,8 +764,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 1210230514}
   _bulletsNumber: 5
-  _minAngle: -35
-  _maxAngle: 35
+  _minAngle: -10
+  _maxAngle: 10
 --- !u!114 &222827586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1181,7 +1182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8141840485643787783, guid: 0ee1496434692cb46860fd7a62d15b88, type: 3}
       propertyPath: mBehaviorSource.mTaskData.JSONSerialization
-      value: '{"Variables":[{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedVector3Array","Name":"PatrolPoints","IsShared":true,"Vector3[]mValue":["(50,2.5,5)","(50,2.5,50)","(0,2.5,50)","(0,2.5,5)"]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMinDelay","IsShared":true,"SinglemValue":1},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMaxDelay","IsShared":true,"SinglemValue":5},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"HearingDistance","IsShared":true,"SinglemValue":10},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"VisualDistance","IsShared":true,"SinglemValue":100},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FieldOfViewAngle","IsShared":true,"SinglemValue":180},{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedAiInput","Name":"AiInput","IsShared":true,"AiInputmValue":{}},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"LastTargetPosition","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"HasLastPosition","IsShared":true,"BooleanmValue":false}]}'
+      value: '{"Variables":[{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedVector3Array","Name":"PatrolPoints","IsShared":true,"Vector3[]mValue":["(50,2.5,5)","(50,2.5,50)","(0,2.5,50)","(0,2.5,5)"]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMinDelay","IsShared":true,"SinglemValue":1},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMaxDelay","IsShared":true,"SinglemValue":5},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"HearingDistance","IsShared":true,"SinglemValue":10},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"VisualDistance","IsShared":true,"SinglemValue":100},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FieldOfViewAngle","IsShared":true,"SinglemValue":180},{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedAiInput","Name":"AiInput","IsShared":true,"AiInputmValue":{}},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"LastTargetPosition","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"HasLastPosition","IsShared":true,"BooleanmValue":false},{"Type":"Modules.DamageSystem.Enemies.EnemyBehavior.Variables.SharedDamageReceiver","Name":"DamageReceiver","IsShared":true}]}'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1519,8 +1520,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 792234397}
   _bulletsNumber: 5
-  _minAngle: -35
-  _maxAngle: 35
+  _minAngle: -10
+  _maxAngle: 10
 --- !u!114 &660142057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1873,8 +1874,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 1687410519}
   _bulletsNumber: 5
-  _minAngle: -35
-  _maxAngle: 35
+  _minAngle: -10
+  _maxAngle: 10
 --- !u!114 &699911703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2083,7 +2084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8141840485643787783, guid: 0ee1496434692cb46860fd7a62d15b88, type: 3}
       propertyPath: mBehaviorSource.mTaskData.JSONSerialization
-      value: '{"Variables":[{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedVector3Array","Name":"PatrolPoints","IsShared":true,"Vector3[]mValue":["(50,2.5,5)","(50,2.5,50)","(0,2.5,50)","(0,2.5,5)"]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMinDelay","IsShared":true,"SinglemValue":1},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMaxDelay","IsShared":true,"SinglemValue":5},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"HearingDistance","IsShared":true,"SinglemValue":10},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"VisualDistance","IsShared":true,"SinglemValue":100},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FieldOfViewAngle","IsShared":true,"SinglemValue":180},{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedAiInput","Name":"AiInput","IsShared":true,"AiInputmValue":{}},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"LastTargetPosition","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"HasLastPosition","IsShared":true,"BooleanmValue":false}]}'
+      value: '{"Variables":[{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedVector3Array","Name":"PatrolPoints","IsShared":true,"Vector3[]mValue":["(50,2.5,5)","(50,2.5,50)","(0,2.5,50)","(0,2.5,5)"]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMinDelay","IsShared":true,"SinglemValue":1},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMaxDelay","IsShared":true,"SinglemValue":5},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"HearingDistance","IsShared":true,"SinglemValue":10},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"VisualDistance","IsShared":true,"SinglemValue":100},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FieldOfViewAngle","IsShared":true,"SinglemValue":180},{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedAiInput","Name":"AiInput","IsShared":true,"AiInputmValue":{}},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"LastTargetPosition","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"HasLastPosition","IsShared":true,"BooleanmValue":false},{"Type":"Modules.DamageSystem.Enemies.EnemyBehavior.Variables.SharedDamageReceiver","Name":"DamageReceiver","IsShared":true}]}'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2193,8 +2194,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 372638932}
   _bulletsNumber: 5
-  _minAngle: -35
-  _maxAngle: 35
+  _minAngle: -10
+  _maxAngle: 10
 --- !u!114 &970716091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2591,8 +2592,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 471391749}
   _bulletsNumber: 5
-  _minAngle: -35
-  _maxAngle: 35
+  _minAngle: -10
+  _maxAngle: 10
 --- !u!114 &1522344548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2915,8 +2916,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 31313564}
   _bulletsNumber: 5
-  _minAngle: -35
-  _maxAngle: 35
+  _minAngle: -10
+  _maxAngle: 10
 --- !u!114 &1631909120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3235,7 +3236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8141840485643787783, guid: 0ee1496434692cb46860fd7a62d15b88, type: 3}
       propertyPath: mBehaviorSource.mTaskData.JSONSerialization
-      value: '{"Variables":[{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedVector3Array","Name":"PatrolPoints","IsShared":true,"Vector3[]mValue":["(50,2.5,5)","(50,2.5,50)","(0,2.5,50)","(0,2.5,5)"]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMinDelay","IsShared":true,"SinglemValue":1},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMaxDelay","IsShared":true,"SinglemValue":5},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"HearingDistance","IsShared":true,"SinglemValue":10},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"VisualDistance","IsShared":true,"SinglemValue":100},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FieldOfViewAngle","IsShared":true,"SinglemValue":180},{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedAiInput","Name":"AiInput","IsShared":true,"AiInputmValue":{}},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"LastTargetPosition","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"HasLastPosition","IsShared":true,"BooleanmValue":false}]}'
+      value: '{"Variables":[{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedVector3Array","Name":"PatrolPoints","IsShared":true,"Vector3[]mValue":["(50,2.5,5)","(50,2.5,50)","(0,2.5,50)","(0,2.5,5)"]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMinDelay","IsShared":true,"SinglemValue":1},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMaxDelay","IsShared":true,"SinglemValue":5},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"HearingDistance","IsShared":true,"SinglemValue":10},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"VisualDistance","IsShared":true,"SinglemValue":100},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FieldOfViewAngle","IsShared":true,"SinglemValue":180},{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedAiInput","Name":"AiInput","IsShared":true,"AiInputmValue":{}},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"LastTargetPosition","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"HasLastPosition","IsShared":true,"BooleanmValue":false},{"Type":"Modules.DamageSystem.Enemies.EnemyBehavior.Variables.SharedDamageReceiver","Name":"DamageReceiver","IsShared":true}]}'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3296,8 +3297,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 251744102}
   _bulletsNumber: 5
-  _minAngle: -35
-  _maxAngle: 35
+  _minAngle: -10
+  _maxAngle: 10
 --- !u!114 &1763781394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3502,8 +3503,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 2108877291}
   _bulletsNumber: 5
-  _minAngle: -35
-  _maxAngle: 35
+  _minAngle: -10
+  _maxAngle: 10
 --- !u!114 &1832247536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3708,8 +3709,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 1630986942}
   _bulletsNumber: 5
-  _minAngle: -35
-  _maxAngle: 35
+  _minAngle: -10
+  _maxAngle: 10
 --- !u!114 &1943955455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4011,8 +4012,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 482403490}
   _bulletsNumber: 5
-  _minAngle: -35
-  _maxAngle: 35
+  _minAngle: -10
+  _maxAngle: 10
 --- !u!114 &2084204318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4265,7 +4266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8141840485643787783, guid: 0ee1496434692cb46860fd7a62d15b88, type: 3}
       propertyPath: mBehaviorSource.mTaskData.JSONSerialization
-      value: '{"Variables":[{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedVector3Array","Name":"PatrolPoints","IsShared":true,"Vector3[]mValue":["(50,2.5,5)","(50,2.5,50)","(0,2.5,50)","(0,2.5,5)"]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMinDelay","IsShared":true,"SinglemValue":1},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMaxDelay","IsShared":true,"SinglemValue":5},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"HearingDistance","IsShared":true,"SinglemValue":10},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"VisualDistance","IsShared":true,"SinglemValue":100},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FieldOfViewAngle","IsShared":true,"SinglemValue":180},{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedAiInput","Name":"AiInput","IsShared":true,"AiInputmValue":{}},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"LastTargetPosition","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"HasLastPosition","IsShared":true,"BooleanmValue":false}]}'
+      value: '{"Variables":[{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedVector3Array","Name":"PatrolPoints","IsShared":true,"Vector3[]mValue":["(50,2.5,5)","(50,2.5,50)","(0,2.5,50)","(0,2.5,5)"]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMinDelay","IsShared":true,"SinglemValue":1},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMaxDelay","IsShared":true,"SinglemValue":5},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"HearingDistance","IsShared":true,"SinglemValue":10},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"VisualDistance","IsShared":true,"SinglemValue":100},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FieldOfViewAngle","IsShared":true,"SinglemValue":180},{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedAiInput","Name":"AiInput","IsShared":true,"AiInputmValue":{}},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"LastTargetPosition","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"HasLastPosition","IsShared":true,"BooleanmValue":false},{"Type":"Modules.DamageSystem.Enemies.EnemyBehavior.Variables.SharedDamageReceiver","Name":"DamageReceiver","IsShared":true}]}'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4427,7 +4428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8141840485643787783, guid: 0ee1496434692cb46860fd7a62d15b88, type: 3}
       propertyPath: mBehaviorSource.mTaskData.JSONSerialization
-      value: '{"Variables":[{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedVector3Array","Name":"PatrolPoints","IsShared":true,"Vector3[]mValue":["(50,2.5,5)","(50,2.5,50)","(0,2.5,50)","(0,2.5,5)"]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMinDelay","IsShared":true,"SinglemValue":1},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMaxDelay","IsShared":true,"SinglemValue":5},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"HearingDistance","IsShared":true,"SinglemValue":10},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"VisualDistance","IsShared":true,"SinglemValue":100},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FieldOfViewAngle","IsShared":true,"SinglemValue":180},{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedAiInput","Name":"AiInput","IsShared":true,"AiInputmValue":{}},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"LastTargetPosition","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"HasLastPosition","IsShared":true,"BooleanmValue":false}]}'
+      value: '{"Variables":[{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedVector3Array","Name":"PatrolPoints","IsShared":true,"Vector3[]mValue":["(50,2.5,5)","(50,2.5,50)","(0,2.5,50)","(0,2.5,5)"]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMinDelay","IsShared":true,"SinglemValue":1},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMaxDelay","IsShared":true,"SinglemValue":5},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"HearingDistance","IsShared":true,"SinglemValue":10},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"VisualDistance","IsShared":true,"SinglemValue":100},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FieldOfViewAngle","IsShared":true,"SinglemValue":180},{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedAiInput","Name":"AiInput","IsShared":true,"AiInputmValue":{}},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"LastTargetPosition","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"HasLastPosition","IsShared":true,"BooleanmValue":false},{"Type":"Modules.DamageSystem.Enemies.EnemyBehavior.Variables.SharedDamageReceiver","Name":"DamageReceiver","IsShared":true}]}'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

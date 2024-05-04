@@ -1,38 +1,15 @@
 using BehaviorDesigner.Runtime.Tasks;
+using Modules.DamageSystem.Enemies.EnemyBehavior.Variables;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
 {
     public class IsKnocked : Conditional
     {
-        private DamageReceiver _damageReceiver;
-
-        private bool _isKnocked;
+        public SharedDamageReceiver _damageReceiver;
         
-        public override void OnAwake()
-        {
-            _damageReceiver.Knocked += OnKnocked;
-            _damageReceiver.Recovered += OnRecovered;
-        }
-
         public override TaskStatus OnUpdate()
         {
-            return _isKnocked ? TaskStatus.Success : TaskStatus.Failure;
-        }
-
-        public override void OnBehaviorComplete()
-        {
-            _damageReceiver.Knocked -= OnKnocked;
-            _damageReceiver.Recovered -= OnRecovered;
-        }
-
-        private void OnKnocked()
-        {
-            _isKnocked = true;
-        }
-
-        private void OnRecovered()
-        {
-            _isKnocked = false;
+            return _damageReceiver.Value.IsKnocked ? TaskStatus.Success : TaskStatus.Failure;
         }
     }
 }

@@ -2,11 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27b5db7a-b918-4bd4-b47c-121f4f888e4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/Conditions/IsDead.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/Conditions/IsDead.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/Conditions/IsKnocked.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/Conditions/IsKnocked.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/Variables/SharedDamageReceiver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/Variables/SharedDamageReceiver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/Consciousness.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/Consciousness.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiverPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiverPresenter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiverSetup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiverSetup.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiverView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiverView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageableConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageableConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/Health.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/Health.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/IDamageReceiver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/IDamageReceiver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Damager.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Damager/Damager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Damager/Damager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/EnemyBehaviourExtended.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/EnemyBehaviourExtended.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/LevelCompositRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/LevelCompositRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/BehaviorSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/BehaviorSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/Conditions/IsDead.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/Conditions/IsDead.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/Conditions/IsKnocked.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Enemies/EnemyBehavior/Conditions/IsKnocked.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Consciousness.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverPresenter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverPresenter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSetup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSetup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageableConfig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageableConfig.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Health.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/IDamageReceiver.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/IDamageReceiver.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Bullet/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Bullet/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/Level3 - CharacterTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/Level3 - CharacterTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Shotgun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Shotgun.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +84,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54e4b904ef9a4d4792c51489161280c31ce00/48/1a249987/TaskIconAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/4a/fd34de5d/KeyValuePair`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a24131e73ec49f7805f3dfb6a69fa781d000/da/17d1d777/SharedVariable`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/40/74d417a9/RuntimeMethodInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fbabdc4652924beb8a0aa7b54148a1d131e00/f1/0498d315/VWork.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a24131e73ec49f7805f3dfb6a69fa781d000/0e/33e4ca19/BehaviorManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Internal/InstanceRegistrationBuilder.cs" root0="SKIP_HIGHLIGHTING" />

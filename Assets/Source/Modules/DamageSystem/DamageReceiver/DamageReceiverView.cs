@@ -1,9 +1,7 @@
 using System;
-using System.Runtime.CompilerServices;
-using Modules.DamageSystem;
 using UnityEngine;
 
-namespace Source.Modules.DamageSystem
+namespace Modules.DamageSystem
 {
     [RequireComponent(typeof(Collider))]
     public class DamageReceiverView : MonoBehaviour, IDamageReceiver

@@ -1,10 +1,9 @@
 using System;
 using System.Threading;
-using Modules.DamageSystem;
 using Modules.DamageSystem.DamageStrategy;
 using Source.Modules.DamageSystem;
 
-namespace Modules.Characters
+namespace Modules.DamageSystem
 {
     public class DamageReceiver
     {
