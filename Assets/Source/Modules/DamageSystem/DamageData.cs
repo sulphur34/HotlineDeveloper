@@ -1,11 +1,18 @@
 using System;
 using Modules.Weapons.WeaponTypeSystem;
+using UnityEngine;
 
 namespace Modules.DamageSystem
 {
     [Serializable]
-    public class DamageData
+    public struct DamageData
     {
+        public WeaponType WeaponType;
+        [Range(0,1)]
+        public float Value;
+        public bool IsKnockout;
+        public bool IsLethal;
+        
         private static readonly float _zeroDamageValue = 0f;
         private static readonly float _normalDamageValue = 1f;
         private DamageData(float value, WeaponType weaponType, bool isKnockout = false, bool isLethal = false)
@@ -15,11 +22,6 @@ namespace Modules.DamageSystem
             IsLethal = isLethal;
             WeaponType = weaponType;
         }
-
-        public float Value { get; private set; }
-        public bool IsKnockout { get; private set; }
-        public bool IsLethal { get; private set; }
-        public WeaponType WeaponType { get; private set; }
         
         public static DamageData MeleeDamage => new DamageData(_normalDamageValue, WeaponType.Melee, false, false);
         public static DamageData RangeDamage => new DamageData(_normalDamageValue, WeaponType.Range, false, false);

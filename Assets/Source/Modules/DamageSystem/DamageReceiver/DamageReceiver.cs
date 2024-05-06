@@ -25,10 +25,10 @@ namespace Modules.DamageSystem
 
         public void Receive(DamageData damage)
         {
-            if (damage.IsLethal && _consciousness.IsConscious == false)
+            if (damage.IsLethal && _consciousness.IsKnocked)
                 _health.Execute(HealthChanged,Died);
             
-            if(damage.IsKnockout && _consciousness.IsConscious)
+            if(damage.IsKnockout && _consciousness.IsKnocked == false)
                 _consciousness.Knockout(Knocked, Recovered);
             
             _health.TakeDamage(damage.Value, HealthChanged,Died);

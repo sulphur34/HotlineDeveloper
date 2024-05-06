@@ -8,7 +8,7 @@ namespace Modules.DamageSystem
     {
         private float _recoverTime;
         private CancellationToken _cancellationToken;
-        public bool IsConscious { get; private set; }
+        public bool IsKnocked { get; private set; }
 
         public event Action Knocked;
         public event Action Recovered;
@@ -21,7 +21,7 @@ namespace Modules.DamageSystem
 
         public void Knockout(Action onKnockedCallback, Action onRecoveredCallback)
         {
-            IsConscious = false;
+            IsKnocked = true;
             onKnockedCallback?.Invoke();
             Recovering(_cancellationToken, onRecoveredCallback);
         }
@@ -29,7 +29,7 @@ namespace Modules.DamageSystem
         private async UniTask Recovering(CancellationToken cancellationToken, Action onRecoveredCallback)
         {
             await UniTask.Delay(TimeSpan.FromSeconds(_recoverTime), cancellationToken: cancellationToken);
-            IsConscious = true;
+            IsKnocked = false;
             onRecoveredCallback?.Invoke();
         }
     }
