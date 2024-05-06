@@ -1,7 +1,6 @@
 using System;
-using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using VContainer;
 using Modules.Weapons.WeaponItemSystem;
 using Source.Modules.InputSystem.Interfaces;
 
@@ -9,9 +8,9 @@ namespace Modules.PlayerWeaponsHandler
 {
     public class WeaponHandler : MonoBehaviour
     {
-        private readonly List<WeaponItem> _lastWeaponsInRadius = new List<WeaponItem>();
-
         [SerializeField] private Transform _container;
+        [SerializeField] private Transform _pickPoint;
+        [SerializeField] private float _pickRadius;
 
         private WeaponItem _currentWeaponItem;
         protected IAttackInput _shotInput;
@@ -20,66 +19,62 @@ namespace Modules.PlayerWeaponsHandler
         public event Action<WeaponItem> WeaponPicked;
 
         public bool CurrentWeaponItemIsEmpty => _currentWeaponItem == null;
-        private WeaponItem LastWeaponInRadius => HasWeaponItemsInRaduis ? _lastWeaponsInRadius[^1] : null;
-        private bool HasWeaponItemsInRaduis => _lastWeaponsInRadius.Count > 0;
 
         private void OnDestroy()
         {
-            if (HasWeaponItemsInRaduis && LastWeaponInRadius.Equipped)
-                _shotInput.AttackReceived -= OnShotInputReceived;
-
+            _shotInput.AttackReceived -= OnShotInputReceived;
             _weaponItemInput.PickReceived -= OnWeaponItemInputReceived;
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.TryGetComponent(out WeaponItem weaponItem))
-                _lastWeaponsInRadius.Add(weaponItem);
-        }
-
-        private void OnTriggerExit(Collider other)
-        {
-            if (other.TryGetComponent(out WeaponItem weaponItem))
-                _lastWeaponsInRadius.Remove(weaponItem);
         }
 
         protected void OnWeaponItemInputReceived()
         {
-            if (CurrentWeaponItemIsEmpty && HasWeaponItemsInRaduis == false)
-                return;
+            bool HasPickableWeapon = TryGetWeapon(out WeaponItem weaponItem);
 
             if (CurrentWeaponItemIsEmpty == false && _currentWeaponItem.Equipped)
             {
                 _currentWeaponItem.Throw();
-                _lastWeaponsInRadius.Remove(_currentWeaponItem);
-
-                if (HasWeaponItemsInRaduis)
-                {
-                    EquipWeaponItem();
-                    return;
-                }
-
                 _currentWeaponItem = null;
                 _shotInput.AttackReceived -= OnShotInputReceived;
             }
-            else
+
+            if (HasPickableWeapon)
             {
-                EquipWeaponItem();
+                EquipWeaponItem(weaponItem);
                 _shotInput.AttackReceived += OnShotInputReceived;
             }
         }
 
-        private void EquipWeaponItem()
+        private void EquipWeaponItem(WeaponItem weaponItem)
         {
-            _currentWeaponItem = LastWeaponInRadius;
+            _currentWeaponItem = weaponItem;
             _currentWeaponItem.Equip(_container);
             WeaponPicked?.Invoke(_currentWeaponItem);
-            _lastWeaponsInRadius.Remove(_currentWeaponItem);
         }
 
         private void OnShotInputReceived()
         {
             _currentWeaponItem.Attack();
+        }
+
+        private bool TryGetWeapon(out WeaponItem weaponItem)
+        {
+            weaponItem = Physics.OverlapSphere(_pickPoint.position, _pickRadius)
+                .Where(collider => IsColliderAvailableWeapon(collider))
+                .OrderBy(collider => (collider.transform.position - _pickPoint.position).magnitude)
+                .FirstOrDefault()
+                ?.GetComponent<WeaponItem>();
+
+            return weaponItem != null;
+        }
+
+        private bool IsColliderAvailableWeapon(Collider collider)
+        {
+            WeaponItem weaponItem = collider.GetComponent<WeaponItem>();
+
+            if (weaponItem == null && weaponItem == _currentWeaponItem && weaponItem.Equipped == false)
+                return false;
+
+            return true;
         }
     }
 }
