@@ -40,6 +40,9 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 
         public override void OnConditionalAbort()
         {
+            if (_navMeshAgent.isStopped)
+                return;
+            
             _navMeshAgent.Stop();
         }
     }
