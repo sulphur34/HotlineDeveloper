@@ -306,7 +306,6 @@ GameObject:
   - component: {fileID: 69393181}
   - component: {fileID: 69393180}
   - component: {fileID: 69393179}
-  - component: {fileID: 69393178}
   - component: {fileID: 69393177}
   - component: {fileID: 69393176}
   - component: {fileID: 69393175}
@@ -381,27 +380,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 69393176}
   _shotStrategy: {fileID: 69393175}
---- !u!135 &69393178
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69393173}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &69393179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -517,6 +495,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+  _lethalSpeed: 0
 --- !u!4 &70290069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4248681961386523685, guid: ff19f45fe7e6e1c459d30900cebc87b2, type: 3}
@@ -535,7 +514,6 @@ GameObject:
   - component: {fileID: 179325729}
   - component: {fileID: 179325728}
   - component: {fileID: 179325727}
-  - component: {fileID: 179325726}
   - component: {fileID: 179325725}
   - component: {fileID: 179325724}
   - component: {fileID: 179325723}
@@ -610,27 +588,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 179325724}
   _shotStrategy: {fileID: 179325723}
---- !u!135 &179325726
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179325721}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &179325727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -746,6 +703,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+  _lethalSpeed: 0
 --- !u!1 &222827583
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,7 +717,6 @@ GameObject:
   - component: {fileID: 222827591}
   - component: {fileID: 222827590}
   - component: {fileID: 222827589}
-  - component: {fileID: 222827588}
   - component: {fileID: 222827587}
   - component: {fileID: 222827586}
   - component: {fileID: 222827585}
@@ -834,27 +791,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 222827586}
   _shotStrategy: {fileID: 222827585}
---- !u!135 &222827588
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 222827583}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &222827589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -970,6 +906,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+  _lethalSpeed: 0
 --- !u!1 &251744100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,7 +1470,6 @@ GameObject:
   - component: {fileID: 660142062}
   - component: {fileID: 660142061}
   - component: {fileID: 660142060}
-  - component: {fileID: 660142059}
   - component: {fileID: 660142058}
   - component: {fileID: 660142057}
   - component: {fileID: 660142056}
@@ -1608,27 +1544,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 660142057}
   _shotStrategy: {fileID: 660142056}
---- !u!135 &660142059
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660142054}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &660142060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1744,6 +1659,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+  _lethalSpeed: 0
 --- !u!1 &669513643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,7 +1821,6 @@ GameObject:
   - component: {fileID: 699911708}
   - component: {fileID: 699911707}
   - component: {fileID: 699911706}
-  - component: {fileID: 699911705}
   - component: {fileID: 699911704}
   - component: {fileID: 699911703}
   - component: {fileID: 699911702}
@@ -1980,27 +1895,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 699911703}
   _shotStrategy: {fileID: 699911702}
---- !u!135 &699911705
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699911700}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &699911706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2116,6 +2010,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+  _lethalSpeed: 0
 --- !u!1001 &732322863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2243,7 +2138,6 @@ GameObject:
   - component: {fileID: 970716096}
   - component: {fileID: 970716095}
   - component: {fileID: 970716094}
-  - component: {fileID: 970716093}
   - component: {fileID: 970716092}
   - component: {fileID: 970716091}
   - component: {fileID: 970716090}
@@ -2318,27 +2212,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 970716091}
   _shotStrategy: {fileID: 970716090}
---- !u!135 &970716093
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970716088}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &970716094
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2454,6 +2327,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+  _lethalSpeed: 0
 --- !u!1 &1035797468 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3424098638274893650, guid: 0ee1496434692cb46860fd7a62d15b88, type: 3}
@@ -2659,7 +2533,6 @@ GameObject:
   - component: {fileID: 1522344553}
   - component: {fileID: 1522344552}
   - component: {fileID: 1522344551}
-  - component: {fileID: 1522344550}
   - component: {fileID: 1522344549}
   - component: {fileID: 1522344548}
   - component: {fileID: 1522344547}
@@ -2734,27 +2607,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 1522344548}
   _shotStrategy: {fileID: 1522344547}
---- !u!135 &1522344550
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522344545}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1522344551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2870,6 +2722,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+  _lethalSpeed: 0
 --- !u!1 &1527975810 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3424098638274893650, guid: 0ee1496434692cb46860fd7a62d15b88, type: 3}
@@ -3001,7 +2854,6 @@ GameObject:
   - component: {fileID: 1631909125}
   - component: {fileID: 1631909124}
   - component: {fileID: 1631909123}
-  - component: {fileID: 1631909122}
   - component: {fileID: 1631909121}
   - component: {fileID: 1631909120}
   - component: {fileID: 1631909119}
@@ -3076,27 +2928,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 1631909120}
   _shotStrategy: {fileID: 1631909119}
---- !u!135 &1631909122
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631909117}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1631909123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3212,6 +3043,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+  _lethalSpeed: 0
 --- !u!1 &1656217329 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3424098638274893650, guid: 0ee1496434692cb46860fd7a62d15b88, type: 3}
@@ -3400,7 +3232,6 @@ GameObject:
   - component: {fileID: 1763781399}
   - component: {fileID: 1763781398}
   - component: {fileID: 1763781397}
-  - component: {fileID: 1763781396}
   - component: {fileID: 1763781395}
   - component: {fileID: 1763781394}
   - component: {fileID: 1763781393}
@@ -3475,27 +3306,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 1763781394}
   _shotStrategy: {fileID: 1763781393}
---- !u!135 &1763781396
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763781391}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1763781397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3611,6 +3421,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+  _lethalSpeed: 0
 --- !u!1 &1832247533
 GameObject:
   m_ObjectHideFlags: 0
@@ -3624,7 +3435,6 @@ GameObject:
   - component: {fileID: 1832247541}
   - component: {fileID: 1832247540}
   - component: {fileID: 1832247539}
-  - component: {fileID: 1832247538}
   - component: {fileID: 1832247537}
   - component: {fileID: 1832247536}
   - component: {fileID: 1832247535}
@@ -3699,27 +3509,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 1832247536}
   _shotStrategy: {fileID: 1832247535}
---- !u!135 &1832247538
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832247533}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1832247539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3835,6 +3624,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+  _lethalSpeed: 0
 --- !u!1 &1943955452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3848,7 +3638,6 @@ GameObject:
   - component: {fileID: 1943955460}
   - component: {fileID: 1943955459}
   - component: {fileID: 1943955458}
-  - component: {fileID: 1943955457}
   - component: {fileID: 1943955456}
   - component: {fileID: 1943955455}
   - component: {fileID: 1943955454}
@@ -3923,27 +3712,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 1943955455}
   _shotStrategy: {fileID: 1943955454}
---- !u!135 &1943955457
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943955452}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &1943955458
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4059,6 +3827,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+  _lethalSpeed: 0
 --- !u!1 &2016440052
 GameObject:
   m_ObjectHideFlags: 0
@@ -4169,7 +3938,6 @@ GameObject:
   - component: {fileID: 2084204323}
   - component: {fileID: 2084204322}
   - component: {fileID: 2084204321}
-  - component: {fileID: 2084204320}
   - component: {fileID: 2084204319}
   - component: {fileID: 2084204318}
   - component: {fileID: 2084204317}
@@ -4244,27 +4012,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 2084204318}
   _shotStrategy: {fileID: 2084204317}
---- !u!135 &2084204320
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084204315}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &2084204321
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4380,6 +4127,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+  _lethalSpeed: 0
 --- !u!1 &2108877289
 GameObject:
   m_ObjectHideFlags: 0

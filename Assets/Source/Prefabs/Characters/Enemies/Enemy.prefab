@@ -39,6 +39,8 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3204920573428974557}
+  - {fileID: 7841294191082111126}
+  - {fileID: 1181662243509232465}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4188726937319842917
@@ -141,7 +143,7 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"Target","IsShared":true},{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedVector3Array","Name":"PatrolPoints","IsShared":true,"Vector3[]mValue":["(50,2.5,5)","(50,2.5,50)","(0,2.5,50)","(0,2.5,5)"]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMinDelay","IsShared":true,"SinglemValue":1},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMaxDelay","IsShared":true,"SinglemValue":5},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"HearingDistance","IsShared":true,"SinglemValue":10},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"VisualDistance","IsShared":true,"SinglemValue":100},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FieldOfViewAngle","IsShared":true,"SinglemValue":180},{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedAiInput","Name":"AiInput","IsShared":true,"AiInputmValue":{}},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"LastTargetPosition","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"HasLastPosition","IsShared":true,"BooleanmValue":false}]}'
+      JSONSerialization: '{"Variables":[{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedVector3Array","Name":"PatrolPoints","IsShared":true,"Vector3[]mValue":["(50,2.5,5)","(50,2.5,50)","(0,2.5,50)","(0,2.5,5)"]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMinDelay","IsShared":true,"SinglemValue":1},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ActionsMaxDelay","IsShared":true,"SinglemValue":5},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"HearingDistance","IsShared":true,"SinglemValue":10},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"VisualDistance","IsShared":true,"SinglemValue":100},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"FieldOfViewAngle","IsShared":true,"SinglemValue":180},{"Type":"Modules.Characters.Enemies.EnemyBehavior.Variables.SharedAiInput","Name":"AiInput","IsShared":true,"AiInputmValue":{}},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"LastTargetPosition","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"HasLastPosition","IsShared":true,"BooleanmValue":false},{"Type":"Modules.DamageSystem.Enemies.EnemyBehavior.Variables.SharedDamageReceiver","Name":"DamageReceiver","IsShared":true}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
@@ -165,7 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f72dcaecaf4ee9b0227a08f96499bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _container: {fileID: 5670538027048380744}
+  _container: {fileID: 1181662243509232465}
+  _pickPoint: {fileID: 7841294191082111126}
+  _pickRadius: 2
 --- !u!114 &2971194167444549468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,3 +334,65 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &4729101746745538092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7841294191082111126}
+  m_Layer: 0
+  m_Name: PickPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7841294191082111126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4729101746745538092}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5670538027048380744}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7983191837962824228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1181662243509232465}
+  m_Layer: 0
+  m_Name: WeaponPlaceholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1181662243509232465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983191837962824228}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5670538027048380744}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

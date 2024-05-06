@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Modules.DamageSystem
 {
-    [RequireComponent(typeof(Rigidbody))]
+    // [RequireComponent(typeof(Rigidbody))]
     public class Damager : MonoBehaviour
     {
         [SerializeField] private DamageData _damageData;

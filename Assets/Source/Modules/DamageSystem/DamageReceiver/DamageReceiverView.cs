@@ -12,6 +12,12 @@ namespace Modules.DamageSystem
         public bool IsDead { get; private set; }
         public bool IsKnocked { get; private set; }
 
+        private void LateUpdate()
+        {
+            if(IsDead || IsKnocked)
+                TestDeathAnimation();
+        }
+
         public void Receive(DamageData damageData)
         {
             Received?.Invoke(damageData);
@@ -19,14 +25,12 @@ namespace Modules.DamageSystem
        
         public void OnKnocked()
         {
-            IsKnocked = true;
-            TestDeathAnimation();   
+            IsKnocked = true;  
         }
 
         public void OnRecovered()
         {
             IsKnocked = false;
-            TestRecoverAnimation();
         }
 
         public void OnHealthChanged(float value)
@@ -35,19 +39,12 @@ namespace Modules.DamageSystem
 
         public void OnDeath()
         {
-            TestDeathAnimation();
             IsDead = true;
         }
 
         private void TestDeathAnimation()
         {
-            GetComponent<NavMeshAgent>().enabled = false;
             transform.RotateAround(transform.position, Vector3.forward, 90f);
-        }
-        
-        private void TestRecoverAnimation()
-        {
-            GetComponent<NavMeshAgent>().enabled = true;
         }
     }
 }
