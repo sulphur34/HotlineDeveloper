@@ -2,7 +2,6 @@ using Modules.FadeSystem;
 using Modules.PressedButtonSystem;
 using Modules.SceneLoaderSystem;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using VContainer;
 
 namespace Modules.PauseMenu
@@ -19,7 +18,7 @@ namespace Modules.PauseMenu
         {
             _pauseSetter.Disable();
             _fade.In();
-            _sceneLoader.Load(_sceneNameForLoad.ToString(), LoadSceneMode.Single, _fade);
+            _sceneLoader.Load(_sceneNameForLoad.ToString(), _fade);
         }
 
         [Inject]

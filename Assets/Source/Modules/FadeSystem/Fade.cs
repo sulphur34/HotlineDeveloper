@@ -3,6 +3,7 @@ using DG.Tweening;
 using Modules.SceneLoaderSystem;
 using UnityEngine;
 using UnityEngine.UI;
+using VContainer;
 
 namespace Modules.FadeSystem
 {
@@ -13,15 +14,8 @@ namespace Modules.FadeSystem
 
         [SerializeField] private Image _image;
         [SerializeField] private float _waitTime;
-        [SerializeField] private bool _fadeOutOnStart;
 
         public event Action<IOperationBeforeLoading> Executed;
-
-        private void Start()
-        {
-            if (_fadeOutOnStart)
-                Out();
-        }
 
         public void In()
         {

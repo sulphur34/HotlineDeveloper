@@ -29,8 +29,6 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterEntryPoint<DesktopWeaponItemInput>().As<IWeaponItemInput>();
         builder.RegisterComponentInHierarchy<PlayerWeaponHandler>();
 
-        builder.RegisterComponentInHierarchy<Fade>();
-
         builder.RegisterComponentInHierarchy<LevelHandler>();
         builder.Register<LevelSaveHandler>(Lifetime.Singleton);
 
@@ -41,6 +39,8 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterBuildCallback(container =>
         {
             container.InjectGameObject(_weaponSetupsParent);
+            container.Resolve<LevelSaveHandler>();
+            container.Resolve<Fade>().Out();
         });
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Modules.LevelsSystem;
 using Modules.PressedButtonSystem;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using VContainer;
 
@@ -11,17 +12,25 @@ namespace Modules.LevelSelectionSystem
         private readonly LevelSelectionElement[] _levelSelectionElements;
         private readonly PressedButton _levelSelectionButton;
         private readonly LevelSceneLoader _levelSceneLoader;
-        private readonly Level _loadedLevel;
+        private readonly Level _lastLevelForLoad;
 
         private LevelSelectionElement _lastSelectedElement;
 
         [Inject]
-        public LevelSelectionPresenter(LevelSelectionElement[] levelSelectionElements, PressedButton levelSelectionButton, LevelSceneLoader levelSceneLoader, Level loadedLevel)
+        public LevelSelectionPresenter(LevelSelectionElement[] levelSelectionElements, 
+            PressedButton levelSelectionButton, 
+            LevelSceneLoader levelSceneLoader, 
+            Level lastLevelForLoad,
+            List<Level> levels)
         {
             _levelSelectionElements = levelSelectionElements;
             _levelSelectionButton = levelSelectionButton;
             _levelSceneLoader = levelSceneLoader;
-            _loadedLevel = loadedLevel;
+            _lastLevelForLoad = lastLevelForLoad;
+
+            for (int i = 0; i < _levelSelectionElements.Length; i++)
+                _levelSelectionElements[i].Init(levels[i].IsLocked);
+
             _lastSelectedElement = _levelSelectionElements.FirstOrDefault(element => element.IsSelected);
 
             _levelSelectionButton.Pressed += OnButtonPressed;
@@ -43,8 +52,8 @@ namespace Modules.LevelSelectionSystem
             if (_lastSelectedElement == null) 
                 return;
 
-            _loadedLevel.SetNumber(_lastSelectedElement.LevelNumberForLoad);
-            _levelSceneLoader.Load(_loadedLevel);
+            _lastLevelForLoad.SetNumber(_lastSelectedElement.LevelNumberForLoad);
+            _levelSceneLoader.Load(_lastLevelForLoad);
         }
 
         private void OnElementPressed(LevelSelectionElement levelSelectionElement)

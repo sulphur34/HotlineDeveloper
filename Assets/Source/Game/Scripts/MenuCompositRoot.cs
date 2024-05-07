@@ -22,7 +22,6 @@ public class MenuCompositRoot : LifetimeScope
     {
         builder.RegisterInstance(_levelSelectionElements);
         builder.RegisterInstance(_levelSelectionButton);
-        builder.RegisterComponentInHierarchy<Fade>();
         builder.Register<LevelSceneLoader>(Lifetime.Singleton);
         builder.Register<LevelSelectionPresenter>(Lifetime.Singleton);
         builder.Register<SelectedLevelSaveHandler>(Lifetime.Singleton);
@@ -34,6 +33,7 @@ public class MenuCompositRoot : LifetimeScope
             levelSelectionElement.Select();
             container.Resolve<LevelSelectionPresenter>();
             container.Resolve<SelectedLevelSaveHandler>();
+            container.Resolve<Fade>().Out();
         });
     }
 }

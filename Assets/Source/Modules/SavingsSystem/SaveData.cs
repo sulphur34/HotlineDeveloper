@@ -11,6 +11,6 @@ namespace Modules.SavingsSystem
         [field: Preserve]
         public uint CurrentLevel = 1;
         [field: Preserve]
-        public List<Level> Levels;
+        public List<Level> Levels = new List<Level>();
     }
 }

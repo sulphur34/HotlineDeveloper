@@ -1,7 +1,9 @@
 using Modules.LevelsSystem;
 using Modules.SavingsSystem;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using VContainer;
 
 namespace Modules.SaveHandlers
 {
@@ -9,10 +11,13 @@ namespace Modules.SaveHandlers
     {
         private readonly SaveSystem _saveSystem = new SaveSystem();
         private readonly Level _currentLevel;
+        private readonly List<Level> _levels;
 
-        public LevelSaveHandler(Level currentLevel)
+        [Inject]
+        public LevelSaveHandler(Level currentLevel, List<Level> levels)
         {
             _currentLevel = currentLevel;
+            _levels = levels;
 
             _currentLevel.Completed += OnCompleted;
         }
@@ -26,8 +31,14 @@ namespace Modules.SaveHandlers
         {
             _saveSystem.Save(data =>
             {
-                Level currentLevel = data.Levels.FirstOrDefault(level => level.Number == _currentLevel.Number);
-                currentLevel.Complete();
+                uint nextLevelNumber = data.CurrentLevel + 1;
+
+                if (data.CurrentLevel >= data.Levels.Count)
+                    return;
+
+                Level nextLevel = _levels.FirstOrDefault(level => level.Number == nextLevelNumber);
+                nextLevel.Unlock();
+                data.Levels = _levels;
             });
         }
     }

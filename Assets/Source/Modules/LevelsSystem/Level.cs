@@ -12,7 +12,7 @@ namespace Modules.LevelsSystem
 
         [field: SerializeField] public uint Number { get; private set; } = 1;
 
-        [field: SerializeField] public bool IsCompleted { get; private set; }
+        [field: SerializeField] public bool IsLocked { get; private set; } = true;
 
         public void SetNumber(uint number)
         {
@@ -22,9 +22,13 @@ namespace Modules.LevelsSystem
             Number = number;
         }
 
+        public void Unlock()
+        {
+            IsLocked = false;
+        }
+
         public void Complete()
         {
-            IsCompleted = true;
             Completed?.Invoke();
         }
     }

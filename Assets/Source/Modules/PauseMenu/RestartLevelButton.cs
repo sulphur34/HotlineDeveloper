@@ -4,7 +4,6 @@ using Modules.PressedButtonSystem;
 using Modules.SceneLoaderSystem;
 using UnityEngine.SceneManagement;
 using VContainer;
-using UnityEngine;
 
 public class RestartLevelButton : PressedButton
 {
@@ -16,7 +15,7 @@ public class RestartLevelButton : PressedButton
     {
         _pauseSetter.Disable();
         _fade.In();
-        _sceneLoader.Load(SceneManager.GetActiveScene().name, LoadSceneMode.Single, _fade);
+        _sceneLoader.Load(SceneManager.GetActiveScene().name, _fade);
     }
 
     [Inject]

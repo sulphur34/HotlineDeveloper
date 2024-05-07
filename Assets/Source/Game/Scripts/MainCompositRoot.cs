@@ -1,33 +1,49 @@
+using Modules.FadeSystem;
 using Modules.LevelsSystem;
 using Modules.SavingsSystem;
 using Modules.SceneLoaderSystem;
-using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using System.Linq;
 using VContainer;
 using VContainer.Unity;
 
 public class MainCompositRoot : LifetimeScope
 {
-    private const string RootSceneName = "RootScene";
+    private const uint LevelsCount = 5;
 
     private readonly SaveSystem _saveSystem = new SaveSystem();
-
-    private SceneLoader _sceneLoader;
-
-    protected override void OnDestroy()
-    {
-        _sceneLoader.Dispose();
-    }
 
     protected override void Configure(IContainerBuilder builder)
     {
         _saveSystem.Load(data =>
         {
-            Level lastLoadedLevel = new Level();
-            lastLoadedLevel.SetNumber(data.CurrentLevel);
+            InitLevels(data.Levels);
+            Level lastLoadedLevel = data.Levels.FirstOrDefault(level => level.Number == data.CurrentLevel);
             builder.RegisterInstance(lastLoadedLevel);
 
-            _sceneLoader = new SceneLoader(RootSceneName);
-            builder.RegisterInstance(_sceneLoader);
+            builder.Register<SceneLoader>(Lifetime.Singleton);
+
+            builder.RegisterInstance(data.Levels);
+            builder.RegisterComponentInHierarchy<Fade>();
+        });
+    }
+
+    private void InitLevels(List<Level> levels)
+    {
+        if (levels.Count > 0)
+            return;
+
+        _saveSystem.Save(data =>
+        {
+            for (int i = 0; i < LevelsCount; i++)
+            {
+                data.Levels.Add(new Level());
+                uint levelNumber = (uint)i + 1;
+                data.Levels[i].SetNumber(levelNumber);
+
+                if (i == 0)
+                    data.Levels[i].Unlock();
+            }
         });
     }
 }

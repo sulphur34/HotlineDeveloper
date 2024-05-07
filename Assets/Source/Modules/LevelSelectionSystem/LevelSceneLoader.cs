@@ -1,7 +1,6 @@
 ﻿using Modules.FadeSystem;
 using Modules.LevelsSystem;
 using Modules.SceneLoaderSystem;
-using UnityEngine.SceneManagement;
 using VContainer;
 
 namespace Modules.LevelSelectionSystem
@@ -23,7 +22,7 @@ namespace Modules.LevelSelectionSystem
             string sceneNameForLoad = SceneName.Level.ToString() + level.Number.ToString();
 
             _fade.In();
-            _sceneLoader.Load(sceneNameForLoad, LoadSceneMode.Single, _fade);
+            _sceneLoader.Load(sceneNameForLoad, _fade);
         }
     }
 }
