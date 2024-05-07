@@ -9,7 +9,7 @@ namespace Modules.DamageSystem
     {
         private Health _health;
         private Consciousness _consciousness;
-        private IDamageStrategy _damageStrategy;
+        private IDamageReceiveStrategy _damageReceiveStrategy;
 
         public event Action<float> HealthChanged;
         public event Action Died;
@@ -20,7 +20,7 @@ namespace Modules.DamageSystem
         {
             _health = new Health(damageableConfig.MaxValue);
             _consciousness = new Consciousness(damageableConfig.RecoverTime, cancellationToken);
-            _damageStrategy = damageableConfig.DamageStrategy;
+            _damageReceiveStrategy = damageableConfig.DamageReceiveStrategy;
         }
 
         public void Receive(DamageData damage)

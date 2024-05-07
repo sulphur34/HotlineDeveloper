@@ -30,7 +30,7 @@ namespace Modules.PlayerWeaponsHandler
         {
             bool HasPickableWeapon = TryGetWeapon(out WeaponItem weaponItem);
 
-            if (CurrentWeaponItemIsEmpty == false && _currentWeaponItem.Equipped)
+            if (CurrentWeaponItemIsEmpty == false && _currentWeaponItem.IsEquipped)
             {
                 _currentWeaponItem.Throw();
                 _currentWeaponItem = null;
@@ -71,7 +71,7 @@ namespace Modules.PlayerWeaponsHandler
         {
             WeaponItem weaponItem = collider.GetComponent<WeaponItem>();
 
-            if (weaponItem == null && weaponItem == _currentWeaponItem && weaponItem.Equipped == false)
+            if (weaponItem == null || weaponItem == _currentWeaponItem || weaponItem.IsEquipped == true)
                 return false;
 
             return true;

@@ -1,6 +1,7 @@
 using Modules.Weapons.WeaponTypeSystem;
 using System;
-// using UnityEditor.Presets;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace Modules.Weapons.WeaponItemSystem
@@ -8,7 +9,6 @@ namespace Modules.Weapons.WeaponItemSystem
     public class WeaponItem : MonoBehaviour
     {
         [SerializeField] private Rigidbody _rigidbody;
-        // [SerializeField] private Preset _rigidbodyPreset;
         [SerializeField] private float _force;
         [SerializeField] private float _rotationForce;
 
@@ -16,19 +16,25 @@ namespace Modules.Weapons.WeaponItemSystem
 
         private Action _attack;
 
+        private CancellationToken _cancellationToken;
+
         [field: SerializeField] public Transform LeftHandPlaceHolder { get; private set; }
 
         [field: SerializeField] public Transform RightHandPlaceHolder { get; private set; }
 
+        public event Action<Transform> Equipped;
+        public event Action Thrown;
+
         public WeaponType Type { get; private set; }
 
-        public bool Equipped { get; private set; }
+        public bool IsEquipped { get; private set; }
 
         public void Init(Action attack, WeaponType type)
         {
             _attack = attack;
             Type = type;
             _startContainer = transform.parent;
+            _cancellationToken = this.GetCancellationTokenOnDestroy();
         }
 
         public void Attack()
@@ -48,16 +54,27 @@ namespace Modules.Weapons.WeaponItemSystem
             if( _rigidbody == null)
                 _rigidbody = gameObject.AddComponent<Rigidbody>();
             
-            // _rigidbodyPreset.ApplyTo(_rigidbody);
             _rigidbody.AddForce(transform.forward * _force, ForceMode.Impulse);
             _rigidbody.AddTorque(Vector3.up * _rotationForce);
             transform.SetParent(_startContainer);
+            WaitingThrowEnd(_cancellationToken, Thrown);
+        }
+        
+        private async UniTask WaitingThrowEnd(CancellationToken cancellationToken, Action onRecoveredCallback)
+        {
+            while (_rigidbody.velocity.magnitude > 0)
+            {
+                await UniTask.Yield(cancellationToken);
+            }
+            
+            onRecoveredCallback?.Invoke();
         }
 
         private void SetEquipped(bool value, Transform container)
         {
-            Equipped = value;
+            IsEquipped = value;
             transform.SetParent(container);
+            Equipped?.Invoke(container);
 
             if (container != null)
             {

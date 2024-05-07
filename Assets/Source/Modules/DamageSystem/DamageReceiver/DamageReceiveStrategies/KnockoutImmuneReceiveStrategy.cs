@@ -2,7 +2,7 @@ using Modules.DamageSystem;
 
 namespace Modules.DamageSystem.DamageStrategy
 {
-    public class KnockoutImmuneStrategy : IDamageStrategy
+    public class KnockoutImmuneReceiveStrategy : IDamageReceiveStrategy
     {
         public virtual DamageData GetDamage(DamageData damageData)
         {

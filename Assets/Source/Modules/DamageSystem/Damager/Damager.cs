@@ -2,19 +2,23 @@ using UnityEngine;
 
 namespace Modules.DamageSystem
 {
-    // [RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(IDamageInflictStrategy))]
     public class Damager : MonoBehaviour
     {
         [SerializeField] private DamageData _damageData;
-        [SerializeField] private float _lethalSpeed;
+
+        private IDamageInflictStrategy _damageStrategy;
         
-        
-        
+        private void Awake()
+        {
+            _damageStrategy = GetComponent<IDamageInflictStrategy>();
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out DamageReceiverView damageReceiverView))
             {
-                damageReceiverView.Receive(_damageData);
+                _damageStrategy.InflictDamage(damageReceiverView, _damageData);
             }
         }
     }

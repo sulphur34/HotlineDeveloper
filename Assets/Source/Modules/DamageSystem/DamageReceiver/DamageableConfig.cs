@@ -6,27 +6,27 @@ namespace Source.Modules.DamageSystem
     [CreateAssetMenu(fileName = "Damageable Config")]
     public class DamageableConfig : ScriptableObject
     {
-        [SerializeField] private DamageStrategies _damageStrategies;
+        [SerializeField] private DamageReceiveStrategies damageReceiveStrategies;
         [field: SerializeField] public float MaxValue { get; private set; }
         [field: SerializeField] public float RecoverTime { get; private set; }
 
-        public IDamageStrategy DamageStrategy => GetDamageStrategy(_damageStrategies);
+        public IDamageReceiveStrategy DamageReceiveStrategy => GetDamageStrategy(damageReceiveStrategies);
 
-        private IDamageStrategy GetDamageStrategy(DamageStrategies damageStrategies)
+        private IDamageReceiveStrategy GetDamageStrategy(DamageReceiveStrategies damageReceiveStrategies)
         {
-            switch (damageStrategies)
+            switch (damageReceiveStrategies)
             {
-                case DamageStrategies.Normal:
-                    return new NormalDamageStrategy();
+                case DamageReceiveStrategies.Normal:
+                    return new NormalDamageReceiveStrategy();
 
-                case DamageStrategies.KnockoutImmune:
-                    return new KnockoutImmuneStrategy();
+                case DamageReceiveStrategies.KnockoutImmune:
+                    return new KnockoutImmuneReceiveStrategy();
 
-                case DamageStrategies.MeleeImmune:
-                    return new MeleeImmuneDamageStrategy();
+                case DamageReceiveStrategies.MeleeImmune:
+                    return new MeleeImmuneReceiveStrategy();
 
                 default:
-                    return new NormalDamageStrategy();
+                    return new NormalDamageReceiveStrategy();
             }
         }
     }

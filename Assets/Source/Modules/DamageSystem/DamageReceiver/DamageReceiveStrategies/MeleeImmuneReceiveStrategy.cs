@@ -2,7 +2,7 @@ using Modules.Weapons.WeaponTypeSystem;
 
 namespace Modules.DamageSystem.DamageStrategy
 {
-    public class MeleeImmuneDamageStrategy : IDamageStrategy
+    public class MeleeImmuneReceiveStrategy : IDamageReceiveStrategy
     {
         public virtual DamageData GetDamage(DamageData damageData)
         {

@@ -22,7 +22,7 @@ public class WeaponTracker : MonoBehaviour
     public bool TryGetNearest(Vector3 position, out WeaponItem weaponItem)
     {
         weaponItem =_weapons
-            .Where(weapon => weapon.Equipped == false)
+            .Where(weapon => weapon.IsEquipped == false)
             .OrderBy(weapon => Vector3.Distance(position, weapon.transform.position))
             .FirstOrDefault();
 

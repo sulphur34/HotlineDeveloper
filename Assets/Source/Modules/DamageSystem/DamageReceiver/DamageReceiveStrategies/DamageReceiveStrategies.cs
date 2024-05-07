@@ -1,9 +1,10 @@
 namespace Modules.DamageSystem.DamageStrategy
 {
-    public enum DamageStrategies
+    public enum DamageReceiveStrategies
     {
         KnockoutImmune,
         MeleeImmune,
+        AlwaysLethal,
         Normal
     }
 }

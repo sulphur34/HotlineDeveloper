@@ -2,7 +2,7 @@ using Modules.DamageSystem;
 
 namespace Modules.DamageSystem.DamageStrategy
 {
-    public interface IDamageStrategy
+    public interface IDamageReceiveStrategy
     {
         DamageData GetDamage(DamageData damageData);
     }

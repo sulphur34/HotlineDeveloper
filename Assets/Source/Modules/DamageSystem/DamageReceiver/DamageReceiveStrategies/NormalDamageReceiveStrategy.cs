@@ -2,7 +2,7 @@ using Modules.DamageSystem;
 
 namespace Modules.DamageSystem.DamageStrategy
 {
-    public class NormalDamageStrategy : IDamageStrategy
+    public class NormalDamageReceiveStrategy : IDamageReceiveStrategy
     {
         public virtual DamageData GetDamage(DamageData damageData)
         {
