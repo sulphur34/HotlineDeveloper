@@ -23,7 +23,7 @@ namespace Modules.DamageSystem
 
         private void OnEquip(Transform owner)
         {
-            OwnerDamageReceiver = owner.GetComponent<DamageReceiverView>();
+            OwnerDamageReceiver = owner.GetComponentInParent<DamageReceiverView>();
         }
 
         private void OnThrowEnd()

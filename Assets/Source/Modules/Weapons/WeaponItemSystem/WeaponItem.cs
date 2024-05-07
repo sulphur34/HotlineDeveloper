@@ -44,6 +44,7 @@ namespace Modules.Weapons.WeaponItemSystem
 
         public void Equip(Transform container)
         {
+            Equipped?.Invoke(container);
             SetEquipped(true, container);
         }
 
@@ -51,8 +52,8 @@ namespace Modules.Weapons.WeaponItemSystem
         {
             SetEquipped(false, null);
             
-            if( _rigidbody == null)
-                _rigidbody = gameObject.AddComponent<Rigidbody>();
+            _rigidbody.isKinematic = false;
+            _rigidbody.useGravity = true;
             
             _rigidbody.AddForce(transform.forward * _force, ForceMode.Impulse);
             _rigidbody.AddTorque(Vector3.up * _rotationForce);
@@ -62,7 +63,7 @@ namespace Modules.Weapons.WeaponItemSystem
         
         private async UniTask WaitingThrowEnd(CancellationToken cancellationToken, Action onRecoveredCallback)
         {
-            while (_rigidbody.velocity.magnitude > 0)
+            while (_rigidbody.IsSleeping() == false)
             {
                 await UniTask.Yield(cancellationToken);
             }
@@ -74,11 +75,11 @@ namespace Modules.Weapons.WeaponItemSystem
         {
             IsEquipped = value;
             transform.SetParent(container);
-            Equipped?.Invoke(container);
 
             if (container != null)
             {
-                Destroy(_rigidbody);
+                _rigidbody.isKinematic = true;
+                _rigidbody.useGravity = false;
                 transform.position = container.position;
                 transform.forward = container.forward;
             }
