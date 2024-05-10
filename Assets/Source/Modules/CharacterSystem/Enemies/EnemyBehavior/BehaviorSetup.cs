@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime;
 using Modules.Characters.Enemies.EnemyBehavior.Variables;
+using Modules.CharacterSystem.Player;
 using Modules.DamageSystem;
 using Modules.PlayerWeaponsHandler;
-using Source.Modules.InputSystem;
+using Modules.InputSystem;
+using Source.Modules.CharacterSystem.Enemies.EnemyBehavior.Variables;
 using UnityEngine;
 using VContainer;
 
@@ -16,10 +18,12 @@ namespace Modules.Characters.Enemies.EnemyBehavior
         public const string WeaponTrackerName = "WeaponTracker";
         public const string TargetName = "Target";
         public const string DamageReceiverName = "DamageReceiver";
+        public const string PlayerWeaponHandlerName = "TargetWeaponHandler";
 
         private BehaviorTree _behaviorTree;
         private BehaviorConfig _behaviorConfig;
         private WeaponTracker _weaponTracker;
+        private PlayerWeaponHandler _playerWeaponHandler;
         private EnemyWeaponHandler _enemyWeaponHandler;
         private Player _player;
         private AiInput _aiInput;
@@ -36,6 +40,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior
             _behaviorConfig = behaviorConfig;
             _weaponTracker = weaponTracker;
             _player = player;
+            _playerWeaponHandler = _player.GetComponent<PlayerWeaponHandler>();
             SetBehaviour();
         }
 
@@ -52,6 +57,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior
             SetVariable(new KeyValuePair<string,DamageReceiverView>(DamageReceiverName, _damageReceiver));
             SetGlobalVariable(new KeyValuePair<string,WeaponTracker>(WeaponTrackerName, _weaponTracker), new SharedWeaponTracker());
             SetGlobalVariable(new KeyValuePair<string,GameObject>(TargetName, _player.gameObject), new SharedGameObject());
+            SetGlobalVariable(new KeyValuePair<string,PlayerWeaponHandler>(PlayerWeaponHandlerName, _playerWeaponHandler), new SharedPlayerWeaponHandler());
         }
 
         private void SetVariable<T>(KeyValuePair<string, T> variableData)

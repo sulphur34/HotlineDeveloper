@@ -1,8 +1,7 @@
 using System;
-using Source.Modules.InputSystem.Interfaces;
-using UnityEngine;
+using Modules.InputSystem.Interfaces;
 
-namespace Source.Modules.InputSystem
+namespace Modules.InputSystem
 {
     public class AiInput : IAttackInput, IPickInput
     {

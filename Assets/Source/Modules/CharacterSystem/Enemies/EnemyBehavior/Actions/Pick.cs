@@ -1,7 +1,7 @@
 using BehaviorDesigner.Runtime.Tasks;
 using Modules.Characters.Enemies.EnemyBehavior.Variables;
 using Modules.PlayerWeaponsHandler;
-using Source.Modules.InputSystem;
+using Modules.InputSystem;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 {

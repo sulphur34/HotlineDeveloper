@@ -1,6 +1,6 @@
 using System;
 
-namespace Source.Modules.InputSystem.Interfaces
+namespace Modules.InputSystem.Interfaces
 {
     public interface IPickInput
     {

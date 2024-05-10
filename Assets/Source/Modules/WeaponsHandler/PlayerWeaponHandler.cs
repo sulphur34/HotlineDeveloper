@@ -1,4 +1,4 @@
-using Source.Modules.InputSystem.Interfaces;
+using Modules.InputSystem.Interfaces;
 using VContainer;
 
 namespace Modules.PlayerWeaponsHandler
@@ -8,9 +8,9 @@ namespace Modules.PlayerWeaponsHandler
         [Inject]
         public void Construct(IAttackInput shotInput, IPickInput weaponItemInput)
         {
-            _shotInput = shotInput;
-            _weaponItemInput = weaponItemInput;
-            _weaponItemInput.PickReceived += OnWeaponItemInputReceived;
+            ShotInput = shotInput;
+            WeaponItemInput = weaponItemInput;
+            WeaponItemInput.PickReceived += OnWeaponItemInputReceived;
         }
     }
 }

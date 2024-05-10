@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Source.Modules.InputSystem.Interfaces
+namespace Modules.InputSystem.Interfaces
 {
     public interface IRotateInput
     {

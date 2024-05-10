@@ -7,8 +7,8 @@ using Modules.MoveSystem;
 using Modules.PlayerWeaponsHandler;
 using Modules.Weapons.Ammunition;
 using Modules.Weapons.Range;
+using Modules.CharacterSystem.Player;
 using Source.Modules.DamageSystem;
-using Source.Modules.InputSystem;
 
 public class LevelCompositRoot : LifetimeScope
 {
@@ -54,7 +54,7 @@ public class LevelCompositRoot : LifetimeScope
     {
         builder.RegisterComponentInHierarchy<DamageReceiverSetup>();
         builder.RegisterInstance(_damageableConfig);
-    }
+    } 
 
     private void WeaponConfigure(IContainerBuilder builder)
     {

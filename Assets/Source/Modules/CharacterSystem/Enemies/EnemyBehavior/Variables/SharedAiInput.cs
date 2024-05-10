@@ -1,5 +1,5 @@
 using BehaviorDesigner.Runtime;
-using Source.Modules.InputSystem;
+using Modules.InputSystem;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Variables
 {

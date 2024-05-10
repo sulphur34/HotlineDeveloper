@@ -8,13 +8,14 @@ namespace Modules.Weapons.WeaponItemSystem
 {
     public class WeaponItem : MonoBehaviour
     {
-        [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private float _force;
         [SerializeField] private float _rotationForce;
 
         private Transform _startContainer;
+        private Rigidbody _rigidbody;
+        private Collider _collider;
 
-        private Action _attack;
+        private Func<bool> _attack;
 
         private CancellationToken _cancellationToken;
 
@@ -24,22 +25,26 @@ namespace Modules.Weapons.WeaponItemSystem
 
         public event Action<Transform> Equipped;
         public event Action Thrown;
+        public event Action RangeFired;
 
-        public WeaponType Type { get; private set; }
+        public WeaponType WeaponType { get; private set; }
 
         public bool IsEquipped { get; private set; }
 
-        public void Init(Action attack, WeaponType type)
+        public void Init(Func<bool> attack, WeaponType type)
         {
+            _rigidbody = GetComponent<Rigidbody>();
+            _collider = GetComponent<Collider>();
             _attack = attack;
-            Type = type;
+            WeaponType = type;
             _startContainer = transform.parent;
             _cancellationToken = this.GetCancellationTokenOnDestroy();
         }
 
         public void Attack()
         {
-            _attack?.Invoke();
+            if(_attack() && WeaponType == WeaponType.Range)
+                RangeFired?.Invoke();  
         }
 
         public void Equip(Transform container)
@@ -48,13 +53,16 @@ namespace Modules.Weapons.WeaponItemSystem
             SetEquipped(true, container);
         }
 
+        public void LooseWeapon()
+        {
+            SetEquipped(false, null);
+            transform.SetParent(_startContainer);
+            Thrown?.Invoke();
+        }
+
         public void Throw()
         {
             SetEquipped(false, null);
-            
-            _rigidbody.isKinematic = false;
-            _rigidbody.useGravity = true;
-            
             _rigidbody.AddForce(transform.forward * _force, ForceMode.Impulse);
             _rigidbody.AddTorque(Vector3.up * _rotationForce);
             transform.SetParent(_startContainer);
@@ -74,12 +82,15 @@ namespace Modules.Weapons.WeaponItemSystem
         private void SetEquipped(bool value, Transform container)
         {
             IsEquipped = value;
-            transform.SetParent(container);
-
-            if (container != null)
+            _collider.enabled = !value;
+            var newcontainer = value ? container : _startContainer;
+            transform.SetParent(newcontainer);
+            
+            _rigidbody.isKinematic = value;
+            _rigidbody.useGravity = !value;
+            
+            if (container == newcontainer)
             {
-                _rigidbody.isKinematic = true;
-                _rigidbody.useGravity = false;
                 transform.position = container.position;
                 transform.forward = container.forward;
             }

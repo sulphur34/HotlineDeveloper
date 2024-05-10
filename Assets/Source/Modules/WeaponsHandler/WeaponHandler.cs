@@ -2,7 +2,8 @@ using System;
 using System.Linq;
 using UnityEngine;
 using Modules.Weapons.WeaponItemSystem;
-using Source.Modules.InputSystem.Interfaces;
+using Modules.Weapons.WeaponTypeSystem;
+using Modules.InputSystem.Interfaces;
 
 namespace Modules.PlayerWeaponsHandler
 {
@@ -13,17 +14,29 @@ namespace Modules.PlayerWeaponsHandler
         [SerializeField] private float _pickRadius;
 
         private WeaponItem _currentWeaponItem;
-        protected IAttackInput _shotInput;
-        protected IPickInput _weaponItemInput;
+        protected IAttackInput ShotInput;
+        protected IPickInput WeaponItemInput;
 
         public event Action<WeaponItem> WeaponPicked;
+        public event Action RangeWeaponFired;
 
         public bool CurrentWeaponItemIsEmpty => _currentWeaponItem == null;
+        public WeaponType CurrentWeaponType => _currentWeaponItem.WeaponType;
 
         private void OnDestroy()
         {
-            _shotInput.AttackReceived -= OnShotInputReceived;
-            _weaponItemInput.PickReceived -= OnWeaponItemInputReceived;
+            ShotInput.AttackReceived -= OnShotInputReceived;
+            WeaponItemInput.PickReceived -= OnWeaponItemInputReceived;
+        }
+
+        public void LooseWeapon()
+        {
+            if (_currentWeaponItem == null)
+                return;
+            
+            _currentWeaponItem.LooseWeapon();
+            _currentWeaponItem = null;
+            ShotInput.AttackReceived -= OnShotInputReceived;
         }
 
         protected void OnWeaponItemInputReceived()
@@ -33,20 +46,22 @@ namespace Modules.PlayerWeaponsHandler
             if (CurrentWeaponItemIsEmpty == false && _currentWeaponItem.IsEquipped)
             {
                 _currentWeaponItem.Throw();
+                _currentWeaponItem.RangeFired -= OnRangeFire;
                 _currentWeaponItem = null;
-                _shotInput.AttackReceived -= OnShotInputReceived;
+                ShotInput.AttackReceived -= OnShotInputReceived;
             }
 
             if (HasPickableWeapon)
             {
                 EquipWeaponItem(weaponItem);
-                _shotInput.AttackReceived += OnShotInputReceived;
+                ShotInput.AttackReceived += OnShotInputReceived;
             }
         }
 
         private void EquipWeaponItem(WeaponItem weaponItem)
         {
             _currentWeaponItem = weaponItem;
+            _currentWeaponItem.RangeFired += OnRangeFire;
             _currentWeaponItem.Equip(_container);
             WeaponPicked?.Invoke(_currentWeaponItem);
         }
@@ -75,6 +90,11 @@ namespace Modules.PlayerWeaponsHandler
                 return false;
 
             return true;
+        }
+
+        private void OnRangeFire()
+        {
+            RangeWeaponFired?.Invoke();
         }
     }
 }
