@@ -8,6 +8,8 @@ using UnityEngine;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
 {
+    [TaskCategory("CustomConditional")]
+    [TaskName("IsClearToFire")]
     public class IsClearToFire : Conditional
     {
         public SharedFloat AttackDistance;

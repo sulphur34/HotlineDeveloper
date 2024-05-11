@@ -5,10 +5,13 @@ using UnityEngine.AI;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 {
+    [TaskCategory("CustomTask")]
+    [TaskName("EnemyMovePosition")]
     public class EnemyMovePosition : Action
     {
         public SharedVector3 LastTargetPosition;
-        
+        public float MinStoppingDistance = 1f;
+
         private NavMeshAgent _navMeshAgent;
         private bool _isActive;
         private Transform _transform;
@@ -32,7 +35,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 
             float distance = Vector3.Magnitude(LastTargetPosition.Value - _transform.position);
             
-            if (distance - _navMeshAgent.stoppingDistance < 1f)
+            if (distance - _navMeshAgent.stoppingDistance < MinStoppingDistance)
                 return TaskStatus.Success;
 
             return TaskStatus.Running;

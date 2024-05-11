@@ -5,6 +5,8 @@ using Modules.Weapons.WeaponTypeSystem;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 {
+    [TaskCategory("CustomTask")]
+    [TaskName("SetAttackDistance")]
     public class SetAttackDistance : Action
     {
         public SharedFloat AttackDistance;

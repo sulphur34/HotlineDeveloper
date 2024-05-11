@@ -5,12 +5,14 @@ using UnityEngine;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
 {
-    public class IsTargetShoot : Conditional
+    [TaskCategory("CustomConditional")]
+    [TaskName("IsTargetShotHeard")]
+    public class IsTargetShotHeard : Conditional
     {
         public SharedPlayerWeaponHandler TargetWeaponHandler;
         public SharedBool IsShotFired;
+        public float AlertHearingDistance = 100f;
 
-        
         public override void OnAwake()
         {
             TargetWeaponHandler.Value.RangeWeaponFired += OnShotFire;
@@ -31,7 +33,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
             Vector3 _targetPosition = TargetWeaponHandler.Value.transform.position;
             float distance = Vector3.Magnitude(TargetWeaponHandler.Value.transform.position - transform.position);
             
-            if (distance <= 100)
+            if (distance <= AlertHearingDistance)
                 IsShotFired.Value = true;
         }
 

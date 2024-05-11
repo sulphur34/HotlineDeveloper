@@ -4,6 +4,8 @@ using Modules.Characters.Enemies.EnemyBehavior.Variables;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
 {
+    [TaskCategory("CustomConditional")]
+    [TaskName("HasPatrolRoute")]
     public class HasPatrolRoute : Conditional
     {
         public SharedVector3Array PatrolPoints;

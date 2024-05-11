@@ -2,10 +2,11 @@ using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 using UnityEngine.AI;
-using BehaviorDesigner.Runtime;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 {
+    [TaskCategory("CustomTask")]
+    [TaskName("EnemyChase")]
     public class EnemyChase : Action
     {
         public SharedGameObject Target;

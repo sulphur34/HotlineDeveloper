@@ -3,6 +3,8 @@ using UnityEngine.AI;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 {
+    [TaskCategory("CustomTask")]
+    [TaskName("Fall")]
     public class Fall : Action
     {
         private NavMeshAgent _navMeshAgent;

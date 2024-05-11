@@ -6,6 +6,8 @@ using UnityEngine;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 {
+    [TaskCategory("CustomTask")]
+    [TaskName("GetNearestWeapon")]
     public class GetNearestWeapon : Action
     {
         public SharedVector3 LastTargetPosition;

@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 {
+    [TaskCategory("CustomTask")]
+    [TaskName("EnemyPatrol")]
     public class EnemyPatrol : Action
     {
         public SharedVector3Array _patrolPoints;

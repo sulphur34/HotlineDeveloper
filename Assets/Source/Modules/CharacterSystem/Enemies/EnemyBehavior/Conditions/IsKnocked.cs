@@ -3,6 +3,8 @@ using Modules.DamageSystem.Enemies.EnemyBehavior.Variables;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
 {
+    [TaskCategory("CustomConditional")]
+    [TaskName("IsKnocked")]
     public class IsKnocked : Conditional
     {
         public SharedDamageReceiver _damageReceiver;

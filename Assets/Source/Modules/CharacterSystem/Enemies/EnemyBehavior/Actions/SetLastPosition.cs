@@ -1,10 +1,11 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using Source.Modules.CharacterSystem.Enemies.EnemyBehavior.Variables;
 using UnityEngine;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 {
+    [TaskCategory("CustomTask")]
+    [TaskName("SetLastPosition")]
     public class SetLastPosition : Action
     {
         public SharedVector3 LastTargetPosition;

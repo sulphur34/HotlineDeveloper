@@ -3,6 +3,8 @@ using BehaviorDesigner.Runtime.Tasks;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
 {
+    [TaskCategory("CustomConditional")]
+    [TaskName("CanSearch")]
     public class CanSearch : Conditional
     {
         public SharedBool HasLastPosition;
