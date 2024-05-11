@@ -1,6 +1,7 @@
 using System.Linq;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
+using Modules.DamageSystem;
 using Modules.PlayerWeaponsHandler;
 using Modules.Weapons.WeaponTypeSystem;
 using UnityEngine;
@@ -31,6 +32,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
             var enemy = Physics
                 .OverlapSphere(transform.position, AttackDistance.Value)
                 .Select(collider => collider.GetComponent<Enemy>())
+                .Where(collider => collider?.GetComponent<DamageReceiverView>().IsDead == false)
                 .FirstOrDefault(enemy => enemy != null && enemy != _selfEnmey && IsInFireZone(enemy));
             return enemy == null ? TaskStatus.Success : TaskStatus.Failure;
         }
