@@ -53,19 +53,22 @@ namespace Modules.Weapons.WeaponItemSystem
             SetEquipped(true, container);
         }
 
-        public void LooseWeapon()
+        public void Unequip()
         {
             SetEquipped(false, null);
-            transform.SetParent(_startContainer);
+        }
+
+        public void Loose()
+        {
+            Unequip();
             Thrown?.Invoke();
         }
 
         public void Throw()
         {
-            SetEquipped(false, null);
+            Unequip();
             _rigidbody.AddForce(transform.forward * _force, ForceMode.Impulse);
             _rigidbody.AddTorque(Vector3.up * _rotationForce);
-            transform.SetParent(_startContainer);
             WaitingThrowEnd(_cancellationToken, Thrown);
         }
         
@@ -85,11 +88,10 @@ namespace Modules.Weapons.WeaponItemSystem
             _collider.enabled = !value;
             var newcontainer = value ? container : _startContainer;
             transform.SetParent(newcontainer);
-            
             _rigidbody.isKinematic = value;
             _rigidbody.useGravity = !value;
             
-            if (container == newcontainer)
+            if (value)
             {
                 transform.position = container.position;
                 transform.forward = container.forward;

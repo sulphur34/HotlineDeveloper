@@ -33,7 +33,7 @@ namespace Modules.DamageSystem
         public void OnKnocked()
         {
             IsKnocked = true;
-            _weaponHandler.LooseWeapon();
+            _weaponHandler.UnequipWeaponItem();
         }
 
         public void OnRecovered()
@@ -48,7 +48,7 @@ namespace Modules.DamageSystem
         public void OnDeath()
         {
             IsDead = true;
-            _weaponHandler.LooseWeapon();
+            _weaponHandler.UnequipWeaponItem();
         }
 
         private void TestDeathAnimation()
