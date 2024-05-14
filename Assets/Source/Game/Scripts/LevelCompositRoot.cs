@@ -18,7 +18,7 @@ public class LevelCompositRoot : LifetimeScope
     [SerializeField] private WeaponTracker _weaponTracker;
     [SerializeField] private LevelEnemySpawnConfigs _enemySpawnConfigs;
     [SerializeField] private BehaviorConfigFactory _behaviorConfigFactory;
-    [SerializeField] private DamageableConfig _damageableConfig;
+    [SerializeField] private DamageableConfigFactory _damageableConfigFactory;
 
     protected override void Configure(IContainerBuilder builder)
     {
@@ -55,9 +55,9 @@ public class LevelCompositRoot : LifetimeScope
 
     private void DamageConfigure(IContainerBuilder builder)
     {
+        builder.RegisterInstance(_damageableConfigFactory.GetConfig(DamageableTypes.Player));
+        builder.RegisterInstance(_damageableConfigFactory);
         builder.RegisterComponentInHierarchy<DamageReceiverSetup>();
-        builder.RegisterBuildCallback(container => { container.Resolve<DamageReceiverSetup>().Construct(_damageableConfig); });
-        builder.RegisterInstance(_damageableConfig);
     } 
 
     private void WeaponConfigure(IContainerBuilder builder)

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea237a7c8f0f418dbda638bbe3fcdaa4, type: 3}
+  m_Name: DamageableConfigFactory
+  m_EditorClassIdentifier: 
+  _normalEnemyConfig: {fileID: 11400000, guid: c58c38b3bd43df443a2be02a2ad2ac6d, type: 2}
+  _strongEnemyConfig: {fileID: 11400000, guid: 4aa741acd2600cc44adc098e29392e0e, type: 2}
+  _bossEnemyConfig: {fileID: 11400000, guid: b09e343ff8bc72b47bae75b9842be875, type: 2}
+  _playerConfig: {fileID: 11400000, guid: c38f113d7969c6b4a89229201b794c39, type: 2}

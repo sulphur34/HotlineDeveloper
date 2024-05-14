@@ -12,7 +12,7 @@ namespace Modules.EnemySpawnSystem
     {
         private BehaviorConfigFactory _behaviorConfigFactory;
         private IObjectResolver _objectResolver;
-        private DamageableConfig _damageableConfig;
+        private DamageableConfigFactory _damageableConfigFactory;
         
         [Inject]
         public void Construct(
@@ -20,10 +20,10 @@ namespace Modules.EnemySpawnSystem
             BehaviorConfigFactory behaviorConfigFactory, 
             Player player, 
             WeaponTracker weaponTracker, 
-            DamageableConfig damageableConfig)
+            DamageableConfigFactory damageableConfigFactory)
         {
             _behaviorConfigFactory = behaviorConfigFactory;
-            _damageableConfig = damageableConfig;
+            _damageableConfigFactory = damageableConfigFactory;
             
             foreach (EnemySpawnConfig enemySpawnConfig in levelEnemySpawnConfigs.EnemySpawnConfigs)
             {
@@ -35,8 +35,9 @@ namespace Modules.EnemySpawnSystem
         {
             GameObject instance = Instantiate(enemySpawnConfig.Prefab.gameObject, enemySpawnConfig.SpawnPoint.position, Quaternion.identity);
             BehaviorConfig behaviorConfig = _behaviorConfigFactory.GetBehavior(enemySpawnConfig.Behavior);
+            DamageableConfig damageableConfig = _damageableConfigFactory.GetConfig(enemySpawnConfig.DamageableType);
             instance.GetComponent<BehaviorSetup>().Initialize(behaviorConfig, enemySpawnConfig.PatrolRoute, weaponTracker, player);
-            instance.GetComponent<DamageReceiverSetup>().Construct(_damageableConfig);
+            instance.GetComponent<DamageReceiverSetup>().Construct(damageableConfig);
         }
     }
 }

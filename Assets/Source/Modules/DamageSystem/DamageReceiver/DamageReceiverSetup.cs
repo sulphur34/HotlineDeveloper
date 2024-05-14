@@ -1,5 +1,4 @@
 using Cysharp.Threading.Tasks;
-using Modules.DamageSystem;
 using UnityEngine;
 using VContainer;
 
@@ -11,7 +10,6 @@ namespace Modules.DamageSystem
         private DamageReceiverPresenter _damageReceiverPresenter;
         private DamageReceiverView _damageReceiverView;
         
-        [Inject]
         public void Construct(DamageableConfig damageableConfig)
         {
             DamageReceiver damageReceiver = new DamageReceiver(damageableConfig, this.GetCancellationTokenOnDestroy());
