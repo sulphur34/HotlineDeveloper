@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using BehaviorDesigner.Runtime;
 using UnityEngine;
 
-namespace Modules.Characters.Enemies.EnemyBehavior
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior
 {
-    [CreateAssetMenu(fileName = "Behavior Config")]
+    [CreateAssetMenu(fileName = "BehaviorConfig")]
     public class BehaviorConfig : ScriptableObject
     {
         public const string ActionsMinDelayName = "ActionsMinDelay";

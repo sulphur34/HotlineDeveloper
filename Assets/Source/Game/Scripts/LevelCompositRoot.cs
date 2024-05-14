@@ -9,6 +9,7 @@ using Modules.Weapons.Ammunition;
 using Modules.Weapons.Range;
 using Modules.CharacterSystem.Player;
 using Modules.EnemySpawnSystem;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
 
 public class LevelCompositRoot : LifetimeScope
 {

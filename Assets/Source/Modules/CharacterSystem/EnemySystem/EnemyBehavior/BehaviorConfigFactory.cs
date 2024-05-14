@@ -1,6 +1,7 @@
+using Modules.Characters.Enemies.EnemyBehavior;
 using UnityEngine;
 
-namespace Modules.Characters.Enemies.EnemyBehavior
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior
 {
     [CreateAssetMenu(fileName = "Behavior Config Factory")]
     public class BehaviorConfigFactory : ScriptableObject

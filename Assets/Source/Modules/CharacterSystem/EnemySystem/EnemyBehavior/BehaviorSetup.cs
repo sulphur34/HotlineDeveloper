@@ -7,6 +7,7 @@ using Modules.PlayerWeaponsHandler;
 using Modules.InputSystem;
 using Modules.CharacterSystem.Enemies.EnemyBehavior.Variables;
 using Modules.EnemySpawnSystem;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
 using UnityEngine;
 
 namespace Modules.Characters.Enemies.EnemyBehavior
