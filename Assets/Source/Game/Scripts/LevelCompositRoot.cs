@@ -8,16 +8,16 @@ using Modules.PlayerWeaponsHandler;
 using Modules.Weapons.Ammunition;
 using Modules.Weapons.Range;
 using Modules.CharacterSystem.Player;
-using Source.Modules.DamageSystem;
+using Modules.EnemySpawnSystem;
 
 public class LevelCompositRoot : LifetimeScope
 {
     [SerializeField] private MoverConfig _moverConfig;
     [SerializeField] private RangeWeaponConfigFactory _weaponConfigFactory;
     [SerializeField] private WeaponTracker _weaponTracker;
-    [SerializeField] private BehaviorConfig _behaviorConfig;
+    [SerializeField] private LevelEnemySpawnConfigs _enemySpawnConfigs;
+    [SerializeField] private BehaviorConfigFactory _behaviorConfigFactory;
     [SerializeField] private DamageableConfig _damageableConfig;
-    
 
     protected override void Configure(IContainerBuilder builder)
     {
@@ -25,14 +25,16 @@ public class LevelCompositRoot : LifetimeScope
         MoverConfigure(builder);
         WeaponConfigure(builder);
         DamageConfigure(builder);
-        EnemyBehaviorConfigure(builder);
+        EnemyConfigure(builder);
     }
 
-    private void EnemyBehaviorConfigure(IContainerBuilder builder)
+    private void EnemyConfigure(IContainerBuilder builder)
     {
+        builder.RegisterInstance(_enemySpawnConfigs);
+        builder.RegisterInstance(_behaviorConfigFactory);
         builder.RegisterComponentInHierarchy<Player>();
-        builder.RegisterInstance(_behaviorConfig);
-    }
+        builder.RegisterComponentInHierarchy<EnemySpawner>();
+    } 
 
     private void MoverConfigure(IContainerBuilder builder)
     {
@@ -53,6 +55,7 @@ public class LevelCompositRoot : LifetimeScope
     private void DamageConfigure(IContainerBuilder builder)
     {
         builder.RegisterComponentInHierarchy<DamageReceiverSetup>();
+        builder.RegisterBuildCallback(container => { container.Resolve<DamageReceiverSetup>().Construct(_damageableConfig); });
         builder.RegisterInstance(_damageableConfig);
     } 
 

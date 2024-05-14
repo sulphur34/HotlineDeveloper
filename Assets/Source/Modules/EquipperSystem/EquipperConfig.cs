@@ -1,8 +1,7 @@
 using UnityEngine;
 
-namespace Source.Modules.EquipperSystem
+namespace Modules.EquipperSystem
 {
-    [CreateAssetMenu(fileName = "Equipper Config")]
     public class EquipperConfig
     {
         [field: SerializeField] public Transform ItemContainer { get; private set; }

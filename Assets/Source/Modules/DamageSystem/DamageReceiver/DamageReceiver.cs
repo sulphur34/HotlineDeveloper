@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 using Modules.DamageSystem.DamageStrategy;
-using Source.Modules.DamageSystem;
+using Modules.DamageSystem;
 
 namespace Modules.DamageSystem
 {

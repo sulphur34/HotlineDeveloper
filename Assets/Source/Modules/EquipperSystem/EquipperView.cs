@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Source.Modules.EquipperSystem
+namespace Modules.EquipperSystem
 {
     public class EquipperView : MonoBehaviour
     {

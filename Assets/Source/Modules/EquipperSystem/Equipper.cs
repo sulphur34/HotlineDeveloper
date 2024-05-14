@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Source.Modules.EquipperSystem
+namespace Modules.EquipperSystem
 {
     public class Equipper
     {

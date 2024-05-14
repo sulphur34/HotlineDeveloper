@@ -1,4 +1,4 @@
-namespace Source.Modules.EquipperSystem
+namespace Modules.EquipperSystem
 {
     public class EquipperPresenter
     {

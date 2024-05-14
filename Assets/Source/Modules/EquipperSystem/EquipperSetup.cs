@@ -1,7 +1,7 @@
 using UnityEngine;
 using VContainer;
 
-namespace Source.Modules.EquipperSystem
+namespace Modules.EquipperSystem
 {
     public class EquipperSetup : MonoBehaviour
     {
