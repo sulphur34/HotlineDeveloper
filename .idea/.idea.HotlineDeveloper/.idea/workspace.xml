@@ -2,25 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27b5db7a-b918-4bd4-b47c-121f4f888e4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageableConfigFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageableConfigFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageableTypes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageableTypes.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/LevelCompositRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/LevelCompositRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySpawnSystem/EnemySpawnConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySpawnSystem/EnemySpawnConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySpawnSystem/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySpawnSystem/EnemySpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiverSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiverSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Materials/YellowLight.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Materials/YellowLight.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Materials/YellowLight.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Materials/YellowLight.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Bullet/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Bullet/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Enemies/StrongEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Enemies/StrongEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/MeleeWeaponItem.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/MeleeWeaponItem.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/RangeWeaponItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/RangeWeaponItem.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/Level3 - CharacterTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/Level3 - CharacterTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/DamageableConfigs/BossDamageableConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/DamageableConfigs/BossDamageableConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/DamageableConfigs/NormalDamageableConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/DamageableConfigs/NormalDamageableConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/DamageableConfigs/StronglDamageableConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/DamageableConfigs/StronglDamageableConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/BehaviorConfig 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/BehaviorConfig 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/BehaviorConfig 2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/BehaviorConfig 2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/BehaviorConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/BehaviorConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Level 3 Spawn Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Level 3 Spawn Config.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +186,7 @@
       <workItem from="1715590824679" duration="19453000" />
       <workItem from="1715625418268" duration="5185000" />
       <workItem from="1715672228221" duration="11770000" />
-      <workItem from="1715706405407" duration="3940000" />
+      <workItem from="1715706405407" duration="6363000" />
     </task>
     <servers />
   </component>
@@ -381,19 +373,6 @@
           <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiver.cs</url>
-          <line>27</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiver\DamageReceiver.cs" initialLine="27" containingFunctionPresentation="method 'Receive'">
-            <startOffsets>
-              <option value="912" />
-            </startOffsets>
-            <endOffsets>
-              <option value="960" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Damager/Damager.cs</url>
           <line>18</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\Damager\Damager.cs" initialLine="18" containingFunctionPresentation="method 'OnTriggerEnter'">
@@ -418,6 +397,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiver.cs</url>
+          <line>29</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiver\DamageReceiver.cs" initialLine="27" containingFunctionPresentation="method 'Receive'">
+            <startOffsets>
+              <option value="1007" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1063" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="80" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
