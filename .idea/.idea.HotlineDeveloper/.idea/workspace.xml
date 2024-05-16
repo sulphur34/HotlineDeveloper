@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27b5db7a-b918-4bd4-b47c-121f4f888e4a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Characters/Enemies/EnemyThug.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Characters/Enemies/EnemyThug.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Animations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Animations/IKFootSolver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Animations/IKFootSolver.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Characters/Enemies/EnemySimple.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Characters/Enemies/EnemySimple.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Characters/Enemies/EnemySimple@Unarmed Idle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Characters/Enemies/EnemySimple@Unarmed Idle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Characters/Enemies/EnemyThug.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Characters/Enemies/EnemyThug.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Characters/Enemies/Unarmed Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Characters/Enemies/Unarmed Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Characters/Enemies/Walking.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Characters/Enemies/Walking.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/MouseAim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/MouseAim.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/AssetTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/AssetTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +39,12 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Unity/InstanceProviders/FindComponentProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/e3/ca5adc0b/PrimitiveAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/49/40c88b81/LocalParamAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.animation.rigging@1.2.1/Runtime/AnimationJobs/TransformHandle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/d3/805c159d/PrimitiveActionTask.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c1702c564a404518b8e1e7f6fea9b84014c00/6a/ef223920/IContainerBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/a1/0d2baaa1/BasePrimitiveAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5b4d64329c244b82a41e50d0be224d7616200/90/a8a29527/IContainerBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/97436df440ca462884c5332c1d8ebbe7941e00/ca/ceada806/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/97436df440ca462884c5332c1d8ebbe7941e00/92/abbfccf3/ProfilerWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Unity/PlayerLoopRunner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
@@ -73,10 +87,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21884">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="21884" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -110,6 +124,8 @@
       <workItem from="1712155913102" duration="1703000" />
       <workItem from="1712238680062" duration="9248000" />
       <workItem from="1712308388129" duration="4227000" />
+      <workItem from="1715764911300" duration="7421000" />
+      <workItem from="1715845107086" duration="17118000" />
     </task>
     <servers />
   </component>
@@ -148,13 +164,13 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/BehaviorBricks/Samples/QuickStartGuide/Done/Resources/Spawner.cs</url>
           <line>29</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\BehaviorBricks\Samples\QuickStartGuide\Done\Resources\Spawner.cs" initialLine="37" containingFunctionPresentation="method 'Start'" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Game/Scripts/MouseAim.cs</url>
           <line>8</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Game\Scripts\MouseAim.cs" initialLine="8" containingFunctionPresentation="method 'Update'">
@@ -165,7 +181,7 @@
               <option value="196" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
