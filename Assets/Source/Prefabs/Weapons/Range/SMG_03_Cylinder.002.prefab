@@ -13,6 +13,10 @@ GameObject:
   - component: {fileID: 5860509489501678564}
   - component: {fileID: 7057323583645456226}
   - component: {fileID: -8512956636744715047}
+  - component: {fileID: -8278307890071808835}
+  - component: {fileID: -5922594083915912313}
+  - component: {fileID: 1182585881717424421}
+  - component: {fileID: 4828614638340234323}
   m_Layer: 0
   m_Name: SMG_03_Cylinder.002
   m_TagString: Untagged
@@ -133,3 +137,62 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-8278307890071808835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800304441430319337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef631768894ac9418722f25acd7f9b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponItem: {fileID: 0}
+  _shotStrategy: {fileID: 0}
+--- !u!114 &-5922594083915912313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800304441430319337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _force: 1000
+  _rotationForce: 300
+  <LeftHandPlaceHolder>k__BackingField: {fileID: 0}
+  <RightHandPlaceHolder>k__BackingField: {fileID: 0}
+--- !u!114 &1182585881717424421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800304441430319337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2261c224d4c4cceab9c4a50f7f009e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4828614638340234323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800304441430319337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac782c33d2344f56aa3dce4dc92bcd1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageData:
+    WeaponType: 0
+    Value: 0
+    IsKnockout: 1
+    IsLethal: 0

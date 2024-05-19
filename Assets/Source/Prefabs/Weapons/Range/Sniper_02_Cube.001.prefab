@@ -13,6 +13,10 @@ GameObject:
   - component: {fileID: 3380986202646095021}
   - component: {fileID: -4082684463890934625}
   - component: {fileID: -8599366718188048666}
+  - component: {fileID: -5736946258300221761}
+  - component: {fileID: -588566091412047414}
+  - component: {fileID: 8276839266449866568}
+  - component: {fileID: -9086032596512178066}
   m_Layer: 0
   m_Name: Sniper_02_Cube.001
   m_TagString: Untagged
@@ -133,3 +137,62 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-5736946258300221761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2980358218241898373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef631768894ac9418722f25acd7f9b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponItem: {fileID: 0}
+  _shotStrategy: {fileID: 0}
+--- !u!114 &-588566091412047414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2980358218241898373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _force: 1000
+  _rotationForce: 300
+  <LeftHandPlaceHolder>k__BackingField: {fileID: 0}
+  <RightHandPlaceHolder>k__BackingField: {fileID: 0}
+--- !u!114 &8276839266449866568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2980358218241898373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2261c224d4c4cceab9c4a50f7f009e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-9086032596512178066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2980358218241898373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac782c33d2344f56aa3dce4dc92bcd1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageData:
+    WeaponType: 0
+    Value: 0
+    IsKnockout: 1
+    IsLethal: 0
