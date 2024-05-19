@@ -25,13 +25,15 @@ namespace Modules.DamageSystem
 
         public void Receive(DamageData damage)
         {
-            if (damage.IsLethal && _consciousness.IsKnocked)
+            DamageData modifiedDamage = _damageReceiveStrategy.GetDamage(damage);
+            
+            if (modifiedDamage.IsLethal && _consciousness.IsKnocked)
                 _health.Execute(HealthChanged,Died);
             
-            if(damage.IsKnockout && _consciousness.IsKnocked == false)
+            if(modifiedDamage.IsKnockout && _consciousness.IsKnocked == false)
                 _consciousness.Knockout(Knocked, Recovered);
             
-            _health.TakeDamage(damage.Value, HealthChanged,Died);
+            _health.TakeDamage(modifiedDamage.Value, HealthChanged,Died);
         }
     }
 }
