@@ -32,7 +32,7 @@ public class TestControl : MonoBehaviour
         RotateHorizontal(mouseX);
 
         Camera.main.transform.position =
-            new Vector3(transform.position.x, Camera.main.transform.position.y, transform.position.z - 1);
+            new Vector3(transform.position.x, Camera.main.transform.position.y, transform.position.z);
     }
 
     public void RotateHorizontal(float direction)
@@ -42,6 +42,6 @@ public class TestControl : MonoBehaviour
 
     public void MoveHorizontal(Vector3 direction)
     {
-        _characterController.Move(direction * 0.5f * Time.deltaTime);
+        _characterController.Move(direction * 1f * Time.deltaTime);
     }
 }

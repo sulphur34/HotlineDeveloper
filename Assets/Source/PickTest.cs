@@ -22,7 +22,7 @@ public class PickTest : MonoBehaviour
         {
             _rigidbody.isKinematic = true;
             _weapon.SetParent(_container, false);
-            _weapon.transform.rotation = Quaternion.Euler(_rotation);
+            _weapon.transform.forward = -_container.right;
             _weapon.transform.localPosition = _position;
             _rightHandConstraint.data.target = _rightHandPlaceholder;
             
