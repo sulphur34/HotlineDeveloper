@@ -10,6 +10,7 @@ using Modules.Weapons.Range;
 using Modules.CharacterSystem.Player;
 using Modules.EnemySpawnSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
+using Modules.InputSystem;
 
 public class LevelCompositRoot : LifetimeScope
 {
@@ -65,7 +66,7 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<WeaponTracker>();
         builder.RegisterInstance(_weaponConfigFactory);
         builder.RegisterComponentInHierarchy<WeaponAmmunitionView>();
-        builder.RegisterComponentInHierarchy<PlayerWeaponHandler>();
+        builder.RegisterComponentInHierarchy<PlayerWeaponHandlerSetup>();
         builder.RegisterBuildCallback(container => { container.Resolve<WeaponTracker>().Construct(); });
         builder.RegisterBuildCallback(container => { container.InjectGameObject(_weaponTracker.gameObject); });
     }

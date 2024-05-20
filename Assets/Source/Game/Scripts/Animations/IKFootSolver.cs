@@ -34,7 +34,7 @@ public class IKFootSolver : MonoBehaviour
 
         Ray ray = new Ray(body.position + (body.right * _footSpacing), Vector3.down);
 
-        if (Physics.Raycast(ray, out RaycastHit info, 10) && info.collider.TryGetComponent<Terrain>(out Terrain terrain))
+        if (Physics.Raycast(ray, out RaycastHit info, 10) && info.collider.TryGetComponent<Ground>(out Ground terrain))
         {
             Vector3 relativePoint = body.InverseTransformPoint(info.point);
             Vector3 relativeNewPos = body.InverseTransformPoint(_newPosition);

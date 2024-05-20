@@ -13,12 +13,13 @@ GameObject:
   - component: {fileID: 2890315568193519760}
   - component: {fileID: 3036232927242352879}
   - component: {fileID: 8141840485643787783}
-  - component: {fileID: 8088753684434764025}
   - component: {fileID: 2971194167444549468}
   - component: {fileID: 1563630414356242900}
   - component: {fileID: -5042386015953940694}
   - component: {fileID: -2939879652625822539}
   - component: {fileID: 5365961671783591719}
+  - component: {fileID: 1413665047761995713}
+  - component: {fileID: 8435465086933791650}
   m_Layer: 0
   m_Name: StrongEnemy
   m_TagString: Untagged
@@ -157,22 +158,6 @@ MonoBehaviour:
       Version: 1.7.7
   gizmoViewMode: 2
   showBehaviorDesignerGizmo: 1
---- !u!114 &8088753684434764025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3424098638274893650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61f72dcaecaf4ee9b0227a08f96499bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _defaultWeapon: {fileID: 8162399974109590718}
-  _container: {fileID: 1181662243509232465}
-  _pickPoint: {fileID: 7841294191082111126}
-  _pickRadius: 2
 --- !u!114 &2971194167444549468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +229,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d2d2a75a334128ae590c66155ee05c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1413665047761995713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3424098638274893650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29bbe072b060452e9d40cca829f14209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponHandlerData:
+    <DefaultWeapon>k__BackingField: {fileID: 0}
+    <Container>k__BackingField: {fileID: 0}
+    <PickPoint>k__BackingField: {fileID: 0}
+    <PickRadius>k__BackingField: 0
+  WeaponHandlerView: {fileID: 0}
+--- !u!114 &8435465086933791650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3424098638274893650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8768867e0128404bab7605814fcda9a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigBuilder: {fileID: 0}
+  _rightHandConstraint: {fileID: 0}
+  _leftHandConstraint: {fileID: 0}
 --- !u!1 &4041193851728771188
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,14 +491,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1225078067723792665, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
   m_PrefabInstance: {fileID: 6240070921369390235}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8162399974109590718 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2873161282234759205, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
-  m_PrefabInstance: {fileID: 6240070921369390235}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

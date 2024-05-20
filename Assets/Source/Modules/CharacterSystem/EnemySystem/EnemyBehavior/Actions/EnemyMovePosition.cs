@@ -24,6 +24,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 
         public override void OnStart()
         {
+            _navMeshAgent.isStopped = false;
             _navMeshAgent.SetDestination(LastTargetPosition.Value);
             _navMeshAgent.isStopped = false;
         }

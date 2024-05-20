@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Modules.Weapons.WeaponItemSystem
 {
-    public class WeaponItem : MonoBehaviour
+    public class WeaponItem : MonoBehaviour, IWeaponInfo
     {
         [SerializeField] private float _force;
         [SerializeField] private float _rotationForce;
@@ -25,7 +25,7 @@ namespace Modules.Weapons.WeaponItemSystem
 
         public event Action<Transform> Equipped;
         public event Action Thrown;
-        public event Action RangeFired;
+        public event Action<WeaponType> Attacked;
 
         public WeaponType WeaponType { get; private set; }
 
@@ -43,8 +43,8 @@ namespace Modules.Weapons.WeaponItemSystem
 
         public void Attack()
         {
-            if(_attack() && WeaponType == WeaponType.Range)
-                RangeFired?.Invoke();  
+            if(_attack())
+                Attacked?.Invoke(WeaponType);  
         }
 
         public void Equip(Transform container)
@@ -85,6 +85,13 @@ namespace Modules.Weapons.WeaponItemSystem
         private void SetEquipped(bool value, Transform container)
         {
             IsEquipped = value;
+            
+            if (_collider == null)
+            {
+                _rigidbody = GetComponent<Rigidbody>();
+                _collider = GetComponent<Collider>();
+            }
+                
             _collider.enabled = !value;
             var newcontainer = value ? container : _startContainer;
             transform.SetParent(newcontainer);

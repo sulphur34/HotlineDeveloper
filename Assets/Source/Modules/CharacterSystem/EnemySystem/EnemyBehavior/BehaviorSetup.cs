@@ -12,7 +12,10 @@ using UnityEngine;
 
 namespace Modules.Characters.Enemies.EnemyBehavior
 {
-    [RequireComponent(typeof(EnemyWeaponHandler), typeof(BehaviorManager.BehaviorTree))]
+    [RequireComponent(
+        typeof(EnemyWeaponHandlerSetup),
+        typeof(WeaponHandlerView),
+        typeof(BehaviorManager.BehaviorTree))]
     public class BehaviorSetup : MonoBehaviour
     {
         public const string AiInputName = "AiInput";
@@ -24,8 +27,9 @@ namespace Modules.Characters.Enemies.EnemyBehavior
         private BehaviorTree _behaviorTree;
         private BehaviorConfig _behaviorConfig;
         private WeaponTracker _weaponTracker;
-        private PlayerWeaponHandler _playerWeaponHandler;
-        private EnemyWeaponHandler _enemyWeaponHandler;
+        private WeaponHandlerView _playerWeaponHandlerView;
+        private WeaponHandlerView _weaponHandlerView;
+        private EnemyWeaponHandlerSetup _weaponHandlerSetup;
         private Player _player;
         private AiInput _aiInput;
         private DamageReceiverView _damageReceiver;
@@ -35,14 +39,15 @@ namespace Modules.Characters.Enemies.EnemyBehavior
             Player player)
         {
             _aiInput = new AiInput();
-            _enemyWeaponHandler = GetComponent<EnemyWeaponHandler>();
+            _weaponHandlerView = GetComponent<WeaponHandlerView>();
+            _weaponHandlerSetup = GetComponent<EnemyWeaponHandlerSetup>();
             _damageReceiver = GetComponent<DamageReceiverView>();
-            _enemyWeaponHandler.Initialize(_aiInput);
+            _weaponHandlerSetup.Initialize(_aiInput);
             _behaviorTree = GetComponent<BehaviorTree>();
             _behaviorConfig = behaviorConfig;
             _weaponTracker = weaponTracker;
             _player = player;
-            _playerWeaponHandler = _player.GetComponent<PlayerWeaponHandler>();
+            _playerWeaponHandlerView = _player.GetComponent<WeaponHandlerView>();
             _patrolRoute = patrolRoute;
             SetBehaviour();
         }
@@ -57,6 +62,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior
             SetVariable(_patrolRoute.GetRoute());
             SetVariable(new KeyValuePair<string, AiInput>(AiInputName, _aiInput));
             SetVariable(new KeyValuePair<string, DamageReceiverView>(DamageReceiverName, _damageReceiver));
+            
             SetGlobalVariable(
                 new KeyValuePair<string, WeaponTracker>(WeaponTrackerName, _weaponTracker),
                 new SharedWeaponTracker());
@@ -64,7 +70,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior
                 new KeyValuePair<string, GameObject>(TargetName, _player.gameObject),
                 new SharedGameObject());
             SetGlobalVariable(
-                new KeyValuePair<string, PlayerWeaponHandler>(PlayerWeaponHandlerName, _playerWeaponHandler),
+                new KeyValuePair<string, WeaponHandlerView>(PlayerWeaponHandlerName, _playerWeaponHandlerView),
                 new SharedPlayerWeaponHandler());
         }
 

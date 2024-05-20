@@ -8,7 +8,7 @@ namespace Modules.DamageSystem
     [RequireComponent(typeof(Collider))]
     public class DamageReceiverView : MonoBehaviour, IDamageReceiver
     {
-        private WeaponHandler _weaponHandler;
+        private WeaponHandlerView _weaponHandler;
         public event Action<DamageData> Received;
         
         public bool IsDead { get; private set; }
@@ -16,7 +16,7 @@ namespace Modules.DamageSystem
 
         private void Awake()
         {
-            _weaponHandler = GetComponent<WeaponHandler>();
+            _weaponHandler = GetComponent<WeaponHandlerView>();
         }
 
         private void LateUpdate()
@@ -33,7 +33,7 @@ namespace Modules.DamageSystem
         public void OnKnocked()
         {
             IsKnocked = true;
-            _weaponHandler.UnequipWeaponItem();
+            _weaponHandler.UnequipWeapon();
         }
 
         public void OnRecovered()
@@ -48,7 +48,7 @@ namespace Modules.DamageSystem
         public void OnDeath()
         {
             IsDead = true;
-            _weaponHandler.UnequipWeaponItem();
+            _weaponHandler.UnequipWeapon();
         }
 
         private void TestDeathAnimation()
