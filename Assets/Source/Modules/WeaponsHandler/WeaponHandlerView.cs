@@ -15,11 +15,11 @@ namespace Modules.PlayerWeaponsHandler
         public event Action RangeShotFired;
         public event Action Unequipped;
 
-        public IWeaponHandlerInfo WeaponHandlerInfo { get; private set; }
+        public IWeaponHandlerInfo WeaponInfo { get; private set; }
 
         public void Initialize(IWeaponHandlerInfo weaponHandlerInfo)
         {
-            WeaponHandlerInfo = weaponHandlerInfo;
+            WeaponInfo = weaponHandlerInfo;
         }
         
         public void OnAttack(WeaponType weaponType)
@@ -33,7 +33,7 @@ namespace Modules.PlayerWeaponsHandler
             _rightHandConstraint.data.target = weaponItem.RightHandPlaceHolder;
             
             if(weaponItem.RightHandPlaceHolder != null)
-                _leftHandConstraint.data.target = weaponItem.RightHandPlaceHolder;
+                _leftHandConstraint.data.target = weaponItem.LeftHandPlaceHolder;
             
             _rigBuilder.Build();
         }

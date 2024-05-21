@@ -16,7 +16,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
 
         public override TaskStatus OnUpdate()
         {
-            return _weaponHandler.WeaponHandlerInfo.CurrentWeaponItemIsEmpty ? TaskStatus.Failure : TaskStatus.Success ;
+            return _weaponHandler.WeaponInfo.CurrentWeaponItemIsEmpty ? TaskStatus.Failure : TaskStatus.Success ;
         }
     }
 }

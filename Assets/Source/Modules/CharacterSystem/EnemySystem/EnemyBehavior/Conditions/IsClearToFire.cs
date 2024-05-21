@@ -28,7 +28,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
 
         public override TaskStatus OnUpdate()
         {
-            if (_weaponHandler.WeaponHandlerInfo.CurrentWeaponType == WeaponType.Melee)
+            if (_weaponHandler.WeaponInfo.CurrentWeaponType == WeaponType.Melee)
                 return TaskStatus.Success;
 
             var enemy = Physics
