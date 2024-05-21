@@ -6,7 +6,9 @@ public class IKFootSolver : MonoBehaviour
 {
     [SerializeField] private Transform body;
     [SerializeField] private IKFootSolver otherFoot;
-    [SerializeField] private float speed = 2;
+    [SerializeField] private float speedFactor = 2;
+    [SerializeField] private float minSpeed = 2;
+    [SerializeField] private float maxSpeed = 20;
     [SerializeField] private float stepDistance = 0.4f;
     [SerializeField] private float stepLength = 0.4f;
     [SerializeField] private float stepHeight = 0.2f;
@@ -38,10 +40,9 @@ public class IKFootSolver : MonoBehaviour
         {
             Vector3 relativePoint = body.InverseTransformPoint(info.point);
             Vector3 relativeNewPos = body.InverseTransformPoint(_newPosition);
-            
             Vector3 combinedDirection = new Vector3(relativePoint.x - relativeNewPos.x, 0, relativePoint.z - relativeNewPos.z);
             
-            if ((stepDistance - combinedDirection.magnitude) < 0 && !otherFoot.IsMoving() && _lerp >= 1)
+            if ((stepDistance - combinedDirection.magnitude) < 0.1f && !otherFoot.IsMoving() && _lerp >= 1)
             {
                 _lerp = 0;
                 combinedDirection.Normalize();
@@ -58,7 +59,7 @@ public class IKFootSolver : MonoBehaviour
             _currentPosition = tempPosition;
 
             float currentSpeed = (body.position - _bodyOldPosition).magnitude / Time.deltaTime;
-            _lerp += Time.deltaTime * speed * Mathf.Clamp(currentSpeed, 1f, 20f);
+            _lerp += Time.deltaTime * speedFactor * Mathf.Clamp(currentSpeed, minSpeed, maxSpeed);
         }
         else
         {
@@ -72,21 +73,6 @@ public class IKFootSolver : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(_newPosition, 0.1f);
-
-        var verticies = new Vector3[]
-        {
-            new Vector3(0, 0),
-            new Vector3(0, 10),
-            new Vector3(10, 10),
-            new Vector3(10, 0)
-        };
-
-        var triangles = new int[]
-        {
-            0, 1, 2,
-            0, 2, 3
-        };
-
     }
 
     public bool IsMoving()
