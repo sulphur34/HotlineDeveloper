@@ -1,5 +1,4 @@
 ﻿using Modules.BulletSystem;
-using UnityEngine;
 
 namespace Modules.Weapons
 {
@@ -8,7 +7,7 @@ namespace Modules.Weapons
         internal override void Shot()
         {
             Bullet bullet = InstantiateBullet();
-            bullet.Init(Vector3.forward, BulletSpeed);
+            bullet.Init(transform.forward, BulletSpeed);
         }
     }
 }
