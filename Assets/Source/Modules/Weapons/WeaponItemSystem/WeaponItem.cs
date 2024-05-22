@@ -18,9 +18,9 @@ namespace Modules.Weapons.WeaponItemSystem
         private Func<bool> _attack;
 
         private CancellationToken _cancellationToken;
-
+     
+        [field: SerializeField] public Vector3 Offset { get; private set; }
         [field: SerializeField] public Transform LeftHandPlaceHolder { get; private set; }
-
         [field: SerializeField] public Transform RightHandPlaceHolder { get; private set; }
 
         public event Action<Transform> Equipped;
@@ -94,6 +94,10 @@ namespace Modules.Weapons.WeaponItemSystem
                 
             _collider.enabled = !value;
             var newcontainer = value ? container : _startContainer;
+            
+            if (newcontainer == container)
+                newcontainer.localPosition = Offset;
+            
             transform.SetParent(newcontainer);
             _rigidbody.isKinematic = value;
             _rigidbody.useGravity = !value;

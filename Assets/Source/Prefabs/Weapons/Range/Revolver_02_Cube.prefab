@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -8801412859410491620}
   - component: {fileID: -8895217915275420420}
   - component: {fileID: -6558430882562428286}
+  - component: {fileID: 4799506229164001677}
   m_Layer: 0
   m_Name: Revolver_02_Cube
   m_TagString: Untagged
@@ -36,7 +37,10 @@ Transform:
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 1586694054881444615}
+  - {fileID: 3427193270551294589}
+  - {fileID: 8890837178657443333}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8572475921307425943
@@ -149,8 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef631768894ac9418722f25acd7f9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponItem: {fileID: 0}
-  _shotStrategy: {fileID: 0}
+  _weaponItem: {fileID: -8801412859410491620}
+  _shotStrategy: {fileID: 4799506229164001677}
 --- !u!114 &-8801412859410491620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,10 +167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _force: 1000
-  _rotationForce: 300
-  <LeftHandPlaceHolder>k__BackingField: {fileID: 0}
-  <RightHandPlaceHolder>k__BackingField: {fileID: 0}
+  _force: 50
+  _rotationForce: 5
+  <Offset>k__BackingField: {x: 0, y: 1.4, z: 0.7}
+  <LeftHandPlaceHolder>k__BackingField: {fileID: 3427193270551294589}
+  <RightHandPlaceHolder>k__BackingField: {fileID: 8890837178657443333}
 --- !u!114 &-8895217915275420420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,3 +201,122 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+--- !u!114 &4799506229164001677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106652763134404480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7883593e6fbea894f87bb9623a16ecf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletSpawnPoint: {fileID: 2331242976937726694}
+--- !u!1 &1406284630604572075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3427193270551294589}
+  m_Layer: 0
+  m_Name: LeftHandPlaceholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3427193270551294589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406284630604572075}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.009, y: -0.016, z: -0.065}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9014532871218082330}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &2194550627517397120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1586694054881444615}
+  - component: {fileID: 2331242976937726694}
+  m_Layer: 0
+  m_Name: BulletSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1586694054881444615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2194550627517397120}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.053, z: 0.2557}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9014532871218082330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2331242976937726694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2194550627517397120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684ae44b823ecd747a4d88d89504ed48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &3018623498756853054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8890837178657443333}
+  m_Layer: 0
+  m_Name: RightHandPlaceholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8890837178657443333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3018623498756853054}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.009, y: -0.016, z: -0.065}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9014532871218082330}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}

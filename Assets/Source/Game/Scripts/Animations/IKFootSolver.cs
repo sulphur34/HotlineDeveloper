@@ -42,7 +42,7 @@ public class IKFootSolver : MonoBehaviour
             Vector3 relativeNewPos = body.InverseTransformPoint(_newPosition);
             Vector3 combinedDirection = new Vector3(relativePoint.x - relativeNewPos.x, 0, relativePoint.z - relativeNewPos.z);
             
-            if ((stepDistance - combinedDirection.magnitude) < 0.1f && !otherFoot.IsMoving() && _lerp >= 1)
+            if ((stepDistance - combinedDirection.magnitude) < 0 && !otherFoot.IsMoving() && _lerp >= 1)
             {
                 _lerp = 0;
                 combinedDirection.Normalize();
