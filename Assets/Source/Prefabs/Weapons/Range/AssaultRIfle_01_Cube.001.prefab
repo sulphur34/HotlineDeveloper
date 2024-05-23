@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6994535488271553854}
   - component: {fileID: -4867921186307607783}
   - component: {fileID: -9023587668943403869}
+  - component: {fileID: 6200893423660131694}
   m_Layer: 0
   m_Name: AssaultRIfle_01_Cube.001
   m_TagString: Untagged
@@ -139,7 +140,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &-4495110607782717864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,8 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef631768894ac9418722f25acd7f9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponItem: {fileID: 0}
-  _shotStrategy: {fileID: 0}
+  _weaponItem: {fileID: 6994535488271553854}
+  _shotStrategy: {fileID: 6200893423660131694}
 --- !u!114 &6994535488271553854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,9 +169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _force: 50
   _rotationForce: 5
-  <Offset>k__BackingField: {x: 0.1, y: 1.4, z: 0.35}
-  <LeftHandPlaceHolder>k__BackingField: {fileID: 0}
-  <RightHandPlaceHolder>k__BackingField: {fileID: 0}
+  <Offset>k__BackingField: {x: 0.1, y: 0.4, z: 0.35}
+  <LeftHandPlaceHolder>k__BackingField: {fileID: 4392327292850175868}
+  <RightHandPlaceHolder>k__BackingField: {fileID: 5785412459911971088}
 --- !u!114 &-4867921186307607783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +201,19 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+--- !u!114 &6200893423660131694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322712272813003720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7883593e6fbea894f87bb9623a16ecf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletSpawnPoint: {fileID: 5994431272203113816}
 --- !u!1 &5744387659807287628
 GameObject:
   m_ObjectHideFlags: 0
