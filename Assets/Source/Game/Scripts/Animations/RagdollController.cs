@@ -1,4 +1,3 @@
-using Modules.DamageSystem;
 using Source.Game.Scripts.Animations;
 using UnityEngine;
 

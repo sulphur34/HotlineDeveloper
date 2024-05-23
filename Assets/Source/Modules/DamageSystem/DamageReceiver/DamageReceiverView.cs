@@ -35,6 +35,7 @@ namespace Modules.DamageSystem
         public void OnRecovered()
         {
             IsKnocked = false;
+            StoodUp?.Invoke();
         }
 
         public void OnHealthChanged(float value)
