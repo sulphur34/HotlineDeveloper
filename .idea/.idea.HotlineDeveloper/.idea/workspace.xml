@@ -2,10 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27b5db7a-b918-4bd4-b47c-121f4f888e4a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Animations/AnimationController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Animations/AnimationController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Animations/ConstrainsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Animations/ConstrainsController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Animations/RagdollJointData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Animations/RagdollJointData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Agava.Scripts.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Agava.Scripts.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Animations/IKFootSolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Animations/IKFootSolver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Enemies/EnemySimple 1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Enemies/EnemySimple 1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Enemies/EnemySimple.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Characters/Enemies/EnemySimple.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Enemies/EnemySimpleHandMadeBones.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Characters/Enemies/EnemySimpleHandMadeBones.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Enemies/EnemySimpleHandMadeBones.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Characters/Enemies/EnemySimpleHandMadeBones.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Enemies/EnemySimpleWithFistsFixedFeets.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Enemies/EnemySimpleWithFistsFixedFeets.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Enemies/EnemySimpleWithFistsFixedLegs.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Enemies/EnemySimpleWithFistsFixedLegs.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Actions/SetAttackDistance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Actions/SetAttackDistance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Conditions/IsTargetShotHeard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Conditions/IsTargetShotHeard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Agava.DamageSystem.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/Agava.DamageSystem.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiverView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiverView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/DesktopInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/DesktopInputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/InputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/MobileInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/MobileInputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Bullet/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Bullet/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Enemies/EnemyNormal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Enemies/EnemyNormal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Enemies/EnemyNormal.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Enemies/EnemyNormal.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Player1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Player1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelRoutes/Route1/SpawnPoint (2).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelRoutes/Route1/SpawnPoint (2).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelRoutes/Route2/SpawnPoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelRoutes/Route2/SpawnPoint.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelRoutes/SpawnPoint (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelRoutes/SpawnPoint (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelRoutes/SpawnPoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelRoutes/SpawnPoint.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/AssaultRIfle_01_Cube.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/AssaultRIfle_01_Cube.001.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/AssaultRIfle_02_Cylinder.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/AssaultRIfle_02_Cylinder.001.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/AssaultRIfle_03.001_Cube.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/AssaultRIfle_03.001_Cube.001.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Pistol_01_Cube.002.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Pistol_01_Cube.002.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Pistol_03_Cube.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Pistol_03_Cube.001.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Revolver_01_Cylinder.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Revolver_01_Cylinder.001.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Revolver_02_Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Revolver_02_Cube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_01_Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_01_Cube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_02_Cylinder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_02_Cylinder.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_03_Cylinder.002.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_03_Cylinder.002.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_04_Circle.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_04_Circle.001.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_05_Cube.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_05_Cube.001.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Shotgun_01_Cylinder.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Shotgun_01_Cylinder.001.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Shotgun_03_Cylinder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Shotgun_03_Cylinder.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Sniper_01_Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Sniper_01_Cube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Sniper_02_Cube.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Sniper_02_Cube.001.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/Level3 - CharacterTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/Level3 - CharacterTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/TestScene/AssetTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/TestScene/AssetTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/BossEnemyConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/BossEnemyConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/NormalEnemyConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/NormalEnemyConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/StrongEnemyConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/StrongEnemyConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Weapons/Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Weapons/Pistol.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Weapons/Shotgun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Weapons/Shotgun.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +100,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.3/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Unity/InstanceProviders/FindComponentProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.7.5/Runtime/TrackAsset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.animation.rigging@1.2.1/Runtime/AnimationRig/Constraints/TwoBoneIKConstraint.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a24131e73ec49f7805f3dfb6a69fa781d000/da/636d957c/SharedVariable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/e3/ca5adc0b/PrimitiveAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IAttackInput.cs" root0="FORCE_HIGHLIGHTING" />
@@ -112,10 +173,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="30356">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="30356" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -187,7 +248,9 @@
       <workItem from="1716192861774" duration="12205000" />
       <workItem from="1716212693741" duration="6966000" />
       <workItem from="1716281475366" duration="13597000" />
-      <workItem from="1716364226573" duration="7508000" />
+      <workItem from="1716364226573" duration="17684000" />
+      <workItem from="1716396864571" duration="401000" />
+      <workItem from="1716453941628" duration="10165000" />
     </task>
     <servers />
   </component>
@@ -240,13 +303,13 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiver/DamageReceiverView.cs</url>
-          <line>34</line>
+          <line>30</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiver\DamageReceiverView.cs" initialLine="21" containingFunctionPresentation="method 'OnKnocked'">
             <startOffsets>
-              <option value="870" />
+              <option value="818" />
             </startOffsets>
             <endOffsets>
-              <option value="887" />
+              <option value="835" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="38" />
@@ -469,10 +532,10 @@
           <line>27</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\CharacterSystem\EnemySystem\EnemyBehavior\Actions\SetAttackDistance.cs" initialLine="27" containingFunctionPresentation="method 'OnUpdate'">
             <startOffsets>
-              <option value="853" />
+              <option value="855" />
             </startOffsets>
             <endOffsets>
-              <option value="974" />
+              <option value="976" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="93" />

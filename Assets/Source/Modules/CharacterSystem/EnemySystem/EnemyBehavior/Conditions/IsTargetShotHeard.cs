@@ -12,7 +12,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
     {
         public SharedPlayerWeaponHandler PlayerWeaponHandler;
         public SharedBool IsShotFired;
-        public float AlertHearingDistance = 100f;
+        public float AlertHearingDistance = 10f;
 
         public override void OnAwake()
         {
