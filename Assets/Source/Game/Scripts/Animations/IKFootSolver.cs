@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Modules.DamageSystem;
 using UnityEngine;
 
 public class IKFootSolver : MonoBehaviour
@@ -20,7 +19,7 @@ public class IKFootSolver : MonoBehaviour
     private Vector3 _currentPosition, _newPosition;
     private float _lerp;
     
-    private void Start()
+    private void Awake()
     {
         _bodyOldPosition = body.position;
         _transform = transform;
@@ -75,7 +74,7 @@ public class IKFootSolver : MonoBehaviour
         Gizmos.DrawSphere(_newPosition, 0.1f);
     }
 
-    public bool IsMoving()
+    private bool IsMoving()
     {
         return _lerp < 1;
     }

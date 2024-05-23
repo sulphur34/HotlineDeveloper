@@ -10,6 +10,8 @@ namespace Modules.DamageSystem
     {
         private WeaponHandlerView _weaponHandler;
         public event Action<DamageData> Received;
+        public event Action FallenDown;
+        public event Action StoodUp;
         
         public bool IsDead { get; private set; }
         public bool IsKnocked { get; private set; }
@@ -17,12 +19,6 @@ namespace Modules.DamageSystem
         private void Awake()
         {
             _weaponHandler = GetComponent<WeaponHandlerView>();
-        }
-
-        private void LateUpdate()
-        {
-            if(IsDead || IsKnocked)
-                TestDeathAnimation();
         }
 
         public void Receive(DamageData damageData)
@@ -33,7 +29,7 @@ namespace Modules.DamageSystem
         public void OnKnocked()
         {
             IsKnocked = true;
-            _weaponHandler.UnequipWeapon();
+            OnFall();
         }
 
         public void OnRecovered()
@@ -48,12 +44,13 @@ namespace Modules.DamageSystem
         public void OnDeath()
         {
             IsDead = true;
-            _weaponHandler.UnequipWeapon();
+            OnFall();
         }
 
-        private void TestDeathAnimation()
+        private void OnFall()
         {
-            transform.RotateAround(transform.position, Vector3.forward, 90f);
+            _weaponHandler.UnequipWeapon();
+            FallenDown?.Invoke();
         }
     }
 }
