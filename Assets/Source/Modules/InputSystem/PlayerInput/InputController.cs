@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public abstract class InputController : MonoBehaviour, IMoveInput, IAttackInput, IRotateInput, IPickInput
 {
-    protected PlayerInput _playerInput;
+    protected PlayerInput PlayerInput;
 
     public event Action<Vector2> MoveReceived;
     public event Action<Vector2> RotationReceived;
@@ -16,7 +16,7 @@ public abstract class InputController : MonoBehaviour, IMoveInput, IAttackInput,
 
     private void Awake()
     {
-        _playerInput = new PlayerInput();
+        PlayerInput = new PlayerInput();
     }
     
     private void Update()
@@ -24,16 +24,17 @@ public abstract class InputController : MonoBehaviour, IMoveInput, IAttackInput,
         MoveReceived?.Invoke(OnMove());
         RotationReceived?.Invoke(OnRotate());
         LookReceived?.Invoke(OnLook());
+        OnAttack();
     }
 
     private void OnDisable()
     {
-        _playerInput.Disable();
+        PlayerInput.Disable();
     }
 
-    protected virtual void OnAttack(InputAction.CallbackContext context)
+    protected void Attack()
     {
-        AttackReceived?.Invoke();
+            AttackReceived?.Invoke();
     }
 
     protected void OnPick(InputAction.CallbackContext context)
@@ -45,7 +46,8 @@ public abstract class InputController : MonoBehaviour, IMoveInput, IAttackInput,
     {
         FinishReceived?.Invoke();
     }
-    
+
+    protected abstract void OnAttack();
     protected abstract Vector2 OnMove();
     protected abstract Vector2 OnRotate();
     protected abstract Vector2 OnLook();
