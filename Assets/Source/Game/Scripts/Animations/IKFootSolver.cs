@@ -32,7 +32,7 @@ public class IKFootSolver : MonoBehaviour
         _transform.position = _currentPosition;
         _transform.rotation = body.rotation * Quaternion.Euler(90, 0, 0);
 
-        Ray ray = new Ray(body.position + (body.right * _footSpacing), Vector3.down);
+        Ray ray = new Ray(body.position + (Vector3.left * _footSpacing), Vector3.down);
 
         if (Physics.Raycast(ray, out RaycastHit info, 10) && info.collider.TryGetComponent<Ground>(out Ground terrain))
         {
@@ -40,7 +40,7 @@ public class IKFootSolver : MonoBehaviour
             Vector3 relativeNewPos = body.InverseTransformPoint(_newPosition);
             Vector3 combinedDirection = new Vector3(relativePoint.x - relativeNewPos.x, 0, relativePoint.z - relativeNewPos.z);
             
-            if ((stepDistance - combinedDirection.magnitude) < 0 && !otherFoot.IsMoving() && _lerp >= 1)
+            if (stepDistance < combinedDirection.magnitude && !otherFoot.IsMoving() && _lerp >= 1)
             {
                 _lerp = 0;
                 combinedDirection.Normalize();
@@ -60,7 +60,7 @@ public class IKFootSolver : MonoBehaviour
             _lerp += Time.deltaTime * speedFactor * Mathf.Clamp(currentSpeed, minSpeed, maxSpeed);
         }
         else
-        {
+        { 
             _oldPosition = _newPosition;
         }
 
