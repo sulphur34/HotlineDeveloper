@@ -29,7 +29,7 @@ namespace Modules.SaveHandlers
         {
             _saveSystem.Save(data =>
             {
-                data.LevelsData.Selected = element.LevelNumberForLoad;
+                data.LevelsData.ForLoad = element.LevelNumberForLoad;
             });
         }
     }

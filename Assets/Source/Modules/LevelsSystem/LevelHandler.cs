@@ -16,7 +16,8 @@ namespace Modules.LevelsSystem
         [Inject]
         private void Constructe(LevelsData levels)
         {
-            _level = levels.Value[levels.ForLoad - 1];
+            int levelForCompleteIndex = levels.ForLoad - 1;
+            _level = levels.Value[levelForCompleteIndex];
         }
     }
 }

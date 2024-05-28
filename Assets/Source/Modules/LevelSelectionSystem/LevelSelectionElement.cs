@@ -25,7 +25,7 @@ namespace Modules.LevelSelectionSystem
 
         public bool IsSelected { get; private set; }
 
-        public uint LevelNumberForLoad => _config.LevelNumber;
+        public int LevelNumberForLoad => (int)_config.LevelNumber;
 
         public void Init(bool isLocked)
         {
@@ -67,7 +67,7 @@ namespace Modules.LevelSelectionSystem
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            if (IsLocked == false)
+            if (IsLocked == false && IsSelected == false)
                 Pressed?.Invoke(this);
         }
     }

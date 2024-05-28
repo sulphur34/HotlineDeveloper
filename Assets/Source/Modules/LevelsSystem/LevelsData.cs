@@ -8,10 +8,8 @@ namespace Modules.LevelsSystem
     public class LevelsData
     {
         [field: Preserve]
-        public List<Level> Value = new List<Level>();
-        [field: Preserve]
         public int ForLoad = 1;
         [field: Preserve]
-        public uint Selected = 1;
+        public List<Level> Value = new List<Level>();
     }
 }

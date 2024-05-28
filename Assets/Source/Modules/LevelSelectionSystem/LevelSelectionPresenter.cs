@@ -53,7 +53,7 @@ namespace Modules.LevelSelectionSystem
             if (_lastSelectedElement == null) 
                 return;
 
-            _levels.ForLoad = (int)_lastSelectedElement.LevelNumberForLoad;
+            _levels.ForLoad = _lastSelectedElement.LevelNumberForLoad;
             _levelSceneLoader.Load(_levels.ForLoad);
         }
 
