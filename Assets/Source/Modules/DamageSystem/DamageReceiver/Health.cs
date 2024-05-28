@@ -9,22 +9,24 @@ namespace Modules.DamageSystem
         private readonly float _maxHealth;
 
         private float _currentHealth;
-        private bool _isDead;
+        
 
         public Health(float maxHealth, float minHealth = 0f)
         {
             _minHealth = minHealth;
             _maxHealth = maxHealth;
             _currentHealth = _maxHealth;
-            _isDead = false;
+            IsDead = false;
         }
+
+        public bool IsDead { get; private set; }
 
         public void TakeDamage(float damage, Action<float> onChangedCallback, Action onDieCallback)
         {
             if (damage < 0)
                 throw new ArgumentOutOfRangeException();
 
-            if (_isDead)
+            if (IsDead)
                 return;
 
             _currentHealth = Mathf.Clamp(_currentHealth -= damage, _minHealth, _maxHealth);
@@ -32,7 +34,7 @@ namespace Modules.DamageSystem
 
             if (_currentHealth <= _minHealth)
             {
-                _isDead = true;
+                IsDead = true;
                 onDieCallback?.Invoke();
             }
         }

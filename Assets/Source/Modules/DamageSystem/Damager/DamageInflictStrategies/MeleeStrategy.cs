@@ -1,5 +1,4 @@
 using System;
-using Modules.Weapons.WeaponItemSystem;
 using UnityEngine;
 
 namespace Modules.DamageSystem

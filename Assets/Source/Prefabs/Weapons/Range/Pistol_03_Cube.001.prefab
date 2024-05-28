@@ -31,6 +31,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7929064487579304528}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4003239460063326521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8147650548698766811}
+  - component: {fileID: 4618255140210759894}
+  m_Layer: 0
+  m_Name: BulletSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8147650548698766811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003239460063326521}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0515, z: 0.1534}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7929064487579304528}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4618255140210759894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003239460063326521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 684ae44b823ecd747a4d88d89504ed48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8632984338837922327
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,6 +123,7 @@ GameObject:
   - component: {fileID: -3988058397214020126}
   - component: {fileID: -192954892061599684}
   - component: {fileID: -5335298476978956448}
+  - component: {fileID: 5779369990209547113}
   m_Layer: 0
   m_Name: Pistol_03_Cube.001
   m_TagString: Untagged
@@ -99,6 +144,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 8147650548698766811}
   - {fileID: 951904520030538719}
   - {fileID: 3523937058620003267}
   m_Father: {fileID: 0}
@@ -213,8 +259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef631768894ac9418722f25acd7f9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponItem: {fileID: 0}
-  _shotStrategy: {fileID: 0}
+  _weaponItem: {fileID: -3988058397214020126}
+  _shotStrategy: {fileID: 5779369990209547113}
 --- !u!114 &-3988058397214020126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,9 +275,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _force: 20
   _rotationForce: 5
-  <Offset>k__BackingField: {x: 0, y: 0, z: 0}
-  <LeftHandPlaceHolder>k__BackingField: {fileID: 0}
-  <RightHandPlaceHolder>k__BackingField: {fileID: 0}
+  <Offset>k__BackingField: {x: -0.5, y: 0.4, z: 0}
+  <LeftHandPlaceHolder>k__BackingField: {fileID: 3523937058620003267}
+  <RightHandPlaceHolder>k__BackingField: {fileID: 951904520030538719}
 --- !u!114 &-192954892061599684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,3 +307,16 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+--- !u!114 &5779369990209547113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8897919934825601442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7883593e6fbea894f87bb9623a16ecf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletSpawnPoint: {fileID: 4618255140210759894}

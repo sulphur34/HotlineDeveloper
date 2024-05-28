@@ -44,9 +44,8 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
 
             float sqrMagnitude = Vector3.SqrMagnitude(targetPosition - selfPosition);
 
-            if (sqrMagnitude > _sqrDistance && angle > FieldOfViewAngle.Value * 0.5f)
+            if (sqrMagnitude > _sqrDistance || angle > FieldOfViewAngle.Value * 0.5f)
                 return TaskStatus.Failure;
-
 
             return TaskStatus.Success;
         }

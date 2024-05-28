@@ -23,6 +23,8 @@ namespace Modules.Weapons.WeaponItemSystem
         [field: SerializeField] public Transform LeftHandPlaceHolder { get; private set; }
         [field: SerializeField] public Transform RightHandPlaceHolder { get; private set; }
 
+        
+        public Transform SelfTransform { get; private set; }
         public event Action<Transform> Equipped;
         public event Action Thrown;
         public event Action<WeaponType> Attacked;
@@ -39,6 +41,7 @@ namespace Modules.Weapons.WeaponItemSystem
             WeaponType = type;
             _startContainer = transform.parent;
             _cancellationToken = this.GetCancellationTokenOnDestroy();
+            SelfTransform = transform;
         }
 
         public void Attack()
@@ -67,7 +70,7 @@ namespace Modules.Weapons.WeaponItemSystem
         public void Throw()
         {
             Unequip();
-            _rigidbody.AddForce(transform.forward * _force, ForceMode.Impulse);
+            _rigidbody.AddForce(SelfTransform.forward * _force, ForceMode.Impulse);
             _rigidbody.AddTorque(Vector3.up * _rotationForce);
             WaitingThrowEnd(_cancellationToken, Thrown);
         }
@@ -98,14 +101,14 @@ namespace Modules.Weapons.WeaponItemSystem
             if (newcontainer == container)
                 newcontainer.localPosition = Offset;
             
-            transform.SetParent(newcontainer);
+            SelfTransform.SetParent(newcontainer);
             _rigidbody.isKinematic = value;
             _rigidbody.useGravity = !value;
             
             if (value)
             {
-                transform.position = container.position;
-                transform.forward = container.forward;
+                SelfTransform.position = container.position;
+                SelfTransform.forward = container.forward;
             }
         }
     }

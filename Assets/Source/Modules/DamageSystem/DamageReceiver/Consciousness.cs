@@ -8,7 +8,6 @@ namespace Modules.DamageSystem
     {
         private float _recoverTime;
         private CancellationToken _cancellationToken;
-        public bool IsKnocked { get; private set; }
 
         public event Action Knocked;
         public event Action Recovered;
@@ -18,6 +17,8 @@ namespace Modules.DamageSystem
             _recoverTime = recoverTime;
             _cancellationToken = cancellationToken;
         }
+        
+        public bool IsKnocked { get; private set; }
 
         public void Knockout(Action onKnockedCallback, Action onRecoveredCallback)
         {

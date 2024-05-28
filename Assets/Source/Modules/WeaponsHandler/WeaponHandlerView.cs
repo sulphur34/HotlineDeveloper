@@ -1,4 +1,6 @@
 using System;
+using System.Diagnostics;
+using Modules.DamageSystem;
 using Modules.Weapons.WeaponItemSystem;
 using Modules.Weapons.WeaponTypeSystem;
 using UnityEngine;
@@ -8,11 +10,24 @@ namespace Modules.PlayerWeaponsHandler
 {
     public class WeaponHandlerView : MonoBehaviour
     {
+        public const string MeleeAttackName = "MeleeAttack";
+        public const string BareHandAttack = "BareHandsAttack";
+        
         [SerializeField] private RigBuilder _rigBuilder;
-        [SerializeField] private TwoBoneIKConstraint _rightHandConstraint;
-        [SerializeField] private TwoBoneIKConstraint _leftHandConstraint;
+        [SerializeField] private Rig _rangeRig;
+        [SerializeField] private TwoBoneIKConstraint _rightHandRange;
+        [SerializeField] private TwoBoneIKConstraint _leftHandRange;
+        [SerializeField] private Rig _meleeRig;
+        [SerializeField] private MultiParentConstraint _rightHandMelee;
+        [SerializeField] private TwoBoneIKConstraint _leftHandMelee;
+        [SerializeField] private DamageReceiverView _damageReceiverView;
+
+        private Animator _animator;
+        private int _meleeAttackId;
+        private int _bareHandAttackId;
         
         public event Action RangeShotFired;
+        public event Action Equipped;
         public event Action Unequipped;
 
         public IWeaponHandlerInfo WeaponInfo { get; private set; }
@@ -20,27 +35,77 @@ namespace Modules.PlayerWeaponsHandler
         public void Initialize(IWeaponHandlerInfo weaponHandlerInfo)
         {
             WeaponInfo = weaponHandlerInfo;
+            _animator = GetComponent<Animator>();
+            _meleeAttackId = Animator.StringToHash(MeleeAttackName);
+            _bareHandAttackId = Animator.StringToHash(BareHandAttack);
+            _damageReceiverView.FallenDown += UnequipWeapon;
         }
         
         public void OnAttack(WeaponType weaponType)
         {
+            switch (weaponType)
+            {
+                case WeaponType.Melee:
+                    _animator.SetTrigger(_meleeAttackId);
+                    break;
+                case WeaponType.BareHands:
+                    _animator.SetTrigger(_bareHandAttackId);
+                    break;
+            }
+            
             if (weaponType == WeaponType.Range)
                 RangeShotFired?.Invoke();
         }
 
         public void OnPick(IWeaponInfo weaponItem)
         {
-            _rightHandConstraint.data.target = weaponItem.RightHandPlaceHolder;
+            Equipped?.Invoke();
             
-            if(weaponItem.RightHandPlaceHolder != null)
-                _leftHandConstraint.data.target = weaponItem.LeftHandPlaceHolder;
-            
-            _rigBuilder.Build();
+            switch (WeaponInfo.CurrentWeaponType)
+            {
+                case WeaponType.Melee :
+                    EquipMelee(weaponItem);
+                    break;
+                
+                case  WeaponType.Range :
+                    EquipRange(weaponItem);
+                    break;
+            }
         }
 
         public void UnequipWeapon()
         {
+            ClearHands();
             Unequipped.Invoke();
+        }
+
+        public void ClearHands()
+        {
+            _rangeRig.weight = 0f;
+            _meleeRig.weight = 0f;
+        }
+
+        private void EquipRange(IWeaponInfo weaponItem)
+        {
+            _rangeRig.weight = 1f;
+            _rightHandRange.data.target = weaponItem.RightHandPlaceHolder;
+            
+            if(weaponItem.LeftHandPlaceHolder != null)
+                _leftHandMelee.data.target = weaponItem.LeftHandPlaceHolder;
+            
+            _rigBuilder.Build();
+        }
+
+        private void EquipMelee(IWeaponInfo weaponItem)
+        {
+            _meleeRig.weight = 1f;
+
+            _rightHandMelee.data.constrainedObject = weaponItem.SelfTransform;
+            
+            if(weaponItem.LeftHandPlaceHolder != null)
+                _leftHandMelee.data.target = weaponItem.LeftHandPlaceHolder;
+            
+            _rigBuilder.Build();
         }
     }
 }

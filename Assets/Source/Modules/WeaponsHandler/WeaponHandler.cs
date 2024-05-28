@@ -12,15 +12,16 @@ namespace Modules.PlayerWeaponsHandler
         protected IAttackInput _attackInput;
         protected IPickInput _pickInput;
         private WeaponItem _currentWeaponItem;
-        private WeaponItem _defaultWeapon;
+        private WeaponItem _defaultWeaponItem;
         private Transform _container;
         private Transform _pickPoint;
         private float _pickRadius;
 
         public event Action<IWeaponInfo> WeaponPicked;
+        public event Action WeaponThrown;
         public event Action<WeaponType> Attacked;
 
-        public bool CurrentWeaponItemIsEmpty => _currentWeaponItem == null || _currentWeaponItem == _defaultWeapon;
+        public bool CurrentWeaponItemIsEmpty => _currentWeaponItem == null || _currentWeaponItem == _defaultWeaponItem;
         public WeaponType CurrentWeaponType => _currentWeaponItem.WeaponType;
         
         public WeaponHandler(WeaponHandlerData weaponHandlerData, IAttackInput attackInput, IPickInput pickInput)
@@ -28,16 +29,16 @@ namespace Modules.PlayerWeaponsHandler
             _pickRadius = weaponHandlerData.PickRadius;
             _pickPoint = weaponHandlerData.PickPoint;
             _container = weaponHandlerData.Container;
-            _defaultWeapon = weaponHandlerData.DefaultWeapon;
+            _defaultWeaponItem = weaponHandlerData.DefaultWeapon;
             _attackInput = attackInput;
             _pickInput = pickInput;
             _pickInput.PickReceived += OnPickInputReceived;
-            EquipWeaponItem(_defaultWeapon);
+            EquipWeaponItem(_defaultWeaponItem);
         }
 
         public void UnequipWeaponItem()
         {
-            if (_currentWeaponItem == null || _currentWeaponItem == _defaultWeapon)
+            if (_currentWeaponItem == null || _currentWeaponItem == _defaultWeaponItem)
                 return;
             
             _currentWeaponItem.Unequip();
@@ -45,8 +46,8 @@ namespace Modules.PlayerWeaponsHandler
             _currentWeaponItem = null;
             _attackInput.AttackReceived -= OnAttackInputReceived;
 
-            if (_defaultWeapon != null)
-                _defaultWeapon.Attacked += OnAttack;
+            if (_defaultWeaponItem != null)
+                _defaultWeaponItem.Attacked += OnAttack;
         }
 
         protected void OnPickInputReceived()
@@ -56,8 +57,9 @@ namespace Modules.PlayerWeaponsHandler
             if (CurrentWeaponItemIsEmpty == false && _currentWeaponItem.IsEquipped)
             {
                 _currentWeaponItem.Throw();
+                WeaponThrown?.Invoke();
                 _currentWeaponItem.Attacked -= OnAttack;
-                _currentWeaponItem = _defaultWeapon;
+                _currentWeaponItem = _defaultWeaponItem;
                 _attackInput.AttackReceived -= OnAttackInputReceived;
             }
 
@@ -107,7 +109,12 @@ namespace Modules.PlayerWeaponsHandler
 
         private void OnAttack(WeaponType weaponType)
         {
-            Attacked?.Invoke(weaponType);
+            WeaponType currentType = weaponType;
+
+            if (_currentWeaponItem == _defaultWeaponItem)
+                currentType =  WeaponType.BareHands;
+            
+            Attacked?.Invoke(currentType);
         }
     }
 }

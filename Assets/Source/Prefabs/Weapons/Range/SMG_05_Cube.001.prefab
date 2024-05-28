@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3891491661510579245}
   - component: {fileID: 69373930303056101}
   - component: {fileID: 1755942704632598441}
+  - component: {fileID: 7368297091632704449}
   m_Layer: 0
   m_Name: SMG_05_Cube.001
   m_TagString: Untagged
@@ -152,8 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef631768894ac9418722f25acd7f9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponItem: {fileID: 0}
-  _shotStrategy: {fileID: 0}
+  _weaponItem: {fileID: 3891491661510579245}
+  _shotStrategy: {fileID: 7368297091632704449}
 --- !u!114 &3891491661510579245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,9 +169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _force: 50
   _rotationForce: 5
-  <Offset>k__BackingField: {x: 0.1, y: 0.4, z: 0.35}
-  <LeftHandPlaceHolder>k__BackingField: {fileID: 0}
-  <RightHandPlaceHolder>k__BackingField: {fileID: 0}
+  <Offset>k__BackingField: {x: -0.4, y: 0.4, z: 0}
+  <LeftHandPlaceHolder>k__BackingField: {fileID: 4353859737094731916}
+  <RightHandPlaceHolder>k__BackingField: {fileID: 7780607225652882599}
 --- !u!114 &69373930303056101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +201,19 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
+--- !u!114 &7368297091632704449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714136345092134645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7883593e6fbea894f87bb9623a16ecf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletSpawnPoint: {fileID: 3181796711193291833}
 --- !u!1 &6795309781069770306
 GameObject:
   m_ObjectHideFlags: 0

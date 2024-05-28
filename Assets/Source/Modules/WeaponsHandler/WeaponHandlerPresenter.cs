@@ -12,6 +12,7 @@ namespace Modules.PlayerWeaponsHandler
             _weaponHandler = weaponHandler;
             _weaponHandler.WeaponPicked += OnWeaponPick;
             _weaponHandler.Attacked += OnWeaponAttack;
+            _weaponHandler.WeaponThrown += OnWeaponThrow;
             _weaponHandlerView = weaponHandlerView;
             _weaponHandlerView.Initialize(_weaponHandler);
             _weaponHandlerView.Unequipped += _weaponHandler.UnequipWeaponItem;
@@ -20,6 +21,11 @@ namespace Modules.PlayerWeaponsHandler
         private void OnWeaponPick(IWeaponInfo weaponItem)
         {
             _weaponHandlerView.OnPick(weaponItem);
+        }
+
+        private void OnWeaponThrow()
+        {
+            _weaponHandlerView.ClearHands();
         }
 
         private void OnWeaponAttack(WeaponType weaponType)
