@@ -1,7 +1,6 @@
 ﻿using Modules.LevelsSystem;
 using Modules.PressedButtonSystem;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using VContainer;
 
@@ -12,7 +11,7 @@ namespace Modules.LevelSelectionSystem
         private readonly LevelSelectionElement[] _levelSelectionElements;
         private readonly PressedButton _levelSelectionButton;
         private readonly LevelSceneLoader _levelSceneLoader;
-        private readonly Level _lastLevelForLoad;
+        private readonly LevelsData _levels;
 
         private LevelSelectionElement _lastSelectedElement;
 
@@ -20,18 +19,20 @@ namespace Modules.LevelSelectionSystem
         public LevelSelectionPresenter(LevelSelectionElement[] levelSelectionElements, 
             PressedButton levelSelectionButton, 
             LevelSceneLoader levelSceneLoader, 
-            Level lastLevelForLoad,
-            List<Level> levels)
+            LevelsData levels)
         {
             _levelSelectionElements = levelSelectionElements;
             _levelSelectionButton = levelSelectionButton;
             _levelSceneLoader = levelSceneLoader;
-            _lastLevelForLoad = lastLevelForLoad;
+            _levels = levels;
 
             for (int i = 0; i < _levelSelectionElements.Length; i++)
-                _levelSelectionElements[i].Init(levels[i].IsLocked);
+                _levelSelectionElements[i].Init(levels.Value[i].IsLocked);
 
             _lastSelectedElement = _levelSelectionElements.FirstOrDefault(element => element.IsSelected);
+
+            if (_levels.ForLoad == 0)
+                _levels.ForLoad = (int)_lastSelectedElement.LevelNumberForLoad;
 
             _levelSelectionButton.Pressed += OnButtonPressed;
 
@@ -52,8 +53,8 @@ namespace Modules.LevelSelectionSystem
             if (_lastSelectedElement == null) 
                 return;
 
-            _lastLevelForLoad.SetNumber(_lastSelectedElement.LevelNumberForLoad);
-            _levelSceneLoader.Load(_lastLevelForLoad);
+            _levels.ForLoad = (int)_lastSelectedElement.LevelNumberForLoad;
+            _levelSceneLoader.Load(_levels.ForLoad);
         }
 
         private void OnElementPressed(LevelSelectionElement levelSelectionElement)

@@ -2,8 +2,7 @@ using Modules.FadeSystem;
 using Modules.LevelsSystem;
 using Modules.SavingsSystem;
 using Modules.SceneLoaderSystem;
-using System.Collections.Generic;
-using System.Linq;
+using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
@@ -17,33 +16,31 @@ public class MainCompositRoot : LifetimeScope
     {
         _saveSystem.Load(data =>
         {
-            InitLevels(data.Levels);
-            Level lastLoadedLevel = data.Levels.FirstOrDefault(level => level.Number == data.CurrentLevel);
-            builder.RegisterInstance(lastLoadedLevel);
-
+            InitLevels(data.LevelsData);
+            builder.RegisterInstance(data.LevelsData);
             builder.Register<SceneLoader>(Lifetime.Singleton);
-
-            builder.RegisterInstance(data.Levels);
             builder.RegisterComponentInHierarchy<Fade>();
         });
     }
 
-    private void InitLevels(List<Level> levels)
+    private void InitLevels(LevelsData levels)
     {
-        if (levels.Count > 0)
+        if (levels.Value.Count > 0)
             return;
 
         _saveSystem.Save(data =>
         {
             for (int i = 0; i < LevelsCount; i++)
             {
-                data.Levels.Add(new Level());
+                levels.Value.Add(new Level());
                 uint levelNumber = (uint)i + 1;
-                data.Levels[i].SetNumber(levelNumber);
+                levels.Value[i].SetNumber(levelNumber);
 
                 if (i == 0)
-                    data.Levels[i].Unlock();
+                    levels.Value[i].Unlock();
             }
+
+            data.LevelsData = levels;
         });
     }
 }

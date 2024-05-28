@@ -14,6 +14,8 @@ namespace Modules.LevelsSystem
 
         [field: SerializeField] public bool IsLocked { get; private set; } = true;
 
+        [field: SerializeField] public bool IsCompleted { get; private set; }
+
         public void SetNumber(uint number)
         {
             if (number < MinNumber)
@@ -29,6 +31,7 @@ namespace Modules.LevelsSystem
 
         public void Complete()
         {
+            IsCompleted = true;
             Completed?.Invoke();
         }
     }

@@ -1,8 +1,10 @@
+using Module.ContinueLevelButtonSystem;
 using Modules.FadeSystem;
 using Modules.LevelSelectionSystem;
 using Modules.LevelsSystem;
 using Modules.PressedButtonSystem;
 using Modules.SaveHandlers;
+using Modules.SavingsSystem;
 using System.Linq;
 using UnityEngine;
 using VContainer;
@@ -26,13 +28,19 @@ public class MenuCompositRoot : LifetimeScope
         builder.Register<LevelSelectionPresenter>(Lifetime.Singleton);
         builder.Register<SelectedLevelSaveHandler>(Lifetime.Singleton);
 
+        builder.RegisterComponentInHierarchy<ContinueLevelButton>();
+        builder.RegisterComponentInHierarchy<ContinueLevelButtonView>();
+        builder.Register<ContinueLevelButtonPresenter>(Lifetime.Singleton);
+
         builder.RegisterBuildCallback(container =>
         {
-            Level lastLoadedLevel = container.Resolve<Level>();
-            LevelSelectionElement levelSelectionElement = _levelSelectionElements.FirstOrDefault(element => element.LevelNumberForLoad == lastLoadedLevel.Number);
+            int levelForLoad = container.Resolve<LevelsData>().ForLoad;
+
+            LevelSelectionElement levelSelectionElement = _levelSelectionElements.FirstOrDefault(element => element.LevelNumberForLoad == levelForLoad);
             levelSelectionElement.Select();
             container.Resolve<LevelSelectionPresenter>();
             container.Resolve<SelectedLevelSaveHandler>();
+            container.Resolve<ContinueLevelButtonPresenter>();
             container.Resolve<Fade>().Out();
         });
     }

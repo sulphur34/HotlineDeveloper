@@ -1,6 +1,5 @@
 ﻿using Modules.LevelsSystem;
 using System;
-using System.Collections.Generic;
 using UnityEngine.Scripting;
 
 namespace Modules.SavingsSystem
@@ -9,8 +8,6 @@ namespace Modules.SavingsSystem
     public class SaveData
     {
         [field: Preserve]
-        public uint CurrentLevel = 1;
-        [field: Preserve]
-        public List<Level> Levels = new List<Level>();
+        public LevelsData LevelsData = new LevelsData();
     }
 }

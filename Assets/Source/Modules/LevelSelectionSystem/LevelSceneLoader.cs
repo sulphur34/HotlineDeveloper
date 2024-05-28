@@ -1,5 +1,4 @@
 ﻿using Modules.FadeSystem;
-using Modules.LevelsSystem;
 using Modules.SceneLoaderSystem;
 using VContainer;
 
@@ -17,9 +16,9 @@ namespace Modules.LevelSelectionSystem
             _fade = fade;
         }
 
-        internal void Load(Level level)
+        public void Load(int levelNumber)
         {
-            string sceneNameForLoad = SceneName.Level.ToString() + level.Number.ToString();
+            string sceneNameForLoad = SceneName.Level.ToString() + levelNumber.ToString();
 
             _fade.In();
             _sceneLoader.Load(sceneNameForLoad, _fade);

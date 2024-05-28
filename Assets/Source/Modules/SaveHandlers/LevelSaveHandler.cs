@@ -1,7 +1,6 @@
 using Modules.LevelsSystem;
 using Modules.SavingsSystem;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using VContainer;
 
@@ -10,35 +9,38 @@ namespace Modules.SaveHandlers
     public class LevelSaveHandler : IDisposable
     {
         private readonly SaveSystem _saveSystem = new SaveSystem();
-        private readonly Level _currentLevel;
-        private readonly List<Level> _levels;
+        private readonly LevelsData _levels;
 
         [Inject]
-        public LevelSaveHandler(Level currentLevel, List<Level> levels)
+        public LevelSaveHandler(LevelsData levels)
         {
-            _currentLevel = currentLevel;
             _levels = levels;
 
-            _currentLevel.Completed += OnCompleted;
+            foreach (Level level in _levels.Value)
+                level.Completed += OnCompleted;
         }
 
         public void Dispose()
         {
-            _currentLevel.Completed += OnCompleted;
+            foreach (Level level in _levels.Value)
+                level.Completed -= OnCompleted;
         }
 
         private void OnCompleted()
         {
             _saveSystem.Save(data =>
             {
-                uint nextLevelNumber = data.CurrentLevel + 1;
+                int nextLevelNumber = _levels.ForLoad + 1;
+                Level nextLevel = _levels.Value.FirstOrDefault(level => level.Number == nextLevelNumber);
 
-                if (data.CurrentLevel >= data.Levels.Count)
+                if (nextLevel == null || nextLevel.IsCompleted)
                     return;
 
-                Level nextLevel = _levels.FirstOrDefault(level => level.Number == nextLevelNumber);
+                if (_levels.ForLoad - 1 >= _levels.Value.Count)
+                    return;
+
                 nextLevel.Unlock();
-                data.Levels = _levels;
+                data.LevelsData = _levels;
             });
         }
     }
