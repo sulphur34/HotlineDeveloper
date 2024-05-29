@@ -67,11 +67,8 @@ namespace Source.Game.Scripts.Animations
         {
             while (!cancellationToken.IsCancellationRequested)
             {
-                float distance = Vector3.Magnitude(_transform.position - _oldPosition) * Time.deltaTime;
-
-                if (distance > 0)
-                    _animator.SetFloat(_speedIndex, distance);
-
+                float distance = Vector3.Magnitude(_transform.position - _oldPosition);
+                _animator.SetFloat(_speedIndex, distance);
                 _oldPosition = _transform.position;
                 await UniTask.Yield(PlayerLoopTiming.Update);
             }

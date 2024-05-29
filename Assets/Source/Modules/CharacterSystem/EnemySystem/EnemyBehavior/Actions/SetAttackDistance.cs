@@ -10,7 +10,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
     public class SetAttackDistance : Action
     {
         public SharedFloat AttackDistance;
-        public float _meleeDistance = 0.2f;
+        public float _meleeDistance = 1f;
         public float _rangeDistance = 10f;
         
         private WeaponHandlerView _weaponHandler;

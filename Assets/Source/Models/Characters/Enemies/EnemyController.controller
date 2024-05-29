@@ -179,7 +179,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MeleeHorizontal
-  m_Speed: 1.5
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8953417170133139820}
@@ -204,7 +204,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerController
+  m_Name: EnemyController
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Speed
@@ -247,7 +247,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: Attack Layer
     m_StateMachine: {fileID: -5002769541811677838}
-    m_Mask: {fileID: 31900000, guid: 349d3622dce226441850a432c7792cba, type: 2}
+    m_Mask: {fileID: 31900000, guid: 75523a1ba2706b34ca7607c67e0070fd, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0
