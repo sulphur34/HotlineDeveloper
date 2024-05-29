@@ -14,7 +14,7 @@ namespace Modules.DamageSystem
         protected DamageReceiverView OwnerDamageReceiver { get; private set; }
 
         [Inject]
-        private void Construct()
+        public void Construct()
         {
             _weaponItem = GetComponent<WeaponItem>();
             _weaponItem.Equipped += OnEquip;

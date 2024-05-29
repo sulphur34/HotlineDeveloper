@@ -12,7 +12,7 @@ namespace Modules.PlayerWeaponsHandler
     {
         public const string TwoHandsAttackName = "TwoHandsAttack";
         public const string OneHandAttackName = "OneHandAttack";
-        public const string BareHandAttack = "BareHandsAttack";
+        public const string BareHandsAttack = "BareHandsAttack";
 
         [SerializeField] private RigBuilder _rigBuilder;
         [SerializeField] private Rig _rangeRig;
@@ -26,7 +26,7 @@ namespace Modules.PlayerWeaponsHandler
         private Animator _animator;
         private int _twoHandsAttackId;
         private int _oneHandAttackId;
-        private int _bareHandAttackId;
+        private int _bareHandsAttackId;
         private bool _isTwoHanded;
 
         public event Action RangeShotFired;
@@ -40,7 +40,7 @@ namespace Modules.PlayerWeaponsHandler
             WeaponInfo = weaponHandlerInfo;
             _animator = GetComponent<Animator>();
             _twoHandsAttackId = Animator.StringToHash(TwoHandsAttackName);
-            _bareHandAttackId = Animator.StringToHash(BareHandAttack);
+            _bareHandsAttackId = Animator.StringToHash(BareHandsAttack);
             _oneHandAttackId = Animator.StringToHash(OneHandAttackName);
             _damageReceiverView.FallenDown += UnequipWeapon;
         }
@@ -53,7 +53,7 @@ namespace Modules.PlayerWeaponsHandler
                     SetMeleeAnimation();
                     break;
                 case WeaponType.BareHands:
-                    _animator.SetTrigger(_bareHandAttackId);
+                    _animator.SetTrigger(_bareHandsAttackId);
                     break;
             }
 
@@ -103,7 +103,6 @@ namespace Modules.PlayerWeaponsHandler
         private void EquipMelee(IWeaponInfo weaponItem)
         {
             _meleeRig.weight = 1f;
-
             _rightHandMelee.data.constrainedObject = weaponItem.SelfTransform;
 
             if (weaponItem.LeftHandPlaceHolder != null)

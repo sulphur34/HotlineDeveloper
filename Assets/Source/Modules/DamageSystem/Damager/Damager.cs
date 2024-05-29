@@ -1,4 +1,5 @@
 using UnityEngine;
+using VContainer;
 
 namespace Modules.DamageSystem
 {
@@ -6,10 +7,11 @@ namespace Modules.DamageSystem
     public class Damager : MonoBehaviour
     {
         [SerializeField] private DamageData _damageData;
-
+        
         private IDamageInflictStrategy _damageStrategy;
         
-        private void Awake()
+        [Inject]
+        private void Construct()
         {
             _damageStrategy = GetComponent<IDamageInflictStrategy>();
         }

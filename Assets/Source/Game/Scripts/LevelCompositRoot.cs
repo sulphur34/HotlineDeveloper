@@ -25,8 +25,8 @@ public class LevelCompositRoot : LifetimeScope
     {
         InputConfigure(builder);
         MoverConfigure(builder);
-        WeaponConfigure(builder);
         DamageConfigure(builder);
+        WeaponConfigure(builder);
         EnemyConfigure(builder);
     }
 
@@ -60,6 +60,7 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterInstance(_damageableConfigFactory);
         builder.RegisterComponentInHierarchy<DamageReceiverSetup>();
         builder.RegisterComponentInHierarchy<WeaponStrategy>();
+        builder.RegisterComponentInHierarchy<Damager>();
     } 
 
     private void WeaponConfigure(IContainerBuilder builder)

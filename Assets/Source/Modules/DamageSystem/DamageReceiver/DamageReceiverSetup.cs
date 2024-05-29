@@ -19,7 +19,7 @@ namespace Modules.DamageSystem
 
         private void OnDestroy()
         {
-            _damageReceiverPresenter.Dispose();
+            _damageReceiverPresenter?.Dispose();
         }
     }
 }
