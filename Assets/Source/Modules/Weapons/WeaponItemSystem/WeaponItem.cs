@@ -12,6 +12,7 @@ namespace Modules.Weapons.WeaponItemSystem
         [SerializeField] private float _rotationForce;
 
         private Transform _startContainer;
+        private Transform _selfTransform;
         private Rigidbody _rigidbody;
         private Collider _collider;
 
@@ -23,8 +24,8 @@ namespace Modules.Weapons.WeaponItemSystem
         [field: SerializeField] public Transform LeftHandPlaceHolder { get; private set; }
         [field: SerializeField] public Transform RightHandPlaceHolder { get; private set; }
 
-        
-        public Transform SelfTransform { get; private set; }
+
+        public Transform SelfTransform => _selfTransform == null ? transform : _selfTransform;
         public event Action<Transform> Equipped;
         public event Action Thrown;
         public event Action<WeaponType> Attacked;
@@ -41,7 +42,7 @@ namespace Modules.Weapons.WeaponItemSystem
             WeaponType = type;
             _startContainer = transform.parent;
             _cancellationToken = this.GetCancellationTokenOnDestroy();
-            SelfTransform = transform;
+            _selfTransform = transform;
         }
 
         public void Attack()

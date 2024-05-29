@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponHandlerData:
-    <DefaultWeapon>k__BackingField: {fileID: 0}
+    <DefaultWeapon>k__BackingField: {fileID: 5201362891044164163}
     <Container>k__BackingField: {fileID: 7547430180923425878}
     <PickPoint>k__BackingField: {fileID: 6666168067571557581}
     <PickRadius>k__BackingField: 2
@@ -3462,7 +3462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeda7bfbf984f2a4da5ab4b8967b115d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 0
+  m_Weight: 1
   m_Data:
     m_Root: {fileID: 2119574084739954772}
     m_Mid: {fileID: 6570039756475622832}
@@ -3969,6 +3969,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+--- !u!114 &5201362891044164163 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2873161282234759205, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+  m_PrefabInstance: {fileID: 8066359298446600806}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9147141832400460671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1225078067723792665, guid: fc65a44150caad14db14dfae9da7542a, type: 3}

@@ -33,7 +33,7 @@ namespace Modules.PlayerWeaponsHandler
             _attackInput = attackInput;
             _pickInput = pickInput;
             _pickInput.PickReceived += OnPickInputReceived;
-            EquipWeaponItem(_defaultWeaponItem);
+            EquipWeaponItem(_defaultWeaponItem);              
         }
 
         public void UnequipWeaponItem()
