@@ -10,8 +10,7 @@ namespace Modules.DamageSystem
         
         private IDamageInflictStrategy _damageStrategy;
         
-        [Inject]
-        private void Construct()
+        private void Awake()
         {
             _damageStrategy = GetComponent<IDamageInflictStrategy>();
         }

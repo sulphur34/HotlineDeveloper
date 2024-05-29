@@ -95,7 +95,7 @@ namespace Modules.PlayerWeaponsHandler
             _rightHandRange.data.target = weaponItem.RightHandPlaceHolder;
 
             if (weaponItem.LeftHandPlaceHolder != null)
-                _leftHandMelee.data.target = weaponItem.LeftHandPlaceHolder;
+                _leftHandRange.data.target = weaponItem.LeftHandPlaceHolder;
 
             _rigBuilder.Build();
         }

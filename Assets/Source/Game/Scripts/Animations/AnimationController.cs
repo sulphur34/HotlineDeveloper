@@ -1,9 +1,6 @@
-using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Modules.DamageSystem;
-using Modules.PlayerWeaponsHandler;
-using Modules.Weapons.WeaponItemSystem;
 using UnityEngine;
 
 namespace Source.Game.Scripts.Animations
