@@ -573,6 +573,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8070954917056682263, guid: 5b462a087a07b234b9d27411967725f9, type: 3}
   m_PrefabInstance: {fileID: 7155471791203341041}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &426284787 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4153460165109368066, guid: 5b462a087a07b234b9d27411967725f9, type: 3}
+  m_PrefabInstance: {fileID: 7155471791203341041}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4273d9f380b0664ea0e3e6bb24d4878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &439658304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1049488995}
   - component: {fileID: 1049488994}
+  - component: {fileID: 1049488996}
   m_Layer: 0
   m_Name: Composit Root
   m_TagString: Untagged
@@ -1523,6 +1535,7 @@ MonoBehaviour:
   - {fileID: 1438031131}
   - {fileID: 1587633194}
   _levelSelectionButton: {fileID: 993673296}
+  _audioSettings: {fileID: 1049488996}
 --- !u!4 &1049488995
 Transform:
   m_ObjectHideFlags: 0
@@ -1538,6 +1551,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1049488996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049488993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2b0a0071ec5374c861298edc8b7706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <MusicSlider>k__BackingField: {fileID: 426284787}
+  <SoundSlider>k__BackingField: {fileID: 1570097444}
 --- !u!1 &1064094930
 GameObject:
   m_ObjectHideFlags: 0
@@ -2598,6 +2625,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8070954917056682263, guid: 5b462a087a07b234b9d27411967725f9, type: 3}
   m_PrefabInstance: {fileID: 1570097442}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1570097444 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4153460165109368066, guid: 5b462a087a07b234b9d27411967725f9, type: 3}
+  m_PrefabInstance: {fileID: 1570097442}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4273d9f380b0664ea0e3e6bb24d4878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1587633194 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1939174108360882743, guid: 21503fc44935c824ca0a13f4664873b9, type: 3}

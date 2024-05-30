@@ -1,35 +1,48 @@
+using System;
+using System.Collections;
+using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class AudioSlider : MonoBehaviour
+namespace Modules.Audio
 {
-    private const int MinMixerVolume = -80;
-    private const float Multiplier = 20f;
-
-    [SerializeField] private Slider _slider;
-    [SerializeField] private AudioMixerGroup _audioMixerGroup;
-    [SerializeField] private string _mixerName;
-
-    private void Start()
+    public class AudioSlider : MonoBehaviour
     {
-        _slider.onValueChanged.AddListener(OnValueChanged);
-    }
+        private const int MinMixerVolume = -80;
+        private const float Multiplier = 20f;
 
-    private void OnDestroy()
-    {
-        _slider.onValueChanged.RemoveListener(OnValueChanged);
-    }
+        [SerializeField] private Slider _slider;
+        [SerializeField] private AudioMixerGroup _audioMixerGroup;
+        [SerializeField] private string _mixerName;
 
-    private void OnValueChanged(float sliderValue)
-    {
-        if (sliderValue == 0)
+        public float Volume => _slider.value;
+
+        public event Action Changed;
+
+        private void OnDestroy()
         {
-            _audioMixerGroup.audioMixer.SetFloat(_mixerName, MinMixerVolume);
-            return;
+            _slider.onValueChanged.RemoveListener(OnValueChanged);
         }
 
-        float volume = Mathf.Log10(sliderValue) * Multiplier;
-        _audioMixerGroup.audioMixer.SetFloat(_mixerName, volume);
+        public void Init(float value)
+        {
+            _slider.onValueChanged.AddListener(OnValueChanged);
+            _slider.value = value;
+        }
+
+        private void OnValueChanged(float sliderValue)
+        {
+            if (sliderValue == 0)
+            {
+                _audioMixerGroup.audioMixer.SetFloat(_mixerName, MinMixerVolume);
+                Changed?.Invoke();
+                return;
+            }
+
+            float volume = Mathf.Log10(sliderValue) * Multiplier;
+            _audioMixerGroup.audioMixer.SetFloat(_mixerName, volume);
+            Changed?.Invoke();
+        }
     }
 }

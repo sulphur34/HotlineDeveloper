@@ -44,6 +44,7 @@ namespace Modules.SavingsSystem
             SaveData saveData = LoadFromPrefs();
             dataChanges?.Invoke(saveData);
             string saveDataJson = JsonUtility.ToJson(saveData, true);
+            UnityEngine.Debug.Log(saveDataJson);
             PlayerPrefs.SetString(SaveDataPrefsKey, saveDataJson);
             PlayerPrefs.Save();
         }

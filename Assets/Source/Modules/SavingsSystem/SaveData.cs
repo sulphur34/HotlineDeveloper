@@ -1,4 +1,5 @@
-﻿using Modules.LevelsSystem;
+﻿using Modules.Audio;
+using Modules.LevelsSystem;
 using System;
 using UnityEngine.Scripting;
 
@@ -9,5 +10,7 @@ namespace Modules.SavingsSystem
     {
         [field: Preserve]
         public LevelsData LevelsData = new LevelsData();
+        [field: Preserve]
+        public AudioSettingsData AudioSettingsData = new AudioSettingsData();
     }
 }
