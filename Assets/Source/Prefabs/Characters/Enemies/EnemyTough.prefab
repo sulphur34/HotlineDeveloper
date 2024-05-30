@@ -709,7 +709,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1526306925852644456}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.6
+  m_Radius: 0.5
   m_Speed: 5
   m_Acceleration: 200
   avoidancePriority: 50
@@ -3303,6 +3303,14 @@ PrefabInstance:
     - target: {fileID: 1225078067723792665, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916352501360213560, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916352501360213560, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_Center.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4155049631125485025, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
       propertyPath: m_Name

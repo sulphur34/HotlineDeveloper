@@ -23,15 +23,13 @@ namespace Modules.Weapons.WeaponItemSystem
         [field: SerializeField] public Vector3 Offset { get; private set; }
         [field: SerializeField] public Transform LeftHandPlaceHolder { get; private set; }
         [field: SerializeField] public Transform RightHandPlaceHolder { get; private set; }
-
-
-        public Transform SelfTransform => _selfTransform == null ? transform : _selfTransform;
+                                
         public event Action<Transform> Equipped;
         public event Action Thrown;
         public event Action<WeaponType> Attacked;
 
+        public Transform SelfTransform => _selfTransform == null ? transform : _selfTransform;
         public WeaponType WeaponType { get; private set; }
-
         public bool IsEquipped { get; private set; }
 
         public void Init(Func<bool> attack, WeaponType type)

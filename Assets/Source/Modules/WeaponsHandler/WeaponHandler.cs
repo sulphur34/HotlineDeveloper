@@ -50,7 +50,7 @@ namespace Modules.PlayerWeaponsHandler
                 _defaultWeaponItem.Attacked += OnAttack;
         }
 
-        protected void OnPickInputReceived()
+        private void OnPickInputReceived()
         {
             bool HasPickableWeapon = TryGetWeapon(out WeaponItem weaponItem);
 
@@ -89,7 +89,7 @@ namespace Modules.PlayerWeaponsHandler
         private bool TryGetWeapon(out WeaponItem weaponItem)
         {
             weaponItem = Physics.OverlapSphere(_pickPoint.position, _pickRadius)
-                .Where(collider => IsColliderAvailableWeapon(collider))
+                .Where(IsColliderAvailableWeapon)
                 .OrderBy(collider => (collider.transform.position - _pickPoint.position).magnitude)
                 .FirstOrDefault()
                 ?.GetComponent<WeaponItem>();

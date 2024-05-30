@@ -888,11 +888,10 @@ GameObject:
   - component: {fileID: 856470938270365420}
   - component: {fileID: 5185215842425929133}
   - component: {fileID: 1055866415962065991}
-  - component: {fileID: -7024282402243825747}
-  - component: {fileID: -8495733791805803022}
   - component: {fileID: 6296293900511571673}
   - component: {fileID: 6417398310953896187}
   - component: {fileID: 6847260826043813962}
+  - component: {fileID: 1617005726613341875}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1023,7 +1022,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 2
-  m_Radius: 0.4
+  m_Radius: 0.3
   m_SlopeLimit: 2
   m_StepOffset: 0
   m_SkinWidth: 0.1
@@ -1128,34 +1127,6 @@ MonoBehaviour:
   _rightHandMelee: {fileID: 6169425507509108057}
   _leftHandMelee: {fileID: 2989923903186982367}
   _damageReceiverView: {fileID: 7903756512022355025}
---- !u!114 &-7024282402243825747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2929021272895348186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb97f3ebdf84ab28e0d9fcfb47610c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _twoBoneIKConstraints:
-  - {fileID: 1766912457053232714}
-  - {fileID: 5883816909789562190}
---- !u!114 &-8495733791805803022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2929021272895348186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96180a68519aa2a44bc645e2b0de505a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ragdollJointsData: []
 --- !u!114 &6296293900511571673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1218,6 +1189,29 @@ MonoBehaviour:
     Rigidbody: {fileID: 7174462212533305048}
   - Collider: {fileID: 5544523067710089967}
     Rigidbody: {fileID: 8816580786563185389}
+--- !u!136 &1617005726613341875
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2929021272895348186}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.45
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &2959048188100807266
 GameObject:
   m_ObjectHideFlags: 0

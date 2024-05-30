@@ -10,7 +10,6 @@ using Modules.Weapons.Range;
 using Modules.CharacterSystem.Player;
 using Modules.EnemySpawnSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
-using Modules.InputSystem;
 
 public class LevelCompositRoot : LifetimeScope
 {
@@ -35,6 +34,14 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterInstance(_enemySpawnConfigs);
         builder.RegisterInstance(_behaviorConfigFactory);
         builder.RegisterComponentInHierarchy<Player>();
+        
+        builder.RegisterBuildCallback(container =>
+        {
+            container
+                .Resolve<Player>().GetComponent<DamageReceiverSetup>()
+                .Initialize(_damageableConfigFactory.GetConfig(DamageableTypes.Player));
+        });
+        
         builder.RegisterComponentInHierarchy<EnemySpawner>();
     } 
 
@@ -56,7 +63,7 @@ public class LevelCompositRoot : LifetimeScope
 
     private void DamageConfigure(IContainerBuilder builder)
     {
-        builder.RegisterInstance(_damageableConfigFactory.GetConfig(DamageableTypes.Player));
+        // builder.RegisterInstance(_damageableConfigFactory.GetConfig(DamageableTypes.Player));
         builder.RegisterInstance(_damageableConfigFactory);
         builder.RegisterComponentInHierarchy<DamageReceiverSetup>();
         builder.RegisterComponentInHierarchy<WeaponStrategy>();
