@@ -11,11 +11,11 @@ namespace Modules.Weapons
 
         private readonly WeaponTypeGetter _weaponTypeGetter = new WeaponTypeGetter();
 
-        protected virtual void Init(float rechargeTime, IAttackModule attackModule)
+        protected void Init(float rechargeTime, IAttackModule attackModule)
         {
             WeaponRechargeTime weaponRechargeTime = new WeaponRechargeTime(rechargeTime);
             Weapon weapon = new Weapon(weaponRechargeTime, attackModule, this.GetCancellationTokenOnDestroy());
-            _weaponItem.Init(weapon.Attack, _weaponTypeGetter.Get(attackModule));
+            _weaponItem.Init(weapon.TryAttack, _weaponTypeGetter.Get(attackModule));
         }
     }
 }

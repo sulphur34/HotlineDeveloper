@@ -4,16 +4,24 @@ using Modules.PauseMenu;
 using Modules.PlayerWeaponsHandler;
 using Modules.SaveHandlers;
 using Modules.Weapons.Ammunition;
-using Modules.Weapons.InputSystem;
 using Modules.Weapons.Range;
-using Modules.Weapons.WeaponItemSystem;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
+using Modules.MoveSystem;
+using Modules.CharacterSystem.Player;
+using Modules.EnemySpawnSystem;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
+using Modules.DamageSystem;
 
 public class LevelCompositRoot : LifetimeScope
 {
+    [SerializeField] private MoverConfig _moverConfig;
     [SerializeField] private RangeWeaponConfigFactory _weaponConfigFactory;
+    [SerializeField] private WeaponTracker _weaponTracker;
+    [SerializeField] private LevelEnemySpawnConfigs _enemySpawnConfigs;
+    [SerializeField] private BehaviorConfigFactory _behaviorConfigFactory;
+    [SerializeField] private DamageableConfigFactory _damageableConfigFactory;
     [SerializeField] private GameObject _weaponSetupsParent;
 
     protected override void OnDestroy()
@@ -23,11 +31,52 @@ public class LevelCompositRoot : LifetimeScope
 
     protected override void Configure(IContainerBuilder builder)
     {
+        InputConfigure(builder);
+        MoverConfigure(builder);
+        WeaponConfigure(builder);
+        DamageConfigure(builder);
+        EnemyConfigure(builder);
+    }
+
+    private void EnemyConfigure(IContainerBuilder builder)
+    {
+        builder.RegisterInstance(_enemySpawnConfigs);
+        builder.RegisterInstance(_behaviorConfigFactory);
+        builder.RegisterComponentInHierarchy<Player>();
+        builder.RegisterComponentInHierarchy<EnemySpawner>();
+    } 
+
+    private void MoverConfigure(IContainerBuilder builder)
+    {
+        builder.RegisterComponentInHierarchy<MoverSetup>();
+        builder.RegisterInstance(_moverConfig);
+    }
+
+    private void InputConfigure(IContainerBuilder builder)
+    {
+        if (Application.isMobilePlatform)
+            builder.RegisterComponentOnNewGameObject<MobileInputController>(Lifetime.Scoped, "MobileInputController")
+                .AsImplementedInterfaces();
+        else
+            builder.RegisterComponentOnNewGameObject<DesktopInputController>(Lifetime.Scoped, "DesktopInputController")
+                .AsImplementedInterfaces();
+    }
+
+    private void DamageConfigure(IContainerBuilder builder)
+    {
+        builder.RegisterInstance(_damageableConfigFactory.GetConfig(DamageableTypes.Player));
+        builder.RegisterInstance(_damageableConfigFactory);
+        builder.RegisterComponentInHierarchy<DamageReceiverSetup>();
+    } 
+
+    private void WeaponConfigure(IContainerBuilder builder)
+    {
+        builder.RegisterComponentInHierarchy<WeaponTracker>();
         builder.RegisterInstance(_weaponConfigFactory);
         builder.RegisterComponentInHierarchy<WeaponAmmunitionView>();
-        builder.RegisterEntryPoint<ShotDesktopInput>().As<IShotInput>();
-        builder.RegisterEntryPoint<DesktopWeaponItemInput>().As<IWeaponItemInput>();
         builder.RegisterComponentInHierarchy<PlayerWeaponHandler>();
+        builder.RegisterBuildCallback(container => { container.Resolve<WeaponTracker>().Construct(); });
+        builder.RegisterBuildCallback(container => { container.InjectGameObject(_weaponTracker.gameObject); });
 
         builder.RegisterComponentInHierarchy<LevelHandler>();
         builder.Register<LevelSaveHandler>(Lifetime.Singleton);

@@ -18,15 +18,19 @@ namespace Modules.Weapons
 
         internal event Action Attacked;
 
-        internal void Attack()
+        internal bool TryAttack()
         {
-            if (_rechargeTime.Recharged)
+            bool isRecharged = _rechargeTime.Recharged;
+            
+            if (isRecharged)
             {
                 _attackModule.Attack();
                 _rechargeTime.Discharge();
                 _rechargeTime.WaitRecharged(_cancellationToken);
                 Attacked?.Invoke();
             }
+
+            return isRecharged;
         }
     }
 }
