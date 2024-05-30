@@ -2,24 +2,23 @@
 using Modules.SceneLoaderSystem;
 using VContainer;
 
-namespace LevelSelectionSystem
+namespace Modules.LevelSelectionSystem
 {
     public class LevelSceneLoader
     {
-        private const string SceneName = "Level";
-
-        private readonly SceneLoader _sceneLoader = new SceneLoader();
+        private readonly SceneLoader _sceneLoader;
         private readonly Fade _fade;
 
         [Inject]
-        public LevelSceneLoader(Fade fade)
+        public LevelSceneLoader(SceneLoader sceneLoader, Fade fade)
         {
+            _sceneLoader = sceneLoader;
             _fade = fade;
         }
 
-        internal void Load(uint levelNumber)
+        public void Load(int levelNumber)
         {
-            string sceneNameForLoad = SceneName + levelNumber.ToString();
+            string sceneNameForLoad = SceneName.Level.ToString() + levelNumber.ToString();
 
             _fade.In();
             _sceneLoader.Load(sceneNameForLoad, _fade);

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Modules.Weapons.Range
 {
-    [CreateAssetMenu(fileName = "Range Weapon Config")]
+    [CreateAssetMenu(fileName = "Range Weapon Config", menuName = "Data/Range Weapon Config")]
     internal class RangeWeaponConfig : ScriptableObject
     {
         [field: SerializeField] internal Bullet BulletPrefab { get; private set; }

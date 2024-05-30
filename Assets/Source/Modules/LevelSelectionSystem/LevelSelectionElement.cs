@@ -1,30 +1,74 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-namespace LevelSelectionSystem
+namespace Modules.LevelSelectionSystem
 {
-    public class LevelSelectionElement : MonoBehaviour, IPointerClickHandler
+    public class LevelSelectionElement : MonoBehaviour, IPointerDownHandler
     {
+        private const string LockedName = "Locked";
+
+        [SerializeField] private UILevelConfig _config;
+        [SerializeField] private Image _icon;
+        [SerializeField] private TextMeshProUGUI _levelNumber;
+        [SerializeField] private TextMeshProUGUI _levelName;
+
+        [SerializeField] private Sprite _lockedIcon;
         [SerializeField] private GameObject _outline;
 
         public event Action<LevelSelectionElement> Pressed;
+        public event Action<LevelSelectionElement> Selected;
 
-        [field: SerializeField] public uint Level { get; private set; }
+        public bool IsLocked { get; private set; }
+
+        public bool IsSelected { get; private set; }
+
+        public int LevelNumberForLoad => (int)_config.LevelNumber;
+
+        public void Init(bool isLocked)
+        {
+            IsLocked = isLocked;
+            _levelNumber.text = string.Format("{0:00}", _config.LevelNumber);
+
+            if (isLocked)
+            {
+                _icon.sprite = _lockedIcon;
+                _levelName.text = LockedName;
+            }
+            else
+            {
+                _icon.sprite = _config.Sprite;
+                _levelName.text = _config.LevelName;
+            }
+        }
+
+        public void Unlock()
+        {
+            IsLocked = false;
+        }
 
         public void Select()
         {
+            if (IsLocked)
+                return;
+
             _outline.SetActive(true);
+            IsSelected = true;
+            Selected?.Invoke(this);
         }
 
         public void Deselect()
         {
             _outline.SetActive(false);
+            IsSelected = false;
         }
 
-        public void OnPointerClick(PointerEventData eventData)
+        public void OnPointerDown(PointerEventData eventData)
         {
-            Pressed?.Invoke(this);
+            if (IsLocked == false && IsSelected == false)
+                Pressed?.Invoke(this);
         }
     }
 }
