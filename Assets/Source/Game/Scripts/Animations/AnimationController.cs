@@ -1,6 +1,7 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Modules.DamageSystem;
+using Modules.PlayerWeaponsHandler;
 using UnityEngine;
 
 namespace Source.Game.Scripts.Animations
@@ -11,6 +12,7 @@ namespace Source.Game.Scripts.Animations
         public const string SpeedName = "Speed";
 
         private DamageReceiverView _damageReceiverView;
+        private WeaponHandlerView _weaponHandlerView;
         private ConstrainsController _constrainsController;
         private RagdollController _ragdollController;
         private Transform _transform;
@@ -26,6 +28,7 @@ namespace Source.Game.Scripts.Animations
             _animator = GetComponent<Animator>();
             _cancellationTokenSource = new CancellationTokenSource();
             _speedIndex = Animator.StringToHash(SpeedName);
+            _weaponHandlerView = GetComponent<WeaponHandlerView>();
             _constrainsController = GetComponent<ConstrainsController>();
             _ragdollController = GetComponent<RagdollController>();
             _damageReceiverView = GetComponent<DamageReceiverView>();
@@ -51,6 +54,7 @@ namespace Source.Game.Scripts.Animations
             _animator.enabled = false;
             _constrainsController.Deactivate();
             _ragdollController.Activate();
+            _weaponHandlerView.UnequipWeapon();
         }
 
         private void OnStandUp()

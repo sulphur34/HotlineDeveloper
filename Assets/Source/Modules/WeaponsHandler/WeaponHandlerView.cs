@@ -1,6 +1,4 @@
 using System;
-using System.Diagnostics;
-using Modules.DamageSystem;
 using Modules.Weapons.WeaponItemSystem;
 using Modules.Weapons.WeaponTypeSystem;
 using UnityEngine;
@@ -21,7 +19,6 @@ namespace Modules.PlayerWeaponsHandler
         [SerializeField] private Rig _meleeRig;
         [SerializeField] private MultiParentConstraint _rightHandMelee;
         [SerializeField] private TwoBoneIKConstraint _leftHandMelee;
-        [SerializeField] private DamageReceiverView _damageReceiverView;
 
         private Animator _animator;
         private int _twoHandsAttackId;
@@ -42,7 +39,6 @@ namespace Modules.PlayerWeaponsHandler
             _twoHandsAttackId = Animator.StringToHash(TwoHandsAttackName);
             _bareHandsAttackId = Animator.StringToHash(BareHandsAttack);
             _oneHandAttackId = Animator.StringToHash(OneHandAttackName);
-            _damageReceiverView.FallenDown += UnequipWeapon;
         }
 
         public void OnAttack(WeaponType weaponType)
@@ -73,6 +69,10 @@ namespace Modules.PlayerWeaponsHandler
 
                 case WeaponType.Range:
                     EquipRange(weaponItem);
+                    break;
+                
+                case WeaponType.BareHands:
+                    EquipMelee(weaponItem);
                     break;
             }
         }
