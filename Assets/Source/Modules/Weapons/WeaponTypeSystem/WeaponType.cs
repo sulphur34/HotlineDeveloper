@@ -4,5 +4,6 @@
     {
         Melee,
         Range,
+        BareHands
     }
 }

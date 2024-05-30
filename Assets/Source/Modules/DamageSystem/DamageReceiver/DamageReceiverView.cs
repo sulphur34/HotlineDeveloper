@@ -1,5 +1,4 @@
 using System;
-using Modules.PlayerWeaponsHandler;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,22 +7,12 @@ namespace Modules.DamageSystem
     [RequireComponent(typeof(Collider))]
     public class DamageReceiverView : MonoBehaviour, IDamageReceiver
     {
-        private WeaponHandler _weaponHandler;
         public event Action<DamageData> Received;
+        public event Action FallenDown;
+        public event Action StoodUp;
         
         public bool IsDead { get; private set; }
         public bool IsKnocked { get; private set; }
-
-        private void Awake()
-        {
-            _weaponHandler = GetComponent<WeaponHandler>();
-        }
-
-        private void LateUpdate()
-        {
-            if(IsDead || IsKnocked)
-                TestDeathAnimation();
-        }
 
         public void Receive(DamageData damageData)
         {
@@ -33,12 +22,13 @@ namespace Modules.DamageSystem
         public void OnKnocked()
         {
             IsKnocked = true;
-            _weaponHandler.UnequipWeaponItem();
+            OnFall();
         }
 
         public void OnRecovered()
         {
             IsKnocked = false;
+            StoodUp?.Invoke();
         }
 
         public void OnHealthChanged(float value)
@@ -48,12 +38,12 @@ namespace Modules.DamageSystem
         public void OnDeath()
         {
             IsDead = true;
-            _weaponHandler.UnequipWeaponItem();
+            OnFall();
         }
 
-        private void TestDeathAnimation()
+        private void OnFall()
         {
-            transform.RotateAround(transform.position, Vector3.forward, 90f);
+            FallenDown?.Invoke();
         }
     }
 }

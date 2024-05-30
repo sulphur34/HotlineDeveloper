@@ -1,6 +1,7 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
 using Modules.CharacterSystem.Enemies.EnemyBehavior.Variables;
+using Modules.Weapons.WeaponTypeSystem;
 using UnityEngine;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
@@ -11,11 +12,11 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
     {
         public SharedPlayerWeaponHandler PlayerWeaponHandler;
         public SharedBool IsShotFired;
-        public float AlertHearingDistance = 100f;
+        public float AlertHearingDistance = 10f;
 
         public override void OnAwake()
         {
-            PlayerWeaponHandler.Value.RangeWeaponFired += OnShotFire;
+            PlayerWeaponHandler.Value.RangeShotFired += OnShotFire;
         }
         
         public override TaskStatus OnUpdate()
@@ -39,7 +40,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
 
         public override void OnBehaviorComplete()
         {
-            PlayerWeaponHandler.Value.RangeWeaponFired -= OnShotFire;
+            PlayerWeaponHandler.Value.RangeShotFired -= OnShotFire;
         }
     }
 }

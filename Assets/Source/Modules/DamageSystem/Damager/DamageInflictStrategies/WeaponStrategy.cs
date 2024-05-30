@@ -1,5 +1,6 @@
 using Modules.Weapons.WeaponItemSystem;
 using UnityEngine;
+using VContainer;
 
 namespace Modules.DamageSystem
 {
@@ -12,7 +13,8 @@ namespace Modules.DamageSystem
         protected bool IsEquipped => _weaponItem.IsEquipped;
         protected DamageReceiverView OwnerDamageReceiver { get; private set; }
 
-        private void Awake()
+        [Inject]
+        public void Construct()
         {
             _weaponItem = GetComponent<WeaponItem>();
             _weaponItem.Equipped += OnEquip;

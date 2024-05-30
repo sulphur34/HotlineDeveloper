@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class DesktopInputController : InputController
 {
@@ -8,20 +7,26 @@ public class DesktopInputController : InputController
 
     private void OnEnable()
     {
-        _playerInput.PlayerDesktop.Attack.performed += OnAttack;
-        _playerInput.PlayerDesktop.Pick.performed += OnPick;
-        _playerInput.PlayerDesktop.Finish.performed += OnFinish;
-        _playerInput.Enable();
+        PlayerInput.PlayerDesktop.Pick.performed += OnPick;
+        PlayerInput.PlayerDesktop.Finish.performed += OnFinish;
+        PlayerInput.Enable();
+    }
+
+    private void OnDisable()
+    {
+        PlayerInput.PlayerDesktop.Pick.performed -= OnPick;
+        PlayerInput.PlayerDesktop.Finish.performed -= OnFinish;
+        PlayerInput.Enable();
     }
 
     protected override Vector2 OnMove()
     {
-        return _playerInput.PlayerDesktop.Move.ReadValue<Vector2>();
+        return PlayerInput.PlayerDesktop.Move.ReadValue<Vector2>();
     }
 
     protected override Vector2 OnRotate()
     {
-        Vector2 direction = _playerInput.PlayerDesktop.Rotate.ReadValue<Vector2>();
+        Vector2 direction = PlayerInput.PlayerDesktop.Rotate.ReadValue<Vector2>();
         direction = new Vector2(direction.x / Screen.width, direction.y / Screen.height);
         direction = direction * _screenToVirtualMultiplier - _vectorOne;
         return direction;
@@ -29,6 +34,12 @@ public class DesktopInputController : InputController
 
     protected override Vector2 OnLook()
     {
-        return _playerInput.PlayerDesktop.Look.ReadValue<Vector2>();
+        return PlayerInput.PlayerDesktop.Look.ReadValue<Vector2>();
+    }
+    
+    protected override void OnAttack()
+    {
+        if (PlayerInput.PlayerDesktop.Attack.IsPressed())
+            Attack();
     }
 }

@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af005528b9894afc9ff99fcb5600f056, type: 3}
   m_Name: Enemy Spawn Config 1
   m_EditorClassIdentifier: 
-  <Prefab>k__BackingField: {fileID: 6915485360212960690, guid: 0ee1496434692cb46860fd7a62d15b88, type: 3}
+  <Prefab>k__BackingField: {fileID: 4933334269263571151, guid: 8b48124336303f540a049187965b572f, type: 3}
   <Behavior>k__BackingField: 0
-  <SpawnPoint>k__BackingField: {fileID: 6425645919438535911, guid: 053d0248b003a624f85c6278dad81222, type: 3}
+  <DamageableType>k__BackingField: 0
+  <SpawnPoint>k__BackingField: {fileID: 3420537099953861687, guid: f47eb87a6ccbaca4cac5bbed4175d022, type: 3}
   <PatrolRoute>k__BackingField:
-    Waypoints: []
+    Waypoints:
+    - {fileID: 3305511417011188459, guid: 42ca730c8b685ac4a9bf11909ee09d3e, type: 3}
+    - {fileID: 969552720346937305, guid: 90e947225e857f548ac18b905dfbf801, type: 3}
+    - {fileID: 3278380420403788934, guid: a7816dbab5ec5d6428b2aed60f29088b, type: 3}
+    - {fileID: 8472300082072841964, guid: 583ca78e69b962d4f9845f1faafe75dd, type: 3}
+    - {fileID: 3500520202325759131, guid: 57320b949401b8543a4de38738348b4e, type: 3}

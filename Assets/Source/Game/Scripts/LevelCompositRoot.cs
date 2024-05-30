@@ -33,8 +33,8 @@ public class LevelCompositRoot : LifetimeScope
     {
         InputConfigure(builder);
         MoverConfigure(builder);
-        WeaponConfigure(builder);
         DamageConfigure(builder);
+        WeaponConfigure(builder);
         EnemyConfigure(builder);
     }
 
@@ -43,6 +43,14 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterInstance(_enemySpawnConfigs);
         builder.RegisterInstance(_behaviorConfigFactory);
         builder.RegisterComponentInHierarchy<Player>();
+        
+        builder.RegisterBuildCallback(container =>
+        {
+            container
+                .Resolve<Player>().GetComponent<DamageReceiverSetup>()
+                .Initialize(_damageableConfigFactory.GetConfig(DamageableTypes.Player));
+        });
+        
         builder.RegisterComponentInHierarchy<EnemySpawner>();
     } 
 
@@ -64,9 +72,10 @@ public class LevelCompositRoot : LifetimeScope
 
     private void DamageConfigure(IContainerBuilder builder)
     {
-        builder.RegisterInstance(_damageableConfigFactory.GetConfig(DamageableTypes.Player));
+        // builder.RegisterInstance(_damageableConfigFactory.GetConfig(DamageableTypes.Player));
         builder.RegisterInstance(_damageableConfigFactory);
         builder.RegisterComponentInHierarchy<DamageReceiverSetup>();
+        builder.RegisterComponentInHierarchy<WeaponStrategy>();
     } 
 
     private void WeaponConfigure(IContainerBuilder builder)
@@ -74,7 +83,7 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<WeaponTracker>();
         builder.RegisterInstance(_weaponConfigFactory);
         builder.RegisterComponentInHierarchy<WeaponAmmunitionView>();
-        builder.RegisterComponentInHierarchy<PlayerWeaponHandler>();
+        builder.RegisterComponentInHierarchy<PlayerWeaponHandlerSetup>();
         builder.RegisterBuildCallback(container => { container.Resolve<WeaponTracker>().Construct(); });
         builder.RegisterBuildCallback(container => { container.InjectGameObject(_weaponTracker.gameObject); });
 

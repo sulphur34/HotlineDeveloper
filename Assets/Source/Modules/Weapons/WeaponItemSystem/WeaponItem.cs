@@ -6,29 +6,30 @@ using UnityEngine;
 
 namespace Modules.Weapons.WeaponItemSystem
 {
-    public class WeaponItem : MonoBehaviour
+    public class WeaponItem : MonoBehaviour, IWeaponInfo
     {
         [SerializeField] private float _force;
         [SerializeField] private float _rotationForce;
 
         private Transform _startContainer;
+        private Transform _selfTransform;
         private Rigidbody _rigidbody;
         private Collider _collider;
 
         private Func<bool> _attack;
 
         private CancellationToken _cancellationToken;
-
+     
+        [field: SerializeField] public Vector3 Offset { get; private set; }
         [field: SerializeField] public Transform LeftHandPlaceHolder { get; private set; }
-
         [field: SerializeField] public Transform RightHandPlaceHolder { get; private set; }
-
+                                
         public event Action<Transform> Equipped;
         public event Action Thrown;
-        public event Action RangeFired;
+        public event Action<WeaponType> Attacked;
 
+        public Transform SelfTransform => _selfTransform == null ? transform : _selfTransform;
         public WeaponType WeaponType { get; private set; }
-
         public bool IsEquipped { get; private set; }
 
         public void Init(Func<bool> attack, WeaponType type)
@@ -39,12 +40,13 @@ namespace Modules.Weapons.WeaponItemSystem
             WeaponType = type;
             _startContainer = transform.parent;
             _cancellationToken = this.GetCancellationTokenOnDestroy();
+            _selfTransform = transform;
         }
 
         public void Attack()
         {
-            if(_attack() && WeaponType == WeaponType.Range)
-                RangeFired?.Invoke();  
+            if(_attack())
+                Attacked?.Invoke(WeaponType);  
         }
 
         public void Equip(Transform container)
@@ -67,7 +69,7 @@ namespace Modules.Weapons.WeaponItemSystem
         public void Throw()
         {
             Unequip();
-            _rigidbody.AddForce(transform.forward * _force, ForceMode.Impulse);
+            _rigidbody.AddForce(SelfTransform.forward * _force, ForceMode.Impulse);
             _rigidbody.AddTorque(Vector3.up * _rotationForce);
             WaitingThrowEnd(_cancellationToken, Thrown);
         }
@@ -85,16 +87,27 @@ namespace Modules.Weapons.WeaponItemSystem
         private void SetEquipped(bool value, Transform container)
         {
             IsEquipped = value;
+            
+            if (_collider == null)
+            {
+                _rigidbody = GetComponent<Rigidbody>();
+                _collider = GetComponent<Collider>();
+            }
+                
             _collider.enabled = !value;
             var newcontainer = value ? container : _startContainer;
-            transform.SetParent(newcontainer);
+            
+            if (newcontainer == container)
+                newcontainer.localPosition = Offset;
+            
+            SelfTransform.SetParent(newcontainer);
             _rigidbody.isKinematic = value;
             _rigidbody.useGravity = !value;
             
             if (value)
             {
-                transform.position = container.position;
-                transform.forward = container.forward;
+                SelfTransform.position = container.position;
+                SelfTransform.forward = container.forward;
             }
         }
     }

@@ -10,7 +10,7 @@ namespace Modules.DamageSystem
         private DamageReceiverPresenter _damageReceiverPresenter;
         private DamageReceiverView _damageReceiverView;
         
-        public void Construct(DamageableConfig damageableConfig)
+        public void Initialize(DamageableConfig damageableConfig)
         {
             DamageReceiver damageReceiver = new DamageReceiver(damageableConfig, this.GetCancellationTokenOnDestroy());
             _damageReceiverView = GetComponent<DamageReceiverView>();
@@ -19,7 +19,7 @@ namespace Modules.DamageSystem
 
         private void OnDestroy()
         {
-            _damageReceiverPresenter.Dispose();
+            _damageReceiverPresenter?.Dispose();
         }
     }
 }

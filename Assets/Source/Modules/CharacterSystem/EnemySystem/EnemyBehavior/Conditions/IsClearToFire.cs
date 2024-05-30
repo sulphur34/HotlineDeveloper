@@ -16,19 +16,19 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
         public float FireAngle = 15f;
         
         private Transform _transform;
-        private WeaponHandler _weaponHandler;
+        private WeaponHandlerView _weaponHandler;
         private Enemy _selfEnmey;
 
         public override void OnAwake()
         {
             _transform = transform;
-            _weaponHandler = GetComponent<WeaponHandler>();
+            _weaponHandler = GetComponent<WeaponHandlerView>();
             _selfEnmey = GetComponent<Enemy>();
         }
 
         public override TaskStatus OnUpdate()
         {
-            if (_weaponHandler.CurrentWeaponType == WeaponType.Melee)
+            if (_weaponHandler.WeaponInfo.CurrentWeaponType == WeaponType.Melee)
                 return TaskStatus.Success;
 
             var enemy = Physics

@@ -10,7 +10,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
     public class EnemyMovePosition : Action
     {
         public SharedVector3 LastTargetPosition;
-        public float MinStoppingDistance = 1f;
+        public float MinStoppingDistance = 0.1f;
 
         private NavMeshAgent _navMeshAgent;
         private bool _isActive;
@@ -24,6 +24,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 
         public override void OnStart()
         {
+            _navMeshAgent.isStopped = false;
             _navMeshAgent.SetDestination(LastTargetPosition.Value);
             _navMeshAgent.isStopped = false;
         }

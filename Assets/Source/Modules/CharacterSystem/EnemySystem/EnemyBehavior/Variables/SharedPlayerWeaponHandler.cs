@@ -3,8 +3,8 @@ using Modules.PlayerWeaponsHandler;
 
 namespace Modules.CharacterSystem.Enemies.EnemyBehavior.Variables
 {
-    public class SharedPlayerWeaponHandler : SharedVariable<PlayerWeaponHandler>
+    public class SharedPlayerWeaponHandler : SharedVariable<WeaponHandlerView>
     {
-        public static implicit operator SharedPlayerWeaponHandler(PlayerWeaponHandler value) { return new SharedPlayerWeaponHandler { Value = value }; }
+        public static implicit operator SharedPlayerWeaponHandler(WeaponHandlerView value) { return new SharedPlayerWeaponHandler { Value = value }; }
     }
 }

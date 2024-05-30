@@ -8,13 +8,13 @@ namespace Modules.Weapons.Melee
     internal class MeleeAttackModule : IAttackModule
     {
         private readonly Collider _collider;
-        private readonly float _attakeTime;
+        private readonly float _attackTime;
         private readonly CancellationToken _cancellationToken;
 
-        public MeleeAttackModule(Collider collider, float attakeTime, CancellationToken cancellationToken)
+        public MeleeAttackModule(Collider collider, float attackTime, CancellationToken cancellationToken)
         {
             _collider = collider;
-            _attakeTime = attakeTime;
+            _attackTime = attackTime;
             _cancellationToken = cancellationToken;
         }
 
@@ -26,7 +26,7 @@ namespace Modules.Weapons.Melee
 
         private async UniTask DisableAttack()
         {
-            await UniTask.Delay(TimeSpan.FromSeconds(_attakeTime), cancellationToken: _cancellationToken);
+            await UniTask.Delay(TimeSpan.FromSeconds(_attackTime), cancellationToken: _cancellationToken);
             _collider.enabled = false;
         }
     }

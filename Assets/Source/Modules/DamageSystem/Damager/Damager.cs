@@ -6,7 +6,7 @@ namespace Modules.DamageSystem
     public class Damager : MonoBehaviour
     {
         [SerializeField] private DamageData _damageData;
-
+        
         private IDamageInflictStrategy _damageStrategy;
         
         private void Awake()

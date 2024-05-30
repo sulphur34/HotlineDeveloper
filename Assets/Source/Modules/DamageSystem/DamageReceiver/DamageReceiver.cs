@@ -25,6 +25,9 @@ namespace Modules.DamageSystem
 
         public void Receive(DamageData damage)
         {
+            if(_health.IsDead)
+                return;
+            
             DamageData modifiedDamage = _damageReceiveStrategy.GetDamage(damage);
             
             if (modifiedDamage.IsLethal && _consciousness.IsKnocked)

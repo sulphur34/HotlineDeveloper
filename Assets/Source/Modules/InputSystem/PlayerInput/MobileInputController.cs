@@ -5,30 +5,35 @@ public class MobileInputController : InputController
 {
     private void OnEnable()
     {
-        _playerInput.PlayerMobile.Attack.performed += OnAttack;
-        _playerInput.PlayerMobile.Pick.performed += OnPick;
-        _playerInput.PlayerMobile.Finish.performed += OnFinish;
-        _playerInput.Enable();
+        PlayerInput.PlayerMobile.Pick.performed += OnPick;
+        PlayerInput.PlayerMobile.Finish.performed += OnFinish;
+        PlayerInput.Enable();
+    }
+
+    private void OnDisable()
+    {
+        PlayerInput.PlayerMobile.Pick.performed -= OnPick;
+        PlayerInput.PlayerMobile.Finish.performed -= OnFinish;
     }
     
     protected override Vector2 OnMove()
     {
-        return _playerInput.PlayerMobile.Move.ReadValue<Vector2>();
+        return PlayerInput.PlayerMobile.Move.ReadValue<Vector2>();
     }
 
     protected override Vector2 OnRotate()
     {
-        return _playerInput.PlayerMobile.Rotate.ReadValue<Vector2>();
+        return PlayerInput.PlayerMobile.Rotate.ReadValue<Vector2>();
     }
 
     protected override Vector2 OnLook()
     {
-        return _playerInput.PlayerMobile.Move.ReadValue<Vector2>();
+        return PlayerInput.PlayerMobile.Move.ReadValue<Vector2>();
     }
 
-    protected override void OnAttack(InputAction.CallbackContext context)
+    protected override void OnAttack()
     {
-        if(context.ReadValue<Vector2>().magnitude > 0)
-            base.OnAttack(context);
+        if(PlayerInput.PlayerDesktop.Attack.ReadValue<Vector2>().magnitude > 0)
+            Attack();
     }
 }

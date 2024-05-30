@@ -7,16 +7,16 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
     [TaskName("IsArmed")]
     public class IsArmed : Conditional
     {
-        private WeaponHandler _weaponHandler;
+        private WeaponHandlerView _weaponHandler;
 
         public override void OnAwake()
         {
-            _weaponHandler = GetComponent<WeaponHandler>();
+            _weaponHandler = GetComponent<WeaponHandlerView>();
         }
 
         public override TaskStatus OnUpdate()
         {
-            return _weaponHandler.CurrentWeaponItemIsEmpty ? TaskStatus.Failure : TaskStatus.Success ;
+            return _weaponHandler.WeaponInfo.CurrentWeaponItemIsEmpty ? TaskStatus.Failure : TaskStatus.Success ;
         }
     }
 }
