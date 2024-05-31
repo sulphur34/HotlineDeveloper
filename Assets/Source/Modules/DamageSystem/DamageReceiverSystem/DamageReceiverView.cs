@@ -1,4 +1,5 @@
 using System;
+using Source.Game.Scripts.Animations;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,6 +8,7 @@ namespace Modules.DamageSystem
     [RequireComponent(typeof(Collider))]
     public class DamageReceiverView : MonoBehaviour, IDamageReceiver
     {
+        [SerializeField] private AnimationController _animationController;
         public event Action<DamageData> Received;
         public event Action FallenDown;
         public event Action StoodUp;
@@ -29,6 +31,7 @@ namespace Modules.DamageSystem
         {
             IsKnocked = false;
             StoodUp?.Invoke();
+            _animationController.StandUp();
         }
 
         public void OnHealthChanged(float value)
@@ -44,6 +47,7 @@ namespace Modules.DamageSystem
         private void OnFall()
         {
             FallenDown?.Invoke();
+            _animationController.FallDown();
         }
     }
 }

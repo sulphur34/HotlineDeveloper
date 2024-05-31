@@ -15,7 +15,7 @@ namespace Modules.PlayerWeaponsHandler
             _weaponHandler.WeaponThrown += OnWeaponThrow;
             _weaponHandlerView = weaponHandlerView;
             _weaponHandlerView.Initialize(_weaponHandler);
-            _weaponHandlerView.Unequipped += _weaponHandler.UnequipWeaponItem;
+            _weaponHandlerView.Unequipped += _weaponHandler.DisarmWeaponItem;
         }
 
         private void OnWeaponPick(IWeaponInfo weaponItem)
@@ -37,7 +37,7 @@ namespace Modules.PlayerWeaponsHandler
         {
             _weaponHandler.Attacked -= OnWeaponAttack;
             _weaponHandler.WeaponPicked -= OnWeaponPick;
-            _weaponHandlerView.Unequipped -= _weaponHandler.UnequipWeaponItem;
+            _weaponHandlerView.Unequipped -= _weaponHandler.DisarmWeaponItem;
         }
     }
 }
