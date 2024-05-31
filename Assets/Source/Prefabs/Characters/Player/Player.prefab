@@ -889,8 +889,6 @@ GameObject:
   - component: {fileID: 5185215842425929133}
   - component: {fileID: 1055866415962065991}
   - component: {fileID: 6296293900511571673}
-  - component: {fileID: 6417398310953896187}
-  - component: {fileID: 6847260826043813962}
   - component: {fileID: 1617005726613341875}
   m_Layer: 0
   m_Name: Player
@@ -1119,14 +1117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8768867e0128404bab7605814fcda9a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigBuilder: {fileID: 4319726327898271002}
-  _rangeRig: {fileID: 8511349855359490857}
-  _rightHandRange: {fileID: 1766912457053232714}
-  _leftHandRange: {fileID: 5883816909789562190}
-  _meleeRig: {fileID: 739129564100836677}
-  _rightHandMelee: {fileID: 6169425507509108057}
-  _leftHandMelee: {fileID: 2989923903186982367}
-  _damageReceiverView: {fileID: 7903756512022355025}
 --- !u!114 &6296293900511571673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1139,33 +1129,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f85ce634c09f46ab80cea80a137d22a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6417398310953896187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2929021272895348186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb97f3ebdf84ab28e0d9fcfb47610c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _twoBoneIKConstraints:
-  - {fileID: 1766912457053232714}
-  - {fileID: 5883816909789562190}
---- !u!114 &6847260826043813962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2929021272895348186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96180a68519aa2a44bc645e2b0de505a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _constraintsData:
+    RigBuilder: {fileID: 4319726327898271002}
+    RangeRig: {fileID: 8511349855359490857}
+    RightHandRange: {fileID: 1766912457053232714}
+    LeftHandRange: {fileID: 5883816909789562190}
+    MeleeRig: {fileID: 739129564100836677}
+    RightHandMelee: {fileID: 6169425507509108057}
+    LeftHandMelee: {fileID: 2989923903186982367}
   _ragdollJointsData:
   - Collider: {fileID: 1619133322105679350}
     Rigidbody: {fileID: 1602993997009637716}

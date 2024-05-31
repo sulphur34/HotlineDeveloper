@@ -665,8 +665,6 @@ GameObject:
   - component: {fileID: 4130411232330894804}
   - component: {fileID: 3675667344094910660}
   - component: {fileID: 4933334269263571151}
-  - component: {fileID: 7536220835218865906}
-  - component: {fileID: 2293551038936121378}
   - component: {fileID: 1055879571078734733}
   m_Layer: 0
   m_Name: EnemySimple
@@ -850,14 +848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8768867e0128404bab7605814fcda9a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigBuilder: {fileID: 6493268956652229635}
-  _rangeRig: {fileID: 3441287783880732266}
-  _rightHandRange: {fileID: 2204985954709015083}
-  _leftHandRange: {fileID: 8620675373419509556}
-  _meleeRig: {fileID: 7451016854406952775}
-  _rightHandMelee: {fileID: 6327958503445555569}
-  _leftHandMelee: {fileID: 3468521807996889786}
-  _damageReceiverView: {fileID: 6802919048690575196}
 --- !u!114 &6282332873247998856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,7 +934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d2d2a75a334128ae590c66155ee05c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7536220835218865906
+--- !u!114 &1055879571078734733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -953,9 +943,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1526306925852644456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96180a68519aa2a44bc645e2b0de505a, type: 3}
+  m_Script: {fileID: 11500000, guid: f85ce634c09f46ab80cea80a137d22a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _constraintsData:
+    RigBuilder: {fileID: 6493268956652229635}
+    RangeRig: {fileID: 3441287783880732266}
+    RightHandRange: {fileID: 8620675373419509556}
+    LeftHandRange: {fileID: 2204985954709015083}
+    MeleeRig: {fileID: 7451016854406952775}
+    RightHandMelee: {fileID: 6327958503445555569}
+    LeftHandMelee: {fileID: 3468521807996889786}
   _ragdollJointsData:
   - Collider: {fileID: 3519819689343863886}
     Rigidbody: {fileID: 542143452529321705}
@@ -979,33 +977,6 @@ MonoBehaviour:
     Rigidbody: {fileID: 1382573982666251858}
   - Collider: {fileID: 2995931559234343631}
     Rigidbody: {fileID: 7892452526595003618}
---- !u!114 &2293551038936121378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526306925852644456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb97f3ebdf84ab28e0d9fcfb47610c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _twoBoneIKConstraints:
-  - {fileID: 8620675373419509556}
-  - {fileID: 2204985954709015083}
---- !u!114 &1055879571078734733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526306925852644456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f85ce634c09f46ab80cea80a137d22a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1838505758420288535
 GameObject:
   m_ObjectHideFlags: 0

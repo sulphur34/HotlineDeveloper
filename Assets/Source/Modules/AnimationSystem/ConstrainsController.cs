@@ -3,26 +3,55 @@ using UnityEngine.Animations.Rigging;
 
 namespace Source.Game.Scripts.Animations
 {
-    public class ConstrainsController : MonoBehaviour
+    internal class ConstrainsController
     {
-        [SerializeField] private TwoBoneIKConstraint[] _twoBoneIKConstraints;
+        private ConstraintsData _constraintsData;
 
-        public void Activate()
+        public ConstrainsController(ConstraintsData constraintsData)
         {
-            SetStatus(true);
+            _constraintsData = constraintsData;
         }
 
-        public void Deactivate()
+        public bool IsTwoHanded { get; private set; }
+
+        public void ActivateRange(Transform _rightPlaceholder, Transform _leftPlaceholder)
         {
-            SetStatus(false);
+            _constraintsData.RangeRig.weight = 1f;
+            _constraintsData.RightHandRange.data.target = _rightPlaceholder;
+
+            if (_leftPlaceholder != null)
+                _constraintsData.LeftHandRange.data.target = _leftPlaceholder;
+
+            _constraintsData.RigBuilder.Build();
         }
 
-        private void SetStatus(bool isActive)
+        public void ActivateMelee(Transform _rightPlaceholder, Transform _leftPlaceholder)
         {
-            foreach (TwoBoneIKConstraint twoBoneIKConstraint in _twoBoneIKConstraints)
+            _constraintsData.MeleeRig.weight = 1f;
+            _constraintsData.RightHandMelee.data.constrainedObject = _rightPlaceholder;
+
+            if (_leftPlaceholder != null)
             {
-                twoBoneIKConstraint.weight = isActive ? 1 : 0;
+                _constraintsData.LeftHandMelee.data.target = _leftPlaceholder;
+                IsTwoHanded = true;
             }
+            else
+            {
+                IsTwoHanded = false;
+            }
+
+            _constraintsData.RigBuilder.Build();
+        }
+
+        public void ClearAll()
+        {
+            _constraintsData.RangeRig.weight = 0f;
+            _constraintsData.MeleeRig.weight = 0f;
+            _constraintsData.RightHandRange.data.target = null;
+            _constraintsData.LeftHandRange.data.target = null;
+            _constraintsData.LeftHandMelee.data.target = null;
+            _constraintsData.RightHandMelee.data.constrainedObject = null;
+            _constraintsData.RigBuilder.Build();
         }
     }
 }

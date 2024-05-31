@@ -1,78 +1,74 @@
 using System.Threading;
-using Cysharp.Threading.Tasks;
-using Modules.DamageSystem;
-using Modules.PlayerWeaponsHandler;
 using UnityEngine;
 
 namespace Source.Game.Scripts.Animations
 {
-    [RequireComponent(typeof(ConstrainsController), typeof(RagdollController))]
     public class AnimationController : MonoBehaviour
     {
-        public const string SpeedName = "Speed";
+        [SerializeField] private ConstraintsData _constraintsData;
+        [SerializeField] private RagdollJointData[] _ragdollJointsData;
 
-        private DamageReceiverView _damageReceiverView;
-        private WeaponHandlerView _weaponHandlerView;
         private ConstrainsController _constrainsController;
         private RagdollController _ragdollController;
+        private AnimatorController _animatorController;
         private Transform _transform;
         private Animator _animator;
-        private int _speedIndex;
-        private Vector3 _oldPosition;
         private CancellationTokenSource _cancellationTokenSource;
 
         private void Awake()
         {
-            _transform = transform;
-            _oldPosition = _transform.position;
             _animator = GetComponent<Animator>();
+            _transform = transform;
             _cancellationTokenSource = new CancellationTokenSource();
-            _speedIndex = Animator.StringToHash(SpeedName);
-            _weaponHandlerView = GetComponent<WeaponHandlerView>();
-            _constrainsController = GetComponent<ConstrainsController>();
-            _ragdollController = GetComponent<RagdollController>();
-            _damageReceiverView = GetComponent<DamageReceiverView>();
-            _damageReceiverView.FallenDown += OnFallDown;
-            _damageReceiverView.StoodUp += OnStandUp;
-            OnStandUp();
-        }
-
-        private void OnEnable()
-        {
-            TrackingSpeed(_cancellationTokenSource.Token);
+            _constrainsController = new ConstrainsController(_constraintsData);
+            _ragdollController = new RagdollController(_ragdollJointsData);
+            _animatorController = new AnimatorController(_animator, _transform, _cancellationTokenSource);
         }
 
         private void OnDisable()
         {
             _cancellationTokenSource?.Cancel();
-            _damageReceiverView.FallenDown -= OnFallDown;
-            _damageReceiverView.StoodUp -= OnStandUp;
         }
 
-        private void OnFallDown()
+        public void FallDown()
         {
-            _animator.enabled = false;
-            _constrainsController.Deactivate();
+            Unequip();
+            _animatorController.Deactivate();
             _ragdollController.Activate();
-            _weaponHandlerView.UnequipWeapon();
         }
 
-        private void OnStandUp()
+        public void StandUp()
         {
-            _animator.enabled = true;
+            _animatorController.Activate();
             _ragdollController.Deactivate();
-            _constrainsController.Activate();
         }
 
-        private async UniTask TrackingSpeed(CancellationToken cancellationToken)
+        public void AttackMelee()
         {
-            while (!cancellationToken.IsCancellationRequested)
-            {
-                float distance = Vector3.Magnitude(_transform.position - _oldPosition);
-                _animator.SetFloat(_speedIndex, distance);
-                _oldPosition = _transform.position;
-                await UniTask.Yield(PlayerLoopTiming.Update);
-            }
+            if(_constrainsController.IsTwoHanded)
+                _animatorController.AnimateTwoHandsAttack();
+            else
+                _animatorController.AnimateOneHandAttack();
+        }
+
+        public void AttackBareHands()
+        {
+            _animatorController.AnimateBareHandsAttack();
+        }
+
+        public void PickMelee(Transform rightHand, Transform leftHand)
+        {
+            _constrainsController.ActivateMelee(rightHand, leftHand);
+        }
+
+        public void PickRange(Transform rightHand, Transform leftHand)
+        {
+            _constrainsController.ActivateRange(rightHand, leftHand);
+        }
+
+        public void Unequip()
+        {
+            _constrainsController.ClearAll();
         }
     }
 }

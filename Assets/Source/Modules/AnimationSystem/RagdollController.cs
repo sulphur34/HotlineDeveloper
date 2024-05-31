@@ -1,9 +1,14 @@
 using Source.Game.Scripts.Animations;
 using UnityEngine;
 
-public class RagdollController : MonoBehaviour
+internal class RagdollController
 {
-    [SerializeField] private RagdollJointData[] _ragdollJointsData;
+    private RagdollJointData[] _ragdollJointsData;
+
+    public RagdollController(RagdollJointData[] ragdollJointsData)
+    {
+        _ragdollJointsData = ragdollJointsData;
+    }
 
     public void Activate()
     {
