@@ -1,4 +1,5 @@
 using System;
+using Modules.DamageSystem;
 using Modules.Weapons.WeaponItemSystem;
 using Modules.Weapons.WeaponTypeSystem;
 using Source.Game.Scripts.Animations;
@@ -9,6 +10,8 @@ namespace Modules.PlayerWeaponsHandler
     public class WeaponHandlerView : MonoBehaviour
     {
         [SerializeField] private AnimationController _animationController;
+        [SerializeField] private DamageReceiverView _damageReceiverView;
+        
         public event Action RangeShotFired;
         public event Action Equipped;
         public event Action Unequipped;
@@ -18,6 +21,9 @@ namespace Modules.PlayerWeaponsHandler
         public void Initialize(IWeaponHandlerInfo weaponHandlerInfo)
         {
             WeaponInfo = weaponHandlerInfo;
+            _animationController = GetComponent<AnimationController>();
+            _damageReceiverView = GetComponent<DamageReceiverView>();
+            _damageReceiverView.FallenDown += UnequipWeapon;
         }
 
         public void OnAttack(WeaponType weaponType)

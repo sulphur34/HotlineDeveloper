@@ -46,7 +46,7 @@ namespace Modules.PlayerWeaponsHandler
             _weaponStrategy.Unequip();
             _currentWeaponItem.Unequip();
             _currentWeaponItem.Attacked -= OnAttack;
-            _currentWeaponItem = null;
+            _currentWeaponItem = _defaultWeaponItem;
             _attackInput.AttackReceived -= OnAttackInputReceived;
 
             if (_defaultWeaponItem != null)
@@ -59,17 +59,15 @@ namespace Modules.PlayerWeaponsHandler
 
             if (CurrentWeaponItemIsEmpty == false && _currentWeaponItem.IsEquipped)
             {
-                _currentWeaponItem.Throw();
-                WeaponThrown?.Invoke();
+                WeaponItem weapon = _currentWeaponItem;
                 _currentWeaponItem.Attacked -= OnAttack;
+                WeaponThrown?.Invoke();
+                weapon.Throw();
                 _currentWeaponItem = _defaultWeaponItem;
                 _attackInput.AttackReceived -= OnAttackInputReceived;
             }
 
-            if (HasPickableWeapon)
-            {
-                EquipWeaponItem(weaponItem);
-            }
+            EquipWeaponItem(HasPickableWeapon ? weaponItem : _defaultWeaponItem);
         }
 
         private void EquipWeaponItem(WeaponItem weaponItem)
@@ -77,9 +75,9 @@ namespace Modules.PlayerWeaponsHandler
             if(weaponItem == null)
                 return;
             
+            _currentWeaponItem = weaponItem;
             _weaponStrategy = _currentWeaponItem.GetComponent<WeaponStrategy>();
             _weaponStrategy.Equip(_container);
-            _currentWeaponItem = weaponItem;
             _currentWeaponItem.Attacked += OnAttack;
             _currentWeaponItem.Equip(_container);
             WeaponPicked?.Invoke(_currentWeaponItem);

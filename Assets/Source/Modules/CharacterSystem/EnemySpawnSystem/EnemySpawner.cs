@@ -36,7 +36,8 @@ namespace Modules.EnemySpawnSystem
             GameObject instance = Instantiate(enemySpawnConfig.Prefab.gameObject, enemySpawnConfig.SpawnPoint.position, Quaternion.identity);
             BehaviorConfig behaviorConfig = _behaviorConfigFactory.GetBehavior(enemySpawnConfig.Behavior);
             DamageableConfig damageableConfig = _damageableConfigFactory.GetConfig(enemySpawnConfig.DamageableType);
-            instance.GetComponent<BehaviorSetup>().Initialize(behaviorConfig, enemySpawnConfig.PatrolRoute, weaponTracker, player);
+            BehaviorSetup behaviorSetup = instance.GetComponent<BehaviorSetup>();
+            behaviorSetup.Initialize(behaviorConfig, enemySpawnConfig.PatrolRoute, weaponTracker, player);
             instance.GetComponent<DamageReceiverSetup>().Initialize(damageableConfig);
         }
     }

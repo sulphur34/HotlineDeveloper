@@ -25,7 +25,7 @@ namespace Modules.PlayerWeaponsHandler
 
         private void OnWeaponThrow()
         {
-            _weaponHandlerView.ClearHands();
+            _weaponHandlerView.UnequipWeapon();
         }
 
         private void OnWeaponAttack(WeaponType weaponType)

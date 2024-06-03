@@ -24,6 +24,9 @@ namespace Modules.DamageSystem
 
                 case DamageReceiveStrategies.MeleeImmune:
                     return new MeleeImmuneReceiveStrategy();
+                
+                case DamageReceiveStrategies.AlwaysLethal:
+                    return new AlwaysLethalReceiveStrategy();
 
                 default:
                     return new NormalDamageReceiveStrategy();

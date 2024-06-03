@@ -69,8 +69,12 @@ namespace Modules.Weapons.WeaponItemSystem
         public void Throw()
         {
             Unequip();
-            _rigidbody.AddForce(SelfTransform.forward * _force, ForceMode.Impulse);
-            _rigidbody.AddTorque(Vector3.up * _rotationForce);
+            Vector3 throwDirection = WeaponType == WeaponType.Range ? _selfTransform.forward : _selfTransform.up;
+            Vector3 rotationDirection = WeaponType == WeaponType.Range ? _selfTransform.up : _selfTransform.forward;
+            _selfTransform.Rotate(0,0,90);
+            _selfTransform.Translate(throwDirection * 0.5f);
+            _rigidbody.AddTorque(rotationDirection * _rotationForce, ForceMode.VelocityChange);
+            _rigidbody.AddForce(throwDirection * _force, ForceMode.Impulse);
             WaitingThrowEnd(_cancellationToken, Thrown);
         }
         

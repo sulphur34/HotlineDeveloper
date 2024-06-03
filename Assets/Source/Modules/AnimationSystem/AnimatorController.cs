@@ -30,6 +30,7 @@ namespace Source.Game.Scripts.Animations
             _speedIndex = Animator.StringToHash(SpeedName);
             _animator = animator;
             _transform = transform;
+            _cancellationTokenSource = cancellationTokenSource;
         }
 
         public void Activate()
@@ -64,6 +65,7 @@ namespace Source.Game.Scripts.Animations
             while (!cancellationToken.IsCancellationRequested)
             {
                 float distance = Vector3.Magnitude(_transform.position - _oldPosition);
+                Debug.Log(distance);
                 _animator.SetFloat(_speedIndex, distance);
                 _oldPosition = _transform.position;
                 await UniTask.Yield(PlayerLoopTiming.Update);

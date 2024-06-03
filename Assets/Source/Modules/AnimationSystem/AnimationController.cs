@@ -23,6 +23,7 @@ namespace Source.Game.Scripts.Animations
             _constrainsController = new ConstrainsController(_constraintsData);
             _ragdollController = new RagdollController(_ragdollJointsData);
             _animatorController = new AnimatorController(_animator, _transform, _cancellationTokenSource);
+            _animatorController.Activate();
         }
 
         private void OnDisable()

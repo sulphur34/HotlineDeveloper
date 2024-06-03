@@ -15,7 +15,7 @@ namespace Modules.BulletSystem
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.collider.TryGetComponent(out IBulletDestroyer _))
+            // if (collision.collider.TryGetComponent(out IBulletDestroyer _))
                 LifespanEnded?.Invoke(this);
         }
 
