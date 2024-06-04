@@ -37294,6 +37294,10 @@ PrefabInstance:
       propertyPath: _rotationForce
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 667668127749409297, guid: 053e2e74390f2ed469928f61aeb62e5d, type: 3}
+      propertyPath: <Offset>k__BackingField.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4848934772374328225, guid: 053e2e74390f2ed469928f61aeb62e5d, type: 3}
       propertyPath: m_Name
       value: Katana
@@ -37682,7 +37686,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 30
+  field of view: 10
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -37708,8 +37712,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2016440052}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 15, z: 0}
+  m_LocalRotation: {x: -0.71027756, y: 0.0008628575, z: -0.0008630533, w: -0.7039207}
+  m_LocalPosition: {x: 0, y: 50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

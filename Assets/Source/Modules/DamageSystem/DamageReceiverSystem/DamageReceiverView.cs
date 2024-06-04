@@ -11,7 +11,6 @@ namespace Modules.DamageSystem
         [SerializeField] private AnimationController _animationController;
         public event Action<DamageData> Received;
         public event Action FallenDown;
-        public event Action StoodUp;
         
         public bool IsDead { get; private set; }
         public bool IsKnocked { get; private set; }
@@ -30,7 +29,6 @@ namespace Modules.DamageSystem
         public void OnRecovered()
         {
             IsKnocked = false;
-            StoodUp?.Invoke();
             _animationController.StandUp();
         }
 

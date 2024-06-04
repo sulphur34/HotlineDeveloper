@@ -2,57 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="096f9c91-8365-4be6-8d8f-87ad3dc5adea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Conditions/IsTargetDead.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Conditions/IsTargetDead.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/NormalEnemyBehaviour.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/NormalEnemyBehaviour.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/StrongEnemyBehaviour.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/StrongEnemyBehaviour.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level1.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level2.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level2.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Animation/Armature_Armature_mixamo.com_Layer0.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Characters/Animation/Armature_Armature_mixamo.com_Layer0.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Animation/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Characters/Animation/Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Animation/MeleeHorizontal.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Characters/Animation/MeleeHorizontal.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Animation/Punching2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Characters/Animation/Punching2.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Animation/TwoHandSlash.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Characters/Animation/TwoHandSlash.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Player/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Characters/Player/PlayerController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Weapons/WeaponItemSystem/WeaponItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Weapons/WeaponItemSystem/WeaponItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/CompositRoot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/CompositRoot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/AssaultRIfle_01_Cube.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/AssaultRIfle_01_Cube.001.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/AssaultRIfle_02_Cylinder.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/AssaultRIfle_02_Cylinder.001.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/AssaultRIfle_03.001_Cube.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/AssaultRIfle_03.001_Cube.001.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Pistol_01_Cube.002.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Pistol_01_Cube.002.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Pistol_03_Cube.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Pistol_03_Cube.001.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Revolver_01_Cylinder.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Revolver_01_Cylinder.001.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Revolver_02_Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Revolver_02_Cube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_01_Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_01_Cube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_02_Cylinder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_02_Cylinder.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_03_Cylinder.002.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_03_Cylinder.002.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_04_Circle.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_04_Circle.001.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_05_Cube.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/SMG_05_Cube.001.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Shotgun_01_Cylinder.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Shotgun_01_Cylinder.001.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Shotgun_03_Cylinder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Shotgun_03_Cylinder.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Sniper_01_Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Sniper_01_Cube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Sniper_02_Cube.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Range/Sniper_02_Cube.001.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 4.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 4.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 5.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 5.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 6.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config 6.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Enemy Spawn Config.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Level 3 Spawn Config.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel3/Level 3 Spawn Config.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel1/Level 1 Spawn Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel1/Level 1 Spawn Config.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +227,7 @@
       <workItem from="1717139997583" duration="33480000" />
       <workItem from="1717318528610" duration="18371000" />
       <workItem from="1717402193055" duration="10972000" />
-      <workItem from="1717490354781" duration="2968000" />
+      <workItem from="1717490354781" duration="4662000" />
     </task>
     <servers />
   </component>
@@ -322,7 +280,7 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverView.cs</url>
-          <line>25</line>
+          <line>24</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiver\DamageReceiverView.cs" initialLine="21" containingFunctionPresentation="method 'OnKnocked'" />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
@@ -450,7 +408,7 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverView.cs</url>
-          <line>20</line>
+          <line>19</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiver\DamageReceiverView.cs" initialLine="25" containingFunctionPresentation="method 'Receive'" />
           <option name="timeStamp" value="102" />
         </line-breakpoint>
