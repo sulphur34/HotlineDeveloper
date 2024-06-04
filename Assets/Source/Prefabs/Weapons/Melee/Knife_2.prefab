@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _force: 50
-  _rotationForce: 0
+  _rotationForce: 50
   <Offset>k__BackingField: {x: 0, y: 0, z: 1}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 0}
   <RightHandPlaceHolder>k__BackingField: {fileID: 2399524158462744683}
@@ -200,7 +200,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 8538605040488062789}
   _collider: {fileID: 4812616783846411628}
-  _attakTime: 1
+  _attakTime: 0.1
+  _rechargeTime: 1
 --- !u!114 &3522029010575109975
 MonoBehaviour:
   m_ObjectHideFlags: 0
