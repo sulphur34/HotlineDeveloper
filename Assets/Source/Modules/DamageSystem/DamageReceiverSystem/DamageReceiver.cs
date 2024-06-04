@@ -29,9 +29,12 @@ namespace Modules.DamageSystem
                 return;
             
             DamageData modifiedDamage = _damageReceiveStrategy.GetDamage(damage);
-            
-            if (modifiedDamage.IsLethal && _consciousness.IsKnocked)
+
+            if (modifiedDamage.IsLethal || _consciousness.IsKnocked)
+            {
                 _health.Execute(HealthChanged,Died);
+                return;
+            }
             
             if(modifiedDamage.IsKnockout && _consciousness.IsKnocked == false)
                 _consciousness.Knockout(Knocked, Recovered);
