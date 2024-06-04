@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="096f9c91-8365-4be6-8d8f-87ad3dc5adea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Conditions/IsTargetDead.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Conditions/IsTargetDead.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/NormalEnemyBehaviour.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/NormalEnemyBehaviour.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/StrongEnemyBehaviour.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/StrongEnemyBehaviour.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Characters/Player/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Characters/Player/PlayerController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel1/Level 1 Spawn Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/LevelSpawnConfigs/SpawnConfigLevel1/Level 1 Spawn Config.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Weapons/Melee/MeleeWeaponSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Weapons/Melee/MeleeWeaponSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Enemies/EnemyTough.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Enemies/EnemyTough.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Knuckles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Knuckles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/AxeTypeOne.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/AxeTypeOne.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/AxeTypeTwo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/AxeTypeTwo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Bat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Bat.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/BottleNew.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/BottleNew.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/BottleWrecked.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/BottleWrecked.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/HammerTypeOne.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/HammerTypeOne.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/HammerTypeTwo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/HammerTypeTwo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Katana.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Katana.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Knife.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Knife.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Knife_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Knife_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Wrench.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Wrench.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +235,7 @@
       <workItem from="1717139997583" duration="33480000" />
       <workItem from="1717318528610" duration="18371000" />
       <workItem from="1717402193055" duration="10972000" />
-      <workItem from="1717490354781" duration="4662000" />
+      <workItem from="1717490354781" duration="8308000" />
     </task>
     <servers />
   </component>
@@ -459,13 +467,13 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerPresenter.cs</url>
-          <line>22</line>
+          <line>21</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\WeaponsHandler\WeaponHandlerPresenter.cs" initialLine="22" containingFunctionPresentation="method 'OnWeaponPick'">
             <startOffsets>
-              <option value="876" />
+              <option value="818" />
             </startOffsets>
             <endOffsets>
-              <option value="914" />
+              <option value="856" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="115" />
@@ -483,19 +491,6 @@
           <option name="timeStamp" value="155" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/Weapons/WeaponItemSystem/WeaponItem.cs</url>
-          <line>71</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Weapons\WeaponItemSystem\WeaponItem.cs" initialLine="71" containingFunctionPresentation="method 'Throw'">
-            <startOffsets>
-              <option value="2176" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2277" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="157" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/LevelSelectionSystem/LevelSelectionPresenter.cs</url>
           <line>52</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\LevelSelectionSystem\LevelSelectionPresenter.cs" initialLine="52" containingFunctionPresentation="method 'OnButtonPressed'">
@@ -507,6 +502,58 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/WeaponStrategy.cs</url>
+          <line>14</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamagerSystem\DamageInflictStrategies\WeaponStrategy.cs" initialLine="14" containingFunctionPresentation="method 'Equip'">
+            <startOffsets>
+              <option value="490" />
+            </startOffsets>
+            <endOffsets>
+              <option value="561" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="165" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandler.cs</url>
+          <line>42</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\WeaponsHandler\WeaponHandler.cs" initialLine="42" containingFunctionPresentation="method 'DisarmWeaponItem'">
+            <startOffsets>
+              <option value="1618" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1693" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="166" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandler.cs</url>
+          <line>57</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\WeaponsHandler\WeaponHandler.cs" initialLine="57" containingFunctionPresentation="method 'OnPickInputReceived'">
+            <startOffsets>
+              <option value="2162" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2227" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="167" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/WeaponStrategy.cs</url>
+          <line>19</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamagerSystem\DamageInflictStrategies\WeaponStrategy.cs" initialLine="19" containingFunctionPresentation="method 'Unequip'">
+            <startOffsets>
+              <option value="625" />
+            </startOffsets>
+            <endOffsets>
+              <option value="652" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="168" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

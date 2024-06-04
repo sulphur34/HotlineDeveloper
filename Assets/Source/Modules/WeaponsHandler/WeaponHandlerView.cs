@@ -64,8 +64,13 @@ namespace Modules.PlayerWeaponsHandler
 
         public void UnequipWeapon()
         {
-            _animationController.Unequip();
+            ClearHands();
             Unequipped?.Invoke();
+        }
+
+        public void ClearHands()
+        {
+            _animationController.Unequip();
         }
     }
 }
