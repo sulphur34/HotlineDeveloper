@@ -39516,12 +39516,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5127029320105053642, guid: 4e0854df20e2fa046839f090f6789685, type: 3}
+      propertyPath: maxDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6502736168213891335, guid: 4e0854df20e2fa046839f090f6789685, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'Spine1'\n\tTransform 'Spine2'\n\tTransform
-        'Spine1'\n\tTransform 'Spine2'\n\tTransform 'Spine1'\n\tTransform 'Spine2'"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7547430180923425878, guid: 4e0854df20e2fa046839f090f6789685, type: 3}
       propertyPath: m_LocalPosition.x

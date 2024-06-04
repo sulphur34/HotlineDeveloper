@@ -3,22 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="096f9c91-8365-4be6-8d8f-87ad3dc5adea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Weapons/Melee/MeleeWeaponSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Weapons/Melee/MeleeWeaponSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Enemies/EnemyTough.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Enemies/EnemyTough.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Knuckles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Knuckles.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/AxeTypeOne.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/AxeTypeOne.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/AxeTypeTwo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/AxeTypeTwo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Bat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Bat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/BottleNew.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/BottleNew.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/BottleWrecked.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/BottleWrecked.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/HammerTypeOne.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/HammerTypeOne.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/HammerTypeTwo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/HammerTypeTwo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Katana.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Katana.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Knife.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Knife.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Knife_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Knife_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Wrench.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Weapons/Melee/Wrench.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/AnimationSystem/AnimatorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/AnimationSystem/AnimatorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Bullet/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Bullet/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Test/TestCameraFollower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Test/TestCameraFollower.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +222,7 @@
       <workItem from="1717139997583" duration="33480000" />
       <workItem from="1717318528610" duration="18371000" />
       <workItem from="1717402193055" duration="10972000" />
-      <workItem from="1717490354781" duration="8308000" />
+      <workItem from="1717490354781" duration="19121000" />
     </task>
     <servers />
   </component>
@@ -467,13 +454,13 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerPresenter.cs</url>
-          <line>21</line>
+          <line>22</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\WeaponsHandler\WeaponHandlerPresenter.cs" initialLine="22" containingFunctionPresentation="method 'OnWeaponPick'">
             <startOffsets>
-              <option value="818" />
+              <option value="876" />
             </startOffsets>
             <endOffsets>
-              <option value="856" />
+              <option value="914" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="115" />
@@ -504,19 +491,6 @@
           <option name="timeStamp" value="162" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/WeaponStrategy.cs</url>
-          <line>14</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamagerSystem\DamageInflictStrategies\WeaponStrategy.cs" initialLine="14" containingFunctionPresentation="method 'Equip'">
-            <startOffsets>
-              <option value="490" />
-            </startOffsets>
-            <endOffsets>
-              <option value="561" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="165" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandler.cs</url>
           <line>42</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\WeaponsHandler\WeaponHandler.cs" initialLine="42" containingFunctionPresentation="method 'DisarmWeaponItem'">
@@ -543,17 +517,30 @@
           <option name="timeStamp" value="167" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/WeaponStrategy.cs</url>
-          <line>19</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamagerSystem\DamageInflictStrategies\WeaponStrategy.cs" initialLine="19" containingFunctionPresentation="method 'Unequip'">
+          <url>file://$PROJECT_DIR$/Assets/Source/Test/TestCameraFollower.cs</url>
+          <line>41</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Test\TestCameraFollower.cs" initialLine="18" containingFunctionPresentation="method 'Update'">
             <startOffsets>
-              <option value="625" />
+              <option value="1164" />
             </startOffsets>
             <endOffsets>
-              <option value="652" />
+              <option value="1236" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="168" />
+          <option name="timeStamp" value="170" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Test/TestCameraFollower.cs</url>
+          <line>16</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Test\TestCameraFollower.cs" initialLine="16" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="292" />
+            </startOffsets>
+            <endOffsets>
+              <option value="403" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="173" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
