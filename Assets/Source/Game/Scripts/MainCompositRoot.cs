@@ -1,7 +1,11 @@
+using System;
+using System.Threading.Tasks;
+using Agava.YandexGames;
 using Modules.FadeSystem;
 using Modules.LevelsSystem;
 using Modules.SavingsSystem;
 using Modules.SceneLoaderSystem;
+using UnityEngine.SceneManagement;
 using VContainer;
 using VContainer.Unity;
 
@@ -13,6 +17,8 @@ public class MainCompositRoot : LifetimeScope
 
     protected override void Configure(IContainerBuilder builder)
     {
+        YandexGamesSdk.Initialize(OnCallback);
+        
         _saveSystem.Load(data =>
         {
             InitLevels(data.LevelsData);
@@ -41,5 +47,10 @@ public class MainCompositRoot : LifetimeScope
 
             data.LevelsData = levels;
         });
+    }
+
+    private void OnCallback()
+    {
+        SceneManager.LoadScene("Main");
     }
 }

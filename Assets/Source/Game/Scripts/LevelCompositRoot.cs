@@ -23,6 +23,7 @@ public class LevelCompositRoot : LifetimeScope
     [SerializeField] private BehaviorConfigFactory _behaviorConfigFactory;
     [SerializeField] private DamageableConfigFactory _damageableConfigFactory;
     [SerializeField] private GameObject _weaponSetupsParent;
+    [SerializeField] private Player _player;
 
     protected override void OnDestroy()
     {
@@ -43,7 +44,6 @@ public class LevelCompositRoot : LifetimeScope
     {
         builder.RegisterInstance(_enemySpawnConfigs);
         builder.RegisterInstance(_behaviorConfigFactory);
-        builder.RegisterComponentInHierarchy<Player>();
         
         builder.RegisterBuildCallback(container =>
         {
@@ -63,17 +63,20 @@ public class LevelCompositRoot : LifetimeScope
 
     private void InputConfigure(IContainerBuilder builder)
     {
+        builder.RegisterInstance(_player);
+
+        InputController inputController;
+
         if (Application.isMobilePlatform)
-            builder.RegisterComponentOnNewGameObject<MobileInputController>(Lifetime.Scoped, "MobileInputController")
-                .AsImplementedInterfaces();
+            inputController = _player.gameObject.AddComponent<MobileInputController>();
         else
-            builder.RegisterComponentOnNewGameObject<DesktopInputController>(Lifetime.Scoped, "DesktopInputController")
-                .AsImplementedInterfaces();
+            inputController = _player.gameObject.AddComponent<DesktopInputController>();
+
+        builder.RegisterInstance(inputController).AsImplementedInterfaces();
     }
 
     private void DamageConfigure(IContainerBuilder builder)
     {
-        // builder.RegisterInstance(_damageableConfigFactory.GetConfig(DamageableTypes.Player));
         builder.RegisterInstance(_damageableConfigFactory);
         builder.RegisterComponentInHierarchy<DamageReceiverSetup>();
         builder.RegisterComponentInHierarchy<WeaponStrategy>();

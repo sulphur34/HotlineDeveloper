@@ -18,7 +18,7 @@ public abstract class InputController : MonoBehaviour, IMoveInput, IAttackInput,
     {
         PlayerInput = new PlayerInput();
     }
-    
+
     private void Update()
     {
         MoveReceived?.Invoke(OnMove());
@@ -34,7 +34,7 @@ public abstract class InputController : MonoBehaviour, IMoveInput, IAttackInput,
 
     protected void Attack()
     {
-            AttackReceived?.Invoke();
+        AttackReceived?.Invoke();
     }
 
     protected void OnPick(InputAction.CallbackContext context)

@@ -9,16 +9,18 @@ namespace Modules.DamageSystem
     {
         [SerializeField] private AnimationController _animationController;
         [SerializeField] private ParticleSystem _bloodParticlePrefab;
+        [SerializeField] private Collider _collider;
         
         public event Action<DamageData> Received;
         public event Action FallenDown;
+        public event Action Recovered;
         
         public bool IsDead { get; private set; }
         public bool IsKnocked { get; private set; }
 
         public void Receive(DamageData damageData)
         {
-            if (damageData.IsKnockout == false)
+            if (damageData.IsKnockout == false && IsDead == false)
                 Instantiate(_bloodParticlePrefab, transform);
             
             Received?.Invoke(damageData);
@@ -32,8 +34,10 @@ namespace Modules.DamageSystem
 
         public void OnRecovered()
         {
+            _collider.enabled = true;
             IsKnocked = false;
             _animationController.StandUp();
+            Recovered?.Invoke();
         }
 
         public void OnHealthChanged(float value)
@@ -48,6 +52,7 @@ namespace Modules.DamageSystem
 
         private void OnFall()
         {
+            _collider.enabled = false;
             FallenDown?.Invoke();
             _animationController.FallDown();
         }
