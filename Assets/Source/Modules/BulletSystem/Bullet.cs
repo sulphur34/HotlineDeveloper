@@ -8,7 +8,7 @@ namespace Modules.BulletSystem
     {
         [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private float _lifetime;
-
+        
         private WaitForSeconds _waitlifetime;
 
         public event Action<Bullet> LifespanEnded;

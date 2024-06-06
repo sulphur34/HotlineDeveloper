@@ -1063,6 +1063,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e986a9db6b7b74f9f2b452477ee94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _overviewRange: 30
+  _lerpRate: 0.5
 --- !u!114 &7903756512022355025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1076,6 +1078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationController: {fileID: 6296293900511571673}
+  _bloodParticlePrefab: {fileID: 5480200580748689292, guid: 388ef2d607228f342a434c7097e6ef18, type: 3}
 --- !u!114 &856470938270365420
 MonoBehaviour:
   m_ObjectHideFlags: 0

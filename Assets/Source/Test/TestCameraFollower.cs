@@ -18,14 +18,9 @@ public class TestCameraFollower : MonoBehaviour
     private void Update()
     {
         Vector3 playerPosition = new Vector3(transform.position.x, _camera.transform.position.y, transform.position.z);
-
-        Vector3 mouseposition = Input.mousePosition;
-        mouseposition.z = _camera.nearClipPlane + _overviewRange;
-        Vector3 mouseWorldPoint = _camera.ScreenToWorldPoint(mouseposition);
-        mouseWorldPoint.y = _camera.transform.position.y;
-
-        Debug.Log(mouseWorldPoint + " - " + playerPosition);
-
-        _camera.transform.position = Vector3.Lerp(playerPosition, mouseWorldPoint, _lerpRate);
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = _camera.nearClipPlane + _overviewRange;
+        Vector3 mouseWorldPoint = _camera.ScreenToWorldPoint(mousePosition);
+        mouseWorldPoint.y = _camera.transform.position.y; _camera.transform.position = Vector3.Lerp(playerPosition, mouseWorldPoint, _lerpRate);
     }
 }

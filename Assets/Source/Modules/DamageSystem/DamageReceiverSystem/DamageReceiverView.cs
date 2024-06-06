@@ -1,7 +1,6 @@
 using System;
 using Source.Game.Scripts.Animations;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace Modules.DamageSystem
 {
@@ -9,6 +8,8 @@ namespace Modules.DamageSystem
     public class DamageReceiverView : MonoBehaviour, IDamageReceiver
     {
         [SerializeField] private AnimationController _animationController;
+        [SerializeField] private ParticleSystem _bloodParticlePrefab;
+        
         public event Action<DamageData> Received;
         public event Action FallenDown;
         
@@ -17,6 +18,9 @@ namespace Modules.DamageSystem
 
         public void Receive(DamageData damageData)
         {
+            if (damageData.IsKnockout == false)
+                Instantiate(_bloodParticlePrefab, transform);
+            
             Received?.Invoke(damageData);
         }
        
