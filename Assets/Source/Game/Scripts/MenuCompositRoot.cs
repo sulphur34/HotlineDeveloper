@@ -3,6 +3,7 @@ using Modules.Audio;
 using Modules.FadeSystem;
 using Modules.LevelSelectionSystem;
 using Modules.LevelsSystem;
+using Modules.PauseMenu;
 using Modules.PressedButtonSystem;
 using Modules.SaveHandlers;
 using Modules.SavingsSystem;
