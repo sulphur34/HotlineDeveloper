@@ -1,6 +1,5 @@
 using Modules.FadeSystem;
 using Modules.LevelsSystem;
-using Modules.PauseMenu;
 using Modules.SavingsSystem;
 using Modules.SceneLoaderSystem;
 using VContainer;
@@ -12,18 +11,19 @@ public class MainCompositRoot : LifetimeScope
 
     private readonly SaveSystem _saveSystem = new SaveSystem();
 
+    private SaveData _saveData;
+
+    public void SetData(SaveData saveData)
+    {
+        _saveData = saveData;
+    }
+
     protected override void Configure(IContainerBuilder builder)
     {
-        _saveSystem.Load(data =>
-        {
-            SceneLoader sceneLoader = new SceneLoader();
-
-            InitLevels(data.LevelsData);
-            builder.RegisterInstance(data.LevelsData);
-            builder.RegisterInstance(sceneLoader);
-            builder.RegisterComponentInHierarchy<Fade>();
-            sceneLoader.Load(SceneName.Menu.ToString());
-        });
+        InitLevels(_saveData.LevelsData);
+        builder.RegisterInstance(_saveData.LevelsData);
+        builder.Register<SceneLoader>(Lifetime.Singleton);
+        builder.RegisterComponentInHierarchy<Fade>();
     }
 
     private void InitLevels(LevelsData levels)

@@ -1,13 +1,29 @@
+#if UNITY_EDITOR == false
+using Agava.YandexGames;
+#endif
+
+using Modules.SavingsSystem;
+using Modules.SceneLoaderSystem;
 using System.Collections;
 using UnityEngine;
 
 public class Bootstrap : MonoBehaviour
 {
+    private readonly SaveSystem _saveSystem = new SaveSystem();
+
     private IEnumerator Start()
     {
-        MainCompositRoot mainCompositRoot = FindAnyObjectByType<MainCompositRoot>();
         yield return StartCoroutine(InitSDK());
-        mainCompositRoot.Build();
+
+        _saveSystem.Load(data =>
+        {
+            MainCompositRoot mainCompositRoot = FindAnyObjectByType<MainCompositRoot>();
+            mainCompositRoot.SetData(data);
+            mainCompositRoot.Build();
+
+            SceneLoader sceneLoader = new SceneLoader();
+            sceneLoader.Load(SceneName.Menu.ToString());
+        });
     }
 
     private IEnumerator InitSDK()
