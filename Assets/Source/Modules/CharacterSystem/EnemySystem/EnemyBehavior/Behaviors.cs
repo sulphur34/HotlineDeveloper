@@ -4,6 +4,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior
     {
         Normal,
         Strong,
-        Boss
+        Boss,
+        Peace
     }
 }

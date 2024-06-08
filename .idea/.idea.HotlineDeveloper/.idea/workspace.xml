@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="096f9c91-8365-4be6-8d8f-87ad3dc5adea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Agava.Scripts.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Agava.Scripts.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/MainCompositRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/MainCompositRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Audio/AudioSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Audio/AudioSlider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/LevelSelectionSystem/LevelSelectionElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/LevelSelectionSystem/LevelSelectionElement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +25,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/b3/b394449b/GOCondition.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Internal/FixedTypeKeyHashTable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/49/40c88b81/LocalParamAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.7.5/Editor/treeview/AnimationTrackKeyDataSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/d3/805c159d/PrimitiveActionTask.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/76/29f51569/PreserveAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/ad/34035b96/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
@@ -54,7 +49,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a24131e73ec49f7805f3dfb6a69fa781d000/da/636d957c/SharedVariable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/e3/ca5adc0b/PrimitiveAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IAttackInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.agava.yandexgames@faf20595c0/Runtime/YandexGamesSdk.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.agava.yandexgames@faf20595c0/Runtime/YandexGamesSdk.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/7b/ff31f2bb/Action.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c1702c564a404518b8e1e7f6fea9b84014c00/6a/ef223920/IContainerBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/65b2129559af45d98b49ecf0effb76f91fe00/7a/ecc7c00a/ControllerColliderHit.cs" root0="SKIP_HIGHLIGHTING" />
@@ -138,10 +133,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="42444">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="42444" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -234,6 +229,12 @@
       <workItem from="1717577652541" duration="10535000" />
       <workItem from="1717668935378" duration="21795000" />
       <workItem from="1717744414777" duration="1355000" />
+      <workItem from="1717842450294" duration="2815000" />
+      <workItem from="1717850774254" duration="7025000" />
+      <workItem from="1717866780405" duration="5242000" />
+      <workItem from="1717885737677" duration="1000" />
+      <workItem from="1717885757351" duration="9000" />
+      <workItem from="1717967436526" duration="878000" />
     </task>
     <servers />
   </component>
@@ -374,19 +375,6 @@
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/BehaviorSetup.cs</url>
-          <line>51</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\CharacterSystem\EnemySystem\EnemyBehavior\BehaviorSetup.cs" initialLine="45" containingFunctionPresentation="method 'Initialize'">
-            <startOffsets>
-              <option value="2231" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2246" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandler.cs</url>
           <line>93</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\WeaponsHandler\WeaponHandler.cs" initialLine="87" containingFunctionPresentation="method 'TryGetWeapon'">
@@ -489,19 +477,6 @@
           <option name="timeStamp" value="155" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/LevelSelectionSystem/LevelSelectionPresenter.cs</url>
-          <line>52</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\LevelSelectionSystem\LevelSelectionPresenter.cs" initialLine="52" containingFunctionPresentation="method 'OnButtonPressed'">
-            <startOffsets>
-              <option value="1849" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1882" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="162" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandler.cs</url>
           <line>42</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\WeaponsHandler\WeaponHandler.cs" initialLine="42" containingFunctionPresentation="method 'DisarmWeaponItem'">
@@ -528,17 +503,17 @@
           <option name="timeStamp" value="167" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Game/Scripts/MainCompositRoot.cs</url>
-          <line>19</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Game\Scripts\MainCompositRoot.cs" initialLine="20" containingFunctionPresentation="method 'Configure'">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySpawnSystem/EnemySpawner.cs</url>
+          <line>38</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\CharacterSystem\EnemySpawnSystem\EnemySpawner.cs" initialLine="38" containingFunctionPresentation="method 'BuildEnemy'">
             <startOffsets>
-              <option value="496" />
+              <option value="1658" />
             </startOffsets>
             <endOffsets>
-              <option value="534" />
+              <option value="1727" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="168" />
+          <option name="timeStamp" value="175" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
