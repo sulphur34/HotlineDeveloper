@@ -1,11 +1,7 @@
-using System;
-using System.Threading.Tasks;
-using Agava.YandexGames;
 using Modules.FadeSystem;
 using Modules.LevelsSystem;
 using Modules.SavingsSystem;
 using Modules.SceneLoaderSystem;
-using UnityEngine.SceneManagement;
 using VContainer;
 using VContainer.Unity;
 
@@ -15,17 +11,19 @@ public class MainCompositRoot : LifetimeScope
 
     private readonly SaveSystem _saveSystem = new SaveSystem();
 
+    private SaveData _saveData;
+
+    public void SetData(SaveData saveData)
+    {
+        _saveData = saveData;
+    }
+
     protected override void Configure(IContainerBuilder builder)
     {
-        YandexGamesSdk.Initialize(OnCallback);
-        
-        _saveSystem.Load(data =>
-        {
-            InitLevels(data.LevelsData);
-            builder.RegisterInstance(data.LevelsData);
-            builder.Register<SceneLoader>(Lifetime.Singleton);
-            builder.RegisterComponentInHierarchy<Fade>();
-        });
+        InitLevels(_saveData.LevelsData);
+        builder.RegisterInstance(_saveData.LevelsData);
+        builder.Register<SceneLoader>(Lifetime.Singleton);
+        builder.RegisterComponentInHierarchy<Fade>();
     }
 
     private void InitLevels(LevelsData levels)
@@ -47,10 +45,5 @@ public class MainCompositRoot : LifetimeScope
 
             data.LevelsData = levels;
         });
-    }
-
-    private void OnCallback()
-    {
-        SceneManager.LoadScene("Main");
     }
 }

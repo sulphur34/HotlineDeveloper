@@ -98,6 +98,7 @@ public class LevelCompositRoot : LifetimeScope
         builder.Register<LevelSaveHandler>(Lifetime.Singleton);
         
         builder.Register<PauseSetter>(Lifetime.Singleton);
+        builder.RegisterComponentInHierarchy<PauseSetButton>();
         builder.RegisterComponentInHierarchy<LoadSceneButton>();
         builder.RegisterComponentInHierarchy<RestartLevelButton>();
         
