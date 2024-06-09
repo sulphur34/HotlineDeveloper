@@ -8,14 +8,14 @@ namespace Modules.BulletSystem
     {
         [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private float _lifetime;
-
+        
         private WaitForSeconds _waitlifetime;
 
         public event Action<Bullet> LifespanEnded;
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.collider.TryGetComponent(out IBulletDestroyer _))
+            // if (collision.collider.TryGetComponent(out IBulletDestroyer _))
                 LifespanEnded?.Invoke(this);
         }
 

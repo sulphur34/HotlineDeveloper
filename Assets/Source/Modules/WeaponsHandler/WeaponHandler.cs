@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Modules.DamageSystem;
 using UnityEngine;
 using Modules.Weapons.WeaponItemSystem;
 using Modules.Weapons.WeaponTypeSystem;
@@ -13,6 +14,7 @@ namespace Modules.PlayerWeaponsHandler
         protected IPickInput _pickInput;
         private WeaponItem _currentWeaponItem;
         private WeaponItem _defaultWeaponItem;
+        private WeaponStrategy _weaponStrategy;
         private Transform _container;
         private Transform _pickPoint;
         private float _pickRadius;
@@ -36,14 +38,15 @@ namespace Modules.PlayerWeaponsHandler
             EquipWeaponItem(_defaultWeaponItem);              
         }
 
-        public void UnequipWeaponItem()
+        public void DisarmWeaponItem()
         {
             if (_currentWeaponItem == null || _currentWeaponItem == _defaultWeaponItem)
                 return;
             
+            _weaponStrategy.Unequip();
             _currentWeaponItem.Unequip();
             _currentWeaponItem.Attacked -= OnAttack;
-            _currentWeaponItem = null;
+            _currentWeaponItem = _defaultWeaponItem;
             _attackInput.AttackReceived -= OnAttackInputReceived;
 
             if (_defaultWeaponItem != null)
@@ -56,17 +59,15 @@ namespace Modules.PlayerWeaponsHandler
 
             if (CurrentWeaponItemIsEmpty == false && _currentWeaponItem.IsEquipped)
             {
-                _currentWeaponItem.Throw();
-                WeaponThrown?.Invoke();
+                WeaponItem weapon = _currentWeaponItem;
                 _currentWeaponItem.Attacked -= OnAttack;
+                WeaponThrown?.Invoke();
+                weapon.Throw();
                 _currentWeaponItem = _defaultWeaponItem;
                 _attackInput.AttackReceived -= OnAttackInputReceived;
             }
 
-            if (HasPickableWeapon)
-            {
-                EquipWeaponItem(weaponItem);
-            }
+            EquipWeaponItem(HasPickableWeapon ? weaponItem : _defaultWeaponItem);
         }
 
         private void EquipWeaponItem(WeaponItem weaponItem)
@@ -75,6 +76,8 @@ namespace Modules.PlayerWeaponsHandler
                 return;
             
             _currentWeaponItem = weaponItem;
+            _weaponStrategy = _currentWeaponItem.GetComponent<WeaponStrategy>();
+            _weaponStrategy.Equip(_container);
             _currentWeaponItem.Attacked += OnAttack;
             _currentWeaponItem.Equip(_container);
             WeaponPicked?.Invoke(_currentWeaponItem);

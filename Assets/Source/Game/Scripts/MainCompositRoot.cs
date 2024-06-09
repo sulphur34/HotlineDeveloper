@@ -11,15 +11,19 @@ public class MainCompositRoot : LifetimeScope
 
     private readonly SaveSystem _saveSystem = new SaveSystem();
 
+    private SaveData _saveData;
+
+    public void SetData(SaveData saveData)
+    {
+        _saveData = saveData;
+    }
+
     protected override void Configure(IContainerBuilder builder)
     {
-        _saveSystem.Load(data =>
-        {
-            InitLevels(data.LevelsData);
-            builder.RegisterInstance(data.LevelsData);
-            builder.Register<SceneLoader>(Lifetime.Singleton);
-            builder.RegisterComponentInHierarchy<Fade>();
-        });
+        InitLevels(_saveData.LevelsData);
+        builder.RegisterInstance(_saveData.LevelsData);
+        builder.Register<SceneLoader>(Lifetime.Singleton);
+        builder.RegisterComponentInHierarchy<Fade>();
     }
 
     private void InitLevels(LevelsData levels)

@@ -1,4 +1,5 @@
 using System;
+using Modules.DamageSystem;
 using Modules.InputSystem.Interfaces;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
@@ -10,6 +11,7 @@ namespace Modules.MoveSystem
     public class MoverSetup : MonoBehaviour
     {
         [SerializeField] private Transform _torsoRotator;
+        [SerializeField] private DamageReceiverView _damageReceiverView;
         
         private MoverPresenter _moverPresenter;
 

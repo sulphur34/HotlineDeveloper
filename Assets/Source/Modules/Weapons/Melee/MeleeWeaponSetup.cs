@@ -8,11 +8,12 @@ namespace Modules.Weapons.Melee
     {
         [SerializeField] private Collider _collider;
         [SerializeField] private float _attakTime;
+        [SerializeField] private float _rechargeTime;
         
         private void Awake()
         {
             MeleeAttackModule attackModule = new MeleeAttackModule(_collider, _attakTime, this.GetCancellationTokenOnDestroy());
-            Init(_attakTime, attackModule);
+            Init(_rechargeTime, attackModule);
         }
     }
 }

@@ -36,7 +36,7 @@ public class DesktopInputController : InputController
     {
         return PlayerInput.PlayerDesktop.Look.ReadValue<Vector2>();
     }
-    
+
     protected override void OnAttack()
     {
         if (PlayerInput.PlayerDesktop.Attack.IsPressed())

@@ -183,8 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _force: 50
-  _rotationForce: 5
-  <Offset>k__BackingField: {x: 0, y: 0, z: 0.3}
+  _rotationForce: 50
+  <Offset>k__BackingField: {x: 0, y: 0, z: 1}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 7068939354618519505}
   <RightHandPlaceHolder>k__BackingField: {fileID: 8877512346251633809}
 --- !u!114 &4011363698849717035
@@ -201,7 +201,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 1900390633488517474}
   _collider: {fileID: 8593785672849647544}
-  _attakTime: 1
+  _attakTime: 0.1
+  _rechargeTime: 1
 --- !u!114 &627614415898634385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,8 +229,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damageData:
     WeaponType: 0
-    Value: 0
-    IsKnockout: 1
+    Value: 1
+    IsKnockout: 0
     IsLethal: 0
 --- !u!1 &2840091701246223530
 GameObject:
