@@ -14,7 +14,6 @@ public class Bootstrap : MonoBehaviour
     private IEnumerator Start()
     {
         yield return StartCoroutine(InitSDK());
-        PlayerPrefs.DeleteAll();
 
         _saveSystem.Load(data =>
         {
