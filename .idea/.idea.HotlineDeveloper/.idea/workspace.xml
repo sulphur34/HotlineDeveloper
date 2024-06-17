@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="096f9c91-8365-4be6-8d8f-87ad3dc5adea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Bootstrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Bootstrap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/EnemyTrapStrategy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/EnemyTrapStrategy.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Teleport.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Teleport/Teleport.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/Teleport/Teleport.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level18.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level18.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelDecorations/TestLevel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelDecorations/TestLevel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,10 +141,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8204">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="8204" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -239,7 +248,8 @@
       <workItem from="1718275719459" duration="1966000" />
       <workItem from="1718364823055" duration="4565000" />
       <workItem from="1718460669168" duration="1835000" />
-      <workItem from="1718618210490" duration="682000" />
+      <workItem from="1718618210490" duration="1271000" />
+      <workItem from="1718655844540" duration="2723000" />
     </task>
     <servers />
   </component>
@@ -476,12 +486,6 @@
           <option name="timeStamp" value="130" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/Damager.cs</url>
-          <line>18</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\Damager\Damager.cs" initialLine="19" containingFunctionPresentation="method 'OnTriggerEnter'" />
-          <option name="timeStamp" value="155" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandler.cs</url>
           <line>42</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\WeaponsHandler\WeaponHandler.cs" initialLine="42" containingFunctionPresentation="method 'DisarmWeaponItem'">
@@ -521,30 +525,17 @@
           <option name="timeStamp" value="175" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/LevelSelectionSystem/LevelSelectionPresenter.cs</url>
-          <line>28</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\LevelSelectionSystem\LevelSelectionPresenter.cs" initialLine="28" containingFunctionPresentation="constructor 'LevelSelectionPresenter'">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/Teleport/Teleport.cs</url>
+          <line>13</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Teleport\Teleport.cs" initialLine="10" containingFunctionPresentation="method 'OnTriggerEnter'">
             <startOffsets>
-              <option value="977" />
+              <option value="424" />
             </startOffsets>
             <endOffsets>
-              <option value="1033" />
+              <option value="473" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="176" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Game/Scripts/MainCompositRoot.cs</url>
-          <line>30</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Game\Scripts\MainCompositRoot.cs" initialLine="30" containingFunctionPresentation="method 'InitLevels'">
-            <startOffsets>
-              <option value="783" />
-            </startOffsets>
-            <endOffsets>
-              <option value="810" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="177" />
+          <option name="timeStamp" value="178" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
