@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using VContainer;
 
 namespace Modules.LevelsSystem
@@ -7,10 +8,15 @@ namespace Modules.LevelsSystem
     {
         private Level _level;
 
+        public event Action LevelCompleted;
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.K))
+            {
                 _level.Complete();
+                LevelCompleted?.Invoke();
+            }
         }
 
         [Inject]
