@@ -39,6 +39,21 @@ namespace Modules.SavingsSystem
             });
         }
 
+        public void Clear()
+        {
+            if (Application.isEditor || PlayerAccount.IsAuthorized == false)
+            {
+                string saveDataJson = JsonUtility.ToJson(new SaveData(), true);
+                PlayerPrefs.SetString(SaveDataPrefsKey, saveDataJson);
+                return;
+            }
+
+            PlayerAccount.GetCloudSaveData(data =>
+            {
+                PlayerAccount.SetCloudSaveData(JsonUtility.ToJson(new SaveData()));
+            });
+        }
+
         private void SaveToPrefs(Action<SaveData> dataChanges)
         {
             SaveData saveData = LoadFromPrefs();
