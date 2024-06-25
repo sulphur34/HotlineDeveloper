@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 5146112849817749531}
   - component: {fileID: 7291154123027153845}
   m_Layer: 0
-  m_Name: FanaticSimple
+  m_Name: FanaticSimple 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -709,7 +709,10 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'Arm.R'\n\tFrom animation clip 'MeleeAttackDoubleHanded'\n\tFrom
+    animation clip 'MeleeAttack'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -1376,7 +1379,7 @@ GameObject:
   - component: {fileID: 952649228265394756}
   - component: {fileID: 345650631932796505}
   m_Layer: 0
-  m_Name: TShirt
+  m_Name: Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1417,7 +1420,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e72b7111612ba2745ab2e8e04e6dbafa, type: 2}
+  - {fileID: 2100000, guid: b8235ffaff893414d8334118dc2d1392, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1442,7 +1445,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 7870561040409792893, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
+  m_Mesh: {fileID: -4095235820967679849, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
   m_Bones:
   - {fileID: 5590459887692771352}
   - {fileID: 5866495760116559690}
@@ -1522,7 +1525,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e72b7111612ba2745ab2e8e04e6dbafa, type: 2}
+  - {fileID: 2100000, guid: b8235ffaff893414d8334118dc2d1392, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1547,7 +1550,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 7666266049737368757, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
+  m_Mesh: {fileID: -4663933659748492263, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
   m_Bones:
   - {fileID: 5590459887692771352}
   - {fileID: 5866495760116559690}
@@ -2817,7 +2820,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
+  - {fileID: 2100000, guid: b4ec45641a2adfb4fa54e70ec0aa6903, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
