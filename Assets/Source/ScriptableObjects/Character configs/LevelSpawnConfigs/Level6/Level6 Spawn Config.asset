@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b313fc2d3ebc467f8e86ca26ca0e207d, type: 3}
-  m_Name: PlayerDamageableConfig
+  m_Script: {fileID: 11500000, guid: be7006f54e1c4416a1d6c73e935f23cb, type: 3}
+  m_Name: Level6 Spawn Config
   m_EditorClassIdentifier: 
-  damageReceiveStrategies: 4
-  <MaxValue>k__BackingField: 1
-  <RecoverTime>k__BackingField: 0
+  <EnemySpawnConfigs>k__BackingField:
+  - {fileID: 11400000, guid: 749bb245ce4a0ba44ac38743e9d39b4e, type: 2}
