@@ -15,7 +15,7 @@ namespace Modules.DamageSystem
             OwnerDamageReceiver = owner.GetComponentInParent<DamageReceiverView>();
         }
 
-        public void Unequip()
+        public void ClearOwner()
         {
             OwnerDamageReceiver = null;
         }

@@ -13,22 +13,20 @@ namespace Source.Game.Scripts.Animations
         private AnimatorController _animatorController;
         private Transform _transform;
         private Animator _animator;
-        private CancellationTokenSource _cancellationTokenSource;
 
         private void Awake()
         {
             _animator = GetComponent<Animator>();
             _transform = transform;
-            _cancellationTokenSource = new CancellationTokenSource();
             _constrainsController = new ConstrainsController(_constraintsData);
             _ragdollController = new RagdollController(_ragdollJointsData);
-            _animatorController = new AnimatorController(_animator, _transform, _cancellationTokenSource);
+            _animatorController = new AnimatorController(_animator, _transform, this);
             _animatorController.Activate();
         }
 
         private void OnDisable()
         {
-            _cancellationTokenSource?.Cancel();
+            _animatorController.Deactivate();
         }
 
         public void FallDown()
@@ -40,8 +38,8 @@ namespace Source.Game.Scripts.Animations
 
         public void StandUp()
         {
-            _animatorController.Activate();
             _ragdollController.Deactivate();
+            _animatorController.Activate();
         }
 
         public void AttackMelee()

@@ -5,6 +5,7 @@ namespace Modules.DamageSystem.DamageStrategy
         KnockoutImmune,
         MeleeImmune,
         AlwaysLethal,
-        Normal
+        Normal,
+        Immortal
     }
 }
