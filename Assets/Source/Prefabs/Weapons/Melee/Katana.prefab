@@ -42,12 +42,12 @@ GameObject:
   - component: {fileID: 8891415430297719539}
   - component: {fileID: 3823502920157460222}
   - component: {fileID: 4009428097002930321}
-  - component: {fileID: 5326920091540888284}
   - component: {fileID: 1068013489360208351}
   - component: {fileID: 667668127749409297}
   - component: {fileID: 8273176280618394754}
   - component: {fileID: 6006565654179322331}
   - component: {fileID: -6737676505857140978}
+  - component: {fileID: -5403674297062241196}
   m_Layer: 0
   m_Name: Katana
   m_TagString: Untagged
@@ -122,27 +122,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5326920091540888284
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4848934772374328225}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.09007355, y: 0.9149133, z: 0.10664568}
-  m_Center: {x: -0.0004192628, y: 0.31387585, z: 0.0016026832}
 --- !u!54 &1068013489360208351
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -185,7 +164,7 @@ MonoBehaviour:
   _force: 50
   _rotationForce: 50
   <Offset>k__BackingField: {x: 0, y: 0, z: 1}
-  <LeftHandPlaceHolder>k__BackingField: {fileID: 8949066016778978108}
+  <LeftHandPlaceHolder>k__BackingField: {fileID: 0}
   <RightHandPlaceHolder>k__BackingField: {fileID: 3315836752861198698}
 --- !u!114 &8273176280618394754
 MonoBehaviour:
@@ -200,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 667668127749409297}
-  _collider: {fileID: 5326920091540888284}
+  _collider: {fileID: -5403674297062241196}
   _attakTime: 0.1
   _rechargeTime: 1
 --- !u!114 &6006565654179322331
@@ -232,6 +211,27 @@ MonoBehaviour:
     Value: 1
     IsKnockout: 0
     IsLethal: 0
+--- !u!65 &-5403674297062241196
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4848934772374328225}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09007355, y: 0.9149133, z: 0.10664567}
+  m_Center: {x: -0.0004192628, y: 0.31387585, z: 0.0016026963}
 --- !u!1 &7606651805174572189
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 5769009256673824534}
   - component: {fileID: 4489031486731243287}
   - component: {fileID: 6706043721197310192}
-  - component: {fileID: 2726119245371092184}
   - component: {fileID: 5423012255868977826}
   - component: {fileID: 2200328212986599487}
   - component: {fileID: 5479516695362830422}
   - component: {fileID: 4622082467335475288}
   - component: {fileID: -5505716769505941542}
+  - component: {fileID: -280465796086505093}
   m_Layer: 0
   m_Name: HammerTypeTwo
   m_TagString: Untagged
@@ -90,27 +90,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2726119245371092184
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6396209320589532248}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.07120422, y: 0.3156023, z: 0.11393267}
-  m_Center: {x: -0.0024071373, y: 0.024275854, z: -0.00000042654574}
 --- !u!54 &5423012255868977826
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 2200328212986599487}
-  _collider: {fileID: 2726119245371092184}
+  _collider: {fileID: -280465796086505093}
   _attakTime: 0.1
   _rechargeTime: 1
 --- !u!114 &4622082467335475288
@@ -200,6 +179,27 @@ MonoBehaviour:
     Value: 1
     IsKnockout: 0
     IsLethal: 0
+--- !u!65 &-280465796086505093
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6396209320589532248}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.071204245, y: 0.3156023, z: 0.113932684}
+  m_Center: {x: -0.0024071373, y: 0.11535586, z: -0.00000038184226}
 --- !u!1 &8156761793493951458
 GameObject:
   m_ObjectHideFlags: 0
