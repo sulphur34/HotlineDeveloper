@@ -8,7 +8,8 @@ namespace Modules.DamageSystem
         [SerializeField] private DamageableConfig _normalEnemyConfig;
         [SerializeField] private DamageableConfig _strongEnemyConfig;
         [SerializeField] private DamageableConfig _bossEnemyConfig;
-        [SerializeField] private DamageableConfig _playerConfig;
+        [SerializeField] private DamageableConfig _immortalConfig;
+        [SerializeField] private DamageableConfig _alwaysLethalConfig;
 
         public DamageableConfig GetConfig(DamageableTypes damageableType)
         {
@@ -17,7 +18,8 @@ namespace Modules.DamageSystem
                 DamageableTypes.Normal => _normalEnemyConfig,
                 DamageableTypes.Strong => _strongEnemyConfig,
                 DamageableTypes.Boss => _bossEnemyConfig,
-                DamageableTypes.Player => _playerConfig,
+                DamageableTypes.Immortal => _immortalConfig,
+                DamageableTypes.AlwaysLethal => _alwaysLethalConfig,
                 _ => _normalEnemyConfig
             };
         }

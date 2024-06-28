@@ -25,6 +25,8 @@ public class LevelCompositRoot : LifetimeScope
     [SerializeField] private GameObject _weaponSetupsParent;
     [SerializeField] private Player _player;
 
+    private RegistrationBuilder _playerRegistration;
+
     protected override void OnDestroy()
     {
         Dispose();
@@ -56,7 +58,6 @@ public class LevelCompositRoot : LifetimeScope
     private void InputConfigure(IContainerBuilder builder)
     {
         builder.RegisterInstance(_player);
-
         InputController inputController;
 
         if (Application.isMobilePlatform)
@@ -72,13 +73,8 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterInstance(_damageableConfigFactory);
         builder.RegisterComponentInHierarchy<DamageReceiverSetup>();
         builder.RegisterComponentInHierarchy<WeaponStrategy>();
-        
-        builder.RegisterBuildCallback(container =>
-        {
-            container
-                .Resolve<Player>().GetComponent<DamageReceiverSetup>()
-                .Initialize(_damageableConfigFactory.GetConfig(DamageableTypes.Player));
-        });
+        DamageableConfig damageableConfig = _damageableConfigFactory.GetConfig(DamageableTypes.Immortal);
+        _player.GetComponent<DamageReceiverSetup>().Initialize(damageableConfig);
     } 
 
     private void WeaponConfigure(IContainerBuilder builder)

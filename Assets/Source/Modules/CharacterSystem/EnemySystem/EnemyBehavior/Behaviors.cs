@@ -5,6 +5,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior
         Normal,
         Strong,
         Boss,
-        Peace
+        Peace,
+        Fanatic
     }
 }

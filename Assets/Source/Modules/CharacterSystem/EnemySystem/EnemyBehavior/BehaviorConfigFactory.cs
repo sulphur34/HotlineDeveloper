@@ -10,7 +10,7 @@ namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior
         [SerializeField] private BehaviorConfig _strongConfig;
         [SerializeField] private BehaviorConfig _bossConfig;
         [SerializeField] private BehaviorConfig _peaceConfig;
-        
+        [SerializeField] private BehaviorConfig _fanaticConfig;
 
         public BehaviorConfig GetBehavior(Behaviors behavior)
         {
@@ -20,7 +20,8 @@ namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior
                 Behaviors.Strong => _strongConfig,
                 Behaviors.Boss => _bossConfig,
                 Behaviors.Peace => _peaceConfig,
-                _ => _normalConfig
+                Behaviors.Fanatic => _fanaticConfig,
+                _ => _peaceConfig
             };
         }
     }

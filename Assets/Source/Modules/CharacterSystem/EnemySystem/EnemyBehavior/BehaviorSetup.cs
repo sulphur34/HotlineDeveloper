@@ -54,15 +54,6 @@ namespace Modules.Characters.Enemies.EnemyBehavior
 
         private void SetBehaviour()
         {
-            _behaviorTree.ExternalBehavior = _behaviorConfig.BehaviourTree;
-
-            foreach (KeyValuePair<string, float> parameter in _behaviorConfig.GetParameters())
-                SetVariable(parameter);
-
-            SetVariable(_patrolRoute.GetRoute());
-            SetVariable(new KeyValuePair<string, AiInput>(AiInputName, _aiInput));
-            SetVariable(new KeyValuePair<string, DamageReceiverView>(DamageReceiverName, _damageReceiver));
-            
             SetGlobalVariable(
                 new KeyValuePair<string, WeaponTracker>(WeaponTrackerName, _weaponTracker),
                 new SharedWeaponTracker());
@@ -72,6 +63,15 @@ namespace Modules.Characters.Enemies.EnemyBehavior
             SetGlobalVariable(
                 new KeyValuePair<string, WeaponHandlerView>(PlayerWeaponHandlerName, _playerWeaponHandlerView),
                 new SharedPlayerWeaponHandler());
+            
+            _behaviorTree.ExternalBehavior = _behaviorConfig.BehaviourTree;
+            
+            foreach (KeyValuePair<string, float> parameter in _behaviorConfig.GetParameters())
+                SetVariable(parameter);
+
+            SetVariable(_patrolRoute.GetRoute());
+            SetVariable(new KeyValuePair<string, AiInput>(AiInputName, _aiInput));
+            SetVariable(new KeyValuePair<string, DamageReceiverView>(DamageReceiverName, _damageReceiver));
         }
 
         private void SetVariable<T>(KeyValuePair<string, T> variableData)

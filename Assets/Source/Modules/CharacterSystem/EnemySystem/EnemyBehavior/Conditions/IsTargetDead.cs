@@ -12,9 +12,10 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
 
         private DamageReceiverView _playerDamageReceiverView;
 
-        public override void OnAwake()
+        public override void OnStart()
         {
-            _playerDamageReceiverView = Target.Value.GetComponent<DamageReceiverView>();
+            if(_playerDamageReceiverView == null)
+                _playerDamageReceiverView = Target.Value .GetComponent<DamageReceiverView>();
         }
 
         public override TaskStatus OnUpdate()

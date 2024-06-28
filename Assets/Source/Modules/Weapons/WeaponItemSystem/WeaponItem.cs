@@ -8,6 +8,7 @@ namespace Modules.Weapons.WeaponItemSystem
 {
     public class WeaponItem : MonoBehaviour, IWeaponInfo
     {
+        [field: SerializeField] public bool IsTrackable { get; private set; } = true;
         [SerializeField] private float _force;
         [SerializeField] private float _rotationForce;
 
