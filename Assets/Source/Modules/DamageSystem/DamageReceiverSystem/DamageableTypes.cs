@@ -5,6 +5,6 @@ namespace Modules.DamageSystem
         Normal,
         Strong,
         Boss,
-        Player
+        Player,
     }
 }

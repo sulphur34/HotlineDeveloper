@@ -686,6 +686,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8338435824039458824}
   - {fileID: 3350675900982152164}
   - {fileID: 3691761033269639617}
   - {fileID: 3937456840321426728}
@@ -709,7 +710,10 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'Arm.R'\n\tFrom animation clip 'MeleeAttackDoubleHanded'\n\tFrom
+    animation clip 'MeleeAttack'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -871,7 +875,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 10
   m_Acceleration: 200
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -951,7 +955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponHandlerData:
-    <DefaultWeapon>k__BackingField: {fileID: 0}
+    <DefaultWeapon>k__BackingField: {fileID: 5001192162991092020}
     <Container>k__BackingField: {fileID: 7588973752226332405}
     <PickPoint>k__BackingField: {fileID: 5625249169897990966}
     <PickRadius>k__BackingField: 2
@@ -1034,7 +1038,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: f00aba45bb90ae9459330cab171d8138, type: 3}
+  - {fileID: -6478536213147159724, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3165,7 +3169,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: f00aba45bb90ae9459330cab171d8138, type: 3}
+  - {fileID: -6478536213147159724, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3218,3 +3222,84 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0031647235, y: -0.06375295, z: -0.0000002682209}
     m_Extent: {x: 0.258874, y: 0.9761711, z: 0.5549394}
   m_DirtyAABB: 0
+--- !u!1001 &7113516086008416529
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3480392739866088333}
+    m_Modifications:
+    - target: {fileID: 1225078067723792665, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225078067723792665, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225078067723792665, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225078067723792665, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225078067723792665, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225078067723792665, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225078067723792665, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225078067723792665, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225078067723792665, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225078067723792665, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916352501360213560, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916352501360213560, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_Center.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155049631125485025, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+      propertyPath: m_Name
+      value: Knuckles
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+--- !u!114 &5001192162991092020 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2873161282234759205, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+  m_PrefabInstance: {fileID: 7113516086008416529}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &8338435824039458824 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1225078067723792665, guid: fc65a44150caad14db14dfae9da7542a, type: 3}
+  m_PrefabInstance: {fileID: 7113516086008416529}
+  m_PrefabAsset: {fileID: 0}
