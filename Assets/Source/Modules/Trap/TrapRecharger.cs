@@ -23,7 +23,8 @@ public class TrapRecharger : MonoBehaviour
 
     private void OnDisable()
     {
-        StopCoroutine(_coroutine);
+        if(_coroutine != null)
+            StopCoroutine(_coroutine);
     }
 
     private void OnEnemyDamage()

@@ -30,6 +30,9 @@ namespace Modules.DamageSystem
                 
                 case DamageReceiveStrategies.Immortal:
                     return new ImmortalReceiveStrategy();
+                
+                case DamageReceiveStrategies.LethalAsNormal:
+                    return new LethalAsNormalReceiveStrategy();
 
                 default:
                     return new NormalDamageReceiveStrategy();
