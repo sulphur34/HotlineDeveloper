@@ -8,6 +8,7 @@ internal class RagdollController
     public RagdollController(RagdollJointData[] ragdollJointsData)
     {
         _ragdollJointsData = ragdollJointsData;
+        Deactivate();
     }
 
     public void Activate()

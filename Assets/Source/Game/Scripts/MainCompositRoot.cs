@@ -7,7 +7,7 @@ using VContainer.Unity;
 
 public class MainCompositRoot : LifetimeScope
 {
-    private const uint LevelsCount = 5;
+    private const uint LevelsCount = 21;
 
     private readonly SaveSystem _saveSystem = new SaveSystem();
 

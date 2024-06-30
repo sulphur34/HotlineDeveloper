@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -17,12 +18,14 @@ namespace Source.Game.Scripts.Animations
         private readonly int _bareHandsAttackIndex;
         private readonly int _speedIndex;
         private readonly Animator _animator;
+        private readonly AnimationController _animationController;
         private readonly Transform _transform;
         private readonly CancellationTokenSource _cancellationTokenSource;
-        
+
+        private Coroutine _coroutine; 
         private Vector3 _oldPosition;
 
-        public AnimatorController(Animator animator, Transform transform, CancellationTokenSource cancellationTokenSource)
+        public AnimatorController(Animator animator, Transform transform, AnimationController animationController)
         {
             _twoHandsAttackIndex = Animator.StringToHash(TwoHandsAttackName);
             _bareHandsAttackIndex = Animator.StringToHash(BareHandsAttack);
@@ -30,18 +33,18 @@ namespace Source.Game.Scripts.Animations
             _speedIndex = Animator.StringToHash(SpeedName);
             _animator = animator;
             _transform = transform;
-            _cancellationTokenSource = cancellationTokenSource;
+            _animationController = animationController;
         }
 
         public void Activate()
         {
             _animator.enabled = true;
-            TrackingSpeed(_cancellationTokenSource.Token);
+            _coroutine = _animationController.StartCoroutine(TrackingSpeed());
         }
 
         public void Deactivate()
         {
-            _cancellationTokenSource.Cancel();
+            _animationController.StopCoroutine(_coroutine);
             _animator.enabled = false;
         }
 
@@ -59,15 +62,15 @@ namespace Source.Game.Scripts.Animations
         {
             _animator.SetTrigger(_bareHandsAttackIndex);
         }
-        
-        private async UniTask TrackingSpeed(CancellationToken cancellationToken)
+
+        private IEnumerator TrackingSpeed()
         {
-            while (!cancellationToken.IsCancellationRequested)
+            while (true)
             {
                 float distance = Vector3.Magnitude(_transform.position - _oldPosition);
                 _animator.SetFloat(_speedIndex, distance);
                 _oldPosition = _transform.position;
-                await UniTask.Yield(PlayerLoopTiming.Update);
+                yield return null;
             }
         }
     }

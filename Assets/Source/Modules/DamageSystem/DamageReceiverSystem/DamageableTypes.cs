@@ -5,6 +5,7 @@ namespace Modules.DamageSystem
         Normal,
         Strong,
         Boss,
-        Player
+        Immortal,
+        AlwaysLethal
     }
 }

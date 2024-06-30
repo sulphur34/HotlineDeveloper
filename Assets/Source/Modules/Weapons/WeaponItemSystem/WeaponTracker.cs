@@ -11,7 +11,7 @@ public class WeaponTracker : MonoBehaviour
     [Inject]
     public void Construct()
     {
-        _weapons = GetComponentsInChildren<WeaponItem>().ToList();
+        _weapons = GetComponentsInChildren<WeaponItem>().Where(weaponItem => weaponItem.IsTrackable).ToList();
     }
 
     public void Add(WeaponItem weaponItem)

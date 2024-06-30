@@ -9,7 +9,12 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
     public class IsDead : Conditional
     {
         public SharedDamageReceiver _damageReceiver;
-        
+
+        public override void OnAwake()
+        {
+            _damageReceiver.Value = GetComponent<DamageReceiverView>();
+        }
+
         public override TaskStatus OnUpdate()
         {
             return _damageReceiver.Value.IsDead ? TaskStatus.Success : TaskStatus.Failure;
