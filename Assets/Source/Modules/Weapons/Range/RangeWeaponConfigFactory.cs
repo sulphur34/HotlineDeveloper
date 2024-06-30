@@ -7,7 +7,13 @@ namespace Modules.Weapons.Range
     public class RangeWeaponConfigFactory : ScriptableObject
     {
         [field: SerializeField] internal RangeWeaponConfig Pistol { get; private set; }
+        
+        [field: SerializeField] internal RangeWeaponConfig NoHarmPistol { get; private set; }
         [field: SerializeField] internal RangeWeaponConfig Shotgun { get; private set; }
+        
+        [field: SerializeField] internal RangeWeaponConfig AssaultRifle { get; private set; }
+        
+        [field: SerializeField] internal RangeWeaponConfig SubmachineGun { get; private set; }
 
         internal RangeWeaponConfig Get(ShotStrategy shotStrategy)
         {
