@@ -8,6 +8,8 @@ namespace Modules.Weapons
     internal abstract class ShotStrategy : MonoBehaviour
     {
         [SerializeField] private BulletSpawnPoint _bulletSpawnPoint;
+        [SerializeField] private float _minAngle;
+        [SerializeField] private float _maxAngle;
         
         private RangeWeaponConfig _config;
         private BulletPool _bulletPool;
@@ -33,6 +35,11 @@ namespace Modules.Weapons
             Bullet bullet = _bulletPool.Get();
             bullet.SetPosition(_bulletSpawnPoint.transform.position);
             return bullet;
+        }
+
+        protected float GetRandomShotAngle()
+        {
+            return Random.Range(_minAngle, _maxAngle);
         }
     }
 }
