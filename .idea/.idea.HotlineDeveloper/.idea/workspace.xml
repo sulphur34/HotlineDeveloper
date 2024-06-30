@@ -3,8 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="096f9c91-8365-4be6-8d8f-87ad3dc5adea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level14.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level14.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelDecorations/Maps/Level14 - Scratching the sky.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelDecorations/Maps/Level14 - Scratching the sky.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level19.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level19.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level20.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level20.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level21.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level21.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level3/NavMesh-Level3 - Stocks fall.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level3/NavMesh-Level3 - Stocks fall.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level3/NavMesh-PolyShape (51).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level3/NavMesh-PolyShape (51).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level4.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level4/NavMesh-Level4 - RanOutOfFuel 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level4/NavMesh-Level4 - RanOutOfFuel 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level4/NavMesh-Level4 - RanOutOfFuel.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level4/NavMesh-Level4 - RanOutOfFuel.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level8.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Models/Weapons/MeleeWeapons1.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Models/Weapons/MeleeWeapons1.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/EnemyTrapStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/EnemyTrapStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/Damager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/Damager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Enemies/Boss/Boss5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Characters/Enemies/Boss/Boss5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelDecorations/Maps/Level19 - WalkOnWater.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelDecorations/Maps/Level19 - WalkOnWater.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelDecorations/Maps/Level20 - Trait or Treat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelDecorations/Maps/Level20 - Trait or Treat.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelDecorations/Maps/Level21 - Luring the evil.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/LevelDecorations/Maps/Level21 - Luring the evil.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,10 +159,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="704">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="704" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -254,6 +273,8 @@
       <workItem from="1719389248690" duration="14182000" />
       <workItem from="1719499339830" duration="2820000" />
       <workItem from="1719564999874" duration="15264000" />
+      <workItem from="1719659384462" duration="1243000" />
+      <workItem from="1719732236957" duration="4251000" />
     </task>
     <servers />
   </component>
@@ -521,6 +542,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="197" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/Trap/TrapRecharger.cs</url>
+          <line>30</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Trap\TrapRecharger.cs" initialLine="29" containingFunctionPresentation="method 'Recharge'">
+            <startOffsets>
+              <option value="775" />
+            </startOffsets>
+            <endOffsets>
+              <option value="824" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/Trap/TrapRecharger.cs</url>
+          <line>36</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Trap\TrapRecharger.cs" initialLine="34" containingFunctionPresentation="method 'RechargingRoutine'">
+            <startOffsets>
+              <option value="920" />
+            </startOffsets>
+            <endOffsets>
+              <option value="946" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="199" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
