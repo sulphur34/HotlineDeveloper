@@ -6,6 +6,7 @@ namespace Modules.DamageSystem.DamageStrategy
         MeleeImmune,
         AlwaysLethal,
         Normal,
-        Immortal
+        Immortal,
+        LethalAsNormal
     }
 }
