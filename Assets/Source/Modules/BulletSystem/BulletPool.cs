@@ -10,15 +10,13 @@ namespace Modules.BulletPoolSystem
     public class BulletPool : IDisposable
     {
         private readonly Bullet _prefab;
-        private readonly Transform _container;
         private readonly ObjectPool<Bullet> _pool;
 
         private readonly List<Bullet> _bullets = new List<Bullet>();
 
-        public BulletPool(Bullet prefab, Transform container)
+        public BulletPool(Bullet prefab)
         {
             _prefab = prefab;
-            _container = container;
             _pool = new ObjectPool<Bullet>(OnCreate, OnGet, OnRelease, OnDestroy);
         }
 
@@ -37,7 +35,7 @@ namespace Modules.BulletPoolSystem
 
         private Bullet OnCreate()
         {
-            Bullet bullet = Object.Instantiate(_prefab, _container);
+            Bullet bullet = Object.Instantiate(_prefab);
             _bullets.Add(bullet);
             bullet.LifespanEnded += OnLifespanEnded;
             return bullet;
