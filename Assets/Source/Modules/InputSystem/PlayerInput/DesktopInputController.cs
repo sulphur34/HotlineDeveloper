@@ -29,7 +29,8 @@ public class DesktopInputController : InputController
         Vector2 direction = PlayerInput.PlayerDesktop.Rotate.ReadValue<Vector2>();
         direction = new Vector2(direction.x / Screen.width, direction.y / Screen.height);
         direction = direction * _screenToVirtualMultiplier - _vectorOne;
-        return direction;
+        Vector2 modifiedDirection = new Vector2(direction.x * Camera.pixelWidth, direction.y * Camera.pixelHeight);
+        return modifiedDirection;
     }
 
     protected override Vector2 OnLook()

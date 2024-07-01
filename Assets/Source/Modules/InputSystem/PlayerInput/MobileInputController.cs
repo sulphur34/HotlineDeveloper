@@ -23,7 +23,9 @@ public class MobileInputController : InputController
 
     protected override Vector2 OnRotate()
     {
-        return PlayerInput.PlayerMobile.Rotate.ReadValue<Vector2>();
+        Vector2 direction = PlayerInput.PlayerMobile.Rotate.ReadValue<Vector2>();
+        Vector2 modifiedDirection = new Vector2(direction.x * Camera.pixelWidth, direction.y * Camera.pixelHeight);
+        return modifiedDirection;
     }
 
     protected override Vector2 OnLook()

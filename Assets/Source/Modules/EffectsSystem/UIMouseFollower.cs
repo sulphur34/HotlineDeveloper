@@ -19,7 +19,5 @@ public class FollowMouse : MonoBehaviour
         RectTransformUtility.ScreenPointToLocalPointInRectangle(_parentRectTransform, mousePosition,
             null, out movePos);
         rectTransform.anchoredPosition = movePos;
-        
-        
     }
 }
