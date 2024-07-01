@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6292106303923681090}
   - component: {fileID: -4253114707875468970}
   - component: {fileID: 8107042506090293653}
-  - component: {fileID: 4372648908851876939}
+  - component: {fileID: 8654880227727016067}
   m_Layer: 0
   m_Name: SMG_04_Circle.001
   m_TagString: Untagged
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 6292106303923681090}
-  _shotStrategy: {fileID: 4372648908851876939}
+  _shotStrategy: {fileID: 8654880227727016067}
 --- !u!114 &6292106303923681090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <IsTrackable>k__BackingField: 1
   _force: 50
   _rotationForce: 5
   <Offset>k__BackingField: {x: -0.4, y: 0.4, z: 0}
@@ -201,7 +202,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
---- !u!114 &4372648908851876939
+--- !u!114 &8654880227727016067
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,10 +211,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 722550349514955673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7883593e6fbea894f87bb9623a16ecf6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7cb0759df9a0405c8534b28a82aab63c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 7019372040029949437}
+  _minAngle: -5
+  _maxAngle: 5
 --- !u!1 &3621618841633259073
 GameObject:
   m_ObjectHideFlags: 0

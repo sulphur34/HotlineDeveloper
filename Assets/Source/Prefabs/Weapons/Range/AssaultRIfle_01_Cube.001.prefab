@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6994535488271553854}
   - component: {fileID: -4867921186307607783}
   - component: {fileID: -9023587668943403869}
-  - component: {fileID: 6200893423660131694}
+  - component: {fileID: 3979861434197846390}
   m_Layer: 0
   m_Name: AssaultRIfle_01_Cube.001
   m_TagString: Untagged
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 6994535488271553854}
-  _shotStrategy: {fileID: 6200893423660131694}
+  _shotStrategy: {fileID: 3979861434197846390}
 --- !u!114 &6994535488271553854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <IsTrackable>k__BackingField: 1
   _force: 30
   _rotationForce: 5
   <Offset>k__BackingField: {x: -0.4, y: 0.4, z: 0}
@@ -201,7 +202,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
---- !u!114 &6200893423660131694
+--- !u!114 &3979861434197846390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,10 +211,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5322712272813003720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7883593e6fbea894f87bb9623a16ecf6, type: 3}
+  m_Script: {fileID: 11500000, guid: 742784e5ae0c458cb9020e2d0f9adbef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 5994431272203113816}
+  _minAngle: -3
+  _maxAngle: 3
 --- !u!1 &5744387659807287628
 GameObject:
   m_ObjectHideFlags: 0

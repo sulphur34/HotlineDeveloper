@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -8801412859410491620}
   - component: {fileID: -8895217915275420420}
   - component: {fileID: -6558430882562428286}
-  - component: {fileID: 4799506229164001677}
+  - component: {fileID: 4787710054645971459}
   m_Layer: 0
   m_Name: Revolver_02_Cube
   m_TagString: Untagged
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: -8801412859410491620}
-  _shotStrategy: {fileID: 4799506229164001677}
+  _shotStrategy: {fileID: 4787710054645971459}
 --- !u!114 &-8801412859410491620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <IsTrackable>k__BackingField: 1
   _force: 20
   _rotationForce: 5
   <Offset>k__BackingField: {x: -0.5, y: 0.4, z: 0}
@@ -201,7 +202,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
---- !u!114 &4799506229164001677
+--- !u!114 &4787710054645971459
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,10 +211,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1106652763134404480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7883593e6fbea894f87bb9623a16ecf6, type: 3}
+  m_Script: {fileID: 11500000, guid: e434bfae7cb74be49782c189ec976fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 2331242976937726694}
+  _minAngle: -2
+  _maxAngle: 2
 --- !u!1 &1406284630604572075
 GameObject:
   m_ObjectHideFlags: 0

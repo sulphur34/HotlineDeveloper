@@ -242,6 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <IsTrackable>k__BackingField: 1
   _force: 20
   _rotationForce: 5
   <Offset>k__BackingField: {x: -0.5, y: 0.4, z: 0}
@@ -289,6 +290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 5469216992745382097}
+  _minAngle: -3
+  _maxAngle: 3
 --- !u!1 &7933790667656177976
 GameObject:
   m_ObjectHideFlags: 0
