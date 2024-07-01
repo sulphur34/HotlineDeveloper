@@ -8,22 +8,26 @@ namespace Modules.BulletSystem
     {
         [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private float _lifetime;
-        
+        [field: SerializeField] public Collider Collider { get; private set; }
+
         private WaitForSeconds _waitlifetime;
-
+        private Coroutine _coroutine;
+        
+        public event Action<Bullet> LifespanStarted;
         public event Action<Bullet> LifespanEnded;
-
+        
         private void OnCollisionEnter(Collision collision)
         {
-            // if (collision.collider.TryGetComponent(out IBulletDestroyer _))
-                LifespanEnded?.Invoke(this);
+            if (_coroutine != null)
+                StopCoroutine(_coroutine);
+
+            LifespanEnded?.Invoke(this);
         }
 
         public void Init(Vector3 direction, float speed)
         {
             _waitlifetime = new WaitForSeconds(_lifetime);
-            StartCoroutine(StartLifetime());
-
+            _coroutine = StartCoroutine(StartLifetime());
             _rigidbody.rotation = Quaternion.FromToRotation(Vector3.up, direction);
             _rigidbody.velocity = direction * speed;
         }
@@ -31,6 +35,7 @@ namespace Modules.BulletSystem
         public void SetPosition(Vector3 position)
         {
             _rigidbody.position = position;
+            LifespanStarted?.Invoke(this);
         }
 
         public void SetInterpolation(RigidbodyInterpolation interpolation)

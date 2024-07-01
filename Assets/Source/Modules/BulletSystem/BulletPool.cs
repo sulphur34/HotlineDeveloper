@@ -43,13 +43,13 @@ namespace Modules.BulletPoolSystem
 
         private void OnGet(Bullet bullet)
         {
-            bullet.gameObject.SetActive(true);
+            bullet.Collider.enabled = true;
         }
 
         private void OnRelease(Bullet bullet)
         {
             bullet.SetInterpolation(RigidbodyInterpolation.None);
-            bullet.gameObject.SetActive(false);
+            bullet.Collider.enabled = false;
         }
 
         private void OnDestroy(Bullet bullet)
