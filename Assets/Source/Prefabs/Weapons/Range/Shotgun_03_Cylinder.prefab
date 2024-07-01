@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: -8595703641655732476}
   - component: {fileID: -3535967442060193104}
   - component: {fileID: -6065639966998431548}
-  - component: {fileID: 318777334978790204}
+  - component: {fileID: -8904486583167336319}
   m_Layer: 0
   m_Name: Shotgun_03_Cylinder
   m_TagString: Untagged
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: -8595703641655732476}
-  _shotStrategy: {fileID: 318777334978790204}
+  _shotStrategy: {fileID: -8904486583167336319}
 --- !u!114 &-8595703641655732476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <IsTrackable>k__BackingField: 1
   _force: 40
   _rotationForce: 5
   <Offset>k__BackingField: {x: -0.4, y: 0.4, z: 0}
@@ -245,7 +246,7 @@ MonoBehaviour:
     Value: 0
     IsKnockout: 1
     IsLethal: 0
---- !u!114 &318777334978790204
+--- !u!114 &-8904486583167336319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,13 +255,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1732157514859807886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c5f8ef693e658459ebaa0cb0db84c8, type: 3}
+  m_Script: {fileID: 11500000, guid: ada41610198b4ebfa62e79672a0ffa2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 5363542569717264595}
-  _bulletsNumber: 5
-  _minAngle: -10
-  _maxAngle: 10
+  _minAngle: -15
+  _maxAngle: 15
+  _bulletsNumber: 6
 --- !u!1 &2114410368718535857
 GameObject:
   m_ObjectHideFlags: 0

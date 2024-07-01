@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Modules.Weapons
 {
-    internal abstract class ShotStrategy : MonoBehaviour
+    public abstract class ShotStrategy : MonoBehaviour
     {
         [SerializeField] private BulletSpawnPoint _bulletSpawnPoint;
         [SerializeField] private float _minAngle;
@@ -37,9 +37,17 @@ namespace Modules.Weapons
             return bullet;
         }
 
-        protected float GetRandomShotAngle()
+        protected void FireBullet()
         {
-            return Random.Range(_minAngle, _maxAngle);
+            Bullet bullet = InstantiateBullet();
+            bullet.Init(GetRandomDirection(), BulletSpeed);
         }
+
+        private Vector3 GetRandomDirection()
+        {
+            float angleInDeg = Random.Range(_minAngle, _maxAngle);;
+            Quaternion rotation = Quaternion.AngleAxis(angleInDeg, Vector3.up);
+            return rotation * transform.forward;
+        } 
     }
 }
