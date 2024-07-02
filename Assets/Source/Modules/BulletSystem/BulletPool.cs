@@ -23,7 +23,6 @@ namespace Modules.BulletPoolSystem
         public Bullet Get()
         {
             Bullet bullet = _pool.Get();
-            bullet.SetInterpolation(RigidbodyInterpolation.Interpolate);
             return bullet;
         }
 
@@ -48,7 +47,6 @@ namespace Modules.BulletPoolSystem
 
         private void OnRelease(Bullet bullet)
         {
-            bullet.SetInterpolation(RigidbodyInterpolation.None);
             bullet.Collider.enabled = false;
         }
 
