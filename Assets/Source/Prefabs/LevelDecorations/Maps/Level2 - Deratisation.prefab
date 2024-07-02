@@ -74,6 +74,10 @@ Transform:
   - {fileID: 7186056016760255038}
   - {fileID: 5079137159118758695}
   - {fileID: 3337721857374060869}
+  - {fileID: 5237922589698653852}
+  - {fileID: 6880279173135107975}
+  - {fileID: 306559509194710295}
+  - {fileID: 7157384537180714248}
   m_Father: {fileID: 2824409772866023226}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &40172114746220675
@@ -3337,6 +3341,7 @@ GameObject:
   - component: {fileID: 7245104366071204424}
   - component: {fileID: 7187418891055683722}
   - component: {fileID: 2864017385029175830}
+  - component: {fileID: 8175073090791711732}
   m_Layer: 0
   m_Name: Bathroom_Sink (7)
   m_TagString: Untagged
@@ -3409,6 +3414,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8175073090791711732
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577022402758847878}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3894997, y: 0.81526417, z: 1.4468306}
+  m_Center: {x: -0.0000014579385, y: -0.10399875, z: 0.87392515}
 --- !u!1 &641743357321497677
 GameObject:
   m_ObjectHideFlags: 0
@@ -6184,6 +6210,7 @@ GameObject:
   - component: {fileID: 7157384537180714248}
   - component: {fileID: 2349320904614292350}
   - component: {fileID: 2045704399419474977}
+  - component: {fileID: 1694801283342431471}
   m_Layer: 0
   m_Name: Floor_BricksSeparate2
   m_TagString: Untagged
@@ -6204,7 +6231,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2824409772866023226}
+  m_Father: {fileID: 6234765346814483555}
   m_LocalEulerAnglesHint: {x: -90, y: 134.51, z: 0}
 --- !u!33 &2349320904614292350
 MeshFilter:
@@ -6256,6 +6283,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1694801283342431471
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941481924929387221}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3056657, y: 1.1682416, z: 0.47966275}
+  m_Center: {x: 0.15441735, y: 0.14140199, z: 0.215641}
 --- !u!1 &999940055253213006
 GameObject:
   m_ObjectHideFlags: 0
@@ -7377,6 +7425,7 @@ GameObject:
   - component: {fileID: 5696501641417485979}
   - component: {fileID: 8719413808062278784}
   - component: {fileID: 599266939599575868}
+  - component: {fileID: 3355372136719695008}
   m_Layer: 0
   m_Name: Stove
   m_TagString: Untagged
@@ -7449,6 +7498,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3355372136719695008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349562996501631057}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45003906, y: 0.6743789, z: 0.55140394}
+  m_Center: {x: 0, y: 0.33718944, z: 0.050682385}
 --- !u!1 &1474042000099547924
 GameObject:
   m_ObjectHideFlags: 0
@@ -7830,6 +7900,7 @@ GameObject:
   - component: {fileID: 70449635581132485}
   - component: {fileID: 1275395280610224058}
   - component: {fileID: 5341009627259331621}
+  - component: {fileID: 503614769847589659}
   m_Layer: 0
   m_Name: Refrigirator (5)
   m_TagString: Untagged
@@ -7902,6 +7973,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &503614769847589659
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531073866704257381}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.55862385, y: 1.1966658, z: 0.55117285}
+  m_Center: {x: -0.04744383, y: 0.5983329, z: 0.015834227}
 --- !u!1 &1588316185100665692
 GameObject:
   m_ObjectHideFlags: 0
@@ -8653,6 +8745,7 @@ GameObject:
   - component: {fileID: 4904136623056583730}
   - component: {fileID: 6119778317964345764}
   - component: {fileID: 8730274472971759003}
+  - component: {fileID: 4975537763857056618}
   m_Layer: 0
   m_Name: Bathroom_Toilet (1)
   m_TagString: Untagged
@@ -8725,6 +8818,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4975537763857056618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650607660852102803}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1966685, y: 1.6914022, z: 1.900673}
+  m_Center: {x: 0, y: 0.053821452, z: 0.937227}
 --- !u!1 &1702538478804618226
 GameObject:
   m_ObjectHideFlags: 0
@@ -8736,6 +8850,7 @@ GameObject:
   - component: {fileID: 7762615764187897230}
   - component: {fileID: 4826595834089343520}
   - component: {fileID: 903799081997988939}
+  - component: {fileID: 5845486101914647488}
   m_Layer: 0
   m_Name: Trashbin
   m_TagString: Untagged
@@ -8808,6 +8923,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5845486101914647488
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702538478804618226}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2042763, y: 0.29692432, z: 0.27735478}
+  m_Center: {x: 0.00000013038516, y: 0.14846216, z: 0.00082019717}
 --- !u!1 &1719324368255339297
 GameObject:
   m_ObjectHideFlags: 0
@@ -8819,6 +8955,7 @@ GameObject:
   - component: {fileID: 306559509194710295}
   - component: {fileID: 3286225913473630943}
   - component: {fileID: 3205366728193612211}
+  - component: {fileID: 7553101588145730649}
   m_Layer: 0
   m_Name: group203695626
   m_TagString: Untagged
@@ -8835,11 +8972,11 @@ Transform:
   m_GameObject: {fileID: 1719324368255339297}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 8.2, y: 1.73, z: 3.02}
+  m_LocalPosition: {x: 8.2, y: 1.73, z: 3.0200005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 2824409772866023226}
+  m_Father: {fileID: 6234765346814483555}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3286225913473630943
 MeshFilter:
@@ -8891,6 +9028,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7553101588145730649
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719324368255339297}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5587389, y: 0.31237018, z: 0.24807855}
+  m_Center: {x: -0.031134248, y: -0.099627316, z: -0.17378871}
 --- !u!1 &1907457503711051134
 GameObject:
   m_ObjectHideFlags: 0
@@ -8902,6 +9060,7 @@ GameObject:
   - component: {fileID: 6629819176480502815}
   - component: {fileID: 8369214581671599590}
   - component: {fileID: 4581924113947777493}
+  - component: {fileID: 768996031790145884}
   m_Layer: 0
   m_Name: Refrigirator (2)
   m_TagString: Untagged
@@ -8974,6 +9133,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &768996031790145884
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907457503711051134}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.55862397, y: 1.1966658, z: 0.551173}
+  m_Center: {x: -0.047443602, y: 0.5983329, z: 0.015835661}
 --- !u!1 &1922774711905603536
 GameObject:
   m_ObjectHideFlags: 0
@@ -9725,6 +9905,7 @@ GameObject:
   - component: {fileID: 584768478157861408}
   - component: {fileID: 4541006257568312136}
   - component: {fileID: 3298986316780228088}
+  - component: {fileID: 534012094806041371}
   m_Layer: 0
   m_Name: Safe
   m_TagString: Untagged
@@ -9797,6 +9978,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &534012094806041371
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954993793023065309}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2439165, y: 0.24316742, z: 0.2653619}
+  m_Center: {x: -0.021195836, y: 0.12158376, z: -0.051103525}
 --- !u!1 &2009938061136469014
 GameObject:
   m_ObjectHideFlags: 0
@@ -11946,6 +12148,7 @@ GameObject:
   - component: {fileID: 8691402272532876044}
   - component: {fileID: 1465649239845345139}
   - component: {fileID: 7699202578449770895}
+  - component: {fileID: 435516141592535362}
   m_Layer: 0
   m_Name: Stove (3)
   m_TagString: Untagged
@@ -12018,6 +12221,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &435516141592535362
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119759453625616831}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45003906, y: 0.6743789, z: 0.55140394}
+  m_Center: {x: 0, y: 0.33718944, z: 0.050682385}
 --- !u!1 &2294024313094616097
 GameObject:
   m_ObjectHideFlags: 0
@@ -12029,6 +12253,7 @@ GameObject:
   - component: {fileID: 7296244745752087617}
   - component: {fileID: 5166589768548938478}
   - component: {fileID: 2312301788015447422}
+  - component: {fileID: 5604739088410506678}
   m_Layer: 0
   m_Name: Bathroom_Sink (6)
   m_TagString: Untagged
@@ -12101,6 +12326,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5604739088410506678
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2294024313094616097}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3894992, y: 0.8152638, z: 1.4468304}
+  m_Center: {x: -0.0000009536743, y: -0.10400055, z: 0.8739251}
 --- !u!1 &2604750406890318007
 GameObject:
   m_ObjectHideFlags: 0
@@ -12112,6 +12358,7 @@ GameObject:
   - component: {fileID: 1505780538803836508}
   - component: {fileID: 451029740582581383}
   - component: {fileID: 8505444552380087274}
+  - component: {fileID: 4941670252697008975}
   m_Layer: 0
   m_Name: Bathroom_Sink (5)
   m_TagString: Untagged
@@ -12184,6 +12431,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4941670252697008975
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2604750406890318007}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3894992, y: 0.8152638, z: 1.4468304}
+  m_Center: {x: 0, y: -0.10400055, z: 0.8739251}
 --- !u!1 &2610688995027563587
 GameObject:
   m_ObjectHideFlags: 0
@@ -12195,6 +12463,7 @@ GameObject:
   - component: {fileID: 3085415542462418317}
   - component: {fileID: 5514764549997450589}
   - component: {fileID: 6934696468676151645}
+  - component: {fileID: 1583220445545141986}
   m_Layer: 0
   m_Name: Couch_Medium2 (1)
   m_TagString: Untagged
@@ -12267,6 +12536,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1583220445545141986
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2610688995027563587}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.5186625, y: 1.9994777, z: 1.9593424}
+  m_Center: {x: 0.00000047683716, y: -0.05412283, z: 0.97967136}
 --- !u!1 &2610691041670539147
 GameObject:
   m_ObjectHideFlags: 0
@@ -13018,6 +13308,7 @@ GameObject:
   - component: {fileID: 1158766545221557454}
   - component: {fileID: 4408101329731775780}
   - component: {fileID: 5950452725281380426}
+  - component: {fileID: 721848376442988046}
   m_Layer: 0
   m_Name: Refrigirator (1)
   m_TagString: Untagged
@@ -13090,6 +13381,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &721848376442988046
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2788105360343882109}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.55862397, y: 1.1966658, z: 0.551173}
+  m_Center: {x: -0.04744384, y: 0.5983329, z: 0.015835661}
 --- !u!1 &2877399333312881224
 GameObject:
   m_ObjectHideFlags: 0
@@ -13471,6 +13783,7 @@ GameObject:
   - component: {fileID: 2866648192220635347}
   - component: {fileID: 7250919761035540924}
   - component: {fileID: 8053600921549357901}
+  - component: {fileID: 631381603787957129}
   m_Layer: 0
   m_Name: Bathroom_Sink (3)
   m_TagString: Untagged
@@ -13543,6 +13856,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &631381603787957129
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2949497161049651674}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3895, y: 0.81526417, z: 1.4468306}
+  m_Center: {x: 0, y: -0.10399981, z: 0.8739251}
 --- !u!1 &2951694833385844672
 GameObject:
   m_ObjectHideFlags: 0
@@ -16339,6 +16673,7 @@ GameObject:
   - component: {fileID: 1597325461082197441}
   - component: {fileID: 6831805676387422560}
   - component: {fileID: 3730056461955629802}
+  - component: {fileID: 7014200038522344508}
   m_Layer: 0
   m_Name: Propane_tank
   m_TagString: Untagged
@@ -16411,6 +16746,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7014200038522344508
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3164315237824643827}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.24780597, y: 0.33692798, z: 0.24763656}
+  m_Center: {x: 0, y: 0.16846402, z: 0.005746141}
 --- !u!1 &3241126672028645491
 GameObject:
   m_ObjectHideFlags: 0
@@ -16422,6 +16778,7 @@ GameObject:
   - component: {fileID: 8709877255738832970}
   - component: {fileID: 7191420063441399384}
   - component: {fileID: 3299421526671673598}
+  - component: {fileID: 272490285710403688}
   m_Layer: 0
   m_Name: Bathroom_Sink (2)
   m_TagString: Untagged
@@ -16494,6 +16851,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &272490285710403688
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3241126672028645491}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3895, y: 0.81526417, z: 1.4468306}
+  m_Center: {x: -0.0000009536743, y: -0.1039979, z: 0.8739251}
 --- !u!1 &3245760269908324635
 GameObject:
   m_ObjectHideFlags: 0
@@ -16505,6 +16883,7 @@ GameObject:
   - component: {fileID: 5237922589698653852}
   - component: {fileID: 2538525254718261}
   - component: {fileID: 3911363688264917831}
+  - component: {fileID: 8663979359399149173}
   m_Layer: 0
   m_Name: Sofa2
   m_TagString: Untagged
@@ -16520,12 +16899,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3245760269908324635}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 15.23, y: 1.4999981, z: -15.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2824409772866023226}
+  m_Father: {fileID: 6234765346814483555}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &2538525254718261
 MeshFilter:
@@ -16577,6 +16956,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8663979359399149173
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245760269908324635}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.002647, y: 1.5408187, z: 1.4524262}
+  m_Center: {x: 0, y: -0.032373436, z: 0.59065515}
 --- !u!1 &3295797895691305532
 GameObject:
   m_ObjectHideFlags: 0
@@ -16588,6 +16988,7 @@ GameObject:
   - component: {fileID: 7413443201737277902}
   - component: {fileID: 2258710225999644110}
   - component: {fileID: 6301483800045874864}
+  - component: {fileID: 5005026719043738110}
   m_Layer: 0
   m_Name: Stove (7)
   m_TagString: Untagged
@@ -16660,6 +17061,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5005026719043738110
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3295797895691305532}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45003894, y: 0.6743789, z: 0.5514038}
+  m_Center: {x: -0.000000029802322, y: 0.33718944, z: 0.050682373}
 --- !u!1 &3319633813690662517
 GameObject:
   m_ObjectHideFlags: 0
@@ -17865,6 +18287,7 @@ GameObject:
   - component: {fileID: 7027229397966038857}
   - component: {fileID: 9015064266238720431}
   - component: {fileID: 9002474396608503551}
+  - component: {fileID: 480542807462763015}
   m_Layer: 0
   m_Name: Bathroom_Toilet (6)
   m_TagString: Untagged
@@ -17937,6 +18360,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &480542807462763015
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3504693812594204699}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1966685, y: 1.6914018, z: 1.9006727}
+  m_Center: {x: -0.0000009536743, y: 0.05382144, z: 0.937227}
 --- !u!1 &3541707028290651471
 GameObject:
   m_ObjectHideFlags: 0
@@ -17948,6 +18392,7 @@ GameObject:
   - component: {fileID: 514952364553273233}
   - component: {fileID: 8758687000309159848}
   - component: {fileID: 8365524511544026205}
+  - component: {fileID: 7056243418223353551}
   m_Layer: 0
   m_Name: Toolbox
   m_TagString: Untagged
@@ -18020,6 +18465,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7056243418223353551
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3541707028290651471}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.22686325, y: 0.2393341, z: 0.58069324}
+  m_Center: {x: -0.00010493398, y: 0.11966704, z: 0.0004286617}
 --- !u!1 &3933008667182587416
 GameObject:
   m_ObjectHideFlags: 0
@@ -18031,6 +18497,7 @@ GameObject:
   - component: {fileID: 5365458429399891497}
   - component: {fileID: 995770027484455852}
   - component: {fileID: 801978838292063482}
+  - component: {fileID: 307718872622523079}
   m_Layer: 0
   m_Name: Refrigirator (3)
   m_TagString: Untagged
@@ -18103,6 +18570,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &307718872622523079
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3933008667182587416}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.55862397, y: 1.1966658, z: 0.551173}
+  m_Center: {x: -0.047443364, y: 0.5983329, z: 0.015835185}
 --- !u!1 &3935001016080818722
 GameObject:
   m_ObjectHideFlags: 0
@@ -20417,6 +20905,7 @@ GameObject:
   - component: {fileID: 5784274175959587995}
   - component: {fileID: 5351939879933359370}
   - component: {fileID: 8422402618578474253}
+  - component: {fileID: 3294503409809437655}
   m_Layer: 0
   m_Name: Stove (2)
   m_TagString: Untagged
@@ -20489,6 +20978,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3294503409809437655
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4665704562408275272}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45003906, y: 0.6743789, z: 0.55140394}
+  m_Center: {x: 0.00000023841858, y: 0.33718944, z: 0.050682385}
 --- !u!1 &4789220766850836758
 GameObject:
   m_ObjectHideFlags: 0
@@ -20500,6 +21010,7 @@ GameObject:
   - component: {fileID: 1327236980001413365}
   - component: {fileID: 2479584920721475035}
   - component: {fileID: 6845400310876892362}
+  - component: {fileID: 5814403446082052042}
   m_Layer: 0
   m_Name: Refrigirator
   m_TagString: Untagged
@@ -20572,6 +21083,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5814403446082052042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4789220766850836758}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.55862397, y: 1.1966658, z: 0.551173}
+  m_Center: {x: -0.04744384, y: 0.5983329, z: 0.015835304}
 --- !u!1 &4894764894124670189
 GameObject:
   m_ObjectHideFlags: 0
@@ -20583,6 +21115,7 @@ GameObject:
   - component: {fileID: 3125474794175515954}
   - component: {fileID: 2563364526588779519}
   - component: {fileID: 8175313519654396437}
+  - component: {fileID: 4680757085079832766}
   m_Layer: 0
   m_Name: Bathroom_Bathtub
   m_TagString: Untagged
@@ -20655,6 +21188,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4680757085079832766
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4894764894124670189}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.6075097, y: 3.899736, z: 1.2602074}
+  m_Center: {x: 0.0000019073486, y: 0.17408334, z: 0.6225984}
 --- !u!1 &5117056297993924838
 GameObject:
   m_ObjectHideFlags: 0
@@ -21406,6 +21960,7 @@ GameObject:
   - component: {fileID: 5079137159118758695}
   - component: {fileID: 3070696419755574395}
   - component: {fileID: 4829536849099599601}
+  - component: {fileID: 7441914975756360113}
   m_Layer: 0
   m_Name: Trashcan_Large
   m_TagString: Untagged
@@ -21478,6 +22033,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7441914975756360113
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5153085613352446055}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.2232364, y: 1.2232367, z: 1.8462884}
+  m_Center: {x: -0.00000005960464, y: -0.0000021755695, z: 0.91813976}
 --- !u!1 &5163650735443439787
 GameObject:
   m_ObjectHideFlags: 0
@@ -23709,6 +24285,7 @@ GameObject:
   - component: {fileID: 7552474909432416612}
   - component: {fileID: 4349461075624115019}
   - component: {fileID: 6814163012360956343}
+  - component: {fileID: 1537693669511750483}
   m_Layer: 0
   m_Name: Bathroom_Toilet (2)
   m_TagString: Untagged
@@ -23781,6 +24358,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1537693669511750483
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5738864396966486412}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1966685, y: 1.6914022, z: 1.900673}
+  m_Center: {x: 0, y: 0.053822406, z: 0.937227}
 --- !u!1 &5758882020460515423
 GameObject:
   m_ObjectHideFlags: 0
@@ -23792,6 +24390,7 @@ GameObject:
   - component: {fileID: 4529770807246695358}
   - component: {fileID: 3847130962898293729}
   - component: {fileID: 1595409006182843176}
+  - component: {fileID: 2175036226937202562}
   m_Layer: 0
   m_Name: Refrigirator (6)
   m_TagString: Untagged
@@ -23864,6 +24463,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2175036226937202562
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5758882020460515423}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.55862385, y: 1.1966658, z: 0.55117285}
+  m_Center: {x: -0.04744359, y: 0.5983329, z: 0.01583518}
 --- !u!1 &5909703446869695671
 GameObject:
   m_ObjectHideFlags: 0
@@ -23875,6 +24495,7 @@ GameObject:
   - component: {fileID: 6880279173135107975}
   - component: {fileID: 3434526926591881516}
   - component: {fileID: 8482484483020646207}
+  - component: {fileID: 430513670312233532}
   m_Layer: 0
   m_Name: Sofa3
   m_TagString: Untagged
@@ -23891,11 +24512,11 @@ Transform:
   m_GameObject: {fileID: 5909703446869695671}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 16.6, y: 1.53, z: -0.62}
+  m_LocalPosition: {x: 16.6, y: 1.53, z: -0.6199999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2824409772866023226}
+  m_Father: {fileID: 6234765346814483555}
   m_LocalEulerAnglesHint: {x: -90, y: -90, z: 0}
 --- !u!33 &3434526926591881516
 MeshFilter:
@@ -23947,6 +24568,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &430513670312233532
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5909703446869695671}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.002647, y: 2.8011894, z: 1.452426}
+  m_Center: {x: 0.01886779, y: -0.75175, z: 0.70860136}
 --- !u!1 &6017567721954826110
 GameObject:
   m_ObjectHideFlags: 0
@@ -26471,6 +27113,7 @@ GameObject:
   - component: {fileID: 8418872041667081692}
   - component: {fileID: 4427406450114307880}
   - component: {fileID: 2730789623302934916}
+  - component: {fileID: 5529775707081448103}
   m_Layer: 0
   m_Name: Stove (1)
   m_TagString: Untagged
@@ -26543,6 +27186,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5529775707081448103
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6310919335862393768}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45003906, y: 0.6743789, z: 0.55140394}
+  m_Center: {x: 0, y: 0.33718944, z: 0.050682385}
 --- !u!1 &6332252304252670570
 GameObject:
   m_ObjectHideFlags: 0
@@ -27294,6 +27958,7 @@ GameObject:
   - component: {fileID: 6536398755278305348}
   - component: {fileID: 5449367924150362460}
   - component: {fileID: 4360401181742016265}
+  - component: {fileID: 550126400861211064}
   m_Layer: 0
   m_Name: Bathroom_Sink (4)
   m_TagString: Untagged
@@ -27366,6 +28031,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &550126400861211064
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460861126313998923}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3895, y: 0.81526417, z: 1.4468306}
+  m_Center: {x: 0, y: -0.10399981, z: 0.87392515}
 --- !u!1 &6544585436699422630
 GameObject:
   m_ObjectHideFlags: 0
@@ -27377,6 +28063,7 @@ GameObject:
   - component: {fileID: 272051407928098959}
   - component: {fileID: 2948909151396015963}
   - component: {fileID: 8971275416224734994}
+  - component: {fileID: 1082548707940390985}
   m_Layer: 0
   m_Name: Bathroom_Sink (1)
   m_TagString: Untagged
@@ -27449,6 +28136,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1082548707940390985
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6544585436699422630}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3894992, y: 0.8152638, z: 1.4468304}
+  m_Center: {x: -0.0000019073486, y: -0.1039996, z: 0.87392503}
 --- !u!1 &6557119839860122595
 GameObject:
   m_ObjectHideFlags: 0
@@ -27460,6 +28168,7 @@ GameObject:
   - component: {fileID: 8539748584886967833}
   - component: {fileID: 1117714467454781706}
   - component: {fileID: 890066703860253879}
+  - component: {fileID: 4368376859209401749}
   m_Layer: 0
   m_Name: Refrigirator (4)
   m_TagString: Untagged
@@ -27532,6 +28241,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4368376859209401749
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6557119839860122595}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.55862385, y: 1.1966658, z: 0.55117285}
+  m_Center: {x: -0.04744383, y: 0.5983329, z: 0.015834227}
 --- !u!1 &6798140708872129940
 GameObject:
   m_ObjectHideFlags: 0
@@ -28283,6 +29013,7 @@ GameObject:
   - component: {fileID: 4245492765764639767}
   - component: {fileID: 6528439378049117678}
   - component: {fileID: 1218941574894546441}
+  - component: {fileID: 1400995050624922452}
   m_Layer: 0
   m_Name: Bathroom_ToiletPaperPile
   m_TagString: Untagged
@@ -28355,6 +29086,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1400995050624922452
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6930962810809170011}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.33447883, y: 0.3498117, z: 0.37470788}
+  m_Center: {x: -0.000000014901161, y: 0.00000093877316, z: 0.18935841}
 --- !u!1 &6958326815719545514
 GameObject:
   m_ObjectHideFlags: 0
@@ -28366,6 +29118,7 @@ GameObject:
   - component: {fileID: 3337721857374060869}
   - component: {fileID: 300507976257231052}
   - component: {fileID: 2975017551911846518}
+  - component: {fileID: 5346541495243183970}
   m_Layer: 0
   m_Name: Trashcan_Cylindric
   m_TagString: Untagged
@@ -28438,6 +29191,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5346541495243183970
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6958326815719545514}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7547006, y: 0.75470084, z: 1.0740885}
+  m_Center: {x: -0.00000010430812, y: 0.00000008940698, z: 0.5370439}
 --- !u!1 &7092338333739350237
 GameObject:
   m_ObjectHideFlags: 0
@@ -28449,6 +29223,7 @@ GameObject:
   - component: {fileID: 405967881574519864}
   - component: {fileID: 2409858326327635970}
   - component: {fileID: 3187996069090791011}
+  - component: {fileID: 5698701881448263154}
   m_Layer: 0
   m_Name: Bathroom_Toilet
   m_TagString: Untagged
@@ -28521,6 +29296,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5698701881448263154
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092338333739350237}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1966685, y: 1.6914022, z: 1.900673}
+  m_Center: {x: 0, y: 0.053821452, z: 0.937227}
 --- !u!1 &7200126243290248917
 GameObject:
   m_ObjectHideFlags: 0
@@ -28902,6 +29698,7 @@ GameObject:
   - component: {fileID: 7525062011872762470}
   - component: {fileID: 637103438731884713}
   - component: {fileID: 3251102137962985092}
+  - component: {fileID: 4895902925460212878}
   m_Layer: 0
   m_Name: Stove (5)
   m_TagString: Untagged
@@ -28974,6 +29771,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4895902925460212878
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7220919196642554361}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45003894, y: 0.6743789, z: 0.5514038}
+  m_Center: {x: 0, y: 0.33718944, z: 0.05068142}
 --- !u!1 &7328033059193026930
 GameObject:
   m_ObjectHideFlags: 0
@@ -28985,6 +29803,7 @@ GameObject:
   - component: {fileID: 528862038895822965}
   - component: {fileID: 2120651945133024259}
   - component: {fileID: 7577998114486294738}
+  - component: {fileID: 4166378604944467924}
   m_Layer: 0
   m_Name: Chair
   m_TagString: Untagged
@@ -29057,6 +29876,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4166378604944467924
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7328033059193026930}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.35137814, y: 0.6307595, z: 0.33282217}
+  m_Center: {x: 0.0000001937151, y: 0.31537974, z: -0.057536993}
 --- !u!1 &7413200702165112410
 GameObject:
   m_ObjectHideFlags: 0
@@ -29808,6 +30648,7 @@ GameObject:
   - component: {fileID: 3631705452626643001}
   - component: {fileID: 1302239520307046886}
   - component: {fileID: 3837567353147226493}
+  - component: {fileID: 6828446465216847598}
   m_Layer: 0
   m_Name: Stove (6)
   m_TagString: Untagged
@@ -29880,6 +30721,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6828446465216847598
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7439279853099310081}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45003894, y: 0.6743789, z: 0.5514038}
+  m_Center: {x: 0.00000011920929, y: 0.33718944, z: 0.050682135}
 --- !u!1 &7525499211213892030
 GameObject:
   m_ObjectHideFlags: 0
@@ -31001,6 +31863,7 @@ GameObject:
   - component: {fileID: 7186056016760255038}
   - component: {fileID: 1344943673493400017}
   - component: {fileID: 76821395053884152}
+  - component: {fileID: 653642928307742259}
   m_Layer: 0
   m_Name: Couch_Medium2 (2)
   m_TagString: Untagged
@@ -31073,6 +31936,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &653642928307742259
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7667920905759674071}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.5186625, y: 1.9994777, z: 1.9593424}
+  m_Center: {x: -0.00000047683716, y: -0.054123785, z: 0.97967136}
 --- !u!1 &7781204459033731776
 GameObject:
   m_ObjectHideFlags: 0
@@ -31084,6 +31968,7 @@ GameObject:
   - component: {fileID: 2388984394827008428}
   - component: {fileID: 6613793688067940810}
   - component: {fileID: 8771568811675875630}
+  - component: {fileID: 8356706437566621129}
   m_Layer: 0
   m_Name: Bathroom_Sink
   m_TagString: Untagged
@@ -31156,6 +32041,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8356706437566621129
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7781204459033731776}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3894992, y: 0.8152636, z: 1.4468302}
+  m_Center: {x: 0.0000019073486, y: -0.10399767, z: 0.8739252}
 --- !u!1 &7979905631611986666
 GameObject:
   m_ObjectHideFlags: 0
@@ -31167,6 +32073,7 @@ GameObject:
   - component: {fileID: 6736445571583773555}
   - component: {fileID: 4876342894196974315}
   - component: {fileID: 221974695931106637}
+  - component: {fileID: 2613309614816317367}
   m_Layer: 0
   m_Name: Stove (4)
   m_TagString: Untagged
@@ -31239,6 +32146,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2613309614816317367
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7979905631611986666}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45003894, y: 0.6743789, z: 0.5514038}
+  m_Center: {x: 0, y: 0.33718944, z: 0.05068142}
 --- !u!1 &7991389500146079465
 GameObject:
   m_ObjectHideFlags: 0
@@ -31250,6 +32178,7 @@ GameObject:
   - component: {fileID: 6106156164793388646}
   - component: {fileID: 5715084880391061878}
   - component: {fileID: 256004072743046448}
+  - component: {fileID: 5211806684690255299}
   m_Layer: 0
   m_Name: Couch_Medium2
   m_TagString: Untagged
@@ -31322,6 +32251,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5211806684690255299
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7991389500146079465}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.5186653, y: 1.9994786, z: 1.9593432}
+  m_Center: {x: 0, y: -0.054122124, z: 0.9796713}
 --- !u!1 &8000376916685851401
 GameObject:
   m_ObjectHideFlags: 0
@@ -33230,6 +34180,7 @@ GameObject:
   - component: {fileID: 20353063270217071}
   - component: {fileID: 4921452981941943359}
   - component: {fileID: 4403900987741610716}
+  - component: {fileID: 17160716080714364}
   m_Layer: 0
   m_Name: Bathroom_Toilet (5)
   m_TagString: Untagged
@@ -33302,6 +34253,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &17160716080714364
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8096567466662281056}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1966685, y: 1.6914018, z: 1.9006727}
+  m_Center: {x: -0.0000009536743, y: 0.05382144, z: 0.937227}
 --- !u!1 &8248481019373957971
 GameObject:
   m_ObjectHideFlags: 0
@@ -33683,6 +34655,7 @@ GameObject:
   - component: {fileID: 761723344478249082}
   - component: {fileID: 5037267482982888725}
   - component: {fileID: 5377641658285616582}
+  - component: {fileID: 910183521980171809}
   m_Layer: 0
   m_Name: Bathroom_Toilet (4)
   m_TagString: Untagged
@@ -33755,6 +34728,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &910183521980171809
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8436512831184514251}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1966685, y: 1.6914022, z: 1.900673}
+  m_Center: {x: -0.0000009536743, y: 0.053821452, z: 0.93722683}
 --- !u!1 &8541396568797362306
 GameObject:
   m_ObjectHideFlags: 0
@@ -34506,6 +35500,7 @@ GameObject:
   - component: {fileID: 4398680798041378842}
   - component: {fileID: 2508715337130843634}
   - component: {fileID: 6316667172620080124}
+  - component: {fileID: 3740661878404871095}
   m_Layer: 0
   m_Name: End Table
   m_TagString: Untagged
@@ -34578,6 +35573,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3740661878404871095
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8612942487112296000}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.31542352, y: 0.47368816, z: 0.5335253}
+  m_Center: {x: -0.09928646, y: 0.23684408, z: 0.009764403}
 --- !u!1 &8678490239432597738
 GameObject:
   m_ObjectHideFlags: 0
@@ -34589,6 +35605,7 @@ GameObject:
   - component: {fileID: 3543255269233482925}
   - component: {fileID: 1026721483912036578}
   - component: {fileID: 2591160194383499920}
+  - component: {fileID: 4937272592763492459}
   m_Layer: 0
   m_Name: Refrigirator (7)
   m_TagString: Untagged
@@ -34661,6 +35678,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4937272592763492459
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8678490239432597738}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.55862385, y: 1.1966658, z: 0.55117285}
+  m_Center: {x: -0.04744389, y: 0.5983329, z: 0.01583518}
 --- !u!1 &8772599033559669878
 GameObject:
   m_ObjectHideFlags: 0
@@ -35076,10 +36114,6 @@ Transform:
   - {fileID: 1158138988377454548}
   - {fileID: 1274347507131530417}
   - {fileID: 6234765346814483555}
-  - {fileID: 5237922589698653852}
-  - {fileID: 6880279173135107975}
-  - {fileID: 306559509194710295}
-  - {fileID: 7157384537180714248}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4669839773180234229
@@ -37720,7 +38754,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.06666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 546c35f2a9bbd8041a042b7b3f1e470d, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: c8ca6c3fcc1a19c4ba7514c04a6bcb42, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &8847217410966772114
 GameObject:
@@ -38843,6 +39877,7 @@ GameObject:
   - component: {fileID: 1364266876494292192}
   - component: {fileID: 3700398466673171969}
   - component: {fileID: 2392901207784758042}
+  - component: {fileID: 2907401593986101942}
   m_Layer: 0
   m_Name: Bathroom_Toilet (7)
   m_TagString: Untagged
@@ -38915,6 +39950,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2907401593986101942
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8977635846039434434}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1966685, y: 1.6914022, z: 1.900673}
+  m_Center: {x: -0.0000002384189, y: 0.053819783, z: 0.9372269}
 --- !u!1 &8986742380079623736
 GameObject:
   m_ObjectHideFlags: 0
@@ -40019,6 +41075,7 @@ GameObject:
   - component: {fileID: 6614900488503176941}
   - component: {fileID: 7929486843046500106}
   - component: {fileID: 4602050919100590269}
+  - component: {fileID: 3580422076686053457}
   m_Layer: 0
   m_Name: Bathroom_Toilet (3)
   m_TagString: Untagged
@@ -40091,6 +41148,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3580422076686053457
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9150228526969779242}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1966685, y: 1.6914022, z: 1.900673}
+  m_Center: {x: -0.0000009536743, y: 0.0538205, z: 0.937227}
 --- !u!1 &9165681773578273903
 GameObject:
   m_ObjectHideFlags: 0
