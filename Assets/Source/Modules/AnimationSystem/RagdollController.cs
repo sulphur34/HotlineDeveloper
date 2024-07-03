@@ -4,6 +4,7 @@ using UnityEngine;
 internal class RagdollController
 {
     private RagdollJointData[] _ragdollJointsData;
+    private Transform _hipBonePosition;
 
     public RagdollController(RagdollJointData[] ragdollJointsData)
     {

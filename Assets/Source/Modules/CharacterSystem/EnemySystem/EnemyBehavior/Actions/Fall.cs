@@ -16,7 +16,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 
         public override void OnStart()
         {
-            _navMeshAgent.isStopped = true;
+            _navMeshAgent.enabled = false;
         }
 
         public override TaskStatus OnUpdate()
@@ -26,7 +26,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 
         public override void OnConditionalAbort()
         {
-            _navMeshAgent.isStopped = false;
+            _navMeshAgent.enabled = true;
         }
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Threading;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ namespace Source.Game.Scripts.Animations
     {
         [SerializeField] private ConstraintsData _constraintsData;
         [SerializeField] private RagdollJointData[] _ragdollJointsData;
+        [SerializeField] private Transform _hipBonePosition;
 
         private ConstrainsController _constrainsController;
         private RagdollController _ragdollController;
@@ -34,10 +36,12 @@ namespace Source.Game.Scripts.Animations
             Unequip();
             _animatorController.Deactivate();
             _ragdollController.Activate();
+            StartCoroutine(WaitingBodyFall());
         }
 
         public void StandUp()
         {
+            _transform.position = _hipBonePosition.position;
             _ragdollController.Deactivate();
             _animatorController.Activate();
         }
@@ -68,6 +72,12 @@ namespace Source.Game.Scripts.Animations
         public void Unequip()
         {
             _constrainsController.ClearAll();
+        }
+
+        private IEnumerator WaitingBodyFall()
+        {
+            yield return new WaitForSeconds(2);
+            _ragdollController.Deactivate();
         }
     }
 }
