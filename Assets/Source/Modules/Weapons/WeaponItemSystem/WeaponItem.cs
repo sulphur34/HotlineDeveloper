@@ -61,6 +61,7 @@ namespace Modules.Weapons.WeaponItemSystem
             Equipped?.Invoke(container);
             SetEquipped(true, container);
             _currentContainer = container;
+            _currentContainer = container;
         }
 
         public void Unequip()
