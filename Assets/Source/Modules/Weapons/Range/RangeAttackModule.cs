@@ -13,13 +13,16 @@ namespace Modules.Weapons.Range
             _ammunition = ammunition;
         }
 
-        public void Attack()
+        public bool TryAttack()
         {
             if (_ammunition.Count > 0)
             {
                 _shotStrategy.Shot();
                 _ammunition.Remove();
+                return true;
             }
+
+            return false;
         }
     }
 }
