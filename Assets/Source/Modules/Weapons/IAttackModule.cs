@@ -2,6 +2,6 @@
 {
     public interface IAttackModule
     {
-        void Attack();
+        bool TryAttack();
     }
 }
