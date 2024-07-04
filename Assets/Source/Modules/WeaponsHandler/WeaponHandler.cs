@@ -15,6 +15,7 @@ namespace Modules.PlayerWeaponsHandler
         private WeaponItem _currentWeaponItem;
         private WeaponItem _defaultWeaponItem;
         private WeaponStrategy _weaponStrategy;
+        private WeaponStrategy _thrownWeaponStrategy;
         private Transform _container;
         private Transform _pickPoint;
         private float _pickRadius;
@@ -43,7 +44,7 @@ namespace Modules.PlayerWeaponsHandler
             if (_currentWeaponItem == null || _currentWeaponItem == _defaultWeaponItem)
                 return;
             
-            _weaponStrategy.ClearOwner();
+            _weaponStrategy?.ClearOwner();
             _currentWeaponItem.Unequip();
             _currentWeaponItem.Attacked -= OnAttack;
             _currentWeaponItem = _defaultWeaponItem;
@@ -62,12 +63,17 @@ namespace Modules.PlayerWeaponsHandler
                 WeaponItem weapon = _currentWeaponItem;
                 _currentWeaponItem.Attacked -= OnAttack;
                 WeaponThrown?.Invoke();
-                weapon.Throw();
-                _currentWeaponItem = _defaultWeaponItem;
+                _thrownWeaponStrategy = _weaponStrategy;
+                _currentWeaponItem.Throw(ClearOwner);
                 _attackInput.AttackReceived -= OnAttackInputReceived;
             }
 
             EquipWeaponItem(HasPickableWeapon ? weaponItem : _defaultWeaponItem);
+        }
+
+        private void ClearOwner()
+        {
+            _thrownWeaponStrategy?.ClearOwner();
         }
 
         private void EquipWeaponItem(WeaponItem weaponItem)

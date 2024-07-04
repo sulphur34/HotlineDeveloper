@@ -30,9 +30,7 @@ namespace Modules.Weapons.WeaponItemSystem
         [field: SerializeField] public Vector3 Offset { get; private set; }
         [field: SerializeField] public Transform LeftHandPlaceHolder { get; private set; }
         [field: SerializeField] public Transform RightHandPlaceHolder { get; private set; }
-                                
-        public event Action<Transform> Equipped;
-        public event Action Thrown;
+           
         public event Action<WeaponType> Attacked;
 
         public Transform SelfTransform => _selfTransform == null ? transform : _selfTransform;
@@ -58,7 +56,6 @@ namespace Modules.Weapons.WeaponItemSystem
 
         public void Equip(Transform container)
         {
-            Equipped?.Invoke(container);
             SetEquipped(true, container);
             _currentContainer = container;
         }
@@ -68,13 +65,7 @@ namespace Modules.Weapons.WeaponItemSystem
             SetEquipped(false, null);
         }
 
-        public void Loose()
-        {
-            Unequip();
-            Thrown?.Invoke();
-        }
-
-        public void Throw()
+        public void Throw(Action OnThrowEndCallback)
         {
             Unequip();
             Vector3 throwDirection = _currentContainer.forward;
@@ -85,17 +76,17 @@ namespace Modules.Weapons.WeaponItemSystem
             _selfTransform.position = _currentContainer.position;
             _rigidbody.AddTorque(rotationDirection * _rotationForce, ForceMode.VelocityChange);
             _rigidbody.AddForce(throwDirection * _force, ForceMode.Impulse);
-            WaitingThrowEnd(_cancellationToken, Thrown);
+            WaitingThrowEnd(_cancellationToken, OnThrowEndCallback);
         }
         
-        private async UniTask WaitingThrowEnd(CancellationToken cancellationToken, Action onRecoveredCallback)
+        private async UniTask WaitingThrowEnd(CancellationToken cancellationToken, Action OnThrowEndCallback)
         {
             while (_rigidbody.IsSleeping() == false)
             {
                 await UniTask.Yield(cancellationToken);
             }
             
-            onRecoveredCallback?.Invoke();
+            OnThrowEndCallback?.Invoke();
         }
 
         private void SetEquipped(bool value, Transform container)
