@@ -242,10 +242,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <IsTrackable>k__BackingField: 1
   _force: 30
   _rotationForce: 5
-  <Offset>k__BackingField: {x: -0.4, y: 0.4, z: 0.06}
+  _rotationZ: 90
+  _meleeRotationY: 0
+  _rangeRotationY: 90
+  _rotationX: 0
+  <IsTrackable>k__BackingField: 1
+  <Offset>k__BackingField: {x: -0.4, y: 0.4, z: 0}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 6510394012183338379}
   <RightHandPlaceHolder>k__BackingField: {fileID: 4446189741552181499}
 --- !u!114 &5973821948861095114
