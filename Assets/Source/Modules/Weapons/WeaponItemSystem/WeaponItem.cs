@@ -8,12 +8,17 @@ namespace Modules.Weapons.WeaponItemSystem
 {
     public class WeaponItem : MonoBehaviour, IWeaponInfo
     {
-        [field: SerializeField] public bool IsTrackable { get; private set; } = true;
         [SerializeField] private float _force;
         [SerializeField] private float _rotationForce;
+        [SerializeField] private float _rotationZ = 90f;
+        [SerializeField] private float _meleeRotationY = 0f;
+        [SerializeField] private float _rangeRotationY = 90f;
+        [SerializeField] private float _rotationX = 0f;
+        
 
         private Transform _startContainer;
         private Transform _selfTransform;
+        private Transform _currentContainer;
         private Rigidbody _rigidbody;
         private Collider _collider;
 
@@ -21,12 +26,11 @@ namespace Modules.Weapons.WeaponItemSystem
 
         private CancellationToken _cancellationToken;
      
+        [field: SerializeField] public bool IsTrackable { get; private set; } = true;
         [field: SerializeField] public Vector3 Offset { get; private set; }
         [field: SerializeField] public Transform LeftHandPlaceHolder { get; private set; }
         [field: SerializeField] public Transform RightHandPlaceHolder { get; private set; }
-                                
-        public event Action<Transform> Equipped;
-        public event Action Thrown;
+           
         public event Action<WeaponType> Attacked;
 
         public Transform SelfTransform => _selfTransform == null ? transform : _selfTransform;
@@ -52,8 +56,9 @@ namespace Modules.Weapons.WeaponItemSystem
 
         public void Equip(Transform container)
         {
-            Equipped?.Invoke(container);
             SetEquipped(true, container);
+            _currentContainer = container;
+            _currentContainer = container;
         }
 
         public void Unequip()
@@ -61,33 +66,28 @@ namespace Modules.Weapons.WeaponItemSystem
             SetEquipped(false, null);
         }
 
-        public void Loose()
+        public void Throw(Action OnThrowEndCallback)
         {
             Unequip();
-            Thrown?.Invoke();
-        }
-
-        public void Throw()
-        {
-            Unequip();
-            Vector3 throwDirection = WeaponType == WeaponType.Range ? _selfTransform.forward : _selfTransform.up;
+            Vector3 throwDirection = _currentContainer.forward;
             Vector3 rotationDirection = WeaponType == WeaponType.Range ? _selfTransform.up : _selfTransform.forward;
-            float yRotation = WeaponType == WeaponType.Range ?  90 : 0;
-            _selfTransform.Rotate(0,yRotation,90);
-            _selfTransform.Translate(throwDirection * 0.5f);
+            _selfTransform.rotation = Quaternion.identity;
+            float rotationY = WeaponType == WeaponType.Range ?  _rangeRotationY : _meleeRotationY;
+            _selfTransform.Rotate(_rotationX,rotationY,_rotationZ);
+            _selfTransform.position = _currentContainer.position;
             _rigidbody.AddTorque(rotationDirection * _rotationForce, ForceMode.VelocityChange);
             _rigidbody.AddForce(throwDirection * _force, ForceMode.Impulse);
-            WaitingThrowEnd(_cancellationToken, Thrown);
+            WaitingThrowEnd(_cancellationToken, OnThrowEndCallback);
         }
         
-        private async UniTask WaitingThrowEnd(CancellationToken cancellationToken, Action onRecoveredCallback)
+        private async UniTask WaitingThrowEnd(CancellationToken cancellationToken, Action OnThrowEndCallback)
         {
             while (_rigidbody.IsSleeping() == false)
             {
                 await UniTask.Yield(cancellationToken);
             }
             
-            onRecoveredCallback?.Invoke();
+            OnThrowEndCallback?.Invoke();
         }
 
         private void SetEquipped(bool value, Transform container)

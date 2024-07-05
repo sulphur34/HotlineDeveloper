@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 2500533585641717939}
   - component: {fileID: -1700297809950913586}
   - component: {fileID: -6266510589158934333}
+  - component: {fileID: -7366045745470584085}
   m_Layer: 0
   m_Name: Scythe
   m_TagString: Untagged
@@ -133,10 +134,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <IsTrackable>k__BackingField: 1
   _force: 50
-  _rotationForce: 50
-  <Offset>k__BackingField: {x: 0, y: 0, z: 1}
+  _rotationForce: 70
+  <IsTrackable>k__BackingField: 1
+  <Offset>k__BackingField: {x: -0.35, y: 0, z: 0.35}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 1847967441290073688}
   <RightHandPlaceHolder>k__BackingField: {fileID: 253052287159821384}
 --- !u!114 &6711057304839853869
@@ -5080,6 +5081,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5e4eb7b5bcfdf409da29c2f848dcf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7366045745470584085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206788927814910602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cec559b08a491baf128343e290b283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minHeight: 0
+  _maxHeight: 2
 --- !u!1 &3945562671955829202
 GameObject:
   m_ObjectHideFlags: 0

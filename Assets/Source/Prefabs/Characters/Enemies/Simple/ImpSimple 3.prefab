@@ -422,11 +422,11 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -20
+    limit: -100
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 70
+    limit: 0
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
@@ -810,7 +810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationController: {fileID: 1055879571078734733}
-  _bloodParticlePrefab: {fileID: 5480200580748689292, guid: 388ef2d607228f342a434c7097e6ef18, type: 3}
+  _bloodParticlePrefab: {fileID: 5038935962357299228, guid: 45074c00c8190b448ac3935472fe89c6, type: 3}
   _collider: {fileID: 8218591627049820599}
 --- !u!114 &6058118120424984889
 MonoBehaviour:
@@ -929,6 +929,7 @@ MonoBehaviour:
     Rigidbody: {fileID: 1382573982666251858}
   - Collider: {fileID: 2995931559234343631}
     Rigidbody: {fileID: 7892452526595003618}
+  _hipBonePosition: {fileID: 5590459887692771352}
 --- !u!114 &333058390572041764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2982,11 +2983,11 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -20
+    limit: -100
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 70
+    limit: 0
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:

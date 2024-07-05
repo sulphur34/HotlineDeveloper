@@ -21,16 +21,17 @@ namespace Modules.Weapons
         internal bool TryAttack()
         {
             bool isRecharged = _rechargeTime.Recharged;
+            bool canAttack = false;
             
             if (isRecharged)
             {
-                _attackModule.Attack();
+                canAttack = _attackModule.TryAttack();
                 _rechargeTime.Discharge();
                 _rechargeTime.WaitRecharged(_cancellationToken);
                 Attacked?.Invoke();
             }
 
-            return isRecharged;
+            return isRecharged && canAttack;
         }
     }
 }

@@ -169,7 +169,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _force: 30
   _rotationForce: 5
-  <Offset>k__BackingField: {x: -0.135, y: 0.4, z: 0.12}
+  _rotationZ: 90
+  _meleeRotationY: 0
+  _rangeRotationY: 90
+  _rotationX: 0
+  <IsTrackable>k__BackingField: 1
+  <Offset>k__BackingField: {x: -0.135, y: 0.4, z: 0}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 7993765114015393965}
   <RightHandPlaceHolder>k__BackingField: {fileID: 8744775793802307974}
 --- !u!114 &5215207056575140414
@@ -185,9 +190,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 1653789090120448392}
-  _bulletsNumber: 5
   _minAngle: -10
   _maxAngle: 10
+  _bulletsNumber: 5
+  _maxFireDelay: 0.005
 --- !u!114 &-1463673670611757095
 MonoBehaviour:
   m_ObjectHideFlags: 0

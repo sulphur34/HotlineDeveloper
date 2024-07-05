@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3715004755983422720}
   - component: {fileID: 7574706200837002395}
   - component: {fileID: 8921821750611024051}
+  - component: {fileID: 2462509642868903648}
   m_Layer: 0
   m_Name: model (1)
   m_TagString: Untagged
@@ -83,6 +84,380 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2462509642868903648
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782533375403841985}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2947222, y: 0.353401, z: 0.3849748}
+  m_Center: {x: 0.0000076293945, y: 0, z: -0.0000038146973}
+--- !u!1 &905420061237156067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3923322238780651192}
+  - component: {fileID: 1469716026141811231}
+  - component: {fileID: 9200992206401882129}
+  - component: {fileID: 1492263143757528255}
+  - component: {fileID: 4553803608854356982}
+  - component: {fileID: 7638388896231664896}
+  m_Layer: 0
+  m_Name: Ceiling
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3923322238780651192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905420061237156067}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 107.14285, y: 4.5, z: 91.428566}
+  m_LocalScale: {x: 1.4285713, y: 1, z: 1.4285713}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2824409772866023226}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1469716026141811231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905420061237156067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MeshFormatVersion: 2
+  m_Faces:
+  - m_Indexes: 000000000100000002000000010000000300000002000000
+    m_SmoothingGroup: 0
+    m_Uv:
+      m_UseWorldSpace: 0
+      m_FlipU: 0
+      m_FlipV: 0
+      m_SwapUV: 0
+      m_Fill: 1
+      m_Scale: {x: 1, y: 1}
+      m_Offset: {x: 0, y: 0}
+      m_Rotation: 0
+      m_Anchor: 9
+    m_Material: {fileID: 0}
+    m_SubmeshIndex: 0
+    m_ManualUV: 0
+    elementGroup: -1
+    m_TextureGroup: -1
+  - m_Indexes: 040000000500000006000000050000000700000006000000
+    m_SmoothingGroup: 0
+    m_Uv:
+      m_UseWorldSpace: 0
+      m_FlipU: 0
+      m_FlipV: 0
+      m_SwapUV: 0
+      m_Fill: 1
+      m_Scale: {x: 1, y: 1}
+      m_Offset: {x: 0, y: 0}
+      m_Rotation: 0
+      m_Anchor: 9
+    m_Material: {fileID: 0}
+    m_SubmeshIndex: 0
+    m_ManualUV: 0
+    elementGroup: -1
+    m_TextureGroup: -1
+  - m_Indexes: 08000000090000000a000000090000000b0000000a000000
+    m_SmoothingGroup: 0
+    m_Uv:
+      m_UseWorldSpace: 0
+      m_FlipU: 0
+      m_FlipV: 0
+      m_SwapUV: 0
+      m_Fill: 1
+      m_Scale: {x: 1, y: 1}
+      m_Offset: {x: 0, y: 0}
+      m_Rotation: 0
+      m_Anchor: 9
+    m_Material: {fileID: 0}
+    m_SubmeshIndex: 0
+    m_ManualUV: 0
+    elementGroup: -1
+    m_TextureGroup: -1
+  - m_Indexes: 0c0000000d0000000e0000000d0000000f0000000e000000
+    m_SmoothingGroup: 0
+    m_Uv:
+      m_UseWorldSpace: 0
+      m_FlipU: 0
+      m_FlipV: 0
+      m_SwapUV: 0
+      m_Fill: 1
+      m_Scale: {x: 1, y: 1}
+      m_Offset: {x: 0, y: 0}
+      m_Rotation: 0
+      m_Anchor: 9
+    m_Material: {fileID: 0}
+    m_SubmeshIndex: 0
+    m_ManualUV: 0
+    elementGroup: -1
+    m_TextureGroup: -1
+  - m_Indexes: 100000001100000012000000110000001300000012000000
+    m_SmoothingGroup: 0
+    m_Uv:
+      m_UseWorldSpace: 0
+      m_FlipU: 0
+      m_FlipV: 0
+      m_SwapUV: 0
+      m_Fill: 1
+      m_Scale: {x: 1, y: 1}
+      m_Offset: {x: 0, y: 0}
+      m_Rotation: 0
+      m_Anchor: 9
+    m_Material: {fileID: 0}
+    m_SubmeshIndex: 0
+    m_ManualUV: 0
+    elementGroup: -1
+    m_TextureGroup: -1
+  - m_Indexes: 140000001500000016000000150000001700000016000000
+    m_SmoothingGroup: 0
+    m_Uv:
+      m_UseWorldSpace: 0
+      m_FlipU: 0
+      m_FlipV: 0
+      m_SwapUV: 0
+      m_Fill: 1
+      m_Scale: {x: 1, y: 1}
+      m_Offset: {x: 0, y: 0}
+      m_Rotation: 0
+      m_Anchor: 9
+    m_Material: {fileID: 0}
+    m_SubmeshIndex: 0
+    m_ManualUV: 0
+    elementGroup: -1
+    m_TextureGroup: -1
+  m_SharedVertices:
+  - m_Vertices: 000000000d00000016000000
+  - m_Vertices: 010000000400000017000000
+  - m_Vertices: 020000000f00000010000000
+  - m_Vertices: 030000000600000011000000
+  - m_Vertices: 050000000800000015000000
+  - m_Vertices: 070000000a00000013000000
+  - m_Vertices: 090000000c00000014000000
+  - m_Vertices: 0b0000000e00000012000000
+  m_SharedTextures: []
+  m_Positions:
+  - {x: -64, y: -0.5, z: 72}
+  - {x: 64, y: -0.5, z: 72}
+  - {x: -64, y: 0.5, z: 72}
+  - {x: 64, y: 0.5, z: 72}
+  - {x: 64, y: -0.5, z: 72}
+  - {x: 64, y: -0.5, z: -72}
+  - {x: 64, y: 0.5, z: 72}
+  - {x: 64, y: 0.5, z: -72}
+  - {x: 64, y: -0.5, z: -72}
+  - {x: -64, y: -0.5, z: -72}
+  - {x: 64, y: 0.5, z: -72}
+  - {x: -64, y: 0.5, z: -72}
+  - {x: -64, y: -0.5, z: -72}
+  - {x: -64, y: -0.5, z: 72}
+  - {x: -64, y: 0.5, z: -72}
+  - {x: -64, y: 0.5, z: 72}
+  - {x: -64, y: 0.5, z: 72}
+  - {x: 64, y: 0.5, z: 72}
+  - {x: -64, y: 0.5, z: -72}
+  - {x: 64, y: 0.5, z: -72}
+  - {x: -64, y: -0.5, z: -72}
+  - {x: 64, y: -0.5, z: -72}
+  - {x: -64, y: -0.5, z: 72}
+  - {x: 64, y: -0.5, z: 72}
+  m_Textures0:
+  - {x: 64, y: -0.5}
+  - {x: -64, y: -0.5}
+  - {x: 64, y: 0.5}
+  - {x: -64, y: 0.5}
+  - {x: 72, y: -0.5}
+  - {x: -72, y: -0.5}
+  - {x: 72, y: 0.5}
+  - {x: -72, y: 0.5}
+  - {x: 64, y: -0.5}
+  - {x: -64, y: -0.5}
+  - {x: 64, y: 0.5}
+  - {x: -64, y: 0.5}
+  - {x: 72, y: -0.5}
+  - {x: -72, y: -0.5}
+  - {x: 72, y: 0.5}
+  - {x: -72, y: 0.5}
+  - {x: -64, y: 72}
+  - {x: 64, y: 72}
+  - {x: -64, y: -72}
+  - {x: 64, y: -72}
+  - {x: 64, y: -72}
+  - {x: -64, y: -72}
+  - {x: 64, y: 72}
+  - {x: -64, y: 72}
+  m_Textures2: []
+  m_Textures3: []
+  m_Tangents:
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: 0, y: 0, z: 1, w: -1}
+  - {x: 0, y: 0, z: 1, w: -1}
+  - {x: 0, y: 0, z: 1, w: -1}
+  - {x: 0, y: 0, z: 1, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 0, y: 0, z: -1, w: -1}
+  - {x: 0, y: 0, z: -1, w: -1}
+  - {x: 0, y: 0, z: -1, w: -1}
+  - {x: 0, y: 0, z: -1, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  m_Colors: []
+  m_UnwrapParameters:
+    m_HardAngle: 88
+    m_PackMargin: 20
+    m_AngleError: 8
+    m_AreaError: 15
+  m_PreserveMeshAssetOnDestroy: 0
+  assetGuid: 
+  m_Mesh: {fileID: 0}
+  m_VersionIndex: 5492
+  m_IsSelectable: 1
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
+--- !u!114 &9200992206401882129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905420061237156067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca002da428252441b92f28d83c8a65f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Shape:
+    rid: 1324672972823986315
+  m_Size: {x: 128, y: 1, z: 144}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 0
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 5492
+  m_ShapeBox:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 64, y: 0.5, z: 72}
+  references:
+    version: 2
+    RefIds:
+    - rid: 1324672972823986315
+      type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
+      data: 
+--- !u!23 &1492263143757528255
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905420061237156067}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 2
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &4553803608854356982
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905420061237156067}
+  m_Mesh: {fileID: 0}
+--- !u!64 &7638388896231664896
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905420061237156067}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &992328871536913888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,6 +2191,7 @@ GameObject:
   - component: {fileID: 1645924564798622195}
   - component: {fileID: 23755553701146455}
   - component: {fileID: 8560139624061915225}
+  - component: {fileID: 536883165929981711}
   m_Layer: 0
   m_Name: torture_device_008 (2)
   m_TagString: Untagged
@@ -1888,6 +2264,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &536883165929981711
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416391816026872264}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7314776, y: 0.741867, z: 2.3539624}
+  m_Center: {x: 0.10759427, y: -0.2738602, z: 1.0707386}
 --- !u!1 &1471386080515552519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2781,6 +3178,7 @@ GameObject:
   - component: {fileID: 8287643686047072709}
   - component: {fileID: 8392754835313363317}
   - component: {fileID: 3596099997858688696}
+  - component: {fileID: 243318973932784394}
   m_Layer: 0
   m_Name: model
   m_TagString: Untagged
@@ -2853,6 +3251,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &243318973932784394
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669627580518078367}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.29472217, y: 0.353401, z: 0.3849748}
+  m_Center: {x: -0.0000076293945, y: 0, z: -0.0000038146973}
 --- !u!1 &1707384598658757019
 GameObject:
   m_ObjectHideFlags: 0
@@ -4658,6 +5077,7 @@ GameObject:
   - component: {fileID: 8147367501152747905}
   - component: {fileID: 3326768646451791997}
   - component: {fileID: 5070025689132499267}
+  - component: {fileID: 3157065405376529205}
   m_Layer: 0
   m_Name: Coffin (4)
   m_TagString: Untagged
@@ -4730,6 +5150,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3157065405376529205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799992134847750476}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.638495, y: 4.307257, z: 1.8671783}
+  m_Center: {x: 11.3014555, y: -5.088941, z: 0.9226453}
 --- !u!1 &1813479368541746683
 GameObject:
   m_ObjectHideFlags: 0
@@ -4741,6 +5182,7 @@ GameObject:
   - component: {fileID: 7285683808907143529}
   - component: {fileID: 6986064590402636979}
   - component: {fileID: 744682867720042461}
+  - component: {fileID: 5392953253456037705}
   m_Layer: 0
   m_Name: torture_device_008 (1)
   m_TagString: Untagged
@@ -4813,6 +5255,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5392953253456037705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813479368541746683}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7314776, y: 0.741867, z: 2.3539624}
+  m_Center: {x: 0.10758664, y: -0.2738602, z: 1.0707386}
 --- !u!1 &1868077955059900886
 GameObject:
   m_ObjectHideFlags: 0
@@ -4824,6 +5287,7 @@ GameObject:
   - component: {fileID: 6610904485612445876}
   - component: {fileID: 8691907243131735681}
   - component: {fileID: 5883932698600986077}
+  - component: {fileID: 1443872820415719001}
   m_Layer: 0
   m_Name: torture_device_012 (3)
   m_TagString: Untagged
@@ -4896,6 +5360,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1443872820415719001
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868077955059900886}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1373538, y: 1.446602, z: 1.0031468}
+  m_Center: {x: 0.012199788, y: 0.723301, z: -0.0032394824}
 --- !u!1 &2091152842052158736
 GameObject:
   m_ObjectHideFlags: 0
@@ -6131,6 +6616,7 @@ GameObject:
   - component: {fileID: 7769178357549678765}
   - component: {fileID: 5482836054342207281}
   - component: {fileID: 8261522455539292087}
+  - component: {fileID: 8530038492734506140}
   m_Layer: 0
   m_Name: Coffin (3)
   m_TagString: Untagged
@@ -6203,6 +6689,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8530038492734506140
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2161424950369972115}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.638493, y: 4.3072553, z: 1.8671768}
+  m_Center: {x: 11.301391, y: -5.088878, z: 0.9226438}
 --- !u!1 &2372789124913543930
 GameObject:
   m_ObjectHideFlags: 0
@@ -6214,6 +6721,7 @@ GameObject:
   - component: {fileID: 1041590824782816317}
   - component: {fileID: 6178721505981804525}
   - component: {fileID: 7674214450897542744}
+  - component: {fileID: 9098228125273968049}
   m_Layer: 0
   m_Name: torture_device_003
   m_TagString: Untagged
@@ -6286,6 +6794,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9098228125273968049
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372789124913543930}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.112036, y: 3.7456994, z: 3.1826775}
+  m_Center: {x: -0.071338765, y: 1.8728497, z: 0.19457422}
 --- !u!1 &2486301874193526303
 GameObject:
   m_ObjectHideFlags: 0
@@ -12267,6 +12796,7 @@ GameObject:
   - component: {fileID: 4533097157343940064}
   - component: {fileID: 6013842609616137529}
   - component: {fileID: 7141154452174966954}
+  - component: {fileID: 8505592279562041572}
   m_Layer: 0
   m_Name: torture_device_002
   m_TagString: Untagged
@@ -12339,6 +12869,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8505592279562041572
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2733908717665861751}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7412762, y: 1.8308173, z: 0.85962}
+  m_Center: {x: 0.002022371, y: 0.9154087, z: 0.12418395}
 --- !u!1 &2882993944206122576
 GameObject:
   m_ObjectHideFlags: 0
@@ -12411,6 +12962,7 @@ GameObject:
   - component: {fileID: 1427671595194391665}
   - component: {fileID: 910288698651044807}
   - component: {fileID: 3041152071452945711}
+  - component: {fileID: 2851442216421881072}
   m_Layer: 0
   m_Name: torture_device_008
   m_TagString: Untagged
@@ -12483,6 +13035,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2851442216421881072
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3006801939460009375}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7314776, y: 0.741867, z: 2.3539624}
+  m_Center: {x: 0.10758664, y: -0.2738602, z: 1.0707386}
 --- !u!1 &3085603533469101160
 GameObject:
   m_ObjectHideFlags: 0
@@ -14332,6 +14905,7 @@ GameObject:
   - component: {fileID: 8934846345481026364}
   - component: {fileID: 8369966074812645754}
   - component: {fileID: 229277039487503106}
+  - component: {fileID: 7551945542467426358}
   m_Layer: 0
   m_Name: torture_device_012 (2)
   m_TagString: Untagged
@@ -14404,6 +14978,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7551945542467426358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3312701501204800623}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1373538, y: 1.446602, z: 1.0031468}
+  m_Center: {x: 0.012199788, y: 0.723301, z: -0.0032471118}
 --- !u!1 &3358945956482343013
 GameObject:
   m_ObjectHideFlags: 0
@@ -14761,6 +15356,7 @@ GameObject:
   - component: {fileID: 9077381760328736607}
   - component: {fileID: 8527813643390247373}
   - component: {fileID: 3936040377524355908}
+  - component: {fileID: 395370394134727739}
   m_Layer: 0
   m_Name: torture_device_015
   m_TagString: Untagged
@@ -14833,6 +15429,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &395370394134727739
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435981445126760942}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8467901, y: 4.032061, z: 4.640306}
+  m_Center: {x: 0.0010872482, y: 2.0160306, z: -0.50460654}
 --- !u!1 &3528260513289416361
 GameObject:
   m_ObjectHideFlags: 0
@@ -15608,6 +16225,7 @@ GameObject:
   - component: {fileID: 7382626778437723191}
   - component: {fileID: 8607080878485942370}
   - component: {fileID: 176151082529529389}
+  - component: {fileID: 1652392475016270174}
   m_Layer: 0
   m_Name: torture_device_001
   m_TagString: Untagged
@@ -15680,6 +16298,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1652392475016270174
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3681334770907084116}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.140988, y: 4.748953, z: 5.934136}
+  m_Center: {x: -0.4181858, y: 2.3744764, z: -0.51972026}
 --- !u!1 &3759272762270793545
 GameObject:
   m_ObjectHideFlags: 0
@@ -18755,6 +19394,7 @@ GameObject:
   - component: {fileID: 5787675500605847516}
   - component: {fileID: 7655656950666475334}
   - component: {fileID: 6585686843094927162}
+  - component: {fileID: 1024798281124742440}
   m_Layer: 0
   m_Name: torture_device_005
   m_TagString: Untagged
@@ -18827,6 +19467,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1024798281124742440
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4127238397867393681}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.385553, y: 4.74819, z: 2.3025162}
+  m_Center: {x: -0.00005161763, y: 2.374095, z: 0.00039100653}
 --- !u!1 &4130406086184451190
 GameObject:
   m_ObjectHideFlags: 0
@@ -23672,6 +24333,7 @@ GameObject:
   - component: {fileID: 4424860857920697968}
   - component: {fileID: 8775249110198750527}
   - component: {fileID: 8358297640385698898}
+  - component: {fileID: 1612569311988624098}
   m_Layer: 0
   m_Name: torture_device_013 (1)
   m_TagString: Untagged
@@ -23688,7 +24350,7 @@ Transform:
   m_GameObject: {fileID: 4408050781127358386}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.571445, y: 0, z: -20.999996}
+  m_LocalPosition: {x: 30.872868, y: 0, z: -19.525715}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23744,6 +24406,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1612569311988624098
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4408050781127358386}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.26569, y: 2.1761205, z: 1.26569}
+  m_Center: {x: -0.0000078082085, y: 1.0880603, z: -0.000003963709}
 --- !u!1 &4620813072308063618
 GameObject:
   m_ObjectHideFlags: 0
@@ -25131,6 +25814,7 @@ GameObject:
   - component: {fileID: 2750468835419643509}
   - component: {fileID: 5017482020271591969}
   - component: {fileID: 1003220923037112835}
+  - component: {fileID: 4405693779490437886}
   m_Layer: 0
   m_Name: torture_device_004
   m_TagString: Untagged
@@ -25203,6 +25887,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4405693779490437886
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676472480889762373}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.99999994, y: 1.74696, z: 2.9848955}
+  m_Center: {x: 0.0005150437, y: 0.87348, z: 0.3182266}
 --- !u!1 &4699099323199597851
 GameObject:
   m_ObjectHideFlags: 0
@@ -25214,6 +25919,7 @@ GameObject:
   - component: {fileID: 4449264516668300786}
   - component: {fileID: 5075503417161080148}
   - component: {fileID: 3920988954771915164}
+  - component: {fileID: 2190416794007804008}
   m_Layer: 0
   m_Name: Coffin (2)
   m_TagString: Untagged
@@ -25286,6 +25992,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2190416794007804008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4699099323199597851}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.638493, y: 4.3072553, z: 1.8671768}
+  m_Center: {x: 11.301391, y: -5.088878, z: 0.9226438}
 --- !u!1 &4752065739693510881
 GameObject:
   m_ObjectHideFlags: 0
@@ -26331,6 +27058,7 @@ GameObject:
   - component: {fileID: 8877662426398090927}
   - component: {fileID: 7533687070175724861}
   - component: {fileID: 3210376671201424500}
+  - component: {fileID: 8376253367529832829}
   m_Layer: 0
   m_Name: torture_device_006
   m_TagString: Untagged
@@ -26403,6 +27131,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8376253367529832829
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4974417331656441268}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0737625, y: 2.0860212, z: 1.2018443}
+  m_Center: {x: 0.002922267, y: 1.0430106, z: 0.2562751}
 --- !u!1 &5297268912095259713
 GameObject:
   m_ObjectHideFlags: 0
@@ -26414,6 +27163,7 @@ GameObject:
   - component: {fileID: 3723256191329242223}
   - component: {fileID: 6292462912085910882}
   - component: {fileID: 1420901705617047550}
+  - component: {fileID: 8246090937793489658}
   m_Layer: 0
   m_Name: Coffin (7)
   m_TagString: Untagged
@@ -26486,6 +27236,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8246090937793489658
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297268912095259713}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.638493, y: 4.3072557, z: 1.8671768}
+  m_Center: {x: 11.301482, y: -5.0888557, z: 0.92264366}
 --- !u!1 &5300112260390508059
 GameObject:
   m_ObjectHideFlags: 0
@@ -29241,6 +30012,7 @@ GameObject:
   - component: {fileID: 6416144735596305604}
   - component: {fileID: 2389916257093719074}
   - component: {fileID: 7479290955957691582}
+  - component: {fileID: 719476580028627628}
   m_Layer: 0
   m_Name: torture_device_012 (1)
   m_TagString: Untagged
@@ -29313,6 +30085,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &719476580028627628
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5525811391306860795}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1373538, y: 1.446602, z: 1.0031468}
+  m_Center: {x: 0.012192159, y: 0.723301, z: -0.0032471118}
 --- !u!1 &5577189352694359655
 GameObject:
   m_ObjectHideFlags: 0
@@ -40686,6 +41479,7 @@ GameObject:
   - component: {fileID: 1086675057132698980}
   - component: {fileID: 8171914051595858280}
   - component: {fileID: 3934968337652269343}
+  - component: {fileID: 2792744507388261011}
   m_Layer: 0
   m_Name: torture_device_011
   m_TagString: Untagged
@@ -40702,7 +41496,7 @@ Transform:
   m_GameObject: {fileID: 6523421985054146668}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.78572, y: 0, z: -23.571426}
+  m_LocalPosition: {x: 19.485722, y: 0, z: -23.185705}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40758,6 +41552,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2792744507388261011
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6523421985054146668}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.1424897, y: 2.5323405, z: 2.1424897}
+  m_Center: {x: 0.0000026226041, y: 1.2661703, z: 0.0000038146973}
 --- !u!1 &6745974738019066156
 GameObject:
   m_ObjectHideFlags: 0
@@ -40769,6 +41584,7 @@ GameObject:
   - component: {fileID: 3251698511381629958}
   - component: {fileID: 8504202888051514197}
   - component: {fileID: 2266008885335696711}
+  - component: {fileID: 2866217551894740548}
   m_Layer: 0
   m_Name: model (2)
   m_TagString: Untagged
@@ -40841,6 +41657,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2866217551894740548
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6745974738019066156}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.29472223, y: 0.353401, z: 0.3849748}
+  m_Center: {x: -0.0000076293945, y: 0.0000038146973, z: 0}
 --- !u!1 &6797735566549094348
 GameObject:
   m_ObjectHideFlags: 0
@@ -43026,6 +43863,7 @@ GameObject:
   - component: {fileID: 9049918057758726632}
   - component: {fileID: 6078129885879607932}
   - component: {fileID: 5294672265413714369}
+  - component: {fileID: 7455401163923997621}
   m_Layer: 0
   m_Name: torture_device_013 (2)
   m_TagString: Untagged
@@ -43042,7 +43880,7 @@ Transform:
   m_GameObject: {fileID: 6974518198292109285}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.214283, y: 0, z: 27}
+  m_LocalPosition: {x: -8.371424, y: 0, z: 28.24286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43098,6 +43936,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7455401163923997621
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6974518198292109285}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.26569, y: 2.1761205, z: 1.26569}
+  m_Center: {x: -0.0000078082085, y: 1.0880603, z: -0.0000154078}
 --- !u!1 &7140797818784968134
 GameObject:
   m_ObjectHideFlags: 0
@@ -43493,6 +44352,7 @@ GameObject:
   - component: {fileID: 2705755560021802433}
   - component: {fileID: 2179612624739756290}
   - component: {fileID: 1615767446548160983}
+  - component: {fileID: 2234161444530474670}
   m_Layer: 0
   m_Name: torture_device_013 (3)
   m_TagString: Untagged
@@ -43509,7 +44369,7 @@ Transform:
   m_GameObject: {fileID: 7209368401449227618}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.428569, y: 0, z: 26.857145}
+  m_LocalPosition: {x: -7.371423, y: 0, z: 27.10001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43565,6 +44425,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2234161444530474670
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7209368401449227618}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.26569, y: 2.1761205, z: 1.26569}
+  m_Center: {x: -0.00000017881392, y: 1.0880603, z: -0.000007778406}
 --- !u!1 &7230800774935619842
 GameObject:
   m_ObjectHideFlags: 0
@@ -44492,6 +45373,7 @@ GameObject:
   - component: {fileID: 8673379866648917420}
   - component: {fileID: 8045971909294872627}
   - component: {fileID: 9139072149352072337}
+  - component: {fileID: 4049100202941635126}
   m_Layer: 0
   m_Name: Coffin (6)
   m_TagString: Untagged
@@ -44564,6 +45446,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4049100202941635126
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251156669697601443}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.638493, y: 4.307257, z: 1.8671777}
+  m_Center: {x: 11.30136, y: -5.0889406, z: 0.9226446}
 --- !u!1 &7507475249512780916
 GameObject:
   m_ObjectHideFlags: 0
@@ -44575,6 +45478,7 @@ GameObject:
   - component: {fileID: 7033157019844882136}
   - component: {fileID: 5627535096600999001}
   - component: {fileID: 1010903082638220553}
+  - component: {fileID: 2619515654747899369}
   m_Layer: 0
   m_Name: torture_device_011 (1)
   m_TagString: Untagged
@@ -44591,7 +45495,7 @@ Transform:
   m_GameObject: {fileID: 7507475249512780916}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.857147, y: 0, z: 0.71428585}
+  m_LocalPosition: {x: 28.89003, y: 0, z: 2.0357187}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44647,90 +45551,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &7747961957043709453
-GameObject:
+--- !u!65 &2619515654747899369
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2385056749482196079}
-  - component: {fileID: 8900782977432341318}
-  m_Layer: 0
-  m_Name: stock-photo-fantasy-illustration-of-a-dungeon-map-for-ttrpg-games-or-similarly-based-fantasy-publications-2257356649
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &2385056749482196079
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7747961957043709453}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 62.53, y: 1.1, z: 51.95}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 2824409772866023226}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!212 &8900782977432341318
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7747961957043709453}
+  m_GameObject: {fileID: 7507475249512780916}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 083daf5d047d7164a8e70889c8e41a0e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.2}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 11.25, y: 16}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  serializedVersion: 3
+  m_Size: {x: 2.1424897, y: 2.5323405, z: 2.1424897}
+  m_Center: {x: 0.0000026226041, y: 1.2661703, z: 0}
 --- !u!1 &7894592553671517750
 GameObject:
   m_ObjectHideFlags: 0
@@ -45088,6 +45929,7 @@ GameObject:
   - component: {fileID: 2709470202549946767}
   - component: {fileID: 2210370277279120034}
   - component: {fileID: 2040533195105449097}
+  - component: {fileID: 7022861503211505340}
   m_Layer: 0
   m_Name: torture_device_012
   m_TagString: Untagged
@@ -45160,6 +46002,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7022861503211505340
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7914103663460433375}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1373538, y: 1.446602, z: 1.0031468}
+  m_Center: {x: 0.012199788, y: 0.723301, z: -0.0032394824}
 --- !u!1 &7953043052084648758
 GameObject:
   m_ObjectHideFlags: 0
@@ -45171,6 +46034,7 @@ GameObject:
   - component: {fileID: 8724351359996201787}
   - component: {fileID: 1121607927951789715}
   - component: {fileID: 8978796854438229850}
+  - component: {fileID: 3746212965186517894}
   m_Layer: 0
   m_Name: Coffin
   m_TagString: Untagged
@@ -45243,6 +46107,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3746212965186517894
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7953043052084648758}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.638493, y: 4.307257, z: 1.8671778}
+  m_Center: {x: 11.301421, y: -5.0888476, z: 0.9226449}
 --- !u!1 &8003361540096131771
 GameObject:
   m_ObjectHideFlags: 0
@@ -51764,6 +52649,7 @@ GameObject:
   - component: {fileID: 6876121924027599958}
   - component: {fileID: 6508632183820181938}
   - component: {fileID: 1347130184709184447}
+  - component: {fileID: 8684273005399632903}
   m_Layer: 0
   m_Name: torture_device_013 (4)
   m_TagString: Untagged
@@ -51780,7 +52666,7 @@ Transform:
   m_GameObject: {fileID: 8189874037823596997}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.428554, y: 0, z: 28.000008}
+  m_LocalPosition: {x: -6.514282, y: 0, z: 28.100008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51836,6 +52722,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8684273005399632903
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8189874037823596997}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.26569, y: 2.1761205, z: 1.26569}
+  m_Center: {x: -0.00000017881392, y: 1.0880603, z: -0.000007778406}
 --- !u!1 &8249543829962189930
 GameObject:
   m_ObjectHideFlags: 0
@@ -51847,6 +52754,7 @@ GameObject:
   - component: {fileID: 6657044106411762997}
   - component: {fileID: 3269369235345128761}
   - component: {fileID: 2903932835665889649}
+  - component: {fileID: 3512151194084249501}
   m_Layer: 0
   m_Name: torture_device_007
   m_TagString: Untagged
@@ -51919,6 +52827,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3512151194084249501
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8249543829962189930}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9747553, y: 2.0495071, z: 0.4619944}
+  m_Center: {x: -0.0019264224, y: 1.089771, z: 0.0010733084}
 --- !u!1 &8422109431834193076
 GameObject:
   m_ObjectHideFlags: 0
@@ -54180,6 +55109,7 @@ GameObject:
   - component: {fileID: 690098974657552569}
   - component: {fileID: 8619551100443261830}
   - component: {fileID: 3310828130927236939}
+  - component: {fileID: 7204949918181589795}
   m_Layer: 0
   m_Name: Coffin (1)
   m_TagString: Untagged
@@ -54252,6 +55182,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7204949918181589795
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8569967534317158061}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.6384945, y: 4.307257, z: 1.8671788}
+  m_Center: {x: 11.301423, y: -5.0888476, z: 0.92264605}
 --- !u!1 &8792067890560606531
 GameObject:
   m_ObjectHideFlags: 0
@@ -54633,6 +55584,7 @@ Transform:
   m_LocalScale: {x: 0.7, y: 1, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3923322238780651192}
   - {fileID: 6327149164068619283}
   - {fileID: 8563900744063433913}
   - {fileID: 8118066124585599816}
@@ -54654,7 +55606,6 @@ Transform:
   - {fileID: 6410654283537054397}
   - {fileID: 2188688856463741926}
   - {fileID: 2906952979321678908}
-  - {fileID: 2385056749482196079}
   - {fileID: 6756168219460714657}
   - {fileID: 1073244596906614453}
   - {fileID: 4996667557658445347}
@@ -56994,7 +57945,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.06666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 1193406313021064c8cd82ef51de2944, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 383323fba20e8f7478aaf8b477792178, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &8926435458433684358
 GameObject:
@@ -57007,6 +57958,7 @@ GameObject:
   - component: {fileID: 1159994079086506871}
   - component: {fileID: 7069956109436928121}
   - component: {fileID: 5320062825082708213}
+  - component: {fileID: 2369402388801829523}
   m_Layer: 0
   m_Name: torture_device_013 (5)
   m_TagString: Untagged
@@ -57079,6 +58031,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2369402388801829523
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8926435458433684358}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.26569, y: 2.1761205, z: 1.26569}
+  m_Center: {x: -0.00000017881392, y: 1.0880603, z: -0.000007778406}
 --- !u!1 &8968899738945939544
 GameObject:
   m_ObjectHideFlags: 0
@@ -57090,6 +58063,7 @@ GameObject:
   - component: {fileID: 3549860424219520845}
   - component: {fileID: 3463503727267929528}
   - component: {fileID: 3638309393158993432}
+  - component: {fileID: 8010957435856067845}
   m_Layer: 0
   m_Name: Coffin (5)
   m_TagString: Untagged
@@ -57162,6 +58136,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8010957435856067845
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8968899738945939544}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.638494, y: 4.3072557, z: 1.8671768}
+  m_Center: {x: 11.301422, y: -5.0889397, z: 0.92264366}
 --- !u!1 &8986676929195672404
 GameObject:
   m_ObjectHideFlags: 0
@@ -57747,6 +58742,7 @@ GameObject:
   - component: {fileID: 3364707799160415244}
   - component: {fileID: 1873887737203832607}
   - component: {fileID: 1948477806670476059}
+  - component: {fileID: 5849754250423318833}
   m_Layer: 0
   m_Name: torture_device_013
   m_TagString: Untagged
@@ -57819,6 +58815,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5849754250423318833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040730184880360753}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.26569, y: 2.1761205, z: 1.26569}
+  m_Center: {x: -0.0000078082085, y: 1.0880603, z: -0.000007778406}
 --- !u!1 &9051969631377521871
 GameObject:
   m_ObjectHideFlags: 0
@@ -57830,6 +58847,7 @@ GameObject:
   - component: {fileID: 5223680508870449217}
   - component: {fileID: 1923988769302929674}
   - component: {fileID: 3714948749468858580}
+  - component: {fileID: 7983037219157920544}
   m_Layer: 0
   m_Name: torture_device_011 (2)
   m_TagString: Untagged
@@ -57846,7 +58864,7 @@ Transform:
   m_GameObject: {fileID: 9051969631377521871}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.85713, y: 0, z: 12.14286}
+  m_LocalPosition: {x: -5.85713, y: 0, z: 12.002861}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57902,6 +58920,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7983037219157920544
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9051969631377521871}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.1424897, y: 2.5323405, z: 2.1424897}
+  m_Center: {x: 0.0000026226041, y: 1.2661703, z: 0}
 --- !u!1001 &298739549205092128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57912,7 +58951,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.77
+      value: 44.485718
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -57920,7 +58959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 71.54
+      value: 72.67143
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -59565,7 +60604,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 82.47
+      value: 83.77143
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -59573,7 +60612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.34
+      value: 24.814287
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -62376,7 +63415,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47.32
+      value: 47.200005
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -62384,7 +63423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 57.24
+      value: 56.671432
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -62983,7 +64022,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 73.27
+      value: 72.77144
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -62991,7 +64030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.29
+      value: 21.290007
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66223,7 +67262,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 82.31
+      value: 82.34287
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -66231,7 +67270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 45.35
+      value: 46.671432
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52a9cc20633e8914b8e33e90b7f261a6, type: 3}
       propertyPath: m_LocalRotation.w

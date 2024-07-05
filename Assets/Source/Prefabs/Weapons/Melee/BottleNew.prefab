@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 6027352938041837178}
   - component: {fileID: -6649601167883014311}
   - component: {fileID: 4780732525012824521}
+  - component: {fileID: 4971315604633967794}
   m_Layer: 0
   m_Name: BottleNew
   m_TagString: Untagged
@@ -164,8 +165,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _force: 50
-  _rotationForce: 50
-  <Offset>k__BackingField: {x: 0, y: 0, z: 1}
+  _rotationForce: 70
+  <IsTrackable>k__BackingField: 1
+  <Offset>k__BackingField: {x: -0.4, y: 0.4, z: 0.3}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 0}
   <RightHandPlaceHolder>k__BackingField: {fileID: 5667402282348756323}
 --- !u!114 &2794836484436812723
@@ -5109,3 +5111,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5e4eb7b5bcfdf409da29c2f848dcf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4971315604633967794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8266264500951348985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cec559b08a491baf128343e290b283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minHeight: 0
+  _maxHeight: 2

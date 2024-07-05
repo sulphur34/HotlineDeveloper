@@ -18,10 +18,11 @@ namespace Modules.Weapons.Melee
             _cancellationToken = cancellationToken;
         }
 
-        public void Attack()
+        public bool TryAttack()
         {
             _collider.enabled = true;
             DisableAttack();
+            return true;
         }
 
         private async UniTask DisableAttack()

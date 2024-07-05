@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="096f9c91-8365-4be6-8d8f-87ad3dc5adea" name="Changes" comment="">
+    <list default="true" id="bc8c6c2d-18af-493f-99bb-dcfa4f4f9201" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/BulletSystem/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/BulletSystem/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Weapons/Assault Rifle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Weapons/Assault Rifle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Weapons/IAttackModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Weapons/IAttackModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Weapons/Melee/MeleeAttackModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Weapons/Melee/MeleeAttackModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Weapons/Range/RangeAttackModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Weapons/Range/RangeAttackModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Weapons/Weapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -262,6 +264,8 @@
       <workItem from="1719659384462" duration="1243000" />
       <workItem from="1719732236957" duration="4251000" />
       <workItem from="1719819260438" duration="3750000" />
+      <workItem from="1719914951480" duration="7630000" />
+      <workItem from="1719991423704" duration="4048000" />
     </task>
     <servers />
   </component>
@@ -282,7 +286,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feature-character-behaviour" />
+                        <option value="assets" />
                       </list>
                     </value>
                   </entry>
@@ -326,13 +330,13 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/Weapons/WeaponItemSystem/WeaponItem.cs</url>
-          <line>48</line>
+          <line>47</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Weapons\WeaponItemSystem\WeaponItem.cs" initialLine="45" containingFunctionPresentation="method 'Attack'">
             <startOffsets>
-              <option value="1774" />
+              <option value="1937" />
             </startOffsets>
             <endOffsets>
-              <option value="1787" />
+              <option value="1950" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="52" />
@@ -364,26 +368,26 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandler.cs</url>
-          <line>93</line>
+          <line>99</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\WeaponsHandler\WeaponHandler.cs" initialLine="87" containingFunctionPresentation="method 'TryGetWeapon'">
             <startOffsets>
-              <option value="3489" />
+              <option value="3670" />
             </startOffsets>
             <endOffsets>
-              <option value="3787" />
+              <option value="3968" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/Weapons/WeaponItemSystem/WeaponItem.cs</url>
-          <line>37</line>
+          <line>36</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Weapons\WeaponItemSystem\WeaponItem.cs" initialLine="35" containingFunctionPresentation="method 'Init'">
             <startOffsets>
-              <option value="1402" />
+              <option value="1565" />
             </startOffsets>
             <endOffsets>
-              <option value="1441" />
+              <option value="1604" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="84" />
@@ -402,26 +406,26 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandler.cs</url>
-          <line>74</line>
+          <line>80</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\WeaponsHandler\WeaponHandler.cs" initialLine="73" containingFunctionPresentation="method 'EquipWeaponItem'">
             <startOffsets>
-              <option value="2832" />
+              <option value="3013" />
             </startOffsets>
             <endOffsets>
-              <option value="2854" />
+              <option value="3035" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="104" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/Weapons/WeaponItemSystem/WeaponItem.cs</url>
-          <line>94</line>
+          <line>88</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Weapons\WeaponItemSystem\WeaponItem.cs" initialLine="89" containingFunctionPresentation="method 'SetEquipped'">
             <startOffsets>
-              <option value="3327" />
+              <option value="3591" />
             </startOffsets>
             <endOffsets>
-              <option value="3346" />
+              <option value="3610" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="105" />
@@ -480,13 +484,13 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/AnimationSystem/AnimationController.cs</url>
-          <line>40</line>
+          <line>44</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\AnimationSystem\AnimationController.cs" initialLine="42" containingFunctionPresentation="method 'StandUp'">
             <startOffsets>
-              <option value="1270" />
+              <option value="1465" />
             </startOffsets>
             <endOffsets>
-              <option value="1302" />
+              <option value="1497" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="180" />
@@ -517,7 +521,7 @@
           </properties>
           <option name="timeStamp" value="184" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Actions/SetAttackDistance.cs</url>
           <line>24</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\CharacterSystem\EnemySystem\EnemyBehavior\Actions\SetAttackDistance.cs" initialLine="24" containingFunctionPresentation="method 'OnUpdate'">
@@ -530,7 +534,7 @@
           </properties>
           <option name="timeStamp" value="197" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/Trap/TrapRecharger.cs</url>
           <line>32</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Trap\TrapRecharger.cs" initialLine="29" containingFunctionPresentation="method 'Recharge'">
@@ -543,7 +547,7 @@
           </properties>
           <option name="timeStamp" value="198" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/Trap/TrapRecharger.cs</url>
           <line>38</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Trap\TrapRecharger.cs" initialLine="34" containingFunctionPresentation="method 'RechargingRoutine'">
@@ -556,7 +560,7 @@
           </properties>
           <option name="timeStamp" value="199" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/LethalAsNormalReceiveStrategy.cs</url>
           <line>6</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiverSystem\DamageReceiveStrategies\LethalAsNormalReceiveStrategy.cs" initialLine="6" containingFunctionPresentation="method 'GetDamage'">
@@ -569,7 +573,7 @@
           </properties>
           <option name="timeStamp" value="200" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySpawnSystem/EnemySpawner.cs</url>
           <line>37</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\CharacterSystem\EnemySpawnSystem\EnemySpawner.cs" initialLine="37" containingFunctionPresentation="method 'BuildEnemy'">
@@ -582,7 +586,7 @@
           </properties>
           <option name="timeStamp" value="202" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySpawnSystem/EnemySpawner.cs</url>
           <line>40</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\CharacterSystem\EnemySpawnSystem\EnemySpawner.cs" initialLine="40" containingFunctionPresentation="method 'BuildEnemy'">
@@ -595,7 +599,7 @@
           </properties>
           <option name="timeStamp" value="203" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiver.cs</url>
           <line>27</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiverSystem\DamageReceiver.cs" initialLine="27" containingFunctionPresentation="method 'Receive'">
@@ -609,17 +613,17 @@
           <option name="timeStamp" value="204" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/Weapons/Range/RangeWeaponSetup.cs</url>
-          <line>23</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Weapons\Range\RangeWeaponSetup.cs" initialLine="23" containingFunctionPresentation="method 'Construct'">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/Weapons/Weapon.cs</url>
+          <line>22</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Weapons\Weapon.cs" initialLine="22" containingFunctionPresentation="method 'TryAttack'">
             <startOffsets>
-              <option value="633" />
+              <option value="650" />
             </startOffsets>
             <endOffsets>
-              <option value="687" />
+              <option value="693" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="206" />
+          <option name="timeStamp" value="212" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -7,6 +7,7 @@ public abstract class InputController : MonoBehaviour, IMoveInput, IAttackInput,
 {
     protected PlayerInput PlayerInput;
 
+    protected Camera Camera { get; private set; }
     public event Action<Vector2> MoveReceived;
     public event Action<Vector2> RotationReceived;
     public event Action<Vector2> LookReceived;
@@ -16,6 +17,7 @@ public abstract class InputController : MonoBehaviour, IMoveInput, IAttackInput,
 
     private void Awake()
     {
+        Camera = Camera.main;
         PlayerInput = new PlayerInput();
     }
 
