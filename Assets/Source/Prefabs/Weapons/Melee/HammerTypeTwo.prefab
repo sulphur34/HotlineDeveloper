@@ -157,8 +157,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 2200328212986599487}
   _collider: {fileID: -280465796086505093}
-  _attakTime: 0.1
-  _rechargeTime: 1
+  _attakTime: 0.2
+  _rechargeTime: 0.8
 --- !u!114 &4622082467335475288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,8 +207,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.071204245, y: 0.3156023, z: 0.113932684}
-  m_Center: {x: -0.0024071373, y: 0.11535586, z: -0.00000038184226}
+  m_Size: {x: 0.13312273, y: 0.22836998, z: 0.14123198}
+  m_Center: {x: 0.010213532, y: 0.233424, z: 0.0019988269}
 --- !u!199 &8182525473690745196
 ParticleSystemRenderer:
   serializedVersion: 6

@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.8143713, g: 0.8143713, b: 0.8143713, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.824023, g: 0.8860549, b: 0.929, a: 1}
   m_AmbientGroundColor: {r: 0.809, g: 0.809, b: 0.809, a: 1}
   m_AmbientIntensity: 2.49
@@ -4810,6 +4810,10 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 1771
       objectReference: {fileID: 0}
+    - target: {fileID: 1544651462360434936, guid: 6fcdac1612ca4374b820ecbea9976932, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1165206717}
     - target: {fileID: 1864530194879900411, guid: 6fcdac1612ca4374b820ecbea9976932, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5106,6 +5110,10 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 1207
       objectReference: {fileID: 0}
+    - target: {fileID: 5670625554260968190, guid: 6fcdac1612ca4374b820ecbea9976932, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1165206717}
     - target: {fileID: 5707725197902464311, guid: 6fcdac1612ca4374b820ecbea9976932, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -8926,6 +8934,14 @@ PrefabInstance:
     - target: {fileID: 4775705553133311435, guid: c27a627e0b78e7a4e86fee38802a2edf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101422122487017995, guid: c27a627e0b78e7a4e86fee38802a2edf, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5424528
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101422122487017995, guid: c27a627e0b78e7a4e86fee38802a2edf, type: 3}
+      propertyPath: m_Color.g
+      value: 0.87724346
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

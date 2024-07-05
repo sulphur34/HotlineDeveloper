@@ -168,6 +168,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _force: 50
   _rotationForce: 70
+  _rotationZ: 90
+  _meleeRotationY: 0
+  _rangeRotationY: 90
+  _rotationX: 0
   <IsTrackable>k__BackingField: 1
   <Offset>k__BackingField: {x: -0.3, y: 0, z: 0.35}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 0}
@@ -186,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 667668127749409297}
   _collider: {fileID: -5403674297062241196}
-  _attakTime: 0.1
+  _attakTime: 0.2
   _rechargeTime: 1
 --- !u!114 &6006565654179322331
 MonoBehaviour:
@@ -236,8 +240,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.09007355, y: 0.9149133, z: 0.10664567}
-  m_Center: {x: -0.0004192628, y: 0.31387585, z: 0.0016026963}
+  m_Size: {x: 0.13, y: 0.8147481, z: 0.13}
+  m_Center: {x: -0.00041925907, y: 0.47997653, z: 0.0016026944}
 --- !u!199 &4386717534297493228
 ParticleSystemRenderer:
   serializedVersion: 6
