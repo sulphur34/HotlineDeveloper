@@ -1,10 +1,10 @@
+using System;
 using Modules.Characters.Enemies.EnemyBehavior;
 using Modules.CharacterSystem.Player;
 using Modules.DamageSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
 using UnityEngine;
 using VContainer;
-using VContainer.Unity;
 
 namespace Modules.EnemySpawnSystem
 {
@@ -13,6 +13,11 @@ namespace Modules.EnemySpawnSystem
         private BehaviorConfigFactory _behaviorConfigFactory;
         private IObjectResolver _objectResolver;
         private DamageableConfigFactory _damageableConfigFactory;
+        private LevelEnemySpawnConfigs _levelEnemySpawnConfigs;
+        private Player _player;
+        private WeaponTracker _weaponTracker;
+
+        public event Action<GameObject> Spawned;
         
         [Inject]
         public void Construct(
@@ -24,10 +29,16 @@ namespace Modules.EnemySpawnSystem
         {
             _behaviorConfigFactory = behaviorConfigFactory;
             _damageableConfigFactory = damageableConfigFactory;
-            
-            foreach (EnemySpawnConfig enemySpawnConfig in levelEnemySpawnConfigs.EnemySpawnConfigs)
+            _levelEnemySpawnConfigs = levelEnemySpawnConfigs;
+            _player = player;
+            _weaponTracker = weaponTracker;
+        }
+
+        public void BuildEnemies()
+        {
+            foreach (EnemySpawnConfig enemySpawnConfig in _levelEnemySpawnConfigs.EnemySpawnConfigs)
             {
-                BuildEnemy(enemySpawnConfig, player, weaponTracker);
+                BuildEnemy(enemySpawnConfig, _player, _weaponTracker);
             }
         }
 
@@ -39,6 +50,7 @@ namespace Modules.EnemySpawnSystem
             BehaviorSetup behaviorSetup = instance.GetComponent<BehaviorSetup>();
             behaviorSetup.Initialize(behaviorConfig, enemySpawnConfig.PatrolRoute, weaponTracker, player);
             instance.GetComponent<DamageReceiverSetup>().Initialize(damageableConfig);
+            Spawned?.Invoke(instance);
         }
     }
 }
