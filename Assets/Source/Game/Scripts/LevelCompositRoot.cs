@@ -89,6 +89,7 @@ public class LevelCompositRoot : LifetimeScope
 
     private void LevelConfigure(IContainerBuilder builder)
     {
+        builder.RegisterComponentInHierarchy<EnemyTracker>();
         builder.RegisterComponentInHierarchy<LevelHandler>();
         builder.Register<LevelSaveHandler>(Lifetime.Singleton);
         
@@ -96,9 +97,12 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<PauseSetButton>();
         builder.RegisterComponentInHierarchy<LoadSceneButton>();
         builder.RegisterComponentInHierarchy<RestartLevelButton>();
-        
+        builder.RegisterComponentInHierarchy<UIDirectionPointer>();
+
         builder.RegisterBuildCallback(container =>
         {
+            container.Resolve<EnemySpawner>().BuildEnemies();
+            container.Resolve<EnemyTracker>().Activate();
             container.InjectGameObject(_weaponSetupsParent);
             container.Resolve<LevelSaveHandler>();
             container.Resolve<Fade>().Out();

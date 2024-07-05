@@ -14,6 +14,7 @@ namespace Modules.DamageSystem
         public event Action<DamageData> Received;
         public event Action FallenDown;
         public event Action Recovered;
+        public event Action<GameObject> Died;
         
         public bool IsDead { get; private set; }
         public bool IsKnocked { get; private set; }
@@ -46,6 +47,7 @@ namespace Modules.DamageSystem
 
         public void OnDeath()
         {
+            Died?.Invoke(this.gameObject);
             IsDead = true;
             OnFall();
         }
