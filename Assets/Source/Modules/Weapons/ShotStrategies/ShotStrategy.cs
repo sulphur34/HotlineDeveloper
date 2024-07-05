@@ -14,7 +14,7 @@ namespace Modules.Weapons
         private RangeWeaponConfig _config;
         private BulletPool _bulletPool;
 
-        protected float BulletSpeed => _config.BulletSpeed;
+        private float BulletSpeed => _config.BulletSpeed;
 
         private void OnValidate()
         {
@@ -30,7 +30,7 @@ namespace Modules.Weapons
             _bulletPool = bulletPool;
         }
 
-        protected Bullet InstantiateBullet()
+        private Bullet InstantiateBullet()
         {
             Bullet bullet = _bulletPool.Get();
             bullet.SetPosition(_bulletSpawnPoint.transform.position);
