@@ -23,12 +23,8 @@ namespace Modules.LevelsSystem
         public event Action AllEnemiesDied;
         public event Action EnemyDied;
 
-        public Vector3 NearestEnemyPosition => _nearestEnemy.position;
+        public Vector3 NearestPosition => _nearestEnemy == null ? Vector3.zero : _nearestEnemy.position;
 
-        public void Activate()
-        {
-            TrackingNearestEnemy(_cancellationToken);
-        }
 
         [Inject]
         public void Construct(EnemySpawner enemySpawner, Player player)
@@ -37,6 +33,16 @@ namespace Modules.LevelsSystem
             _transform = player.transform;
             _enemies = new List<Transform>();
             enemySpawner.Spawned += Add;
+        }
+        
+        public void Activate()
+        {
+            TrackingNearest(_cancellationToken);
+        }
+
+        public Vector3 GetNearestPosition()
+        {
+            return _nearestEnemy.position;
         }
 
         private void Add(GameObject character)
@@ -62,7 +68,7 @@ namespace Modules.LevelsSystem
                 .FirstOrDefault();
         }
         
-        private async UniTask TrackingNearestEnemy(CancellationToken cancellationToken)
+        private async UniTask TrackingNearest(CancellationToken cancellationToken)
         {
             while (enabled)
             {

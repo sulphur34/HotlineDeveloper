@@ -1,6 +1,9 @@
 ﻿using Modules.CharacterSystem.Player;
 using Modules.DamageSystem;
+using Modules.FadeSystem;
+using Modules.SceneLoaderSystem;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using VContainer;
 
 namespace Modules.LevelsSystem
@@ -10,6 +13,9 @@ namespace Modules.LevelsSystem
         private Level _level;
         private Player _player;
         private EnemyTracker _enemyTracker;
+        private EndLevelTrigger _endLevelTrigger;
+        private Fade _fade;
+        private SceneLoader _sceneLoader;
 
         private void Update()
         {
@@ -24,25 +30,35 @@ namespace Modules.LevelsSystem
         }
         
         [Inject]
-        private void Construct(LevelsData levels, Player player, EnemyTracker enemyTracker)
+        private void Construct(
+            LevelsData levels,
+            Player player,
+            EndLevelTrigger endLevelTrigger,
+            Fade fade,
+             SceneLoader sceneLoader)
         {
             int levelForCompleteIndex = levels.ForLoad - 1;
             _level = levels.Value[levelForCompleteIndex];
             _player = player;
-            _enemyTracker = enemyTracker;
+            _endLevelTrigger = endLevelTrigger;
             _player.GetComponent<DamageReceiverView>().Died += OnLoose;
-            _enemyTracker.AllEnemiesDied += OnWin;
+            _endLevelTrigger.Reached += OnWin;
+
+            _fade = fade;
+            _sceneLoader = sceneLoader;
         }
 
         private void OnWin()
         {
             Debug.Log("Level complete by killing all enemies");
             _level.Complete();
+            SceneManager.LoadScene("Menu");
         }
 
         private void OnLoose(GameObject player)
         {
-            
+            Debug.Log("Level lost, you are dead");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
