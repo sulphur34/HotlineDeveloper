@@ -89,6 +89,7 @@ public class LevelCompositRoot : LifetimeScope
 
     private void LevelConfigure(IContainerBuilder builder)
     {
+        builder.RegisterComponentInHierarchy<EndLevelTrigger>();
         builder.RegisterComponentInHierarchy<EnemyTracker>();
         builder.RegisterComponentInHierarchy<LevelHandler>();
         builder.Register<LevelSaveHandler>(Lifetime.Singleton);
