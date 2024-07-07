@@ -167,9 +167,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <IsTrackable>k__BackingField: 1
   _force: 50
   _rotationForce: 5
+  _rotationZ: 90
+  _meleeRotationY: 0
+  _rangeRotationY: 90
+  _rotationX: 0
+  <IsTrackable>k__BackingField: 1
   <Offset>k__BackingField: {x: -0.4, y: 0.4, z: 0}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 8455832807860453144}
   <RightHandPlaceHolder>k__BackingField: {fileID: 8339601958599664603}
@@ -286,7 +290,7 @@ Transform:
   m_GameObject: {fileID: 7794080334400262644}
   serializedVersion: 2
   m_LocalRotation: {x: 0.32771122, y: -0.641672, z: -0.6445223, w: 0.2558386}
-  m_LocalPosition: {x: 0, y: -0.0273, z: 0.0621}
+  m_LocalPosition: {x: 0, y: -0.0273, z: 0.0071}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
