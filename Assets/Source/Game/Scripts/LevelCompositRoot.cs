@@ -13,6 +13,7 @@ using Modules.CharacterSystem.Player;
 using Modules.EnemySpawnSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
 using Modules.DamageSystem;
+using Modules.ScoreSystem;
 
 public class LevelCompositRoot : LifetimeScope
 {
@@ -91,7 +92,8 @@ public class LevelCompositRoot : LifetimeScope
     {
         builder.RegisterComponentInHierarchy<EndLevelTrigger>();
         builder.RegisterComponentInHierarchy<EnemyTracker>();
-        builder.RegisterComponentInHierarchy<LevelHandler>();
+        builder.RegisterComponentInHierarchy<ScoreCounterView>();
+        builder.RegisterComponentInHierarchy<LevelConditionManager>();
         builder.Register<LevelSaveHandler>(Lifetime.Singleton);
         
         builder.Register<PauseSetter>(Lifetime.Singleton);
