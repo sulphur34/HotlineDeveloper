@@ -8,7 +8,7 @@ using VContainer;
 
 namespace Modules.LevelsSystem
 {
-    public class LevelHandler : MonoBehaviour
+    public class LevelConditionManager : MonoBehaviour
     {
         private Level _level;
         private Player _player;

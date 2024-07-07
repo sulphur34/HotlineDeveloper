@@ -7,6 +7,7 @@ using Modules.CharacterSystem.Player;
 using Modules.DamageSystem;
 using Modules.EnemySpawnSystem;
 using UnityEngine;
+using UnityEngine.WSA;
 using VContainer;
 
 namespace Modules.LevelsSystem
@@ -19,7 +20,8 @@ namespace Modules.LevelsSystem
         private List<Transform> _enemies;
         private Transform _nearestEnemy;
         private CancellationToken _cancellationToken;
-        
+
+        public event Action Activated;
         public event Action AllEnemiesDied;
         public event Action EnemyDied;
 
@@ -38,6 +40,7 @@ namespace Modules.LevelsSystem
         public void Activate()
         {
             TrackingNearest(_cancellationToken);
+            Activated?.Invoke();
         }
 
         public Vector3 GetNearestPosition()
