@@ -52,13 +52,15 @@ namespace Modules.LevelsSystem
         {
             Debug.Log("Level complete by killing all enemies");
             _level.Complete();
-            SceneManager.LoadScene("Menu");
+            _fade.In();
+            _sceneLoader.Load("Menu", _fade);
         }
 
         private void OnLoose(GameObject player)
         {
             Debug.Log("Level lost, you are dead");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            _fade.In();
+            _sceneLoader.Load(SceneManager.GetActiveScene().name, _fade);
         }
     }
 }

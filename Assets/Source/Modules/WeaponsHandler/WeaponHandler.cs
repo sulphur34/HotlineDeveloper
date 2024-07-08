@@ -44,7 +44,7 @@ namespace Modules.PlayerWeaponsHandler
             if (_currentWeaponItem == null || _currentWeaponItem == _defaultWeaponItem)
                 return;
             
-            _thrownWeaponStrategy?.ClearOwner();
+            _weaponStrategy?.ClearOwner();
             _currentWeaponItem.Unequip();
             _currentWeaponItem.Attacked -= OnAttack;
             _currentWeaponItem = _defaultWeaponItem;
