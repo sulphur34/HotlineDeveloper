@@ -5,17 +5,18 @@ using UnityEngine;
 
 namespace Modules.Weapons.Melee
 {
-    internal class MeleeAttackModule : IAttackModule
+    internal class MeleeAttackModule : IAttackModule, IInterruptModule
     {
         private readonly Collider _collider;
         private readonly float _attackTime;
-        private readonly CancellationToken _cancellationToken;
+        
+        private CancellationTokenSource _cancellationTokenSource;
 
-        public MeleeAttackModule(Collider collider, float attackTime, CancellationToken cancellationToken)
+        public MeleeAttackModule(Collider collider, float attackTime)
         {
             _collider = collider;
             _attackTime = attackTime;
-            _cancellationToken = cancellationToken;
+            _cancellationTokenSource = new CancellationTokenSource();
         }
 
         public bool TryAttack()
@@ -25,10 +26,21 @@ namespace Modules.Weapons.Melee
             return true;
         }
 
+        public void Interrupt()
+        {
+            _cancellationTokenSource?.Cancel();
+            _cancellationTokenSource = new CancellationTokenSource();
+        }
+
         private async UniTask DisableAttack()
         {
-            await UniTask.Delay(TimeSpan.FromSeconds(_attackTime), cancellationToken: _cancellationToken);
+            await UniTask.Delay(TimeSpan.FromSeconds(_attackTime), cancellationToken: _cancellationTokenSource.Token);
             _collider.enabled = false;
+        }
+
+        public void Dispose()
+        {
+            _cancellationTokenSource?.Dispose();
         }
     }
 }

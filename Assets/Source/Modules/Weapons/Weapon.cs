@@ -7,13 +7,19 @@ namespace Modules.Weapons
     {
         private readonly WeaponRechargeTime _rechargeTime;
         private readonly IAttackModule _attackModule;
+        private readonly IInterruptModule _interruptModule;
         private readonly CancellationToken _cancellationToken;
 
-        internal Weapon(WeaponRechargeTime rechargeTime, IAttackModule attackModule, CancellationToken cancellationToken)
+        internal Weapon(
+            WeaponRechargeTime rechargeTime, 
+            IAttackModule attackModule, 
+            CancellationToken cancellationToken, 
+            IInterruptModule interruptModule = null)
         {
             _rechargeTime = rechargeTime;
             _attackModule = attackModule;
             _cancellationToken = cancellationToken;
+            _interruptModule = interruptModule;
         }
 
         internal event Action Attacked;
@@ -32,6 +38,12 @@ namespace Modules.Weapons
             }
 
             return isRecharged && canAttack;
+        }
+
+        internal void Interrupt()
+        {
+            if(_interruptModule != null)
+                _interruptModule.Interrupt();
         }
     }
 }

@@ -21,11 +21,11 @@ namespace Modules.Weapons.WeaponItemSystem
         private Transform _currentContainer;
         private Rigidbody _rigidbody;
         private Collider _collider;
+        private CancellationToken _cancellationToken;
 
         private Func<bool> _attack;
+        private Action _interrupt;
 
-        private CancellationToken _cancellationToken;
-     
         [field: SerializeField] public bool IsTrackable { get; private set; } = true;
         [field: SerializeField] public Vector3 Offset { get; private set; }
         [field: SerializeField] public Transform LeftHandPlaceHolder { get; private set; }
@@ -37,11 +37,12 @@ namespace Modules.Weapons.WeaponItemSystem
         public WeaponType WeaponType { get; private set; }
         public bool IsEquipped { get; private set; }
 
-        public void Init(Func<bool> attack, WeaponType type)
+        public void Init(Func<bool> attack, WeaponType type, Action interrupt = null)
         {
             _rigidbody = GetComponent<Rigidbody>();
             _collider = GetComponent<Collider>();
             _attack = attack;
+            _interrupt = interrupt;
             WeaponType = type;
             _startContainer = transform.parent;
             _cancellationToken = this.GetCancellationTokenOnDestroy();
@@ -63,6 +64,7 @@ namespace Modules.Weapons.WeaponItemSystem
 
         public void Unequip()
         {
+            _interrupt?.Invoke();
             SetEquipped(false, null);
         }
 
