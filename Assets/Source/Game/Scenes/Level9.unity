@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.7543947, g: 0.67187566, b: 0.55175877, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -365,8 +365,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 30939721}
-  - component: {fileID: 30939720}
   - component: {fileID: 30939722}
+  - component: {fileID: 30939723}
+  - component: {fileID: 30939724}
   m_Layer: 0
   m_Name: Level Handler
   m_TagString: Untagged
@@ -374,18 +375,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &30939720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30939719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e009d2a39641c9447a2b91289da96bac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &30939721
 Transform:
   m_ObjectHideFlags: 0
@@ -414,6 +403,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _trackerUpdateDelay: 1
+--- !u!114 &30939723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30939719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1dc33014f40334a800af96533efc1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &30939724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30939719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd1195362a24c919e4b5f2ca90e62de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreLabel: {fileID: 34771306}
 --- !u!1001 &34771304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -516,6 +530,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3104830805140503551, guid: 9f665b81e5e87074cbb9d452872f167a, type: 3}
   m_PrefabInstance: {fileID: 34771304}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &34771306 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2654271060697185843, guid: 9f665b81e5e87074cbb9d452872f167a, type: 3}
+  m_PrefabInstance: {fileID: 34771304}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d108f0b9aae14d6cabd5584d2a93a670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &60565901
 PrefabInstance:
   m_ObjectHideFlags: 0
