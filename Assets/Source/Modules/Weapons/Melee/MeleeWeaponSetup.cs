@@ -1,6 +1,4 @@
-﻿using Cysharp.Threading.Tasks;
-using UnityEngine;
-using VContainer;
+﻿using UnityEngine;
 
 namespace Modules.Weapons.Melee
 {
@@ -9,11 +7,18 @@ namespace Modules.Weapons.Melee
         [SerializeField] private Collider _collider;
         [SerializeField] private float _attakTime;
         [SerializeField] private float _rechargeTime;
+
+        private MeleeAttackModule _meleeAttackModule;
         
         private void Awake()
         {
-            MeleeAttackModule attackModule = new MeleeAttackModule(_collider, _attakTime, this.GetCancellationTokenOnDestroy());
-            Init(_rechargeTime, attackModule);
+            _meleeAttackModule = new MeleeAttackModule(_collider, _attakTime);
+            Init(_rechargeTime, _meleeAttackModule, _meleeAttackModule);
+        }
+
+        private void OnDestroy()
+        {
+            _meleeAttackModule.Dispose();
         }
     }
 }
