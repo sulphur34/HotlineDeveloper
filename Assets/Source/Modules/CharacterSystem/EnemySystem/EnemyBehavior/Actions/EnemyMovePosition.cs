@@ -34,7 +34,10 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
             if (_navMeshAgent == null)
                 return TaskStatus.Failure;
 
-            float distance = Vector3.Magnitude(LastTargetPosition.Value - _transform.position);
+            Vector3 targetPosition = new Vector3(LastTargetPosition.Value.x, _transform.position.y,
+                LastTargetPosition.Value.z);
+            
+            float distance = Vector3.Magnitude(targetPosition - _transform.position);
             
             if (distance - _navMeshAgent.stoppingDistance < MinStoppingDistance)
                 return TaskStatus.Success;

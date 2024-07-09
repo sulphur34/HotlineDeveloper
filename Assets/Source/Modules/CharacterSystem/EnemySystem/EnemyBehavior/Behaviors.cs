@@ -2,7 +2,8 @@ namespace Modules.Characters.Enemies.EnemyBehavior
 {
     public enum Behaviors
     {
-        Normal,
+        Melee,
+        Range,
         Strong,
         Boss,
         Peace,
