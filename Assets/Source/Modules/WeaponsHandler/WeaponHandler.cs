@@ -105,7 +105,7 @@ namespace Modules.PlayerWeaponsHandler
 
             return weaponItem != null;
         }
-
+        
         private bool IsColliderAvailableWeapon(Collider collider)
         {
             WeaponItem weaponItem = collider.GetComponent<WeaponItem>();
