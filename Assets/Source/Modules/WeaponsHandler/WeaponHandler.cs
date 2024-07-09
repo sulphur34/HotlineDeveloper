@@ -10,6 +10,8 @@ namespace Modules.PlayerWeaponsHandler
 {
     public class WeaponHandler : IWeaponHandlerInfo
     {
+        private readonly float _lookHeight = 1.5f;
+        
         protected IAttackInput _attackInput;
         protected IPickInput _pickInput;
         private WeaponItem _currentWeaponItem;
@@ -98,7 +100,8 @@ namespace Modules.PlayerWeaponsHandler
         private bool TryGetWeapon(out WeaponItem weaponItem)
         {
             weaponItem = Physics.OverlapSphere(_pickPoint.position, _pickRadius)
-                .Where(IsColliderAvailableWeapon)
+                .Where(IsAvailableWeapon)
+                .Where(IsNoObstacles)
                 .OrderBy(collider => (collider.transform.position - _pickPoint.position).magnitude)
                 .FirstOrDefault()
                 ?.GetComponent<WeaponItem>();
@@ -106,7 +109,7 @@ namespace Modules.PlayerWeaponsHandler
             return weaponItem != null;
         }
         
-        private bool IsColliderAvailableWeapon(Collider collider)
+        private bool IsAvailableWeapon(Collider collider)
         {
             WeaponItem weaponItem = collider.GetComponent<WeaponItem>();
 
@@ -114,6 +117,16 @@ namespace Modules.PlayerWeaponsHandler
                 return false;
 
             return true;
+        }
+
+        private bool IsNoObstacles(Collider collider)
+        {
+            Vector3 alignedPosition = _pickPoint.position;
+            alignedPosition.y += _lookHeight;
+            if (!Physics.Linecast(alignedPosition, collider.transform.position, out RaycastHit hit))
+                return false;
+            
+            return hit.collider.TryGetComponent(out WeaponItem weaponItem);
         }
 
         private void OnAttack(WeaponType weaponType)
