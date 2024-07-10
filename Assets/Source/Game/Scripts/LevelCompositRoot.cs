@@ -21,7 +21,8 @@ public class LevelCompositRoot : LifetimeScope
     [SerializeField] private RangeWeaponConfigFactory _weaponConfigFactory;
     [SerializeField] private WeaponTracker _weaponTracker;
     [SerializeField] private LevelEnemySpawnConfigs _enemySpawnConfigs;
-    [SerializeField] private BehaviorConfigFactory _behaviorConfigFactory;
+    [SerializeField] private BehaviorConfigFactory _desktopBehaviorConfigFactory;
+    [SerializeField] private BehaviorConfigFactory _mobileBehaviorConfigFactory;
     [SerializeField] private DamageableConfigFactory _damageableConfigFactory;
     [SerializeField] private GameObject _weaponSetupsParent;
     [SerializeField] private Player _player;
@@ -47,7 +48,13 @@ public class LevelCompositRoot : LifetimeScope
     private void EnemyConfigure(IContainerBuilder builder)
     {
         builder.RegisterInstance(_enemySpawnConfigs);
-        builder.RegisterInstance(_behaviorConfigFactory);
+
+        if (Application.isMobilePlatform)
+            builder.RegisterInstance(_mobileBehaviorConfigFactory);
+        else
+            builder.RegisterInstance(_desktopBehaviorConfigFactory);
+
+
         builder.RegisterComponentInHierarchy<EnemySpawner>();
     }
 

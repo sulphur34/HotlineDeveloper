@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dac7711bd4014ec1a9b42dd1005b0ed4, type: 3}
-  m_Name: MeleeEnemyConfig
+  m_Name: PeaceEnemyConfig
   m_EditorClassIdentifier: 
   _actionsMinDelay: 1
   _actionsMaxDelay: 3
+  _reactionMinDelay: 0.02
+  _reactionMaxDelay: 0.05
   _viewDistance: 15
   _viewAngle: 90
-  _hearingDistance: 3
-  <BehaviourTree>k__BackingField: {fileID: 11400000, guid: 4d6ca266402b7124e98a7dc9bd385fa9, type: 2}
+  _hearingDistance: 1
+  <BehaviourTree>k__BackingField: {fileID: 11400000, guid: 5fa7ece336b704140abc1c9a37d4f0d0, type: 2}
