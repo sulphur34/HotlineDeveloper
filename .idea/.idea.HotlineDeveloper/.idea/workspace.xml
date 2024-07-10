@@ -2,15 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="096f9c91-8365-4be6-8d8f-87ad3dc5adea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/AimSystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/AimSystem/UIAimFollower.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IFarLookInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IFarLookInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/ILookInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/ILookInput.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/DesktopBehaviorConfig.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/DesktopBehaviorConfig/BossEnemyConfig.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/DesktopBehaviorConfig/BossEnemyConfig.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/DesktopBehaviorConfig/FanaticEnemyConfig.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/DesktopBehaviorConfig/FanaticEnemyConfig.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/DesktopBehaviorConfig/MeleeEnemyConfig.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/DesktopBehaviorConfig/MeleeEnemyConfig.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/DesktopBehaviorConfig/PeaceEnemyConfig.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/DesktopBehaviorConfig/PeaceEnemyConfig.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/DesktopBehaviorConfig/RangeEnemyConfig.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/DesktopBehaviorConfig/RangeEnemyConfig.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/DesktopBehaviorConfig/StrongEnemyConfig.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/DesktopBehaviorConfig/StrongEnemyConfig.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/MobileBehaviorConfig.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behavior Designer Movement/Scene/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Behavior Designer Movement/Scene/Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Audio/Examples/Audio Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Audio/Examples/Audio Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/NormalEnemyBehaviour.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/NormalEnemyBehaviour.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/PeaceEnemyBehaviour.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/PeaceEnemyBehaviour.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/StronglEnemyBehaviour.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/BehaviourTrees/StronglEnemyBehaviour.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level10.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level11.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level11.unity" afterDir="false" />
@@ -34,25 +44,23 @@
       <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level9.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level9.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Root.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Root.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Agava.Scripts.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Agava.Scripts.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/LevelCompositRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/LevelCompositRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/EffectsSystem/PingPong.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/AimSystem/PingPong.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/EffectsSystem/PingPong.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/AimSystem/PingPong.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/EffectsSystem/UIMouseFollower.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/EffectsSystem/UIMouseFollower.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/AimSystem/UIAimFollower.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/DesktopInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/DesktopInputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/MobileInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/MobileInputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/MoverPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/MoverPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/MoverSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/MoverSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/Aim.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/Aim.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/MobileInput1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/MobileInput1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Test.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Test/TestCameraFollower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/AimSystem/CameraFollower.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Test/TestCameraFollower.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/AimSystem/CameraFollower.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/BehaviorConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/BehaviorConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/Behavior Config Factory.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/Behavior Config Factory.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/BossEnemyConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/BossEnemyConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/FanaticEnemyConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/FanaticEnemyConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/MeleeEnemyConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/MeleeEnemyConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/PeaceEnemyConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/PeaceEnemyConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/RangeEnemyConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/RangeEnemyConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/StrongEnemyConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObjects/Character configs/EnemyBehavior/StrongEnemyConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -717,6 +725,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="232" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/BehaviorSetup.cs</url>
+          <line>78</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\CharacterSystem\EnemySystem\EnemyBehavior\BehaviorSetup.cs" initialLine="78" containingFunctionPresentation="method 'SetVariable'">
+            <startOffsets>
+              <option value="3408" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3467" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="234" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
