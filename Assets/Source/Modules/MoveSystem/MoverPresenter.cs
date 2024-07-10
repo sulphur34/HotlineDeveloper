@@ -8,21 +8,21 @@ namespace Modules.MoveSystem
     {
         private readonly Mover _mover;
         private IMoveInput _moveInput;
-        private IRotateInput _rotateInput;
+        private IRotateInput _lookInput;
 
-        public MoverPresenter(Mover mover, IMoveInput moveInput, IRotateInput rotateInput)
+        public MoverPresenter(Mover mover, IMoveInput moveInput, IRotateInput lookInput)
         {
             _mover = mover;
             _moveInput = moveInput;
             _moveInput.MoveReceived += OnMove;
-            _rotateInput = rotateInput;
-            _rotateInput.RotationReceived += OnRotate;
+            _lookInput = lookInput;
+            _lookInput.RotationReceived += OnLook;
         }
 
         public void Dispose()
         {
             _moveInput.MoveReceived -= OnMove;
-            _rotateInput.RotationReceived -= OnRotate;
+            _lookInput.RotationReceived -= OnLook;
         }
 
         private void OnMove(Vector2 direction)
@@ -30,7 +30,7 @@ namespace Modules.MoveSystem
             _mover.MoveHorizontal(direction);
         }
 
-        private void OnRotate(Vector2 direction)
+        private void OnLook(Vector2 direction)
         {
             _mover.RotateHorizontal(direction);
         }
