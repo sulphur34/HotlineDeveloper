@@ -91,7 +91,7 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterInstance(_damageableConfigFactory);
         builder.RegisterComponentInHierarchy<DamageReceiverSetup>();
         builder.RegisterComponentInHierarchy<WeaponStrategy>();
-        DamageableConfig damageableConfig = _damageableConfigFactory.GetConfig(DamageableTypes.AlwaysLethal);
+        DamageableConfig damageableConfig = _damageableConfigFactory.GetConfig(DamageableTypes.Immortal);
         _player.GetComponent<DamageReceiverSetup>().Initialize(damageableConfig);
     }
 
