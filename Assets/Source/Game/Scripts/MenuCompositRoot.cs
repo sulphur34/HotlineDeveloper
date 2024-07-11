@@ -34,8 +34,6 @@ public class MenuCompositRoot : LifetimeScope
         builder.Register<SelectedLevelSaveHandler>(Lifetime.Singleton);
         builder.Register<AudioSaveHandler>(Lifetime.Singleton);
 
-        builder.Register<Leaderboard>(Lifetime.Singleton);
-        builder.Register<LeaderboardUpdater>(Lifetime.Singleton);
         builder.RegisterComponentInHierarchy<LeaderboardView>();
         builder.RegisterComponentInHierarchy<AuthorizationButton>();
         builder.RegisterComponentInHierarchy<LeaderboardOpenButton>();

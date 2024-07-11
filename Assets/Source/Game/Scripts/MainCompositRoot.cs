@@ -1,4 +1,5 @@
 using Modules.FadeSystem;
+using Modules.LeaderboardSystem;
 using Modules.LevelsSystem;
 using Modules.SavingsSystem;
 using Modules.SceneLoaderSystem;
@@ -23,6 +24,7 @@ public class MainCompositRoot : LifetimeScope
         InitLevels(_saveData.LevelsData);
         builder.RegisterInstance(_saveData.LevelsData);
         builder.Register<SceneLoader>(Lifetime.Singleton);
+        builder.Register<Leaderboard>(Lifetime.Singleton);
         builder.RegisterComponentInHierarchy<Fade>();
     }
 

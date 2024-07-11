@@ -11,21 +11,18 @@ namespace Modules.LeaderboardSystem
         private readonly LeaderboardView _view;
         private readonly LeaderboardOpenButton _openButton;
         private readonly AuthorizationButton _authorizationButton;
-        private readonly LeaderboardUpdater _updater;
 
         [Inject]
         public LeaderboardPresenter(
             Leaderboard leaderboard, 
             LeaderboardView leaderboardView, 
             LeaderboardOpenButton openButton, 
-            AuthorizationButton authorizationButton, 
-            LeaderboardUpdater updater)
+            AuthorizationButton authorizationButton)
         {
             _leaderboard = leaderboard;
             _view = leaderboardView;
             _openButton = openButton;
             _authorizationButton = authorizationButton;
-            _updater = updater;
             
             _openButton.AuthorizationRequested += OnAuthorizationRequested;
             _openButton.Authorized += OnAuthorized;
@@ -49,7 +46,6 @@ namespace Modules.LeaderboardSystem
         private void OnAuthorized()
         {
             PlayerAccount.RequestPersonalProfileDataPermission();
-            _updater.UpdateLeaderboard();
             _leaderboard.Fill();
             _view.ShowLeaderboard();
         }
