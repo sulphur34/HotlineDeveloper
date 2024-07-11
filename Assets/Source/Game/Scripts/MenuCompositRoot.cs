@@ -1,9 +1,8 @@
 using Module.ContinueLevelButtonSystem;
-using Modules.Audio;
 using Modules.FadeSystem;
+using Modules.LeaderboardSystem;
 using Modules.LevelSelectionSystem;
 using Modules.LevelsSystem;
-using Modules.PauseMenu;
 using Modules.PressedButtonSystem;
 using Modules.SaveHandlers;
 using Modules.SavingsSystem;
@@ -35,6 +34,11 @@ public class MenuCompositRoot : LifetimeScope
         builder.Register<SelectedLevelSaveHandler>(Lifetime.Singleton);
         builder.Register<AudioSaveHandler>(Lifetime.Singleton);
 
+        builder.RegisterComponentInHierarchy<LeaderboardView>();
+        builder.RegisterComponentInHierarchy<AuthorizationButton>();
+        builder.RegisterComponentInHierarchy<LeaderboardOpenButton>();
+        builder.Register<LeaderboardPresenter>(Lifetime.Singleton);
+
         builder.RegisterComponentInHierarchy<AudioSettings>();
         builder.RegisterComponentInHierarchy<ContinueLevelButton>();
         builder.RegisterComponentInHierarchy<ContinueLevelButtonView>();
@@ -54,6 +58,7 @@ public class MenuCompositRoot : LifetimeScope
             container.Resolve<SelectedLevelSaveHandler>();
             container.Resolve<AudioSaveHandler>();
             container.Resolve<ContinueLevelButtonPresenter>();
+            container.Resolve<LeaderboardPresenter>();
             container.Resolve<Fade>().Out();
         });
     }

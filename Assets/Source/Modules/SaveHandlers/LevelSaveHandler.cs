@@ -44,4 +44,28 @@ namespace Modules.SaveHandlers
             });
         }
     }
+
+    public class ScoreSaveHandler : IDisposable
+    {
+        private readonly SaveSystem _saveSystem = new SaveSystem();
+        private readonly LevelHandler _levelHandler;
+
+        [Inject]
+        public ScoreSaveHandler(LevelHandler levelHandler)
+        {
+            _levelHandler = levelHandler;
+
+            _levelHandler.LevelCompleted += OnLevelCompleted;
+        }
+
+        public void Dispose()
+        {
+            _levelHandler.LevelCompleted -= OnLevelCompleted;
+        }
+
+        private void OnLevelCompleted()
+        {
+
+        }
+    }
 }
