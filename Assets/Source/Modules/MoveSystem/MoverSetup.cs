@@ -16,11 +16,11 @@ namespace Modules.MoveSystem
         private MoverPresenter _moverPresenter;
 
         [Inject]
-        public void Construct(MoverConfig moverConfig, IMoveInput moveInput, IRotateInput rotateInput)
+        public void Construct(MoverConfig moverConfig, IMoveInput moveInput, IRotateInput lookInput)
         {
             var characterController = GetComponent<CharacterController>();
             Mover mover = new Mover(characterController, transform, _torsoRotator, moverConfig);
-            _moverPresenter = new MoverPresenter(mover, moveInput, rotateInput);
+            _moverPresenter = new MoverPresenter(mover, moveInput, lookInput);
         }
 
         public void OnDestroy()

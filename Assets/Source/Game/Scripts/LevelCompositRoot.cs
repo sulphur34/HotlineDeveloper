@@ -21,7 +21,8 @@ public class LevelCompositRoot : LifetimeScope
     [SerializeField] private RangeWeaponConfigFactory _weaponConfigFactory;
     [SerializeField] private WeaponTracker _weaponTracker;
     [SerializeField] private LevelEnemySpawnConfigs _enemySpawnConfigs;
-    [SerializeField] private BehaviorConfigFactory _behaviorConfigFactory;
+    [SerializeField] private BehaviorConfigFactory _desktopBehaviorConfigFactory;
+    [SerializeField] private BehaviorConfigFactory _mobileBehaviorConfigFactory;
     [SerializeField] private DamageableConfigFactory _damageableConfigFactory;
     [SerializeField] private GameObject _weaponSetupsParent;
     [SerializeField] private Player _player;
@@ -41,14 +42,21 @@ public class LevelCompositRoot : LifetimeScope
         WeaponConfigure(builder);
         EnemyConfigure(builder);
         LevelConfigure(builder);
+        UIConfigure(builder);
     }
 
     private void EnemyConfigure(IContainerBuilder builder)
     {
         builder.RegisterInstance(_enemySpawnConfigs);
-        builder.RegisterInstance(_behaviorConfigFactory);
+
+        if (Application.isMobilePlatform)
+            builder.RegisterInstance(_mobileBehaviorConfigFactory);
+        else
+            builder.RegisterInstance(_desktopBehaviorConfigFactory);
+
+
         builder.RegisterComponentInHierarchy<EnemySpawner>();
-    } 
+    }
 
     private void MoverConfigure(IContainerBuilder builder)
     {
@@ -58,13 +66,22 @@ public class LevelCompositRoot : LifetimeScope
 
     private void InputConfigure(IContainerBuilder builder)
     {
+        builder.RegisterComponentInHierarchy<MobileInputUI>();
         builder.RegisterInstance(_player);
         InputController inputController;
 
         if (Application.isMobilePlatform)
+        {
             inputController = _player.gameObject.AddComponent<MobileInputController>();
+            builder.RegisterBuildCallback(container =>
+            {
+                container.Resolve<MobileInputUI>().gameObject.SetActive(true);
+            });
+        }
         else
+        {
             inputController = _player.gameObject.AddComponent<DesktopInputController>();
+        }
 
         builder.RegisterInstance(inputController).AsImplementedInterfaces();
     }
@@ -76,7 +93,7 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<WeaponStrategy>();
         DamageableConfig damageableConfig = _damageableConfigFactory.GetConfig(DamageableTypes.AlwaysLethal);
         _player.GetComponent<DamageReceiverSetup>().Initialize(damageableConfig);
-    } 
+    }
 
     private void WeaponConfigure(IContainerBuilder builder)
     {
@@ -95,12 +112,8 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<ScoreCounterView>();
         builder.RegisterComponentInHierarchy<LevelConditionManager>();
         builder.Register<LevelSaveHandler>(Lifetime.Singleton);
-        
+        builder.RegisterComponentInHierarchy<CameraFollower>();
         builder.Register<PauseSetter>(Lifetime.Singleton);
-        builder.RegisterComponentInHierarchy<PauseSetButton>();
-        builder.RegisterComponentInHierarchy<LoadSceneButton>();
-        builder.RegisterComponentInHierarchy<RestartLevelButton>();
-        builder.RegisterComponentInHierarchy<UIDirectionPointer>();
 
         builder.RegisterBuildCallback(container =>
         {
@@ -110,5 +123,14 @@ public class LevelCompositRoot : LifetimeScope
             container.Resolve<LevelSaveHandler>();
             container.Resolve<Fade>().Out();
         });
+    }
+
+    private void UIConfigure(IContainerBuilder builder)
+    {
+        builder.RegisterComponentInHierarchy<PauseSetButton>();
+        builder.RegisterComponentInHierarchy<LoadSceneButton>();
+        builder.RegisterComponentInHierarchy<RestartLevelButton>();
+        builder.RegisterComponentInHierarchy<UIDirectionPointer>();
+        builder.RegisterComponentInHierarchy<UIAimFollower>();
     }
 }
