@@ -20,6 +20,8 @@ GameObject:
   - component: {fileID: -6879323921995516957}
   - component: {fileID: 4536098336978762320}
   - component: {fileID: -5220180841962170250}
+  - component: {fileID: 2281415893338393814}
+  - component: {fileID: 869840454138751982}
   m_Layer: 0
   m_Name: AxeTypeOne
   m_TagString: Untagged
@@ -5083,6 +5085,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5e4eb7b5bcfdf409da29c2f848dcf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2281415893338393814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095231895692292015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &869840454138751982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095231895692292015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5535415458a4a938e4322f7888bbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName: 3
 --- !u!1 &4055440391694831430
 GameObject:
   m_ObjectHideFlags: 0

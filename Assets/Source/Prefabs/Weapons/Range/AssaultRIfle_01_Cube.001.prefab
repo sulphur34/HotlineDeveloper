@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: -4867921186307607783}
   - component: {fileID: -9023587668943403869}
   - component: {fileID: 3979861434197846390}
+  - component: {fileID: 3991831154221633606}
+  - component: {fileID: -6882114761007163206}
   m_Layer: 0
   m_Name: AssaultRIfle_01_Cube.001
   m_TagString: Untagged
@@ -221,6 +223,48 @@ MonoBehaviour:
   _bulletSpawnPoint: {fileID: 5994431272203113816}
   _minAngle: -3
   _maxAngle: 3
+--- !u!114 &3991831154221633606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322712272813003720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &-6882114761007163206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322712272813003720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5535415458a4a938e4322f7888bbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName: 0
 --- !u!1 &5744387659807287628
 GameObject:
   m_ObjectHideFlags: 0

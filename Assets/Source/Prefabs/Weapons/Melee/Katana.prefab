@@ -52,6 +52,8 @@ GameObject:
   - component: {fileID: 459331921080535669}
   - component: {fileID: 4005317842486311377}
   - component: {fileID: 5421019027890244727}
+  - component: {fileID: -4191946714077714733}
+  - component: {fileID: -545390180314736981}
   m_Layer: 0
   m_Name: Katana
   m_TagString: Untagged
@@ -5128,6 +5130,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5e4eb7b5bcfdf409da29c2f848dcf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4191946714077714733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4848934772374328225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &-545390180314736981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4848934772374328225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5535415458a4a938e4322f7888bbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName: 3
 --- !u!1 &7606651805174572189
 GameObject:
   m_ObjectHideFlags: 0

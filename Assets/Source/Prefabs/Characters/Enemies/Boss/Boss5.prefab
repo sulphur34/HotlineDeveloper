@@ -572,6 +572,8 @@ GameObject:
   - component: {fileID: 8050032549766660690}
   - component: {fileID: 9016377911966197902}
   - component: {fileID: 9160472263966178137}
+  - component: {fileID: -6776804554643190934}
+  - component: {fileID: 3862913289957136383}
   m_Layer: 0
   m_Name: Boss5
   m_TagString: Untagged
@@ -893,6 +895,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 944e0e865bbf4e92acb21e892ffc2b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6776804554643190934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526306925852644456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &3862913289957136383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526306925852644456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faa3df855b840d9afc59484612d6751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName: 12
 --- !u!1 &2717679784606323616
 GameObject:
   m_ObjectHideFlags: 0

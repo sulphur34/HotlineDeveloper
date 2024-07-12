@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: -8895217915275420420}
   - component: {fileID: -6558430882562428286}
   - component: {fileID: 4787710054645971459}
+  - component: {fileID: 2457902751855924060}
+  - component: {fileID: 722905423262499813}
   m_Layer: 0
   m_Name: Revolver_02_Cube
   m_TagString: Untagged
@@ -167,9 +169,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <IsTrackable>k__BackingField: 1
   _force: 20
   _rotationForce: 5
+  _rotationZ: 90
+  _meleeRotationY: 0
+  _rangeRotationY: 90
+  _rotationX: 0
+  <IsTrackable>k__BackingField: 1
   <Offset>k__BackingField: {x: -0.5, y: 0.4, z: 0}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 3427193270551294589}
   <RightHandPlaceHolder>k__BackingField: {fileID: 8890837178657443333}
@@ -217,6 +223,48 @@ MonoBehaviour:
   _bulletSpawnPoint: {fileID: 2331242976937726694}
   _minAngle: -2
   _maxAngle: 2
+--- !u!114 &2457902751855924060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106652763134404480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &722905423262499813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106652763134404480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5535415458a4a938e4322f7888bbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName: 11
 --- !u!1 &1406284630604572075
 GameObject:
   m_ObjectHideFlags: 0

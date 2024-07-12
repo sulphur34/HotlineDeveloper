@@ -62,6 +62,8 @@ GameObject:
   - component: {fileID: 1182585881717424421}
   - component: {fileID: 4828614638340234323}
   - component: {fileID: -1405569412771328072}
+  - component: {fileID: 7969215613553539181}
+  - component: {fileID: -6217794977742466554}
   m_Layer: 0
   m_Name: SMG_03_Cylinder.002
   m_TagString: Untagged
@@ -265,6 +267,48 @@ MonoBehaviour:
   _bulletSpawnPoint: {fileID: 6226327626530749618}
   _minAngle: -5
   _maxAngle: 5
+--- !u!114 &7969215613553539181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800304441430319337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &-6217794977742466554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800304441430319337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5535415458a4a938e4322f7888bbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName: 14
 --- !u!1 &8313071597021067271
 GameObject:
   m_ObjectHideFlags: 0

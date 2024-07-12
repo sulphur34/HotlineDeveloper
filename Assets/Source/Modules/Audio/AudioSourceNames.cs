@@ -1,0 +1,30 @@
+namespace Modules.Audio
+{
+    public enum AudioSourceNames
+    {
+        AssaultFire,
+        MeleeHit,
+        MeleeHit2,
+        MeleeSwing,
+        PickMelee,
+        PickMelee2,
+        PickRangeBig,
+        PickRangeMedium,
+        PickRangeSmall,
+        PickRangeSmall2,
+        PistolFire,
+        PistolFire2,
+        Punch,
+        ShotgunFire,
+        SmgFire1,
+        SmgFire2,
+        SwingMelee2,
+        Teleport,
+        Music1,
+        Music2,
+        Music3,
+        Music4,
+        Music5,
+        Music6
+    }
+}
