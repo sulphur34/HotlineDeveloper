@@ -19,19 +19,19 @@ namespace Modules.Audio
         public static MusicHandler Instance => _instance;
         public bool IsLevelMusicPlaying { get; private set; }
         
-        [Inject]
-        public void Construct()
+        public void Awake()
         {
             if (_instance == null)
             {
                 _instance = this;
-                _sourceAudio = GetComponent<SourceAudio>();
-                DontDestroyOnLoad(this.gameObject);
             }
             else if (_instance != this)
             {
-                Destroy(_instance);
+                Destroy(_instance.gameObject);
             }
+            
+            _sourceAudio = GetComponent<SourceAudio>();
+            DontDestroyOnLoad(this.gameObject);
         }
 
         public void OnMenuLoad()
@@ -66,6 +66,7 @@ namespace Modules.Audio
 
         private void Stop()
         {
+            _sourceAudio.Loop = false;
             _sourceAudio.OnFinished -= PlayRandom;
             _sourceAudio.Stop();
         }

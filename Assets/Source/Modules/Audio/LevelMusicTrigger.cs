@@ -4,7 +4,7 @@ namespace Modules.Audio
 {
     public class LevelMusicTrigger : MonoBehaviour
     {
-        private void Awake()
+        private void Start()
         {
             MusicHandler.Instance.OnLevelLoad();
         }

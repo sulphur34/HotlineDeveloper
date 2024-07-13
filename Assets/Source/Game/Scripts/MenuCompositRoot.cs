@@ -44,8 +44,6 @@ public class MenuCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<ContinueLevelButton>();
         builder.RegisterComponentInHierarchy<ContinueLevelButtonView>();
         builder.Register<ContinueLevelButtonPresenter>(Lifetime.Singleton);
-        
-        builder.RegisterComponentInHierarchy<MusicHandler>();
 
         builder.RegisterBuildCallback(container =>
         {
