@@ -1,6 +1,6 @@
 using Modules.PlayerWeaponsHandler;
-using Modules.Weapons.WeaponItemSystem;
 using Modules.Weapons.WeaponTypeSystem;
+using Plugins.Audio.Utils;
 using UnityEngine;
 
 namespace Modules.Audio
@@ -8,8 +8,8 @@ namespace Modules.Audio
     [RequireComponent(typeof(WeaponHandlerView))]
     public class PickSoundHandler : SoundHandler
     {
-        [SerializeField] private AudioSourceNames _meleeAudioName;
-        [SerializeField] private AudioSourceNames _rangeAudioName;
+        [SerializeField] private AudioDataProperty _meleeAudioName;
+        [SerializeField] private AudioDataProperty _rangeAudioName;
 
         private WeaponHandlerView _weaponHandler;
 
@@ -18,6 +18,11 @@ namespace Modules.Audio
             base.Awake();
             _weaponHandler = GetComponent<WeaponHandlerView>();
             _weaponHandler.Equipped += OnReceive;
+        }
+        
+        private void OnDestroy()
+        {
+            _weaponHandler.Equipped -= OnReceive;
         }
 
         private void OnReceive()

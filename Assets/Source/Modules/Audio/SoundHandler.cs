@@ -1,5 +1,5 @@
-using System;
 using Plugins.Audio.Core;
+using Plugins.Audio.Utils;
 using UnityEngine;
 
 namespace Modules.Audio
@@ -14,9 +14,9 @@ namespace Modules.Audio
             _source = GetComponent<SourceAudio>();
         }
 
-        protected void Play(AudioSourceNames audioName)
+        protected void Play(AudioDataProperty audioName)
         {
-            _source.Play(audioName.ToString());
+            _source.PlayOneShot(audioName);
         }
     }
 }

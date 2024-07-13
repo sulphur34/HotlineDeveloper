@@ -1,4 +1,5 @@
 using Modules.DamageSystem;
+using Plugins.Audio.Utils;
 using UnityEngine;
 
 namespace Modules.Audio
@@ -6,8 +7,8 @@ namespace Modules.Audio
     [RequireComponent(typeof(DamageReceiverView))]
     public class DamageSoundHandler : SoundHandler
     {
-        [SerializeField] private AudioSourceNames _audioName;
-        
+        [SerializeField] private AudioDataProperty _audioName;
+
         private DamageReceiverView _damageReceiverView;
 
         protected override void Awake()
@@ -15,6 +16,11 @@ namespace Modules.Audio
             base.Awake();
             _damageReceiverView = GetComponent<DamageReceiverView>();
             _damageReceiverView.Received += OnReceive;
+        }
+
+        private void OnDestroy()
+        {
+            _damageReceiverView.Received -= OnReceive;
         }
 
         private void OnReceive(DamageData damageData)

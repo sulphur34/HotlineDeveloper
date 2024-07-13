@@ -8,6 +8,7 @@ using Modules.SaveHandlers;
 using Modules.SavingsSystem;
 using System.Collections;
 using System.Linq;
+using Modules.Audio;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -43,6 +44,8 @@ public class MenuCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<ContinueLevelButton>();
         builder.RegisterComponentInHierarchy<ContinueLevelButtonView>();
         builder.Register<ContinueLevelButtonPresenter>(Lifetime.Singleton);
+        
+        builder.RegisterComponentInHierarchy<MusicHandler>();
 
         builder.RegisterBuildCallback(container =>
         {

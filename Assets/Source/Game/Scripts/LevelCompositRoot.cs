@@ -1,3 +1,4 @@
+using Modules.Audio;
 using Modules.FadeSystem;
 using Modules.LevelsSystem;
 using Modules.PauseMenu;

@@ -1346,7 +1346,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4faa3df855b840d9afc59484612d6751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioName: 1
+  _audioName:
+    _id: ca14619d-4b08-4ca5-8225-6ed268ffe74d
+    _key: Punch
 --- !u!114 &-7546687358520737701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1359,8 +1361,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a562f6c601404d96e644862e071010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meleeAudioName: 4
-  _rangeAudioName: 7
+  _meleeAudioName:
+    _id: 427bfcec-890e-4266-ba94-82c3fbd619a6
+    _key: PickMelee2
+  _rangeAudioName:
+    _id: bac98ed1-a995-488f-91b0-3b449328fae8
+    _key: PickRangeSmall
 --- !u!1 &2959048188100807266
 GameObject:
   m_ObjectHideFlags: 0
