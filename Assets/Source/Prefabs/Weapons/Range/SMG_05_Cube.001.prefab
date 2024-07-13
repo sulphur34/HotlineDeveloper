@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 69373930303056101}
   - component: {fileID: 1755942704632598441}
   - component: {fileID: 3985123084292841681}
+  - component: {fileID: 2611217279769836895}
+  - component: {fileID: 4342303544570686321}
   m_Layer: 0
   m_Name: SMG_05_Cube.001
   m_TagString: Untagged
@@ -221,6 +223,50 @@ MonoBehaviour:
   _bulletSpawnPoint: {fileID: 3181796711193291833}
   _minAngle: -5
   _maxAngle: 5
+--- !u!114 &2611217279769836895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714136345092134645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &4342303544570686321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714136345092134645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5535415458a4a938e4322f7888bbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName:
+    _id: 6d1f47ab-231e-4293-802c-1178e6d87571
+    _key: SmgFire1
 --- !u!1 &6795309781069770306
 GameObject:
   m_ObjectHideFlags: 0

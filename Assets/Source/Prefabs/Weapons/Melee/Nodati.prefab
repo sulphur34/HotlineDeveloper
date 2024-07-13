@@ -51,6 +51,8 @@ GameObject:
   - component: {fileID: 4101326877418725553}
   - component: {fileID: 7195607633578498924}
   - component: {fileID: 3297426757626894188}
+  - component: {fileID: 6624982754840816157}
+  - component: {fileID: 3846570008003086437}
   m_Layer: 0
   m_Name: Nodati
   m_TagString: Untagged
@@ -5115,6 +5117,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5e4eb7b5bcfdf409da29c2f848dcf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6624982754840816157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4848934772374328225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &3846570008003086437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4848934772374328225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5535415458a4a938e4322f7888bbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName:
+    _id: 6ef3bd45-09b7-4ea1-8e26-b88d88ba35b5
+    _key: MeleeSwing
 --- !u!1 &7606651805174572189
 GameObject:
   m_ObjectHideFlags: 0

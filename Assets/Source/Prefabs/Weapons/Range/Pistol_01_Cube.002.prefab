@@ -93,6 +93,8 @@ GameObject:
   - component: {fileID: -8896491019850040924}
   - component: {fileID: -8613648760418244582}
   - component: {fileID: 1158660625475966417}
+  - component: {fileID: -6392493998964013274}
+  - component: {fileID: 8749899837930383803}
   m_Layer: 0
   m_Name: Pistol_01_Cube.002
   m_TagString: Untagged
@@ -242,9 +244,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <IsTrackable>k__BackingField: 1
   _force: 20
   _rotationForce: 5
+  _rotationZ: 90
+  _meleeRotationY: 0
+  _rangeRotationY: 90
+  _rotationX: 0
+  <IsTrackable>k__BackingField: 1
   <Offset>k__BackingField: {x: -0.5, y: 0.4, z: 0}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 1314515248209849049}
   <RightHandPlaceHolder>k__BackingField: {fileID: 2444727551965297415}
@@ -292,6 +298,50 @@ MonoBehaviour:
   _bulletSpawnPoint: {fileID: 5469216992745382097}
   _minAngle: -3
   _maxAngle: 3
+--- !u!114 &-6392493998964013274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4659920279635592380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &8749899837930383803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4659920279635592380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5535415458a4a938e4322f7888bbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName:
+    _id: 9941c5b6-54c7-4ba0-ade1-d5e3fc317442
+    _key: PistolFire
 --- !u!1 &7933790667656177976
 GameObject:
   m_ObjectHideFlags: 0
