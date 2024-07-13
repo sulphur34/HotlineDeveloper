@@ -5,7 +5,7 @@ namespace Modules.Audio
 {
     public class MenuMusicTrigger : MonoBehaviour
     {
-        private void Awake()
+        private void Start()
         {
             MusicHandler.Instance.OnMenuLoad();
         }

@@ -27,7 +27,6 @@ public class MainCompositRoot : LifetimeScope
         builder.Register<SceneLoader>(Lifetime.Singleton);
         builder.Register<Leaderboard>(Lifetime.Singleton);
         builder.RegisterComponentInHierarchy<Fade>();
-        builder.RegisterComponentOnNewGameObject<MusicHandler>(Lifetime.Singleton,"MusicHandler");
     }
 
     private void InitLevels(LevelsData levels)
