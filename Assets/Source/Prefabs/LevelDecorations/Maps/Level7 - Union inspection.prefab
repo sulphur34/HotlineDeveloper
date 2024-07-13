@@ -33579,7 +33579,7 @@ GameObject:
   - component: {fileID: 6267299184215145374}
   - component: {fileID: 7736709878654227492}
   - component: {fileID: 6218270962942188770}
-  - component: {fileID: 3317219843934061006}
+  - component: {fileID: 6549111272552261339}
   m_Layer: 0
   m_Name: silo
   m_TagString: Untagged
@@ -33652,8 +33652,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3317219843934061006
-BoxCollider:
+--- !u!64 &6549111272552261339
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -33670,9 +33670,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.8040285, y: 4.4449334, z: 6.763455}
-  m_Center: {x: 1.0986533, y: 0.860978, z: 3.1436346}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4849343398975581823, guid: 0bf6778676a6ff544939a225a8cd51c3, type: 3}
 --- !u!1 &8495359562193553512
 GameObject:
   m_ObjectHideFlags: 0
