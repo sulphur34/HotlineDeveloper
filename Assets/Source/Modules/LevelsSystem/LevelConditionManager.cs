@@ -1,4 +1,5 @@
 ﻿using System;
+using System;
 using Modules.CharacterSystem.Player;
 using Modules.DamageSystem;
 using Modules.FadeSystem;
@@ -20,7 +21,7 @@ namespace Modules.LevelsSystem
 
         public event Action Won;
         public event Action Lost;
-        
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.K))
@@ -32,14 +33,14 @@ namespace Modules.LevelsSystem
             _player.GetComponent<DamageReceiverView>().Died -= OnLoose;
             _enemyTracker.AllEnemiesDied -= OnWin;
         }
-        
+
         [Inject]
         private void Construct(
             LevelsData levels,
             Player player,
             EndLevelTrigger endLevelTrigger,
             Fade fade,
-             SceneLoader sceneLoader)
+            SceneLoader sceneLoader)
         {
             int levelForCompleteIndex = levels.ForLoad - 1;
             _level = levels.Value[levelForCompleteIndex];

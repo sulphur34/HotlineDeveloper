@@ -25,7 +25,8 @@ namespace Modules.ScoreSystem
             _enemyTracker.Activated += Activate;
         }
 
-        public event Action<uint> ScoreChanged;
+        public event Action<uint> KillScoreChanged;
+        public event Action<uint> TimeScoreChanged;
 
         private float _timeMultiplier => 5.7497f - 0.9674f * Mathf.Log(_timePassed);
 
@@ -54,7 +55,7 @@ namespace Modules.ScoreSystem
         private void OnAllEnemiesDie()
         {
             Deactivate();
-            AddScore(_timeMultiplier * _scores.Count * _killScore);
+            TimeScoreChanged?.Invoke(Convert.ToUInt32(_timeMultiplier * _scores.Count * _killScore));
         }
 
         private void OnEnemyKill()
@@ -76,7 +77,7 @@ namespace Modules.ScoreSystem
         private void AddScore(float value)
         {
             _currentScore += Convert.ToUInt32(value);
-            ScoreChanged?.Invoke(_currentScore);
+            KillScoreChanged?.Invoke(_currentScore);
         }
     }
 }

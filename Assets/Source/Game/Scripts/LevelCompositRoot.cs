@@ -1,3 +1,4 @@
+using Module.ContinueLevelButtonSystem;
 using Modules.Audio;
 using Modules.FadeSystem;
 using Modules.LevelsSystem;
@@ -14,6 +15,7 @@ using Modules.CharacterSystem.Player;
 using Modules.EnemySpawnSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
 using Modules.DamageSystem;
+using Modules.LevelSelectionSystem;
 using Modules.ScoreSystem;
 
 public class LevelCompositRoot : LifetimeScope
@@ -54,7 +56,6 @@ public class LevelCompositRoot : LifetimeScope
             builder.RegisterInstance(_mobileBehaviorConfigFactory);
         else
             builder.RegisterInstance(_desktopBehaviorConfigFactory);
-
 
         builder.RegisterComponentInHierarchy<EnemySpawner>();
     }
@@ -115,6 +116,7 @@ public class LevelCompositRoot : LifetimeScope
         builder.Register<LevelSaveHandler>(Lifetime.Singleton);
         builder.RegisterComponentInHierarchy<CameraFollower>();
         builder.Register<PauseSetter>(Lifetime.Singleton);
+        builder.Register<LevelSceneLoader>(Lifetime.Singleton);
 
         builder.RegisterBuildCallback(container =>
         {
@@ -133,5 +135,14 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<RestartLevelButton>();
         builder.RegisterComponentInHierarchy<UIDirectionPointer>();
         builder.RegisterComponentInHierarchy<UIAimFollower>();
+        builder.RegisterComponentInHierarchy<UIConditionListener>();
+        builder.RegisterComponentInHierarchy<ContinueLevelButton>();
+        builder.RegisterComponentInHierarchy<ContinueLevelButtonView>();
+        builder.Register<ContinueLevelButtonPresenter>(Lifetime.Singleton);
+        
+        builder.RegisterBuildCallback(container =>
+        {
+            container.Resolve<ContinueLevelButtonPresenter>();
+        });
     }
 }
