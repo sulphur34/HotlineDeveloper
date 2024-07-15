@@ -1,4 +1,5 @@
-﻿using Modules.CharacterSystem.Player;
+﻿using System;
+using Modules.CharacterSystem.Player;
 using Modules.DamageSystem;
 using Modules.FadeSystem;
 using Modules.SceneLoaderSystem;
@@ -16,6 +17,9 @@ namespace Modules.LevelsSystem
         private EndLevelTrigger _endLevelTrigger;
         private Fade _fade;
         private SceneLoader _sceneLoader;
+
+        public event Action Won;
+        public event Action Lost;
 
         private void Update()
         {
@@ -50,17 +54,13 @@ namespace Modules.LevelsSystem
 
         private void OnWin()
         {
-            Debug.Log("Level complete by killing all enemies");
+            Won?.Invoke();
             _level.Complete();
-            _fade.In();
-            _sceneLoader.Load("Menu", _fade);
         }
 
         private void OnLoose(GameObject player)
         {
-            Debug.Log("Level lost, you are dead");
-            _fade.In();
-            _sceneLoader.Load(SceneManager.GetActiveScene().name, _fade);
+            Lost?.Invoke();
         }
     }
 }

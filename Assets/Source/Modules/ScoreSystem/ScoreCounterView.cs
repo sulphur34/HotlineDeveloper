@@ -14,11 +14,11 @@ namespace Modules.ScoreSystem
         public void Construct(EnemyTracker enemyTracker)
         {
             _scoreCounter = new ScoreCounter(enemyTracker);
-            _scoreCounter.ScoreChanged += OnScoreChange;
+            _scoreCounter.KillScoreChanged += OnKillScoreChange;
             _scoreLabel.Initialize();
         }
 
-        private void OnScoreChange(uint value)
+        private void OnKillScoreChange(uint value)
         {
             _scoreLabel.SetValue(value);
         }
