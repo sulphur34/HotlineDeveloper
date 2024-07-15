@@ -20,7 +20,11 @@ namespace Modules.LevelsSystem
 
         public event Action Won;
         public event Action Lost;
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/develop
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.K))
