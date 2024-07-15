@@ -14,6 +14,6 @@ public class UIShake : GUITransformAnimator
     protected override void Animate()
     {
         Vector3 randomOffset = new Vector3(_randomStrength, _randomStrength, 0f);
-        Transform.DOShakePosition(shakeDuration, randomOffset, 0, 80f, false, false).SetLoops(-1);
+        Transform.DOShakePosition(shakeDuration, randomOffset, 0, 60f,false, false,ShakeRandomnessMode.Harmonic).SetLoops(-1,LoopType.Restart);
     }
 }
