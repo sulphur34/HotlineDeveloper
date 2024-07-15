@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="096f9c91-8365-4be6-8d8f-87ad3dc5adea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/AddMultipleGameObjectsToSerializedListInAllScenes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UINumberAnimator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UINumberAnimator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ResultsVisualiser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ResultsVisualiser.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level10.unity" afterDir="false" />
@@ -28,9 +31,31 @@
       <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Root.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Root.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIConditionListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIConditionListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/AddGameObjectToSerializedList.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/AddGameObjectToSerializedList.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/AddMultipleGameObjectsToSerializedListInAllScenes.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/Agava.GUISystem.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/Agava.GUISystem.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIConditionListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/LevelsSystem/ConditionListenerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIConditionListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/LevelsSystem/ConditionListenerView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIRotate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILoopRotator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIRotate.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILoopRotator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIScale.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILoopScaler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIScale.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILoopScaler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIShake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIShaker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIShake.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIShaker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/Agava.ScoreSystem.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/Agava.ScoreSystem.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreCounterView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreCounterView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/AddMultipleGameObjectsToSerializedListInAllScenes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/AddMultipleGameObjectsToSerializedListInAllScenes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/AddPrefabToGameObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/AddPrefabToGameObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/LevelEndUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/LevelEndUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ScoreUI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ScoreUI/KillScorePanel Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ScoreUI/KillScorePanel Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ScoreUI/ScorePanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ScoreUI/ScorePanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ScoreUI/TimeScorePanel Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ScoreUI/TimeScorePanel Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ScoreUI/TotalScorePanel Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ScoreUI/TotalScorePanel Variant.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +144,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/35/e127bb3f/CancellationTokenSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/0e/91249aef/Enum.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreLabel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/InputController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IAttackInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IMoveInput.cs" root0="FORCE_HIGHLIGHTING" />
@@ -154,7 +180,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/631fbc859494417a9e8bda179ea266f020a00/8b/1fe65404/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/10/061d596e/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a24131e73ec49f7805f3dfb6a69fa781d000/f9/27903ea6/Behavior.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Prefabs/Interface/AddMultipleGameObjectsToSerializedListInAllScenes.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5b4d64329c244b82a41e50d0be224d7616200/90/a8a29527/IContainerBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Internal/InstanceProviders/CollectionInstanceProvider.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -191,10 +216,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17292">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="17292" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -687,19 +712,6 @@
           <option name="timeStamp" value="237" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/Audio/MenuMusicTrigger.cs</url>
-          <line>9</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Audio\MenuMusicTrigger.cs" initialLine="9" containingFunctionPresentation="method 'Start'">
-            <startOffsets>
-              <option value="167" />
-            </startOffsets>
-            <endOffsets>
-              <option value="202" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="248" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/ContinueLevelButtonSystem/ContinueLevelButton.cs</url>
           <line>26</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\ContinueLevelButtonSystem\ContinueLevelButton.cs" initialLine="26" containingFunctionPresentation="method 'MakeOnClick'">
@@ -713,17 +725,43 @@
           <option name="timeStamp" value="252" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/ContinueLevelButtonSystem/ContinueLevelButtonPresenter.cs</url>
-          <line>16</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\ContinueLevelButtonSystem\ContinueLevelButtonPresenter.cs" initialLine="16" containingFunctionPresentation="constructor 'ContinueLevelButtonPresenter'">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ResultsVisualiser.cs</url>
+          <line>17</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\ScoreSystem\ResultsVisualiser.cs" initialLine="17" containingFunctionPresentation="method 'Activate'">
             <startOffsets>
-              <option value="460" />
+              <option value="476" />
             </startOffsets>
             <endOffsets>
-              <option value="511" />
+              <option value="523" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="254" />
+          <option name="timeStamp" value="258" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ResultsVisualiser.cs</url>
+          <line>33</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\ScoreSystem\ResultsVisualiser.cs" initialLine="33" containingFunctionPresentation="method 'Counting'">
+            <startOffsets>
+              <option value="959" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1008" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="259" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UINumberAnimator.cs</url>
+          <line>42</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\GUISystem\UINumberAnimator.cs" initialLine="36" containingFunctionPresentation="method 'Counting'">
+            <startOffsets>
+              <option value="1084" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1108" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="260" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

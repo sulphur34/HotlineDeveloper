@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8719473592830598869}
   - component: {fileID: 7763062442591161510}
   m_Layer: 5
-  m_Name: ScorePanel
+  m_Name: ResultInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 7099825688674689378}
   - component: {fileID: 6937163718956080810}
   - component: {fileID: 1039214636886480490}
+  - component: {fileID: 7450772609903997823}
   m_Layer: 5
   m_Name: ScoreValue
   m_TagString: Untagged
@@ -111,7 +112,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1200
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1d82220f2c7b6fa439717bafed008b5d, type: 2}
   m_sharedMaterial: {fileID: -8739065051197152211, guid: 1d82220f2c7b6fa439717bafed008b5d, type: 2}
@@ -180,6 +181,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7450772609903997823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3342868303356964346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c83d41c10b544bdc834b8f89e0b89d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _step: 50
+  _delay: 0.0001
 --- !u!1 &5511378311602901427
 GameObject:
   m_ObjectHideFlags: 0
