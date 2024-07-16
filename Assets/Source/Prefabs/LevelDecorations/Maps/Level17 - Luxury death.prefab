@@ -38648,6 +38648,7 @@ GameObject:
   - component: {fileID: 745428018696542408}
   - component: {fileID: 5591183118269684977}
   - component: {fileID: 9144266651204427934}
+  - component: {fileID: 6757020185057431030}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -38702,7 +38703,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: They are coooming!!!
+  m_text: "\u041E\u043D\u0438 \u0431\u043B\u0438\u0438\u0438\u0438\u0437\u043A\u043E!!!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -38729,7 +38730,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1.2
+  m_fontSize: 1.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -38771,6 +38772,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6757020185057431030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7289500503233125945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level17\Label1
+  FallbackText: They are coooming!!!
 --- !u!1 &7318243781145011496
 GameObject:
   m_ObjectHideFlags: 0
@@ -55522,6 +55537,7 @@ Transform:
   - {fileID: 76891430788512792}
   - {fileID: 7018946677596488650}
   - {fileID: 6396659356526482740}
+  - {fileID: 7872055292890948497}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4669839773180234229
@@ -60852,6 +60868,68 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5525026, y: 0.8700103, z: 2.9775097}
   m_Center: {x: 0, y: -0.0041059116, z: 1.4808843}
+--- !u!1001 &4047410057973826136
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2824409772866023226}
+    m_Modifications:
+    - target: {fileID: 4296916145720799980, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_Name
+      value: '[LOCALIZATION]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.979904
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.085582
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.8796248
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+--- !u!4 &7872055292890948497 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+  m_PrefabInstance: {fileID: 4047410057973826136}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4878780080370386420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60862,11 +60940,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1631459131376311187, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
       propertyPath: m_text
-      value: Luxury death
+      value: "\u0420\u043E\u0441\u043A\u043E\u0448\u043D\u0430\u044F \u0441\u043C\u0435\u0440\u0442\u044C"
       objectReference: {fileID: 0}
     - target: {fileID: 1631459131376311187, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
       propertyPath: m_fontSize
-      value: 1.2
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2316081255161549256, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
       propertyPath: m_SizeDelta.x
@@ -60994,8 +61072,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7774192584733354440, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
       insertIndex: -1
       addedObject: {fileID: 745428018696542408}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6151639580276244939, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7426266803472537631}
   m_SourcePrefab: {fileID: 100100000, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
+--- !u!1 &1651672319936152639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6151639580276244939, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
+  m_PrefabInstance: {fileID: 4878780080370386420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7426266803472537631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651672319936152639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level17\Name
+  FallbackText: Luxury death
 --- !u!224 &2906952979321678908 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7774192584733354440, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
