@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 5560009134490018400}
   - component: {fileID: 6001016051586649442}
   - component: {fileID: -1649867012054395337}
+  - component: {fileID: 1444292057233090325}
   m_Layer: 0
   m_Name: AssaultRIfle_03.001_Cube.001
   m_TagString: Untagged
@@ -298,6 +299,19 @@ MonoBehaviour:
   _audioName:
     _id: 8f5987f8-368b-446f-931f-a9e82623851c
     _key: AssaultFire
+--- !u!114 &1444292057233090325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5720286738704916926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8eb7f5fcf89384691a6b706de1530d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <AmmoIcon>k__BackingField: {fileID: 21300000, guid: 19572fd79f352b44fb8266280f794989, type: 3}
 --- !u!1 &6437987134988699827
 GameObject:
   m_ObjectHideFlags: 0

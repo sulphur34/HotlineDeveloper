@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: -6447617770236116007}
   - component: {fileID: 8822398625811798948}
   - component: {fileID: -4854378544446365868}
+  - component: {fileID: 7545133588653545949}
   m_Layer: 0
   m_Name: SMG_02_Cylinder
   m_TagString: Untagged
@@ -267,6 +268,19 @@ MonoBehaviour:
   _audioName:
     _id: aaaae86e-d870-48fc-8c7c-a4a4402d3eee
     _key: SmgFire2
+--- !u!114 &7545133588653545949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739701980683351501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8eb7f5fcf89384691a6b706de1530d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <AmmoIcon>k__BackingField: {fileID: 21300000, guid: d1d0f18e9c3704d449bd7602a71f4212, type: 3}
 --- !u!1 &993361877691807275
 GameObject:
   m_ObjectHideFlags: 0

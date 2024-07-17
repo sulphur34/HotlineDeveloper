@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 1158660625475966417}
   - component: {fileID: -6392493998964013274}
   - component: {fileID: 8749899837930383803}
+  - component: {fileID: 2388509933685276823}
   m_Layer: 0
   m_Name: Pistol_01_Cube.002
   m_TagString: Untagged
@@ -342,6 +343,19 @@ MonoBehaviour:
   _audioName:
     _id: 9941c5b6-54c7-4ba0-ade1-d5e3fc317442
     _key: PistolFire
+--- !u!114 &2388509933685276823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4659920279635592380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8eb7f5fcf89384691a6b706de1530d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <AmmoIcon>k__BackingField: {fileID: 21300000, guid: ff64bc5fcfbc85d40af903d3136990e6, type: 3}
 --- !u!1 &7933790667656177976
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using Modules.Weapons.WeaponTypeSystem;
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using Modules.Weapons.Ammunition;
 using UnityEngine;
 
 namespace Modules.Weapons.WeaponItemSystem
@@ -15,7 +16,6 @@ namespace Modules.Weapons.WeaponItemSystem
         [SerializeField] private float _rangeRotationY = 90f;
         [SerializeField] private float _rotationX = 0f;
         
-
         private Transform _startContainer;
         private Transform _selfTransform;
         private Transform _currentContainer;
@@ -30,7 +30,9 @@ namespace Modules.Weapons.WeaponItemSystem
         [field: SerializeField] public Vector3 Offset { get; private set; }
         [field: SerializeField] public Transform LeftHandPlaceHolder { get; private set; }
         [field: SerializeField] public Transform RightHandPlaceHolder { get; private set; }
-           
+        
+        public IAmmunitionView _weaponAmmunitionView { get; private set; }
+
         public event Action<WeaponType> Attacked;
 
         public Transform SelfTransform => _selfTransform == null ? transform : _selfTransform;
@@ -41,6 +43,7 @@ namespace Modules.Weapons.WeaponItemSystem
         {
             _rigidbody = GetComponent<Rigidbody>();
             _collider = GetComponent<Collider>();
+            _weaponAmmunitionView = GetComponent<WeaponAmmunitionView>();
             _attack = attack;
             _interrupt = interrupt;
             WeaponType = type;

@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 3985123084292841681}
   - component: {fileID: 2611217279769836895}
   - component: {fileID: 4342303544570686321}
+  - component: {fileID: 2613460055266302710}
   m_Layer: 0
   m_Name: SMG_05_Cube.001
   m_TagString: Untagged
@@ -267,6 +268,19 @@ MonoBehaviour:
   _audioName:
     _id: 6d1f47ab-231e-4293-802c-1178e6d87571
     _key: SmgFire1
+--- !u!114 &2613460055266302710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714136345092134645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8eb7f5fcf89384691a6b706de1530d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <AmmoIcon>k__BackingField: {fileID: 21300000, guid: d1d0f18e9c3704d449bd7602a71f4212, type: 3}
 --- !u!1 &6795309781069770306
 GameObject:
   m_ObjectHideFlags: 0

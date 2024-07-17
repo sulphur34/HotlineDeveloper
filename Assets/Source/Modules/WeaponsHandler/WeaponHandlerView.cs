@@ -1,5 +1,6 @@
 using System;
 using Modules.DamageSystem;
+using Modules.Weapons.Ammunition;
 using Modules.Weapons.WeaponItemSystem;
 using Modules.Weapons.WeaponTypeSystem;
 using Source.Game.Scripts.Animations;
@@ -11,7 +12,10 @@ namespace Modules.PlayerWeaponsHandler
     {
         [SerializeField] private AnimationController _animationController;
         [SerializeField] private DamageReceiverView _damageReceiverView;
-        
+        [SerializeField] private AmmunitionUI _ammunitionUI;
+
+        private IAmmunitionView _currentAmmunitionView;
+
         public event Action RangeShotFired;
         public event Action Equipped;
         public event Action Unequipped;
@@ -24,6 +28,7 @@ namespace Modules.PlayerWeaponsHandler
             _animationController = GetComponent<AnimationController>();
             _damageReceiverView = GetComponent<DamageReceiverView>();
             _damageReceiverView.FallenDown += UnequipWeapon;
+            _ammunitionUI?.Deactivate();
         }
 
         public void OnAttack(WeaponType weaponType)
@@ -45,7 +50,31 @@ namespace Modules.PlayerWeaponsHandler
         public void OnPick(IWeaponInfo weaponItem)
         {
             Equipped?.Invoke();
+            SetAnimation(weaponItem);
+            
+            if(weaponItem.WeaponType == WeaponType.Range)
+                SetAmmoUI(true, weaponItem._weaponAmmunitionView);
+            else
+                _ammunitionUI?.Deactivate();
+        }
 
+        public void UnequipWeapon()
+        {
+            if(!WeaponInfo.CurrentWeaponItemIsEmpty &&
+               WeaponInfo.CurrentWeaponType == WeaponType.Range)
+                SetAmmoUI(false, _currentAmmunitionView);
+            
+            ClearHands();
+            Unequipped?.Invoke();
+        }
+
+        public void ClearHands()
+        {
+            _animationController.Unequip();
+        }
+
+        private void SetAnimation(IWeaponInfo weaponItem)
+        {
             switch (WeaponInfo.CurrentWeaponType)
             {
                 case WeaponType.Melee:
@@ -62,15 +91,23 @@ namespace Modules.PlayerWeaponsHandler
             }
         }
 
-        public void UnequipWeapon()
+        private void SetAmmoUI(bool isActive, IAmmunitionView ammunitionView)
         {
-            ClearHands();
-            Unequipped?.Invoke();
-        }
+            if (_ammunitionUI == null)
+                return;
 
-        public void ClearHands()
-        {
-            _animationController.Unequip();
+            if (isActive)
+            {
+                _currentAmmunitionView = ammunitionView;
+                _ammunitionUI.Activate(_currentAmmunitionView.CurrentAmmoCount);
+                _ammunitionUI.Initialize(_currentAmmunitionView.AmmoIcon);
+                _currentAmmunitionView.Changed += _ammunitionUI.UpdateAmmo;
+            }
+            else
+            {
+                _currentAmmunitionView.Changed -= _ammunitionUI.UpdateAmmo;
+                _ammunitionUI.Deactivate();
+            }
         }
     }
 }

@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: -27858530350486042}
   - component: {fileID: -3596622449295070071}
   - component: {fileID: 7048070214547708017}
+  - component: {fileID: 6696071494889248397}
   m_Layer: 0
   m_Name: Shotgun_01_Cylinder.001
   m_TagString: Untagged
@@ -269,6 +270,19 @@ MonoBehaviour:
   _audioName:
     _id: 9cd30ed1-6516-4f2c-ba57-3e05d20c6175
     _key: ShotgunFire
+--- !u!114 &6696071494889248397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325117512029647294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8eb7f5fcf89384691a6b706de1530d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <AmmoIcon>k__BackingField: {fileID: 21300000, guid: 85ab0160bf6076c4bb8c6c040d651e4b, type: 3}
 --- !u!1 &3501507197102600011
 GameObject:
   m_ObjectHideFlags: 0
