@@ -1,5 +1,6 @@
 using System;
 using Modules.InputSystem.Interfaces;
+using Modules.Weapons.Ammunition;
 using Modules.Weapons.WeaponItemSystem;
 using UnityEngine;
 using VContainer;

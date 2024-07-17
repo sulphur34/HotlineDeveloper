@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 8654880227727016067}
   - component: {fileID: 3546152701668537531}
   - component: {fileID: 4296385078165518423}
+  - component: {fileID: 9152794250373102769}
   m_Layer: 0
   m_Name: SMG_04_Circle.001
   m_TagString: Untagged
@@ -267,6 +268,19 @@ MonoBehaviour:
   _audioName:
     _id: 6d1f47ab-231e-4293-802c-1178e6d87571
     _key: SmgFire1
+--- !u!114 &9152794250373102769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722550349514955673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8eb7f5fcf89384691a6b706de1530d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <AmmoIcon>k__BackingField: {fileID: 21300000, guid: d1d0f18e9c3704d449bd7602a71f4212, type: 3}
 --- !u!1 &3621618841633259073
 GameObject:
   m_ObjectHideFlags: 0
