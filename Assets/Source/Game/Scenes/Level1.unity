@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.99999946, g: 0.59716785, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2821,10 +2821,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1729287593}
     m_Modifications:
+    - target: {fileID: 2996429246753986849, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d82220f2c7b6fa439717bafed008b5d, type: 2}
+    - target: {fileID: 2996429246753986849, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2996429246753986849, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8739065051197152211, guid: 1d82220f2c7b6fa439717bafed008b5d, type: 2}
+    - target: {fileID: 2996429246753986849, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4905427803005221956, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
       propertyPath: m_Name
       value: Continue Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5171039554903088167, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171039554903088167, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1644bc653264a354ca53bc9833071e13, type: 3}
     - target: {fileID: 6970346915390023657, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3050,10 +3074,34 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u041C\u0435\u043D\u044E"
       objectReference: {fileID: 0}
+    - target: {fileID: 2996429246753986849, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d82220f2c7b6fa439717bafed008b5d, type: 2}
+    - target: {fileID: 2996429246753986849, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2996429246753986849, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8739065051197152211, guid: 1d82220f2c7b6fa439717bafed008b5d, type: 2}
+    - target: {fileID: 2996429246753986849, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4905427803005221956, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
       propertyPath: m_Name
       value: Return Menu Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5171039554903088167, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171039554903088167, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 974d6716bbf127d48a1e7c4f7873a085, type: 3}
     - target: {fileID: 6970346915390023657, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -4765,10 +4813,34 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u0417\u0430\u043D\u043E\u0432\u043E"
       objectReference: {fileID: 0}
+    - target: {fileID: 2996429246753986849, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d82220f2c7b6fa439717bafed008b5d, type: 2}
+    - target: {fileID: 2996429246753986849, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2996429246753986849, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8739065051197152211, guid: 1d82220f2c7b6fa439717bafed008b5d, type: 2}
+    - target: {fileID: 2996429246753986849, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4905427803005221956, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
       propertyPath: m_Name
       value: Restart Level Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5171039554903088167, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171039554903088167, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 83f375baecf1ea94899b1ee331b6fb67, type: 3}
     - target: {fileID: 8283166379713006326, guid: c585a7e4ae73baa4a81b3854bda49fc3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
