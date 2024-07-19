@@ -17,10 +17,10 @@ namespace Modules.ScoreSystem
         private float _timeScore;
 
         [Inject]
-        public void Construct(EnemyTracker enemyTracker, LevelConditionManager levelConditionManager)
+        public void Construct(ScoreCounter scoreCounter, LevelConditionManager levelConditionManager)
         {
             _levelConditionManager = levelConditionManager;
-            _scoreCounter = new ScoreCounter(enemyTracker);
+            _scoreCounter = scoreCounter;
             _scoreCounter.KillScoreChanged += OnKillScoreChange;
             _scoreCounter.TimeScoreChanged += OnTimeScoreChange;
             _levelConditionManager.Won += OnWin;
