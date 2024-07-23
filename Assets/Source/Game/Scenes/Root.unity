@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -343,6 +343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseLabel
       objectReference: {fileID: 0}
+    - target: {fileID: 8827065649831687290, guid: 53710856ae06ce544b81733e045eb909, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -370,7 +374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &325201349
 RectTransform:
   m_ObjectHideFlags: 0
@@ -411,7 +415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d3571c2f267afb04eb0fa7568729c716, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81755e5517731164ba107e3b8b022845, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -622,6 +626,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1804118952}
     m_Modifications:
+    - target: {fileID: 57326012982392449, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.93725497
+      objectReference: {fileID: 0}
+    - target: {fileID: 57326012982392449, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.98823535
+      objectReference: {fileID: 0}
     - target: {fileID: 1384497170636464951, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -700,7 +712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1384497170636464951, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 160
+      value: 116
       objectReference: {fileID: 0}
     - target: {fileID: 1384497170636464951, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -717,6 +729,46 @@ PrefabInstance:
     - target: {fileID: 2315495124764720963, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
       propertyPath: m_Name
       value: LoadingIcon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589052090309802291, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 141.7726
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589052090309802291, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 176.4138
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589052090309802291, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589052090309802291, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732488642364690460, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 325.2429
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732488642364690460, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 353.5549
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732488642364690460, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0000076293945
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732488642364690460, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573866228747756357, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.93725497
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573866228747756357, guid: d3f5061b24c097945bf2adc2aa56fa6e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.98823535
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -937,7 +989,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0

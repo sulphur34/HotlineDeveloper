@@ -15,10 +15,10 @@ namespace Source.Modules.GUISystem
         {
             _localizedText = GetComponent<LeanLocalizedTextMeshProUGUI>();
 
-            // if (Application.isMobilePlatform)
+            if (Application.isMobilePlatform)
                 _localizedText.TranslationName = _mobileTranslationName;
-            // else
-            //     _localizedText.TranslationName = _desktopTranslationName;
+            else
+                _localizedText.TranslationName = _desktopTranslationName;
         }
     }
 }
