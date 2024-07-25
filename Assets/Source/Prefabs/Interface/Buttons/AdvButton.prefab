@@ -196,6 +196,8 @@ GameObject:
   - component: {fileID: 5470202390981977372}
   - component: {fileID: 3302485540628568646}
   - component: {fileID: 1042119703641018190}
+  - component: {fileID: 3735761779411661512}
+  - component: {fileID: 1732836538928611898}
   m_Layer: 5
   m_Name: AdvButton
   m_TagString: Untagged
@@ -306,3 +308,27 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3735761779411661512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7229262651010824073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4ce8c9f7dc4032b43c7e8ecd72d93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1732836538928611898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7229262651010824073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381834c7b6f3423d9f14ca38762a7b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
