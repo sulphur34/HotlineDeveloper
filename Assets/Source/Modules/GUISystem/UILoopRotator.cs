@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Source.Modules.GUISystem
 {
-    public class UILoopRotator : GUITransformAnimator
+    public class UILoopRotator : UITransformAnimator
     {
         [SerializeField] private float _rotationDuration = 1f;
         [SerializeField] private float _rotationSpeed = 9f;

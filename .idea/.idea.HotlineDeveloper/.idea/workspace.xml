@@ -2,29 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="096f9c91-8365-4be6-8d8f-87ad3dc5adea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/LeanPhraseSwitcher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/LeanPhraseSwitcher.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem/Agava.NextLevelButtonSystem.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem/Agava.NextLevelButtonSystem.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem/NextLevelButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem/NextLevelButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem/NextLevelButtonPresenter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem/NextLevelButtonPresenter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem/NextLevelButtonView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem/NextLevelButtonView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADTimeDisabler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADTimeDisabler.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADWeaponRewardButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADWeaponRewardButton.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GUI Kit Casual Game/Scenes/DemoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GUI Kit Casual Game/Scenes/DemoScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Audio/Examples/Audio Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Audio/Examples/Audio Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/01 Localization.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/01 Localization.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/02 Phrase.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/02 Phrase.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/03 Text.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/03 Text.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/04 Change Language.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/04 Change Language.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/05 Image.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/05 Image.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/06 Renderer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/06 Renderer.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/07 Token (Formatted Text).unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/07 Token (Formatted Text).unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/08    Local Token.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/08    Local Token.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/09 CSV.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/09 CSV.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/10 Organization.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/10 Organization.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/11 Prefabs.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/11 Prefabs.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/12 Dropdown.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/12 Dropdown.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/13 Debug.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/CW/LeanLocalization/Examples/13 Debug.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Agava.Scripts.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Agava.Scripts.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/LevelCompositRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/LevelCompositRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILeanPhraseSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/TutorialPhraseSwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILeanPhraseSwitcher.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/TutorialPhraseSwitcher.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/LevelsSystem/LevelConditionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/LevelsSystem/LevelConditionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level10.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level11.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level11.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level12.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level12.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level13.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level13.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level14.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level14.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level15.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level15.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level16.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level16.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level17.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level17.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level18.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level18.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level19.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level19.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level20.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level20.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level21.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level21.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level6.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level7.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level7.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level8.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level8.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level9.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Level9.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Root.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/Root.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADInterstitialButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADInterstitialButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADInterstitialButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADInterstitialButton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADRewardedButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADRewardedButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADRewardedButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADRewardedButton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/VideoAD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/VideoAD.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILoopFader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILoopFader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/Buttons/AdvButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/Buttons/AdvButton.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/LevelEndUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/LevelEndUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ResultUI/KillScoreResultInfo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ResultUI/KillScoreResultInfo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ResultUI/TimeResultInfo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ResultUI/TimeResultInfo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ResultUI/TotalResultInfo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ResultUI/TotalResultInfo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Localization/[LOCALIZATION].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Localization/[LOCALIZATION].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Ресурс 106@4x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Ресурс 106@4x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Ресурс 108@4x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Ресурс 108@4x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Ресурс 109@4x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Ресурс 109@4x.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +75,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3286162d90d14d91abbe74bd33645d486600/0c/5a6b1911/BehaviorConfigFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UITransformAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/b3/b394449b/GOCondition.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Internal/FixedTypeKeyHashTable.cs" root0="SKIP_HIGHLIGHTING" />
@@ -55,7 +89,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Internal/ReflectionInjector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/4a/fd34de5d/KeyValuePair`2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/GUISystem/GUITransformAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fbabdc4652924beb8a0aa7b54148a1d131e00/f1/0498d315/VWork.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Internal/InstanceRegistrationBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@0c8057c668/Runtime/UniTask.Delay.cs" root0="SKIP_HIGHLIGHTING" />
@@ -93,6 +126,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.animation.rigging@1.2.1/Runtime/AnimationJobs/TransformHandle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d29010be29ed44bfb63dbdd0707ee2e016600/3e/4c937f44/IContainerBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/66/b15ec819/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../between-them/Assets/Scripts/Game/ItemGenerator/ItemGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/LethalAsNormalReceiveStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/88/2ba6a786/ConcurrentDictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
@@ -133,6 +167,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_FontAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.6.3/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/97436df440ca462884c5332c1d8ebbe7941e00/92/abbfccf3/ProfilerWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/AdvertisementSystem/ADRewardedButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a24131e73ec49f7805f3dfb6a69fa781d000/da/17d1d777/SharedVariable`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/40/74d417a9/RuntimeMethodInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/44/61bf560e/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
@@ -182,10 +217,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="14924">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="14924" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -326,6 +361,7 @@
       <workItem from="1721376152498" duration="4717000" />
       <workItem from="1721669617375" duration="3090000" />
       <workItem from="1721894943974" duration="14573000" />
+      <workItem from="1721940798236" duration="2302000" />
     </task>
     <servers />
   </component>

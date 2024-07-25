@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Source.Modules.GUISystem
 {
-    public class GUITransformAnimator : MonoBehaviour
+    public class UITransformAnimator : MonoBehaviour
     {
         protected RectTransform Transform;
 
