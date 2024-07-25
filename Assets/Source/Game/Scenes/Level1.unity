@@ -191,6 +191,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &29228070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 29228071}
+  - component: {fileID: 29228072}
+  m_Layer: 0
+  m_Name: Menu\End game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &29228071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29228070}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1193319836}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &29228072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29228070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041A\u0440\u0443\u0442\u043E, \u0442\u044B \u043F\u0440\u043E\u0448\u0435\u043B
+      \u0438\u0433\u0440\u0443"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Cool, you beat the game
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: Harika, oyunu yendin
+    Object: {fileID: 0}
 --- !u!1 &68738219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1303,61 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3555444756962664620, guid: 53710856ae06ce544b81733e045eb909, type: 3}
   m_PrefabInstance: {fileID: 228728020}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &294215324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 294215325}
+  - component: {fileID: 294215326}
+  m_Layer: 0
+  m_Name: Menu\NextLevel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &294215325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294215324}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1193319836}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &294215326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294215324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Next level
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0421\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C"
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: Sonraki seviye
+    Object: {fileID: 0}
 --- !u!1001 &346057937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4221,9 +4332,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8887592649756580352, guid: fa2e03322a2bc3c43bbed6de5b8dfb0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 294215325}
+    - targetCorrespondingSourceObject: {fileID: 8887592649756580352, guid: fa2e03322a2bc3c43bbed6de5b8dfb0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 29228071}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa2e03322a2bc3c43bbed6de5b8dfb0f, type: 3}
+--- !u!4 &1193319836 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8887592649756580352, guid: fa2e03322a2bc3c43bbed6de5b8dfb0f, type: 3}
+  m_PrefabInstance: {fileID: 1193319835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1207052191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4739,41 +4861,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 85049637}
     m_Modifications:
-    - target: {fileID: 705126141246447519, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 705126141246447519, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 705126141246447519, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 705126141246447519, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 869383384787310217, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
       propertyPath: m_Name
       value: LevelEndUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1400619471304745823, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1400619471304745823, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1400619471304745823, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1400619471304745823, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5794455526505081314, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4815,21 +4905,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7117384877396294589, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7117384877396294589, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7117384877396294589, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7117384877396294589, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
+    - target: {fileID: 8279153006213424581, guid: a91c1353c63f16b42a85c8f2e967867f, type: 3}
+      propertyPath: FallbackText
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
