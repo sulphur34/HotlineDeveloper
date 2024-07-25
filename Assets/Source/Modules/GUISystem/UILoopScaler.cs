@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Source.Modules.GUISystem
 {
-    public class UILoopScaler : GUITransformAnimator
+    public class UILoopScaler : UITransformAnimator
     {
         [SerializeField] private float _scale = 1f;
         [SerializeField] private float _duration = 9f;
