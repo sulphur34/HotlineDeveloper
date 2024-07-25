@@ -1,23 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Source.Modules.AdvertismentSystem
+namespace Source.Modules.AdvertisementSystem
 {
     [RequireComponent(typeof(Button))]
     [RequireComponent(typeof(VideoAD))]
-    public abstract class ADRewardedButton : ADButton
+    public class ADInterstitialButton : ADButton
     {
-        protected override void Awake()
-        {
-            base.Awake();
-            VideoAD.RewardGained += OnRewardGained;
-        }
+        protected override void OnButtonClick() { }
+
+        protected override void OnVideoClose() { }
 
         protected override void ShowAD()
         {
-            VideoAD.ShowRewarded();
+            VideoAD.ShowInter();
         }
-
-        protected abstract void OnRewardGained();
     }
 }

@@ -2,7 +2,7 @@ using System;
 using Plugins.Audio.Core;
 using UnityEngine;
 
-namespace Source.Modules.AdvertismentSystem
+namespace Source.Modules.AdvertisementSystem
 {
     public class VideoAD : MonoBehaviour
     {

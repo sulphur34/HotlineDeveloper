@@ -11,8 +11,11 @@ namespace Source.Modules.GUISystem
         [SerializeField] private float _endTransparentState = 0f;
         [SerializeField] private float _awaitTime = 1f;
         [SerializeField] private float _duration = 0.5f;
+        [SerializeField] private float _awaitChangeFactor = 1f;
+        [SerializeField] private float _durationChangeFactor = 1f;
         
         private Image _image;
+        private Sequence _sequence;
 
         private void Start()
         {
@@ -22,12 +25,24 @@ namespace Source.Modules.GUISystem
 
         protected void Animate()
         {
-            Sequence mySequence = DOTween.Sequence();
-            mySequence.Append(_image.DOFade(_endTransparentState, _duration))
+            if(_sequence != null)
+                _sequence.Kill();
+            
+            _sequence = DOTween.Sequence();
+            _sequence.Append(_image.DOFade(_endTransparentState, _duration))
                 .AppendInterval(_awaitTime)
                 .Append(_image.DOFade(_startTransparentState, _duration))
                 .AppendInterval(_awaitTime)
-                .SetLoops(-1, LoopType.Restart);
+                .SetLoops(-1, LoopType.Restart)
+                .OnStepComplete(OnLoopComplete);
+        }
+
+        protected void OnLoopComplete()
+        {
+            _awaitTime *= _awaitChangeFactor;
+            _duration *= _durationChangeFactor;
+            
+            Animate();
         }
     }
 }

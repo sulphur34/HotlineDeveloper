@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Source.Modules.AdvertismentSystem
+namespace Source.Modules.AdvertisementSystem
 {
     [RequireComponent(typeof(Button))]
     [RequireComponent(typeof(VideoAD))]
