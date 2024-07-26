@@ -18,7 +18,7 @@ namespace Modules.LeaderboardSystem
 
             if (name == Leaderboard.AnonymousName)
             {
-                _name.text = _translationAnonymous;
+                _name.text = Lean.Localization.LeanLocalization.GetTranslationText(_translationAnonymous);;
                 return;
             }
 
