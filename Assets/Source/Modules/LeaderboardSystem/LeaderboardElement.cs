@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using Lean.Localization;
 
 namespace Modules.LeaderboardSystem
 {
@@ -18,7 +19,7 @@ namespace Modules.LeaderboardSystem
 
             if (name == Leaderboard.AnonymousName)
             {
-                _name.text = _translationAnonymous;
+                _name.text = LeanLocalization.GetTranslationText(_translationAnonymous);
                 return;
             }
 
