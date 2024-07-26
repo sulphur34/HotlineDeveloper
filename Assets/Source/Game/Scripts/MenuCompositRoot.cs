@@ -46,10 +46,15 @@ public class MenuCompositRoot : LifetimeScope
 
         builder.RegisterBuildCallback(container =>
         {
-            int levelForLoad = container.Resolve<LevelsData>().ForLoad;
+            LevelsData levelsData = container.Resolve<LevelsData>();
+            int levelForLoad = levelsData.ForLoad;
 
-            LevelSelectionElement levelSelectionElement = _levelSelectionElements.FirstOrDefault(element => element.LevelNumberForLoad == levelForLoad);
+            LevelSelectionElement levelSelectionElement =
+                _levelSelectionElements.FirstOrDefault(element => element.LevelNumberForLoad == levelForLoad);
             levelSelectionElement.Select();
+
+            for (int i = 0; i < _levelSelectionElements.Length; i++)
+                _levelSelectionElements[i].SetScore(levelsData.Value[i].Score);
 
             AudioSettings audioSettings = container.Resolve<AudioSettings>();
             StartCoroutine(InitAudioSettings(audioSettings));
