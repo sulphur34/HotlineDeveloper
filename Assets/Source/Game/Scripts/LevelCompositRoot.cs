@@ -119,6 +119,7 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<ScoreCounterView>();
         builder.RegisterComponentInHierarchy<LevelConditionManager>();
         builder.Register<LevelSaveHandler>(Lifetime.Singleton);
+        builder.Register<ScoreSaveHandler>(Lifetime.Singleton);
         builder.RegisterComponentInHierarchy<CameraFollower>();
         builder.Register<PauseSetter>(Lifetime.Singleton);
         builder.Register<LevelSceneLoader>(Lifetime.Singleton);
@@ -130,6 +131,7 @@ public class LevelCompositRoot : LifetimeScope
             container.Resolve<EnemyTracker>().Activate();
             container.InjectGameObject(_weaponSetupsParent);
             container.Resolve<LevelSaveHandler>();
+            container.Resolve<ScoreSaveHandler>();
             container.Resolve<LeaderboardUpdater>();
             container.Resolve<Fade>().Out();
         });

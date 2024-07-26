@@ -17,6 +17,8 @@ namespace Modules.LevelSelectionSystem
         [SerializeField] private Image _icon;
         [SerializeField] private TextMeshProUGUI _levelNumber;
         [SerializeField] private TextMeshProUGUI _levelName;
+        
+        [SerializeField] private TextMeshProUGUI _scoreNumber;
 
         [SerializeField] private Sprite _lockedIcon;
         [SerializeField] private GameObject _outline;
@@ -24,7 +26,6 @@ namespace Modules.LevelSelectionSystem
         public event Action<LevelSelectionElement> Pressed;
         public event Action<LevelSelectionElement> Selected;
 
-        
         public bool IsLocked { get; private set; }
 
         public bool IsSelected { get; private set; }
@@ -79,6 +80,11 @@ namespace Modules.LevelSelectionSystem
         {
             if (IsLocked == false && IsSelected == false)
                 Pressed?.Invoke(this);
+        }
+
+        public void SetScore(uint score)
+        {
+            _scoreNumber.text = score.ToString();
         }
 
         private string TranslationName(uint levelNumber)

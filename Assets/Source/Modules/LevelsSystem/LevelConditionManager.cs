@@ -21,6 +21,8 @@ namespace Modules.LevelsSystem
         public event Action Won;
         public event Action Lost;
 
+        public int LevelCompleteIndex { get; private set; }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.K))
@@ -40,8 +42,8 @@ namespace Modules.LevelsSystem
             EndLevelTrigger endLevelTrigger)
         {
             _levels = levels;
-            int levelForCompleteIndex = _levels.ForLoad - 1;
-            _level = _levels.Value[levelForCompleteIndex];
+            LevelCompleteIndex = _levels.ForLoad - 1;
+            _level = _levels.Value[LevelCompleteIndex];
             _player = player;
             _endLevelTrigger = endLevelTrigger;
             _player.GetComponent<DamageReceiverView>().Died += OnLoose;
