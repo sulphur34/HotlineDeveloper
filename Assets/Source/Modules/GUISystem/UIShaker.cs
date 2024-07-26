@@ -4,7 +4,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(RectTransform))]
-public class UIShaker : GUITransformAnimator
+public class UIShaker : UITransformAnimator
 {
     [SerializeField] private float shakeDuration = 0.1f;
     [SerializeField] private float shakeStrength = 1f;

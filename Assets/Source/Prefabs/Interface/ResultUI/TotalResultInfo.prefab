@@ -99,5 +99,27 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5511378311602901427, guid: d4c30c12a29251f4b8b3446bbfe8cd2e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6022073091021411777}
   m_SourcePrefab: {fileID: 100100000, guid: d4c30c12a29251f4b8b3446bbfe8cd2e, type: 3}
+--- !u!1 &4897608590408007949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5511378311602901427, guid: d4c30c12a29251f4b8b3446bbfe8cd2e, type: 3}
+  m_PrefabInstance: {fileID: 1120152002807582910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6022073091021411777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4897608590408007949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Menu\PointsTotal
+  FallbackText: "\u0418\u0442\u043E\u0433"

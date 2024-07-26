@@ -16,8 +16,7 @@ namespace Modules.LevelsSystem
         private Player _player;
         private EnemyTracker _enemyTracker;
         private EndLevelTrigger _endLevelTrigger;
-        private Fade _fade;
-        private SceneLoader _sceneLoader;
+        private LevelsData _levels;
 
         public event Action Won;
         public event Action Lost;
@@ -38,25 +37,21 @@ namespace Modules.LevelsSystem
         private void Construct(
             LevelsData levels,
             Player player,
-            EndLevelTrigger endLevelTrigger,
-            Fade fade,
-            SceneLoader sceneLoader)
+            EndLevelTrigger endLevelTrigger)
         {
-            int levelForCompleteIndex = levels.ForLoad - 1;
-            _level = levels.Value[levelForCompleteIndex];
+            _levels = levels;
+            int levelForCompleteIndex = _levels.ForLoad - 1;
+            _level = _levels.Value[levelForCompleteIndex];
             _player = player;
             _endLevelTrigger = endLevelTrigger;
             _player.GetComponent<DamageReceiverView>().Died += OnLoose;
             _endLevelTrigger.Reached += OnWin;
-
-            _fade = fade;
-            _sceneLoader = sceneLoader;
         }
 
         private void OnWin()
         {
-            Won?.Invoke();
             _level.Complete();
+            Won?.Invoke();
         }
 
         private void OnLoose(GameObject player)

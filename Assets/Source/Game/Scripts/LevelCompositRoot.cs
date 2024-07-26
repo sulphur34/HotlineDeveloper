@@ -19,6 +19,7 @@ using Modules.LevelSelectionSystem;
 using Modules.ScoreSystem;
 using Agava.YandexGames;
 using Modules.LeaderboardSystem;
+using Source.Modules.NextLevelButtonSystem;
 
 public class LevelCompositRoot : LifetimeScope
 {
@@ -142,13 +143,13 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<UIDirectionPointer>();
         builder.RegisterComponentInHierarchy<UIAimFollower>();
         builder.RegisterComponentInHierarchy<UIConditionListener>();
-        builder.RegisterComponentInHierarchy<ContinueLevelButton>();
-        builder.RegisterComponentInHierarchy<ContinueLevelButtonView>();
-        builder.Register<ContinueLevelButtonPresenter>(Lifetime.Singleton);
-
+        builder.RegisterComponentInHierarchy<NextLevelButton>();
+        builder.RegisterComponentInHierarchy<NextLevelButtonView>();
+        builder.Register<NextLevelButtonPresenter>(Lifetime.Singleton);
+        
         builder.RegisterBuildCallback(container =>
         {
-            container.Resolve<ContinueLevelButtonPresenter>();
+            container.Resolve<NextLevelButtonPresenter>();
         });
     }
 }
