@@ -16,6 +16,8 @@ namespace Modules.ScoreSystem
         private float _killScore;
         private float _timeScore;
 
+        public float TotalScore => _killScore + _timeScore;
+
         [Inject]
         public void Construct(ScoreCounter scoreCounter, LevelConditionManager levelConditionManager)
         {

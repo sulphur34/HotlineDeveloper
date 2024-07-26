@@ -21,7 +21,6 @@ namespace Source.Modules.NextLevelButtonSystem
             _levels = levels;
             _fade = fade;
             _currentLevelIndex = currentLevelIndex;
-            Debug.Log(_currentLevelIndex);
             _levelSceneLoader = levelSceneLoader;
             _sceneLoader = sceneLoader;
         }
