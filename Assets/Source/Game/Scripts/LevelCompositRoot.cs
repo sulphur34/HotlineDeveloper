@@ -1,3 +1,5 @@
+using Module.ContinueLevelButtonSystem;
+using Modules.Audio;
 using Modules.FadeSystem;
 using Modules.LevelsSystem;
 using Modules.PauseMenu;
@@ -13,7 +15,10 @@ using Modules.CharacterSystem.Player;
 using Modules.EnemySpawnSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
 using Modules.DamageSystem;
+using Modules.LevelSelectionSystem;
 using Modules.ScoreSystem;
+using Agava.YandexGames;
+using Modules.LeaderboardSystem;
 
 public class LevelCompositRoot : LifetimeScope
 {
@@ -54,7 +59,6 @@ public class LevelCompositRoot : LifetimeScope
         else
             builder.RegisterInstance(_desktopBehaviorConfigFactory);
 
-
         builder.RegisterComponentInHierarchy<EnemySpawner>();
     }
 
@@ -91,7 +95,7 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterInstance(_damageableConfigFactory);
         builder.RegisterComponentInHierarchy<DamageReceiverSetup>();
         builder.RegisterComponentInHierarchy<WeaponStrategy>();
-        DamageableConfig damageableConfig = _damageableConfigFactory.GetConfig(DamageableTypes.AlwaysLethal);
+        DamageableConfig damageableConfig = _damageableConfigFactory.GetConfig(DamageableTypes.Immortal);
         _player.GetComponent<DamageReceiverSetup>().Initialize(damageableConfig);
     }
 
@@ -109,11 +113,15 @@ public class LevelCompositRoot : LifetimeScope
     {
         builder.RegisterComponentInHierarchy<EndLevelTrigger>();
         builder.RegisterComponentInHierarchy<EnemyTracker>();
+        builder.Register<ScoreCounter>(Lifetime.Singleton);
+        builder.RegisterComponentInHierarchy<LevelConditionManager>();
         builder.RegisterComponentInHierarchy<ScoreCounterView>();
         builder.RegisterComponentInHierarchy<LevelConditionManager>();
         builder.Register<LevelSaveHandler>(Lifetime.Singleton);
         builder.RegisterComponentInHierarchy<CameraFollower>();
         builder.Register<PauseSetter>(Lifetime.Singleton);
+        builder.Register<LevelSceneLoader>(Lifetime.Singleton);
+        builder.Register<LeaderboardUpdater>(Lifetime.Singleton);
 
         builder.RegisterBuildCallback(container =>
         {
@@ -121,6 +129,7 @@ public class LevelCompositRoot : LifetimeScope
             container.Resolve<EnemyTracker>().Activate();
             container.InjectGameObject(_weaponSetupsParent);
             container.Resolve<LevelSaveHandler>();
+            container.Resolve<LeaderboardUpdater>();
             container.Resolve<Fade>().Out();
         });
     }
@@ -132,5 +141,14 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<RestartLevelButton>();
         builder.RegisterComponentInHierarchy<UIDirectionPointer>();
         builder.RegisterComponentInHierarchy<UIAimFollower>();
+        builder.RegisterComponentInHierarchy<UIConditionListener>();
+        builder.RegisterComponentInHierarchy<ContinueLevelButton>();
+        builder.RegisterComponentInHierarchy<ContinueLevelButtonView>();
+        builder.Register<ContinueLevelButtonPresenter>(Lifetime.Singleton);
+
+        builder.RegisterBuildCallback(container =>
+        {
+            container.Resolve<ContinueLevelButtonPresenter>();
+        });
     }
 }

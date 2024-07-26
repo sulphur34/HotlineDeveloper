@@ -1,3 +1,4 @@
+using Modules.Audio;
 using Modules.FadeSystem;
 using Modules.LeaderboardSystem;
 using Modules.LevelsSystem;

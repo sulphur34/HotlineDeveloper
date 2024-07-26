@@ -1,10 +1,12 @@
 ﻿using Modules.BulletPoolSystem;
 using Modules.Weapons.Ammunition;
+using Modules.Weapons.WeaponItemSystem;
 using UnityEngine;
 using VContainer;
 
 namespace Modules.Weapons.Range
 {
+    [RequireComponent(typeof(WeaponAmmunitionView))]
     public class RangeWeaponSetup : WeaponSetup
     {
         [SerializeField] private ShotStrategy _shotStrategy;
@@ -19,8 +21,10 @@ namespace Modules.Weapons.Range
         }
 
         [Inject]
-        private void Construct(RangeWeaponConfigFactory factory, WeaponAmmunitionView ammunitionView)
+        private void Construct(RangeWeaponConfigFactory factory)
         {
+            WeaponAmmunitionView ammunitionView = GetComponent<WeaponAmmunitionView>();
+            WeaponItem weaponItem = GetComponent<WeaponItem>();
             RangeWeaponConfig config = factory.Get(_shotStrategy);
             _bulletPool = new BulletPool(config.BulletPrefab);
             _shotStrategy.Init(config, _bulletPool);

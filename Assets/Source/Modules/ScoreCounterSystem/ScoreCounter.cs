@@ -4,7 +4,7 @@ using VContainer;
 
 namespace Modules.ScoreCounterSystem
 {
-    [Serializable]
+  /*  [Serializable]
     public class ScoreCounter 
     {
         public event Action Changed;
@@ -46,5 +46,5 @@ namespace Modules.ScoreCounterSystem
         {
             _scoreCounter = scoreCounter;
         }
-    }
+    }*/
 }

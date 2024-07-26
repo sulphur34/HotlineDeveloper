@@ -4,6 +4,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Modules.LevelsSystem;
 using UnityEngine;
+using VContainer;
 
 namespace Modules.ScoreSystem
 {
@@ -19,13 +20,17 @@ namespace Modules.ScoreSystem
         private EnemyTracker _enemyTracker;
         private uint _currentScore;
 
+        [Inject]
         public ScoreCounter(EnemyTracker enemyTracker)
         {
             _enemyTracker = enemyTracker;
             _enemyTracker.Activated += Activate;
         }
 
-        public event Action<uint> ScoreChanged;
+        public event Action<uint> KillScoreChanged;
+        public event Action<uint> TimeScoreChanged;
+
+        public uint TotalScore { get; private set; }
 
         private float _timeMultiplier => 5.7497f - 0.9674f * Mathf.Log(_timePassed);
 
@@ -54,7 +59,13 @@ namespace Modules.ScoreSystem
         private void OnAllEnemiesDie()
         {
             Deactivate();
-            AddScore(_timeMultiplier * _scores.Count * _killScore);
+            TimeScoreChanged?.Invoke(GetTimeScore());
+            UpdateTotalScore();
+        }
+
+        private uint GetTimeScore()
+        {
+            return Convert.ToUInt32(_timeMultiplier * _scores.Count * _killScore);
         }
 
         private void OnEnemyKill()
@@ -76,7 +87,13 @@ namespace Modules.ScoreSystem
         private void AddScore(float value)
         {
             _currentScore += Convert.ToUInt32(value);
-            ScoreChanged?.Invoke(_currentScore);
+            KillScoreChanged?.Invoke(_currentScore);
+            UpdateTotalScore();
+        }
+
+        private void UpdateTotalScore()
+        {
+            TotalScore = _currentScore + GetTimeScore();
         }
     }
 }

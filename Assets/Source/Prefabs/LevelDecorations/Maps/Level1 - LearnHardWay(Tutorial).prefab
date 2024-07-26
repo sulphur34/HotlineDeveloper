@@ -26094,6 +26094,7 @@ GameObject:
   - component: {fileID: 5893188041386466189}
   - component: {fileID: 437541568686163795}
   - component: {fileID: 550732938318634042}
+  - component: {fileID: 8265206419975658237}
   m_Layer: 5
   m_Name: Text (TMP) (6)
   m_TagString: Untagged
@@ -26148,7 +26149,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Take them out silently or rush with gun. It's up to you
+  m_text: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436\u044C \u0438\u0445 \u0431\u0435\u0441\u0448\u0443\u043C\u043D\u043E
+    \u0438\u043B\u0438 \u0431\u044B\u0441\u0442\u0440\u043E \u0440\u0430\u0441\u0441\u0442\u0440\u0435\u043B\u044F\u0439.
+    \u0412\u044B\u0431\u043E\u0440 \u0437\u0430 \u0442\u043E\u0431\u043E\u0439"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -26175,7 +26178,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.6
+  m_fontSize: 0.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -26217,6 +26220,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8265206419975658237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889440150711123787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level1\TutorialLine1 (6)
+  FallbackText: Take them out silently or rush with gun. It's up to you
 --- !u!1 &1975622328896987057
 GameObject:
   m_ObjectHideFlags: 0
@@ -26303,6 +26320,7 @@ GameObject:
   - component: {fileID: 6064817625995752719}
   - component: {fileID: 7855062876143189817}
   - component: {fileID: 7209794243914607977}
+  - component: {fileID: 5595388050558076534}
   m_Layer: 5
   m_Name: Text (TMP) (3)
   m_TagString: Untagged
@@ -26357,7 +26375,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: It's him or you now
+  m_text: "\u0412\u0441\u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u043B\u0438\u0431\u043E
+    \u0442\u044B \u043B\u0438\u0431\u043E \u043E\u043D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -26384,7 +26403,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.6
+  m_fontSize: 0.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -26392,7 +26411,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
   m_wordSpacing: 0
@@ -26426,6 +26445,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5595388050558076534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976781438018866404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level1\TutorialLine1 (3)
+  FallbackText: It's him or you now
 --- !u!1 &2321990255014426953
 GameObject:
   m_ObjectHideFlags: 0
@@ -30004,8 +30037,9 @@ GameObject:
   - component: {fileID: 733081495626170735}
   - component: {fileID: 7078628843555573738}
   - component: {fileID: 4458028467051858216}
+  - component: {fileID: 7845944035971749403}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Text (TMP) (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30019,7 +30053,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2834990454854756392}
   m_LocalRotation: {x: 0, y: 0, z: 0.42103577, w: 0.90704405}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0000006854534}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30058,7 +30092,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You can throw equipped weapon with RMB
+  m_text: "\u0422\u044B \u043C\u043E\u0436\u0435\u0448\u044C \u0431\u0440\u043E\u0441\u0438\u0442\u044C
+    \u044D\u043A\u0438\u043F\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u043E\u0435
+    \u043E\u0440\u0443\u0436\u0438\u0435 \u041F\u041A\u041C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -30085,7 +30121,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.65
+  m_fontSize: 0.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -30127,6 +30163,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7845944035971749403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2834990454854756392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level1\TutorialLine1 (11)
+  FallbackText: You can throw equipped weapon with RMB
 --- !u!1 &2970653786813246475
 GameObject:
   m_ObjectHideFlags: 0
@@ -30138,6 +30188,7 @@ GameObject:
   - component: {fileID: 2072532060133678363}
   - component: {fileID: 7723835742041679542}
   - component: {fileID: 5763621625110723381}
+  - component: {fileID: 346559279416817953}
   m_Layer: 5
   m_Name: Text (TMP) (4)
   m_TagString: Untagged
@@ -30153,7 +30204,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2970653786813246475}
   m_LocalRotation: {x: 0, y: 0, z: -0.28527018, w: 0.95844716}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30192,7 +30243,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You can lure enemies with shots to deal with them one by one
+  m_text: "\u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u0437\u0430\u043C\u0430\u043D\u0438\u0432\u0430\u0442\u044C
+    \u0432\u0440\u0430\u0433\u043E\u0432 \u0437\u0432\u0443\u043A\u043E\u043C \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0430,
+    \u0447\u0442\u043E\u0431\u044B \u0440\u0430\u0441\u043F\u0440\u0430\u0432\u043B\u044F\u0442\u044C\u0441\u044F
+    \u0441 \u043D\u0438\u043C\u0438 \u043F\u043E \u043E\u0434\u043D\u043E\u043C\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -30219,7 +30273,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.65
+  m_fontSize: 0.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -30227,7 +30281,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
   m_wordSpacing: 0
@@ -30261,6 +30315,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &346559279416817953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2970653786813246475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level1\TutorialLine1 (4)
+  FallbackText: You can lure enemies with shots to deal with them one by one
 --- !u!1 &3125552120258274357
 GameObject:
   m_ObjectHideFlags: 0
@@ -41987,6 +42055,7 @@ GameObject:
   - component: {fileID: 8965700468655626970}
   - component: {fileID: 4860309812094174549}
   - component: {fileID: 8125898084104780489}
+  - component: {fileID: 7738152525061321664}
   m_Layer: 5
   m_Name: Text (TMP) (5)
   m_TagString: Untagged
@@ -42001,17 +42070,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5007242556167974809}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0000011920929}
+  m_LocalRotation: {x: -0, y: -0, z: -0.02210702, w: 0.9997556}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000000029802322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5905346232528418224}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.533}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38.199997, y: -10.6}
-  m_SizeDelta: {x: 6.1536, y: 3.7394}
+  m_AnchoredPosition: {x: -21.199999, y: -2.6000016}
+  m_SizeDelta: {x: 4.22, y: 2.5644}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4860309812094174549
 CanvasRenderer:
@@ -42041,7 +42110,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Only bullets can hit them
+  m_text: "\u0422\u043E\u043B\u044C\u043A\u043E \u043F\u0443\u043B\u0438 \u043C\u043E\u0433\u0443\u0442
+    \u0435\u0433\u043E \u0443\u0431\u0438\u0442\u044C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -42068,7 +42138,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.9
+  m_fontSize: 0.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -42110,6 +42180,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7738152525061321664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5007242556167974809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level1\TutorialLine1 (5)
+  FallbackText: Only bullets can hit them
 --- !u!1 &5118001416061462171
 GameObject:
   m_ObjectHideFlags: 0
@@ -45627,6 +45711,7 @@ GameObject:
   - component: {fileID: 5079153267834357364}
   - component: {fileID: 1416132615924903689}
   - component: {fileID: 6298016015046253324}
+  - component: {fileID: 4718385655954994525}
   m_Layer: 5
   m_Name: Text (TMP) (7)
   m_TagString: Untagged
@@ -45681,7 +45766,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hold shift to look around
+  m_text: "\u0423\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0439\u0442\u0435 Shift,
+    \u0447\u0442\u043E\u0431\u044B \u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C\u0441\u044F"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -45708,15 +45794,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.4
+  m_fontSize: 0.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
   m_wordSpacing: 0
@@ -45750,6 +45836,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4718385655954994525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6109921164081323854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level1\TutorialLine1 (7)
+  FallbackText: Hold shift to look around
 --- !u!1 &6312611851264388814
 GameObject:
   m_ObjectHideFlags: 0
@@ -47568,36 +47668,36 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3522497933302802982}
+  - {fileID: 5235916962703430602}
+  - {fileID: 5543996465973563004}
+  - {fileID: 5995697713018123119}
+  - {fileID: 7894525233826331595}
+  - {fileID: 7877278092260261177}
+  - {fileID: 1890465249251920041}
+  - {fileID: 991398056201429120}
+  - {fileID: 7626149557830523678}
+  - {fileID: 5050221010951129804}
+  - {fileID: 5806713060984282421}
+  - {fileID: 3524426415657760596}
+  - {fileID: 3345586765129895351}
+  - {fileID: 6772915349442263510}
+  - {fileID: 7568564632667912482}
+  - {fileID: 6224240976167130635}
   - {fileID: 945105361882986665}
-  - {fileID: 6064817625995752719}
-  - {fileID: 2326642637919455545}
-  - {fileID: 2072532060133678363}
-  - {fileID: 2800718269029200884}
-  - {fileID: 4525364962935361500}
-  - {fileID: 5079153267834357364}
   - {fileID: 1887892570417499568}
   - {fileID: 602593233994170412}
   - {fileID: 3051549581718117369}
-  - {fileID: 733081495626170735}
-  - {fileID: 4810546800285485843}
+  - {fileID: 6064817625995752719}
+  - {fileID: 2072532060133678363}
   - {fileID: 8965700468655626970}
   - {fileID: 5893188041386466189}
-  - {fileID: 6224240976167130635}
-  - {fileID: 7568564632667912482}
-  - {fileID: 6772915349442263510}
-  - {fileID: 3345586765129895351}
-  - {fileID: 3524426415657760596}
-  - {fileID: 5806713060984282421}
-  - {fileID: 5050221010951129804}
-  - {fileID: 7626149557830523678}
-  - {fileID: 991398056201429120}
-  - {fileID: 1890465249251920041}
-  - {fileID: 7877278092260261177}
-  - {fileID: 7894525233826331595}
-  - {fileID: 5995697713018123119}
-  - {fileID: 5543996465973563004}
-  - {fileID: 5235916962703430602}
-  - {fileID: 3522497933302802982}
+  - {fileID: 5079153267834357364}
+  - {fileID: 2326642637919455545}
+  - {fileID: 4525364962935361500}
+  - {fileID: 2800718269029200884}
+  - {fileID: 733081495626170735}
+  - {fileID: 4810546800285485843}
   m_Father: {fileID: 2824409772866023226}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -48049,6 +48149,7 @@ GameObject:
   - component: {fileID: 2326642637919455545}
   - component: {fileID: 7017264258585185478}
   - component: {fileID: 7749702879912270780}
+  - component: {fileID: 2696386625239966139}
   m_Layer: 5
   m_Name: Text (TMP) (8)
   m_TagString: Untagged
@@ -48103,7 +48204,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Compass in upper right corner guide you on the level
+  m_text: "\u041A\u043E\u043C\u043F\u0430\u0441 \u0432 \u043F\u0440\u0430\u0432\u043E\u043C
+    \u0432\u0435\u0440\u0445\u043D\u0435\u043C \u0443\u0433\u043B\u0443 \u0443\u043A\u0430\u0436\u0435\u0442
+    \u0432\u0430\u043C \u043F\u0443\u0442\u044C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -48138,7 +48241,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
   m_wordSpacing: 0
@@ -48172,6 +48275,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2696386625239966139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7043092546150858816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level1\TutorialLine1 (8)
+  FallbackText: Compass in upper right corner guide you on the level
 --- !u!1 &7185231280455729829
 GameObject:
   m_ObjectHideFlags: 0
@@ -50543,8 +50660,9 @@ GameObject:
   - component: {fileID: 4810546800285485843}
   - component: {fileID: 2565027542151388841}
   - component: {fileID: 8134372551490090400}
+  - component: {fileID: 742056687084169465}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Text (TMP) (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50558,7 +50676,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7427089933943775415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.000001937151}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50566,8 +50684,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -31.499996, y: -3.000002}
-  m_SizeDelta: {x: 6.753, y: 4.4578}
+  m_AnchoredPosition: {x: -30.02, y: -2.65}
+  m_SizeDelta: {x: 4.6438, y: 3.0655}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2565027542151388841
 CanvasRenderer:
@@ -50597,7 +50715,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Some enemies are toupher than others
+  m_text: "\u041D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u0432\u0440\u0430\u0433\u0438
+    \u0441\u0438\u043B\u044C\u043D\u0435\u0435 \u0434\u0440\u0443\u0433\u0438\u0445"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -50624,7 +50743,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1
+  m_fontSize: 0.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -50666,6 +50785,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &742056687084169465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7427089933943775415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level1\TutorialLine1 (12)
+  FallbackText: Some enemies are toupher than others
 --- !u!1 &7557178641653688349
 GameObject:
   m_ObjectHideFlags: 0
@@ -50677,8 +50810,9 @@ GameObject:
   - component: {fileID: 4525364962935361500}
   - component: {fileID: 9018115132456269655}
   - component: {fileID: 118149591792042922}
+  - component: {fileID: 7457426284597337118}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Text (TMP) (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50692,7 +50826,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7557178641653688349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00000047683716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50700,8 +50834,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.97, y: -4.13}
-  m_SizeDelta: {x: -29.7405, y: -46.8535}
+  m_AnchoredPosition: {x: -7.800007, y: -8.100004}
+  m_SizeDelta: {x: -26.9923, y: -46.0899}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9018115132456269655
 CanvasRenderer:
@@ -50731,7 +50865,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Knock him out
+  m_text: "\u041D\u043E\u043A\u0430\u0443\u0442\u0438\u0440\u0443\u0439 \u0435\u0433\u043E
+    \u0430\u0442\u0430\u043A\u043E\u0439. \u041F\u043E\u043C\u043D\u0438 \u0447\u0442\u043E
+    \u0440\u0430\u043D\u043E \u0438\u043B\u0438 \u043F\u043E\u0437\u0434\u043D\u043E
+    \u043E\u043D \u043E\u0447\u043D\u0435\u0442\u0441\u044F"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -50758,15 +50895,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.6
+  m_fontSize: 0.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
   m_wordSpacing: 0
@@ -50800,6 +50937,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7457426284597337118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7557178641653688349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level1\TutorialLine1 (9)
+  FallbackText: Knock him out
 --- !u!1 &7693415916637739495
 GameObject:
   m_ObjectHideFlags: 0
@@ -50886,6 +51037,7 @@ GameObject:
   - component: {fileID: 3051549581718117369}
   - component: {fileID: 6529332971165156516}
   - component: {fileID: 3347218477353443420}
+  - component: {fileID: 3201129247598314849}
   m_Layer: 5
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -50940,9 +51092,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'RMB to pick weapon
-
-'
+  m_text: "\u041F\u041A\u041C \u0447\u0442\u043E\u0431\u044B \u0432\u044B\u0431\u0440\u0430\u0442\u044C
+    \u043E\u0440\u0443\u0436\u0438\u0435"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -50969,7 +51120,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.45
+  m_fontSize: 0.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -51011,6 +51162,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3201129247598314849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7732171069325288844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level1\TutorialLine1 (2)
+  FallbackText: 'RMB to pick weapon
+
+'
 --- !u!1 &7843949600374791758
 GameObject:
   m_ObjectHideFlags: 0
@@ -51741,6 +51908,7 @@ GameObject:
   - component: {fileID: 1887892570417499568}
   - component: {fileID: 1097419821356231574}
   - component: {fileID: 3221024281006524395}
+  - component: {fileID: 8702205375470442380}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -51795,7 +51963,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: WASD to move
+  m_text: "\u041A\u043D\u043E\u043F\u043A\u0438 \u0426\u0424\u042B\u0412 \u0434\u043B\u044F
+    \u043F\u0435\u0440\u0435\u043C\u0435\u0449\u0435\u043D\u0438\u044F"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -51822,7 +51991,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.6
+  m_fontSize: 0.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -51864,6 +52033,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8702205375470442380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8018791559863770547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level1\TutorialLine1
+  FallbackText: WASD to move
 --- !u!1 &8633406268300190725
 GameObject:
   m_ObjectHideFlags: 0
@@ -51875,6 +52058,7 @@ GameObject:
   - component: {fileID: 602593233994170412}
   - component: {fileID: 9172493731588371539}
   - component: {fileID: 133587313759579971}
+  - component: {fileID: 2376142479721161815}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -51929,9 +52113,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'LMB to Attack
-
-'
+  m_text: "\u041B\u041A\u041C \u0434\u043B\u044F \u0430\u0442\u0430\u043A\u0438"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -51958,7 +52140,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.75
+  m_fontSize: 0.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -52000,6 +52182,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2376142479721161815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8633406268300190725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level1\TutorialLine1 (1)
+  FallbackText: 'LMB to Attack
+
+'
 --- !u!1 &8646867580583494671
 GameObject:
   m_ObjectHideFlags: 0
@@ -52775,8 +52973,9 @@ GameObject:
   - component: {fileID: 945105361882986665}
   - component: {fileID: 1735088278650396303}
   - component: {fileID: 4295858585361117938}
+  - component: {fileID: 8642971355447447638}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LevelName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52789,17 +52988,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8675881680207816874}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.29110032, w: 0.9566926}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5905346232528418224}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 33.848}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -23.219105}
-  m_SizeDelta: {x: -19.618198, y: -46.8075}
+  m_AnchoredPosition: {x: -4.51, y: -14.28}
+  m_SizeDelta: {x: -26.0812, y: -45.7313}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1735088278650396303
 CanvasRenderer:
@@ -52829,7 +53028,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Learn The Hard Way
+  m_text: "\u0423\u0447\u0438\u0441\u044C \u043D\u0430 \u043E\u0448\u0438\u0431\u043A\u0430\u0445"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -52856,7 +53055,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1.2
+  m_fontSize: 1.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -52898,6 +53097,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8642971355447447638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8675881680207816874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level1\Name
+  FallbackText: Learn The Hard Way
 --- !u!1 &8737930623375589941
 GameObject:
   m_ObjectHideFlags: 0
@@ -53342,6 +53555,7 @@ Transform:
   - {fileID: 3621722665283979368}
   - {fileID: 7275191772338220029}
   - {fileID: 8180121567488945538}
+  - {fileID: 8887592649756580352}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4669839773180234229
@@ -55995,8 +56209,9 @@ GameObject:
   - component: {fileID: 2800718269029200884}
   - component: {fileID: 1000409693549755913}
   - component: {fileID: 781733621359224106}
+  - component: {fileID: 2768293133354813887}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Text (TMP) (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56010,7 +56225,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9018102412027495904}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56049,7 +56264,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enemies can hear your shots
+  m_text: "\u0412\u0440\u0430\u0433\u0438 \u043C\u043E\u0433\u0443\u0442 \u0441\u043B\u044B\u0448\u0430\u0442\u044C
+    \u0432\u0430\u0448\u0438 \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u044B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
   m_sharedMaterial: {fileID: 602725166143603702, guid: e9765eb2efa5988499a3ef40e3298469, type: 2}
@@ -56076,7 +56292,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.75
+  m_fontSize: 0.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -56084,7 +56300,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
   m_wordSpacing: 0
@@ -56118,6 +56334,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2768293133354813887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9018102412027495904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level1\TutorialLine1 (10)
+  FallbackText: Enemies can hear your shots
 --- !u!1 &9128493036027663048
 GameObject:
   m_ObjectHideFlags: 0
@@ -57368,3 +57598,65 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1001 &3333632365950745545
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2824409772866023226}
+    m_Modifications:
+    - target: {fileID: 4296916145720799980, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_Name
+      value: '[LOCALIZATION]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.979904
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.085582
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.8796248
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+--- !u!4 &8887592649756580352 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+  m_PrefabInstance: {fileID: 3333632365950745545}
+  m_PrefabAsset: {fileID: 0}

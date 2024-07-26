@@ -20,6 +20,8 @@ GameObject:
   - component: {fileID: -98272371166157542}
   - component: {fileID: 5661767436390718423}
   - component: {fileID: -4835808402958107542}
+  - component: {fileID: 6196841952023544254}
+  - component: {fileID: -2152907845024314989}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Untagged
@@ -140,7 +142,7 @@ MonoBehaviour:
   _rangeRotationY: 90
   _rotationX: 0
   <IsTrackable>k__BackingField: 1
-  <Offset>k__BackingField: {x: -0.35, y: 0, z: 0.35}
+  <Offset>k__BackingField: {x: -0.15, y: 0, z: -0.3}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 365486668920781122}
   <RightHandPlaceHolder>k__BackingField: {fileID: 5016169905753297387}
 --- !u!114 &5129216180701406946
@@ -207,8 +209,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.13, y: 1.0872164, z: 0.13}
-  m_Center: {x: 0.000000007450581, y: 0.50629044, z: 0.00000013411045}
+  m_Size: {x: 0.09546077, y: 1.0872164, z: 0.097492486}
+  m_Center: {x: 0.0010158643, y: 0.50629044, z: -0.0020315945}
 --- !u!199 &-98272371166157542
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5084,6 +5086,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5e4eb7b5bcfdf409da29c2f848dcf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6196841952023544254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632544431098197865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &-2152907845024314989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632544431098197865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5535415458a4a938e4322f7888bbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName:
+    _id: 6ef3bd45-09b7-4ea1-8e26-b88d88ba35b5
+    _key: MeleeSwing
 --- !u!1 &7776433211732068583
 GameObject:
   m_ObjectHideFlags: 0

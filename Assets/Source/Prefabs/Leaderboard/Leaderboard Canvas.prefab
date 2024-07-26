@@ -719,6 +719,7 @@ GameObject:
   - component: {fileID: 277320611213024641}
   - component: {fileID: 2776013535446473320}
   - component: {fileID: 8469181878091078702}
+  - component: {fileID: 8607963597300783051}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -844,6 +845,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8607963597300783051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6071791946225694388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Leaderboard Lable
+  FallbackText: 'Leaderboard
+
+'
 --- !u!1 &6144786393133546579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,16 +1781,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6709568623121939982, guid: 66bd3fee48e3fd34f8605c5181c0eb1a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709568623121939982, guid: 66bd3fee48e3fd34f8605c5181c0eb1a, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709568623121939982, guid: 66bd3fee48e3fd34f8605c5181c0eb1a, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6709568623121939982, guid: 66bd3fee48e3fd34f8605c5181c0eb1a, type: 3}
       propertyPath: m_SizeDelta.x

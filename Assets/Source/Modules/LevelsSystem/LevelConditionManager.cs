@@ -1,4 +1,6 @@
-﻿using Modules.CharacterSystem.Player;
+﻿using System;
+using System;
+using Modules.CharacterSystem.Player;
 using Modules.DamageSystem;
 using Modules.FadeSystem;
 using Modules.SceneLoaderSystem;
@@ -17,6 +19,9 @@ namespace Modules.LevelsSystem
         private Fade _fade;
         private SceneLoader _sceneLoader;
 
+        public event Action Won;
+        public event Action Lost;
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.K))
@@ -28,14 +33,14 @@ namespace Modules.LevelsSystem
             _player.GetComponent<DamageReceiverView>().Died -= OnLoose;
             _enemyTracker.AllEnemiesDied -= OnWin;
         }
-        
+
         [Inject]
         private void Construct(
             LevelsData levels,
             Player player,
             EndLevelTrigger endLevelTrigger,
             Fade fade,
-             SceneLoader sceneLoader)
+            SceneLoader sceneLoader)
         {
             int levelForCompleteIndex = levels.ForLoad - 1;
             _level = levels.Value[levelForCompleteIndex];
@@ -50,17 +55,13 @@ namespace Modules.LevelsSystem
 
         private void OnWin()
         {
-            Debug.Log("Level complete by killing all enemies");
+            Won?.Invoke();
             _level.Complete();
-            _fade.In();
-            _sceneLoader.Load("Menu", _fade);
         }
 
         private void OnLoose(GameObject player)
         {
-            Debug.Log("Level lost, you are dead");
-            _fade.In();
-            _sceneLoader.Load(SceneManager.GetActiveScene().name, _fade);
+            Lost?.Invoke();
         }
     }
 }

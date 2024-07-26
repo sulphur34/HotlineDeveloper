@@ -18,6 +18,9 @@ GameObject:
   - component: {fileID: -4867921186307607783}
   - component: {fileID: -9023587668943403869}
   - component: {fileID: 3979861434197846390}
+  - component: {fileID: 3991831154221633606}
+  - component: {fileID: -6882114761007163206}
+  - component: {fileID: 3913092005232081965}
   m_Layer: 0
   m_Name: AssaultRIfle_01_Cube.001
   m_TagString: Untagged
@@ -168,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _force: 30
-  _rotationForce: 5
+  _rotationForce: 200
   _rotationZ: 90
   _meleeRotationY: 0
   _rangeRotationY: 90
@@ -221,6 +224,63 @@ MonoBehaviour:
   _bulletSpawnPoint: {fileID: 5994431272203113816}
   _minAngle: -3
   _maxAngle: 3
+--- !u!114 &3991831154221633606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322712272813003720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &-6882114761007163206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322712272813003720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5535415458a4a938e4322f7888bbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName:
+    _id: 8f5987f8-368b-446f-931f-a9e82623851c
+    _key: AssaultFire
+--- !u!114 &3913092005232081965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322712272813003720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8eb7f5fcf89384691a6b706de1530d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <AmmoIcon>k__BackingField: {fileID: 21300000, guid: 19572fd79f352b44fb8266280f794989, type: 3}
 --- !u!1 &5744387659807287628
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +307,7 @@ Transform:
   m_GameObject: {fileID: 5744387659807287628}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.4999996, z: -0, w: 0.8660257}
-  m_LocalPosition: {x: 0, y: 0.0626, z: 0.611}
+  m_LocalPosition: {x: 0, y: 0.0626, z: 0.316}
   m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
