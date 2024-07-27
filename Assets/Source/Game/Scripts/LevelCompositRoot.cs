@@ -19,6 +19,7 @@ using Modules.LevelSelectionSystem;
 using Modules.ScoreSystem;
 using Agava.YandexGames;
 using Modules.LeaderboardSystem;
+using Source.Modules.FocusSystem;
 using Source.Modules.NextLevelButtonSystem;
 
 public class LevelCompositRoot : LifetimeScope
@@ -122,6 +123,7 @@ public class LevelCompositRoot : LifetimeScope
         builder.Register<ScoreSaveHandler>(Lifetime.Singleton);
         builder.RegisterComponentInHierarchy<CameraFollower>();
         builder.Register<PauseSetter>(Lifetime.Singleton);
+        builder.Register<Focus>(Lifetime.Singleton);
         builder.Register<LevelSceneLoader>(Lifetime.Singleton);
         builder.Register<LeaderboardUpdater>(Lifetime.Singleton);
 
@@ -134,6 +136,7 @@ public class LevelCompositRoot : LifetimeScope
             container.Resolve<ScoreSaveHandler>();
             container.Resolve<LeaderboardUpdater>();
             container.Resolve<Fade>().Out();
+            container.Resolve<Focus>();
         });
     }
 

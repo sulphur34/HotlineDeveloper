@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: -348705988654022443}
   - component: {fileID: -6266898966011405337}
   - component: {fileID: 8373571915842482889}
+  - component: {fileID: 882277950816574817}
   m_Layer: 0
   m_Name: RewardPistol
   m_TagString: Untagged
@@ -387,3 +388,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <AmmoIcon>k__BackingField: {fileID: 21300000, guid: ff64bc5fcfbc85d40af903d3136990e6, type: 3}
+--- !u!114 &882277950816574817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8897919934825601442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2a1790e1a3c4382bd61470a90e9844b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _appearEffect: {fileID: 5488795613416504861, guid: 931afbfe07188f5479cc3e84105911e4, type: 3}
