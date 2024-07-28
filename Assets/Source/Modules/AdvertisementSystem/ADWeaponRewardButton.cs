@@ -4,10 +4,13 @@ namespace Source.Modules.AdvertisementSystem
 {
     public class ADWeaponRewardButton : ADRewardedButton
     {
+        private bool isRewarded = false;
+
         [SerializeField] private GameObject _weaponGameobject;
+
         protected override void OnRewardGained()
         {
-            _weaponGameobject.SetActive(true);
+            isRewarded = true;
         }
 
         protected override void OnButtonClick()
@@ -16,6 +19,11 @@ namespace Source.Modules.AdvertisementSystem
 
         protected override void OnVideoClose()
         {
+            if (isRewarded)
+            {
+                _weaponGameobject.SetActive(true);
+                gameObject.SetActive(false);
+            }
         }
     }
 }
