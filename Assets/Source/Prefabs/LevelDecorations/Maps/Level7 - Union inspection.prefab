@@ -15768,8 +15768,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.617667, y: 0.8760824, z: 2.6835496}
-  m_Center: {x: 0.8945343, y: 1.2327178, z: 1.9064239}
+  m_Size: {x: 3.0452843, y: 0.8760824, z: 2.420592}
+  m_Center: {x: 0.6083472, y: 1.2327178, z: 1.7749424}
 --- !u!1 &4228216713882355063
 GameObject:
   m_ObjectHideFlags: 0
@@ -38428,12 +38428,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1631459131376311187, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
       propertyPath: m_text
-      value: "\u041F\u0440\u043E\u0444\u0441\u043E\u044E\u0437\u043D\u0430\u044F
-        \u0438\u043D\u0441\u043F\u0435\u043A\u0446\u0438\u044F"
+      value: Union Inspection
       objectReference: {fileID: 0}
     - target: {fileID: 1631459131376311187, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
       propertyPath: m_fontSize
-      value: 0.6
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 1631459131376311187, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
       propertyPath: m_fontAsset
@@ -38626,6 +38625,10 @@ PrefabInstance:
     - target: {fileID: 6130633381980938697, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134888269464578762, guid: 94ef877742ae0704096f7d44991535c0, type: 3}
+      propertyPath: currentLanguage
+      value: English
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -25,11 +25,13 @@ public class UIConditionListener : MonoBehaviour
 
     private void OnWin()
     {
+        Time.timeScale = 0;
         _winUI.enabled = true;
     }
 
     private void OnLoose()
     {
+        Time.timeScale = 0;
         _looseUI.enabled = true;
     }
 }

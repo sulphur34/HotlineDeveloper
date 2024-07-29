@@ -1,11 +1,14 @@
 using System;
-using Plugins.Audio.Core;
+using Modules.PauseMenu;
 using UnityEngine;
+using VContainer;
 
 namespace Source.Modules.AdvertisementSystem
 {
     public class VideoAD : MonoBehaviour
     {
+        private PauseSetter _pauseSetter;
+        
         public event Action RewardGained;
         public event Action Closed;
 
@@ -14,6 +17,12 @@ namespace Source.Modules.AdvertisementSystem
         private void Awake()
         {
             IsPlaying = false;
+        }
+
+        [Inject]
+        public void Construct(PauseSetter pauseSetter)
+        {
+            _pauseSetter = pauseSetter;
         }
 
         public void ShowRewarded()
@@ -29,8 +38,7 @@ namespace Source.Modules.AdvertisementSystem
         private void OnOpenCallBack()
         {
             IsPlaying = true;
-            Time.timeScale = 0;
-            AudioPauseHandler.Instance.PauseAudio();
+            _pauseSetter.Enable();
         }
 
         private void OnRewardCallBack()
@@ -41,9 +49,8 @@ namespace Source.Modules.AdvertisementSystem
         private void OnCloseCallBack()
         {
             IsPlaying = false;
-            Time.timeScale = 1;
-            AudioPauseHandler.Instance.UnpauseAudio();
             Closed?.Invoke();
+            _pauseSetter.Disable();
         }
 
         private void OnCloseCallBack(bool isShown)
