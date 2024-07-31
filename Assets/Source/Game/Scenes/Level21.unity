@@ -400,6 +400,7 @@ MonoBehaviour:
   - {fileID: 1008884973}
   - {fileID: 1525042333}
   - {fileID: 1854328355}
+  - {fileID: 583427125}
   _moverConfig: {fileID: 11400000, guid: 4ac0f1a02fd35d343b4e70b9b406b1af, type: 2}
   _weaponConfigFactory: {fileID: 11400000, guid: 726e345fe5bd56f4486c8acdb99fb2e4, type: 2}
   _weaponTracker: {fileID: 1616779574}
@@ -1712,11 +1713,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7929064487579304528, guid: 75a3164403f11ad4ba0a5b311c854578, type: 3}
   m_PrefabInstance: {fileID: 271844436}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &271844438 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8897919934825601442, guid: 75a3164403f11ad4ba0a5b311c854578, type: 3}
-  m_PrefabInstance: {fileID: 271844436}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &276396818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2971,6 +2967,11 @@ PrefabInstance:
 --- !u!224 &583427124 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1180989197788602823, guid: e9e579a4b5a41dd41a215adbbf5d0532, type: 3}
+  m_PrefabInstance: {fileID: 583427123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &583427125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1196985383099826829, guid: e9e579a4b5a41dd41a215adbbf5d0532, type: 3}
   m_PrefabInstance: {fileID: 583427123}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &607253027
@@ -10766,7 +10767,7 @@ PrefabInstance:
     - target: {fileID: 6173190162753676164, guid: 4b2a201ad9c2e134aae18ac23e0fb29f, type: 3}
       propertyPath: _weaponGameobject
       value: 
-      objectReference: {fileID: 271844438}
+      objectReference: {fileID: 8897919934825601442, guid: 75a3164403f11ad4ba0a5b311c854578, type: 3}
     - target: {fileID: 7229262651010824073, guid: 4b2a201ad9c2e134aae18ac23e0fb29f, type: 3}
       propertyPath: m_Name
       value: AdvButton

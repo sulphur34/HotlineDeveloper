@@ -11,7 +11,6 @@ namespace Source.Modules.AdvertisementSystem
         protected override void OnRewardGained()
         {
             isRewarded = true;
-            Debug.Log("Reward gained");
         }
 
         protected override void OnButtonClick()
@@ -20,8 +19,6 @@ namespace Source.Modules.AdvertisementSystem
 
         protected override void OnVideoClose()
         {
-            Debug.Log("Reward appear -- " + isRewarded );
-            
             if (isRewarded)
             {
                 _weaponGameobject.SetActive(true);

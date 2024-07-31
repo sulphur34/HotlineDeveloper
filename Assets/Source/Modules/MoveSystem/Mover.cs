@@ -39,8 +39,6 @@ namespace Modules.MoveSystem
             RaycastHit hit;
             if (Physics.Raycast(_transform.position, Vector3.down, out hit))
             {
-                Debug.Log(hit.distance);
-                
                 _transform.up = hit.normal;
             }
         }

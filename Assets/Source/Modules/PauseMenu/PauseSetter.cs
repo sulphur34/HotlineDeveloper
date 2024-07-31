@@ -26,7 +26,6 @@ namespace Modules.PauseMenu
         {
             SetPauseState(_pauseActiveState);
             _pauseQueueCounter++;
-            Debug.Log("Pause queue" + _pauseQueueCounter);
         }
 
         public void Disable()
@@ -34,14 +33,16 @@ namespace Modules.PauseMenu
             if (_pauseQueueCounter <= _unpauseQueueValue)
                 SetPauseState(_pauseInactiveState);
 
-            _pauseQueueCounter--;
-            Debug.Log("Pause queue" + _pauseQueueCounter);
+            if (_pauseQueueCounter > 0)
+                _pauseQueueCounter--;
         }
 
         private void SetPauseState(PauseState pauseState)
         {
             Time.timeScale = pauseState.Timescale;
-            _inputController.enabled = pauseState.IsInputEnabled;
+
+            if (_inputController != null)
+                _inputController.enabled = pauseState.IsInputEnabled;
 
             if (pauseState.isAudioPaused)
                 AudioPauseHandler.Instance?.PauseAudio();

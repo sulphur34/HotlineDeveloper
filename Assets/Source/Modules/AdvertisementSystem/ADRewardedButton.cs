@@ -15,6 +15,9 @@ namespace Source.Modules.AdvertisementSystem
 
         protected override void ShowAD()
         {
+#if UNITY_EDITOR
+            return;
+#endif
             VideoAD.ShowRewarded();
         }
 

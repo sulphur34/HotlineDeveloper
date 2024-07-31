@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 public abstract class InputController : MonoBehaviour, IMoveInput, IAttackInput, IRotateInput, IPickInput, ILookInput, IFarLookInput
 {
     protected PlayerInput PlayerInput;
-    protected float Width;
-    protected float Height;
+    protected float Width => Screen.width;
+    protected float Height => Screen.height;
 
     public event Action<Vector2> MoveReceived;
     public event Action<Vector2> RotationReceived;
@@ -19,8 +19,6 @@ public abstract class InputController : MonoBehaviour, IMoveInput, IAttackInput,
 
     public void Awake()
     {
-        Width = Screen.width;
-        Height = Screen.height;
         PlayerInput = new PlayerInput();
     }
 

@@ -23,6 +23,12 @@ namespace Modules.LevelsSystem
         public event Action Lost;
 
         public int LevelCompleteIndex { get; private set; }
+        
+        // private void Update()
+        // {
+        //     if (Input.GetKeyDown(KeyCode.K))
+        //         OnWin();
+        // }
 
         private void OnDestroy()
         {

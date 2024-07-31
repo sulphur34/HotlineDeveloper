@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000804742212758889, guid: dbc5fa1bfd27dda45b2388d2f52727cb, type: 3}
       propertyPath: m_fontSize
-      value: 31.55
+      value: 30.95
       objectReference: {fileID: 0}
     - target: {fileID: 1000804742212758889, guid: dbc5fa1bfd27dda45b2388d2f52727cb, type: 3}
       propertyPath: m_fontAsset
@@ -250,7 +250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5601178345307362832, guid: dbc5fa1bfd27dda45b2388d2f52727cb, type: 3}
       propertyPath: m_fontSize
-      value: 48.45
+      value: 48.15
       objectReference: {fileID: 0}
     - target: {fileID: 5601178345307362832, guid: dbc5fa1bfd27dda45b2388d2f52727cb, type: 3}
       propertyPath: m_margin.w
@@ -435,13 +435,81 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5226133592759666796, guid: dbc5fa1bfd27dda45b2388d2f52727cb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6680090610052487764}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5528137164487077425, guid: dbc5fa1bfd27dda45b2388d2f52727cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1717949276714659423}
+    - targetCorrespondingSourceObject: {fileID: 8714927293585510991, guid: dbc5fa1bfd27dda45b2388d2f52727cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7323049988919575899}
+    - targetCorrespondingSourceObject: {fileID: 5020292397173576160, guid: dbc5fa1bfd27dda45b2388d2f52727cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7150838818859855311}
   m_SourcePrefab: {fileID: 100100000, guid: dbc5fa1bfd27dda45b2388d2f52727cb, type: 3}
+--- !u!1 &1195836720480870235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5020292397173576160, guid: dbc5fa1bfd27dda45b2388d2f52727cb, type: 3}
+  m_PrefabInstance: {fileID: 6139495356217511611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7150838818859855311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195836720480870235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Leaderboard Exit
+  FallbackText: "\u0412\u044B\u0439\u0442\u0438"
+--- !u!1 &1838661657969189002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5528137164487077425, guid: dbc5fa1bfd27dda45b2388d2f52727cb, type: 3}
+  m_PrefabInstance: {fileID: 6139495356217511611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1717949276714659423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838661657969189002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Leaderboard Panel
+  FallbackText: "\u0414\u043B\u044F \u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440\u0430
+    \u0442\u0430\u0431\u043B\u0438\u0446\u044B \u043B\u0438\u0434\u0435\u0440\u043E\u0432
+    \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u0430 \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u044F"
 --- !u!224 &2140664130177877719 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5226133592759666796, guid: dbc5fa1bfd27dda45b2388d2f52727cb, type: 3}
   m_PrefabInstance: {fileID: 6139495356217511611}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3297332345467837684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8714927293585510991, guid: dbc5fa1bfd27dda45b2388d2f52727cb, type: 3}
+  m_PrefabInstance: {fileID: 6139495356217511611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7323049988919575899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3297332345467837684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Leaderboard Authorize
+  FallbackText: "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u043E\u0432\u0430\u0442\u044C\u0441\u044F"
 --- !u!1001 &8528858565031681603
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1291,6 +1291,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7929064487579304528, guid: 75a3164403f11ad4ba0a5b311c854578, type: 3}
   m_PrefabInstance: {fileID: 187404253}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &187404255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8897919934825601442, guid: 75a3164403f11ad4ba0a5b311c854578, type: 3}
+  m_PrefabInstance: {fileID: 187404253}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &192423266
 GameObject:
   m_ObjectHideFlags: 1
@@ -7879,7 +7884,7 @@ PrefabInstance:
     - target: {fileID: 6173190162753676164, guid: 4b2a201ad9c2e134aae18ac23e0fb29f, type: 3}
       propertyPath: _weaponGameobject
       value: 
-      objectReference: {fileID: 8897919934825601442, guid: 75a3164403f11ad4ba0a5b311c854578, type: 3}
+      objectReference: {fileID: 187404255}
     - target: {fileID: 7229262651010824073, guid: 4b2a201ad9c2e134aae18ac23e0fb29f, type: 3}
       propertyPath: m_Name
       value: AdvButton

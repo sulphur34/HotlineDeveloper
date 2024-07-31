@@ -1136,7 +1136,7 @@ CharacterController:
   m_Radius: 0.5
   m_SlopeLimit: 2
   m_StepOffset: 0.01
-  m_SkinWidth: 0.1
+  m_SkinWidth: 0.2
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &970419750318265386
@@ -1238,6 +1238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animationController: {fileID: 6296293900511571673}
   _damageReceiverView: {fileID: 7903756512022355025}
+  _ammunitionUI: {fileID: 0}
 --- !u!114 &6296293900511571673
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,6 +26,7 @@ public class CameraFollower : MonoBehaviour
         Vector3 playerPosition = new Vector3(transform.position.x, _camera.transform.position.y, _transform.position.z);
         Vector3 mousePosition = new Vector3(lookPosition.x,lookPosition.y, _camera.nearClipPlane + _overviewRange);
         Vector3 mouseWorldPoint = _camera.ScreenToWorldPoint(mousePosition);
-        mouseWorldPoint.y = _camera.transform.position.y; _camera.transform.position = Vector3.Lerp(playerPosition, mouseWorldPoint, _lerpRate);
+        mouseWorldPoint.y = _camera.transform.position.y; 
+        _camera.transform.position = Vector3.Lerp(playerPosition, mouseWorldPoint, _lerpRate);
     }
 }

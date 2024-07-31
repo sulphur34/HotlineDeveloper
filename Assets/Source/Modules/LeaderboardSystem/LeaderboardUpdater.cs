@@ -32,9 +32,6 @@ namespace Modules.LeaderboardSystem
             for (int i = 0; i < _levelsData.Value.Count; i++)
                 levelsTotalScore += (int)_levelsData.Value[i].Score;
 
-            for (int i = 0; i < _levelsData.Value.Count; i++)
-                Debug.Log(_levelsData.Value[i].Score);
-
             _leaderboard.SetPlayer(levelsTotalScore);
         }
     }

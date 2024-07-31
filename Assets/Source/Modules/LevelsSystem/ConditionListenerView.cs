@@ -30,7 +30,6 @@ public class UIConditionListener : MonoBehaviour
 
     private void OnLoose()
     {
-        Time.timeScale = 0;
         _looseUI.enabled = true;
     }
 }
