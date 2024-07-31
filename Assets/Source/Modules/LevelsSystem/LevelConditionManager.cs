@@ -17,6 +17,7 @@ namespace Modules.LevelsSystem
         private EnemyTracker _enemyTracker;
         private EndLevelTrigger _endLevelTrigger;
         private LevelsData _levels;
+        private InputController _inputController;
 
         public event Action Won;
         public event Action Lost;
@@ -39,9 +40,11 @@ namespace Modules.LevelsSystem
         private void Construct(
             LevelsData levels,
             Player player,
-            EndLevelTrigger endLevelTrigger)
+            EndLevelTrigger endLevelTrigger,
+            InputController inputController)
         {
             _levels = levels;
+            _inputController = inputController;
             LevelCompleteIndex = _levels.ForLoad - 1;
             _level = _levels.Value[LevelCompleteIndex];
             _player = player;
@@ -52,6 +55,7 @@ namespace Modules.LevelsSystem
 
         private void OnWin()
         {
+            Destroy(_inputController);
             _level.Complete();
             Won?.Invoke();
         }
