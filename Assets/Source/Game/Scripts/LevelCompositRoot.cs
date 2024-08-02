@@ -19,6 +19,7 @@ using Modules.LevelSelectionSystem;
 using Modules.ScoreSystem;
 using Agava.YandexGames;
 using Modules.LeaderboardSystem;
+using Source.Modules.AdvertisementSystem;
 using Source.Modules.FocusSystem;
 using Source.Modules.NextLevelButtonSystem;
 
@@ -89,7 +90,7 @@ public class LevelCompositRoot : LifetimeScope
             inputController = _player.gameObject.AddComponent<DesktopInputController>();
         }
 
-        builder.RegisterInstance(inputController).AsImplementedInterfaces();
+        builder.RegisterInstance(inputController).AsImplementedInterfaces().AsSelf();
     }
 
     private void DamageConfigure(IContainerBuilder builder)
@@ -97,7 +98,7 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterInstance(_damageableConfigFactory);
         builder.RegisterComponentInHierarchy<DamageReceiverSetup>();
         builder.RegisterComponentInHierarchy<WeaponStrategy>();
-        DamageableConfig damageableConfig = _damageableConfigFactory.GetConfig(DamageableTypes.Immortal);
+        DamageableConfig damageableConfig = _damageableConfigFactory.GetConfig(DamageableTypes.AlwaysLethal);
         _player.GetComponent<DamageReceiverSetup>().Initialize(damageableConfig);
     }
 
@@ -113,6 +114,7 @@ public class LevelCompositRoot : LifetimeScope
 
     private void LevelConfigure(IContainerBuilder builder)
     {
+        builder.RegisterComponentInHierarchy<AudioListener>();
         builder.RegisterComponentInHierarchy<EndLevelTrigger>();
         builder.RegisterComponentInHierarchy<EnemyTracker>();
         builder.Register<ScoreCounter>(Lifetime.Singleton);
@@ -151,6 +153,7 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<NextLevelButton>();
         builder.RegisterComponentInHierarchy<NextLevelButtonView>();
         builder.Register<NextLevelButtonPresenter>(Lifetime.Singleton);
+        builder.RegisterComponentInHierarchy<VideoAD>();
         
         builder.RegisterBuildCallback(container =>
         {

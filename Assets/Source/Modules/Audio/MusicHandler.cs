@@ -61,7 +61,9 @@ namespace Modules.Audio
         
         private void PlayMenu()
         {
+            _sourceAudio.Stop();
             _sourceAudio.Loop = true;
+            _sourceAudio.Time = 0;
             _sourceAudio.Play(_mainMenuMusicName);
         }
 

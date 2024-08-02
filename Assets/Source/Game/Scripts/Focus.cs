@@ -27,17 +27,25 @@ namespace Source.Modules.FocusSystem
         private void SetPauseWeb(bool isBackground)
         {
             if (isBackground)
+            {
                 _pauseSetter.Enable();
+            }
             else
+            {
                 _pauseSetter.Disable();
+            }
         }
 
         private void SetPauseApp(bool inApp)
         {
             if (!inApp)
+            {
                 _pauseSetter.Enable();
+            }
             else
+            {
                 _pauseSetter.Disable();
+            }
         }
     }
 }

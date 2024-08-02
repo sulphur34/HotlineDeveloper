@@ -1,24 +1,20 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DesktopInputController : InputController
 {
     private readonly Vector2 _vectorOne = new Vector2(1.0f, 1.0f);
     private readonly float _screenToVirtualMultiplier = 2f;
     private readonly float _directionRatio = -1f;
-    
-    private Vector2 _middleScreenPoint;
+
+    private Vector2 _middleScreenPoint => new Vector2(Width / 2, Height / 2);
 
     private void OnEnable()
     {
         PlayerInput.PlayerDesktop.Pick.performed += OnPick;
         PlayerInput.PlayerDesktop.Finish.performed += OnFinish;
         PlayerInput.Enable();
-    }
-    
-    private void Start()
-    {
-        _middleScreenPoint = new Vector2(Width / 2, Height / 2);
     }
 
     private void OnDisable()
@@ -55,7 +51,12 @@ public class DesktopInputController : InputController
 
     protected override void OnAttack()
     {
-        if (PlayerInput.PlayerDesktop.Attack.IsPressed())
-            Attack();
+        if (PlayerInput.PlayerDesktop.Attack.IsPressed() == false)
+            return;
+
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        Attack();
     }
 }

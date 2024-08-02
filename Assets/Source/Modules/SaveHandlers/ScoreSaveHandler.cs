@@ -31,7 +31,6 @@ namespace Modules.SaveHandlers
         {
             _saveSystem.Save(data =>
             {
-                Debug.Log("Score " + _scoreCounterView.TotalScore + " saved for level " + _levelConditionManager.LevelCompleteIndex);
                 data.LevelsData.Value[_levelConditionManager.LevelCompleteIndex]
                     .UpdateScore((uint)_scoreCounterView.TotalScore);
             });

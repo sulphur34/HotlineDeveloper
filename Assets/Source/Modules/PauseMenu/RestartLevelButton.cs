@@ -7,13 +7,13 @@ using VContainer;
 
 public class RestartLevelButton : PressedButton
 {
+    protected PauseSetter PauseSetter;
     private SceneLoader _sceneLoader;
-    private PauseSetter _pauseSetter;
     private Fade _fade;
 
     protected override void MakeOnClick()
     {
-        _pauseSetter.Disable();
+        PauseSetter.Disable();
         _fade.In();
         _sceneLoader.Load(SceneManager.GetActiveScene().name, _fade);
     }
@@ -22,7 +22,7 @@ public class RestartLevelButton : PressedButton
     private void Construct(SceneLoader sceneLoader, PauseSetter pauseSetter, Fade fade)
     {
         _sceneLoader = sceneLoader;
-        _pauseSetter = pauseSetter;
+        PauseSetter = pauseSetter;
         _fade = fade;
     }
 }
