@@ -7,8 +7,8 @@ namespace Modules.ScoreSystem
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class ScoreLabel : MonoBehaviour
     {
-        [SerializeField] private Vector3 _maxScale;
-        [SerializeField] private float _animationDuration;
+        [SerializeField] private Vector3 _shakeRotation = new Vector3(0,0,50);
+        [SerializeField] private float _duration = 0.5f;
 
         private TextMeshProUGUI _textMeshPro;
         private RectTransform _rectTransform;
@@ -27,7 +27,7 @@ namespace Modules.ScoreSystem
             _textMeshPro.text = value.ToString();
             _rectTransform.DOKill();
             _rectTransform.rotation = _defaultRotation;
-            _rectTransform.DOShakeRotation(0.5f,new Vector3(0,0,50), 10, 90);
+            _rectTransform.DOShakeRotation(_duration,_shakeRotation, 10, 90);
         }
     }
 }

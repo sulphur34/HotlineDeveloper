@@ -1,5 +1,5 @@
 using DG.Tweening;
-using Source.Modules.GUISystem;
+using Modules.ScoreSystem;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

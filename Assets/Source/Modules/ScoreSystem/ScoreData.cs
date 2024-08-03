@@ -8,7 +8,7 @@ namespace Modules.ScoreSystem
             Multiplier = multiplier;
         }
 
-        public float Time {get; private set;}
-        public uint Multiplier {get; private set;}
+        public float Time {get;}
+        public uint Multiplier {get;}
     }
 }

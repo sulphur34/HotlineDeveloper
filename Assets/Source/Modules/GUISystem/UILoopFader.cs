@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-namespace Source.Modules.GUISystem
+namespace Modules.ScoreSystem
 {
     public class UILoopFader : MonoBehaviour
     {
