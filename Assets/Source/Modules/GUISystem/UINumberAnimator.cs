@@ -5,7 +5,7 @@ using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 
-namespace Source.Modules.GUISystem
+namespace Modules.ScoreSystem
 {
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class UINumberAnimator : MonoBehaviour

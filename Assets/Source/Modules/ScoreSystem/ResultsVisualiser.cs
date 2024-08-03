@@ -4,7 +4,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Source.Modules.GUISystem
+namespace Modules.ScoreSystem
 {
     public class ResultsVisualiser : MonoBehaviour
     {

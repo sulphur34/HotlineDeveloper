@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-namespace Source.Modules.GUISystem
+namespace Modules.ScoreSystem
 {
     public class UILoopRotator : UITransformAnimator
     {

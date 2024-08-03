@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Modules.LevelsSystem;
-using Source.Modules.GUISystem;
+using Modules.ScoreSystem;
 using UnityEngine;
 using VContainer;
 

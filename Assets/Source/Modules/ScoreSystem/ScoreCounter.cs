@@ -10,14 +10,17 @@ namespace Modules.ScoreSystem
 {
     public class ScoreCounter
     {
+        private const float Intercept = 5.7497f;
+        private const float Slope = -0.9674f;
+        
         private readonly float _multiplierDelay = 2f;
         private readonly uint _defaultMultiplier = 1;
         private readonly float _killScore = 100f;
-
+        private readonly EnemyTracker _enemyTracker;
+        
         private Stack<ScoreData> _scores;
         private float _timePassed;
         private CancellationTokenSource _cancellationTokenSource;
-        private EnemyTracker _enemyTracker;
         private uint _currentScore;
 
         [Inject]
@@ -32,7 +35,7 @@ namespace Modules.ScoreSystem
 
         public uint TotalScore { get; private set; }
 
-        private float _timeMultiplier => 5.7497f - 0.9674f * Mathf.Log(_timePassed);
+        private float TimeMultiplier => Intercept + Slope * Mathf.Log(_timePassed);
 
         private void Activate()
         {
@@ -65,7 +68,7 @@ namespace Modules.ScoreSystem
 
         private uint GetTimeScore()
         {
-            return Convert.ToUInt32(_timeMultiplier * _scores.Count * _killScore);
+            return Convert.ToUInt32(TimeMultiplier * _scores.Count * _killScore);
         }
 
         private void OnEnemyKill()
@@ -73,12 +76,7 @@ namespace Modules.ScoreSystem
             uint multiplier = _defaultMultiplier;
             
             if (_scores.Count > 0)
-            {
-                var lastScoreData = _scores.Peek();
-                multiplier = Time.timeSinceLevelLoad - lastScoreData.Time < _multiplierDelay
-                    ? lastScoreData.Multiplier + 1
-                    : _defaultMultiplier;
-            }
+                multiplier = GetMultiplier();
 
             _scores.Push(new ScoreData(Time.timeSinceLevelLoad, multiplier));
             AddScore(_killScore * multiplier);
@@ -94,6 +92,13 @@ namespace Modules.ScoreSystem
         private void UpdateTotalScore()
         {
             TotalScore = _currentScore + GetTimeScore();
+        }
+
+        private uint GetMultiplier()
+        {
+            ScoreData lastScoreData = _scores.Peek();
+            float delay = Time.timeSinceLevelLoad - lastScoreData.Time;
+            return delay < _multiplierDelay ? lastScoreData.Multiplier + 1 : _defaultMultiplier;
         }
     }
 }
