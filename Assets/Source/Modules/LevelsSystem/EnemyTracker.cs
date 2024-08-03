@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using Modules.CharacterSystem.Player;
+using Modules.CharacterSystem;
 using Modules.DamageSystem;
 using Modules.EnemySpawnSystem;
 using UnityEngine;

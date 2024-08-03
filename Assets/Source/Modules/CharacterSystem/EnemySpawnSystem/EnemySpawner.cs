@@ -1,6 +1,6 @@
 using System;
 using Modules.Characters.Enemies.EnemyBehavior;
-using Modules.CharacterSystem.Player;
+using Modules.CharacterSystem;
 using Modules.DamageSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
 using UnityEngine;

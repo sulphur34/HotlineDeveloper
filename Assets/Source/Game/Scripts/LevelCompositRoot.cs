@@ -11,7 +11,7 @@ using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 using Modules.MoveSystem;
-using Modules.CharacterSystem.Player;
+using Modules.CharacterSystem;
 using Modules.EnemySpawnSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
 using Modules.DamageSystem;

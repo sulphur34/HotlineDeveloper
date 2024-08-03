@@ -12,13 +12,6 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
         public SharedGameObject Target;
         public SharedBool HasLastPosition;
 
-        private Transform _transform;
-
-        public override void OnAwake()
-        {
-            _transform = transform;
-        }
-
         public override TaskStatus OnUpdate()
         {
             if (Target != null)

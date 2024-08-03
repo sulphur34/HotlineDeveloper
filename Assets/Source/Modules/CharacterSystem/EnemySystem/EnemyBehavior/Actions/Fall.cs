@@ -8,7 +8,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
     public class Fall : Action
     {
         private NavMeshAgent _navMeshAgent;
-        
+
         public override void OnAwake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();

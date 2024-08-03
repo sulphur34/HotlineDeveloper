@@ -1,5 +1,5 @@
 using System;
-using Modules.CharacterSystem.Player;
+using Modules.CharacterSystem;
 using UnityEngine;
 using VContainer;
 

@@ -1,6 +1,6 @@
 ﻿using System;
 using System;
-using Modules.CharacterSystem.Player;
+using Modules.CharacterSystem;
 using Modules.DamageSystem;
 using Modules.FadeSystem;
 using Modules.SceneLoaderSystem;

@@ -11,7 +11,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
         public float RotationDelta = 1f;
         public float MaxAxisValue = 100;
         public float MinAxisValue = 0;
-        
+
         private Vector3 _direction;
         private Transform _transform;
 
@@ -32,7 +32,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
             Vector3 direction = (_direction - _transform.position);
             direction.y = 0;
             direction = direction.normalized;
-            
+
             if (Vector3.Angle(_transform.forward, direction) <= RotationTolerance)
                 return TaskStatus.Success;
 

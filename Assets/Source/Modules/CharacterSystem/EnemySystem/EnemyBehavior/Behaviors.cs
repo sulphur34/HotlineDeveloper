@@ -1,6 +1,6 @@
 namespace Modules.Characters.Enemies.EnemyBehavior
 {
-    public enum Behaviors
+    internal enum Behaviors
     {
         Melee,
         Range,

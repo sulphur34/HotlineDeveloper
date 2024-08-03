@@ -1,6 +1,6 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.CharacterSystem.Player;
+using Modules.CharacterSystem;
 using UnityEngine;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Conditions

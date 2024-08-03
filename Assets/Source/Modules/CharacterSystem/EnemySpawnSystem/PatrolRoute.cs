@@ -8,7 +8,7 @@ namespace Modules.EnemySpawnSystem
     [Serializable]
     public class PatrolRoute
     {
-        public const string PatrolPointsName = "PatrolPoints";
+        private const string PatrolPointsName = "PatrolPoints";
         
         public Transform[] Waypoints;
 
