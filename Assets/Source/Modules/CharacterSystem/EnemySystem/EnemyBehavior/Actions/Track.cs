@@ -13,7 +13,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
         public SharedBool HasLastPosition;
 
         private Transform _targetTransform;
-        
+
         public override void OnStart()
         {
             _targetTransform = Target.Value.transform;

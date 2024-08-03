@@ -10,7 +10,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
     [TaskName("EnemyPatrol")]
     public class EnemyPatrol : Action
     {
-        public SharedVector3Array _patrolPoints;
+        public SharedVector3Array PatrolPoints;
 
         private NavMeshAgent _navMeshAgent;
         private Queue<Vector3> _route;
@@ -18,7 +18,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
         public override void OnAwake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
-            _route = new Queue<Vector3>(_patrolPoints.Value);
+            _route = new Queue<Vector3>(PatrolPoints.Value);
         }
 
         public override void OnStart()

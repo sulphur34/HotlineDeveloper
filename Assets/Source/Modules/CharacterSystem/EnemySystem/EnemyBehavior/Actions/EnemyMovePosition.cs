@@ -34,11 +34,11 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
             if (_navMeshAgent == null)
                 return TaskStatus.Failure;
 
-            Vector3 targetPosition = new Vector3(LastTargetPosition.Value.x, _transform.position.y,
+            Vector3 targetPosition = new(LastTargetPosition.Value.x, _transform.position.y,
                 LastTargetPosition.Value.z);
-            
+
             float distance = Vector3.Magnitude(targetPosition - _transform.position);
-            
+
             if (distance - _navMeshAgent.stoppingDistance < MinStoppingDistance)
                 return TaskStatus.Success;
 
@@ -49,7 +49,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
         {
             if (_navMeshAgent.isStopped)
                 return;
-            
+
             _navMeshAgent.isStopped = true;
         }
     }

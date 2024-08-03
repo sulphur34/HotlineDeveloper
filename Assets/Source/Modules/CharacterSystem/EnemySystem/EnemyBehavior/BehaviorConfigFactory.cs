@@ -6,14 +6,14 @@ namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior
     [CreateAssetMenu(fileName = "Behavior Config Factory")]
     public class BehaviorConfigFactory : ScriptableObject
     {
-        [SerializeField] private BehaviorConfig _meleeConfig;
-        [SerializeField] private BehaviorConfig _rangeConfig;
-        [SerializeField] private BehaviorConfig _strongConfig;
-        [SerializeField] private BehaviorConfig _bossConfig;
-        [SerializeField] private BehaviorConfig _peaceConfig;
-        [SerializeField] private BehaviorConfig _fanaticConfig;
+        [SerializeField] internal BehaviorConfig _meleeConfig;
+        [SerializeField] internal BehaviorConfig _rangeConfig;
+        [SerializeField] internal BehaviorConfig _strongConfig;
+        [SerializeField] internal BehaviorConfig _bossConfig;
+        [SerializeField] internal BehaviorConfig _peaceConfig;
+        [SerializeField] internal BehaviorConfig _fanaticConfig;
 
-        public BehaviorConfig GetBehavior(Behaviors behavior)
+        internal BehaviorConfig GetBehavior(Behaviors behavior)
         {
             return behavior switch
             {

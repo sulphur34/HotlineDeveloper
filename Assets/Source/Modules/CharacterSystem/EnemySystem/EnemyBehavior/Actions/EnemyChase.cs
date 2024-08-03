@@ -29,7 +29,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
         {
             if (_navMeshAgent == null)
                 return TaskStatus.Failure;
-            
+
             _navMeshAgent.SetDestination(_targetTransform.position);
             return TaskStatus.Running;
         }

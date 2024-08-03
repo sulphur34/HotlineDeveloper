@@ -10,22 +10,24 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
     public class SetAttackDistance : Action
     {
         public SharedFloat AttackDistance;
-        public float _meleeDistance = 1f;
-        public float _rangeDistance = 10f;
-        
+        public float MeleeDistance = 1f;
+        public float MangeDistance = 10f;
+
         private WeaponHandlerView _weaponHandler;
 
         public override void OnAwake()
         {
             _weaponHandler = GetComponent<WeaponHandlerView>();
         }
-    
+
         public override TaskStatus OnUpdate()
         {
             if (_weaponHandler == null || _weaponHandler.WeaponInfo.CurrentWeaponItemIsEmpty)
                 return TaskStatus.Failure;
-    
-            AttackDistance.Value = _weaponHandler.WeaponInfo.CurrentWeaponType == WeaponType.Melee ? _meleeDistance : _rangeDistance;
+
+            AttackDistance.Value = _weaponHandler.WeaponInfo.CurrentWeaponType == WeaponType.Melee
+                ? MeleeDistance
+                : MangeDistance;
             return TaskStatus.Success;
         }
     }

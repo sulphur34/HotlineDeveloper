@@ -8,6 +8,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
     public class Pick : Action
     {
         public SharedAiInput AiInput;
+        
         public override TaskStatus OnUpdate()
         {
             AiInput.Value.RecievePick();

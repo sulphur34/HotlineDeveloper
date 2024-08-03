@@ -1,7 +1,7 @@
 using Modules.DamageSystem;
 using UnityEngine;
 
-namespace Modules.CharacterSystem.Player
+namespace Modules.CharacterSystem
 {
     public class Player : MonoBehaviour
     {

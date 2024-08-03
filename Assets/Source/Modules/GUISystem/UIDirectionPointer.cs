@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using Modules.CharacterSystem.Player;
+using Modules.CharacterSystem;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
