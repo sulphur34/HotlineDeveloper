@@ -1,14 +1,14 @@
-namespace Modules.ScoreSystem
+namespace Modules.GUISystem
 {
-    public class ScoreData
+    internal class ScoreData
     {
-        public ScoreData(float time, uint multiplier = 1)
+        internal ScoreData(float time, uint multiplier = 1)
         {
             Time = time;
             Multiplier = multiplier;
         }
 
-        public float Time {get;}
-        public uint Multiplier {get;}
+        internal float Time {get;}
+        internal uint Multiplier {get;}
     }
 }

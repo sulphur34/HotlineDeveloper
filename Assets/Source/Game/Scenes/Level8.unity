@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 1.0047026, g: 0.009244609, b: 0.009725719, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5711,6 +5711,11 @@ PrefabInstance:
 --- !u!4 &633164632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7929064487579304528, guid: 75a3164403f11ad4ba0a5b311c854578, type: 3}
+  m_PrefabInstance: {fileID: 633164631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &633164633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8897919934825601442, guid: 75a3164403f11ad4ba0a5b311c854578, type: 3}
   m_PrefabInstance: {fileID: 633164631}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &636745837
@@ -17662,7 +17667,7 @@ PrefabInstance:
     - target: {fileID: 6173190162753676164, guid: 4b2a201ad9c2e134aae18ac23e0fb29f, type: 3}
       propertyPath: _weaponGameobject
       value: 
-      objectReference: {fileID: 8897919934825601442, guid: 75a3164403f11ad4ba0a5b311c854578, type: 3}
+      objectReference: {fileID: 633164633}
     - target: {fileID: 7229262651010824073, guid: 4b2a201ad9c2e134aae18ac23e0fb29f, type: 3}
       propertyPath: m_Name
       value: AdvButton

@@ -1,5 +1,5 @@
 ﻿using Modules.LevelsSystem;
-using Modules.ScoreSystem;
+using Modules.GUISystem;
 using UnityEngine;
 using VContainer;
 

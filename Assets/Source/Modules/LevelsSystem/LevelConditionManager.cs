@@ -1,7 +1,7 @@
 ﻿using System;
 using System;
 using Modules.CharacterSystem;
-using Modules.DamageSystem;
+using Modules.DamageReceiverSystem;
 using Modules.FadeSystem;
 using Modules.SceneLoaderSystem;
 using UnityEngine;

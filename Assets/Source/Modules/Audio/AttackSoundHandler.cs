@@ -1,4 +1,3 @@
-using System;
 using Modules.Weapons.WeaponItemSystem;
 using Modules.Weapons.WeaponTypeSystem;
 using Plugins.Audio.Utils;

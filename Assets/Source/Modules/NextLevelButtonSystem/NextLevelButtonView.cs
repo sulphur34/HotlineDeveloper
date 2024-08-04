@@ -1,4 +1,4 @@
-using Modules.ScoreSystem;
+using Modules.GUISystem;
 
 namespace Source.Modules.NextLevelButtonSystem
 {

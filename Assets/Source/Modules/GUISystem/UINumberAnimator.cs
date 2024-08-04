@@ -5,7 +5,7 @@ using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 
-namespace Modules.ScoreSystem
+namespace Modules.GUISystem
 {
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class UINumberAnimator : MonoBehaviour
@@ -32,10 +32,9 @@ namespace Modules.ScoreSystem
             await Counting(value);
         }
 
-        public void Deactivate()
+        private void Deactivate()
         {
-            if (_cancellationTokenSource != null)
-                _cancellationTokenSource.Cancel();
+            _cancellationTokenSource?.Cancel();
         }
 
         private async UniTask Counting(float endValue)

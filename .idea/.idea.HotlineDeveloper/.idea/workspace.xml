@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="096f9c91-8365-4be6-8d8f-87ad3dc5adea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/AssignResultsVisualiserInAllScenes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/AssignResultsVisualiserInAllScenes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/LevelCompositRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/LevelCompositRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/BulletStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/BulletStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/DamageInflictStrategies.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/DamageInflictStrategies.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/EnemyTrapStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/EnemyTrapStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/MeleeStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/MeleeStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/RangeStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/RangeStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/Damager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/Damager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/LeanPhraseSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/LeanPhraseSwitcher.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/TutorialPhraseSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/TutorialPhraseSwitcher.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILoopFader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILoopFader.cs" afterDir="false" />
@@ -12,13 +19,21 @@
       <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UINumberAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UINumberAnimator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIShaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIShaker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UITransformAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UITransformAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/LeaderboardSystem/LeaderboardUpdater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/LeaderboardSystem/LeaderboardUpdater.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem/NextLevelButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem/NextLevelButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem/NextLevelButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem/NextLevelButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/SaveHandlers/ScoreSaveHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/SaveHandlers/ScoreSaveHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ResultsVisualiser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ResultsVisualiser.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreCounter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreCounterView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreCounterView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreLabel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreLabel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ScorePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ScorePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Teleport.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Teleport/Teleport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Teleport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Teleport/Teleport.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/Teleport.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Trap.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Trap/TrapRecharger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/TrapRecharger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Trap/TrapRecharger.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/TrapRecharger.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +88,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/ab/975fca10/ShakeRandomnessMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Unity/LifetimeScope.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Unity/ContainerBuilderUnityExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/AlwaysLethalReceiveStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Unity/PlayerLoopRunner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54e4b904ef9a4d4792c51489161280c31ce00/48/1a249987/TaskIconAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/1a/96910d9e/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -87,15 +103,14 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/EventSystem/GraphicRaycasterTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Container.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/44/4e3e64bd/MonoCustomAttrs.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/BulletStrategy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/DamageInflictStrategies.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/BulletStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/27/709749c5/Dictionary`2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.agava.webutility@32d39130ea/Runtime/WebApplication.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.animation.rigging@1.2.1/Runtime/AnimationJobs/TransformHandle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d29010be29ed44bfb63dbdd0707ee2e016600/3e/4c937f44/IContainerBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/66/b15ec819/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../between-them/Assets/Scripts/Game/ItemGenerator/ItemGenerator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/LethalAsNormalReceiveStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/LethalAsNormalReceiveStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/88/2ba6a786/ConcurrentDictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/a1/0d2baaa1/BasePrimitiveAction.cs" root0="SKIP_HIGHLIGHTING" />
@@ -114,11 +129,12 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/ContainerBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/ILookInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.7.5/Editor/treeview/AnimationTrackKeyDataSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/Consciousness.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/76/29f51569/PreserveAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/35/e127bb3f/CancellationTokenSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/0e/91249aef/Enum.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/Damager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/Damager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreLabel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/InputController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IAttackInput.cs" root0="FORCE_HIGHLIGHTING" />
@@ -181,7 +197,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="XThreadsFramesViewSplitterKey" value="0.36543536" />
     <property name="rider.run.widget.enabled.cache" value="false" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.build.unityPlugin" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -347,6 +363,7 @@
       <workItem from="1722373738615" duration="175000" />
       <workItem from="1722375336724" duration="721000" />
       <workItem from="1722501802720" duration="5716000" />
+      <workItem from="1722763779233" duration="461000" />
     </task>
     <servers />
   </component>
@@ -398,7 +415,7 @@
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverView.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiverView.cs</url>
           <line>31</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiver\DamageReceiverView.cs" initialLine="21" containingFunctionPresentation="method 'OnKnocked'" />
           <option name="timeStamp" value="38" />
@@ -461,13 +478,13 @@
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverView.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiverView.cs</url>
           <line>26</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiver\DamageReceiverView.cs" initialLine="25" containingFunctionPresentation="method 'Receive'" />
           <option name="timeStamp" value="102" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/MeleeStrategy.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/MeleeStrategy.cs</url>
           <line>6</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\Damager\DamageInflictStrategies\MeleeStrategy.cs" initialLine="10" containingFunctionPresentation="method 'InflictDamage'" />
           <option name="timeStamp" value="103" />
@@ -500,19 +517,19 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerPresenter.cs</url>
-          <line>23</line>
+          <line>22</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\WeaponsHandler\WeaponHandlerPresenter.cs" initialLine="22" containingFunctionPresentation="method 'OnWeaponPick'">
             <startOffsets>
-              <option value="910" />
+              <option value="876" />
             </startOffsets>
             <endOffsets>
-              <option value="948" />
+              <option value="914" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="115" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/Teleport/Teleport.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Source/Game/Scripts/Teleport.cs</url>
           <line>13</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Teleport\Teleport.cs" initialLine="10" containingFunctionPresentation="method 'OnTriggerEnter'">
             <startOffsets>
@@ -525,16 +542,9 @@
           <option name="timeStamp" value="178" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverView.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiverView.cs</url>
           <line>37</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiverSystem\DamageReceiverView.cs" initialLine="36" containingFunctionPresentation="method 'OnRecovered'">
-            <startOffsets>
-              <option value="1138" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1163" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiverSystem\DamageReceiverView.cs" initialLine="36" containingFunctionPresentation="method 'OnRecovered'" />
           <option name="timeStamp" value="179" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
@@ -555,10 +565,10 @@
           <line>51</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\WeaponsHandler\WeaponHandlerView.cs" initialLine="46" containingFunctionPresentation="method 'OnPick'">
             <startOffsets>
-              <option value="1697" />
+              <option value="1705" />
             </startOffsets>
             <endOffsets>
-              <option value="1716" />
+              <option value="1724" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="183" />
@@ -590,42 +600,35 @@
           <option name="timeStamp" value="197" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/Trap/TrapRecharger.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/TrapRecharger.cs</url>
           <line>32</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Trap\TrapRecharger.cs" initialLine="29" containingFunctionPresentation="method 'Recharge'">
             <startOffsets>
-              <option value="845" />
+              <option value="853" />
             </startOffsets>
             <endOffsets>
-              <option value="894" />
+              <option value="902" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="198" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/Trap/TrapRecharger.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/TrapRecharger.cs</url>
           <line>38</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Trap\TrapRecharger.cs" initialLine="34" containingFunctionPresentation="method 'RechargingRoutine'">
             <startOffsets>
-              <option value="990" />
+              <option value="998" />
             </startOffsets>
             <endOffsets>
-              <option value="1016" />
+              <option value="1024" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="199" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/LethalAsNormalReceiveStrategy.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/LethalAsNormalReceiveStrategy.cs</url>
           <line>6</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiverSystem\DamageReceiveStrategies\LethalAsNormalReceiveStrategy.cs" initialLine="6" containingFunctionPresentation="method 'GetDamage'">
-            <startOffsets>
-              <option value="215" />
-            </startOffsets>
-            <endOffsets>
-              <option value="291" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiverSystem\DamageReceiveStrategies\LethalAsNormalReceiveStrategy.cs" initialLine="6" containingFunctionPresentation="method 'GetDamage'" />
           <option name="timeStamp" value="200" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
@@ -633,10 +636,10 @@
           <line>48</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\CharacterSystem\EnemySpawnSystem\EnemySpawner.cs" initialLine="37" containingFunctionPresentation="method 'BuildEnemy'">
             <startOffsets>
-              <option value="1905" />
+              <option value="1913" />
             </startOffsets>
             <endOffsets>
-              <option value="2009" />
+              <option value="2017" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="202" />
@@ -646,26 +649,13 @@
           <line>51</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\CharacterSystem\EnemySpawnSystem\EnemySpawner.cs" initialLine="40" containingFunctionPresentation="method 'BuildEnemy'">
             <startOffsets>
-              <option value="2211" />
+              <option value="2219" />
             </startOffsets>
             <endOffsets>
-              <option value="2285" />
+              <option value="2293" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="203" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiver.cs</url>
-          <line>27</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiverSystem\DamageReceiver.cs" initialLine="27" containingFunctionPresentation="method 'Receive'">
-            <startOffsets>
-              <option value="912" />
-            </startOffsets>
-            <endOffsets>
-              <option value="930" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="204" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/LevelsSystem/EndLevelTrigger.cs</url>
@@ -679,19 +669,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="210" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreCounter.cs</url>
-          <line>60</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\ScoreSystem\ScoreCounter.cs" initialLine="56" containingFunctionPresentation="method 'OnAllEnemiesDie'">
-            <startOffsets>
-              <option value="1854" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1925" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="216" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Plugins/Audio/Core/AudioDatabase.cs</url>
@@ -711,10 +688,10 @@
           <line>17</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\ScoreSystem\ResultsVisualiser.cs" initialLine="17" containingFunctionPresentation="method 'Activate'">
             <startOffsets>
-              <option value="471" />
+              <option value="469" />
             </startOffsets>
             <endOffsets>
-              <option value="518" />
+              <option value="516" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="258" />
@@ -724,10 +701,10 @@
           <line>33</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\ScoreSystem\ResultsVisualiser.cs" initialLine="33" containingFunctionPresentation="method 'Counting'">
             <startOffsets>
-              <option value="954" />
+              <option value="952" />
             </startOffsets>
             <endOffsets>
-              <option value="1003" />
+              <option value="1001" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="259" />
@@ -737,10 +714,10 @@
           <line>42</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\GUISystem\UINumberAnimator.cs" initialLine="36" containingFunctionPresentation="method 'Counting'">
             <startOffsets>
-              <option value="1079" />
+              <option value="1077" />
             </startOffsets>
             <endOffsets>
-              <option value="1103" />
+              <option value="1101" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="260" />

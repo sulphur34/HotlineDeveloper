@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
 using Modules.LevelsSystem;
-using Modules.ScoreSystem;
+using Modules.GUISystem;
 using UnityEngine;
 using VContainer;
 
-namespace Modules.ScoreSystem
+namespace Modules.GUISystem
 {
     public class ScoreCounterView : MonoBehaviour
     {
@@ -17,6 +18,12 @@ namespace Modules.ScoreSystem
         private float _timeScore;
 
         public float TotalScore => _killScore + _timeScore;
+
+        private void OnDestroy()
+        {
+            _scoreCounter.KillScoreChanged -= OnKillScoreChange;
+            _scoreCounter.TimeScoreChanged -= OnTimeScoreChange;
+        }
 
         [Inject]
         public void Construct(ScoreCounter scoreCounter, LevelConditionManager levelConditionManager)

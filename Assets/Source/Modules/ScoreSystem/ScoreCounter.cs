@@ -6,9 +6,9 @@ using Modules.LevelsSystem;
 using UnityEngine;
 using VContainer;
 
-namespace Modules.ScoreSystem
+namespace Modules.GUISystem
 {
-    public class ScoreCounter
+    public class ScoreCounter : IDisposable
     {
         private const float Intercept = 5.7497f;
         private const float Slope = -0.9674f;
@@ -50,7 +50,9 @@ namespace Modules.ScoreSystem
         private void Deactivate()
         {
             _cancellationTokenSource.Cancel();
-            _enemyTracker.EnemyDied += OnEnemyKill;
+            _enemyTracker.EnemyDied -= OnEnemyKill;
+            _enemyTracker.AllEnemiesDied -= OnAllEnemiesDie;
+            _enemyTracker.Activated -= Activate;
         }
 
         private async UniTask Counting()
@@ -99,6 +101,11 @@ namespace Modules.ScoreSystem
             ScoreData lastScoreData = _scores.Peek();
             float delay = Time.timeSinceLevelLoad - lastScoreData.Time;
             return delay < _multiplierDelay ? lastScoreData.Multiplier + 1 : _defaultMultiplier;
+        }
+
+        public void Dispose()
+        {
+            _cancellationTokenSource?.Dispose();
         }
     }
 }

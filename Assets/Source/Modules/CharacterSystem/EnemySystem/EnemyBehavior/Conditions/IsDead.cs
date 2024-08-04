@@ -1,6 +1,6 @@
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.DamageSystem;
-using Modules.DamageSystem.Enemies.EnemyBehavior.Variables;
+using Modules.DamageReceiverSystem;
+using Modules.DamageReceiverSystem.Enemies.EnemyBehavior.Variables;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
 {
@@ -8,16 +8,16 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
     [TaskName("IsDead")]
     public class IsDead : Conditional
     {
-        public SharedDamageReceiver _damageReceiver;
+        public SharedDamageReceiver DamageReceiver;
 
         public override void OnAwake()
         {
-            _damageReceiver.Value = GetComponent<DamageReceiverView>();
+            DamageReceiver.Value = GetComponent<DamageReceiverView>();
         }
 
         public override TaskStatus OnUpdate()
         {
-            return _damageReceiver.Value.IsDead ? TaskStatus.Success : TaskStatus.Failure;
+            return DamageReceiver.Value.IsDead ? TaskStatus.Success : TaskStatus.Failure;
         }
     }
 }

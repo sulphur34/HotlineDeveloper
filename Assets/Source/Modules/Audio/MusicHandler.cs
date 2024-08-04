@@ -1,9 +1,6 @@
-using System.Diagnostics;
 using Plugins.Audio.Core;
 using Plugins.Audio.Utils;
 using UnityEngine;
-using VContainer;
-using Debug = UnityEngine.Debug;
 
 namespace Modules.Audio
 {

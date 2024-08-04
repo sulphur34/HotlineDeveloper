@@ -1,7 +1,7 @@
 using Lean.Localization;
 using UnityEngine;
 
-namespace Modules.ScoreSystem
+namespace Modules.GUISystem
 {
     [RequireComponent(typeof(LeanLocalizedTextMeshProUGUI))]
     public class UILeanPhraseSwitcher : MonoBehaviour
@@ -15,10 +15,8 @@ namespace Modules.ScoreSystem
         {
             _localizedText = GetComponent<LeanLocalizedTextMeshProUGUI>();
 
-            if (Application.isMobilePlatform)
-                _localizedText.TranslationName = _mobileTranslationName;
-            else
-                _localizedText.TranslationName = _desktopTranslationName;
+            _localizedText.TranslationName =
+                Application.isMobilePlatform ? _mobileTranslationName : _desktopTranslationName;
         }
     }
 }

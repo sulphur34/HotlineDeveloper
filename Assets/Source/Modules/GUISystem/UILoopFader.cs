@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-namespace Modules.ScoreSystem
+namespace Modules.GUISystem
 {
     public class UILoopFader : MonoBehaviour
     {
@@ -23,11 +23,10 @@ namespace Modules.ScoreSystem
             Animate();
         }
 
-        protected void Animate()
+        private void Animate()
         {
-            if(_sequence != null)
-                _sequence.Kill();
-            
+            _sequence?.Kill();
+
             _sequence = DOTween.Sequence();
             _sequence.Append(_image.DOFade(_endTransparentState, _duration))
                 .AppendInterval(_awaitTime)
@@ -37,7 +36,7 @@ namespace Modules.ScoreSystem
                 .OnStepComplete(OnLoopComplete);
         }
 
-        protected void OnLoopComplete()
+        private void OnLoopComplete()
         {
             _awaitTime *= _awaitChangeFactor;
             _duration *= _durationChangeFactor;

@@ -1,12 +1,12 @@
 using UnityEngine;
 
-namespace Modules.ScoreSystem
+namespace Modules.GUISystem
 {
     public class UITransformAnimator : MonoBehaviour
     {
         protected RectTransform Transform;
 
-        void Start()
+        private void Start()
         {
             Transform = GetComponent<RectTransform>();
             Animate();

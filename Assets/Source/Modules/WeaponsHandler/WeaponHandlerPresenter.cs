@@ -1,4 +1,3 @@
-using Modules.Weapons.Ammunition;
 using Modules.Weapons.WeaponItemSystem;
 using Modules.Weapons.WeaponTypeSystem;
 
