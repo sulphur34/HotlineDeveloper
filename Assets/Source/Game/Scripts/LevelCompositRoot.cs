@@ -14,7 +14,7 @@ using Modules.MoveSystem;
 using Modules.CharacterSystem;
 using Modules.EnemySpawnSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
-using Modules.DamageSystem;
+using Modules.DamageReceiverSystem;
 using Modules.LevelSelectionSystem;
 using Modules.ScoreSystem;
 using Agava.YandexGames;

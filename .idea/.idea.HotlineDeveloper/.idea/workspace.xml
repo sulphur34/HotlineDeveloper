@@ -3,22 +3,93 @@
   <component name="ChangeListManager">
     <list default="true" id="096f9c91-8365-4be6-8d8f-87ad3dc5adea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotlineDeveloper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/AssignResultsVisualiserInAllScenes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/AssignResultsVisualiserInAllScenes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/LeanPhraseSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/LeanPhraseSwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/TutorialPhraseSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/TutorialPhraseSwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILoopFader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILoopFader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILoopRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILoopRotator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILoopScaler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UILoopScaler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UINumberAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UINumberAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIShaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UIShaker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UITransformAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/GUISystem/UITransformAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem/NextLevelButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/NextLevelButtonSystem/NextLevelButtonView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ResultsVisualiser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ResultsVisualiser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreCounterView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreCounterView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreLabel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreLabel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ScorePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Interface/ScorePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Game/Scripts/LevelCompositRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Game/Scripts/LevelCompositRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Audio/AttackSoundHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Audio/AttackSoundHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Audio/DamageSoundHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Audio/DamageSoundHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Audio/MenuMusicTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Audio/MenuMusicTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Audio/MusicHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Audio/MusicHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySpawnSystem/EnemySpawnConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySpawnSystem/EnemySpawnConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySpawnSystem/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySpawnSystem/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/BehaviorSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/BehaviorSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Conditions/IsClearToFire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Conditions/IsClearToFire.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Conditions/IsDead.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Conditions/IsDead.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Conditions/IsKnocked.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Conditions/IsKnocked.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Conditions/IsTargetDead.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Conditions/IsTargetDead.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Variables/SharedDamageReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/EnemySystem/EnemyBehavior/Variables/SharedDamageReceiver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/CharacterSystem/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/Agava.DamageReceiverSystem.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/Agava.DamageReceiverSystem.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/Agava.DamageReceiverSystem.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/Agava.DamageReceiverSystem.asmdef.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/Consciousness.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/Consciousness.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/Consciousness.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/Consciousness.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/AlwaysLethalReceiveStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/AlwaysLethalReceiveStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/AlwaysLethalReceiveStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/AlwaysLethalReceiveStrategy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/DamageReceiveStrategies.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/DamageReceiveStrategies.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/DamageReceiveStrategies.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/DamageReceiveStrategies.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/IDamageReceiveStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/IDamageReceiveStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/IDamageReceiveStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/IDamageReceiveStrategy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/ImmortalReceiveStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/ImmortalReceiveStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/ImmortalReceiveStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/ImmortalReceiveStrategy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/KnockoutImmuneReceiveStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/KnockoutImmuneReceiveStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/KnockoutImmuneReceiveStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/KnockoutImmuneReceiveStrategy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/LethalAsNormalReceiveStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/LethalAsNormalReceiveStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/LethalAsNormalReceiveStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/LethalAsNormalReceiveStrategy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/MeleeImmuneReceiveStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/MeleeImmuneReceiveStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/MeleeImmuneReceiveStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/MeleeImmuneReceiveStrategy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/NormalDamageReceiveStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/NormalDamageReceiveStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/NormalDamageReceiveStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/NormalDamageReceiveStrategy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiver.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiver.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiverPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverPresenter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiverPresenter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiverSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverSetup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiverSetup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiverView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiverView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageableConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageableConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageableConfig.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageableConfig.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageableConfigFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageableConfigFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageableConfigFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageableConfigFactory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageableTypes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageableTypes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageableTypes.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageableTypes.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/Health.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/Health.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/IDamageReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/IDamageReceiver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/IDamageReceiver.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/IDamageReceiver.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/Agava.DamagerSystem.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/Agava.DamagerSystem.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/Agava.DamagerSystem.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/Agava.DamagerSystem.asmdef.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/BulletStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/BulletStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/BulletStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/BulletStrategy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/DamageInflictStrategies.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/DamageInflictStrategies.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/DamageInflictStrategies.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/DamageInflictStrategies.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/EnemyTrapStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/EnemyTrapStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/EnemyTrapStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/EnemyTrapStrategy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/IDamageInflictStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/IDamageInflictStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/IDamageInflictStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/IDamageInflictStrategy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/MeleeStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/MeleeStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/MeleeStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/MeleeStrategy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/RangeStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/RangeStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/RangeStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/RangeStrategy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/WeaponStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/WeaponStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/WeaponStrategy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/WeaponStrategy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/Damager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/Damager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/Damager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/Damager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/LevelsSystem/EnemyTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/LevelsSystem/EnemyTracker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/LevelsSystem/LevelConditionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/LevelsSystem/LevelConditionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/Mover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/Mover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/MoverPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/MoverPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/MoverSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/MoveSystem/MoverSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/Trap/TrapRecharger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/Trap/TrapRecharger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/IWeaponHandlerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/IWeaponHandlerInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/PlayerWeaponHandlerSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/PlayerWeaponHandlerSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +144,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/ab/975fca10/ShakeRandomnessMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Unity/LifetimeScope.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Unity/ContainerBuilderUnityExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/AlwaysLethalReceiveStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Unity/PlayerLoopRunner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54e4b904ef9a4d4792c51489161280c31ce00/48/1a249987/TaskIconAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/1a/96910d9e/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -87,15 +159,15 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/EventSystem/GraphicRaycasterTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/Container.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/44/4e3e64bd/MonoCustomAttrs.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/BulletStrategy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/DamageInflictStrategies.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/BulletStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/DamageInflictStrategies.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/27/709749c5/Dictionary`2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.agava.webutility@32d39130ea/Runtime/WebApplication.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.animation.rigging@1.2.1/Runtime/AnimationJobs/TransformHandle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d29010be29ed44bfb63dbdd0707ee2e016600/3e/4c937f44/IContainerBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/66/b15ec819/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../between-them/Assets/Scripts/Game/ItemGenerator/ItemGenerator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/LethalAsNormalReceiveStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/LethalAsNormalReceiveStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/88/2ba6a786/ConcurrentDictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/a1/0d2baaa1/BasePrimitiveAction.cs" root0="SKIP_HIGHLIGHTING" />
@@ -114,11 +186,12 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/jp.hadashikick.vcontainer@4a23aa6958/Runtime/ContainerBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/ILookInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.7.5/Editor/treeview/AnimationTrackKeyDataSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/Consciousness.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/76/29f51569/PreserveAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/35/e127bb3f/CancellationTokenSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/0e/91249aef/Enum.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/Damager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/Damager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/ScoreSystem/ScoreLabel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/InputSystem/PlayerInput/InputController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Modules/InputSystem/Interfaces/IAttackInput.cs" root0="FORCE_HIGHLIGHTING" />
@@ -347,6 +420,7 @@
       <workItem from="1722373738615" duration="175000" />
       <workItem from="1722375336724" duration="721000" />
       <workItem from="1722501802720" duration="5716000" />
+      <workItem from="1722763779233" duration="461000" />
     </task>
     <servers />
   </component>
@@ -398,7 +472,7 @@
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverView.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiverView.cs</url>
           <line>31</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiver\DamageReceiverView.cs" initialLine="21" containingFunctionPresentation="method 'OnKnocked'" />
           <option name="timeStamp" value="38" />
@@ -461,13 +535,13 @@
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverView.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiverView.cs</url>
           <line>26</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiver\DamageReceiverView.cs" initialLine="25" containingFunctionPresentation="method 'Receive'" />
           <option name="timeStamp" value="102" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamagerSystem/DamageInflictStrategies/MeleeStrategy.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamagerSystem/DamageInflictStrategies/MeleeStrategy.cs</url>
           <line>6</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\Damager\DamageInflictStrategies\MeleeStrategy.cs" initialLine="10" containingFunctionPresentation="method 'InflictDamage'" />
           <option name="timeStamp" value="103" />
@@ -500,13 +574,13 @@
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Modules/WeaponsHandler/WeaponHandlerPresenter.cs</url>
-          <line>23</line>
+          <line>22</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\WeaponsHandler\WeaponHandlerPresenter.cs" initialLine="22" containingFunctionPresentation="method 'OnWeaponPick'">
             <startOffsets>
-              <option value="910" />
+              <option value="876" />
             </startOffsets>
             <endOffsets>
-              <option value="948" />
+              <option value="914" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="115" />
@@ -525,16 +599,9 @@
           <option name="timeStamp" value="178" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiverView.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiverView.cs</url>
           <line>37</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiverSystem\DamageReceiverView.cs" initialLine="36" containingFunctionPresentation="method 'OnRecovered'">
-            <startOffsets>
-              <option value="1138" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1163" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiverSystem\DamageReceiverView.cs" initialLine="36" containingFunctionPresentation="method 'OnRecovered'" />
           <option name="timeStamp" value="179" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
@@ -555,10 +622,10 @@
           <line>51</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\WeaponsHandler\WeaponHandlerView.cs" initialLine="46" containingFunctionPresentation="method 'OnPick'">
             <startOffsets>
-              <option value="1697" />
+              <option value="1705" />
             </startOffsets>
             <endOffsets>
-              <option value="1716" />
+              <option value="1724" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="183" />
@@ -594,10 +661,10 @@
           <line>32</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Trap\TrapRecharger.cs" initialLine="29" containingFunctionPresentation="method 'Recharge'">
             <startOffsets>
-              <option value="845" />
+              <option value="853" />
             </startOffsets>
             <endOffsets>
-              <option value="894" />
+              <option value="902" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="198" />
@@ -607,25 +674,18 @@
           <line>38</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\Trap\TrapRecharger.cs" initialLine="34" containingFunctionPresentation="method 'RechargingRoutine'">
             <startOffsets>
-              <option value="990" />
+              <option value="998" />
             </startOffsets>
             <endOffsets>
-              <option value="1016" />
+              <option value="1024" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="199" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiveStrategies/LethalAsNormalReceiveStrategy.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiveStrategies/LethalAsNormalReceiveStrategy.cs</url>
           <line>6</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiverSystem\DamageReceiveStrategies\LethalAsNormalReceiveStrategy.cs" initialLine="6" containingFunctionPresentation="method 'GetDamage'">
-            <startOffsets>
-              <option value="215" />
-            </startOffsets>
-            <endOffsets>
-              <option value="291" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiverSystem\DamageReceiveStrategies\LethalAsNormalReceiveStrategy.cs" initialLine="6" containingFunctionPresentation="method 'GetDamage'" />
           <option name="timeStamp" value="200" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
@@ -633,10 +693,10 @@
           <line>48</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\CharacterSystem\EnemySpawnSystem\EnemySpawner.cs" initialLine="37" containingFunctionPresentation="method 'BuildEnemy'">
             <startOffsets>
-              <option value="1905" />
+              <option value="1913" />
             </startOffsets>
             <endOffsets>
-              <option value="2009" />
+              <option value="2017" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="202" />
@@ -646,25 +706,18 @@
           <line>51</line>
           <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\CharacterSystem\EnemySpawnSystem\EnemySpawner.cs" initialLine="40" containingFunctionPresentation="method 'BuildEnemy'">
             <startOffsets>
-              <option value="2211" />
+              <option value="2219" />
             </startOffsets>
             <endOffsets>
-              <option value="2285" />
+              <option value="2293" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="203" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageSystem/DamageReceiverSystem/DamageReceiver.cs</url>
-          <line>27</line>
-          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiverSystem\DamageReceiver.cs" initialLine="27" containingFunctionPresentation="method 'Receive'">
-            <startOffsets>
-              <option value="912" />
-            </startOffsets>
-            <endOffsets>
-              <option value="930" />
-            </endOffsets>
-          </properties>
+          <url>file://$PROJECT_DIR$/Assets/Source/Modules/DamageReceiverSystem/DamageReceiver.cs</url>
+          <line>24</line>
+          <properties documentPath="C:\Users\LENOVO\HotlineDeveloper\Assets\Source\Modules\DamageSystem\DamageReceiverSystem\DamageReceiver.cs" initialLine="27" containingFunctionPresentation="method 'Receive'" />
           <option name="timeStamp" value="204" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">

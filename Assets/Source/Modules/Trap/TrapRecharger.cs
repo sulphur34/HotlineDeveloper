@@ -1,6 +1,6 @@
 using System;
 using System.Collections;
-using Modules.DamageSystem;
+using Modules.DamageReceiverSystem;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]

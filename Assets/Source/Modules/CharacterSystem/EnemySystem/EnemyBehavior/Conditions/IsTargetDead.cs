@@ -1,6 +1,6 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.DamageSystem;
+using Modules.DamageReceiverSystem;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
 {

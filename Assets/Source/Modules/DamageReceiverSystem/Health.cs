@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Modules.DamageSystem
+namespace Modules.DamageReceiverSystem
 {
     public class Health
     {

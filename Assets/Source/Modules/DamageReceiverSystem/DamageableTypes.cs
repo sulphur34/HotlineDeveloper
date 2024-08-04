@@ -1,4 +1,4 @@
-namespace Modules.DamageSystem
+namespace Modules.DamageReceiverSystem
 {
     public enum DamageableTypes
     {

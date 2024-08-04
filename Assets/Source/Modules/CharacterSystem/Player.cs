@@ -1,4 +1,4 @@
-using Modules.DamageSystem;
+using Modules.DamageReceiverSystem;
 using UnityEngine;
 
 namespace Modules.CharacterSystem

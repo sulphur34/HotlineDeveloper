@@ -2,7 +2,7 @@ using System;
 using Modules.Weapons.WeaponTypeSystem;
 using UnityEngine;
 
-namespace Modules.DamageSystem
+namespace Modules.DamageReceiverSystem
 {
     [Serializable]
     public struct DamageData

@@ -1,6 +1,4 @@
-using Modules.DamageSystem;
-
-namespace Modules.DamageSystem.DamageStrategy
+namespace Modules.DamageReceiverSystem.DamageStrategy
 {
     public interface IDamageReceiveStrategy
     {

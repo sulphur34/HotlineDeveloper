@@ -1,4 +1,4 @@
-namespace Modules.DamageSystem.DamageStrategy
+namespace Modules.DamageReceiverSystem.DamageStrategy
 {
     public class ImmortalReceiveStrategy : IDamageReceiveStrategy
     {

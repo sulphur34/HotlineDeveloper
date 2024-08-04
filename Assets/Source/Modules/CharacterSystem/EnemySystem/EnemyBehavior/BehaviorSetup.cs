@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using BehaviorDesigner.Runtime;
 using Modules.Characters.Enemies.EnemyBehavior.Variables;
 using Modules.CharacterSystem;
-using Modules.DamageSystem;
+using Modules.DamageReceiverSystem;
 using Modules.PlayerWeaponsHandler;
 using Modules.InputSystem;
 using Modules.CharacterSystem.Enemies.EnemyBehavior.Variables;

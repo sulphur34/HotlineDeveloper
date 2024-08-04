@@ -1,6 +1,6 @@
 using Modules.Characters.Enemies;
 using Modules.Characters.Enemies.EnemyBehavior;
-using Modules.DamageSystem;
+using Modules.DamageReceiverSystem;
 using UnityEngine;
 
 namespace Modules.EnemySpawnSystem

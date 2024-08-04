@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Modules.DamageSystem
+namespace Modules.DamageReceiverSystem
 {
     public class BulletStrategy : MonoBehaviour, IDamageInflictStrategy
     {

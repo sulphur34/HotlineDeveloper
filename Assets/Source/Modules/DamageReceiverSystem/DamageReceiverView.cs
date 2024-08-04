@@ -2,7 +2,7 @@ using System;
 using Source.Game.Scripts.Animations;
 using UnityEngine;
 
-namespace Modules.DamageSystem
+namespace Modules.DamageReceiverSystem
 {
     [RequireComponent(typeof(Collider))]
     public class DamageReceiverView : MonoBehaviour, IDamageReceiver

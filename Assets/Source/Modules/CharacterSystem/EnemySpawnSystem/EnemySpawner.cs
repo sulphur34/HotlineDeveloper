@@ -1,7 +1,7 @@
 using System;
 using Modules.Characters.Enemies.EnemyBehavior;
 using Modules.CharacterSystem;
-using Modules.DamageSystem;
+using Modules.DamageReceiverSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
 using UnityEngine;
 using VContainer;

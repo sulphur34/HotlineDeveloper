@@ -1,5 +1,3 @@
-using System;
-using Modules.Weapons.WeaponItemSystem;
 using Modules.Weapons.WeaponTypeSystem;
 
 namespace Modules.PlayerWeaponsHandler

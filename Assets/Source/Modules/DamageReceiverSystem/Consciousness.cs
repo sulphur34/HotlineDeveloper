@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 
-namespace Modules.DamageSystem
+namespace Modules.DamageReceiverSystem
 {
     public class Consciousness
     {

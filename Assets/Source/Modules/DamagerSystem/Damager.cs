@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Modules.DamageSystem
+namespace Modules.DamageReceiverSystem
 {
     [RequireComponent(typeof(IDamageInflictStrategy))]
     public class Damager : MonoBehaviour
