@@ -1,7 +1,7 @@
 namespace Modules.DamageReceiverSystem.DamageStrategy
 {
-    public interface IDamageReceiveStrategy
+    internal interface IDamageReceiveStrategy
     {
-        DamageData GetDamage(DamageData damageData);
+        public DamageData GetDamage(DamageData damageData);
     }
 }

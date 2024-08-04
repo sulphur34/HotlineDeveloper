@@ -2,9 +2,9 @@ using Modules.Weapons.WeaponTypeSystem;
 
 namespace Modules.DamageReceiverSystem.DamageStrategy
 {
-    public class MeleeImmuneReceiveStrategy : IDamageReceiveStrategy
+    internal class MeleeImmuneReceiveStrategy : IDamageReceiveStrategy
     {
-        public virtual DamageData GetDamage(DamageData damageData)
+        public DamageData GetDamage(DamageData damageData)
         {
             if (damageData.WeaponType == WeaponType.Melee)
                 return DamageData.ZeroDamage;

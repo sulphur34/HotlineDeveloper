@@ -4,13 +4,12 @@ using Modules.DamageReceiverSystem.DamageStrategy;
 
 namespace Modules.DamageReceiverSystem
 {
-    public class DamageReceiver
+    internal class DamageReceiver
     {
         private Health _health;
         private Consciousness _consciousness;
         private IDamageReceiveStrategy _damageReceiveStrategy;
 
-        public event Action<float> HealthChanged;
         public event Action Died;
         public event Action Knocked;
         public event Action Recovered; 
@@ -31,14 +30,14 @@ namespace Modules.DamageReceiverSystem
 
             if (modifiedDamage.IsLethal || _consciousness.IsKnocked)
             {
-                _health.Execute(HealthChanged,Died);
+                _health.Execute(Died);
                 return;
             }
             
             if(modifiedDamage.IsKnockout && _consciousness.IsKnocked == false)
                 _consciousness.Knockout(Knocked, Recovered);
             
-            _health.TakeDamage(modifiedDamage.Value, HealthChanged,Died);
+            _health.TakeDamage(modifiedDamage.Value, Died);
         }
     }
 }

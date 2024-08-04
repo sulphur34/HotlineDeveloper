@@ -1,8 +1,8 @@
 namespace Modules.DamageReceiverSystem.DamageStrategy
 {
-    public class NormalDamageReceiveStrategy : IDamageReceiveStrategy
+    internal class NormalDamageReceiveStrategy : IDamageReceiveStrategy
     {
-        public virtual DamageData GetDamage(DamageData damageData)
+        public DamageData GetDamage(DamageData damageData)
         {
             return damageData;
         }

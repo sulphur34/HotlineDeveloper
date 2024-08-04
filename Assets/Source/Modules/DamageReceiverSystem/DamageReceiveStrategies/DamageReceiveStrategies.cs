@@ -1,6 +1,6 @@
 namespace Modules.DamageReceiverSystem.DamageStrategy
 {
-    public enum DamageReceiveStrategies
+    internal enum DamageReceiveStrategies
     {
         KnockoutImmune,
         MeleeImmune,

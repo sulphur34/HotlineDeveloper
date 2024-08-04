@@ -11,7 +11,7 @@ namespace Modules.DamageReceiverSystem
         
         public void Initialize(DamageableConfig damageableConfig)
         {
-            DamageReceiver damageReceiver = new DamageReceiver(damageableConfig, this.GetCancellationTokenOnDestroy());
+            DamageReceiver damageReceiver = new(damageableConfig, this.GetCancellationTokenOnDestroy());
             _damageReceiverView = GetComponent<DamageReceiverView>();
             _damageReceiverPresenter = new DamageReceiverPresenter(damageReceiver, _damageReceiverView);
         }

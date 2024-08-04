@@ -6,11 +6,11 @@ namespace Modules.DamageReceiverSystem
     [CreateAssetMenu(fileName = "Damageable Config")]
     public class DamageableConfig : ScriptableObject
     {
-        [SerializeField] private DamageReceiveStrategies damageReceiveStrategies;
+        [SerializeField] private DamageReceiveStrategies _damageReceiveStrategies;
         [field: SerializeField] public float MaxValue { get; private set; }
         [field: SerializeField] public float RecoverTime { get; private set; }
 
-        public IDamageReceiveStrategy DamageReceiveStrategy => GetDamageStrategy(damageReceiveStrategies);
+        internal IDamageReceiveStrategy DamageReceiveStrategy => GetDamageStrategy(_damageReceiveStrategies);
 
         private IDamageReceiveStrategy GetDamageStrategy(DamageReceiveStrategies damageReceiveStrategies)
         {

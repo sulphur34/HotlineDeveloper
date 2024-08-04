@@ -4,23 +4,20 @@ using Cysharp.Threading.Tasks;
 
 namespace Modules.DamageReceiverSystem
 {
-    public class Consciousness
+    internal class Consciousness
     {
-        private float _recoverTime;
-        private CancellationToken _cancellationToken;
+        private readonly float _recoverTime;
+        private readonly CancellationToken _cancellationToken;
 
-        public event Action Knocked;
-        public event Action Recovered;
-    
-        public Consciousness(float recoverTime, CancellationToken cancellationToken)
+        internal Consciousness(float recoverTime, CancellationToken cancellationToken)
         {
             _recoverTime = recoverTime;
             _cancellationToken = cancellationToken;
         }
         
-        public bool IsKnocked { get; private set; }
+        internal bool IsKnocked { get; private set; }
 
-        public void Knockout(Action onKnockedCallback, Action onRecoveredCallback)
+        internal void Knockout(Action onKnockedCallback, Action onRecoveredCallback)
         {
             IsKnocked = true;
             onKnockedCallback?.Invoke();

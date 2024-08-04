@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Modules.DamageReceiverSystem
 {
     [RequireComponent(typeof(Collider))]
-    public class DamageReceiverView : MonoBehaviour, IDamageReceiver
+    public class DamageReceiverView : MonoBehaviour
     {
         [SerializeField] private AnimationController _animationController;
         [SerializeField] private ParticleSystem _bloodParticlePrefab;
@@ -39,10 +39,6 @@ namespace Modules.DamageReceiverSystem
             IsKnocked = false;
             _animationController.StandUp();
             Recovered?.Invoke();
-        }
-
-        public void OnHealthChanged(float value)
-        {
         }
 
         public void OnDeath()

@@ -1,8 +1,8 @@
 namespace Modules.DamageReceiverSystem.DamageStrategy
 {
-    public class AlwaysLethalReceiveStrategy: IDamageReceiveStrategy
+    internal class AlwaysLethalReceiveStrategy: IDamageReceiveStrategy
     {
-        public virtual DamageData GetDamage(DamageData damageData)
+        public DamageData GetDamage(DamageData damageData)
         {
             return DamageData.ExecutionDamage;
         }

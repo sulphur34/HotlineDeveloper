@@ -1,8 +1,8 @@
 namespace Modules.DamageReceiverSystem.DamageStrategy
 {
-    public class KnockoutImmuneReceiveStrategy : IDamageReceiveStrategy
+    internal class KnockoutImmuneReceiveStrategy : IDamageReceiveStrategy
     {
-        public virtual DamageData GetDamage(DamageData damageData)
+        public DamageData GetDamage(DamageData damageData)
         {
             if (damageData.IsKnockout)
                 return DamageData.ZeroDamage;
