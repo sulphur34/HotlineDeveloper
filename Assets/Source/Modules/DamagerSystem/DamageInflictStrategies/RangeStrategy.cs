@@ -1,6 +1,6 @@
 namespace Modules.DamageReceiverSystem
 {
-    public class RangeStrategy : WeaponStrategy
+    internal class RangeStrategy : WeaponStrategy
     {
         public override void InflictDamage(DamageReceiverView damageReceiverView, DamageData damageData)
         {

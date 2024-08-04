@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Modules.DamageReceiverSystem
 {
     [RequireComponent(typeof(IDamageInflictStrategy))]
-    public class Damager : MonoBehaviour
+    internal class Damager : MonoBehaviour
     {
         [SerializeField] private DamageData _damageData;
         

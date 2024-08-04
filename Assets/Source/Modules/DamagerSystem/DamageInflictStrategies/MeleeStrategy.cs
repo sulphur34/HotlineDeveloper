@@ -1,6 +1,6 @@
 namespace Modules.DamageReceiverSystem
 {
-    public class MeleeStrategy : WeaponStrategy
+    internal class MeleeStrategy : WeaponStrategy
     {
         public override void InflictDamage(DamageReceiverView damageReceiverView, DamageData damageData)
         {
