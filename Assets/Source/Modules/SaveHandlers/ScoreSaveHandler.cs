@@ -1,7 +1,7 @@
 using System;
 using Modules.LevelsSystem;
 using Modules.SavingsSystem;
-using Modules.ScoreSystem;
+using Modules.GUISystem;
 using UnityEngine;
 using VContainer;
 

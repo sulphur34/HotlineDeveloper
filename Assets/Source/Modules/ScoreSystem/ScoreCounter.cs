@@ -6,7 +6,7 @@ using Modules.LevelsSystem;
 using UnityEngine;
 using VContainer;
 
-namespace Modules.ScoreSystem
+namespace Modules.GUISystem
 {
     public class ScoreCounter : IDisposable
     {

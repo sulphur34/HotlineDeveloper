@@ -1,7 +1,7 @@
 using Lean.Localization;
 using UnityEngine;
 
-namespace Modules.ScoreSystem
+namespace Modules.GUISystem
 {
     public class LeanPhraseSwitcher : MonoBehaviour
     {

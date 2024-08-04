@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using Modules.LevelsSystem;
-using Modules.ScoreSystem;
+using Modules.GUISystem;
 using UnityEngine;
 using VContainer;
 
-namespace Modules.ScoreSystem
+namespace Modules.GUISystem
 {
     public class ScoreCounterView : MonoBehaviour
     {
