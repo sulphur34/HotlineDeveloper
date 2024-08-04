@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Modules.ScoreSystem
 {
     [RequireComponent(typeof(TextMeshProUGUI))]
-    public class ScoreLabel : MonoBehaviour
+    internal class ScoreLabel : MonoBehaviour
     {
         [SerializeField] private Vector3 _shakeRotation = new Vector3(0,0,50);
         [SerializeField] private float _duration = 0.5f;
@@ -15,14 +15,14 @@ namespace Modules.ScoreSystem
         private Tween _tween;
         private Quaternion _defaultRotation;
 
-        public void Initialize()
+        internal void Initialize()
         {
             _textMeshPro = GetComponent<TextMeshProUGUI>();
             _rectTransform = GetComponent<RectTransform>();
             _defaultRotation = _rectTransform.rotation;
         }
         
-        public void SetValue(uint value)
+        internal void SetValue(uint value)
         {
             _textMeshPro.text = value.ToString();
             _rectTransform.DOKill();

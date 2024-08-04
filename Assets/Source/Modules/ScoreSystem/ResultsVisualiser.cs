@@ -6,13 +6,18 @@ using UnityEngine;
 
 namespace Modules.ScoreSystem
 {
-    public class ResultsVisualiser : MonoBehaviour
+    internal class ResultsVisualiser : MonoBehaviour
     {
         [SerializeField] private UINumberAnimator[] _uiNumberAnimators;
         [SerializeField] private float _delay;
 
         private CancellationTokenSource _cancellationTokenSource;
 
+        private void OnDisable()
+        {
+            _cancellationTokenSource.Cancel();
+        }
+        
         public void Activate(List<float> results)
         {
             if (results.Count != _uiNumberAnimators.Length)
@@ -20,11 +25,6 @@ namespace Modules.ScoreSystem
 
             _cancellationTokenSource = new CancellationTokenSource();
             Counting(results);
-        }
-
-        public void Deactivate()
-        {
-            _cancellationTokenSource.Cancel();
         }
 
         private async UniTask Counting(List<float> results)
