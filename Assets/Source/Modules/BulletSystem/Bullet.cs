@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using Modules.BulletSystem;
 using UnityEngine;
 
 namespace Modules.BulletSystem
