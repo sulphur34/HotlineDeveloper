@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Source.Modules.AdvertisementSystem
+namespace Modules.AdvertisementSystem
 {
     public class RewardAppearEffect : MonoBehaviour
     {
@@ -15,9 +15,9 @@ namespace Source.Modules.AdvertisementSystem
             _effectInstance.Play();
         }
 
-        // private void OnDisable()
-        // {
-        //     _effectInstance.Stop();
-        // }
+        private void OnDisable()
+        {
+            _effectInstance.Stop();
+        }
     }
 }

@@ -1,66 +1,54 @@
 using System.Collections;
 using System.Threading;
-using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 
-namespace Source.Game.Scripts.Animations
+namespace Modules.AnimationSystem
 {
     internal class AnimatorController
     {
-        private const string TwoHandsAttackName = "TwoHandsAttack";
-        private const string OneHandAttackName = "OneHandAttack";
-        private const string BareHandsAttack = "BareHandsAttack";
-        private const string SpeedName = "Speed";
-
-        private readonly int _twoHandsAttackIndex;
-        private readonly int _oneHandAttackIndex;
-        private readonly int _bareHandsAttackIndex;
-        private readonly int _speedIndex;
         private readonly Animator _animator;
         private readonly AnimationController _animationController;
+        private readonly AnimatorIndexer _animatorIndexer;
         private readonly Transform _transform;
         private readonly CancellationTokenSource _cancellationTokenSource;
 
         private Coroutine _coroutine; 
         private Vector3 _oldPosition;
 
-        public AnimatorController(Animator animator, Transform transform, AnimationController animationController)
+        internal AnimatorController(Animator animator, Transform transform, AnimationController animationController)
         {
-            _twoHandsAttackIndex = Animator.StringToHash(TwoHandsAttackName);
-            _bareHandsAttackIndex = Animator.StringToHash(BareHandsAttack);
-            _oneHandAttackIndex = Animator.StringToHash(OneHandAttackName);
-            _speedIndex = Animator.StringToHash(SpeedName);
+            _animatorIndexer = new AnimatorIndexer();
             _animator = animator;
             _transform = transform;
             _animationController = animationController;
         }
 
-        public void Activate()
+        internal void Activate()
         {
             _animator.enabled = true;
             _coroutine = _animationController.StartCoroutine(TrackingSpeed());
         }
 
-        public void Deactivate()
+        internal void Deactivate()
         {
             _animationController.StopCoroutine(_coroutine);
             _animator.enabled = false;
         }
 
-        public void AnimateTwoHandsAttack()
+        internal void AnimateTwoHandsAttack()
         {
-            _animator.SetTrigger(_twoHandsAttackIndex);
+            _animator.SetTrigger(_animatorIndexer.TwoHandsAttackIndex);
         }
 
-        public void AnimateOneHandAttack()
+        internal void AnimateOneHandAttack()
         {
-            _animator.SetTrigger(_oneHandAttackIndex);
+            _animator.SetTrigger(_animatorIndexer.OneHandAttackIndex);
         }
 
-        public void AnimateBareHandsAttack()
+        internal void AnimateBareHandsAttack()
         {
-            _animator.SetTrigger(_bareHandsAttackIndex);
+            _animator.SetTrigger(_animatorIndexer.BareHandsAttackIndex);
         }
 
         private IEnumerator TrackingSpeed()
@@ -68,7 +56,7 @@ namespace Source.Game.Scripts.Animations
             while (true)
             {
                 float distance = Vector3.Magnitude(_transform.position - _oldPosition);
-                _animator.SetFloat(_speedIndex, distance);
+                _animator.SetFloat(_animatorIndexer.SpeedIndex, distance);
                 _oldPosition = _transform.position;
                 yield return null;
             }

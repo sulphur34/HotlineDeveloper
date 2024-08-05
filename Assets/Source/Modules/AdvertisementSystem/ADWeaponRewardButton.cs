@@ -1,16 +1,17 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace Source.Modules.AdvertisementSystem
+namespace Modules.AdvertisementSystem
 {
     public class ADWeaponRewardButton : ADRewardedButton
     {
-        private bool isRewarded = false;
+        private bool _isRewarded = false;
 
-        [SerializeField] private GameObject _weaponGameobject;
+        [FormerlySerializedAs("_weaponGameobject")] [SerializeField] private GameObject _weaponGameObject;
 
         protected override void OnRewardGained()
         {
-            isRewarded = true;
+            _isRewarded = true;
         }
 
         protected override void OnButtonClick()
@@ -19,9 +20,9 @@ namespace Source.Modules.AdvertisementSystem
 
         protected override void OnVideoClose()
         {
-            if (isRewarded)
+            if (_isRewarded)
             {
-                _weaponGameobject.SetActive(true);
+                _weaponGameObject.SetActive(true);
                 gameObject.SetActive(false);
             }
         }

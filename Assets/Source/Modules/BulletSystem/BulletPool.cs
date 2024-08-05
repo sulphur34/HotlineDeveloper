@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Pool;
 using Object = UnityEngine.Object;
 
-namespace Modules.BulletPoolSystem
+namespace Modules.BulletSystem
 {
     public class BulletPool : IDisposable
     {

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Source.Game.Scripts.Animations
+namespace Modules.AnimationSystem
 {
     [Serializable]
     internal class RagdollJointData

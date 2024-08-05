@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Modules.Audio
 {
     [RequireComponent(typeof(WeaponHandlerView))]
-    public class PickSoundHandler : SoundHandler
+    internal class PickSoundHandler : SoundHandler
     {
         [SerializeField] private AudioDataProperty _meleeAudioName;
         [SerializeField] private AudioDataProperty _rangeAudioName;

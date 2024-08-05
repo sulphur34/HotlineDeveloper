@@ -1,4 +1,4 @@
-using Source.Game.Scripts.Animations;
+using Modules.AnimationSystem;
 using UnityEngine;
 
 internal class RagdollController
@@ -6,18 +6,18 @@ internal class RagdollController
     private RagdollJointData[] _ragdollJointsData;
     private Transform _hipBonePosition;
 
-    public RagdollController(RagdollJointData[] ragdollJointsData)
+    internal RagdollController(RagdollJointData[] ragdollJointsData)
     {
         _ragdollJointsData = ragdollJointsData;
         Deactivate();
     }
 
-    public void Activate()
+    internal void Activate()
     {
         SetStatus(true);
     }
 
-    public void Deactivate()
+    internal void Deactivate()
     {
         SetStatus(false);
     }

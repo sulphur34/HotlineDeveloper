@@ -1,7 +1,7 @@
 using System;
 using UnityEngine.Animations.Rigging;
 
-namespace Source.Game.Scripts.Animations
+namespace Modules.AnimationSystem
 {
     [Serializable]
     internal class ConstraintsData

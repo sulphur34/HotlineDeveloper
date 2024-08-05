@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Modules.Audio
 {
     [RequireComponent(typeof(WeaponItem))]
-    public class AttackSoundHandler : SoundHandler
+    internal class AttackSoundHandler : SoundHandler
     {
         [SerializeField] private AudioDataProperty _audioName;
 

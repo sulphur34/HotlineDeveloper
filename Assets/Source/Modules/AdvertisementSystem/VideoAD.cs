@@ -3,7 +3,7 @@ using Modules.PauseMenu;
 using UnityEngine;
 using VContainer;
 
-namespace Source.Modules.AdvertisementSystem
+namespace Modules.AdvertisementSystem
 {
     public class VideoAD : MonoBehaviour
     {
@@ -11,13 +11,6 @@ namespace Source.Modules.AdvertisementSystem
         
         public event Action RewardGained;
         public event Action Closed;
-
-        public bool IsPlaying { get; private set; }
-
-        private void Awake()
-        {
-            IsPlaying = false;
-        }
 
         [Inject]
         public void Construct(PauseSetter pauseSetter)
@@ -37,7 +30,6 @@ namespace Source.Modules.AdvertisementSystem
 
         private void OnOpenCallBack()
         {
-            IsPlaying = true;
             _pauseSetter.Enable();
         }
 
@@ -48,7 +40,6 @@ namespace Source.Modules.AdvertisementSystem
 
         private void OnCloseCallBack()
         {
-            IsPlaying = false;
             Closed?.Invoke();
             _pauseSetter.Disable();
         }

@@ -1,5 +1,5 @@
 using System;
-using Source.Game.Scripts.Animations;
+using Modules.AnimationSystem;
 using UnityEngine;
 
 namespace Modules.DamageReceiverSystem

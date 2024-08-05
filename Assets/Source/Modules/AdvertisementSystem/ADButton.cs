@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Source.Modules.AdvertisementSystem
+namespace Modules.AdvertisementSystem
 {
     [RequireComponent(typeof(Button))]
     [RequireComponent(typeof(VideoAD))]
     public abstract class ADButton : MonoBehaviour
     {
-        protected VideoAD VideoAD;
         private Button _button;
 
         protected virtual void Awake()
@@ -18,6 +17,8 @@ namespace Source.Modules.AdvertisementSystem
             _button.onClick.AddListener(OnButtonClick);
             VideoAD.Closed += OnVideoClose;
         }
+        
+        protected VideoAD VideoAD { get; private set; }
 
         protected abstract void ShowAD();
 

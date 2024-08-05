@@ -1,8 +1,7 @@
 using System.Collections;
-using System.Threading;
 using UnityEngine;
 
-namespace Source.Game.Scripts.Animations
+namespace Modules.AnimationSystem
 {
     public class AnimationController : MonoBehaviour
     {

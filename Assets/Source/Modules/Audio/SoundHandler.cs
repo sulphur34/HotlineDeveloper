@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Modules.Audio
 {
     [RequireComponent(typeof(SourceAudio))]
-    public class SoundHandler : MonoBehaviour
+    internal class SoundHandler : MonoBehaviour
     {
         private SourceAudio _source;
 
