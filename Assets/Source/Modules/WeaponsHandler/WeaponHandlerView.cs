@@ -3,7 +3,7 @@ using Modules.DamageReceiverSystem;
 using Modules.Weapons.Ammunition;
 using Modules.Weapons.WeaponItemSystem;
 using Modules.Weapons.WeaponTypeSystem;
-using Source.Game.Scripts.Animations;
+using Modules.AnimationSystem;
 using UnityEngine;
 
 namespace Modules.PlayerWeaponsHandler
