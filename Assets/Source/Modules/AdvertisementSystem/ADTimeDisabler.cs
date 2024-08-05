@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Source.Modules.AdvertisementSystem
+namespace Modules.AdvertisementSystem
 {
     public class ADTimeDisabler : MonoBehaviour
     {

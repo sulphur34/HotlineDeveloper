@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Source.Modules.AdvertisementSystem
+namespace Modules.AdvertisementSystem
 {
     [RequireComponent(typeof(Button))]
     [RequireComponent(typeof(VideoAD))]
@@ -16,6 +16,8 @@ namespace Source.Modules.AdvertisementSystem
         protected override void ShowAD()
         {
 #if UNITY_EDITOR
+            OnRewardGained();
+            OnVideoClose();
             return;
 #endif
             VideoAD.ShowRewarded();
