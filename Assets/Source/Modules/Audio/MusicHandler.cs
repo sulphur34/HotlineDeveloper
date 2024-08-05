@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Modules.Audio
 {
     [RequireComponent(typeof(SourceAudio))]
-    public class MusicHandler : MonoBehaviour
+    internal class MusicHandler : MonoBehaviour
     {
         private static MusicHandler _instance;
 
@@ -14,32 +14,28 @@ namespace Modules.Audio
 
         private SourceAudio _sourceAudio;
 
-        public static MusicHandler Instance => _instance;
-        public bool IsLevelMusicPlaying { get; private set; }
+        internal static MusicHandler Instance => _instance;
+        private bool IsLevelMusicPlaying { get; set; }
         
-        public void Awake()
+        private void Awake()
         {
             if (_instance == null)
-            {
                 _instance = this;
-            }
             else if (_instance != this)
-            {
                 Destroy(_instance.gameObject);
-            }
             
             _sourceAudio = GetComponent<SourceAudio>();
             DontDestroyOnLoad(this.gameObject);
         }
 
-        public void OnMenuLoad()
+        internal void OnMenuLoad()
         {
             IsLevelMusicPlaying = false;
             Stop();
             PlayMenu();
         }
 
-        public void OnLevelLoad()
+        internal void OnLevelLoad()
         {
             if (IsLevelMusicPlaying)
                 return;

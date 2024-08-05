@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Modules.Audio
 {
-    public class LevelMusicTrigger : MonoBehaviour
+    internal class LevelMusicTrigger : MonoBehaviour
     {
         private void Start()
         {

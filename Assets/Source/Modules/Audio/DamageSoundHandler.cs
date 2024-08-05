@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Modules.Audio
 {
     [RequireComponent(typeof(DamageReceiverView))]
-    public class DamageSoundHandler : SoundHandler
+    internal class DamageSoundHandler : SoundHandler
     {
         [SerializeField] private AudioDataProperty _audioName;
 
