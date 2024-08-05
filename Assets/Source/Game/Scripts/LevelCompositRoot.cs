@@ -17,6 +17,7 @@ using Modules.LevelSelectionSystem;
 using Modules.GUISystem;
 using Modules.LeaderboardSystem;
 using Modules.AdvertisementSystem;
+using Modules.AimSystem;
 using Source.Modules.FocusSystem;
 using Source.Modules.NextLevelButtonSystem;
 
