@@ -1,4 +1,4 @@
-﻿using Modules.BulletPoolSystem;
+﻿using Modules.BulletSystem;
 using Modules.Weapons.Ammunition;
 using Modules.Weapons.WeaponItemSystem;
 using UnityEngine;

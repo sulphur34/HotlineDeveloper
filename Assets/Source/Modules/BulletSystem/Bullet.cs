@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-using Source.Modules.EffectsSystem;
+using Modules.BulletSystem;
 using UnityEngine;
 
 namespace Modules.BulletSystem
@@ -12,21 +12,10 @@ namespace Modules.BulletSystem
         [SerializeField] private BulletParticleController _particleController;
         [field: SerializeField] public Collider Collider { get; private set; }
 
-        private WaitForSeconds _waitlifetime;
+        private WaitForSeconds _waitLifetime;
         private Coroutine _coroutine;
         
-        public event Action<Bullet> LifespanStarted;
         public event Action<Bullet> LifespanEnded;
-        //
-        // private void OnCollisionEnter(Collision collision)
-        // {
-        //     if (_coroutine != null)
-        //         StopCoroutine(_coroutine);
-        //     
-        //     _particleController.DeactivateParticle();
-        //     
-        //     LifespanEnded?.Invoke(this);
-        // }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -40,7 +29,7 @@ namespace Modules.BulletSystem
 
         public void Init(Vector3 direction, float speed)
         {
-            _waitlifetime = new WaitForSeconds(_lifetime);
+            _waitLifetime = new WaitForSeconds(_lifetime);
             _coroutine = StartCoroutine(StartLifetime());
             _rigidbody.rotation = Quaternion.FromToRotation(Vector3.up, direction);
             _rigidbody.velocity = direction * speed;
@@ -50,12 +39,11 @@ namespace Modules.BulletSystem
         {
             transform.position = position;
             _particleController.ActivateParticle();
-            LifespanStarted?.Invoke(this);
         }
 
         private IEnumerator StartLifetime()
         {
-            yield return _waitlifetime;
+            yield return _waitLifetime;
             LifespanEnded?.Invoke(this);
         }
     }
