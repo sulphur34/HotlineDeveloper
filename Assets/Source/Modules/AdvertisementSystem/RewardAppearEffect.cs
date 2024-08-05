@@ -15,9 +15,9 @@ namespace Source.Modules.AdvertisementSystem
             _effectInstance.Play();
         }
 
-        // private void OnDisable()
-        // {
-        //     _effectInstance.Stop();
-        // }
+        private void OnDisable()
+        {
+            _effectInstance.Stop();
+        }
     }
 }
