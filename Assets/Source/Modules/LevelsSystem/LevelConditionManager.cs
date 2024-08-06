@@ -24,12 +24,6 @@ namespace Modules.LevelsSystem
 
         public int LevelCompleteIndex { get; private set; }
         
-        // private void Update()
-        // {
-        //     if (Input.GetKeyDown(KeyCode.K))
-        //         OnWin();
-        // }
-
         private void OnDestroy()
         {
             _player.GetComponent<DamageReceiverView>().Died -= OnLoose;

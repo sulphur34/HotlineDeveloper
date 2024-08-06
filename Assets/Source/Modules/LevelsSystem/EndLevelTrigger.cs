@@ -20,7 +20,7 @@ namespace Modules.LevelsSystem
         {
             if (other.TryGetComponent(out Player player))
             {
-                Reached.Invoke();
+                Reached?.Invoke();
             }
         }
 

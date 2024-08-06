@@ -4,7 +4,7 @@ using Lean.Localization;
 
 namespace Modules.LeaderboardSystem
 {
-    public class LeaderboardElement : MonoBehaviour
+    internal class LeaderboardElement : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _name;
         [SerializeField] private TextMeshProUGUI _rank;
