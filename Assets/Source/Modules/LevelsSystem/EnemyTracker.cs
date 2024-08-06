@@ -24,9 +24,6 @@ namespace Modules.LevelsSystem
         public event Action AllEnemiesDied;
         public event Action EnemyDied;
 
-        public Vector3 NearestPosition => _nearestEnemy == null ? Vector3.zero : _nearestEnemy.position;
-
-
         [Inject]
         public void Construct(EnemySpawner enemySpawner, Player player)
         {
@@ -44,7 +41,7 @@ namespace Modules.LevelsSystem
 
         public Vector3 GetNearestPosition()
         {
-            return _nearestEnemy.position;
+            return _nearestEnemy == null ? Vector3.zero : _nearestEnemy.position;
         }
 
         private void Add(GameObject character)

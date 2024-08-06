@@ -1,11 +1,7 @@
 ﻿using System;
-using System;
 using Modules.CharacterSystem;
 using Modules.DamageReceiverSystem;
-using Modules.FadeSystem;
-using Modules.SceneLoaderSystem;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using VContainer;
 
 namespace Modules.LevelsSystem
@@ -23,12 +19,6 @@ namespace Modules.LevelsSystem
         public event Action Lost;
 
         public int LevelCompleteIndex { get; private set; }
-        
-        // private void Update()
-        // {
-        //     if (Input.GetKeyDown(KeyCode.K))
-        //         OnWin();
-        // }
 
         private void OnDestroy()
         {
