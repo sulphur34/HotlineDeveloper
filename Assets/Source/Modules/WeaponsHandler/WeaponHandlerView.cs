@@ -14,6 +14,8 @@ namespace Modules.PlayerWeaponsHandler
         [SerializeField] private DamageReceiverView _damageReceiverView;
         [SerializeField] private AmmunitionUI _ammunitionUI;
 
+        private WeaponHandlerAnimator _weaponHandlerAnimator;
+        private AmmoUIHandler _ammoUIHandler;
         private IAmmunitionView _currentAmmunitionView;
 
         public event Action RangeShotFired;
@@ -25,6 +27,8 @@ namespace Modules.PlayerWeaponsHandler
         public void Initialize(IWeaponHandlerInfo weaponHandlerInfo)
         {
             WeaponInfo = weaponHandlerInfo;
+            _weaponHandlerAnimator = new WeaponHandlerAnimator(_animationController);
+            _ammoUIHandler = new AmmoUIHandler(_ammunitionUI, _currentAmmunitionView);
             _animationController = GetComponent<AnimationController>();
             _damageReceiverView = GetComponent<DamageReceiverView>();
             _damageReceiverView.FallenDown += UnequipWeapon;
@@ -33,15 +37,7 @@ namespace Modules.PlayerWeaponsHandler
 
         public void OnAttack(WeaponType weaponType)
         {
-            switch (weaponType)
-            {
-                case WeaponType.Melee:
-                    _animationController.AttackMelee();
-                    break;
-                case WeaponType.BareHands:
-                    _animationController.AttackBareHands();
-                    break;
-            }
+            _weaponHandlerAnimator.AnimateAttack(weaponType);
 
             if (weaponType == WeaponType.Range)
                 RangeShotFired?.Invoke();
@@ -50,64 +46,27 @@ namespace Modules.PlayerWeaponsHandler
         public void OnPick(IWeaponInfo weaponItem)
         {
             Equipped?.Invoke();
-            SetAnimation(weaponItem);
-            
-            if(weaponItem.WeaponType == WeaponType.Range)
-                SetAmmoUI(true, weaponItem._weaponAmmunitionView);
+            _weaponHandlerAnimator.AnimatePick(WeaponInfo, weaponItem);
+
+            if (weaponItem.WeaponType == WeaponType.Range)
+                _ammoUIHandler.SetAmmoUI(true, weaponItem._weaponAmmunitionView);
             else
                 _ammunitionUI?.Deactivate();
         }
 
-        public void UnequipWeapon()
+        private void UnequipWeapon()
         {
-            if(!WeaponInfo.CurrentWeaponItemIsEmpty &&
-               WeaponInfo.CurrentWeaponType == WeaponType.Range)
-                SetAmmoUI(false, _currentAmmunitionView);
-            
+            if (!WeaponInfo.CurrentWeaponItemIsEmpty &&
+                WeaponInfo.CurrentWeaponType == WeaponType.Range)
+                _ammoUIHandler.SetAmmoUI(false, _currentAmmunitionView);
+
             ClearHands();
             Unequipped?.Invoke();
         }
 
         public void ClearHands()
         {
-            _animationController.Unequip();
-        }
-
-        private void SetAnimation(IWeaponInfo weaponItem)
-        {
-            switch (WeaponInfo.CurrentWeaponType)
-            {
-                case WeaponType.Melee:
-                    _animationController.PickMelee(weaponItem.SelfTransform, weaponItem.LeftHandPlaceHolder);
-                    break;
-
-                case WeaponType.Range:
-                    _animationController.PickRange(weaponItem.RightHandPlaceHolder, weaponItem.LeftHandPlaceHolder);
-                    break;
-
-                case WeaponType.BareHands:
-                    _animationController.PickMelee(weaponItem.SelfTransform, weaponItem.LeftHandPlaceHolder);
-                    break;
-            }
-        }
-
-        private void SetAmmoUI(bool isActive, IAmmunitionView ammunitionView)
-        {
-            if (_ammunitionUI == null)
-                return;
-
-            if (isActive)
-            {
-                _currentAmmunitionView = ammunitionView;
-                _ammunitionUI.Activate(_currentAmmunitionView.CurrentAmmoCount);
-                _ammunitionUI.Initialize(_currentAmmunitionView.AmmoIcon);
-                _currentAmmunitionView.Changed += _ammunitionUI.UpdateAmmo;
-            }
-            else
-            {
-                _currentAmmunitionView.Changed -= _ammunitionUI.UpdateAmmo;
-                _ammunitionUI.Deactivate();
-            }
+            _weaponHandlerAnimator.AnimateClearHands();
         }
     }
 }

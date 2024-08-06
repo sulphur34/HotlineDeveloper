@@ -10,17 +10,16 @@ namespace Modules.PlayerWeaponsHandler
 {
     public class WeaponHandler : IWeaponHandlerInfo
     {
-        private readonly float _lookHeight = 1.5f;
+        private readonly float _lookHeight;
+        private readonly Transform _container;
+        private readonly Transform _pickPoint;
+        private readonly float _pickRadius;
         
-        protected IAttackInput _attackInput;
-        protected IPickInput _pickInput;
+        private readonly IAttackInput _attackInput;
         private WeaponItem _currentWeaponItem;
-        private WeaponItem _defaultWeaponItem;
+        private readonly WeaponItem _defaultWeaponItem;
         private WeaponStrategy _weaponStrategy;
         private WeaponStrategy _thrownWeaponStrategy;
-        private Transform _container;
-        private Transform _pickPoint;
-        private float _pickRadius;
 
         public event Action<IWeaponInfo> WeaponPicked;
         public event Action WeaponThrown;
@@ -36,8 +35,8 @@ namespace Modules.PlayerWeaponsHandler
             _container = weaponHandlerData.Container;
             _defaultWeaponItem = weaponHandlerData.DefaultWeapon;
             _attackInput = attackInput;
-            _pickInput = pickInput;
-            _pickInput.PickReceived += OnPickInputReceived;
+            _lookHeight = weaponHandlerData.LookHeight;
+            pickInput.PickReceived += OnPickInputReceived;
             EquipWeaponItem(_defaultWeaponItem);              
         }
 

@@ -5,8 +5,9 @@ namespace Modules.PlayerWeaponsHandler
 {
     public class WeaponHandlerPresenter
     {
-        private WeaponHandlerView _weaponHandlerView;
-        private WeaponHandler _weaponHandler;
+        private readonly WeaponHandlerView _weaponHandlerView;
+        private readonly WeaponHandler _weaponHandler;
+        
         public WeaponHandlerPresenter(WeaponHandler weaponHandler, WeaponHandlerView weaponHandlerView)
         {
             _weaponHandler = weaponHandler;
