@@ -4,7 +4,7 @@ using Modules.LevelsSystem;
 using Modules.SceneLoaderSystem;
 using VContainer;
 
-namespace Source.Modules.NextLevelButtonSystem
+namespace Modules.NextLevelButtonSystem
 {
     public class NextLevelButtonPresenter
     {

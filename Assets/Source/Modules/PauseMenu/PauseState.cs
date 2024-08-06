@@ -4,13 +4,13 @@ namespace Source.Modules.FocusSystem
     {
         public readonly float Timescale;
         public readonly bool IsInputEnabled;
-        public readonly bool isAudioPaused;
+        public readonly bool IsAudioPaused;
 
         public PauseState(float timescale, bool isInputEnabled, bool isAudioPaused)
         {
             Timescale = timescale;
             IsInputEnabled = isInputEnabled;
-            this.isAudioPaused = isAudioPaused;
+            this.IsAudioPaused = isAudioPaused;
         }
 
     }

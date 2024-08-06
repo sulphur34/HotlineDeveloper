@@ -1,6 +1,6 @@
 using Modules.GUISystem;
 
-namespace Source.Modules.NextLevelButtonSystem
+namespace Modules.NextLevelButtonSystem
 {
     public class NextLevelButtonView : LeanPhraseSwitcher
     {
