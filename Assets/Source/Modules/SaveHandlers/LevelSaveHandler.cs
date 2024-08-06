@@ -8,12 +8,13 @@ namespace Modules.SaveHandlers
 {
     public class LevelSaveHandler : IDisposable
     {
-        private readonly SaveSystem _saveSystem = new SaveSystem();
+        private readonly SaveSystem _saveSystem;
         private readonly LevelsData _levels;
 
         [Inject]
         public LevelSaveHandler(LevelsData levels)
         {
+            _saveSystem = new SaveSystem();
             _levels = levels;
 
             foreach (Level level in _levels.Value)
