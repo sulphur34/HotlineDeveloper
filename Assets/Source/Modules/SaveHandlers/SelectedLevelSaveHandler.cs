@@ -7,12 +7,13 @@ namespace Modules.SaveHandlers
 {
     public class SelectedLevelSaveHandler : IDisposable
     {
-        private readonly SaveSystem _saveSystem = new SaveSystem();
+        private readonly SaveSystem _saveSystem;
         private readonly LevelSelectionElement[] _levelSelectionElements;
 
         [Inject]
         public SelectedLevelSaveHandler(LevelSelectionElement[] levelSelectionElements)
         {
+            _saveSystem = new SaveSystem();
             _levelSelectionElements = levelSelectionElements;
 
             foreach (var element in _levelSelectionElements)

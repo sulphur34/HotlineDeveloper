@@ -7,12 +7,13 @@ namespace Modules.SaveHandlers
 {
     public class AudioSaveHandler : IDisposable
     {
-        private readonly SaveSystem _saveSystem = new SaveSystem();
+        private readonly SaveSystem _saveSystem;
         private readonly AudioSettings _audioSettings;
 
         [Inject]
         public AudioSaveHandler(AudioSettings audioSettings)
         {
+            _saveSystem = new SaveSystem();
             _audioSettings = audioSettings;
 
             _audioSettings.MusicSlider.Changed += OnMusicChanged;

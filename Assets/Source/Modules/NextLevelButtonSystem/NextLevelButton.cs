@@ -4,7 +4,7 @@ using Modules.LevelsSystem;
 using Modules.PressedButtonSystem;
 using Modules.SceneLoaderSystem;
 
-namespace Source.Modules.NextLevelButtonSystem
+namespace Modules.NextLevelButtonSystem
 {
     public class NextLevelButton : PressedButton
     {

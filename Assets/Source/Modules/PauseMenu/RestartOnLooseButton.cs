@@ -1,3 +1,5 @@
+using Modules.PauseMenu;
+
 namespace Modules.PauseMenu
 {
     public class RestartOnLooseButton : RestartLevelButton

@@ -19,7 +19,7 @@ using Modules.LeaderboardSystem;
 using Modules.AdvertisementSystem;
 using Modules.AimSystem;
 using Source.Modules.FocusSystem;
-using Source.Modules.NextLevelButtonSystem;
+using Modules.NextLevelButtonSystem;
 
 public class LevelCompositRoot : LifetimeScope
 {

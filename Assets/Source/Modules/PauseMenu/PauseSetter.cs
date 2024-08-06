@@ -8,10 +8,11 @@ namespace Modules.PauseMenu
 {
     public class PauseSetter
     {
+        private readonly uint _unpauseQueueValue = 1;
         private readonly PauseState _pauseActiveState;
         private readonly PauseState _pauseInactiveState;
         private readonly InputController _inputController;
-        private uint _unpauseQueueValue = 1;
+        
         private uint _pauseQueueCounter;
 
         [Inject]
@@ -44,7 +45,7 @@ namespace Modules.PauseMenu
             if (_inputController != null)
                 _inputController.enabled = pauseState.IsInputEnabled;
 
-            if (pauseState.isAudioPaused)
+            if (pauseState.IsAudioPaused)
                 AudioPauseHandler.Instance?.PauseAudio();
             else
                 AudioPauseHandler.Instance?.UnpauseAudio();

@@ -2,20 +2,20 @@ using System;
 using Modules.LevelsSystem;
 using Modules.SavingsSystem;
 using Modules.GUISystem;
-using UnityEngine;
 using VContainer;
 
 namespace Modules.SaveHandlers
 {
     public class ScoreSaveHandler : IDisposable
     {
-        private readonly SaveSystem _saveSystem = new SaveSystem();
+        private readonly SaveSystem _saveSystem;
         private readonly LevelConditionManager _levelConditionManager;
         private ScoreCounterView _scoreCounterView;
 
         [Inject]
         public ScoreSaveHandler(LevelConditionManager levelConditionManager, ScoreCounterView scoreCounterView)
         {
+            _saveSystem = new SaveSystem();
             _scoreCounterView = scoreCounterView;
             _levelConditionManager = levelConditionManager;
 
