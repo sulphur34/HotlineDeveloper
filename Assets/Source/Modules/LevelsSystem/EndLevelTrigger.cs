@@ -14,13 +14,14 @@ namespace Modules.LevelsSystem
         private Collider _collider;
         private EnemyTracker _enemyTracker;
 
+        public event Action Enabled;
         public event Action Reached;
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent(out Player player))
             {
-                Reached.Invoke();
+                Reached?.Invoke();
             }
         }
 
@@ -36,6 +37,7 @@ namespace Modules.LevelsSystem
         private void Activate()
         {
             SetState(true);
+            Enabled?.Invoke();
         }
 
         private void Deactivate()

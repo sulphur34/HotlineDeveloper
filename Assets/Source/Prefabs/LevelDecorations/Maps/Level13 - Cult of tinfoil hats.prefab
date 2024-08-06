@@ -48402,7 +48402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -84750,17 +84750,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 0}
   m_VersionIndex: 445
   m_IsSelectable: 1
-  m_SelectedFaces: 0b000000
-  m_SelectedEdges:
-  - a: 182
-    b: 183
-  - a: 184
-    b: 182
-  - a: 183
-    b: 185
-  - a: 185
-    b: 184
-  m_SelectedVertices: b6000000b7000000b8000000b9000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &1811100221924508866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102711,12 +102703,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1631459131376311187, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
       propertyPath: m_fontSize
-      value: 0.8
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1631459131376311187, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 1d82220f2c7b6fa439717bafed008b5d, type: 2}
+    - target: {fileID: 1631459131376311187, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1631459131376311187, guid: 6a1eff4796e947a478d20f2ab385e256, type: 3}
       propertyPath: m_sharedMaterial
       value: 
