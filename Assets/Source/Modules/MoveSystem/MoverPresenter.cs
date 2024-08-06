@@ -5,9 +5,9 @@ namespace Modules.MoveSystem
 {
     internal class MoverPresenter
     {
+        private readonly IMoveInput _moveInput;
+        private readonly IRotateInput _lookInput;
         private readonly Mover _mover;
-        private IMoveInput _moveInput;
-        private IRotateInput _lookInput;
 
         public MoverPresenter(Mover mover, IMoveInput moveInput, IRotateInput lookInput)
         {
