@@ -2,21 +2,14 @@ using System.Collections.Generic;
 using System.Linq;
 using Modules.Weapons.WeaponItemSystem;
 using UnityEngine;
-using VContainer;
 
-public class WeaponTracker : MonoBehaviour
+public class WeaponTracker
 {
     private List<WeaponItem> _weapons;
-
-    [Inject]
-    public void Construct()
+    
+    public void Initialize(List<WeaponItem> weapons)
     {
-        _weapons = GetComponentsInChildren<WeaponItem>().Where(weaponItem => weaponItem.IsTrackable).ToList();
-    }
-
-    public void Add(WeaponItem weaponItem)
-    {
-        _weapons.Add(weaponItem);
+        _weapons = weapons.Where(weaponItem => weaponItem.IsTrackable).ToList();
     }
 
     public bool TryGetNearest(Vector3 position, out WeaponItem weaponItem)

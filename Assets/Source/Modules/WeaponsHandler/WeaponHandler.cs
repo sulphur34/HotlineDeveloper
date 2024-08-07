@@ -1,55 +1,51 @@
 using System;
-using System.Linq;
-using Modules.DamageReceiverSystem;
 using UnityEngine;
 using Modules.Weapons.WeaponItemSystem;
-using Modules.Weapons.WeaponTypeSystem;
 using Modules.InputSystem.Interfaces;
+using Modules.WeaponTypes;
 
-namespace Modules.PlayerWeaponsHandler
+namespace Modules.WeaponsHandler
 {
     public class WeaponHandler : IWeaponHandlerInfo
     {
-        private readonly float _lookHeight;
         private readonly Transform _container;
-        private readonly Transform _pickPoint;
-        private readonly float _pickRadius;
-        
-        private readonly IAttackInput _attackInput;
-        private WeaponItem _currentWeaponItem;
         private readonly WeaponItem _defaultWeaponItem;
-        private WeaponStrategy _weaponStrategy;
-        private WeaponStrategy _thrownWeaponStrategy;
+        private readonly IAttackInput _attackInput;
+        private readonly Picker _picker;
 
-        public event Action<IWeaponInfo> WeaponPicked;
+        private WeaponItem _currentWeaponItem;
+
+        public event Action<IWeaponInfo, IWeaponHandlerInfo> WeaponPicked;
         public event Action WeaponThrown;
         public event Action<WeaponType> Attacked;
 
-        public bool CurrentWeaponItemIsEmpty => _currentWeaponItem == null || _currentWeaponItem == _defaultWeaponItem;
+        public bool IsCurrentWeaponItemEmpty => _currentWeaponItem == null || _currentWeaponItem == _defaultWeaponItem;
         public WeaponType CurrentWeaponType => _currentWeaponItem.WeaponType;
-        
+
         public WeaponHandler(WeaponHandlerData weaponHandlerData, IAttackInput attackInput, IPickInput pickInput)
         {
-            _pickRadius = weaponHandlerData.PickRadius;
-            _pickPoint = weaponHandlerData.PickPoint;
             _container = weaponHandlerData.Container;
             _defaultWeaponItem = weaponHandlerData.DefaultWeapon;
             _attackInput = attackInput;
-            _lookHeight = weaponHandlerData.LookHeight;
+            EquipWeaponItem(_defaultWeaponItem);
+
+            _picker = new Picker(
+                _currentWeaponItem,
+                weaponHandlerData.PickPoint,
+                weaponHandlerData.PickRadius,
+                weaponHandlerData.LookHeight);
+
             pickInput.PickReceived += OnPickInputReceived;
-            EquipWeaponItem(_defaultWeaponItem);              
         }
 
         public void DisarmWeaponItem()
         {
             if (_currentWeaponItem == null || _currentWeaponItem == _defaultWeaponItem)
                 return;
-            
-            _weaponStrategy?.ClearOwner();
+
             _currentWeaponItem.Unequip();
-            _currentWeaponItem.Attacked -= OnAttack;
+            UnsubscribeWeapon();
             _currentWeaponItem = _defaultWeaponItem;
-            _attackInput.AttackReceived -= OnAttackInputReceived;
 
             if (_defaultWeaponItem != null)
                 _defaultWeaponItem.Attacked += OnAttack;
@@ -57,37 +53,36 @@ namespace Modules.PlayerWeaponsHandler
 
         private void OnPickInputReceived()
         {
-            bool HasPickableWeapon = TryGetWeapon(out WeaponItem weaponItem);
+            bool hasPickableWeapon = _picker.TryGetWeapon(out WeaponItem weaponItem);
 
-            if (CurrentWeaponItemIsEmpty == false && _currentWeaponItem.IsEquipped)
-            {
-                WeaponItem weapon = _currentWeaponItem;
-                _currentWeaponItem.Attacked -= OnAttack;
-                WeaponThrown?.Invoke();
-                _thrownWeaponStrategy = _weaponStrategy;
-                _currentWeaponItem.Throw(ClearOwner);
-                _attackInput.AttackReceived -= OnAttackInputReceived;
-            }
+            if (IsCurrentWeaponItemEmpty == false && _currentWeaponItem.IsEquipped)
+                ThrowWeapon();
 
-            EquipWeaponItem(HasPickableWeapon ? weaponItem : _defaultWeaponItem);
+            EquipWeaponItem(hasPickableWeapon ? weaponItem : _defaultWeaponItem);
         }
 
-        private void ClearOwner()
+        private void ThrowWeapon()
         {
-            _thrownWeaponStrategy?.ClearOwner();
+            UnsubscribeWeapon();
+            WeaponThrown?.Invoke();
+            _currentWeaponItem.Throw();
+        }
+
+        private void UnsubscribeWeapon()
+        {
+            _currentWeaponItem.Attacked -= OnAttack;
+            _attackInput.AttackReceived -= OnAttackInputReceived;
         }
 
         private void EquipWeaponItem(WeaponItem weaponItem)
         {
-            if(weaponItem == null)
+            if (weaponItem == null)
                 return;
-            
+
             _currentWeaponItem = weaponItem;
-            _weaponStrategy = _currentWeaponItem.GetComponent<WeaponStrategy>();
-            _weaponStrategy.Equip(_container);
             _currentWeaponItem.Attacked += OnAttack;
             _currentWeaponItem.Equip(_container);
-            WeaponPicked?.Invoke(_currentWeaponItem);
+            WeaponPicked?.Invoke(_currentWeaponItem, this);
             _attackInput.AttackReceived += OnAttackInputReceived;
         }
 
@@ -96,45 +91,13 @@ namespace Modules.PlayerWeaponsHandler
             _currentWeaponItem.Attack();
         }
 
-        private bool TryGetWeapon(out WeaponItem weaponItem)
-        {
-            weaponItem = Physics.OverlapSphere(_pickPoint.position, _pickRadius)
-                .Where(IsAvailableWeapon)
-                .Where(IsNoObstacles)
-                .OrderBy(collider => (collider.transform.position - _pickPoint.position).magnitude)
-                .FirstOrDefault()
-                ?.GetComponent<WeaponItem>();
-
-            return weaponItem != null;
-        }
-        
-        private bool IsAvailableWeapon(Collider collider)
-        {
-            WeaponItem weaponItem = collider.GetComponent<WeaponItem>();
-
-            if (weaponItem == null || weaponItem == _currentWeaponItem || weaponItem.IsEquipped == true)
-                return false;
-
-            return true;
-        }
-
-        private bool IsNoObstacles(Collider collider)
-        {
-            Vector3 alignedPosition = _pickPoint.position;
-            alignedPosition.y += _lookHeight;
-            if (!Physics.Linecast(alignedPosition, collider.transform.position, out RaycastHit hit))
-                return false;
-            
-            return hit.collider.TryGetComponent(out WeaponItem weaponItem);
-        }
-
         private void OnAttack(WeaponType weaponType)
         {
             WeaponType currentType = weaponType;
 
             if (_currentWeaponItem == _defaultWeaponItem)
-                currentType =  WeaponType.BareHands;
-            
+                currentType = WeaponType.BareHands;
+
             Attacked?.Invoke(currentType);
         }
     }

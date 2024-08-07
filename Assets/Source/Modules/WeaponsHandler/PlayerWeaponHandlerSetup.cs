@@ -1,15 +1,15 @@
 using Modules.InputSystem.Interfaces;
+using Modules.Weapons.WeaponItemSystem;
 using VContainer;
 
-namespace Modules.PlayerWeaponsHandler
+namespace Modules.WeaponsHandler
 {
     public class PlayerWeaponHandlerSetup : WeaponHandlerSetup
     {
         [Inject]
-        public void Construct(IAttackInput attackInput, IPickInput pickInput)
+        public void Construct(IAttackInput attackInput, IPickInput pickInput, WeaponItemInitializer weaponItemInitializer)
         {
-            WeaponHandler weaponHandler = new WeaponHandler(WeaponHandlerData, attackInput, pickInput);
-            WeaponHandlerPresenter = new WeaponHandlerPresenter(weaponHandler, WeaponHandlerView);
+            Initialize(attackInput, pickInput, weaponItemInitializer);
         }
     }
 }

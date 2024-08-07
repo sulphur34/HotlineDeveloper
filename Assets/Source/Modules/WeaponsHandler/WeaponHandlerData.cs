@@ -2,7 +2,7 @@ using System;
 using Modules.Weapons.WeaponItemSystem;
 using UnityEngine;
 
-namespace Modules.PlayerWeaponsHandler
+namespace Modules.WeaponsHandler
 {
     [Serializable]
     public class WeaponHandlerData

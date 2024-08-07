@@ -1,8 +1,8 @@
 using Modules.AnimationSystem;
 using Modules.Weapons.WeaponItemSystem;
-using Modules.Weapons.WeaponTypeSystem;
+using Modules.WeaponTypes;
 
-namespace Modules.PlayerWeaponsHandler
+namespace Modules.WeaponsHandler
 {
     internal class WeaponHandlerAnimator
     {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.58447295, g: 0.45629907, b: 0.27294907, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -413,7 +413,7 @@ MonoBehaviour:
   - {fileID: 858765030}
   _moverConfig: {fileID: 11400000, guid: 4ac0f1a02fd35d343b4e70b9b406b1af, type: 2}
   _weaponConfigFactory: {fileID: 11400000, guid: 726e345fe5bd56f4486c8acdb99fb2e4, type: 2}
-  _weaponTracker: {fileID: 1616779574}
+  _weaponItemInitializer: {fileID: 1616779575}
   _enemySpawnConfigs: {fileID: 11400000, guid: d7dd5f4998e7cd5409687ca18867e8ac, type: 2}
   _desktopBehaviorConfigFactory: {fileID: 11400000, guid: 589482f60ff00db458bd32f16c1faa65, type: 2}
   _mobileBehaviorConfigFactory: {fileID: 11400000, guid: 686b8734bbc50d845a5ae221d8eecfa7, type: 2}
@@ -13735,6 +13735,7 @@ GameObject:
   - component: {fileID: 1616779572}
   - component: {fileID: 1616779573}
   - component: {fileID: 1616779574}
+  - component: {fileID: 1616779575}
   m_Layer: 0
   m_Name: Weapon Setups
   m_TagString: Untagged
@@ -13795,6 +13796,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66d27dd485310cf41a8cc44ff6d4fffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1616779575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616779571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe391d7e0d54112b2e9d5e4f72fda6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1679612698

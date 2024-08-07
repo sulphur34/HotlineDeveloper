@@ -2,11 +2,11 @@ using System;
 using Modules.DamageReceiverSystem;
 using Modules.Weapons.Ammunition;
 using Modules.Weapons.WeaponItemSystem;
-using Modules.Weapons.WeaponTypeSystem;
 using Modules.AnimationSystem;
+using Modules.WeaponTypes;
 using UnityEngine;
 
-namespace Modules.PlayerWeaponsHandler
+namespace Modules.WeaponsHandler
 {
     public class WeaponHandlerView : MonoBehaviour
     {
@@ -20,18 +20,15 @@ namespace Modules.PlayerWeaponsHandler
 
         public event Action RangeShotFired;
         public event Action Equipped;
-        public event Action Unequipped;
 
-        public IWeaponHandlerInfo WeaponInfo { get; private set; }
+        public IWeaponHandlerInfo WeaponInfo;
 
-        public void Initialize(IWeaponHandlerInfo weaponHandlerInfo)
+        public void Initialize()
         {
-            WeaponInfo = weaponHandlerInfo;
             _weaponHandlerAnimator = new WeaponHandlerAnimator(_animationController);
             _ammoUIHandler = new AmmoUIHandler(_ammunitionUI, _currentAmmunitionView);
             _animationController = GetComponent<AnimationController>();
-            _damageReceiverView = GetComponent<DamageReceiverView>();
-            _damageReceiverView.FallenDown += UnequipWeapon;
+            
             _ammunitionUI?.Deactivate();
         }
 
@@ -43,8 +40,9 @@ namespace Modules.PlayerWeaponsHandler
                 RangeShotFired?.Invoke();
         }
 
-        public void OnPick(IWeaponInfo weaponItem)
+        public void OnPick(IWeaponInfo weaponItem, IWeaponHandlerInfo handlerInfo)
         {
+            WeaponInfo = handlerInfo;
             Equipped?.Invoke();
             _weaponHandlerAnimator.AnimatePick(WeaponInfo, weaponItem);
 
@@ -54,14 +52,14 @@ namespace Modules.PlayerWeaponsHandler
                 _ammunitionUI?.Deactivate();
         }
 
-        private void UnequipWeapon()
+        public void UnequipWeapon(IWeaponHandlerInfo handlerInfo)
         {
-            if (!WeaponInfo.CurrentWeaponItemIsEmpty &&
-                WeaponInfo.CurrentWeaponType == WeaponType.Range)
+            WeaponInfo = handlerInfo;
+            
+            if (!WeaponInfo.IsCurrentWeaponItemEmpty && WeaponInfo.CurrentWeaponType == WeaponType.Range)
                 _ammoUIHandler.SetAmmoUI(false, _currentAmmunitionView);
 
             ClearHands();
-            Unequipped?.Invoke();
         }
 
         public void ClearHands()

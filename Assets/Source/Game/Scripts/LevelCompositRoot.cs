@@ -1,7 +1,7 @@
 using Modules.FadeSystem;
 using Modules.LevelsSystem;
 using Modules.PauseMenu;
-using Modules.PlayerWeaponsHandler;
+using Modules.WeaponsHandler;
 using Modules.SaveHandlers;
 using Modules.Weapons.Ammunition;
 using Modules.Weapons.Range;
@@ -20,12 +20,14 @@ using Modules.AdvertisementSystem;
 using Modules.AimSystem;
 using Source.Modules.FocusSystem;
 using Modules.NextLevelButtonSystem;
+using Modules.Weapons.WeaponItemSystem;
+using UnityEngine.Serialization;
 
 public class LevelCompositRoot : LifetimeScope
 {
     [SerializeField] private MoverConfig _moverConfig;
     [SerializeField] private RangeWeaponConfigFactory _weaponConfigFactory;
-    [SerializeField] private WeaponTracker _weaponTracker;
+    [FormerlySerializedAs("_weaponTracker")] [SerializeField] private WeaponItemInitializer _weaponItemInitializer;
     [SerializeField] private LevelEnemySpawnConfigs _enemySpawnConfigs;
     [SerializeField] private BehaviorConfigFactory _desktopBehaviorConfigFactory;
     [SerializeField] private BehaviorConfigFactory _mobileBehaviorConfigFactory;
@@ -102,12 +104,11 @@ public class LevelCompositRoot : LifetimeScope
 
     private void WeaponConfigure(IContainerBuilder builder)
     {
-        builder.RegisterComponentInHierarchy<WeaponTracker>();
+        builder.Register<WeaponTracker>(Lifetime.Singleton);
         builder.RegisterInstance(_weaponConfigFactory);
         builder.RegisterComponentInHierarchy<WeaponAmmunitionView>();
+        builder.RegisterComponentInHierarchy<WeaponItemInitializer>();
         builder.RegisterComponentInHierarchy<PlayerWeaponHandlerSetup>();
-        builder.RegisterBuildCallback(container => { container.Resolve<WeaponTracker>().Construct(); });
-        builder.RegisterBuildCallback(container => { container.InjectGameObject(_weaponTracker.gameObject); });
     }
 
     private void LevelConfigure(IContainerBuilder builder)

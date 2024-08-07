@@ -1,4 +1,5 @@
 using Modules.Weapons.WeaponTypeSystem;
+using Modules.WeaponTypes;
 
 namespace Modules.DamageReceiverSystem.DamageStrategy
 {

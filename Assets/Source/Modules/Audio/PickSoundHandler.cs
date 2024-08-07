@@ -1,5 +1,6 @@
-using Modules.PlayerWeaponsHandler;
+using Modules.WeaponsHandler;
 using Modules.Weapons.WeaponTypeSystem;
+using Modules.WeaponTypes;
 using Plugins.Audio.Utils;
 using UnityEngine;
 

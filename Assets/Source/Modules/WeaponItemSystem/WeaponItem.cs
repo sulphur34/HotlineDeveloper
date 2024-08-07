@@ -1,8 +1,9 @@
-using Modules.Weapons.WeaponTypeSystem;
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using Modules.DamageReceiverSystem;
 using Modules.Weapons.Ammunition;
+using Modules.WeaponTypes;
 using UnityEngine;
 
 namespace Modules.Weapons.WeaponItemSystem
@@ -22,9 +23,9 @@ namespace Modules.Weapons.WeaponItemSystem
         private Rigidbody _rigidbody;
         private Collider _collider;
         private CancellationToken _cancellationToken;
-
         private Func<bool> _attack;
         private Action _interrupt;
+        private WeaponStrategy _weaponStrategy;
 
         [field: SerializeField] public bool IsTrackable { get; private set; } = true;
         [field: SerializeField] public Vector3 Offset { get; private set; }
@@ -39,14 +40,15 @@ namespace Modules.Weapons.WeaponItemSystem
         public WeaponType WeaponType { get; private set; }
         public bool IsEquipped { get; private set; }
 
-        public void Init(Func<bool> attack, WeaponType type, Action interrupt = null)
+        public void Initialize(WeaponSetup weaponSetup)
         {
             _rigidbody = GetComponent<Rigidbody>();
             _collider = GetComponent<Collider>();
+            _weaponStrategy = GetComponent<WeaponStrategy>();
             _weaponAmmunitionView = GetComponent<WeaponAmmunitionView>();
-            _attack = attack;
-            _interrupt = interrupt;
-            WeaponType = type;
+            _attack = weaponSetup.AttackHandler;
+            _interrupt = weaponSetup.AttackInterruptHAndler;
+            WeaponType = weaponSetup.WeaponType;
             _startContainer = transform.parent;
             _cancellationToken = this.GetCancellationTokenOnDestroy();
             _selfTransform = transform;
@@ -61,19 +63,20 @@ namespace Modules.Weapons.WeaponItemSystem
         public void Equip(Transform container)
         {
             SetEquipped(true, container);
+            _weaponStrategy.Equip(container);
             _currentContainer = container;
             _currentContainer = container;
         }
 
         public void Unequip()
         {
-            _interrupt?.Invoke();
-            SetEquipped(false, null);
+            Detach();
+            _weaponStrategy.ClearOwner();
         }
 
-        public void Throw(Action OnThrowEndCallback)
+        public void Throw()
         {
-            Unequip();
+            Detach();
             Vector3 throwDirection = _currentContainer.forward;
             Vector3 rotationDirection = WeaponType == WeaponType.Range ? _selfTransform.up : _selfTransform.forward;
             _selfTransform.rotation = Quaternion.identity;
@@ -82,29 +85,28 @@ namespace Modules.Weapons.WeaponItemSystem
             _selfTransform.position = _currentContainer.position;
             _rigidbody.AddTorque(rotationDirection * _rotationForce, ForceMode.VelocityChange);
             _rigidbody.AddForce(throwDirection * _force, ForceMode.Impulse);
-            WaitingThrowEnd(_cancellationToken, OnThrowEndCallback);
+            WaitingThrowEnd(_cancellationToken);
+        }
+
+        private void Detach()
+        {
+            _interrupt?.Invoke();
+            SetEquipped(false, null);
         }
         
-        private async UniTask WaitingThrowEnd(CancellationToken cancellationToken, Action OnThrowEndCallback)
+        private async UniTask WaitingThrowEnd(CancellationToken cancellationToken)
         {
             while (_rigidbody.IsSleeping() == false)
             {
                 await UniTask.Yield(cancellationToken);
             }
             
-            OnThrowEndCallback?.Invoke();
+            _weaponStrategy.ClearOwner();
         }
 
         private void SetEquipped(bool value, Transform container)
         {
             IsEquipped = value;
-            
-            if (_collider == null)
-            {
-                _rigidbody = GetComponent<Rigidbody>();
-                _collider = GetComponent<Collider>();
-            }
-                
             _collider.enabled = !value;
             var newcontainer = value ? container : _startContainer;
             

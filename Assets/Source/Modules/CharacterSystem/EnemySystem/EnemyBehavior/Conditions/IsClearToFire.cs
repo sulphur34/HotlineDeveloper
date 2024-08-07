@@ -2,8 +2,9 @@ using System.Linq;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
 using Modules.DamageReceiverSystem;
-using Modules.PlayerWeaponsHandler;
+using Modules.WeaponsHandler;
 using Modules.Weapons.WeaponTypeSystem;
+using Modules.WeaponTypes;
 using UnityEngine;
 
 namespace Modules.Characters.Enemies.EnemyBehavior.Conditions

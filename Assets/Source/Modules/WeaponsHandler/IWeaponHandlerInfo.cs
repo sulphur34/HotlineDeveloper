@@ -1,10 +1,10 @@
-using Modules.Weapons.WeaponTypeSystem;
+using Modules.WeaponTypes;
 
-namespace Modules.PlayerWeaponsHandler
+namespace Modules.WeaponsHandler
 {
     public interface IWeaponHandlerInfo
     {
-        public bool CurrentWeaponItemIsEmpty { get; }
+        public bool IsCurrentWeaponItemEmpty { get; }
         public WeaponType CurrentWeaponType { get; }
     }
 }

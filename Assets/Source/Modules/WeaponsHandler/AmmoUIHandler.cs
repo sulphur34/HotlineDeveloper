@@ -1,6 +1,6 @@
 using Modules.Weapons.Ammunition;
 
-namespace Modules.PlayerWeaponsHandler
+namespace Modules.WeaponsHandler
 {
     public class AmmoUIHandler
     {
