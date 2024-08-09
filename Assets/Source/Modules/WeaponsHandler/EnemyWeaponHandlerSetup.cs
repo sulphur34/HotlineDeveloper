@@ -1,5 +1,5 @@
 using Modules.InputSystem;
-using Modules.Weapons.WeaponItemSystem;
+using Modules.WeaponItemSystem;
 
 namespace Modules.WeaponsHandler
 {

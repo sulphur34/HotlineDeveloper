@@ -2,20 +2,16 @@ using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Modules.DamageReceiverSystem;
+using Modules.Weapons;
 using Modules.Weapons.Ammunition;
 using Modules.WeaponTypes;
 using UnityEngine;
 
-namespace Modules.Weapons.WeaponItemSystem
+namespace Modules.WeaponItemSystem
 {
     public class WeaponItem : MonoBehaviour, IWeaponInfo
     {
-        [SerializeField] private float _force;
-        [SerializeField] private float _rotationForce;
-        [SerializeField] private float _rotationZ = 90f;
-        [SerializeField] private float _meleeRotationY = 0f;
-        [SerializeField] private float _rangeRotationY = 90f;
-        [SerializeField] private float _rotationX = 0f;
+        [SerializeField] private ThrowData _throwData;
         
         private Transform _startContainer;
         private Transform _selfTransform;
@@ -26,16 +22,16 @@ namespace Modules.Weapons.WeaponItemSystem
         private Func<bool> _attack;
         private Action _interrupt;
         private WeaponStrategy _weaponStrategy;
+        private Thrower _thrower;
 
         [field: SerializeField] public bool IsTrackable { get; private set; } = true;
         [field: SerializeField] public Vector3 Offset { get; private set; }
         [field: SerializeField] public Transform LeftHandPlaceHolder { get; private set; }
         [field: SerializeField] public Transform RightHandPlaceHolder { get; private set; }
         
-        public IAmmunitionView _weaponAmmunitionView { get; private set; }
+        public IAmmunitionView WeaponAmmunitionView { get; private set; }
 
         public event Action<WeaponType> Attacked;
-
         public Transform SelfTransform => _selfTransform == null ? transform : _selfTransform;
         public WeaponType WeaponType { get; private set; }
         public bool IsEquipped { get; private set; }
@@ -45,13 +41,14 @@ namespace Modules.Weapons.WeaponItemSystem
             _rigidbody = GetComponent<Rigidbody>();
             _collider = GetComponent<Collider>();
             _weaponStrategy = GetComponent<WeaponStrategy>();
-            _weaponAmmunitionView = GetComponent<WeaponAmmunitionView>();
+            WeaponAmmunitionView = GetComponent<WeaponAmmunitionView>();
             _attack = weaponSetup.AttackHandler;
-            _interrupt = weaponSetup.AttackInterruptHAndler;
+            _interrupt = weaponSetup.AttackInterruptHandler;
             WeaponType = weaponSetup.WeaponType;
             _startContainer = transform.parent;
             _cancellationToken = this.GetCancellationTokenOnDestroy();
             _selfTransform = transform;
+            _thrower = new Thrower(_throwData);
         }
 
         public void Attack()
@@ -65,7 +62,6 @@ namespace Modules.Weapons.WeaponItemSystem
             SetEquipped(true, container);
             _weaponStrategy.Equip(container);
             _currentContainer = container;
-            _currentContainer = container;
         }
 
         public void Unequip()
@@ -77,15 +73,8 @@ namespace Modules.Weapons.WeaponItemSystem
         public void Throw()
         {
             Detach();
-            Vector3 throwDirection = _currentContainer.forward;
-            Vector3 rotationDirection = WeaponType == WeaponType.Range ? _selfTransform.up : _selfTransform.forward;
-            _selfTransform.rotation = Quaternion.identity;
-            float rotationY = WeaponType == WeaponType.Range ?  _rangeRotationY : _meleeRotationY;
-            _selfTransform.Rotate(_rotationX,rotationY,_rotationZ);
-            _selfTransform.position = _currentContainer.position;
-            _rigidbody.AddTorque(rotationDirection * _rotationForce, ForceMode.VelocityChange);
-            _rigidbody.AddForce(throwDirection * _force, ForceMode.Impulse);
-            WaitingThrowEnd(_cancellationToken);
+            _thrower.SetFly(_selfTransform, _currentContainer, _rigidbody, WeaponType);
+            _thrower.WaitingThrowEnd(_rigidbody, _cancellationToken, _weaponStrategy.ClearOwner);
         }
 
         private void Detach()
@@ -93,35 +82,25 @@ namespace Modules.Weapons.WeaponItemSystem
             _interrupt?.Invoke();
             SetEquipped(false, null);
         }
-        
-        private async UniTask WaitingThrowEnd(CancellationToken cancellationToken)
-        {
-            while (_rigidbody.IsSleeping() == false)
-            {
-                await UniTask.Yield(cancellationToken);
-            }
-            
-            _weaponStrategy.ClearOwner();
-        }
 
         private void SetEquipped(bool value, Transform container)
         {
             IsEquipped = value;
             _collider.enabled = !value;
-            var newcontainer = value ? container : _startContainer;
+            var newContainer = value ? container : _startContainer;
             
-            if (newcontainer == container)
-                newcontainer.localPosition = Offset;
+            if (newContainer == container)
+                newContainer.localPosition = Offset;
             
-            SelfTransform.SetParent(newcontainer);
+            SelfTransform.SetParent(newContainer);
             _rigidbody.isKinematic = value;
             _rigidbody.useGravity = !value;
+
+            if (value == false)
+                return;
             
-            if (value)
-            {
-                SelfTransform.position = container.position;
-                SelfTransform.forward = container.forward;
-            }
+            SelfTransform.position = container.position;
+            SelfTransform.forward = container.forward;
         }
     }
 }

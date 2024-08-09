@@ -12,7 +12,7 @@ namespace Modules.Weapons
 
         public Func<bool> AttackHandler { get; private set; }
         public WeaponType WeaponType { get; private set; }
-        public Action AttackInterruptHAndler { get; private set; }
+        public Action AttackInterruptHandler { get; private set; }
 
         public virtual void Initialize()
         {
@@ -26,7 +26,7 @@ namespace Modules.Weapons
                 interruptModule);
             AttackHandler = weapon.TryAttack;
             WeaponType = _weaponTypeGetter.Get(attackModule);
-            AttackInterruptHAndler = weapon.Interrupt;
+            AttackInterruptHandler = weapon.Interrupt;
         }
     }
 }

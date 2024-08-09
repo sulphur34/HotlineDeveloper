@@ -20,7 +20,7 @@ using Modules.AdvertisementSystem;
 using Modules.AimSystem;
 using Source.Modules.FocusSystem;
 using Modules.NextLevelButtonSystem;
-using Modules.Weapons.WeaponItemSystem;
+using Modules.WeaponItemSystem;
 using UnityEngine.Serialization;
 
 public class LevelCompositRoot : LifetimeScope

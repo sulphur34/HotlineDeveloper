@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
+using Modules.Weapons;
 using Modules.Weapons.Range;
+using Modules.WeaponItemSystem;
 using UnityEngine;
 using VContainer;
 
-namespace Modules.Weapons.WeaponItemSystem
+namespace Modules.WeaponItemSystem
 {
     public class WeaponItemInitializer : MonoBehaviour
     {
@@ -22,9 +24,6 @@ namespace Modules.Weapons.WeaponItemSystem
 
         public void InitializeWeapon(WeaponItem weaponItem)
         {
-            if(weaponItem == null)
-                return;
-            
             WeaponSetup weaponSetup = weaponItem.GetComponent<WeaponSetup>();
 
             if (weaponSetup.GetType() == typeof(RangeWeaponSetup))

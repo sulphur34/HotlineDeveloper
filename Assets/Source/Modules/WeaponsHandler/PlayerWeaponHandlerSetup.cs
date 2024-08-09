@@ -1,5 +1,5 @@
 using Modules.InputSystem.Interfaces;
-using Modules.Weapons.WeaponItemSystem;
+using Modules.WeaponItemSystem;
 using VContainer;
 
 namespace Modules.WeaponsHandler

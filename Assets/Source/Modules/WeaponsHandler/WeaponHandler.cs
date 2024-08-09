@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using Modules.Weapons.WeaponItemSystem;
+using Modules.WeaponItemSystem;
 using Modules.InputSystem.Interfaces;
 using Modules.WeaponTypes;
 

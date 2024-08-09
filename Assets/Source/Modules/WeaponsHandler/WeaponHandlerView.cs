@@ -1,7 +1,7 @@
 using System;
 using Modules.DamageReceiverSystem;
 using Modules.Weapons.Ammunition;
-using Modules.Weapons.WeaponItemSystem;
+using Modules.WeaponItemSystem;
 using Modules.AnimationSystem;
 using Modules.WeaponTypes;
 using UnityEngine;
@@ -47,7 +47,7 @@ namespace Modules.WeaponsHandler
             _weaponHandlerAnimator.AnimatePick(WeaponInfo, weaponItem);
 
             if (weaponItem.WeaponType == WeaponType.Range)
-                _ammoUIHandler.SetAmmoUI(true, weaponItem._weaponAmmunitionView);
+                _ammoUIHandler.SetAmmoUI(true, weaponItem.WeaponAmmunitionView);
             else
                 _ammunitionUI?.Deactivate();
         }

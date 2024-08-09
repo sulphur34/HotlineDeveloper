@@ -1,5 +1,5 @@
 using Modules.DamageReceiverSystem;
-using Modules.Weapons.WeaponItemSystem;
+using Modules.WeaponItemSystem;
 using Modules.WeaponTypes;
 
 namespace Modules.WeaponsHandler

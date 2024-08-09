@@ -135,12 +135,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _force: 30
-  _rotationForce: 70
-  _rotationZ: 90
-  _meleeRotationY: 0
-  _rangeRotationY: 90
-  _rotationX: 0
+  _throwData:
+    <Force>k__BackingField: 30
+    <RotationForce>k__BackingField: 5000
+    <RotationZ>k__BackingField: 90
+    <MeleeRotationY>k__BackingField: 0
+    <RangeRotationY>k__BackingField: 90
+    <RotationX>k__BackingField: 0
   <IsTrackable>k__BackingField: 1
   <Offset>k__BackingField: {x: -1, y: 0, z: 0}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 1847967441290073688}
@@ -157,7 +158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42536d2e2082f84682a18c4582079dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponItem: {fileID: 2349028809906750443}
   _collider: {fileID: 440099692850629181}
   _attakTime: 0.2
   _rechargeTime: 1.3

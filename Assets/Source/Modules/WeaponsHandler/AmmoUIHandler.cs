@@ -4,7 +4,8 @@ namespace Modules.WeaponsHandler
 {
     public class AmmoUIHandler
     {
-        private AmmunitionUI _ammunitionUI;
+        private readonly AmmunitionUI _ammunitionUI;
+        
         private IAmmunitionView _currentAmmunitionView;
 
         public AmmoUIHandler(AmmunitionUI ammunitionUI, IAmmunitionView currentAmmunitionView)

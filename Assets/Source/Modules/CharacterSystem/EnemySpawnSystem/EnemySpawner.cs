@@ -3,7 +3,7 @@ using Modules.Characters.Enemies.EnemyBehavior;
 using Modules.CharacterSystem;
 using Modules.DamageReceiverSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
-using Modules.Weapons.WeaponItemSystem;
+using Modules.WeaponItemSystem;
 using UnityEngine;
 using VContainer;
 

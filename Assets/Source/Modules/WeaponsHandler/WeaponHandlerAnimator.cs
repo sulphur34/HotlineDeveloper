@@ -1,5 +1,5 @@
 using Modules.AnimationSystem;
-using Modules.Weapons.WeaponItemSystem;
+using Modules.WeaponItemSystem;
 using Modules.WeaponTypes;
 
 namespace Modules.WeaponsHandler

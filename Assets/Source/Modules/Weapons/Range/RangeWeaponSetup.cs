@@ -1,7 +1,6 @@
 ﻿using Modules.BulletSystem;
 using Modules.Weapons.Ammunition;
 using UnityEngine;
-using VContainer;
 
 namespace Modules.Weapons.Range
 {

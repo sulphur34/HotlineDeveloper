@@ -8,7 +8,7 @@ using Modules.InputSystem;
 using Modules.CharacterSystem.Enemies.EnemyBehavior.Variables;
 using Modules.EnemySpawnSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
-using Modules.Weapons.WeaponItemSystem;
+using Modules.WeaponItemSystem;
 using UnityEngine;
 
 namespace Modules.Characters.Enemies.EnemyBehavior

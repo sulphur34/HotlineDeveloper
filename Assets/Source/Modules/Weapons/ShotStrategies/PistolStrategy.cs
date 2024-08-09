@@ -1,6 +1,4 @@
-﻿using Modules.BulletSystem;
-
-namespace Modules.Weapons
+﻿namespace Modules.Weapons
 {
     public class PistolStrategy : ShotStrategy
     {

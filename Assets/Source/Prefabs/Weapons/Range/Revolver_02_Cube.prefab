@@ -156,7 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef631768894ac9418722f25acd7f9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponItem: {fileID: -8801412859410491620}
   _shotStrategy: {fileID: 4787710054645971459}
 --- !u!114 &-8801412859410491620
 MonoBehaviour:
@@ -170,12 +169,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _force: 20
-  _rotationForce: 200
-  _rotationZ: 90
-  _meleeRotationY: 0
-  _rangeRotationY: 90
-  _rotationX: 0
+  _throwData:
+    <Force>k__BackingField: 20
+    <RotationForce>k__BackingField: 200
+    <RotationZ>k__BackingField: 90
+    <MeleeRotationY>k__BackingField: 0
+    <RangeRotationY>k__BackingField: 90
+    <RotationX>k__BackingField: 0
   <IsTrackable>k__BackingField: 1
   <Offset>k__BackingField: {x: -0.5, y: 0.4, z: 0}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 3427193270551294589}
