@@ -1,6 +1,6 @@
-using Modules.Weapons.WeaponTypeSystem;
+using Modules.WeaponTypes;
 
-namespace Modules.DamageReceiverSystem.DamageStrategy
+namespace Modules.DamagerSystem.DamageStrategy
 {
     internal class MeleeImmuneReceiveStrategy : IDamageReceiveStrategy
     {

@@ -10,14 +10,11 @@ namespace Modules.AimSystem
         [SerializeField] private RectTransform _parentRectTransform;
 
         private RectTransform _rectTransform;
-        private ILookInput _lookInput;
-
 
         [Inject]
         public void Construct(ILookInput lookInput)
         {
-            _lookInput = lookInput;
-            _lookInput.LookReceived += UpdatePosition;
+            lookInput.LookReceived += UpdatePosition;
             _rectTransform = GetComponent<RectTransform>();
         }
 

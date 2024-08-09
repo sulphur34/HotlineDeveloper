@@ -1,16 +1,17 @@
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime;
-using Modules.Characters.Enemies.EnemyBehavior.Variables;
+using Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables;
 using Modules.CharacterSystem;
-using Modules.DamageReceiverSystem;
-using Modules.PlayerWeaponsHandler;
+using Modules.DamagerSystem;
+using Modules.WeaponsHandler;
 using Modules.InputSystem;
 using Modules.CharacterSystem.Enemies.EnemyBehavior.Variables;
 using Modules.EnemySpawnSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
+using Modules.WeaponItemSystem;
 using UnityEngine;
 
-namespace Modules.Characters.Enemies.EnemyBehavior
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior
 {
     [RequireComponent(
         typeof(EnemyWeaponHandlerSetup),
@@ -35,12 +36,12 @@ namespace Modules.Characters.Enemies.EnemyBehavior
         private PatrolRoute _patrolRoute;
 
         internal void Initialize(BehaviorConfig behaviorConfig, PatrolRoute patrolRoute, WeaponTracker weaponTracker,
-            Player player)
+            Player player, WeaponItemInitializer weaponItemInitializer)
         {
             _aiInput = new AiInput();
             _weaponHandlerSetup = GetComponent<EnemyWeaponHandlerSetup>();
             _damageReceiver = GetComponent<DamageReceiverView>();
-            _weaponHandlerSetup.Initialize(_aiInput);
+            _weaponHandlerSetup.Initialize(_aiInput, weaponItemInitializer);
             _behaviorTree = GetComponent<BehaviorTree>();
             _behaviorConfig = behaviorConfig;
             _weaponTracker = weaponTracker;

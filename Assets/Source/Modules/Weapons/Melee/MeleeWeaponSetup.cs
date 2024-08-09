@@ -10,10 +10,10 @@ namespace Modules.Weapons.Melee
 
         private MeleeAttackModule _meleeAttackModule;
         
-        private void Awake()
+        public override void Initialize()
         {
             _meleeAttackModule = new MeleeAttackModule(_collider, _attakTime);
-            Init(_rechargeTime, _meleeAttackModule, _meleeAttackModule);
+            SetWeapon(_rechargeTime, _meleeAttackModule, _meleeAttackModule);
         }
 
         private void OnDestroy()

@@ -1,4 +1,4 @@
-﻿namespace Modules.Weapons.WeaponTypeSystem
+﻿namespace Modules.WeaponTypes
 {
     public enum WeaponType
     {

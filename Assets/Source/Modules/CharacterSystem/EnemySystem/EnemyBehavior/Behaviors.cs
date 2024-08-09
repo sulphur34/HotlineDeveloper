@@ -1,4 +1,4 @@
-namespace Modules.Characters.Enemies.EnemyBehavior
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior
 {
     internal enum Behaviors
     {

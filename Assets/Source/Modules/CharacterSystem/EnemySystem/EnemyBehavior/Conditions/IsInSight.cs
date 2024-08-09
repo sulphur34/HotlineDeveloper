@@ -1,9 +1,8 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.CharacterSystem;
 using UnityEngine;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsInSight")]

@@ -1,9 +1,9 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.PlayerWeaponsHandler;
-using Modules.Weapons.WeaponTypeSystem;
+using Modules.WeaponsHandler;
+using Modules.WeaponTypes;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Actions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
 {
     [TaskCategory("CustomTask")]
     [TaskName("SetAttackDistance")]
@@ -22,7 +22,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 
         public override TaskStatus OnUpdate()
         {
-            if (_weaponHandler == null || _weaponHandler.WeaponInfo.CurrentWeaponItemIsEmpty)
+            if (_weaponHandler == null || _weaponHandler.WeaponInfo.IsCurrentWeaponItemEmpty)
                 return TaskStatus.Failure;
 
             AttackDistance.Value = _weaponHandler.WeaponInfo.CurrentWeaponType == WeaponType.Melee

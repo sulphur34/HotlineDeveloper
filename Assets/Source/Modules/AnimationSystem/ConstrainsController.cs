@@ -4,7 +4,7 @@ namespace Modules.AnimationSystem
 {
     internal class ConstrainsController
     {
-        private ConstraintsData _constraintsData;
+        private readonly ConstraintsData _constraintsData;
 
         internal ConstrainsController(ConstraintsData constraintsData)
         {

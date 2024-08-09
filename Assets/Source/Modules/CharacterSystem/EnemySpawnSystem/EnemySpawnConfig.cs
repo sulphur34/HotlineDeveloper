@@ -1,6 +1,5 @@
-using Modules.Characters.Enemies;
-using Modules.Characters.Enemies.EnemyBehavior;
-using Modules.DamageReceiverSystem;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
+using Modules.DamagerSystem;
 using UnityEngine;
 
 namespace Modules.EnemySpawnSystem
@@ -10,7 +9,6 @@ namespace Modules.EnemySpawnSystem
     {
         [field: SerializeField] internal Enemy Prefab { get; private set; }
         [field: SerializeField] internal Behaviors Behavior { get; private set; }
-        
         [field: SerializeField] internal DamageableTypes DamageableType { get; private set; }
         [field: SerializeField] internal Transform SpawnPoint { get; private set; }
         [field: SerializeField] internal PatrolRoute PatrolRoute { get; private set; }

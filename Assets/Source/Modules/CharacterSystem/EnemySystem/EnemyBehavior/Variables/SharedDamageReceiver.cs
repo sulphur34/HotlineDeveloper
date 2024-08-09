@@ -1,7 +1,6 @@
 using BehaviorDesigner.Runtime;
-using Modules.DamageReceiverSystem;
 
-namespace Modules.DamageReceiverSystem.Enemies.EnemyBehavior.Variables
+namespace Modules.DamagerSystem.Enemies.EnemyBehavior.Variables
 {
     public class SharedDamageReceiver : SharedVariable<DamageReceiverView>
     {

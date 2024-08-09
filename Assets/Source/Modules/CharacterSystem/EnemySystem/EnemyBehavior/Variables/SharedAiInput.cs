@@ -1,7 +1,7 @@
 using BehaviorDesigner.Runtime;
 using Modules.InputSystem;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Variables
+namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables
 {
     public class SharedAiInput : SharedVariable<AiInput>
     {

@@ -1,4 +1,5 @@
 using System.Collections;
+using Modules.AnimationSystem;
 using UnityEngine;
 
 namespace Modules.AnimationSystem
@@ -13,15 +14,14 @@ namespace Modules.AnimationSystem
         private RagdollController _ragdollController;
         private AnimatorController _animatorController;
         private Transform _transform;
-        private Animator _animator;
 
         private void Awake()
         {
-            _animator = GetComponent<Animator>();
+            Animator animator = GetComponent<Animator>();
             _transform = transform;
             _constrainsController = new ConstrainsController(_constraintsData);
             _ragdollController = new RagdollController(_ragdollJointsData);
-            _animatorController = new AnimatorController(_animator, _transform, this);
+            _animatorController = new AnimatorController(animator, _transform, this);
             _animatorController.Activate();
         }
 

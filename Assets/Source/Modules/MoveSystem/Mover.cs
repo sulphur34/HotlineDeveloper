@@ -20,9 +20,9 @@ namespace Modules.MoveSystem
             _torsoRotator = torsoRotator;
         }
 
-        public void RotateHorizontal(Vector2 direction)
+        public void RotateHorizontal(Vector2 rotationValue)
         {
-            RotateDirection(_torsoRotator, direction);
+            RotateDirection(_torsoRotator, rotationValue);
         }
 
         public void MoveHorizontal(Vector2 direction)

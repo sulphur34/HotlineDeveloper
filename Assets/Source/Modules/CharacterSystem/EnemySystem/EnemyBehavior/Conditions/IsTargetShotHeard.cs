@@ -1,10 +1,9 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
 using Modules.CharacterSystem.Enemies.EnemyBehavior.Variables;
-using Modules.Weapons.WeaponTypeSystem;
 using UnityEngine;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsTargetShotHeard")]

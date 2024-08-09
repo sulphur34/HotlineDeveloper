@@ -1,4 +1,4 @@
-namespace Modules.DamageReceiverSystem
+namespace Modules.DamagerSystem
 {
     internal class MeleeStrategy : WeaponStrategy
     {

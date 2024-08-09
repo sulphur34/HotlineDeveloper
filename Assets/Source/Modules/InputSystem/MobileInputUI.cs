@@ -1,5 +1,8 @@
 using UnityEngine;
 
-public class MobileInputUI : MonoBehaviour
+namespace Modules.InputSystem
 {
+    public class MobileInputUI : MonoBehaviour
+    {
+    }
 }

@@ -1,6 +1,7 @@
 using BehaviorDesigner.Runtime;
+using Modules.WeaponItemSystem;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Variables
+namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables
 {
     public class SharedWeaponTracker : SharedVariable<WeaponTracker>
     {

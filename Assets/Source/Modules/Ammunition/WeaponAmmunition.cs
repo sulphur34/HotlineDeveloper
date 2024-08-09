@@ -2,18 +2,18 @@
 
 namespace Modules.Weapons.Ammunition
 {
-    internal class WeaponAmmunition
+    public class WeaponAmmunition
     {
-        internal WeaponAmmunition(uint count)
+        public WeaponAmmunition(uint count)
         {
             Count = count;
         }
 
         internal event Action CountChanged;
 
-        internal uint Count { get; private set; }
+        public uint Count { get; private set; }
 
-        internal void Remove()
+        public void Remove()
         {
             if (Count > 0)
             {

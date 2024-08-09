@@ -1,13 +1,13 @@
 using Modules.InputSystem;
+using Modules.WeaponItemSystem;
 
-namespace Modules.PlayerWeaponsHandler
+namespace Modules.WeaponsHandler
 {
     public class EnemyWeaponHandlerSetup : WeaponHandlerSetup
     {
-        public void Initialize(AiInput aiInput)
+        public void Initialize(AiInput aiInput, WeaponItemInitializer weaponItemInitializer)
         {
-            WeaponHandler weaponHandler = new WeaponHandler(WeaponHandlerData, aiInput, aiInput);
-            WeaponHandlerPresenter = new WeaponHandlerPresenter(weaponHandler, WeaponHandlerView);
+            base.Initialize(aiInput, aiInput, weaponItemInitializer);
         }
     }
 }

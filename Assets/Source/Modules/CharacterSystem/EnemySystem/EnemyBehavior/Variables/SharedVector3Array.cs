@@ -1,7 +1,7 @@
 using BehaviorDesigner.Runtime;
 using UnityEngine;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Variables
+namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables
 {
     public class SharedVector3Array : SharedVariable<Vector3[]>
     {

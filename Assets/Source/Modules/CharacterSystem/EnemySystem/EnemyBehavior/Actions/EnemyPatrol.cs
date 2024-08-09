@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.Characters.Enemies.EnemyBehavior.Variables;
+using Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Actions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
 {
     [TaskCategory("CustomTask")]
     [TaskName("EnemyPatrol")]

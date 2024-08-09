@@ -1,5 +1,5 @@
 using BehaviorDesigner.Runtime;
-using Modules.PlayerWeaponsHandler;
+using Modules.WeaponsHandler;
 
 namespace Modules.CharacterSystem.Enemies.EnemyBehavior.Variables
 {

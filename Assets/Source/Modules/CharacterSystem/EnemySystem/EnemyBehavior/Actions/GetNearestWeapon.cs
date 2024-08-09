@@ -1,10 +1,10 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.Characters.Enemies.EnemyBehavior.Variables;
-using Modules.Weapons.WeaponItemSystem;
+using Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables;
+using Modules.WeaponItemSystem;
 using UnityEngine;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Actions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
 {
     [TaskCategory("CustomTask")]
     [TaskName("GetNearestWeapon")]

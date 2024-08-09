@@ -3,7 +3,7 @@ using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Actions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
 {
     [TaskCategory("CustomTask")]
     [TaskName("EnemyMovePosition")]
@@ -13,7 +13,6 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
         public float MinStoppingDistance = 0.1f;
 
         private NavMeshAgent _navMeshAgent;
-        private bool _isActive;
         private Transform _transform;
 
         public override void OnAwake()

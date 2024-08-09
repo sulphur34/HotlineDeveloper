@@ -11,7 +11,6 @@ namespace Modules.AnimationSystem
         private readonly AnimationController _animationController;
         private readonly AnimatorIndexer _animatorIndexer;
         private readonly Transform _transform;
-        private readonly CancellationTokenSource _cancellationTokenSource;
 
         private Coroutine _coroutine; 
         private Vector3 _oldPosition;
@@ -53,7 +52,7 @@ namespace Modules.AnimationSystem
 
         private IEnumerator TrackingSpeed()
         {
-            while (true)
+            while (_animator.enabled)
             {
                 float distance = Vector3.Magnitude(_transform.position - _oldPosition);
                 _animator.SetFloat(_animatorIndexer.SpeedIndex, distance);

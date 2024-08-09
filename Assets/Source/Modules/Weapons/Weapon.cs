@@ -1,4 +1,3 @@
-using System;
 using System.Threading;
 
 namespace Modules.Weapons
@@ -22,8 +21,6 @@ namespace Modules.Weapons
             _interruptModule = interruptModule;
         }
 
-        internal event Action Attacked;
-
         internal bool TryAttack()
         {
             bool isRecharged = _rechargeTime.Recharged;
@@ -34,7 +31,6 @@ namespace Modules.Weapons
                 canAttack = _attackModule.TryAttack();
                 _rechargeTime.Discharge();
                 _rechargeTime.WaitRecharged(_cancellationToken);
-                Attacked?.Invoke();
             }
 
             return isRecharged && canAttack;
@@ -42,8 +38,7 @@ namespace Modules.Weapons
 
         internal void Interrupt()
         {
-            if(_interruptModule != null)
-                _interruptModule.Interrupt();
+            _interruptModule?.Interrupt();
         }
     }
 }

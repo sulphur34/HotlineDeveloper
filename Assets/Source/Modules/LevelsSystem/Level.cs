@@ -21,7 +21,7 @@ namespace Modules.LevelsSystem
         public void SetNumber(uint number)
         {
             if (number < MinNumber)
-                throw new ArgumentException();
+                throw new ArgumentOutOfRangeException();
 
             Number = number;
         }

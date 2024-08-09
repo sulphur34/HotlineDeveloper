@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using Modules.LevelsSystem;
-using Modules.GUISystem;
 using UnityEngine;
 using VContainer;
 
@@ -23,6 +21,7 @@ namespace Modules.GUISystem
         {
             _scoreCounter.KillScoreChanged -= OnKillScoreChange;
             _scoreCounter.TimeScoreChanged -= OnTimeScoreChange;
+            _levelConditionManager.Won -= OnWin;
         }
 
         [Inject]

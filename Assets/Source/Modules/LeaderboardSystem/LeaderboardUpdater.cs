@@ -1,6 +1,5 @@
 ﻿using Modules.LevelsSystem;
 using Modules.GUISystem;
-using UnityEngine;
 using VContainer;
 
 namespace Modules.LeaderboardSystem
@@ -23,7 +22,7 @@ namespace Modules.LeaderboardSystem
             _levelConditionManager.Won += OnWon;
         }
 
-        public void OnWon()
+        private void OnWon()
         {
             Level currentLevel = _levelsData.Value[_levelsData.ForLoad - 1];
             currentLevel.UpdateScore(_scoreCounter.TotalScore);

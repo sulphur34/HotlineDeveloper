@@ -1,7 +1,7 @@
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.DamageReceiverSystem.Enemies.EnemyBehavior.Variables;
+using Modules.DamagerSystem.Enemies.EnemyBehavior.Variables;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsKnocked")]

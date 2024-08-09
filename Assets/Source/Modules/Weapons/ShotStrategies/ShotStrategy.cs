@@ -44,7 +44,7 @@ namespace Modules.Weapons
 
         private Vector3 GetRandomDirection()
         {
-            float angleInDeg = Random.Range(_minAngle, _maxAngle);;
+            float angleInDeg = Random.Range(_minAngle, _maxAngle);
             Quaternion rotation = Quaternion.AngleAxis(angleInDeg, Vector3.up);
             return rotation * transform.forward;
         } 

@@ -1,62 +1,64 @@
-using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DesktopInputController : InputController
+namespace Modules.InputSystem.PlayerInput
 {
-    private readonly Vector2 _vectorOne = new Vector2(1.0f, 1.0f);
-    private readonly float _screenToVirtualMultiplier = 2f;
-    private readonly float _directionRatio = -1f;
-
-    private Vector2 _middleScreenPoint => new Vector2(Width / 2, Height / 2);
-
-    private void OnEnable()
+    public class DesktopInputController : InputController
     {
-        PlayerInput.PlayerDesktop.Pick.performed += OnPick;
-        PlayerInput.PlayerDesktop.Finish.performed += OnFinish;
-        PlayerInput.Enable();
-    }
+        private readonly Vector2 _vectorOne = new Vector2(1.0f, 1.0f);
+        private readonly float _screenToVirtualMultiplier = 2f;
+        private readonly float _directionRatio = -1f;
 
-    private void OnDisable()
-    {
-        PlayerInput.PlayerDesktop.Pick.performed -= OnPick;
-        PlayerInput.PlayerDesktop.Finish.performed -= OnFinish;
-        PlayerInput.Enable();
-    }
+        private Vector2 _middleScreenPoint => new Vector2(Width / 2, Height / 2);
 
-    protected override Vector2 OnMove()
-    {
-        return PlayerInput.PlayerDesktop.Move.ReadValue<Vector2>();
-    }
+        private void OnEnable()
+        {
+            PlayerInput.PlayerDesktop.Pick.performed += OnPick;
+            PlayerInput.PlayerDesktop.Finish.performed += OnFinish;
+            PlayerInput.Enable();
+        }
 
-    protected override Vector2 OnRotate()
-    {
-        Vector2 direction = PlayerInput.PlayerDesktop.Rotate.ReadValue<Vector2>();
-        direction = new Vector2(direction.x / Screen.width, direction.y / Screen.height);
-        direction = direction * _screenToVirtualMultiplier - _vectorOne;
-        Vector2 modifiedDirection = new Vector2(direction.x * Width, direction.y * Height);
-        return modifiedDirection;
-    }
+        private void OnDisable()
+        {
+            PlayerInput.PlayerDesktop.Pick.performed -= OnPick;
+            PlayerInput.PlayerDesktop.Finish.performed -= OnFinish;
+            PlayerInput.Enable();
+        }
 
-    protected override Vector2 OnLook()
-    {
-        return PlayerInput.PlayerDesktop.Look.ReadValue<Vector2>();
-    }
+        protected override Vector2 OnMove()
+        {
+            return PlayerInput.PlayerDesktop.Move.ReadValue<Vector2>();
+        }
 
-    protected override Vector2 OnFarLook()
-    {
-        Vector2 position = PlayerInput.PlayerDesktop.FarLook.ReadValue<Vector2>();
-        return position == Vector2.zero ? _middleScreenPoint : position;
-    }
+        protected override Vector2 OnRotate()
+        {
+            Vector2 direction = PlayerInput.PlayerDesktop.Rotate.ReadValue<Vector2>();
+            direction = new Vector2(direction.x / Screen.width, direction.y / Screen.height);
+            direction = direction * _screenToVirtualMultiplier - _vectorOne;
+            Vector2 modifiedDirection = new Vector2(direction.x * Width, direction.y * Height);
+            return modifiedDirection;
+        }
 
-    protected override void OnAttack()
-    {
-        if (PlayerInput.PlayerDesktop.Attack.IsPressed() == false)
-            return;
+        protected override Vector2 OnLook()
+        {
+            return PlayerInput.PlayerDesktop.Look.ReadValue<Vector2>();
+        }
 
-        if (EventSystem.current.IsPointerOverGameObject())
-            return;
+        protected override Vector2 OnFarLook()
+        {
+            Vector2 position = PlayerInput.PlayerDesktop.FarLook.ReadValue<Vector2>();
+            return position == Vector2.zero ? _middleScreenPoint : position;
+        }
 
-        Attack();
+        protected override void OnAttack()
+        {
+            if (PlayerInput.PlayerDesktop.Attack.IsPressed() == false)
+                return;
+
+            if (EventSystem.current.IsPointerOverGameObject())
+                return;
+
+            Attack();
+        }
     }
 }

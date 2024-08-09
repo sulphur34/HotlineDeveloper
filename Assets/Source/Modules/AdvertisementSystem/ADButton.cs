@@ -7,14 +7,12 @@ namespace Modules.AdvertisementSystem
     [RequireComponent(typeof(VideoAD))]
     public abstract class ADButton : MonoBehaviour
     {
-        private Button _button;
-
         protected virtual void Awake()
         {
             VideoAD = GetComponent<VideoAD>();
-            _button = GetComponent<Button>();
-            _button.onClick.AddListener(ShowAD);
-            _button.onClick.AddListener(OnButtonClick);
+            Button button = GetComponent<Button>();
+            button.onClick.AddListener(ShowAD);
+            button.onClick.AddListener(OnButtonClick);
             VideoAD.Closed += OnVideoClose;
         }
         

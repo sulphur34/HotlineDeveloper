@@ -1,26 +1,38 @@
-using Modules.Weapons.WeaponItemSystem;
-using Modules.Weapons.WeaponTypeSystem;
+using System;
+using Modules.DamagerSystem;
+using Modules.WeaponItemSystem;
+using Modules.WeaponTypes;
 
-namespace Modules.PlayerWeaponsHandler
+namespace Modules.WeaponsHandler
 {
-    public class WeaponHandlerPresenter
+    public class WeaponHandlerPresenter : IDisposable
     {
-        private WeaponHandlerView _weaponHandlerView;
-        private WeaponHandler _weaponHandler;
-        public WeaponHandlerPresenter(WeaponHandler weaponHandler, WeaponHandlerView weaponHandlerView)
+        private readonly WeaponHandlerView _weaponHandlerView;
+        private readonly WeaponHandler _weaponHandler;
+        private readonly DamageReceiverView _damageReceiverView;
+
+        public WeaponHandlerPresenter(WeaponHandler weaponHandler, WeaponHandlerView weaponHandlerView,
+            DamageReceiverView damageReceiverView)
         {
             _weaponHandler = weaponHandler;
+            _damageReceiverView = damageReceiverView;
             _weaponHandler.WeaponPicked += OnWeaponPick;
             _weaponHandler.Attacked += OnWeaponAttack;
             _weaponHandler.WeaponThrown += OnWeaponThrow;
             _weaponHandlerView = weaponHandlerView;
-            _weaponHandlerView.Initialize(_weaponHandler);
-            _weaponHandlerView.Unequipped += _weaponHandler.DisarmWeaponItem;
+            _weaponHandlerView.Initialize();
+            _damageReceiverView.FallenDown += OnFallDown;
         }
 
-        private void OnWeaponPick(IWeaponInfo weaponItem)
+        private void OnFallDown()
         {
-            _weaponHandlerView.OnPick(weaponItem);
+            _weaponHandlerView.UnequipWeapon(_weaponHandler);
+            _weaponHandler.DisarmWeaponItem();
+        }
+
+        private void OnWeaponPick(IWeaponInfo weaponItem, IWeaponHandlerInfo weaponHandlerInfo)
+        {
+            _weaponHandlerView.OnPick(weaponItem, _weaponHandler);
         }
 
         private void OnWeaponThrow()
@@ -38,7 +50,7 @@ namespace Modules.PlayerWeaponsHandler
             _weaponHandler.Attacked -= OnWeaponAttack;
             _weaponHandler.WeaponPicked -= OnWeaponPick;
             _weaponHandler.WeaponThrown -= OnWeaponThrow;
-            _weaponHandlerView.Unequipped -= _weaponHandler.DisarmWeaponItem;
+            _damageReceiverView.FallenDown -= OnFallDown;
         }
     }
 }

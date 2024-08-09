@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Modules.AdvertisementSystem
@@ -8,6 +7,11 @@ namespace Modules.AdvertisementSystem
         [SerializeField] private ParticleSystem _appearEffect;
 
         private ParticleSystem _effectInstance;
+
+        private void Start()
+        {
+            gameObject.SetActive(false);
+        }
         
         private void OnEnable()
         {
