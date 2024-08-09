@@ -12,16 +12,14 @@ namespace Modules.AimSystem
         private Transform _transform;
         private Camera _camera;
         private Transform _cameraTransform;
-        private IFarLookInput _lookInput;
 
         [Inject]
         private void Construct(IFarLookInput lookInput)
         {
-            _lookInput = lookInput;
             _transform = transform;
             _camera = Camera.main;
             _cameraTransform = _camera.transform;
-            _lookInput.FarLookReceived += UpdatePosition;
+            lookInput.FarLookReceived += UpdatePosition;
         }
 
         private void UpdatePosition(Vector2 lookPosition)

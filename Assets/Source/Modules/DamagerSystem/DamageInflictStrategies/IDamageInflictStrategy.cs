@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace Modules.DamageReceiverSystem
+namespace Modules.DamagerSystem
 {
     public interface IDamageInflictStrategy
     {

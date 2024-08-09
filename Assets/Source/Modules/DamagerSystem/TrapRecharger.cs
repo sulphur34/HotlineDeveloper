@@ -1,43 +1,45 @@
-using System;
 using System.Collections;
-using Modules.DamageReceiverSystem;
+using Modules.DamagerSystem;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider))]
-public class TrapRecharger : MonoBehaviour
+namespace Modules.DamagerSystem
 {
-    [SerializeField] private EnemyTrapStrategy _trapStrategy;
-    [SerializeField] private ParticleSystem _trapParticle;
-    [SerializeField] private float _rechargeTime;
-
-    private Collider _collider;
-    private Coroutine _coroutine;
-    private WaitForSeconds _waitForSeconds;
-
-    private void Awake()
+    [RequireComponent(typeof(Collider))]
+    public class TrapRecharger : MonoBehaviour
     {
-        _waitForSeconds = new WaitForSeconds(_rechargeTime);
-        _collider = GetComponent<Collider>();
-        _trapStrategy.EnemyDamaged += OnEnemyDamage;
-    }
+        [SerializeField] private EnemyTrapStrategy _trapStrategy;
+        [SerializeField] private ParticleSystem _trapParticle;
+        [SerializeField] private float _rechargeTime;
 
-    private void OnDisable()
-    {
-        if(_coroutine != null)
-            StopCoroutine(_coroutine);
-    }
+        private Collider _collider;
+        private Coroutine _coroutine;
+        private WaitForSeconds _waitForSeconds;
 
-    private void OnEnemyDamage()
-    {
-        _coroutine = StartCoroutine(RechargingRoutine());
-    }
+        private void Awake()
+        {
+            _waitForSeconds = new WaitForSeconds(_rechargeTime);
+            _collider = GetComponent<Collider>();
+            _trapStrategy.EnemyDamaged += OnEnemyDamage;
+        }
 
-    private IEnumerator RechargingRoutine()
-    {
-        _trapParticle.Stop();
-        _collider.enabled = false;
-        yield return _waitForSeconds;
-        _trapParticle.Play();
-        _collider.enabled = true;
+        private void OnDisable()
+        {
+            if(_coroutine != null)
+                StopCoroutine(_coroutine);
+        }
+
+        private void OnEnemyDamage()
+        {
+            _coroutine = StartCoroutine(RechargingRoutine());
+        }
+
+        private IEnumerator RechargingRoutine()
+        {
+            _trapParticle.Stop();
+            _collider.enabled = false;
+            yield return _waitForSeconds;
+            _trapParticle.Play();
+            _collider.enabled = true;
+        }
     }
 }

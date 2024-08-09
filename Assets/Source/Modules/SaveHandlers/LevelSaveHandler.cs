@@ -32,7 +32,7 @@ namespace Modules.SaveHandlers
             _saveSystem.Save(data =>
             {
                 int nextLevelNumber = _levels.ForLoad + 1;
-                Level nextLevel = _levels.Value.FirstOrDefault(level => level.Number == nextLevelNumber);
+                Level nextLevel = _levels.Value.Find(level => level.Number == nextLevelNumber);
 
                 if (nextLevel == null || nextLevel.IsCompleted)
                     return;

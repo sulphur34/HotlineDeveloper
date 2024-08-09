@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Modules.DamageReceiverSystem
+namespace Modules.DamagerSystem
 {
     internal class Health
     {
@@ -29,7 +29,8 @@ namespace Modules.DamageReceiverSystem
             if (IsDead)
                 return;
 
-            _currentHealth = Mathf.Clamp(_currentHealth -= damage, _minHealth, _maxHealth);
+            float newHealth = _currentHealth -= damage;
+            _currentHealth = Mathf.Clamp(newHealth, _minHealth, _maxHealth);
 
             if (_currentHealth <= _minHealth)
             {

@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using Modules.DamageReceiverSystem;
+using Modules.DamagerSystem;
 using Modules.Weapons;
 using Modules.Weapons.Ammunition;
 using Modules.WeaponTypes;
@@ -96,7 +96,7 @@ namespace Modules.WeaponItemSystem
             _rigidbody.isKinematic = value;
             _rigidbody.useGravity = !value;
 
-            if (value == false)
+            if (!value)
                 return;
             
             SelfTransform.position = container.position;

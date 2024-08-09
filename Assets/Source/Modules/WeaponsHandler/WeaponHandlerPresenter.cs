@@ -1,10 +1,11 @@
-using Modules.DamageReceiverSystem;
+using System;
+using Modules.DamagerSystem;
 using Modules.WeaponItemSystem;
 using Modules.WeaponTypes;
 
 namespace Modules.WeaponsHandler
 {
-    public class WeaponHandlerPresenter
+    public class WeaponHandlerPresenter : IDisposable
     {
         private readonly WeaponHandlerView _weaponHandlerView;
         private readonly WeaponHandler _weaponHandler;

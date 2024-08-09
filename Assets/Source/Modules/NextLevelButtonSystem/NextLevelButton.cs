@@ -14,7 +14,11 @@ namespace Modules.NextLevelButtonSystem
         private int _currentLevelIndex;
         private Fade _fade;
 
-        internal void Init(LevelsData levels, LevelSceneLoader levelSceneLoader, SceneLoader sceneLoader, Fade fade,
+        internal void Initialize(
+            LevelsData levels, 
+            LevelSceneLoader levelSceneLoader, 
+            SceneLoader sceneLoader, 
+            Fade fade,
             int currentLevelIndex)
         {
             _levels = levels;

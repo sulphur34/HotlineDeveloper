@@ -1,9 +1,10 @@
+using System;
 using Modules.InputSystem.Interfaces;
 using UnityEngine;
 
 namespace Modules.MoveSystem
 {
-    internal class MoverPresenter
+    internal class MoverPresenter : IDisposable
     {
         private readonly IMoveInput _moveInput;
         private readonly IRotateInput _lookInput;

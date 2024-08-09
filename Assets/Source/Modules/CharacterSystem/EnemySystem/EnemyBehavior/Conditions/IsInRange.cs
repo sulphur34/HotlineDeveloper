@@ -3,7 +3,7 @@ using BehaviorDesigner.Runtime.Tasks;
 using Modules.CharacterSystem;
 using UnityEngine;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsInRange")]
@@ -37,11 +37,14 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
             if (sqrMagnitude > _sqrDistance)
                 return TaskStatus.Failure;
 
-            if (LineOfSight && Physics.Linecast(selfPosition, targetPosition, out RaycastHit hitInfo))
-            {
-                if (hitInfo.collider.TryGetComponent(out Player player) == false)
-                    return TaskStatus.Failure;
-            }
+            if (!LineOfSight)
+                return TaskStatus.Success;
+            
+            if (!Physics.Linecast(selfPosition, targetPosition, out RaycastHit hitInfo))
+                return TaskStatus.Success;
+
+            if (hitInfo.collider.TryGetComponent(out Player player) == false)
+                return TaskStatus.Failure;
 
             return TaskStatus.Success;
         }

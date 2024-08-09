@@ -1,9 +1,11 @@
-namespace Modules.DamageReceiverSystem
+using System;
+
+namespace Modules.DamagerSystem
 {
-    internal class DamageReceiverPresenter
+    internal class DamageReceiverPresenter : IDisposable
     {
-        private DamageReceiver _damageReceiver;
-        private DamageReceiverView _damageReceiverView;
+        private readonly DamageReceiver _damageReceiver;
+        private readonly DamageReceiverView _damageReceiverView;
         
         internal DamageReceiverPresenter(DamageReceiver damageReceiver, DamageReceiverView damageReceiverView)
         {

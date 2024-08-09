@@ -1,13 +1,13 @@
 using System.Linq;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.DamageReceiverSystem;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
+using Modules.DamagerSystem;
 using Modules.WeaponsHandler;
-using Modules.Weapons.WeaponTypeSystem;
 using Modules.WeaponTypes;
 using UnityEngine;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsClearToFire")]
@@ -37,6 +37,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
                 .Select(collider => collider.GetComponent<Enemy>())
                 .Where(collider => collider?.GetComponent<DamageReceiverView>().IsDead == false)
                 .FirstOrDefault(enemy => enemy != null && enemy != _selfEnmey && IsInFireZone(enemy));
+            
             return enemy == null ? TaskStatus.Success : TaskStatus.Failure;
         }
 

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime;
-using Modules.Characters.Enemies.EnemyBehavior.Variables;
+using Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables;
 using Modules.CharacterSystem;
-using Modules.DamageReceiverSystem;
+using Modules.DamagerSystem;
 using Modules.WeaponsHandler;
 using Modules.InputSystem;
 using Modules.CharacterSystem.Enemies.EnemyBehavior.Variables;
@@ -11,7 +11,7 @@ using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
 using Modules.WeaponItemSystem;
 using UnityEngine;
 
-namespace Modules.Characters.Enemies.EnemyBehavior
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior
 {
     [RequireComponent(
         typeof(EnemyWeaponHandlerSetup),

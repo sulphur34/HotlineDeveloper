@@ -9,13 +9,11 @@ namespace Modules.GUISystem
         [SerializeField] private string _desktopTranslationName;
         [SerializeField] private string _mobileTranslationName;
 
-        private LeanLocalizedTextMeshProUGUI _localizedText;
-
         private void Awake()
         {
-            _localizedText = GetComponent<LeanLocalizedTextMeshProUGUI>();
+            var localizedText = GetComponent<LeanLocalizedTextMeshProUGUI>();
 
-            _localizedText.TranslationName =
+            localizedText.TranslationName =
                 Application.isMobilePlatform ? _mobileTranslationName : _desktopTranslationName;
         }
     }

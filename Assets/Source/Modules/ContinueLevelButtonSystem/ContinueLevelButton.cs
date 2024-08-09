@@ -14,7 +14,7 @@ namespace Module.ContinueLevelButtonSystem
         internal void Init(LevelsData levels, LevelSceneLoader levelSceneLoader)
         {
             _levels = levels;
-            _levelForLoad = _levels.Value.FirstOrDefault(level => level.IsCompleted == false);
+            _levelForLoad = _levels.Value.Find(level => level.IsCompleted);
 
             if (_levelForLoad == null)
                 _levelForLoad = _levels.Value[^1];

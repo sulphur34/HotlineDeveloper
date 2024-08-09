@@ -21,7 +21,7 @@ namespace Modules.NextLevelButtonSystem
             )
         {
             _currentLevelIndex = levels.ForLoad;
-            nextLevelButton.Init(levels, levelSceneLoader, sceneLoader, fade, _currentLevelIndex);
+            nextLevelButton.Initialize(levels, levelSceneLoader, sceneLoader, fade, _currentLevelIndex);
             
             if (_currentLevelIndex >= levels.Value.Count)
                 view.SetGameEndText();

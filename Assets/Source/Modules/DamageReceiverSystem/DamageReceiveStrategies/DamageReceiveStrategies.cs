@@ -1,4 +1,4 @@
-namespace Modules.DamageReceiverSystem.DamageStrategy
+namespace Modules.DamagerSystem.DamageStrategy
 {
     internal enum DamageReceiveStrategies
     {

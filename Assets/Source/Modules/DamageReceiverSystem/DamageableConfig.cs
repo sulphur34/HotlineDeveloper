@@ -1,7 +1,7 @@
-using Modules.DamageReceiverSystem.DamageStrategy;
+using Modules.DamagerSystem.DamageStrategy;
 using UnityEngine;
 
-namespace Modules.DamageReceiverSystem
+namespace Modules.DamagerSystem
 {
     [CreateAssetMenu(fileName = "Damageable Config")]
     public class DamageableConfig : ScriptableObject

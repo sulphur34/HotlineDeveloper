@@ -12,7 +12,7 @@ using Modules.MoveSystem;
 using Modules.CharacterSystem;
 using Modules.EnemySpawnSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
-using Modules.DamageReceiverSystem;
+using Modules.DamagerSystem;
 using Modules.LevelSelectionSystem;
 using Modules.GUISystem;
 using Modules.LeaderboardSystem;
@@ -21,6 +21,8 @@ using Modules.AimSystem;
 using Source.Modules.FocusSystem;
 using Modules.NextLevelButtonSystem;
 using Modules.WeaponItemSystem;
+using Modules.InputSystem.PlayerInput;
+using Modules.InputSystem;
 using UnityEngine.Serialization;
 
 public class LevelCompositRoot : LifetimeScope

@@ -1,4 +1,6 @@
-using Modules.DamageReceiverSystem;
+using System;
+using Modules.DamagerSystem;
+using Modules.InputSystem.PlayerInput;
 using UnityEngine;
 
 namespace Modules.CharacterSystem
@@ -14,6 +16,12 @@ namespace Modules.CharacterSystem
             _damageReceiverView = GetComponent<DamageReceiverView>();
             _damageReceiverView.FallenDown += OnFall;
             _damageReceiverView.Recovered += OnRecover;
+        }
+
+        private void OnDestroy()
+        {
+            _damageReceiverView.FallenDown -= OnFall;
+            _damageReceiverView.Recovered -= OnRecover;
         }
 
         private void OnFall()

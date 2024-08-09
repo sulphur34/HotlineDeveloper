@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Modules.Weapons;
 using Modules.Weapons.Range;
-using Modules.WeaponItemSystem;
 using UnityEngine;
 using VContainer;
 

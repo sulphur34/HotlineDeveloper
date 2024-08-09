@@ -1,19 +1,14 @@
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.DamageReceiverSystem;
-using Modules.DamageReceiverSystem.Enemies.EnemyBehavior.Variables;
+using Modules.DamagerSystem;
+using Modules.DamagerSystem.Enemies.EnemyBehavior.Variables;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsDead")]
     public class IsDead : Conditional
     {
         public SharedDamageReceiver DamageReceiver;
-
-        public override void OnAwake()
-        {
-            DamageReceiver.Value = GetComponent<DamageReceiverView>();
-        }
 
         public override TaskStatus OnUpdate()
         {

@@ -1,7 +1,6 @@
 using System;
-using Modules.Characters.Enemies.EnemyBehavior;
 using Modules.CharacterSystem;
-using Modules.DamageReceiverSystem;
+using Modules.DamagerSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
 using Modules.WeaponItemSystem;
 using UnityEngine;
@@ -50,13 +49,27 @@ namespace Modules.EnemySpawnSystem
         {
             GameObject instance = Instantiate(enemySpawnConfig.Prefab.gameObject, enemySpawnConfig.SpawnPoint.position,
                 Quaternion.identity);
-            BehaviorConfig behaviorConfig = _behaviorConfigFactory.GetBehavior(enemySpawnConfig.Behavior);
-            DamageableConfig damageableConfig = _damageableConfigFactory.GetConfig(enemySpawnConfig.DamageableType);
+            
+            SetBehavior(instance, enemySpawnConfig, player, weaponTracker);
+            
+            SetDamageReceiver(instance, enemySpawnConfig);
+            
+            Spawned?.Invoke(instance);
+        }
+
+        private void SetBehavior(GameObject instance, EnemySpawnConfig enemySpawnConfig, Player player,
+            WeaponTracker weaponTracker)
+        {
             BehaviorSetup behaviorSetup = instance.GetComponent<BehaviorSetup>();
+            BehaviorConfig behaviorConfig = _behaviorConfigFactory.GetBehavior(enemySpawnConfig.Behavior);
             behaviorSetup.Initialize(behaviorConfig, enemySpawnConfig.PatrolRoute, weaponTracker, player,
                 _weaponItemInitializer);
+        }
+
+        private void SetDamageReceiver(GameObject instance, EnemySpawnConfig enemySpawnConfig)
+        {
+            DamageableConfig damageableConfig = _damageableConfigFactory.GetConfig(enemySpawnConfig.DamageableType);
             instance.GetComponent<DamageReceiverSetup>().Initialize(damageableConfig);
-            Spawned?.Invoke(instance);
         }
     }
 }

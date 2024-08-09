@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Modules.DamageReceiverSystem
+namespace Modules.DamagerSystem
 {
     [RequireComponent(typeof(Rigidbody))]
     public abstract class WeaponStrategy : MonoBehaviour, IDamageInflictStrategy

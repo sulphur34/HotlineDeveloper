@@ -1,14 +1,14 @@
 using System;
 using System.Threading;
-using Modules.DamageReceiverSystem.DamageStrategy;
+using Modules.DamagerSystem.DamageStrategy;
 
-namespace Modules.DamageReceiverSystem
+namespace Modules.DamagerSystem
 {
     internal class DamageReceiver
     {
-        private Health _health;
-        private Consciousness _consciousness;
-        private IDamageReceiveStrategy _damageReceiveStrategy;
+        private readonly Health _health;
+        private readonly Consciousness _consciousness;
+        private readonly IDamageReceiveStrategy _damageReceiveStrategy;
 
         public event Action Died;
         public event Action Knocked;

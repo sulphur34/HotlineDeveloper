@@ -10,7 +10,7 @@ namespace Modules.SaveHandlers
     {
         private readonly SaveSystem _saveSystem;
         private readonly LevelConditionManager _levelConditionManager;
-        private ScoreCounterView _scoreCounterView;
+        private readonly ScoreCounterView _scoreCounterView;
 
         [Inject]
         public ScoreSaveHandler(LevelConditionManager levelConditionManager, ScoreCounterView scoreCounterView)

@@ -2,7 +2,7 @@ using System;
 using Modules.AnimationSystem;
 using UnityEngine;
 
-namespace Modules.DamageReceiverSystem
+namespace Modules.DamagerSystem
 {
     [RequireComponent(typeof(Collider))]
     public class DamageReceiverView : MonoBehaviour
@@ -21,7 +21,7 @@ namespace Modules.DamageReceiverSystem
 
         public void Receive(DamageData damageData)
         {
-            if (damageData.IsKnockout == false && IsDead == false)
+            if (!damageData.IsKnockout && !IsDead)
                 Instantiate(_bloodParticlePrefab, transform);
             
             Received?.Invoke(damageData);
