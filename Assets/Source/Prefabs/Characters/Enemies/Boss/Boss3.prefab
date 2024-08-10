@@ -881,7 +881,7 @@ NavMeshAgent:
   m_Acceleration: 200
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0.5
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -962,6 +962,7 @@ MonoBehaviour:
     <Container>k__BackingField: {fileID: 7588973752226332405}
     <PickPoint>k__BackingField: {fileID: 5625249169897990966}
     <PickRadius>k__BackingField: 2
+    <LookHeight>k__BackingField: 1.5
   WeaponHandlerView: {fileID: 5146112849817749531}
 --- !u!114 &5146112849817749531
 MonoBehaviour:
@@ -977,6 +978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animationController: {fileID: 1055879571078734733}
   _damageReceiverView: {fileID: 6802919048690575196}
+  _ammunitionUI: {fileID: 0}
 --- !u!114 &7291154123027153845
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,9 +8,9 @@ namespace Modules.SavingsSystem
     [Serializable]
     public class SaveData
     {
-        [field: Preserve]
+        // [field: Preserve]
         public LevelsData LevelsData = new LevelsData();
-        [field: Preserve]
+        // [field: Preserve]
         public AudioSettingsData AudioSettingsData = new AudioSettingsData();
     }
 }

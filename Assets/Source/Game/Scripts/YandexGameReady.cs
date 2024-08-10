@@ -1,4 +1,5 @@
 using UnityEngine;
+using Agava.YandexGames;
 
 public class YandexGameReady : MonoBehaviour
 {
