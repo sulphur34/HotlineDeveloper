@@ -1,6 +1,5 @@
 using Modules.FadeSystem;
 using Modules.LevelsSystem;
-using Modules.PauseMenu;
 using Modules.WeaponsHandler;
 using Modules.SaveHandlers;
 using Modules.Weapons.Ammunition;

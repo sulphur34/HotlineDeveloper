@@ -4,7 +4,7 @@ using Modules.SceneLoaderSystem;
 using UnityEngine.SceneManagement;
 using VContainer;
 
-namespace Modules.PauseMenu
+namespace Modules.AdvertisementSystem
 {
     public class RestartLevelButton : PressedButton
     {
@@ -14,7 +14,7 @@ namespace Modules.PauseMenu
 
         protected override void MakeOnClick()
         {
-            PauseSetter.Disable();
+            // PauseSetter.Disable();
             _fade.In();
             _sceneLoader.Load(SceneManager.GetActiveScene().name, _fade);
         }

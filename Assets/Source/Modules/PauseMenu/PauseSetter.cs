@@ -4,7 +4,7 @@ using UnityEngine;
 using VContainer;
 using PauseState = Source.Modules.FocusSystem.PauseState;
 
-namespace Modules.PauseMenu
+namespace Modules.AdvertisementSystem
 {
     public class PauseSetter
     {

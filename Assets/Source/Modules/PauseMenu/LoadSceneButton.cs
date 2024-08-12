@@ -4,7 +4,7 @@ using Modules.SceneLoaderSystem;
 using UnityEngine;
 using VContainer;
 
-namespace Modules.PauseMenu
+namespace Modules.AdvertisementSystem
 {
     public class LoadSceneButton : PressedButton
     {
