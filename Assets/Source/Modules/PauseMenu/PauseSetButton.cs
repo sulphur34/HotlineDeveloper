@@ -2,7 +2,7 @@ using Modules.PressedButtonSystem;
 using UnityEngine;
 using VContainer;
 
-namespace Modules.AdvertisementSystem
+namespace Modules.FocusSystem
 {
     public class PauseSetButton : PressedButton
     {

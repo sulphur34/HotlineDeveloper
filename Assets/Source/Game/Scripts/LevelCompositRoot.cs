@@ -17,7 +17,7 @@ using Modules.GUISystem;
 using Modules.LeaderboardSystem;
 using Modules.AdvertisementSystem;
 using Modules.AimSystem;
-using Source.Modules.FocusSystem;
+using Modules.FocusSystem;
 using Modules.NextLevelButtonSystem;
 using Modules.WeaponItemSystem;
 using Modules.InputSystem.PlayerInput;

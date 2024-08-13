@@ -1,4 +1,4 @@
-﻿namespace Modules.AdvertisementSystem
+﻿namespace Modules.FocusSystem
 {
     internal enum PauseMode
     {

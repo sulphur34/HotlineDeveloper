@@ -1,18 +1,23 @@
+using Modules.AdvertisementSystem;
 using Modules.FadeSystem;
 using Modules.LevelSelectionSystem;
 using Modules.LevelsSystem;
 using Modules.PressedButtonSystem;
 using Modules.SceneLoaderSystem;
+using UnityEngine;
 
 namespace Modules.NextLevelButtonSystem
 {
     public class NextLevelButton : PressedButton
     {
+        [SerializeField] private bool HasAD = true;
+        
         private LevelsData _levels;
         private LevelSceneLoader _levelSceneLoader;
         private SceneLoader _sceneLoader;
         private int _currentLevelIndex;
         private Fade _fade;
+        private VideoAD _videoAD;
 
         internal void Initialize(
             LevelsData levels, 
@@ -26,9 +31,30 @@ namespace Modules.NextLevelButtonSystem
             _currentLevelIndex = currentLevelIndex;
             _levelSceneLoader = levelSceneLoader;
             _sceneLoader = sceneLoader;
+            _videoAD = GetComponent<VideoAD>();
         }
 
         protected override void MakeOnClick()
+        {
+#if UNITY_EDITOR
+            LoadLevel();
+            return;
+#endif
+
+            // PauseSetter.Enable();
+            if (HasAD)
+            {
+                _videoAD.Closed += LoadLevel;
+                _videoAD.ShowInter();
+            }
+            else
+            {
+                LoadLevel();
+            }
+
+        }
+
+        private void LoadLevel()
         {
             if (_currentLevelIndex < _levels.Value.Count)
             {

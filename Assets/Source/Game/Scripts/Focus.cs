@@ -4,7 +4,7 @@ using Modules.AdvertisementSystem;
 using UnityEngine;
 using VContainer;
 
-namespace Source.Modules.FocusSystem
+namespace Modules.FocusSystem
 {
     public class Focus : IDisposable
     {

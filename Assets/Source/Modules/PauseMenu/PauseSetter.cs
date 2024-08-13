@@ -2,9 +2,9 @@ using Plugins.Audio.Core;
 using Modules.InputSystem.PlayerInput;
 using UnityEngine;
 using VContainer;
-using PauseState = Source.Modules.FocusSystem.PauseState;
+using PauseState = Modules.FocusSystem.PauseState;
 
-namespace Modules.AdvertisementSystem
+namespace Modules.FocusSystem
 {
     public class PauseSetter
     {
