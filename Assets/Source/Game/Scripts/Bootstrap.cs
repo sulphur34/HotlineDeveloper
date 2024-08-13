@@ -5,7 +5,6 @@ using Agava.YandexGames;
 using Modules.SavingsSystem;
 using Modules.SceneLoaderSystem;
 using System.Collections;
-using System.Linq;
 using UnityEngine;
 
 public class Bootstrap : MonoBehaviour
@@ -25,10 +24,12 @@ public class Bootstrap : MonoBehaviour
             SceneLoader sceneLoader = new SceneLoader();
 
             if (data.LevelsData.Value[0].IsCompleted)
+            {
                 sceneLoader.Load(SceneName.Menu.ToString());
+                return;
+            }
             
             sceneLoader.Load(SceneName.Level.ToString() + data.LevelsData.Value[0].Number);
-            
         });
     }
 

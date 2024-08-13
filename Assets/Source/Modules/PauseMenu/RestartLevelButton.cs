@@ -8,13 +8,13 @@ namespace Modules.FocusSystem
 {
     public class RestartLevelButton : PressedButton
     {
-        protected PauseSetter PauseSetter;
         private SceneLoader _sceneLoader;
         private Fade _fade;
+        private PauseSetter _pauseSetter;
 
         protected override void MakeOnClick()
         {
-            // PauseSetter.Disable();
+            _pauseSetter.Disable();
             _fade.In();
             _sceneLoader.Load(SceneManager.GetActiveScene().name, _fade);
         }
@@ -23,8 +23,8 @@ namespace Modules.FocusSystem
         private void Construct(SceneLoader sceneLoader, PauseSetter pauseSetter, Fade fade)
         {
             _sceneLoader = sceneLoader;
-            PauseSetter = pauseSetter;
             _fade = fade;
+            _pauseSetter = pauseSetter;
         }
     }
 }

@@ -40,8 +40,7 @@ namespace Modules.NextLevelButtonSystem
             LoadLevel();
             return;
 #endif
-
-            // PauseSetter.Enable();
+            
             if (HasAD)
             {
                 _videoAD.Closed += LoadLevel;
@@ -51,7 +50,6 @@ namespace Modules.NextLevelButtonSystem
             {
                 LoadLevel();
             }
-
         }
 
         private void LoadLevel()
