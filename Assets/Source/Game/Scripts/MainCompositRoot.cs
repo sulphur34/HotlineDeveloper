@@ -48,9 +48,4 @@ public class MainCompositRoot : LifetimeScope
             data.LevelsData = levels;
         });
     }
-
-    private void SetLocalization()
-    {
-        
-    }
 }
