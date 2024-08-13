@@ -8,6 +8,8 @@ using Modules.SaveHandlers;
 using Modules.SavingsSystem;
 using System.Collections;
 using System.Linq;
+using Modules.Audio;
+using Source.Modules.AudioInitializationSystem;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -27,23 +29,47 @@ public class MenuCompositRoot : LifetimeScope
 
     protected override void Configure(IContainerBuilder builder)
     {
+        LevelSelectionConfigure(builder);
+        LeaderboardConfigure(builder);
+        ContinueLevelConfigure(builder);
+        AudioConfigure(builder);
+        ResolveDependencies(builder);
+    }
+
+    private void LevelSelectionConfigure(IContainerBuilder builder)
+    {
         builder.RegisterInstance(_levelSelectionElements);
         builder.RegisterInstance(_levelSelectionButton);
         builder.Register<LevelSceneLoader>(Lifetime.Singleton);
         builder.Register<LevelSelectionPresenter>(Lifetime.Singleton);
         builder.Register<SelectedLevelSaveHandler>(Lifetime.Singleton);
-        builder.Register<AudioSaveHandler>(Lifetime.Singleton);
+    }
 
+    private void LeaderboardConfigure(IContainerBuilder builder)
+    {
         builder.RegisterComponentInHierarchy<LeaderboardView>();
         builder.RegisterComponentInHierarchy<AuthorizationButton>();
         builder.RegisterComponentInHierarchy<LeaderboardOpenButton>();
         builder.Register<LeaderboardPresenter>(Lifetime.Singleton);
+    }
 
-        builder.RegisterComponentInHierarchy<AudioSettings>();
+    private void ContinueLevelConfigure(IContainerBuilder builder)
+    {
         builder.RegisterComponentInHierarchy<ContinueLevelButton>();
         builder.RegisterComponentInHierarchy<ContinueLevelButtonView>();
         builder.Register<ContinueLevelButtonPresenter>(Lifetime.Singleton);
+    }
 
+    private void AudioConfigure(IContainerBuilder builder)
+    {
+        builder.Register<SaveSystem>(Lifetime.Singleton);
+        builder.RegisterComponentInHierarchy<AudioSettings>();
+        builder.Register<AudioInitializer>(Lifetime.Singleton);
+        builder.Register<AudioSaveHandler>(Lifetime.Singleton);
+    }
+
+    private void ResolveDependencies(IContainerBuilder builder)
+    {
         builder.RegisterBuildCallback(container =>
         {
             LevelsData levelsData = container.Resolve<LevelsData>();
@@ -56,26 +82,14 @@ public class MenuCompositRoot : LifetimeScope
             for (int i = 0; i < _levelSelectionElements.Length; i++)
                 _levelSelectionElements[i].SetScore(levelsData.Value[i].Score);
 
-            AudioSettings audioSettings = container.Resolve<AudioSettings>();
-            StartCoroutine(InitAudioSettings(audioSettings));
-
             container.Resolve<LevelSelectionPresenter>();
             container.Resolve<SelectedLevelSaveHandler>();
-            container.Resolve<AudioSaveHandler>();
             container.Resolve<ContinueLevelButtonPresenter>();
             container.Resolve<LeaderboardPresenter>();
+            container.Resolve<AudioSettings>();
+            container.Resolve<AudioInitializer>().Initialize();
+            container.Resolve<AudioSaveHandler>();
             container.Resolve<Fade>().Out();
-        });
-    }
-
-    private IEnumerator InitAudioSettings(AudioSettings audioSettings)
-    {
-        yield return null;
-
-        _saveSystem.Load(data =>
-        {
-            audioSettings.MusicSlider.Init(data.AudioSettingsData.MusicVolume);
-            audioSettings.SoundSlider.Init(data.AudioSettingsData.SoundVolume);
         });
     }
 }

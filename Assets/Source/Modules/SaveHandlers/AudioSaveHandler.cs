@@ -16,21 +16,22 @@ namespace Modules.SaveHandlers
             _saveSystem = new SaveSystem();
             _audioSettings = audioSettings;
 
-            _audioSettings.MusicSlider.Changed += OnMusicChanged;
-            _audioSettings.SoundSlider.Changed += OnSoundChanged;
+            _audioSettings.MusicSetter.Changed += OnMusicChanged;
+            _audioSettings.SoundSetter.Changed += OnSoundChanged;
         }
 
         public void Dispose()
         {
-            _audioSettings.MusicSlider.Changed -= OnMusicChanged;
-            _audioSettings.SoundSlider.Changed -= OnSoundChanged;
+            _audioSettings.MusicSetter.Changed -= OnMusicChanged;
+            _audioSettings.SoundSetter.Changed -= OnSoundChanged;
         }
 
         private void OnMusicChanged()
         {
             _saveSystem.Save(data =>
             {
-                data.AudioSettingsData.MusicVolume = _audioSettings.MusicSlider.Volume;
+                data.AudioSettingsData.MusicVolume = _audioSettings.MusicSetter.Volume;
+                data.AudioSettingsData.IsMuted = _audioSettings.MusicSetter.IsMuted;
             });
         }
 
@@ -38,7 +39,8 @@ namespace Modules.SaveHandlers
         {
             _saveSystem.Save(data =>
             {
-                data.AudioSettingsData.SoundVolume = _audioSettings.SoundSlider.Volume;
+                data.AudioSettingsData.SoundVolume = _audioSettings.SoundSetter.Volume;
+                data.AudioSettingsData.IsMuted = _audioSettings.SoundSetter.IsMuted;
             });
         }
     }

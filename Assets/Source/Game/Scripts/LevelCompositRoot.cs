@@ -1,3 +1,4 @@
+using System.Collections;
 using Modules.FadeSystem;
 using Modules.LevelsSystem;
 using Modules.WeaponsHandler;
@@ -17,26 +18,27 @@ using Modules.GUISystem;
 using Modules.LeaderboardSystem;
 using Modules.AdvertisementSystem;
 using Modules.AimSystem;
+using Modules.Audio;
 using Modules.FocusSystem;
 using Modules.NextLevelButtonSystem;
 using Modules.WeaponItemSystem;
 using Modules.InputSystem.PlayerInput;
 using Modules.InputSystem;
+using Modules.SavingsSystem;
+using Source.Modules.AudioInitializationSystem;
 using UnityEngine.Serialization;
+using AudioSettings = Modules.Audio.AudioSettings;
 
 public class LevelCompositRoot : LifetimeScope
 {
     [SerializeField] private MoverConfig _moverConfig;
     [SerializeField] private RangeWeaponConfigFactory _weaponConfigFactory;
-    [FormerlySerializedAs("_weaponTracker")] [SerializeField] private WeaponItemInitializer _weaponItemInitializer;
     [SerializeField] private LevelEnemySpawnConfigs _enemySpawnConfigs;
     [SerializeField] private BehaviorConfigFactory _desktopBehaviorConfigFactory;
     [SerializeField] private BehaviorConfigFactory _mobileBehaviorConfigFactory;
     [SerializeField] private DamageableConfigFactory _damageableConfigFactory;
     [SerializeField] private GameObject _weaponSetupsParent;
     [SerializeField] private Player _player;
-
-    private RegistrationBuilder _playerRegistration;
 
     protected override void OnDestroy()
     {
@@ -51,6 +53,7 @@ public class LevelCompositRoot : LifetimeScope
         WeaponConfigure(builder);
         EnemyConfigure(builder);
         LevelConfigure(builder);
+        AudioConfigure(builder);
         UIConfigure(builder);
     }
 
@@ -142,6 +145,24 @@ public class LevelCompositRoot : LifetimeScope
         });
     }
 
+    private void AudioConfigure(IContainerBuilder builder)
+    {
+        builder.Register<SaveSystem>(Lifetime.Singleton);
+        builder.RegisterComponentInHierarchy<AudioSettings>();
+        builder.Register<AudioInitializer>(Lifetime.Singleton);
+        builder.Register<AudioSaveHandler>(Lifetime.Singleton);
+        builder.RegisterComponentInHierarchy<MuteIconSwitcher>();
+        
+        
+        builder.RegisterBuildCallback(container =>
+        {
+            AudioSettings audioSettings = container.Resolve<AudioSettings>();
+            container.Resolve<AudioInitializer>().Initialize();
+            container.Resolve<AudioSaveHandler>();
+            container.Resolve<MuteIconSwitcher>().Initialize(audioSettings.MusicSetter, audioSettings.SoundSetter);
+        });
+    }
+
     private void UIConfigure(IContainerBuilder builder)
     {
         builder.RegisterComponentInHierarchy<PauseSetButton>();
@@ -154,7 +175,7 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<NextLevelButtonView>();
         builder.Register<NextLevelButtonPresenter>(Lifetime.Singleton);
         builder.RegisterComponentInHierarchy<VideoAD>();
-        
+
         builder.RegisterBuildCallback(container =>
         {
             container.Resolve<NextLevelButtonPresenter>();

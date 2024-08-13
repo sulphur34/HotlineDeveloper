@@ -7,5 +7,6 @@ namespace Modules.Audio
     {
         public float MusicVolume = 1;
         public float SoundVolume = 1;
+        public bool IsMuted = false;
     }
 }
