@@ -30,6 +30,7 @@ namespace Modules.Audio
             _isMuted = isMuted;
             _button.onClick.AddListener(OnButtonClick);
             SetState(_isMuted);
+            Debug.Log("Initialize mutter " + value + " " + isMuted);
         }
 
         private void OnButtonClick()

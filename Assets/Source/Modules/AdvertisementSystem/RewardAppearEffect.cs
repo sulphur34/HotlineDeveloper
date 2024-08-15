@@ -8,7 +8,7 @@ namespace Modules.AdvertisementSystem
 
         private ParticleSystem _effectInstance;
 
-        private void Start()
+        private void Awake()
         {
             gameObject.SetActive(false);
         }

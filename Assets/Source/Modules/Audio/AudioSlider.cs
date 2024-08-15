@@ -16,6 +16,7 @@ namespace Modules.Audio
         [SerializeField] private string _mixerName;
 
         private bool _isMuted;
+        private bool _isInitialized;
         
         public override event Action Changed;
         
@@ -35,10 +36,15 @@ namespace Modules.Audio
             
             if (IsMuted)
                 SetMute();
+
+            _isInitialized = true;
         }
 
         private void OnValueChanged(float sliderValue)
         {
+            if (!_isInitialized)
+                return;
+            
             if (sliderValue == ZeroSound)
             {
                 SetMute();

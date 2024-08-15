@@ -14,10 +14,11 @@ namespace Modules.Audio
         private AudioSetter _soundSetter;
         private Button _button;
 
-        public void Initialize(AudioSetter musicSetter, AudioSetter soundSetter)
+        public void Initialize(AudioSettings audioSettings)
         {
-            _musicSetter = musicSetter;
-            _soundSetter = soundSetter;
+            _musicSetter = audioSettings.MusicSetter;
+            _soundSetter = audioSettings.SoundSetter;
+            Debug.Log("Initialize icon " + _musicSetter.IsMuted + " " + _soundSetter.IsMuted);
             _button = GetComponent<Button>();
             _button.onClick.AddListener(OnClick);
             SetIcon(_musicSetter.IsMuted || _soundSetter.IsMuted);
@@ -41,6 +42,7 @@ namespace Modules.Audio
 
         private void SetIcon(bool isMuted)
         {
+            Debug.Log("Icon changed to mute " + isMuted);
             _muteImage.enabled = isMuted;
             _audioImage.enabled = !isMuted;
         }

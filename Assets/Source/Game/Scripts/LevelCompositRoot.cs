@@ -26,7 +26,6 @@ using Modules.InputSystem.PlayerInput;
 using Modules.InputSystem;
 using Modules.SavingsSystem;
 using Source.Modules.AudioInitializationSystem;
-using UnityEngine.Serialization;
 using AudioSettings = Modules.Audio.AudioSettings;
 
 public class LevelCompositRoot : LifetimeScope
@@ -39,9 +38,12 @@ public class LevelCompositRoot : LifetimeScope
     [SerializeField] private DamageableConfigFactory _damageableConfigFactory;
     [SerializeField] private GameObject _weaponSetupsParent;
     [SerializeField] private Player _player;
+    private MuteIconSwitcher _muteIconSwitcher;
+    private AudioInitializer _audioInitializer;
 
     protected override void OnDestroy()
     {
+        _audioInitializer.Initialized += _muteIconSwitcher.Initialize;
         Dispose();
     }
 
@@ -117,7 +119,7 @@ public class LevelCompositRoot : LifetimeScope
 
     private void LevelConfigure(IContainerBuilder builder)
     {
-        builder.RegisterComponentInHierarchy<AudioListener>();
+        builder.Register<SaveSystem>(Lifetime.Singleton);
         builder.RegisterComponentInHierarchy<EndLevelTrigger>();
         builder.RegisterComponentInHierarchy<EnemyTracker>();
         builder.Register<ScoreCounter>(Lifetime.Singleton);
@@ -147,7 +149,7 @@ public class LevelCompositRoot : LifetimeScope
 
     private void AudioConfigure(IContainerBuilder builder)
     {
-        builder.Register<SaveSystem>(Lifetime.Singleton);
+        builder.RegisterComponentInHierarchy<AudioListener>();
         builder.RegisterComponentInHierarchy<AudioSettings>();
         builder.Register<AudioInitializer>(Lifetime.Singleton);
         builder.Register<AudioSaveHandler>(Lifetime.Singleton);
@@ -156,10 +158,12 @@ public class LevelCompositRoot : LifetimeScope
         
         builder.RegisterBuildCallback(container =>
         {
-            AudioSettings audioSettings = container.Resolve<AudioSettings>();
-            container.Resolve<AudioInitializer>().Initialize();
+            container.Resolve<AudioSettings>();
+            _muteIconSwitcher = container.Resolve<MuteIconSwitcher>();
+            _audioInitializer = container.Resolve<AudioInitializer>();
+            _audioInitializer.Initialized += _muteIconSwitcher.Initialize;
+            _audioInitializer.Initialize();
             container.Resolve<AudioSaveHandler>();
-            container.Resolve<MuteIconSwitcher>().Initialize(audioSettings.MusicSetter, audioSettings.SoundSetter);
         });
     }
 

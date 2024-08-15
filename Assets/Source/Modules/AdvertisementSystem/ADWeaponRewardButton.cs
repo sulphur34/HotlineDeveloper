@@ -7,7 +7,7 @@ namespace Modules.AdvertisementSystem
     {
         private bool _isRewarded = false;
 
-        [FormerlySerializedAs("_weaponGameobject")] [SerializeField] private GameObject _weaponGameObject;
+        [SerializeField] private GameObject _weaponGameObject;
 
         protected override void OnRewardGained()
         {
