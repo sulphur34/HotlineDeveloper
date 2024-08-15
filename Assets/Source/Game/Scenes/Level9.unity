@@ -10483,7 +10483,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6502736168213891335, guid: 4e0854df20e2fa046839f090f6789685, type: 3}
       propertyPath: m_WarningMessage
-      value: 
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'Arm.R'\n\tFrom animation clip 'MeleeAttack'\n\tFrom
+        animation clip 'MeleeAttackDoubleHanded'\n\tFrom animation clip 'MeleeAttackDoubleHanded'\n\tFrom
+        animation clip 'MeleeAttack'"
       objectReference: {fileID: 0}
     - target: {fileID: 7547430180923425878, guid: 4e0854df20e2fa046839f090f6789685, type: 3}
       propertyPath: m_LocalPosition.x

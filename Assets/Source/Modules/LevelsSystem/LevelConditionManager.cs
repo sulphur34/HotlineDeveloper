@@ -27,14 +27,6 @@ namespace Modules.LevelsSystem
             _enemyTracker.AllEnemiesDied -= OnWin;
         }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-                OnWin();
-            }
-        }
-
         [Inject]
         private void Construct(
             LevelsData levels,
