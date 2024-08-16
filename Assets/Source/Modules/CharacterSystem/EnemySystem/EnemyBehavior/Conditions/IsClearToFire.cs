@@ -29,6 +29,9 @@ namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
 
         public override TaskStatus OnUpdate()
         {
+            if (_weaponHandler.WeaponInfo == null)
+                return TaskStatus.Success;
+            
             if (_weaponHandler.WeaponInfo.CurrentWeaponType == WeaponType.Melee)
                 return TaskStatus.Success;
 
