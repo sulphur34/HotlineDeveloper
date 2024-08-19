@@ -1,4 +1,3 @@
-using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
 using UnityEngine;
 
 namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior

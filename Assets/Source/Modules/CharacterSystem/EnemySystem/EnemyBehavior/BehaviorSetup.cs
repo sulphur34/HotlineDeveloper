@@ -3,7 +3,6 @@ using BehaviorDesigner.Runtime;
 using Modules.CharacterSystem.EnemySpawnSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables;
 using Modules.DamageReceiverSystem;
-using Modules.DamagerSystem;
 using Modules.InputSystem;
 using Modules.WeaponItemSystem;
 using Modules.WeaponsHandler;

@@ -1,6 +1,5 @@
 using BehaviorDesigner.Runtime;
 using Modules.DamageReceiverSystem;
-using Modules.DamagerSystem;
 
 namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables
 {

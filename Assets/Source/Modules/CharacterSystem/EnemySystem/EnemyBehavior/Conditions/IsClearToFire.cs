@@ -2,7 +2,6 @@ using System.Linq;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
 using Modules.DamageReceiverSystem;
-using Modules.DamagerSystem;
 using Modules.WeaponsHandler;
 using Modules.WeaponsTypes;
 using UnityEngine;
