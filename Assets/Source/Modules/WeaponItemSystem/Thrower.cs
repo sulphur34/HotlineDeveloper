@@ -15,7 +15,10 @@ namespace Modules.WeaponItemSystem
             _throwData = throwData;
         }
 
-        public void SetFly(Transform selfTransform, Transform currentContainer, Rigidbody rigidbody,
+        public void SetFly(
+            Transform selfTransform,
+            Transform currentContainer,
+            Rigidbody rigidbody,
             WeaponType weaponType)
         {
             SetPosition(selfTransform, currentContainer);
@@ -35,7 +38,10 @@ namespace Modules.WeaponItemSystem
             selfTransform.Rotate(_throwData.RotationX, rotationY, _throwData.RotationZ);
         }
 
-        private void ApplyForces(Transform selfTransform, Transform currentContainer, Rigidbody rigidbody,
+        private void ApplyForces(
+            Transform selfTransform,
+            Transform currentContainer,
+            Rigidbody rigidbody,
             WeaponType weaponType)
         {
             Vector3 throwDirection = currentContainer.forward;
@@ -44,7 +50,9 @@ namespace Modules.WeaponItemSystem
             rigidbody.AddForce(throwDirection * _throwData.Force, ForceMode.Impulse);
         }
 
-        public async UniTask WaitingThrowEnd(Rigidbody rigidbody, CancellationToken cancellationToken,
+        public async UniTask WaitingThrowEnd(
+            Rigidbody rigidbody,
+            CancellationToken cancellationToken,
             Action onThrowEndCallback)
         {
             while (rigidbody.IsSleeping() == false)

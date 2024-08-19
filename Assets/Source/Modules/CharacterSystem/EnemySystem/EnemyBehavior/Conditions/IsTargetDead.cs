@@ -14,8 +14,8 @@ namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
 
         public override void OnStart()
         {
-            if(_playerDamageReceiverView == null)
-                _playerDamageReceiverView = Target.Value .GetComponent<DamageReceiverView>();
+            if (_playerDamageReceiverView == null)
+                _playerDamageReceiverView = Target.Value.GetComponent<DamageReceiverView>();
         }
 
         public override TaskStatus OnUpdate()

@@ -9,7 +9,7 @@ namespace Modules.Weapons.Melee
         [SerializeField] private float _rechargeTime;
 
         private MeleeAttackModule _meleeAttackModule;
-        
+
         public override void Initialize()
         {
             _meleeAttackModule = new MeleeAttackModule(_collider, _attakTime);

@@ -1,6 +1,6 @@
-using Agava.YandexGames;
 using System;
 using System.Collections.Generic;
+using Agava.YandexGames;
 using UnityEngine;
 
 namespace Modules.LeaderboardSystem
@@ -60,10 +60,8 @@ namespace Modules.LeaderboardSystem
             if (Application.isEditor || PlayerAccount.IsAuthorized == false)
                 return;
 
-            Agava.YandexGames.Leaderboard.GetPlayerEntry(LeaderboardName, response =>
-            {
-                onReceivedScore?.Invoke(response.score);
-            });
+            Agava.YandexGames.Leaderboard.GetPlayerEntry(LeaderboardName,
+                response => { onReceivedScore?.Invoke(response.score); });
         }
     }
 }

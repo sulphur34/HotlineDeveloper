@@ -1,8 +1,8 @@
 using System;
-using UnityEngine;
-using Modules.WeaponItemSystem;
 using Modules.InputSystem.Interfaces;
+using Modules.WeaponItemSystem;
 using Modules.WeaponTypes;
+using UnityEngine;
 
 namespace Modules.WeaponsHandler
 {
@@ -16,11 +16,10 @@ namespace Modules.WeaponsHandler
         private WeaponItem _currentWeaponItem;
 
         public event Action<IWeaponInfo, IWeaponHandlerInfo> WeaponPicked;
-        public event Action WeaponThrown;
-        public event Action<WeaponType> Attacked;
 
-        public bool IsCurrentWeaponItemEmpty => _currentWeaponItem == null || _currentWeaponItem == _defaultWeaponItem;
-        public WeaponType CurrentWeaponType => _currentWeaponItem.WeaponType;
+        public event Action WeaponThrown;
+
+        public event Action<WeaponType> Attacked;
 
         public WeaponHandler(WeaponHandlerData weaponHandlerData, IAttackInput attackInput, IPickInput pickInput)
         {
@@ -37,6 +36,10 @@ namespace Modules.WeaponsHandler
 
             pickInput.PickReceived += OnPickInputReceived;
         }
+
+        public bool IsCurrentWeaponItemEmpty => _currentWeaponItem == null || _currentWeaponItem == _defaultWeaponItem;
+
+        public WeaponType CurrentWeaponType => _currentWeaponItem.WeaponType;
 
         public void DisarmWeaponItem()
         {

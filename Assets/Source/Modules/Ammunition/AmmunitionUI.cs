@@ -13,7 +13,7 @@ namespace Modules.Weapons.Ammunition
         {
             _ammoIcon.sprite = ammoIcon;
         }
-        
+
         public void UpdateAmmo(uint count)
         {
             _ammunitionText.text = count.ToString();

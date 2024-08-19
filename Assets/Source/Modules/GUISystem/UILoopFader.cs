@@ -1,6 +1,6 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
 
 namespace Modules.GUISystem
 {
@@ -12,7 +12,7 @@ namespace Modules.GUISystem
         [SerializeField] private float _duration = 0.5f;
         [SerializeField] private float _awaitChangeFactor = 1f;
         [SerializeField] private float _durationChangeFactor = 1f;
-        
+
         private Image _image;
         private Sequence _sequence;
 
@@ -39,7 +39,7 @@ namespace Modules.GUISystem
         {
             _awaitTime *= _awaitChangeFactor;
             _duration *= _durationChangeFactor;
-            
+
             Animate();
         }
     }

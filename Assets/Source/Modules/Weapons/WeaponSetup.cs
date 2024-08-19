@@ -11,14 +11,18 @@ namespace Modules.Weapons
         private readonly WeaponTypeGetter _weaponTypeGetter = new WeaponTypeGetter();
 
         public Func<bool> AttackHandler { get; private set; }
+
         public WeaponType WeaponType { get; private set; }
+
         public Action AttackInterruptHandler { get; private set; }
 
         public virtual void Initialize()
         {
         }
 
-        protected void SetWeapon(float rechargeTime, IAttackModule attackModule,
+        protected void SetWeapon(
+            float rechargeTime,
+            IAttackModule attackModule,
             IInterruptModule interruptModule = null)
         {
             WeaponRechargeTime weaponRechargeTime = new WeaponRechargeTime(rechargeTime);

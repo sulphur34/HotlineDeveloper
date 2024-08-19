@@ -6,7 +6,7 @@ namespace Modules.DamagerSystem
     {
         private readonly DamageReceiver _damageReceiver;
         private readonly DamageReceiverView _damageReceiverView;
-        
+
         internal DamageReceiverPresenter(DamageReceiver damageReceiver, DamageReceiverView damageReceiverView)
         {
             _damageReceiver = damageReceiver;
@@ -15,6 +15,14 @@ namespace Modules.DamagerSystem
             _damageReceiver.Knocked += OnKnocked;
             _damageReceiver.Recovered += OnRecovered;
             _damageReceiverView.Received += _damageReceiver.Receive;
+        }
+
+        public void Dispose()
+        {
+            _damageReceiver.Died -= OnDeath;
+            _damageReceiver.Knocked -= OnKnocked;
+            _damageReceiver.Recovered -= OnRecovered;
+            _damageReceiverView.Received -= _damageReceiver.Receive;
         }
 
         private void OnDeath()
@@ -30,14 +38,6 @@ namespace Modules.DamagerSystem
         private void OnRecovered()
         {
             _damageReceiverView.OnRecovered();
-        }
-
-        public void Dispose()
-        {
-            _damageReceiver.Died -= OnDeath;
-            _damageReceiver.Knocked -= OnKnocked;
-            _damageReceiver.Recovered -= OnRecovered;
-            _damageReceiverView.Received -= _damageReceiver.Receive;
         }
     }
 }

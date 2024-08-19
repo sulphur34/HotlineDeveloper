@@ -7,6 +7,6 @@ namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior
         Strong,
         Boss,
         Peace,
-        Fanatic
+        Fanatic,
     }
 }

@@ -39,7 +39,7 @@ namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
 
             if (!LineOfSight)
                 return TaskStatus.Success;
-            
+
             if (!Physics.Linecast(selfPosition, targetPosition, out RaycastHit hitInfo))
                 return TaskStatus.Success;
 

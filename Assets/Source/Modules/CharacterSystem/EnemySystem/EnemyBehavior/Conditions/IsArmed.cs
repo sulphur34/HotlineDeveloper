@@ -18,8 +18,8 @@ namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
         {
             if (_weaponHandler.WeaponInfo == null)
                 return TaskStatus.Failure;
-            
-            return _weaponHandler.WeaponInfo.IsCurrentWeaponItemEmpty ? TaskStatus.Failure : TaskStatus.Success ;
+
+            return _weaponHandler.WeaponInfo.IsCurrentWeaponItemEmpty ? TaskStatus.Failure : TaskStatus.Success;
         }
     }
 }

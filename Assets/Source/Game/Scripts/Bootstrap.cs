@@ -2,9 +2,9 @@
 using Agava.YandexGames;
 #endif
 
+using System.Collections;
 using Modules.SavingsSystem;
 using Modules.SceneLoaderSystem;
-using System.Collections;
 using UnityEngine;
 
 public class Bootstrap : MonoBehaviour

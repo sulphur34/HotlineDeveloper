@@ -11,7 +11,7 @@ namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
         public SharedVector3Array PatrolPoints;
 
         private bool _hasRoot;
-        
+
         public override void OnAwake()
         {
             _hasRoot = PatrolPoints.Value.ToList().Count > 0;

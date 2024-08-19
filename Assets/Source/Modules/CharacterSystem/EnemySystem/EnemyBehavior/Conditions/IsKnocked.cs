@@ -8,7 +8,7 @@ namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
     public class IsKnocked : Conditional
     {
         public SharedDamageReceiver DamageReceiver;
-        
+
         public override TaskStatus OnUpdate()
         {
             return DamageReceiver.Value.IsKnocked ? TaskStatus.Success : TaskStatus.Failure;

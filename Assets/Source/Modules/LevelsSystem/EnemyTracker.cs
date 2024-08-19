@@ -14,14 +14,16 @@ namespace Modules.LevelsSystem
     public class EnemyTracker : MonoBehaviour
     {
         [SerializeField] private float _trackerUpdateDelay = 1f;
-        
+
         private Transform _transform;
         private List<Transform> _enemies;
         private Transform _nearestEnemy;
         private CancellationToken _cancellationToken;
 
         public event Action Activated;
+
         public event Action AllEnemiesDied;
+
         public event Action EnemyDied;
 
         [Inject]
@@ -32,7 +34,7 @@ namespace Modules.LevelsSystem
             _enemies = new List<Transform>();
             enemySpawner.Spawned += Add;
         }
-        
+
         public void Activate()
         {
             TrackingNearest(_cancellationToken);
@@ -55,18 +57,18 @@ namespace Modules.LevelsSystem
             _enemies.Remove(character.transform);
             character.GetComponent<DamageReceiverView>().Died -= Remove;
             EnemyDied?.Invoke();
-            
-            if(_enemies.Count == 0)
+
+            if (_enemies.Count == 0)
                 AllEnemiesDied?.Invoke();
         }
-        
+
         private Transform GetNearestCharacter()
         {
             return _enemies
                 .OrderBy(enemy => Vector3.Distance(enemy.position, _transform.position))
                 .FirstOrDefault();
         }
-        
+
         private async UniTask TrackingNearest(CancellationToken cancellationToken)
         {
             while (enabled)

@@ -10,7 +10,10 @@ namespace Modules.MoveSystem
         private readonly float _moveMoveSpeed;
         private readonly float _gravityModifier;
 
-        public Mover(CharacterController characterController, Transform transform, Transform torsoRotator,
+        public Mover(
+            CharacterController characterController,
+            Transform transform,
+            Transform torsoRotator,
             MoverConfig config)
         {
             _characterController = characterController;

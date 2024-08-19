@@ -8,9 +8,13 @@ namespace Modules.EnemySpawnSystem
     internal class EnemySpawnConfig : ScriptableObject
     {
         [field: SerializeField] internal Enemy Prefab { get; private set; }
+
         [field: SerializeField] internal Behaviors Behavior { get; private set; }
+
         [field: SerializeField] internal DamageableTypes DamageableType { get; private set; }
+
         [field: SerializeField] internal Transform SpawnPoint { get; private set; }
+
         [field: SerializeField] internal PatrolRoute PatrolRoute { get; private set; }
     }
 }

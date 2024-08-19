@@ -63,7 +63,7 @@ namespace Modules.LevelsSystem
         {
             StopRotation();
             _cancellationTokenSource = new CancellationTokenSource();
-            RotatingTowardsTarget(() =>  _endLevelTriggerPosition);
+            RotatingTowardsTarget(() => _endLevelTriggerPosition);
         }
     }
 }

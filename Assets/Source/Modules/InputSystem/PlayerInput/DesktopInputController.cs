@@ -7,9 +7,8 @@ namespace Modules.InputSystem.PlayerInput
     {
         private readonly Vector2 _vectorOne = new Vector2(1.0f, 1.0f);
         private readonly float _screenToVirtualMultiplier = 2f;
-        private readonly float _directionRatio = -1f;
 
-        private Vector2 _middleScreenPoint => new Vector2(Width / 2, Height / 2);
+        private Vector2 MiddleScreenPoint => new Vector2(Width / 2, Height / 2);
 
         private void OnEnable()
         {
@@ -18,11 +17,11 @@ namespace Modules.InputSystem.PlayerInput
             PlayerInput.Enable();
         }
 
-        private void OnDisable()
+        protected override void OnDisable()
         {
             PlayerInput.PlayerDesktop.Pick.performed -= OnPick;
             PlayerInput.PlayerDesktop.Finish.performed -= OnFinish;
-            PlayerInput.Enable();
+            base.OnDisable();
         }
 
         protected override Vector2 OnMove()
@@ -47,7 +46,7 @@ namespace Modules.InputSystem.PlayerInput
         protected override Vector2 OnFarLook()
         {
             Vector2 position = PlayerInput.PlayerDesktop.FarLook.ReadValue<Vector2>();
-            return position == Vector2.zero ? _middleScreenPoint : position;
+            return position == Vector2.zero ? MiddleScreenPoint : position;
         }
 
         protected override void OnAttack()

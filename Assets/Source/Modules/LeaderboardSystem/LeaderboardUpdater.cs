@@ -1,5 +1,5 @@
-﻿using Modules.LevelsSystem;
-using Modules.GUISystem;
+﻿using Modules.GUISystem;
+using Modules.LevelsSystem;
 using VContainer;
 
 namespace Modules.LeaderboardSystem
@@ -12,7 +12,8 @@ namespace Modules.LeaderboardSystem
         private readonly LevelsData _levelsData;
 
         [Inject]
-        public LeaderboardUpdater(Leaderboard leaderboard, ScoreCounter scoreCounter, LevelConditionManager levelConditionManager, LevelsData levelsData)
+        public LeaderboardUpdater(Leaderboard leaderboard, ScoreCounter scoreCounter,
+            LevelConditionManager levelConditionManager, LevelsData levelsData)
         {
             _leaderboard = leaderboard;
             _scoreCounter = scoreCounter;

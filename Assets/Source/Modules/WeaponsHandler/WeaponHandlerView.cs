@@ -1,8 +1,8 @@
 using System;
-using Modules.DamagerSystem;
-using Modules.Weapons.Ammunition;
-using Modules.WeaponItemSystem;
 using Modules.AnimationSystem;
+using Modules.DamagerSystem;
+using Modules.WeaponItemSystem;
+using Modules.Weapons.Ammunition;
 using Modules.WeaponTypes;
 using UnityEngine;
 
@@ -19,16 +19,17 @@ namespace Modules.WeaponsHandler
         private IAmmunitionView _currentAmmunitionView;
 
         public event Action RangeShotFired;
+
         public event Action Equipped;
 
-        public IWeaponHandlerInfo WeaponInfo;
+        public IWeaponHandlerInfo WeaponInfo { get; private set; }
 
         public void Initialize()
         {
             _weaponHandlerAnimator = new WeaponHandlerAnimator(_animationController);
             _ammoUIHandler = new AmmoUIHandler(_ammunitionUI, _currentAmmunitionView);
             _animationController = GetComponent<AnimationController>();
-            
+
             _ammunitionUI?.Deactivate();
         }
 
@@ -55,7 +56,7 @@ namespace Modules.WeaponsHandler
         public void UnequipWeapon(IWeaponHandlerInfo handlerInfo)
         {
             WeaponInfo = handlerInfo;
-            
+
             if (!WeaponInfo.IsCurrentWeaponItemEmpty && WeaponInfo.CurrentWeaponType == WeaponType.Range)
                 _ammoUIHandler.SetAmmoUI(false, _currentAmmunitionView);
 

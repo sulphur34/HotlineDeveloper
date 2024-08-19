@@ -2,7 +2,6 @@ using Modules.InputSystem.Interfaces;
 using UnityEngine;
 using VContainer;
 
-
 namespace Modules.AimSystem
 {
     public class UIAimFollower : MonoBehaviour
@@ -20,10 +19,12 @@ namespace Modules.AimSystem
 
         private void UpdatePosition(Vector2 lookPosition)
         {
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(_parentRectTransform, lookPosition,
-                null, out Vector2 movePos);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                _parentRectTransform,
+                lookPosition,
+                null,
+                out Vector2 movePos);
             _rectTransform.anchoredPosition = movePos;
         }
     }
 }
-

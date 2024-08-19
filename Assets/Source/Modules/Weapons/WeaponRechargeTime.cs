@@ -1,6 +1,6 @@
 ﻿using System;
-using Cysharp.Threading.Tasks;
 using System.Threading;
+using Cysharp.Threading.Tasks;
 
 namespace Modules.Weapons
 {

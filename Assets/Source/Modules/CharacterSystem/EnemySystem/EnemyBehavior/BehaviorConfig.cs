@@ -56,7 +56,7 @@ namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior
                 ReactionMaxDelay,
                 VisualDistance,
                 FieldOfViewAngle,
-                HearingDistance
+                HearingDistance,
             };
         }
     }

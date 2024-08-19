@@ -9,7 +9,7 @@ public class YandexGameReady : MonoBehaviour
 
     private void OnCallGameReadyButtonClick()
     {
-#if (UNITY_EDITOR)
+#if UNITY_EDITOR
         Debug.Log("Game ready");
 #else
 YandexGamesSdk.GameReady();

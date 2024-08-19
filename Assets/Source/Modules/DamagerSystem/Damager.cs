@@ -6,9 +6,9 @@ namespace Modules.DamagerSystem
     internal class Damager : MonoBehaviour
     {
         [SerializeField] private DamageData _damageData;
-        
+
         private IDamageInflictStrategy _damageStrategy;
-        
+
         private void Awake()
         {
             _damageStrategy = GetComponent<IDamageInflictStrategy>();

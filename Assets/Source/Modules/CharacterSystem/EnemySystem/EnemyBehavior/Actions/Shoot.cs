@@ -8,7 +8,7 @@ namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
     public class Shoot : Action
     {
         public SharedAiInput AiInput;
-        
+
         public override TaskStatus OnUpdate()
         {
             AiInput.Value.ReceiveAttack();

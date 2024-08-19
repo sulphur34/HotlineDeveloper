@@ -7,6 +7,6 @@ namespace Modules.DamagerSystem
         Boss,
         Immortal,
         AlwaysLethal,
-        LethalIsNormal
+        LethalIsNormal,
     }
 }

@@ -7,18 +7,20 @@ namespace Modules.WeaponsHandler
 {
     public class WeaponHandlerSetup : MonoBehaviour
     {
-        [SerializeField] protected WeaponHandlerData WeaponHandlerData;
-        [SerializeField] protected WeaponHandlerView WeaponHandlerView;
+        [field: SerializeField] protected WeaponHandlerData WeaponHandlerData { get; private set; }
+        [field: SerializeField] protected WeaponHandlerView WeaponHandlerView { get; private set; }
 
         private WeaponHandlerPresenter _weaponHandlerPresenter;
-        
-        protected void Initialize(IAttackInput attackInput, IPickInput pickInput,
+
+        protected void Initialize(
+            IAttackInput attackInput,
+            IPickInput pickInput,
             WeaponItemInitializer weaponItemInitializer)
         {
             if (WeaponHandlerData.DefaultWeapon != null)
                 weaponItemInitializer.InitializeWeapon(WeaponHandlerData.DefaultWeapon);
-            
-            WeaponHandler weaponHandler = new(WeaponHandlerData, attackInput, pickInput);
+
+            WeaponHandler weaponHandler = new (WeaponHandlerData, attackInput, pickInput);
             var damageReceiverView = GetComponent<DamageReceiverView>();
             _weaponHandlerPresenter = new WeaponHandlerPresenter(weaponHandler, WeaponHandlerView, damageReceiverView);
         }

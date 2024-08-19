@@ -8,7 +8,6 @@ namespace Modules.AimSystem
     {
         [SerializeField] private float _overviewRange = 30;
         [SerializeField] private float _lerpRate = 0.5f;
-    
         private Transform _transform;
         private Camera _camera;
         private Transform _cameraTransform;
@@ -24,10 +23,10 @@ namespace Modules.AimSystem
 
         private void UpdatePosition(Vector2 lookPosition)
         {
-            Vector3 playerPosition = new(transform.position.x, _camera.transform.position.y, _transform.position.z);
-            Vector3 mousePosition = new(lookPosition.x,lookPosition.y, _camera.nearClipPlane + _overviewRange);
+            Vector3 playerPosition = new (transform.position.x, _camera.transform.position.y, _transform.position.z);
+            Vector3 mousePosition = new (lookPosition.x, lookPosition.y, _camera.nearClipPlane + _overviewRange);
             Vector3 mouseWorldPoint = _camera.ScreenToWorldPoint(mousePosition);
-            mouseWorldPoint.y = _cameraTransform.position.y; 
+            mouseWorldPoint.y = _cameraTransform.position.y;
             _cameraTransform.transform.position = Vector3.Lerp(playerPosition, mouseWorldPoint, _lerpRate);
         }
     }

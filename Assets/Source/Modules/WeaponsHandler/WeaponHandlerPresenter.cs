@@ -11,7 +11,9 @@ namespace Modules.WeaponsHandler
         private readonly WeaponHandler _weaponHandler;
         private readonly DamageReceiverView _damageReceiverView;
 
-        public WeaponHandlerPresenter(WeaponHandler weaponHandler, WeaponHandlerView weaponHandlerView,
+        public WeaponHandlerPresenter(
+            WeaponHandler weaponHandler,
+            WeaponHandlerView weaponHandlerView,
             DamageReceiverView damageReceiverView)
         {
             _weaponHandler = weaponHandler;
@@ -22,6 +24,14 @@ namespace Modules.WeaponsHandler
             _weaponHandlerView = weaponHandlerView;
             _weaponHandlerView.Initialize();
             _damageReceiverView.FallenDown += OnFallDown;
+        }
+
+        public void Dispose()
+        {
+            _weaponHandler.Attacked -= OnWeaponAttack;
+            _weaponHandler.WeaponPicked -= OnWeaponPick;
+            _weaponHandler.WeaponThrown -= OnWeaponThrow;
+            _damageReceiverView.FallenDown -= OnFallDown;
         }
 
         private void OnFallDown()
@@ -43,14 +53,6 @@ namespace Modules.WeaponsHandler
         private void OnWeaponAttack(WeaponType weaponType)
         {
             _weaponHandlerView.OnAttack(weaponType);
-        }
-
-        public void Dispose()
-        {
-            _weaponHandler.Attacked -= OnWeaponAttack;
-            _weaponHandler.WeaponPicked -= OnWeaponPick;
-            _weaponHandler.WeaponThrown -= OnWeaponThrow;
-            _damageReceiverView.FallenDown -= OnFallDown;
         }
     }
 }

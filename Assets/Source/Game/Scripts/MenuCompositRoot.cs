@@ -1,4 +1,6 @@
-using Module.ContinueLevelButtonSystem;
+using System.Collections;
+using System.Linq;
+using Modules.ContinueLevelButtonSystem;
 using Modules.FadeSystem;
 using Modules.LeaderboardSystem;
 using Modules.LevelSelectionSystem;
@@ -6,8 +8,6 @@ using Modules.LevelsSystem;
 using Modules.PressedButtonSystem;
 using Modules.SaveHandlers;
 using Modules.SavingsSystem;
-using System.Collections;
-using System.Linq;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -15,10 +15,10 @@ using AudioSettings = Modules.Audio.AudioSettings;
 
 public class MenuCompositRoot : LifetimeScope
 {
+    private readonly SaveSystem _saveSystem = new SaveSystem();
+
     [SerializeField] private LevelSelectionElement[] _levelSelectionElements;
     [SerializeField] private PressedButton _levelSelectionButton;
-
-    private readonly SaveSystem _saveSystem = new SaveSystem();
 
     protected override void OnDestroy()
     {

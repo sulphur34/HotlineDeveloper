@@ -10,7 +10,7 @@ namespace Modules.MoveSystem
     {
         [SerializeField] private Transform _torsoRotator;
         [SerializeField] private DamageReceiverView _damageReceiverView;
-        
+
         private MoverPresenter _moverPresenter;
 
         [Inject]

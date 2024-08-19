@@ -14,7 +14,7 @@ namespace Modules.GUISystem
         private void Awake()
         {
             _transform = GetComponent<RectTransform>();
-        
+
             if (_isVertical)
                 AnimateVertical();
             else

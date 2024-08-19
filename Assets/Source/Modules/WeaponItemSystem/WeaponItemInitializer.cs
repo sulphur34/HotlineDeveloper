@@ -27,11 +27,11 @@ namespace Modules.WeaponItemSystem
 
             if (weaponSetup.GetType() == typeof(RangeWeaponSetup))
                 ((RangeWeaponSetup)weaponSetup).SetShotStrategy(_rangeWeaponConfigFactory);
-                
+
             weaponSetup.Initialize();
             weaponItem.Initialize(weaponSetup);
         }
-        
+
         private void InitializeWeapons()
         {
             foreach (WeaponItem weapon in _weapons)

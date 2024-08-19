@@ -14,7 +14,7 @@ namespace Modules.DamagerSystem
             _recoverTime = recoverTime;
             _cancellationToken = cancellationToken;
         }
-        
+
         internal bool IsKnocked { get; private set; }
 
         internal void Knockout(Action onKnockedCallback, Action onRecoveredCallback)

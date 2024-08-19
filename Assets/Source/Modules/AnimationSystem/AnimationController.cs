@@ -1,5 +1,4 @@
 using System.Collections;
-using Modules.AnimationSystem;
 using UnityEngine;
 
 namespace Modules.AnimationSystem
@@ -47,10 +46,14 @@ namespace Modules.AnimationSystem
 
         public void AttackMelee()
         {
-            if(_constrainsController.IsTwoHanded)
+            if (_constrainsController.IsTwoHanded)
+            {
                 _animatorController.AnimateTwoHandsAttack();
+            }
             else
+            {
                 _animatorController.AnimateOneHandAttack();
+            }
         }
 
         public void AttackBareHands()

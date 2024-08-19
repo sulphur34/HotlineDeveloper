@@ -30,7 +30,7 @@ namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
         {
             if (_navMeshAgent == null)
                 return TaskStatus.Failure;
-            
+
             if (_navMeshAgent.remainingDistance <= 0)
                 SetDestination();
 

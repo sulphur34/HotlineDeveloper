@@ -8,6 +8,7 @@ namespace Modules.Weapons.Ammunition
         event Action<uint> Changed;
 
         Sprite AmmoIcon { get; }
+
         uint CurrentAmmoCount { get; }
     }
 }

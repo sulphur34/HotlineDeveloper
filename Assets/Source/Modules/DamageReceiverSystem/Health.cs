@@ -9,7 +9,6 @@ namespace Modules.DamagerSystem
         private readonly float _maxHealth;
 
         private float _currentHealth;
-        
 
         internal Health(float maxHealth, float minHealth = 0f)
         {

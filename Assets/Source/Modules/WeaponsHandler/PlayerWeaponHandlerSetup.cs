@@ -7,7 +7,8 @@ namespace Modules.WeaponsHandler
     public class PlayerWeaponHandlerSetup : WeaponHandlerSetup
     {
         [Inject]
-        public void Construct(IAttackInput attackInput, IPickInput pickInput, WeaponItemInitializer weaponItemInitializer)
+        public void Construct(IAttackInput attackInput, IPickInput pickInput,
+            WeaponItemInitializer weaponItemInitializer)
         {
             Initialize(attackInput, pickInput, weaponItemInitializer);
         }

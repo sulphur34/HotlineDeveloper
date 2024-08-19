@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-namespace Module.ContinueLevelButtonSystem
+namespace Modules.ContinueLevelButtonSystem
 {
     public class ContinueLevelButtonView : MonoBehaviour
     {

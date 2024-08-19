@@ -6,6 +6,7 @@ namespace Modules.DamagerSystem
     public abstract class WeaponStrategy : MonoBehaviour, IDamageInflictStrategy
     {
         protected bool IsEquipped { get; private set; }
+
         protected DamageReceiverView OwnerDamageReceiver { get; private set; }
 
         public abstract void InflictDamage(DamageReceiverView damageReceiverView, DamageData damageData);

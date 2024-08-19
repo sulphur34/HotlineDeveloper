@@ -10,7 +10,7 @@ namespace Source.Modules.GUISystem
         [SerializeField] private EndLevelTrigger _endLevelTrigger;
 
         private TextMeshProUGUI _textMeshPro;
-        
+
         private void Awake()
         {
             _textMeshPro = GetComponent<TextMeshProUGUI>();

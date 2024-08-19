@@ -14,6 +14,7 @@ namespace Modules.LevelsSystem
         private Collider _collider;
 
         public event Action Enabled;
+
         public event Action Reached;
 
         private void OnTriggerEnter(Collider other)
@@ -47,7 +48,7 @@ namespace Modules.LevelsSystem
         {
             _collider.enabled = isActive;
             _activationCanvas.enabled = isActive;
-            
+
             if (isActive)
                 _activationParticle.Play();
             else

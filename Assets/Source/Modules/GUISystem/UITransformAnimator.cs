@@ -4,7 +4,7 @@ namespace Modules.GUISystem
 {
     public class UITransformAnimator : MonoBehaviour
     {
-        protected RectTransform Transform;
+        protected RectTransform Transform { get; private set; }
 
         private void Start()
         {

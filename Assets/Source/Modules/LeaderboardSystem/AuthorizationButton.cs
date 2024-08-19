@@ -1,6 +1,6 @@
-﻿using Agava.YandexGames;
+﻿using System;
+using Agava.YandexGames;
 using Modules.PressedButtonSystem;
-using System;
 
 namespace Modules.LeaderboardSystem
 {

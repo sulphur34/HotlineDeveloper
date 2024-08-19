@@ -15,7 +15,7 @@ namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
         private Vector3 _direction;
         private Transform _transform;
 
-        private float _randomAxisValue => Random.Range(MinAxisValue, MaxAxisValue);
+        private float RandomAxisValue => Random.Range(MinAxisValue, MaxAxisValue);
 
         public override void OnAwake()
         {
@@ -29,7 +29,7 @@ namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
 
         public override TaskStatus OnUpdate()
         {
-            Vector3 direction = (_direction - _transform.position);
+            Vector3 direction = _direction - _transform.position;
             direction.y = 0;
             direction = direction.normalized;
 
@@ -43,7 +43,7 @@ namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
 
         private Vector3 GetRandomDirection()
         {
-            return new Vector3(_randomAxisValue, _transform.position.y, _randomAxisValue);
+            return new Vector3(RandomAxisValue, _transform.position.y, RandomAxisValue);
         }
     }
 }

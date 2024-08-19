@@ -10,12 +10,15 @@ namespace Modules.DamagerSystem
         [SerializeField] private AnimationController _animationController;
         [SerializeField] private ParticleSystem _bloodParticlePrefab;
         [SerializeField] private Collider _collider;
-        
+
         public event Action<DamageData> Received;
+
         public event Action FallenDown;
+
         public event Action Recovered;
+
         public event Action<GameObject> Died;
-        
+
         public bool IsDead { get; private set; }
         public bool IsKnocked { get; private set; }
 
@@ -23,10 +26,10 @@ namespace Modules.DamagerSystem
         {
             if (!damageData.IsKnockout && !IsDead)
                 Instantiate(_bloodParticlePrefab, transform);
-            
+
             Received?.Invoke(damageData);
         }
-       
+
         public void OnKnocked()
         {
             IsKnocked = true;
@@ -43,7 +46,7 @@ namespace Modules.DamagerSystem
 
         public void OnDeath()
         {
-            Died?.Invoke(this.gameObject);
+            Died?.Invoke(gameObject);
             IsDead = true;
             OnFall();
         }

@@ -15,17 +15,18 @@ namespace Modules.Audio
         private SourceAudio _sourceAudio;
 
         internal static MusicHandler Instance => _instance;
+
         private bool IsLevelMusicPlaying { get; set; }
-        
+
         private void Awake()
         {
             if (_instance == null)
                 _instance = this;
             else if (_instance != this)
                 Destroy(_instance.gameObject);
-            
+
             _sourceAudio = GetComponent<SourceAudio>();
-            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(gameObject);
         }
 
         internal void OnMenuLoad()
@@ -39,7 +40,7 @@ namespace Modules.Audio
         {
             if (IsLevelMusicPlaying)
                 return;
-            
+
             Stop();
             PlayRandom();
             _sourceAudio.OnFinished += PlayRandom;
@@ -51,7 +52,7 @@ namespace Modules.Audio
             int index = Random.Range(0, _levelsMusicNames.Length);
             _sourceAudio.Play(_levelsMusicNames[index]);
         }
-        
+
         private void PlayMenu()
         {
             _sourceAudio.Stop();

@@ -6,8 +6,8 @@ namespace Modules.DamagerSystem
         {
             if (OwnerDamageReceiver == null || IsEquipped)
                 return;
-            
-            if(damageReceiverView != OwnerDamageReceiver)
+
+            if (damageReceiverView != OwnerDamageReceiver)
                 damageReceiverView.Receive(damageData);
         }
     }

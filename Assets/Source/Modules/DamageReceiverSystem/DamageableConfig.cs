@@ -7,7 +7,9 @@ namespace Modules.DamagerSystem
     public class DamageableConfig : ScriptableObject
     {
         [SerializeField] private DamageReceiveStrategies _damageReceiveStrategies;
+
         [field: SerializeField] public float MaxValue { get; private set; }
+
         [field: SerializeField] public float RecoverTime { get; private set; }
 
         internal IDamageReceiveStrategy DamageReceiveStrategy => GetDamageStrategy(_damageReceiveStrategies);
@@ -24,13 +26,13 @@ namespace Modules.DamagerSystem
 
                 case DamageReceiveStrategies.MeleeImmune:
                     return new MeleeImmuneReceiveStrategy();
-                
+
                 case DamageReceiveStrategies.AlwaysLethal:
                     return new AlwaysLethalReceiveStrategy();
-                
+
                 case DamageReceiveStrategies.Immortal:
                     return new ImmortalReceiveStrategy();
-                
+
                 case DamageReceiveStrategies.LethalAsNormal:
                     return new LethalAsNormalReceiveStrategy();
 

@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Threading;
 using UnityEngine;
-
 
 namespace Modules.AnimationSystem
 {
@@ -12,7 +10,7 @@ namespace Modules.AnimationSystem
         private readonly AnimatorIndexer _animatorIndexer;
         private readonly Transform _transform;
 
-        private Coroutine _coroutine; 
+        private Coroutine _coroutine;
         private Vector3 _oldPosition;
 
         internal AnimatorController(Animator animator, Transform transform, AnimationController animationController)

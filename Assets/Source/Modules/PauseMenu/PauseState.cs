@@ -1,4 +1,4 @@
-namespace Source.Modules.FocusSystem
+namespace Modules.FocusSystem
 {
     public class PauseState
     {
@@ -10,8 +10,7 @@ namespace Source.Modules.FocusSystem
         {
             Timescale = timescale;
             IsInputEnabled = isInputEnabled;
-            this.IsAudioPaused = isAudioPaused;
+            IsAudioPaused = isAudioPaused;
         }
-
     }
 }

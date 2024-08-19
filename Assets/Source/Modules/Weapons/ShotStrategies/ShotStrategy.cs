@@ -9,7 +9,7 @@ namespace Modules.Weapons
         [SerializeField] private BulletSpawnPoint _bulletSpawnPoint;
         [SerializeField] private float _minAngle;
         [SerializeField] private float _maxAngle;
-        
+
         private RangeWeaponConfig _config;
         private BulletPool _bulletPool;
 
@@ -47,6 +47,6 @@ namespace Modules.Weapons
             float angleInDeg = Random.Range(_minAngle, _maxAngle);
             Quaternion rotation = Quaternion.AngleAxis(angleInDeg, Vector3.up);
             return rotation * transform.forward;
-        } 
+        }
     }
 }

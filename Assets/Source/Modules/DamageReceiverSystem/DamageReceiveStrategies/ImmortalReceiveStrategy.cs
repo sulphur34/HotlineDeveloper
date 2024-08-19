@@ -4,7 +4,7 @@ namespace Modules.DamagerSystem.DamageStrategy
     {
         public DamageData GetDamage(DamageData damageData)
         {
-                return DamageData.ZeroDamage;
+            return DamageData.ZeroDamage;
         }
     }
 }

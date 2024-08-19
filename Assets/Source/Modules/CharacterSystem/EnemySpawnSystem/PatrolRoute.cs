@@ -9,12 +9,14 @@ namespace Modules.EnemySpawnSystem
     public class PatrolRoute
     {
         private const string PatrolPointsName = "PatrolPoints";
-        
-        public Transform[] Waypoints;
+
+        [field: SerializeField] public Transform[] Waypoints { get; private set; }
 
         public KeyValuePair<string, Vector3[]> GetRoute()
         {
-            return new KeyValuePair<string, Vector3[]>(PatrolPointsName, Waypoints.Select(waypoint => waypoint.position).ToArray());
+            return new KeyValuePair<string, Vector3[]>(
+                PatrolPointsName,
+                Waypoints.Select(waypoint => waypoint.position).ToArray());
         }
     }
 }

@@ -17,6 +17,7 @@ namespace Modules.LevelsSystem
         private InputController _inputController;
 
         public event Action Won;
+
         public event Action Lost;
 
         public int LevelCompleteIndex { get; private set; }

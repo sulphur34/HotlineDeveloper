@@ -17,7 +17,7 @@ namespace Modules.GUISystem
         {
             _cancellationTokenSource.Cancel();
         }
-        
+
         public void Activate(List<float> results)
         {
             if (results.Count != _uiNumberAnimators.Length)
@@ -32,7 +32,10 @@ namespace Modules.GUISystem
             for (int i = 0; i < _uiNumberAnimators.Length; i++)
             {
                 await _uiNumberAnimators[i].Activate(results[i]);
-                await UniTask.WaitForSeconds(_delay, false, PlayerLoopTiming.Update,
+                await UniTask.WaitForSeconds(
+                    _delay,
+                    false,
+                    PlayerLoopTiming.Update,
                     _cancellationTokenSource.Token);
             }
         }

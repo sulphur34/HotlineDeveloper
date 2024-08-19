@@ -1,7 +1,7 @@
-﻿using Modules.LevelsSystem;
-using Modules.PressedButtonSystem;
-using System;
+﻿using System;
 using System.Linq;
+using Modules.LevelsSystem;
+using Modules.PressedButtonSystem;
 using VContainer;
 
 namespace Modules.LevelSelectionSystem
@@ -16,9 +16,10 @@ namespace Modules.LevelSelectionSystem
         private LevelSelectionElement _lastSelectedElement;
 
         [Inject]
-        public LevelSelectionPresenter(LevelSelectionElement[] levelSelectionElements, 
-            PressedButton levelSelectionButton, 
-            LevelSceneLoader levelSceneLoader, 
+        public LevelSelectionPresenter(
+            LevelSelectionElement[] levelSelectionElements,
+            PressedButton levelSelectionButton,
+            LevelSceneLoader levelSceneLoader,
             LevelsData levels)
         {
             _levelSelectionElements = levelSelectionElements;
@@ -50,7 +51,7 @@ namespace Modules.LevelSelectionSystem
 
         private void OnButtonPressed()
         {
-            if (_lastSelectedElement == null) 
+            if (_lastSelectedElement == null)
                 return;
 
             _levels.ForLoad = _lastSelectedElement.LevelNumberForLoad;

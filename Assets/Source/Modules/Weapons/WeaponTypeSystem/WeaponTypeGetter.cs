@@ -1,6 +1,6 @@
-﻿using Modules.Weapons.Melee;
+﻿using System;
+using Modules.Weapons.Melee;
 using Modules.Weapons.Range;
-using System;
 using Modules.WeaponTypes;
 
 namespace Modules.Weapons.WeaponTypeSystem

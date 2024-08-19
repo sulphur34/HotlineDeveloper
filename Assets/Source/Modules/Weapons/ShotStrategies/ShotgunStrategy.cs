@@ -7,7 +7,7 @@ namespace Modules.Weapons
     internal class ShotgunStrategy : ShotStrategy
     {
         private readonly float _minFireDelay = 0f;
-        
+
         [SerializeField] private uint _bulletsNumber;
         [SerializeField] private float _maxFireDelay = 0.005f;
 

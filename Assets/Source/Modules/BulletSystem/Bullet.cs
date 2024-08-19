@@ -9,20 +9,20 @@ namespace Modules.BulletSystem
         [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private float _lifetime;
         [SerializeField] private BulletParticleController _particleController;
-        [field: SerializeField] public Collider Collider { get; private set; }
-
         private WaitForSeconds _waitLifetime;
         private Coroutine _coroutine;
-        
+
+        [field: SerializeField] public Collider Collider { get; private set; }
+
         public event Action<Bullet> LifespanEnded;
 
         private void OnTriggerEnter(Collider other)
         {
             if (_coroutine != null)
                 StopCoroutine(_coroutine);
-            
+
             _particleController.DeactivateParticle();
-            
+
             LifespanEnded?.Invoke(this);
         }
 

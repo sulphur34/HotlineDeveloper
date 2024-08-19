@@ -1,35 +1,38 @@
-using Modules.FadeSystem;
-using Modules.LevelsSystem;
-using Modules.PauseMenu;
-using Modules.WeaponsHandler;
-using Modules.SaveHandlers;
-using Modules.Weapons.Ammunition;
-using Modules.Weapons.Range;
-using UnityEngine;
-using VContainer;
-using VContainer.Unity;
-using Modules.MoveSystem;
-using Modules.CharacterSystem;
-using Modules.EnemySpawnSystem;
-using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
-using Modules.DamagerSystem;
-using Modules.LevelSelectionSystem;
-using Modules.GUISystem;
-using Modules.LeaderboardSystem;
 using Modules.AdvertisementSystem;
 using Modules.AimSystem;
-using Source.Modules.FocusSystem;
-using Modules.NextLevelButtonSystem;
-using Modules.WeaponItemSystem;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
+using Modules.CharacterSystem;
+using Modules.DamagerSystem;
+using Modules.EnemySpawnSystem;
+using Modules.FadeSystem;
+using Modules.FocusSystem;
+using Modules.GUISystem;
 using Modules.InputSystem.PlayerInput;
 using Modules.InputSystem;
+using Modules.LeaderboardSystem;
+using Modules.LevelSelectionSystem;
+using Modules.LevelsSystem;
+using Modules.MoveSystem;
+using Modules.NextLevelButtonSystem;
+using Modules.PauseMenu;
+using Modules.SaveHandlers;
+using Modules.WeaponItemSystem;
+using Modules.Weapons.Ammunition;
+using Modules.Weapons.Range;
+using Modules.WeaponsHandler;
+using UnityEngine;
 using UnityEngine.Serialization;
+using VContainer;
+using VContainer.Unity;
 
 public class LevelCompositRoot : LifetimeScope
 {
     [SerializeField] private MoverConfig _moverConfig;
     [SerializeField] private RangeWeaponConfigFactory _weaponConfigFactory;
-    [FormerlySerializedAs("_weaponTracker")] [SerializeField] private WeaponItemInitializer _weaponItemInitializer;
+
+    [FormerlySerializedAs("_weaponTracker")] [SerializeField]
+    private WeaponItemInitializer _weaponItemInitializer;
+
     [SerializeField] private LevelEnemySpawnConfigs _enemySpawnConfigs;
     [SerializeField] private BehaviorConfigFactory _desktopBehaviorConfigFactory;
     [SerializeField] private BehaviorConfigFactory _mobileBehaviorConfigFactory;
@@ -155,10 +158,7 @@ public class LevelCompositRoot : LifetimeScope
         builder.RegisterComponentInHierarchy<NextLevelButtonView>();
         builder.Register<NextLevelButtonPresenter>(Lifetime.Singleton);
         builder.RegisterComponentInHierarchy<VideoAD>();
-        
-        builder.RegisterBuildCallback(container =>
-        {
-            container.Resolve<NextLevelButtonPresenter>();
-        });
+
+        builder.RegisterBuildCallback(container => { container.Resolve<NextLevelButtonPresenter>(); });
     }
 }

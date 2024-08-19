@@ -7,6 +7,6 @@ namespace Modules.DamagerSystem.DamageStrategy
         AlwaysLethal,
         Normal,
         Immortal,
-        LethalAsNormal
+        LethalAsNormal,
     }
 }
