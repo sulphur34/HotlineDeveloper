@@ -1,8 +1,10 @@
+using Modules.CharacterSystem.EnemySystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
+using Modules.DamageReceiverSystem;
 using Modules.DamagerSystem;
 using UnityEngine;
 
-namespace Modules.EnemySpawnSystem
+namespace Modules.CharacterSystem.EnemySpawnSystem
 {
     [CreateAssetMenu(fileName = "Enemy Spawn Config")]
     internal class EnemySpawnConfig : ScriptableObject

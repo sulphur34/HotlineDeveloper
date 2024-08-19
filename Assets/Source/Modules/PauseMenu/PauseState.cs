@@ -1,4 +1,4 @@
-namespace Modules.FocusSystem
+namespace Modules.PauseMenu
 {
     public class PauseState
     {

@@ -1,4 +1,4 @@
-using Modules.DamagerSystem;
+using Modules.DamageReceiverSystem;
 using Modules.InputSystem.Interfaces;
 using UnityEngine;
 using VContainer;

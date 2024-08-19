@@ -1,6 +1,6 @@
 ﻿using System;
 using Modules.CharacterSystem;
-using Modules.DamagerSystem;
+using Modules.DamageReceiverSystem;
 using Modules.InputSystem.PlayerInput;
 using UnityEngine;
 using VContainer;

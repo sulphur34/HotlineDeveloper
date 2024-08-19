@@ -3,51 +3,54 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DeleteGameObjectsWithName : EditorWindow
+namespace Editor
 {
-    private string objectNameToDelete;
-
-    [MenuItem("Tools/Delete GameObjects With Name")]
-    public static void ShowWindow()
+    public class DeleteGameObjectsWithName : EditorWindow
     {
-        GetWindow<DeleteGameObjectsWithName>("Delete GameObjects With Name");
-    }
+        private string objectNameToDelete;
 
-    private void OnGUI()
-    {
-        GUILayout.Label("Enter the name of the GameObjects to delete:", EditorStyles.boldLabel);
-        objectNameToDelete = EditorGUILayout.TextField("Name", objectNameToDelete);
-
-        if (GUILayout.Button("Delete GameObjects"))
+        [MenuItem("Tools/Delete GameObjects With Name")]
+        public static void ShowWindow()
         {
-            DeleteGameObjects();
-        }
-    }
-
-    private void DeleteGameObjects()
-    {
-        if (string.IsNullOrEmpty(objectNameToDelete))
-        {
-            Debug.LogError("Object name to delete is empty.");
-            return;
+            GetWindow<DeleteGameObjectsWithName>("Delete GameObjects With Name");
         }
 
-        string[] allScenePaths = AssetDatabase.FindAssets("t:Scene");
-        foreach (string sceneGUID in allScenePaths)
+        private void OnGUI()
         {
-            string scenePath = AssetDatabase.GUIDToAssetPath(sceneGUID);
-            Scene scene = EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
+            GUILayout.Label("Enter the name of the GameObjects to delete:", EditorStyles.boldLabel);
+            objectNameToDelete = EditorGUILayout.TextField("Name", objectNameToDelete);
 
-            GameObject gameObjectToDelete = GameObject.Find(objectNameToDelete);
-            if (gameObjectToDelete != null)
+            if (GUILayout.Button("Delete GameObjects"))
             {
-                DestroyImmediate(gameObjectToDelete);
-                Debug.Log($"Deleted {objectNameToDelete} from scene {scene.name}");
+                DeleteGameObjects();
+            }
+        }
+
+        private void DeleteGameObjects()
+        {
+            if (string.IsNullOrEmpty(objectNameToDelete))
+            {
+                Debug.LogError("Object name to delete is empty.");
+                return;
             }
 
-            EditorSceneManager.SaveScene(scene);
-        }
+            string[] allScenePaths = AssetDatabase.FindAssets("t:Scene");
+            foreach (string sceneGUID in allScenePaths)
+            {
+                string scenePath = AssetDatabase.GUIDToAssetPath(sceneGUID);
+                Scene scene = EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
 
-        Debug.Log("Completed deleting GameObjects.");
+                GameObject gameObjectToDelete = GameObject.Find(objectNameToDelete);
+                if (gameObjectToDelete != null)
+                {
+                    DestroyImmediate(gameObjectToDelete);
+                    Debug.Log($"Deleted {objectNameToDelete} from scene {scene.name}");
+                }
+
+                EditorSceneManager.SaveScene(scene);
+            }
+
+            Debug.Log("Completed deleting GameObjects.");
+        }
     }
 }

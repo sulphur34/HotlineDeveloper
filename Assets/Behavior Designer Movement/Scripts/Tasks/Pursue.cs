@@ -1,20 +1,22 @@
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Pursue the target specified using the Unity NavMesh.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("e1387dd5098c1f7449253a17b3b39784", "c29eb3ccdfa67a744971276c325e44ea")]
     public class Pursue : NavMeshMovement
     {
-        [Tooltip("How far to predict the distance ahead of the target. Lower values indicate less distance should be predicated")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("How far to predict the distance ahead of the target. Lower values indicate less distance should be predicated")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetDistPrediction")]
         public SharedFloat m_TargetDistPrediction = 20;
-        [Tooltip("Multiplier for predicting the look ahead distance")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Multiplier for predicting the look ahead distance")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetDistPredictionMult")]
         public SharedFloat m_TargetDistPredictionMult = 20;
-        [Tooltip("The GameObject that the agent is pursuing")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The GameObject that the agent is pursuing")]
         [UnityEngine.Serialization.FormerlySerializedAs("target")]
         public SharedGameObject m_Target;
 

@@ -1,5 +1,5 @@
 using Modules.WeaponItemSystem;
-using Modules.WeaponTypes;
+using Modules.WeaponsTypes;
 using Plugins.Audio.Utils;
 using UnityEngine;
 

@@ -1,43 +1,45 @@
-﻿using UnityEngine;
+﻿using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
+using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Check to see if the any object specified by the object list or tag is within the distance specified of the current agent.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("62dc1c328b5c4eb45a90ec7a75cfb747", "0e2ffa7c5e610214eb6d5c71613bbdec")]
     public class WithinDistance : Conditional
     {
-        [Tooltip("Should the 2D version be used?")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Should the 2D version be used?")]
         [UnityEngine.Serialization.FormerlySerializedAs("usePhysics2D")]
         public bool m_UsePhysics2D;
-        [Tooltip("Specifies the type of detection that should be used.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Specifies the type of detection that should be used.")]
         public SharedDetectionMode m_DetectionMode = DetectionMode.Object | DetectionMode.ObjectList | DetectionMode.Tag | DetectionMode.LayerMask;
-        [Tooltip("The object that we are searching for")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The object that we are searching for")]
         public SharedGameObject m_TargetObject;
-        [Tooltip("The objects that we are searching for")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The objects that we are searching for")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetObjects")]
         public SharedGameObjectList m_TargetObjects;
-        [Tooltip("The tag of the object that we are searching for")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The tag of the object that we are searching for")]
         public SharedString m_TargetTag;
-        [Tooltip("The LayerMask of the objects that we are searching for")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The LayerMask of the objects that we are searching for")]
         public SharedLayerMask m_TargetLayerMask;
-        [Tooltip("If using the object layer mask, specifies the maximum number of colliders that the physics cast can collide with")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("If using the object layer mask, specifies the maximum number of colliders that the physics cast can collide with")]
         public int m_MaxCollisionCount = 200;
-        [Tooltip("The distance that the object needs to be within")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The distance that the object needs to be within")]
         public SharedFloat m_Magnitude = 5;
-        [Tooltip("If true, the object must be within line of sight to be within distance. For example, if this option is enabled then an object behind a wall will not be within distance even though it may " +
-                 "be physically close to the other object")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("If true, the object must be within line of sight to be within distance. For example, if this option is enabled then an object behind a wall will not be within distance even though it may " +
+                                                "be physically close to the other object")]
         public SharedBool m_LineOfSight;
-        [Tooltip("The LayerMask of the objects to ignore when performing the line of sight check")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The LayerMask of the objects to ignore when performing the line of sight check")]
         public LayerMask m_IgnoreLayerMask = 1 << LayerMask.NameToLayer("Ignore Raycast");
-        [Tooltip("The raycast offset relative to the pivot position")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The raycast offset relative to the pivot position")]
         public SharedVector3 m_Offset;
-        [Tooltip("The target raycast offset relative to the pivot position")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The target raycast offset relative to the pivot position")]
         public SharedVector3 m_TargetOffset;
-        [Tooltip("Should a debug look ray be drawn to the scene view?")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Should a debug look ray be drawn to the scene view?")]
         public SharedBool m_DrawDebugRay;
-        [Tooltip("The object variable that will be set when a object is found what the object is")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The object variable that will be set when a object is found what the object is")]
         public SharedGameObject m_ReturnedObject;
 
         private float m_SqrMagnitude; // distance * distance, optimization so we don't have to take the square root

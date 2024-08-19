@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Modules.EnemySpawnSystem
+namespace Modules.CharacterSystem.EnemySpawnSystem
 {
     [CreateAssetMenu(fileName = "Level Spawn Config")]
     public class LevelEnemySpawnConfigs : ScriptableObject

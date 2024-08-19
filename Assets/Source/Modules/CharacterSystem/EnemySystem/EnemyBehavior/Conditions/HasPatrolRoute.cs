@@ -1,8 +1,8 @@
 using System.Linq;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables;
 
-namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("HasPatrolRoute")]

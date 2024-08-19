@@ -1,4 +1,5 @@
 ﻿using System;
+using Modules.Weapons.ShotStrategies;
 using UnityEngine;
 
 namespace Modules.Weapons.Range

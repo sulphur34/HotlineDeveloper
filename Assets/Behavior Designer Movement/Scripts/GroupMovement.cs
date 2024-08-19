@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using BehaviorDesigner.Runtime.Tasks;
+using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts
 {
     public abstract class GroupMovement : Action
     {

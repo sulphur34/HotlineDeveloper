@@ -1,35 +1,37 @@
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Find a place to hide and move to it using the Unity NavMesh.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("c91b8fe3d68a9114dafd557a82d821d8", "67e27331b399ae14f9eb7a6debc1802d")]
     public class Cover : NavMeshMovement
     {
-        [Tooltip("The distance to search for cover")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The distance to search for cover")]
         [UnityEngine.Serialization.FormerlySerializedAs("maxCoverDistance")]
         public SharedFloat m_MaxCoverDistance = 1000;
-        [Tooltip("The layermask of the available cover positions")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The layermask of the available cover positions")]
         [UnityEngine.Serialization.FormerlySerializedAs("availableLayerCovers")]
         public LayerMask m_AvailableLayerCovers;
-        [Tooltip("The maximum number of raycasts that should be fired before the agent gives up looking for an agent to find cover behind")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The maximum number of raycasts that should be fired before the agent gives up looking for an agent to find cover behind")]
         [UnityEngine.Serialization.FormerlySerializedAs("maxRaycasts")]
         public SharedInt m_MaxRaycasts = 100;
-        [Tooltip("How large the step should be between raycasts")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("How large the step should be between raycasts")]
         [UnityEngine.Serialization.FormerlySerializedAs("rayStep")]
         public SharedFloat m_RayStep = 1;
-        [Tooltip("Once a cover point has been found, multiply this offset by the normal to prevent the agent from hugging the wall")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Once a cover point has been found, multiply this offset by the normal to prevent the agent from hugging the wall")]
         [UnityEngine.Serialization.FormerlySerializedAs("coverOffset")]
         public SharedFloat m_CoverOffset = 2;
-        [Tooltip("Should the agent look at the cover point after it has arrived?")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Should the agent look at the cover point after it has arrived?")]
         [UnityEngine.Serialization.FormerlySerializedAs("lookAtCoverPoint")]
         public SharedBool m_LookAtCoverPoint = false;
-        [Tooltip("The agent is done rotating to the cover point when the square magnitude is less than this value")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The agent is done rotating to the cover point when the square magnitude is less than this value")]
         [UnityEngine.Serialization.FormerlySerializedAs("rotationEpsilon")]
         public SharedFloat m_RotationEpsilon = 0.5f;
-        [Tooltip("Max rotation delta if lookAtCoverPoint")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Max rotation delta if lookAtCoverPoint")]
         [UnityEngine.Serialization.FormerlySerializedAs("maxLookAtRotationDelta")]
         public SharedFloat m_MaxLookAtRotationDelta;
 

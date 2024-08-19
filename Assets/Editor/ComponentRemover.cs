@@ -1,72 +1,75 @@
-using UnityEngine;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.SceneManagement;
-using System.Collections.Generic;
+using UnityEngine;
 
-public class ComponentRemover : EditorWindow
+namespace Editor
 {
-    private string gameObjectName;
-    private string componentName;
-
-    [MenuItem("Tools/Component Remover")]
-    public static void ShowWindow()
+    public class ComponentRemover : EditorWindow
     {
-        GetWindow<ComponentRemover>("Component Remover");
-    }
+        private string gameObjectName;
+        private string componentName;
 
-    void OnGUI()
-    {
-        GUILayout.Label("Remove Component from GameObject", EditorStyles.boldLabel);
-
-        gameObjectName = EditorGUILayout.TextField("GameObject Name", gameObjectName);
-        componentName = EditorGUILayout.TextField("Component Name", componentName);
-
-        if (GUILayout.Button("Remove Component"))
+        [MenuItem("Tools/Component Remover")]
+        public static void ShowWindow()
         {
-            RemoveComponentFromAllScenes(gameObjectName, componentName);
-        }
-    }
-
-    private void RemoveComponentFromAllScenes(string goName, string compName)
-    {
-        if (string.IsNullOrEmpty(goName) || string.IsNullOrEmpty(compName))
-        {
-            Debug.LogError("GameObject name and Component name must be provided.");
-            return;
+            GetWindow<ComponentRemover>("Component Remover");
         }
 
-        var scenePaths = new List<string>();
-        foreach (var scene in EditorBuildSettings.scenes)
+        void OnGUI()
         {
-            if (scene.enabled)
+            GUILayout.Label("Remove Component from GameObject", EditorStyles.boldLabel);
+
+            gameObjectName = EditorGUILayout.TextField("GameObject Name", gameObjectName);
+            componentName = EditorGUILayout.TextField("Component Name", componentName);
+
+            if (GUILayout.Button("Remove Component"))
             {
-                scenePaths.Add(scene.path);
+                RemoveComponentFromAllScenes(gameObjectName, componentName);
             }
         }
 
-        foreach (var scenePath in scenePaths)
+        private void RemoveComponentFromAllScenes(string goName, string compName)
         {
-            EditorSceneManager.OpenScene(scenePath);
-
-            GameObject[] allGameObjects = GameObject.FindObjectsOfType<GameObject>();
-            foreach (var go in allGameObjects)
+            if (string.IsNullOrEmpty(goName) || string.IsNullOrEmpty(compName))
             {
-                if (go.name == goName)
+                Debug.LogError("GameObject name and Component name must be provided.");
+                return;
+            }
+
+            var scenePaths = new List<string>();
+            foreach (var scene in EditorBuildSettings.scenes)
+            {
+                if (scene.enabled)
                 {
-                    var component = go.GetComponent(compName);
-                    if (component != null)
-                    {
-                        DestroyImmediate(component);
-                        Debug.Log($"Removed {compName} from {goName} in scene {scenePath}");
-                    }
+                    scenePaths.Add(scene.path);
                 }
             }
 
-            EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
-            EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene());
-        }
+            foreach (var scenePath in scenePaths)
+            {
+                EditorSceneManager.OpenScene(scenePath);
 
-        AssetDatabase.SaveAssets();
-        Debug.Log("Component removal complete.");
+                GameObject[] allGameObjects = GameObject.FindObjectsOfType<GameObject>();
+                foreach (var go in allGameObjects)
+                {
+                    if (go.name == goName)
+                    {
+                        var component = go.GetComponent(compName);
+                        if (component != null)
+                        {
+                            DestroyImmediate(component);
+                            Debug.Log($"Removed {compName} from {goName} in scene {scenePath}");
+                        }
+                    }
+                }
+
+                EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+                EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene());
+            }
+
+            AssetDatabase.SaveAssets();
+            Debug.Log("Component removal complete.");
+        }
     }
 }

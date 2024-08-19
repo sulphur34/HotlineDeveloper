@@ -2,11 +2,12 @@ using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Modules.CharacterSystem;
+using Modules.LevelsSystem;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
 
-namespace Modules.LevelsSystem
+namespace Modules.GUISystem
 {
     [RequireComponent(typeof(Image))]
     public class UIDirectionPointer : MonoBehaviour

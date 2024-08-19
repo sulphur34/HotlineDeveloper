@@ -1,7 +1,7 @@
 using BehaviorDesigner.Runtime;
 using Modules.WeaponsHandler;
 
-namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables
 {
     public class SharedPlayerWeaponHandler : SharedVariable<WeaponHandlerView>
     {

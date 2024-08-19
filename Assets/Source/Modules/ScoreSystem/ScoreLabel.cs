@@ -2,7 +2,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
-namespace Modules.GUISystem
+namespace Modules.ScoreSystem
 {
     [RequireComponent(typeof(TextMeshProUGUI))]
     internal class ScoreLabel : MonoBehaviour

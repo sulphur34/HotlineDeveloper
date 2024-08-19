@@ -1,5 +1,5 @@
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables;
 
 namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
 {

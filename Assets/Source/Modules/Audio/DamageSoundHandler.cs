@@ -1,4 +1,4 @@
-using Modules.DamagerSystem;
+using Modules.DamageReceiverSystem;
 using Plugins.Audio.Utils;
 using UnityEngine;
 

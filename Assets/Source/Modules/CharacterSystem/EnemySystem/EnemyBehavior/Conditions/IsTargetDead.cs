@@ -1,8 +1,9 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
+using Modules.DamageReceiverSystem;
 using Modules.DamagerSystem;
 
-namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsTargetDead")]

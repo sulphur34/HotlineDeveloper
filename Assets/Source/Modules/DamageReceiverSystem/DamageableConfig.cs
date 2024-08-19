@@ -1,12 +1,12 @@
-using Modules.DamagerSystem.DamageStrategy;
+using Modules.DamageReceiverSystem.DamageReceiveStrategies;
 using UnityEngine;
 
-namespace Modules.DamagerSystem
+namespace Modules.DamageReceiverSystem
 {
     [CreateAssetMenu(fileName = "Damageable Config")]
     public class DamageableConfig : ScriptableObject
     {
-        [SerializeField] private DamageReceiveStrategies _damageReceiveStrategies;
+        [SerializeField] private DamageReceiveStrategies.DamageReceiveStrategies _damageReceiveStrategies;
 
         [field: SerializeField] public float MaxValue { get; private set; }
 
@@ -14,26 +14,26 @@ namespace Modules.DamagerSystem
 
         internal IDamageReceiveStrategy DamageReceiveStrategy => GetDamageStrategy(_damageReceiveStrategies);
 
-        private IDamageReceiveStrategy GetDamageStrategy(DamageReceiveStrategies damageReceiveStrategies)
+        private IDamageReceiveStrategy GetDamageStrategy(DamageReceiveStrategies.DamageReceiveStrategies damageReceiveStrategies)
         {
             switch (damageReceiveStrategies)
             {
-                case DamageReceiveStrategies.Normal:
+                case DamageReceiveStrategies.DamageReceiveStrategies.Normal:
                     return new NormalDamageReceiveStrategy();
 
-                case DamageReceiveStrategies.KnockoutImmune:
+                case DamageReceiveStrategies.DamageReceiveStrategies.KnockoutImmune:
                     return new KnockoutImmuneReceiveStrategy();
 
-                case DamageReceiveStrategies.MeleeImmune:
+                case DamageReceiveStrategies.DamageReceiveStrategies.MeleeImmune:
                     return new MeleeImmuneReceiveStrategy();
 
-                case DamageReceiveStrategies.AlwaysLethal:
+                case DamageReceiveStrategies.DamageReceiveStrategies.AlwaysLethal:
                     return new AlwaysLethalReceiveStrategy();
 
-                case DamageReceiveStrategies.Immortal:
+                case DamageReceiveStrategies.DamageReceiveStrategies.Immortal:
                     return new ImmortalReceiveStrategy();
 
-                case DamageReceiveStrategies.LethalAsNormal:
+                case DamageReceiveStrategies.DamageReceiveStrategies.LethalAsNormal:
                     return new LethalAsNormalReceiveStrategy();
 
                 default:

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Modules.CharacterSystem;
-using Modules.DamagerSystem;
-using Modules.EnemySpawnSystem;
+using Modules.CharacterSystem.EnemySpawnSystem;
+using Modules.DamageReceiverSystem;
 using UnityEngine;
 using VContainer;
 

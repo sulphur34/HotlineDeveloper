@@ -1,12 +1,12 @@
 using System;
-using Modules.CharacterSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
+using Modules.DamageReceiverSystem;
 using Modules.DamagerSystem;
 using Modules.WeaponItemSystem;
 using UnityEngine;
 using VContainer;
 
-namespace Modules.EnemySpawnSystem
+namespace Modules.CharacterSystem.EnemySpawnSystem
 {
     public class EnemySpawner : MonoBehaviour
     {

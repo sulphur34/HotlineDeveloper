@@ -1,6 +1,6 @@
 using System;
 
-namespace Modules.DamagerSystem
+namespace Modules.DamageReceiverSystem
 {
     internal class DamageReceiverPresenter : IDisposable
     {

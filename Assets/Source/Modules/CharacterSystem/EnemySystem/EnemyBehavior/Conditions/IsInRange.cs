@@ -1,9 +1,8 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.CharacterSystem;
 using UnityEngine;
 
-namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsInRange")]

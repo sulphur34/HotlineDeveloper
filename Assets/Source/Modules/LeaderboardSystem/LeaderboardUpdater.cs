@@ -1,5 +1,5 @@
-﻿using Modules.GUISystem;
-using Modules.LevelsSystem;
+﻿using Modules.LevelsSystem;
+using Modules.ScoreSystem;
 using VContainer;
 
 namespace Modules.LeaderboardSystem

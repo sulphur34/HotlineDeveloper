@@ -1,4 +1,4 @@
-namespace Modules.DamagerSystem.DamageStrategy
+namespace Modules.DamageReceiverSystem.DamageReceiveStrategies
 {
     internal class NormalDamageReceiveStrategy : IDamageReceiveStrategy
     {

@@ -1,20 +1,22 @@
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Patrol around the specified waypoints using the Unity NavMesh.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("9db06eafffd691549994cfe903905580", "3c16815a0806b2a4c8cd693c5139b3ea")]
     public class Patrol : NavMeshMovement
     {
-        [Tooltip("Should the agent patrol the waypoints randomly?")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Should the agent patrol the waypoints randomly?")]
         [UnityEngine.Serialization.FormerlySerializedAs("randomPatrol")]
         public SharedBool m_RandomPatrol;
-        [Tooltip("The length of time that the agent should pause when arriving at a waypoint")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The length of time that the agent should pause when arriving at a waypoint")]
         [UnityEngine.Serialization.FormerlySerializedAs("waypointPauseDuration")]
         public SharedFloat m_WaypointPauseDuration;
-        [Tooltip("The waypoints to move to")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The waypoints to move to")]
         [UnityEngine.Serialization.FormerlySerializedAs("waypoints")]
         public SharedGameObjectList m_Waypoints;
 

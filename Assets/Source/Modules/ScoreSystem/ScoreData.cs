@@ -1,4 +1,4 @@
-namespace Modules.GUISystem
+namespace Modules.ScoreSystem
 {
     internal class ScoreData
     {

@@ -2,7 +2,7 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Modules.Weapons
+namespace Modules.Weapons.ShotStrategies
 {
     internal class ShotgunStrategy : ShotStrategy
     {

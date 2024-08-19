@@ -1,4 +1,4 @@
-using Modules.WeaponTypes;
+using Modules.WeaponsTypes;
 
 namespace Modules.WeaponsHandler
 {

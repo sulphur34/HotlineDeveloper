@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Modules.Weapons.Ammunition
+namespace Modules.Ammunition
 {
     public class WeaponAmmunitionView : MonoBehaviour, IAmmunitionView
     {

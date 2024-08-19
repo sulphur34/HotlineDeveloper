@@ -1,7 +1,7 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Modules.DamagerSystem
+namespace Modules.DamageReceiverSystem
 {
     [RequireComponent(typeof(DamageReceiverView))]
     public class DamageReceiverSetup : MonoBehaviour

@@ -1,4 +1,6 @@
-namespace Modules.DamagerSystem
+using Modules.DamageReceiverSystem;
+
+namespace Modules.DamagerSystem.DamageInflictStrategies
 {
     internal class RangeStrategy : WeaponStrategy
     {

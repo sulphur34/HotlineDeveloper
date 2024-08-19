@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables;
 using UnityEngine;
 using UnityEngine.AI;
 

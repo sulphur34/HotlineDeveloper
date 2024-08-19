@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace Modules.EnemySpawnSystem
+namespace Modules.CharacterSystem.EnemySpawnSystem
 {
     [Serializable]
     public class PatrolRoute

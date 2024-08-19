@@ -1,7 +1,7 @@
 using System;
 using Modules.InputSystem.Interfaces;
 using Modules.WeaponItemSystem;
-using Modules.WeaponTypes;
+using Modules.WeaponsTypes;
 using UnityEngine;
 
 namespace Modules.WeaponsHandler

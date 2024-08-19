@@ -2,7 +2,7 @@
 using Modules.Weapons.Range;
 using UnityEngine;
 
-namespace Modules.Weapons
+namespace Modules.Weapons.ShotStrategies
 {
     public abstract class ShotStrategy : MonoBehaviour
     {

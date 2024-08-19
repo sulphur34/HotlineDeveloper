@@ -1,6 +1,6 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables;
 using Modules.WeaponItemSystem;
 using UnityEngine;
 

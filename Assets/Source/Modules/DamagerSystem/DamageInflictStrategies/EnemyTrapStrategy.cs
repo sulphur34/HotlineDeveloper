@@ -1,7 +1,8 @@
 using System;
+using Modules.DamageReceiverSystem;
 using UnityEngine;
 
-namespace Modules.DamagerSystem
+namespace Modules.DamagerSystem.DamageInflictStrategies
 {
     internal class EnemyTrapStrategy : WeaponStrategy
     {

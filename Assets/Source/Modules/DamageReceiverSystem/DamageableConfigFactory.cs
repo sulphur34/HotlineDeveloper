@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Modules.DamagerSystem
+namespace Modules.DamageReceiverSystem
 {
     [CreateAssetMenu(fileName = "DamageableConfigFactory")]
     public class DamageableConfigFactory : ScriptableObject

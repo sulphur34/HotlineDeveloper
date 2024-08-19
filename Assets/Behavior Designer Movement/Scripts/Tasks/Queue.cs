@@ -1,29 +1,31 @@
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Queue in a line using the Unity NavMesh.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("c671469908c78284c909ff1905020250", "454cd90f13f2a9a4f93ade9379f9b3c9")]
     public class Queue : NavMeshGroupMovement
     {
-        [Tooltip("Agents less than this distance apart are neighbors")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Agents less than this distance apart are neighbors")]
         [UnityEngine.Serialization.FormerlySerializedAs("neighborDistance")]
         public SharedFloat m_NeighborDistance = 10;
-        [Tooltip("The distance that the agents should be separated")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The distance that the agents should be separated")]
         [UnityEngine.Serialization.FormerlySerializedAs("separationDistance")]
         public SharedFloat m_SeparationDistance = 2;
-        [Tooltip("The distance the the agent should look ahead to see if another agent is in the way")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The distance the the agent should look ahead to see if another agent is in the way")]
         [UnityEngine.Serialization.FormerlySerializedAs("maxQueueAheadDistance")]
         public SharedFloat m_MaxQueueAheadDistance = 2;
-        [Tooltip("The radius that the agent should check to see if another agent is in the way")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The radius that the agent should check to see if another agent is in the way")]
         [UnityEngine.Serialization.FormerlySerializedAs("maxQueueRadius")]
         public SharedFloat m_MaxQueueRadius = 20;
-        [Tooltip("The multiplier to slow down if an agent is in front of the current agent")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The multiplier to slow down if an agent is in front of the current agent")]
         [UnityEngine.Serialization.FormerlySerializedAs("slowDownSpeed")]
         public SharedFloat m_SlowDownSpeed = 0.15f;
-        [Tooltip("The target to seek towards")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The target to seek towards")]
         [UnityEngine.Serialization.FormerlySerializedAs("target")]
         public SharedGameObject m_Target;
 

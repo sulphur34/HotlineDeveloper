@@ -1,10 +1,11 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using Modules.Ammunition;
 using Modules.DamagerSystem;
+using Modules.DamagerSystem.DamageInflictStrategies;
 using Modules.Weapons;
-using Modules.Weapons.Ammunition;
-using Modules.WeaponTypes;
+using Modules.WeaponsTypes;
 using UnityEngine;
 
 namespace Modules.WeaponItemSystem

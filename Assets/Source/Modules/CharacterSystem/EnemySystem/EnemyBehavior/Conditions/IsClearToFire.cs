@@ -1,13 +1,13 @@
 using System.Linq;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
+using Modules.DamageReceiverSystem;
 using Modules.DamagerSystem;
 using Modules.WeaponsHandler;
-using Modules.WeaponTypes;
+using Modules.WeaponsTypes;
 using UnityEngine;
 
-namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsClearToFire")]

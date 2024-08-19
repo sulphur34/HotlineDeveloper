@@ -1,5 +1,5 @@
-using Modules.Weapons.Ammunition;
-using Modules.WeaponTypes;
+using Modules.Ammunition;
+using Modules.WeaponsTypes;
 using UnityEngine;
 
 namespace Modules.WeaponItemSystem

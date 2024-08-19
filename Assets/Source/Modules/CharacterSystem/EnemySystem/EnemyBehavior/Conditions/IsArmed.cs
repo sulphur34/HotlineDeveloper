@@ -1,7 +1,7 @@
 using BehaviorDesigner.Runtime.Tasks;
 using Modules.WeaponsHandler;
 
-namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsArmed")]

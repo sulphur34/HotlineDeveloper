@@ -1,68 +1,71 @@
-using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnableGameObjectByName : EditorWindow
+namespace Editor
 {
-    private string gameObjectName = "Enter GameObject Name";
-
-    [MenuItem("Tools/Enable GameObject By Name")]
-    public static void ShowWindow()
+    public class EnableGameObjectByName : EditorWindow
     {
-        GetWindow<EnableGameObjectByName>("Enable GameObject By Name");
-    }
+        private string gameObjectName = "Enter GameObject Name";
 
-    private void OnGUI()
-    {
-        GUILayout.Label("Enable GameObject by Name in All Scenes", EditorStyles.boldLabel);
-
-        gameObjectName = EditorGUILayout.TextField("GameObject Name", gameObjectName);
-
-        if (GUILayout.Button("Enable GameObject in All Scenes"))
+        [MenuItem("Tools/Enable GameObject By Name")]
+        public static void ShowWindow()
         {
-            EnableGameObjectInAllScenes();
-        }
-    }
-
-    private void EnableGameObjectInAllScenes()
-    {
-        if (string.IsNullOrEmpty(gameObjectName))
-        {
-            Debug.LogError("GameObject Name is not specified.");
-            return;
+            GetWindow<EnableGameObjectByName>("Enable GameObject By Name");
         }
 
-        string[] sceneGuids = AssetDatabase.FindAssets("t:Scene");
-
-        foreach (string sceneGuid in sceneGuids)
+        private void OnGUI()
         {
-            string scenePath = AssetDatabase.GUIDToAssetPath(sceneGuid);
-            Scene scene = EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
+            GUILayout.Label("Enable GameObject by Name in All Scenes", EditorStyles.boldLabel);
 
-            GameObject[] rootObjects = scene.GetRootGameObjects();
-            foreach (GameObject rootObject in rootObjects)
+            gameObjectName = EditorGUILayout.TextField("GameObject Name", gameObjectName);
+
+            if (GUILayout.Button("Enable GameObject in All Scenes"))
             {
-                EnableGameObjectInChildren(rootObject.transform);
+                EnableGameObjectInAllScenes();
+            }
+        }
+
+        private void EnableGameObjectInAllScenes()
+        {
+            if (string.IsNullOrEmpty(gameObjectName))
+            {
+                Debug.LogError("GameObject Name is not specified.");
+                return;
             }
 
-            EditorSceneManager.SaveScene(scene);
-        }
+            string[] sceneGuids = AssetDatabase.FindAssets("t:Scene");
 
-        Debug.Log($"Enabled GameObject named '{gameObjectName}' in all scenes.");
-    }
-
-    private void EnableGameObjectInChildren(Transform parent)
-    {
-        foreach (Transform child in parent)
-        {
-            if (child.gameObject.name == gameObjectName)
+            foreach (string sceneGuid in sceneGuids)
             {
-                child.gameObject.SetActive(true);
-                Debug.Log($"Enabled GameObject '{gameObjectName}' in scene '{parent.gameObject.scene.name}'.");
+                string scenePath = AssetDatabase.GUIDToAssetPath(sceneGuid);
+                Scene scene = EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
+
+                GameObject[] rootObjects = scene.GetRootGameObjects();
+                foreach (GameObject rootObject in rootObjects)
+                {
+                    EnableGameObjectInChildren(rootObject.transform);
+                }
+
+                EditorSceneManager.SaveScene(scene);
             }
 
-            EnableGameObjectInChildren(child);
+            Debug.Log($"Enabled GameObject named '{gameObjectName}' in all scenes.");
+        }
+
+        private void EnableGameObjectInChildren(Transform parent)
+        {
+            foreach (Transform child in parent)
+            {
+                if (child.gameObject.name == gameObjectName)
+                {
+                    child.gameObject.SetActive(true);
+                    Debug.Log($"Enabled GameObject '{gameObjectName}' in scene '{parent.gameObject.scene.name}'.");
+                }
+
+                EnableGameObjectInChildren(child);
+            }
         }
     }
 }
