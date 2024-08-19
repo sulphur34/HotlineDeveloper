@@ -12,6 +12,7 @@ namespace Modules.WeaponsHandler
         [field: SerializeField] protected WeaponHandlerView WeaponHandlerView { get; private set; }
 
         private WeaponHandlerPresenter _weaponHandlerPresenter;
+        private WeaponHandler _weaponHandler;
 
         protected void Initialize(
             IAttackInput attackInput,
@@ -21,13 +22,14 @@ namespace Modules.WeaponsHandler
             if (WeaponHandlerData.DefaultWeapon != null)
                 weaponItemInitializer.InitializeWeapon(WeaponHandlerData.DefaultWeapon);
 
-            WeaponHandler weaponHandler = new (WeaponHandlerData, attackInput, pickInput);
+            _weaponHandler = new WeaponHandler(WeaponHandlerData, attackInput, pickInput);
             var damageReceiverView = GetComponent<DamageReceiverView>();
-            _weaponHandlerPresenter = new WeaponHandlerPresenter(weaponHandler, WeaponHandlerView, damageReceiverView);
+            _weaponHandlerPresenter = new WeaponHandlerPresenter(_weaponHandler, WeaponHandlerView, damageReceiverView);
         }
 
         private void OnDestroy()
         {
+            _weaponHandler.Dispose();
             _weaponHandlerPresenter.Dispose();
         }
     }

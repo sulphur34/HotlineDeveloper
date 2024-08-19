@@ -1,10 +1,11 @@
-﻿using Modules.LevelsSystem;
+﻿using System;
+using Modules.LevelsSystem;
 using Modules.ScoreSystem;
 using VContainer;
 
 namespace Modules.LeaderboardSystem
 {
-    public class LeaderboardUpdater
+    public class LeaderboardUpdater : IDisposable
     {
         private readonly Leaderboard _leaderboard;
         private readonly ScoreCounter _scoreCounter;
@@ -12,8 +13,11 @@ namespace Modules.LeaderboardSystem
         private readonly LevelsData _levelsData;
 
         [Inject]
-        public LeaderboardUpdater(Leaderboard leaderboard, ScoreCounter scoreCounter,
-            LevelConditionManager levelConditionManager, LevelsData levelsData)
+        public LeaderboardUpdater(
+            Leaderboard leaderboard,
+            ScoreCounter scoreCounter,
+            LevelConditionManager levelConditionManager,
+            LevelsData levelsData)
         {
             _leaderboard = leaderboard;
             _scoreCounter = scoreCounter;
@@ -21,6 +25,14 @@ namespace Modules.LeaderboardSystem
             _levelsData = levelsData;
 
             _levelConditionManager.Won += OnWon;
+        }
+
+        public void Dispose()
+        {
+            if (_levelConditionManager != null)
+                _levelConditionManager.Won -= OnWon;
+
+            _scoreCounter?.Dispose();
         }
 
         private void OnWon()

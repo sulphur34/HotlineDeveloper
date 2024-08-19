@@ -32,7 +32,7 @@ namespace Modules.NextLevelButtonSystem
         {
             if (_currentLevelIndex < _levels.Value.Count)
             {
-                _levels.ForLoad += 1;
+                _levels.AdvanceLevel();
                 _levelSceneLoader.Load(_currentLevelIndex + 1);
                 return;
             }

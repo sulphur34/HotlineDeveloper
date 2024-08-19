@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,12 @@ namespace Modules.AdvertisementSystem
             button.onClick.AddListener(ShowAD);
             button.onClick.AddListener(OnButtonClick);
             VideoAD.Closed += OnVideoClose;
+        }
+
+        protected virtual void OnDestroy()
+        {
+            if (VideoAD != null)
+                VideoAD.Closed -= OnVideoClose;
         }
 
         protected abstract void ShowAD();

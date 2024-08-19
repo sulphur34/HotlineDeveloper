@@ -40,7 +40,7 @@ namespace Modules.SaveHandlers
                     return;
 
                 nextLevel.Unlock();
-                data.LevelsData = _levels;
+                data.SetLevelData(_levels);
             });
         }
     }

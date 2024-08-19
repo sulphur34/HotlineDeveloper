@@ -23,7 +23,7 @@ namespace Modules.ContinueLevelButtonSystem
 
         protected override void MakeOnClick()
         {
-            _levels.ForLoad = (int)_levelForLoad.Number;
+            _levels.SetForLoad((int)_levelForLoad.Number);
             _levelSceneLoader.Load((int)_levelForLoad.Number);
         }
     }

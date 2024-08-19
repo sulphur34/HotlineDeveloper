@@ -28,7 +28,7 @@ namespace Modules.SaveHandlers
 
         private void OnSelected(LevelSelectionElement element)
         {
-            _saveSystem.Save(data => { data.LevelsData.ForLoad = element.LevelNumberForLoad; });
+            _saveSystem.Save(data => { data.LevelsData.SetForLoad(element.LevelNumberForLoad); });
         }
     }
 }

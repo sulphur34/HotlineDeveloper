@@ -33,7 +33,7 @@ namespace Modules.LevelSelectionSystem
             _lastSelectedElement = _levelSelectionElements.FirstOrDefault(element => element.IsSelected);
 
             if (_levels.ForLoad == 0)
-                _levels.ForLoad = _lastSelectedElement.LevelNumberForLoad;
+                _levels.SetForLoad(_lastSelectedElement.LevelNumberForLoad);
 
             _levelSelectionButton.Pressed += OnButtonPressed;
 
@@ -54,7 +54,7 @@ namespace Modules.LevelSelectionSystem
             if (_lastSelectedElement == null)
                 return;
 
-            _levels.ForLoad = _lastSelectedElement.LevelNumberForLoad;
+            _levels.SetForLoad(_lastSelectedElement.LevelNumberForLoad);
             _levelSceneLoader.Load(_levels.ForLoad);
         }
 

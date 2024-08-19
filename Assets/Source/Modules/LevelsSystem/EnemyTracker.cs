@@ -19,6 +19,7 @@ namespace Modules.LevelsSystem
         private List<Transform> _enemies;
         private Transform _nearestEnemy;
         private CancellationToken _cancellationToken;
+        private EnemySpawner _enemySpawner;
 
         public event Action Activated;
 
@@ -26,13 +27,20 @@ namespace Modules.LevelsSystem
 
         public event Action EnemyDied;
 
+        private void OnDestroy()
+        {
+            if (_enemies != null)
+                _enemySpawner.Spawned -= Add;
+        }
+
         [Inject]
         public void Construct(EnemySpawner enemySpawner, Player player)
         {
             _cancellationToken = this.GetCancellationTokenOnDestroy();
             _transform = player.transform;
             _enemies = new List<Transform>();
-            enemySpawner.Spawned += Add;
+            _enemySpawner = enemySpawner;
+            _enemySpawner.Spawned += Add;
         }
 
         public void Activate()
@@ -49,17 +57,29 @@ namespace Modules.LevelsSystem
         private void Add(GameObject character)
         {
             _enemies.Add(character.transform);
-            character.GetComponent<DamageReceiverView>().Died += Remove;
+            var damageReceiverView = GetDamageReceiverView(character);
+            damageReceiverView.Died += Remove;
         }
 
         private void Remove(GameObject character)
         {
             _enemies.Remove(character.transform);
-            character.GetComponent<DamageReceiverView>().Died -= Remove;
+            var damageReceiverView = GetDamageReceiverView(character);
+            damageReceiverView.Died -= Remove;
             EnemyDied?.Invoke();
 
             if (_enemies.Count == 0)
                 AllEnemiesDied?.Invoke();
+        }
+
+        private DamageReceiverView GetDamageReceiverView(GameObject character)
+        {
+            var damageReceiverView = character.GetComponent<DamageReceiverView>();
+
+            if (damageReceiverView != null)
+                throw new NullReferenceException("Character object does not contain DamageReceiverView component");
+
+            return damageReceiverView;
         }
 
         private Transform GetNearestCharacter()

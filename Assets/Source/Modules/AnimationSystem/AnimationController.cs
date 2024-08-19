@@ -5,6 +5,8 @@ namespace Modules.AnimationSystem
 {
     public class AnimationController : MonoBehaviour
     {
+        private readonly float _bodyFallDelay = 2f;
+
         [SerializeField] private ConstraintsData _constraintsData;
         [SerializeField] private RagdollJointData[] _ragdollJointsData;
         [SerializeField] private Transform _hipBonePosition;
@@ -13,9 +15,11 @@ namespace Modules.AnimationSystem
         private RagdollController _ragdollController;
         private AnimatorController _animatorController;
         private Transform _transform;
+        private WaitForSeconds _waitForSeconds;
 
         private void Awake()
         {
+            _waitForSeconds = new WaitForSeconds(_bodyFallDelay);
             Animator animator = GetComponent<Animator>();
             _transform = transform;
             _constrainsController = new ConstrainsController(_constraintsData);
@@ -78,7 +82,7 @@ namespace Modules.AnimationSystem
 
         private IEnumerator WaitingBodyFall()
         {
-            yield return new WaitForSeconds(2);
+            yield return _waitForSeconds;
             _ragdollController.Deactivate();
         }
     }

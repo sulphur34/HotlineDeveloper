@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Modules.GUISystem
@@ -9,6 +10,11 @@ namespace Modules.GUISystem
         private void Start()
         {
             Transform = GetComponent<RectTransform>();
+
+            if (Transform == null)
+                throw new NullReferenceException(
+                    "RectTransform of UI element is null. Please set it in the inspector.");
+
             Animate();
         }
 

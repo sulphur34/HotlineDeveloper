@@ -27,6 +27,9 @@ namespace Modules.GUISystem
         private void OnDestroy()
         {
             StopRotation();
+
+            if (_enemyTracker != null)
+                _enemyTracker.AllEnemiesDied -= OnAllEnemyKilled;
         }
 
         [Inject]

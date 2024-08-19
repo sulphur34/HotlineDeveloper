@@ -28,12 +28,12 @@ namespace Modules.SaveHandlers
 
         private void OnMusicChanged()
         {
-            _saveSystem.Save(data => { data.AudioSettingsData.MusicVolume = _audioSettings.MusicSlider.Volume; });
+            _saveSystem.Save(data => { data.AudioSettingsData.SetMusicVolume(_audioSettings.MusicSlider.Volume); });
         }
 
         private void OnSoundChanged()
         {
-            _saveSystem.Save(data => { data.AudioSettingsData.SoundVolume = _audioSettings.SoundSlider.Volume; });
+            _saveSystem.Save(data => { data.AudioSettingsData.SetSoundVolume(_audioSettings.SoundSlider.Volume); });
         }
     }
 }

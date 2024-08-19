@@ -1,3 +1,4 @@
+using System;
 using Modules.InputSystem.Interfaces;
 using UnityEngine;
 using VContainer;
@@ -11,6 +12,7 @@ namespace Modules.AimSystem
         private Transform _transform;
         private Camera _camera;
         private Transform _cameraTransform;
+        private IFarLookInput _lookInput;
 
         [Inject]
         private void Construct(IFarLookInput lookInput)
@@ -18,7 +20,14 @@ namespace Modules.AimSystem
             _transform = transform;
             _camera = Camera.main;
             _cameraTransform = _camera.transform;
-            lookInput.FarLookReceived += UpdatePosition;
+            _lookInput = lookInput;
+            _lookInput.FarLookReceived += UpdatePosition;
+        }
+
+        private void OnDestroy()
+        {
+            if (_lookInput != null)
+                _lookInput.FarLookReceived -= UpdatePosition;
         }
 
         private void UpdatePosition(Vector2 lookPosition)

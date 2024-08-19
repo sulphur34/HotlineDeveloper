@@ -21,6 +21,9 @@ namespace Game.Scripts.EffectsSystem
 
         private void SetParticleSystemState()
         {
+            if (_particleSystem == null)
+                return;
+
             if (_collider.enabled)
                 _particleSystem.Play();
             else

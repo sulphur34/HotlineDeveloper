@@ -47,7 +47,7 @@ namespace Game.Scripts.CompositRoot
                         levels.Value[i].Unlock();
                 }
 
-                data.LevelsData = levels;
+                data.SetLevelData(levels);
             });
         }
     }

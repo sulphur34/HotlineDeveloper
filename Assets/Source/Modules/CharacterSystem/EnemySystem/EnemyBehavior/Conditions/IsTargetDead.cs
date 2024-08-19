@@ -21,6 +21,9 @@ namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Conditions
 
         public override TaskStatus OnUpdate()
         {
+            if (_playerDamageReceiverView == null)
+                return TaskStatus.Success;
+
             return _playerDamageReceiverView.IsDead ? TaskStatus.Success : TaskStatus.Failure;
         }
     }

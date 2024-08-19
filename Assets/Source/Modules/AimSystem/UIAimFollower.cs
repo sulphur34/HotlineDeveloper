@@ -1,3 +1,4 @@
+using System;
 using Modules.InputSystem.Interfaces;
 using UnityEngine;
 using VContainer;
@@ -9,12 +10,20 @@ namespace Modules.AimSystem
         [SerializeField] private RectTransform _parentRectTransform;
 
         private RectTransform _rectTransform;
+        private ILookInput _lookInput;
 
         [Inject]
         public void Construct(ILookInput lookInput)
         {
-            lookInput.LookReceived += UpdatePosition;
+            _lookInput = lookInput;
+            _lookInput.LookReceived += UpdatePosition;
             _rectTransform = GetComponent<RectTransform>();
+        }
+
+        private void OnDestroy()
+        {
+            if (_lookInput != null)
+                _lookInput.LookReceived -= UpdatePosition;
         }
 
         private void UpdatePosition(Vector2 lookPosition)
