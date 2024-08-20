@@ -15,6 +15,7 @@ public class YandexGameReady : MonoBehaviour
     {
 #if (UNITY_EDITOR)
         Debug.Log("Game ready");
+        _localization.Initialize();
 #else
         YandexGamesSdk.GameReady();
         _localization.Initialize();

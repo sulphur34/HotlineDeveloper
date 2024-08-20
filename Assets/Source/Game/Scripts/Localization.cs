@@ -17,6 +17,20 @@ namespace Modules.FocusSystem
         {
 #if UNITY_WEBGL && !UNITY_EDITOR
     ChangeLanguage();
+#else
+            int i = Random.Range(0, 3);
+            switch (i)
+            {
+                case 0:
+                    LeanLocalization.SetCurrentLanguageAll(English);
+                    break;
+                case 1:
+                    LeanLocalization.SetCurrentLanguageAll(Russian);
+                    break;
+                case 2:
+                    LeanLocalization.SetCurrentLanguageAll(Turkish);
+                    break;
+            }
 #endif
         }
 
