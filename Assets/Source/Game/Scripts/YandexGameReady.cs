@@ -1,8 +1,11 @@
 using UnityEngine;
 using Agava.YandexGames;
+using Modules.FocusSystem;
 
 public class YandexGameReady : MonoBehaviour
 {
+    [SerializeField] private Localization _localization;
+
     private void Awake()
     {
         OnCallGameReadyButtonClick();
@@ -13,7 +16,8 @@ public class YandexGameReady : MonoBehaviour
 #if (UNITY_EDITOR)
         Debug.Log("Game ready");
 #else
-YandexGamesSdk.GameReady();
+        YandexGamesSdk.GameReady();
+        _localization.Initialize();
 #endif
     }
 }

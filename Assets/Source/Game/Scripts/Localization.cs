@@ -13,7 +13,7 @@ namespace Modules.FocusSystem
         private const string TurkishCode = "tr";
         private const string Turkish = "Turkish";
 
-        private void Awake()
+        public void Initialize()
         {
 #if UNITY_WEBGL && !UNITY_EDITOR
     ChangeLanguage();

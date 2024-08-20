@@ -44,12 +44,12 @@ namespace Modules.WeaponItemSystem
             rigidbody.AddForce(throwDirection * _throwData.Force, ForceMode.Impulse);
         }
 
-        public async UniTask WaitingThrowEnd(Rigidbody rigidbody, CancellationToken cancellationToken,
+        public async UniTask WaitingThrowEnd(Rigidbody rigidbody, CancellationTokenSource cancellationTokenSource,
             Action onThrowEndCallback)
         {
             while (rigidbody.IsSleeping() == false)
             {
-                await UniTask.Yield(cancellationToken);
+                await UniTask.Yield(cancellationTokenSource.Token);
             }
 
             onThrowEndCallback.Invoke();

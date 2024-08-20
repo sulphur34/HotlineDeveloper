@@ -12,13 +12,13 @@ namespace Modules.WeaponItemSystem
     public class WeaponItem : MonoBehaviour, IWeaponInfo
     {
         [SerializeField] private ThrowData _throwData;
-        
+
         private Transform _startContainer;
         private Transform _selfTransform;
         private Transform _currentContainer;
         private Rigidbody _rigidbody;
         private Collider _collider;
-        private CancellationToken _cancellationToken;
+        private CancellationTokenSource _cancellationTokenSource;
         private Func<bool> _attack;
         private Action _interrupt;
         private WeaponStrategy _weaponStrategy;
@@ -28,13 +28,18 @@ namespace Modules.WeaponItemSystem
         [field: SerializeField] public Vector3 Offset { get; private set; }
         [field: SerializeField] public Transform LeftHandPlaceHolder { get; private set; }
         [field: SerializeField] public Transform RightHandPlaceHolder { get; private set; }
-        
+
         public IAmmunitionView WeaponAmmunitionView { get; private set; }
 
         public event Action<WeaponType> Attacked;
         public Transform SelfTransform => _selfTransform == null ? transform : _selfTransform;
         public WeaponType WeaponType { get; private set; }
         public bool IsEquipped { get; private set; }
+
+        private void OnDestroy()
+        {
+            _cancellationTokenSource?.Cancel();
+        }
 
         public void Initialize(WeaponSetup weaponSetup)
         {
@@ -46,15 +51,15 @@ namespace Modules.WeaponItemSystem
             _interrupt = weaponSetup.AttackInterruptHandler;
             WeaponType = weaponSetup.WeaponType;
             _startContainer = transform.parent;
-            _cancellationToken = this.GetCancellationTokenOnDestroy();
+            _cancellationTokenSource = new CancellationTokenSource();
             _selfTransform = transform;
             _thrower = new Thrower(_throwData);
         }
 
         public void Attack()
         {
-            if(_attack())
-                Attacked?.Invoke(WeaponType);  
+            if (_attack())
+                Attacked?.Invoke(WeaponType);
         }
 
         public void Equip(Transform container)
@@ -74,7 +79,7 @@ namespace Modules.WeaponItemSystem
         {
             Detach();
             _thrower.SetFly(_selfTransform, _currentContainer, _rigidbody, WeaponType);
-            _thrower.WaitingThrowEnd(_rigidbody, _cancellationToken, _weaponStrategy.ClearOwner);
+            _thrower.WaitingThrowEnd(_rigidbody, _cancellationTokenSource, _weaponStrategy.ClearOwner);
         }
 
         private void Detach()
@@ -85,20 +90,22 @@ namespace Modules.WeaponItemSystem
 
         private void SetEquipped(bool value, Transform container)
         {
+            _cancellationTokenSource.Cancel();
+            _cancellationTokenSource = new CancellationTokenSource();
             IsEquipped = value;
             _collider.enabled = !value;
             var newContainer = value ? container : _startContainer;
-            
+
             if (newContainer == container)
                 newContainer.localPosition = Offset;
-            
+
             SelfTransform.SetParent(newContainer);
             _rigidbody.isKinematic = value;
             _rigidbody.useGravity = !value;
 
             if (!value)
                 return;
-            
+
             SelfTransform.position = container.position;
             SelfTransform.forward = container.forward;
         }
