@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Agava.YandexGames;
 using Modules.FocusSystem;
@@ -11,14 +12,17 @@ public class YandexGameReady : MonoBehaviour
         OnCallGameReadyButtonClick();
     }
 
+    private void Start()
+    {
+        _localization.Initialize();
+    }
+
     private void OnCallGameReadyButtonClick()
     {
 #if (UNITY_EDITOR)
         Debug.Log("Game ready");
-        _localization.Initialize();
 #else
         YandexGamesSdk.GameReady();
-        _localization.Initialize();
 #endif
     }
 }
