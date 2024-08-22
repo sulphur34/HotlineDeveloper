@@ -17,8 +17,10 @@ namespace Modules.GUISystem
             _transform = GetComponent<RectTransform>();
 
             if (_transform == null)
+            {
                 throw new NullReferenceException(
                     "RectTransform of UI element is null. Please set it in the inspector.");
+            }
 
             if (_isVertical)
                 AnimateVertical();

@@ -26,7 +26,10 @@ namespace Modules.Weapons
             IInterruptModule interruptModule = null)
         {
             WeaponRechargeTime weaponRechargeTime = new WeaponRechargeTime(rechargeTime);
-            Weapon weapon = new Weapon(weaponRechargeTime, attackModule, this.GetCancellationTokenOnDestroy(),
+            Weapon weapon = new Weapon(
+                weaponRechargeTime,
+                attackModule,
+                this.GetCancellationTokenOnDestroy(),
                 interruptModule);
             AttackHandler = weapon.TryAttack;
             WeaponType = _weaponTypeGetter.Get(attackModule);

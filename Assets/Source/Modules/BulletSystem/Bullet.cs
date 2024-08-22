@@ -12,9 +12,9 @@ namespace Modules.BulletSystem
         private WaitForSeconds _waitLifetime;
         private Coroutine _coroutine;
 
-        [field: SerializeField] public Collider Collider { get; private set; }
-
         public event Action<Bullet> LifespanEnded;
+
+        [field: SerializeField] public Collider Collider { get; private set; }
 
         private void OnTriggerEnter(Collider other)
         {

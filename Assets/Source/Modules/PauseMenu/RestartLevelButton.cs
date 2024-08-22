@@ -8,9 +8,10 @@ namespace Modules.PauseMenu
 {
     public class RestartLevelButton : PressedButton
     {
-        protected PauseSetter PauseSetter { get; private set; }
         private SceneLoader _sceneLoader;
         private Fade _fade;
+
+        protected PauseSetter PauseSetter { get; private set; }
 
         protected override void MakeOnClick()
         {

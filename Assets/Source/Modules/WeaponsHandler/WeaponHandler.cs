@@ -11,16 +11,10 @@ namespace Modules.WeaponsHandler
         private readonly Transform _container;
         private readonly WeaponItem _defaultWeaponItem;
         private readonly IAttackInput _attackInput;
+        private readonly IPickInput _pickInput;
         private readonly Picker _picker;
 
         private WeaponItem _currentWeaponItem;
-        private readonly IPickInput _pickInput;
-
-        public event Action<IWeaponInfo, IWeaponHandlerInfo> WeaponPicked;
-
-        public event Action WeaponThrown;
-
-        public event Action<WeaponType> Attacked;
 
         public WeaponHandler(WeaponHandlerData weaponHandlerData, IAttackInput attackInput, IPickInput pickInput)
         {
@@ -38,6 +32,12 @@ namespace Modules.WeaponsHandler
             _pickInput = pickInput;
             _pickInput.PickReceived += OnPickInputReceived;
         }
+
+        public event Action<IWeaponInfo, IWeaponHandlerInfo> WeaponPicked;
+
+        public event Action WeaponThrown;
+
+        public event Action<WeaponType> Attacked;
 
         public bool IsCurrentWeaponItemEmpty => _currentWeaponItem == null || _currentWeaponItem == _defaultWeaponItem;
 

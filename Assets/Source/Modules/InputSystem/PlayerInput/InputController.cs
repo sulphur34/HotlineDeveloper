@@ -8,8 +8,6 @@ namespace Modules.InputSystem.PlayerInput
     public abstract class InputController : MonoBehaviour, IMoveInput, IAttackInput, IRotateInput, IPickInput,
         ILookInput, IFarLookInput
     {
-        protected global::PlayerInput PlayerInput { get; private set; }
-
         public event Action<Vector2> MoveReceived;
 
         public event Action<Vector2> RotationReceived;
@@ -24,6 +22,7 @@ namespace Modules.InputSystem.PlayerInput
 
         public event Action FinishReceived;
 
+        protected global::PlayerInput PlayerInput { get; private set; }
 
         protected float Width => Screen.width;
 

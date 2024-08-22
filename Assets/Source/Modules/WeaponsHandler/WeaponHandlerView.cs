@@ -2,7 +2,6 @@ using System;
 using Modules.Ammunition;
 using Modules.AnimationSystem;
 using Modules.DamageReceiverSystem;
-using Modules.DamagerSystem;
 using Modules.WeaponItemSystem;
 using Modules.WeaponsTypes;
 using UnityEngine;

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine.Scripting;
-using UnityEngine.WSA;
 
 namespace Modules.LevelsSystem
 {
@@ -19,11 +18,15 @@ namespace Modules.LevelsSystem
         public void SetForLoad(int level)
         {
             if (level < 0)
+            {
                 throw new IndexOutOfRangeException("Level index value is out of range. Must be non-negative.");
+            }
 
             if (level >= Value.Count)
+            {
                 throw new IndexOutOfRangeException(
                     "Level index value is out of range. Must be smaller than the number of levels.");
+            }
 
             ForLoad = level;
         }

@@ -26,6 +26,19 @@ namespace Modules.WeaponItemSystem
             ApplyForces(selfTransform, currentContainer, rigidbody, weaponType);
         }
 
+        public async UniTask WaitingThrowEnd(
+            Rigidbody rigidbody,
+            CancellationToken cancellationToken,
+            Action onThrowEndCallback)
+        {
+            while (rigidbody.IsSleeping() == false)
+            {
+                await UniTask.Yield(cancellationToken);
+            }
+
+            onThrowEndCallback.Invoke();
+        }
+
         private void SetPosition(Transform selfTransform, Transform currentContainer)
         {
             selfTransform.position = currentContainer.position;
@@ -48,19 +61,6 @@ namespace Modules.WeaponItemSystem
             Vector3 rotationDirection = weaponType == WeaponType.Range ? selfTransform.up : selfTransform.forward;
             rigidbody.AddTorque(rotationDirection * _throwData.RotationForce, ForceMode.VelocityChange);
             rigidbody.AddForce(throwDirection * _throwData.Force, ForceMode.Impulse);
-        }
-
-        public async UniTask WaitingThrowEnd(
-            Rigidbody rigidbody,
-            CancellationToken cancellationToken,
-            Action onThrowEndCallback)
-        {
-            while (rigidbody.IsSleeping() == false)
-            {
-                await UniTask.Yield(cancellationToken);
-            }
-
-            onThrowEndCallback.Invoke();
         }
     }
 }

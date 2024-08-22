@@ -60,7 +60,8 @@ namespace Modules.LeaderboardSystem
             if (Application.isEditor || PlayerAccount.IsAuthorized == false)
                 return;
 
-            Agava.YandexGames.Leaderboard.GetPlayerEntry(LeaderboardName,
+            Agava.YandexGames.Leaderboard.GetPlayerEntry(
+                LeaderboardName,
                 response => { onReceivedScore?.Invoke(response.score); });
         }
     }

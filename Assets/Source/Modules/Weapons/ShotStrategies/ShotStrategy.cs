@@ -29,17 +29,17 @@ namespace Modules.Weapons.ShotStrategies
             _bulletPool = bulletPool;
         }
 
+        protected void FireBullet()
+        {
+            Bullet bullet = InstantiateBullet();
+            bullet.Init(GetRandomDirection(), BulletSpeed);
+        }
+
         private Bullet InstantiateBullet()
         {
             Bullet bullet = _bulletPool.Get();
             bullet.SetPosition(_bulletSpawnPoint.transform.position);
             return bullet;
-        }
-
-        protected void FireBullet()
-        {
-            Bullet bullet = InstantiateBullet();
-            bullet.Init(GetRandomDirection(), BulletSpeed);
         }
 
         private Vector3 GetRandomDirection()

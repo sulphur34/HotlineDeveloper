@@ -10,6 +10,14 @@ namespace Modules.DamageReceiverSystem
         private static readonly float _zeroDamageValue = 0f;
         private static readonly float _normalDamageValue = 1f;
 
+        private DamageData(float value, WeaponType weaponType, bool isKnockout = false, bool isLethal = false)
+        {
+            Value = value;
+            IsKnockout = isKnockout;
+            IsLethal = isLethal;
+            WeaponType = weaponType;
+        }
+
         [field: SerializeField] public WeaponType WeaponType { get; private set; }
 
         [field: SerializeField]
@@ -19,14 +27,6 @@ namespace Modules.DamageReceiverSystem
         [field: SerializeField] public bool IsKnockout { get; private set; }
 
         [field: SerializeField] public bool IsLethal { get; private set; }
-
-        private DamageData(float value, WeaponType weaponType, bool isKnockout = false, bool isLethal = false)
-        {
-            Value = value;
-            IsKnockout = isKnockout;
-            IsLethal = isLethal;
-            WeaponType = weaponType;
-        }
 
         public static DamageData RangeDamage => new DamageData(_normalDamageValue, WeaponType.Range, false, false);
 

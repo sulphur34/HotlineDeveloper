@@ -12,15 +12,6 @@ namespace Modules.WeaponItemSystem
         private List<WeaponItem> _weapons;
         private RangeWeaponConfigFactory _rangeWeaponConfigFactory;
 
-        [Inject]
-        private void Construct(WeaponTracker weaponTracker, RangeWeaponConfigFactory rangeWeaponConfigFactory)
-        {
-            _rangeWeaponConfigFactory = rangeWeaponConfigFactory;
-            _weapons = GetComponentsInChildren<WeaponItem>().ToList();
-            InitializeWeapons();
-            weaponTracker.Initialize(_weapons);
-        }
-
         public void InitializeWeapon(WeaponItem weaponItem)
         {
             WeaponSetup weaponSetup = weaponItem.GetComponent<WeaponSetup>();
@@ -30,6 +21,15 @@ namespace Modules.WeaponItemSystem
 
             weaponSetup.Initialize();
             weaponItem.Initialize(weaponSetup);
+        }
+
+        [Inject]
+        private void Construct(WeaponTracker weaponTracker, RangeWeaponConfigFactory rangeWeaponConfigFactory)
+        {
+            _rangeWeaponConfigFactory = rangeWeaponConfigFactory;
+            _weapons = GetComponentsInChildren<WeaponItem>().ToList();
+            InitializeWeapons();
+            weaponTracker.Initialize(_weapons);
         }
 
         private void InitializeWeapons()

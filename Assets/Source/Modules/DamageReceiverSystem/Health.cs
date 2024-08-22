@@ -38,9 +38,9 @@ namespace Modules.DamageReceiverSystem
             }
         }
 
-        internal void Execute(Action OnDieCallback)
+        internal void Execute(Action onDieCallback)
         {
-            TakeDamage(_currentHealth, OnDieCallback);
+            TakeDamage(_currentHealth, onDieCallback);
         }
     }
 }

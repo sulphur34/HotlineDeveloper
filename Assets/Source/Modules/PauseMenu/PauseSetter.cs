@@ -2,7 +2,6 @@ using Modules.InputSystem.PlayerInput;
 using Plugins.Audio.Core;
 using UnityEngine;
 using VContainer;
-using PauseState = Modules.PauseMenu.PauseState;
 
 namespace Modules.PauseMenu
 {
