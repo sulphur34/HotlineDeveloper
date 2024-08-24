@@ -3,22 +3,28 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Translation = Lean.Localization.LeanLocalization;
 
 namespace Modules.LevelSelectionSystem
 {
     public class LevelSelectionElement : MonoBehaviour, IPointerDownHandler
     {
         private const string LockedName = "Locked";
+        private const string LevelNamePrefix = "Level";
+        private const string LevelNamePostfix = "\\Name";
 
         [SerializeField] private UILevelConfig _config;
         [SerializeField] private Image _icon;
         [SerializeField] private TextMeshProUGUI _levelNumber;
         [SerializeField] private TextMeshProUGUI _levelName;
 
+        [SerializeField] private TextMeshProUGUI _scoreNumber;
+
         [SerializeField] private Sprite _lockedIcon;
         [SerializeField] private GameObject _outline;
 
         public event Action<LevelSelectionElement> Pressed;
+
         public event Action<LevelSelectionElement> Selected;
 
         public bool IsLocked { get; private set; }
@@ -27,21 +33,26 @@ namespace Modules.LevelSelectionSystem
 
         public int LevelNumberForLoad => (int)_config.LevelNumber;
 
-        public void Init(bool isLocked)
+        private void Start()
         {
-            IsLocked = isLocked;
-            _levelNumber.text = string.Format("{0:00}", _config.LevelNumber);
+            Translation.UpdateTranslations();
 
-            if (isLocked)
+            if (IsLocked)
             {
                 _icon.sprite = _lockedIcon;
-                _levelName.text = LockedName;
+                _levelName.text = Translation.GetTranslationText(LockedName);
             }
             else
             {
                 _icon.sprite = _config.Sprite;
-                _levelName.text = _config.LevelName;
+                _levelName.text = Translation.GetTranslationText(TranslationName(_config.LevelNumber));
             }
+        }
+
+        public void Init(bool isLocked)
+        {
+            IsLocked = isLocked;
+            _levelNumber.text = string.Format("{0:00}", _config.LevelNumber);
         }
 
         public void Unlock()
@@ -69,6 +80,16 @@ namespace Modules.LevelSelectionSystem
         {
             if (IsLocked == false && IsSelected == false)
                 Pressed?.Invoke(this);
+        }
+
+        public void SetScore(uint score)
+        {
+            _scoreNumber.text = score.ToString();
+        }
+
+        private string TranslationName(uint levelNumber)
+        {
+            return LevelNamePrefix + levelNumber + LevelNamePostfix;
         }
     }
 }

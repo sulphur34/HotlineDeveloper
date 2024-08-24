@@ -51,6 +51,8 @@ GameObject:
   - component: {fileID: 7504311561227544930}
   - component: {fileID: 7094507703368019069}
   - component: {fileID: 3691421309400379496}
+  - component: {fileID: 3648424200553541590}
+  - component: {fileID: -4468808235788495619}
   m_Layer: 0
   m_Name: Knife_3
   m_TagString: Untagged
@@ -163,10 +165,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _throwData:
+    <Force>k__BackingField: 30
+    <RotationForce>k__BackingField: 5000
+    <RotationZ>k__BackingField: 90
+    <MeleeRotationY>k__BackingField: 0
+    <RangeRotationY>k__BackingField: 90
+    <RotationX>k__BackingField: 0
   <IsTrackable>k__BackingField: 1
-  _force: 50
-  _rotationForce: 50
-  <Offset>k__BackingField: {x: 0, y: 0, z: 1}
+  <Offset>k__BackingField: {x: -1, y: 0, z: 0}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 0}
   <RightHandPlaceHolder>k__BackingField: {fileID: 2399524158462744683}
 --- !u!114 &5760979999013214776
@@ -181,10 +188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42536d2e2082f84682a18c4582079dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponItem: {fileID: 8538605040488062789}
   _collider: {fileID: 2821900858325533252}
-  _attakTime: 0.1
-  _rechargeTime: 1
+  _attakTime: 0.2
+  _rechargeTime: 0.6
 --- !u!114 &3522029010575109975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,10 +216,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageData:
-    WeaponType: 0
-    Value: 1
-    IsKnockout: 0
-    IsLethal: 0
+    <WeaponType>k__BackingField: 0
+    <Value>k__BackingField: 1
+    <IsKnockout>k__BackingField: 0
+    <IsLethal>k__BackingField: 0
 --- !u!65 &2821900858325533252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -233,8 +239,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.037048504, y: 0.3861071, z: 0.070806906}
-  m_Center: {x: -0.0000000018626451, y: 0.14056256, z: -0.00023620203}
+  m_Size: {x: 0.037048504, y: 0.45819134, z: 0.070806906}
+  m_Center: {x: -0.0000000018626451, y: 0.21375561, z: -0.00023620203}
 --- !u!199 &7504311561227544930
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5110,3 +5116,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5e4eb7b5bcfdf409da29c2f848dcf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3648424200553541590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3214949654227858098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &-4468808235788495619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3214949654227858098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5535415458a4a938e4322f7888bbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName:
+    _id: 6ef3bd45-09b7-4ea1-8e26-b88d88ba35b5
+    _key: MeleeSwing

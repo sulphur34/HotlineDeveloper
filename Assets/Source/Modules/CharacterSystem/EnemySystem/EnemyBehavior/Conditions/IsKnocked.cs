@@ -1,17 +1,17 @@
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.DamageSystem.Enemies.EnemyBehavior.Variables;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsKnocked")]
     public class IsKnocked : Conditional
     {
-        public SharedDamageReceiver _damageReceiver;
-        
+        public SharedDamageReceiver DamageReceiver;
+
         public override TaskStatus OnUpdate()
         {
-            return _damageReceiver.Value.IsKnocked ? TaskStatus.Success : TaskStatus.Failure;
+            return DamageReceiver.Value.IsKnocked ? TaskStatus.Success : TaskStatus.Failure;
         }
     }
 }

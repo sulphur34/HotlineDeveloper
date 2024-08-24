@@ -1,14 +1,14 @@
 using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine.AI;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Actions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
 {
     [TaskCategory("CustomTask")]
     [TaskName("Fall")]
     public class Fall : Action
     {
         private NavMeshAgent _navMeshAgent;
-        
+
         public override void OnAwake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -16,7 +16,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 
         public override void OnStart()
         {
-            _navMeshAgent.isStopped = true;
+            _navMeshAgent.enabled = false;
         }
 
         public override TaskStatus OnUpdate()
@@ -26,7 +26,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
 
         public override void OnConditionalAbort()
         {
-            _navMeshAgent.isStopped = false;
+            _navMeshAgent.enabled = true;
         }
     }
 }

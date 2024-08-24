@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "FarLook",
+                    "type": "Value",
+                    "id": "b1bc2b59-7098-45b5-aa01-58af552d409a",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -150,37 +159,15 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "One Modifier",
-                    "id": "6327aa14-d268-4a96-956e-616cc7ab5739",
-                    "path": "OneModifier",
+                    "name": "",
+                    "id": "ec884501-dffd-41ae-b44e-ed0775e6070a",
+                    "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Look",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "modifier",
-                    "id": "24ce4ece-d0a7-402b-ba24-653f9d52c34b",
-                    "path": "<Keyboard>/shift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Desktop",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "binding",
-                    "id": "a67f70c7-e5df-4260-a723-3da8b405d61a",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Desktop",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -192,6 +179,39 @@
                     "action": "Finish",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "One Modifier",
+                    "id": "18a885da-9b8b-4982-8d93-47c8cf13402a",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FarLook",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "45487305-160d-4bd6-80ef-729068debdbd",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FarLook",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "d22be28c-af62-4009-b120-373b3623a119",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FarLook",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
@@ -252,6 +272,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "FarLook",
+                    "type": "Button",
+                    "id": "bc80aaa6-8618-4554-9bfc-dfe16f7ca6e2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -282,7 +311,7 @@
                     "id": "fbdcd43d-c4ff-4d98-a69b-89d2c706073b",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
-                    "processors": "StickDeadzone(min=0.9,max=1)",
+                    "processors": "StickDeadzone(min=0.8,max=1)",
                     "groups": "Mobile",
                     "action": "Attack",
                     "isComposite": false,
@@ -291,9 +320,9 @@
                 {
                     "name": "",
                     "id": "285f0b9d-d468-41bf-9cfc-7cb10e5ce660",
-                    "path": "<Gamepad>/leftStick",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
-                    "processors": "StickDeadzone(min=0.9,max=1)",
+                    "processors": "",
                     "groups": "Mobile",
                     "action": "Look",
                     "isComposite": false,
@@ -320,6 +349,39 @@
                     "action": "Pick",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "One Modifier",
+                    "id": "b47f614a-680b-43b8-ab03-39ce235462d8",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FarLook",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "2af99236-96d0-4f22-af28-21276561a1bb",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "FarLook",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "2c9029d8-c7b3-48ef-9dce-b141e4396128",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "FarLook",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

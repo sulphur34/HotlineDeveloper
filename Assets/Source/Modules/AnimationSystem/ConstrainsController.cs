@@ -1,38 +1,37 @@
 using UnityEngine;
-using UnityEngine.Animations.Rigging;
 
-namespace Source.Game.Scripts.Animations
+namespace Modules.AnimationSystem
 {
     internal class ConstrainsController
     {
-        private ConstraintsData _constraintsData;
+        private readonly ConstraintsData _constraintsData;
 
-        public ConstrainsController(ConstraintsData constraintsData)
+        internal ConstrainsController(ConstraintsData constraintsData)
         {
             _constraintsData = constraintsData;
         }
 
-        public bool IsTwoHanded { get; private set; }
+        internal bool IsTwoHanded { get; private set; }
 
-        public void ActivateRange(Transform _rightPlaceholder, Transform _leftPlaceholder)
+        internal void ActivateRange(Transform rightPlaceholder, Transform leftPlaceholder)
         {
             _constraintsData.RangeRig.weight = 1f;
-            _constraintsData.RightHandRange.data.target = _rightPlaceholder;
+            _constraintsData.RightHandRange.data.target = rightPlaceholder;
 
-            if (_leftPlaceholder != null)
-                _constraintsData.LeftHandRange.data.target = _leftPlaceholder;
+            if (leftPlaceholder != null)
+                _constraintsData.LeftHandRange.data.target = leftPlaceholder;
 
             _constraintsData.RigBuilder.Build();
         }
 
-        public void ActivateMelee(Transform _rightPlaceholder, Transform _leftPlaceholder)
+        internal void ActivateMelee(Transform rightPlaceholder, Transform leftPlaceholder)
         {
             _constraintsData.MeleeRig.weight = 1f;
-            _constraintsData.RightHandMelee.data.constrainedObject = _rightPlaceholder;
+            _constraintsData.RightHandMelee.data.constrainedObject = rightPlaceholder;
 
-            if (_leftPlaceholder != null)
+            if (leftPlaceholder != null)
             {
-                _constraintsData.LeftHandMelee.data.target = _leftPlaceholder;
+                _constraintsData.LeftHandMelee.data.target = leftPlaceholder;
                 IsTwoHanded = true;
             }
             else
@@ -43,7 +42,7 @@ namespace Source.Game.Scripts.Animations
             _constraintsData.RigBuilder.Build();
         }
 
-        public void ClearAll()
+        internal void ClearAll()
         {
             _constraintsData.RangeRig.weight = 0f;
             _constraintsData.MeleeRig.weight = 0f;

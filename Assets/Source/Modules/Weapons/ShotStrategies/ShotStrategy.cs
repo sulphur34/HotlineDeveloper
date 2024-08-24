@@ -1,18 +1,19 @@
-﻿using Modules.BulletPoolSystem;
-using Modules.BulletSystem;
+﻿using Modules.BulletSystem;
 using Modules.Weapons.Range;
 using UnityEngine;
 
-namespace Modules.Weapons
+namespace Modules.Weapons.ShotStrategies
 {
-    internal abstract class ShotStrategy : MonoBehaviour
+    public abstract class ShotStrategy : MonoBehaviour
     {
         [SerializeField] private BulletSpawnPoint _bulletSpawnPoint;
-        
+        [SerializeField] private float _minAngle;
+        [SerializeField] private float _maxAngle;
+
         private RangeWeaponConfig _config;
         private BulletPool _bulletPool;
 
-        protected float BulletSpeed => _config.BulletSpeed;
+        private float BulletSpeed => _config.BulletSpeed;
 
         private void OnValidate()
         {
@@ -28,11 +29,24 @@ namespace Modules.Weapons
             _bulletPool = bulletPool;
         }
 
-        protected Bullet InstantiateBullet()
+        protected void FireBullet()
+        {
+            Bullet bullet = InstantiateBullet();
+            bullet.Init(GetRandomDirection(), BulletSpeed);
+        }
+
+        private Bullet InstantiateBullet()
         {
             Bullet bullet = _bulletPool.Get();
             bullet.SetPosition(_bulletSpawnPoint.transform.position);
             return bullet;
+        }
+
+        private Vector3 GetRandomDirection()
+        {
+            float angleInDeg = Random.Range(_minAngle, _maxAngle);
+            Quaternion rotation = Quaternion.AngleAxis(angleInDeg, Vector3.up);
+            return rotation * transform.forward;
         }
     }
 }

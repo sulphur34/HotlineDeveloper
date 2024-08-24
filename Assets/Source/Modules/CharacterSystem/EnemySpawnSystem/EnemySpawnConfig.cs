@@ -1,18 +1,21 @@
-using Modules.Characters.Enemies;
-using Modules.Characters.Enemies.EnemyBehavior;
-using Modules.DamageSystem;
+using Modules.CharacterSystem.EnemySystem;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
+using Modules.DamageReceiverSystem;
 using UnityEngine;
 
-namespace Modules.EnemySpawnSystem
+namespace Modules.CharacterSystem.EnemySpawnSystem
 {
     [CreateAssetMenu(fileName = "Enemy Spawn Config")]
-    public class EnemySpawnConfig : ScriptableObject
+    internal class EnemySpawnConfig : ScriptableObject
     {
-        [field: SerializeField] public Enemy Prefab { get; private set; }
-        [field: SerializeField] public Behaviors Behavior { get; private set; }
-        
-        [field: SerializeField] public DamageableTypes DamageableType { get; private set; }
-        [field: SerializeField] public Transform SpawnPoint { get; private set; }
-        [field: SerializeField] public PatrolRoute PatrolRoute { get; private set; }
+        [field: SerializeField] internal Enemy Prefab { get; private set; }
+
+        [field: SerializeField] internal Behaviors Behavior { get; private set; }
+
+        [field: SerializeField] internal DamageableTypes DamageableType { get; private set; }
+
+        [field: SerializeField] internal Transform SpawnPoint { get; private set; }
+
+        [field: SerializeField] internal PatrolRoute PatrolRoute { get; private set; }
     }
 }

@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.Characters.Enemies.EnemyBehavior.Variables;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Actions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
 {
     [TaskCategory("CustomTask")]
     [TaskName("EnemyPatrol")]
     public class EnemyPatrol : Action
     {
-        public SharedVector3Array _patrolPoints;
+        public SharedVector3Array PatrolPoints;
 
         private NavMeshAgent _navMeshAgent;
         private Queue<Vector3> _route;
@@ -18,7 +18,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
         public override void OnAwake()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
-            _route = new Queue<Vector3>(_patrolPoints.Value);
+            _route = new Queue<Vector3>(PatrolPoints.Value);
         }
 
         public override void OnStart()
@@ -30,7 +30,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
         {
             if (_navMeshAgent == null)
                 return TaskStatus.Failure;
-            
+
             if (_navMeshAgent.remainingDistance <= 0)
                 SetDestination();
 

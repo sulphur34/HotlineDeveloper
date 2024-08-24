@@ -80,6 +80,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FarLook"",
+                    ""type"": ""Value"",
+                    ""id"": ""b1bc2b59-7098-45b5-aa01-58af552d409a"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -172,37 +181,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""One Modifier"",
-                    ""id"": ""6327aa14-d268-4a96-956e-616cc7ab5739"",
-                    ""path"": ""OneModifier"",
+                    ""name"": """",
+                    ""id"": ""ec884501-dffd-41ae-b44e-ed0775e6070a"",
+                    ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Look"",
-                    ""isComposite"": true,
+                    ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""modifier"",
-                    ""id"": ""24ce4ece-d0a7-402b-ba24-653f9d52c34b"",
-                    ""path"": ""<Keyboard>/shift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Desktop"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""binding"",
-                    ""id"": ""a67f70c7-e5df-4260-a723-3da8b405d61a"",
-                    ""path"": ""<Mouse>/position"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Desktop"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
@@ -214,6 +201,39 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Finish"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""One Modifier"",
+                    ""id"": ""18a885da-9b8b-4982-8d93-47c8cf13402a"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FarLook"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""45487305-160d-4bd6-80ef-729068debdbd"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FarLook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""d22be28c-af62-4009-b120-373b3623a119"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FarLook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -274,6 +294,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FarLook"",
+                    ""type"": ""Button"",
+                    ""id"": ""bc80aaa6-8618-4554-9bfc-dfe16f7ca6e2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -304,7 +333,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""id"": ""fbdcd43d-c4ff-4d98-a69b-89d2c706073b"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": ""StickDeadzone(min=0.9,max=1)"",
+                    ""processors"": ""StickDeadzone(min=0.8,max=1)"",
                     ""groups"": ""Mobile"",
                     ""action"": ""Attack"",
                     ""isComposite"": false,
@@ -313,9 +342,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""285f0b9d-d468-41bf-9cfc-7cb10e5ce660"",
-                    ""path"": ""<Gamepad>/leftStick"",
+                    ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": ""StickDeadzone(min=0.9,max=1)"",
+                    ""processors"": """",
                     ""groups"": ""Mobile"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
@@ -342,6 +371,39 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Pick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""One Modifier"",
+                    ""id"": ""b47f614a-680b-43b8-ab03-39ce235462d8"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FarLook"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""2af99236-96d0-4f22-af28-21276561a1bb"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mobile"",
+                    ""action"": ""FarLook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""2c9029d8-c7b3-48ef-9dce-b141e4396128"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mobile"",
+                    ""action"": ""FarLook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -389,6 +451,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_PlayerDesktop_Pick = m_PlayerDesktop.FindAction("Pick", throwIfNotFound: true);
         m_PlayerDesktop_Look = m_PlayerDesktop.FindAction("Look", throwIfNotFound: true);
         m_PlayerDesktop_Finish = m_PlayerDesktop.FindAction("Finish", throwIfNotFound: true);
+        m_PlayerDesktop_FarLook = m_PlayerDesktop.FindAction("FarLook", throwIfNotFound: true);
         // PlayerMobile
         m_PlayerMobile = asset.FindActionMap("PlayerMobile", throwIfNotFound: true);
         m_PlayerMobile_Move = m_PlayerMobile.FindAction("Move", throwIfNotFound: true);
@@ -397,6 +460,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_PlayerMobile_Pick = m_PlayerMobile.FindAction("Pick", throwIfNotFound: true);
         m_PlayerMobile_Look = m_PlayerMobile.FindAction("Look", throwIfNotFound: true);
         m_PlayerMobile_Finish = m_PlayerMobile.FindAction("Finish", throwIfNotFound: true);
+        m_PlayerMobile_FarLook = m_PlayerMobile.FindAction("FarLook", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -464,6 +528,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerDesktop_Pick;
     private readonly InputAction m_PlayerDesktop_Look;
     private readonly InputAction m_PlayerDesktop_Finish;
+    private readonly InputAction m_PlayerDesktop_FarLook;
     public struct PlayerDesktopActions
     {
         private @PlayerInput m_Wrapper;
@@ -474,6 +539,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Pick => m_Wrapper.m_PlayerDesktop_Pick;
         public InputAction @Look => m_Wrapper.m_PlayerDesktop_Look;
         public InputAction @Finish => m_Wrapper.m_PlayerDesktop_Finish;
+        public InputAction @FarLook => m_Wrapper.m_PlayerDesktop_FarLook;
         public InputActionMap Get() { return m_Wrapper.m_PlayerDesktop; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -501,6 +567,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Finish.started += instance.OnFinish;
             @Finish.performed += instance.OnFinish;
             @Finish.canceled += instance.OnFinish;
+            @FarLook.started += instance.OnFarLook;
+            @FarLook.performed += instance.OnFarLook;
+            @FarLook.canceled += instance.OnFarLook;
         }
 
         private void UnregisterCallbacks(IPlayerDesktopActions instance)
@@ -523,6 +592,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Finish.started -= instance.OnFinish;
             @Finish.performed -= instance.OnFinish;
             @Finish.canceled -= instance.OnFinish;
+            @FarLook.started -= instance.OnFarLook;
+            @FarLook.performed -= instance.OnFarLook;
+            @FarLook.canceled -= instance.OnFarLook;
         }
 
         public void RemoveCallbacks(IPlayerDesktopActions instance)
@@ -550,6 +622,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerMobile_Pick;
     private readonly InputAction m_PlayerMobile_Look;
     private readonly InputAction m_PlayerMobile_Finish;
+    private readonly InputAction m_PlayerMobile_FarLook;
     public struct PlayerMobileActions
     {
         private @PlayerInput m_Wrapper;
@@ -560,6 +633,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Pick => m_Wrapper.m_PlayerMobile_Pick;
         public InputAction @Look => m_Wrapper.m_PlayerMobile_Look;
         public InputAction @Finish => m_Wrapper.m_PlayerMobile_Finish;
+        public InputAction @FarLook => m_Wrapper.m_PlayerMobile_FarLook;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMobile; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -587,6 +661,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Finish.started += instance.OnFinish;
             @Finish.performed += instance.OnFinish;
             @Finish.canceled += instance.OnFinish;
+            @FarLook.started += instance.OnFarLook;
+            @FarLook.performed += instance.OnFarLook;
+            @FarLook.canceled += instance.OnFarLook;
         }
 
         private void UnregisterCallbacks(IPlayerMobileActions instance)
@@ -609,6 +686,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Finish.started -= instance.OnFinish;
             @Finish.performed -= instance.OnFinish;
             @Finish.canceled -= instance.OnFinish;
+            @FarLook.started -= instance.OnFarLook;
+            @FarLook.performed -= instance.OnFarLook;
+            @FarLook.canceled -= instance.OnFarLook;
         }
 
         public void RemoveCallbacks(IPlayerMobileActions instance)
@@ -652,6 +732,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnPick(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnFinish(InputAction.CallbackContext context);
+        void OnFarLook(InputAction.CallbackContext context);
     }
     public interface IPlayerMobileActions
     {
@@ -661,5 +742,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnPick(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnFinish(InputAction.CallbackContext context);
+        void OnFarLook(InputAction.CallbackContext context);
     }
 }

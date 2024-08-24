@@ -48,6 +48,8 @@ GameObject:
   - component: {fileID: 1378461881653102230}
   - component: {fileID: 6662470260181691078}
   - component: {fileID: 1916352501360213560}
+  - component: {fileID: 5782968214029865264}
+  - component: {fileID: 4323151431457863421}
   m_Layer: 7
   m_Name: Knuckles
   m_TagString: Untagged
@@ -162,6 +164,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _force: 100
   _rotationForce: 3000
+  _rotationZ: 90
+  _meleeRotationY: 0
+  _rangeRotationY: 90
+  _rotationX: 0
+  <IsTrackable>k__BackingField: 1
   <Offset>k__BackingField: {x: 0, y: 0, z: 0}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 0}
   <RightHandPlaceHolder>k__BackingField: {fileID: 4063148379736588470}
@@ -178,10 +185,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageData:
-    WeaponType: 0
-    Value: 0
-    IsKnockout: 1
-    IsLethal: 0
+    <WeaponType>k__BackingField: 0
+    <Value>k__BackingField: 0
+    <IsKnockout>k__BackingField: 1
+    <IsLethal>k__BackingField: 0
 --- !u!114 &1378461881653102230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponItem: {fileID: 2873161282234759205}
   _collider: {fileID: 1916352501360213560}
-  _attakTime: 0.1
+  _attakTime: 0.2
   _rechargeTime: 1
 --- !u!114 &6662470260181691078
 MonoBehaviour:
@@ -231,3 +238,47 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5782968214029865264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4155049631125485025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &4323151431457863421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4155049631125485025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5535415458a4a938e4322f7888bbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName:
+    _id: 5ae933cf-7093-44fe-8b44-a6ea73726a7e
+    _key: SwingMelee2

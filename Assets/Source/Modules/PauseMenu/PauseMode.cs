@@ -3,6 +3,6 @@
     internal enum PauseMode
     {
         Enabled,
-        Disabled
+        Disabled,
     }
 }

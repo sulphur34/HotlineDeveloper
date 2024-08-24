@@ -2,7 +2,7 @@ using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Actions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
 {
     [TaskCategory("CustomTask")]
     [TaskName("Track")]
@@ -13,7 +13,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
         public SharedBool HasLastPosition;
 
         private Transform _targetTransform;
-        
+
         public override void OnStart()
         {
             _targetTransform = Target.Value.transform;

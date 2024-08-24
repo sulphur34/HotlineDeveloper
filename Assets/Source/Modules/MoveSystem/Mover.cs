@@ -1,48 +1,38 @@
-using System;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 namespace Modules.MoveSystem
 {
     public class Mover : IMovable
     {
-        private readonly float _gravityModifier = -0.08f;
-        private CharacterController _characterController;
-        private Transform _transform;
-        private Transform _torsoRotator;
-        private float _moveMoveSpeed;
+        private readonly CharacterController _characterController;
+        private readonly Transform _transform;
+        private readonly Transform _torsoRotator;
+        private readonly float _moveMoveSpeed;
+        private readonly float _gravityModifier;
 
-        public event Action<float> SpeedChange;
-
-        public Mover(CharacterController characterController, Transform transform, Transform torsoRotator, MoverConfig config)
+        public Mover(
+            CharacterController characterController,
+            Transform transform,
+            Transform torsoRotator,
+            MoverConfig config)
         {
             _characterController = characterController;
             _transform = transform;
             _moveMoveSpeed = config.MoveSpeed;
+            _gravityModifier = config.GravityModifier;
             _torsoRotator = torsoRotator;
         }
 
-        public void RotateHorizontal(Vector2 direction)
+        public void RotateHorizontal(Vector2 rotationValue)
         {
-            RotateDirection(_torsoRotator, direction);
+            RotateDirection(_torsoRotator, rotationValue);
         }
 
         public void MoveHorizontal(Vector2 direction)
         {
-            _characterController.Move(new Vector3(direction.x, _gravityModifier, direction.y) * _moveMoveSpeed * Time.deltaTime);
-            SpeedChange?.Invoke(_characterController.velocity.magnitude);
+            _characterController.Move(
+                new Vector3(direction.x, _gravityModifier, direction.y) * _moveMoveSpeed * Time.deltaTime);
             RotateDirection(_transform, direction);
-        }
-        
-        private void AlignWithGround()
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(_transform.position, Vector3.down, out hit))
-            {
-                Debug.Log(hit.distance);
-                
-                _transform.up = hit.normal;
-            }
         }
 
         private void RotateDirection(Transform rotatedObject, Vector3 direction)

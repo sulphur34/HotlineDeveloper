@@ -11,7 +11,10 @@ Shader "Custom/WaterSurfaceShader"
     }
     SubShader
     {
-        Tags { "RenderType"="Transparent" "Queue"="Transparent" }
+        Tags
+        {
+            "RenderType"="Transparent" "Queue"="Transparent"
+        }
         LOD 200
 
         CGPROGRAM
@@ -30,7 +33,7 @@ Shader "Custom/WaterSurfaceShader"
             float3 viewDir;
         };
 
-        void surf (Input IN, inout SurfaceOutput o)
+        void surf(Input IN, inout SurfaceOutput o)
         {
             // Sample the base texture
             fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _WaterColor;

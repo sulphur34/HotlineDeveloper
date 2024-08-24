@@ -1,4 +1,5 @@
-﻿using Modules.Weapons.Ammunition;
+﻿using Modules.Ammunition;
+using Modules.Weapons.ShotStrategies;
 
 namespace Modules.Weapons.Range
 {
@@ -13,13 +14,16 @@ namespace Modules.Weapons.Range
             _ammunition = ammunition;
         }
 
-        public void Attack()
+        public bool TryAttack()
         {
             if (_ammunition.Count > 0)
             {
                 _shotStrategy.Shot();
                 _ammunition.Remove();
+                return true;
             }
+
+            return false;
         }
     }
 }

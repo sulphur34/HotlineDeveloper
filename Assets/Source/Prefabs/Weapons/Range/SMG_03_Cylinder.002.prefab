@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1357190553665790450}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.4999996, z: -0, w: 0.8660257}
-  m_LocalPosition: {x: 0.0026, y: 0.0437, z: 0.255}
+  m_LocalPosition: {x: 0.0026, y: 0.0437, z: 0.298}
   m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61,7 +61,10 @@ GameObject:
   - component: {fileID: -5922594083915912313}
   - component: {fileID: 1182585881717424421}
   - component: {fileID: 4828614638340234323}
-  - component: {fileID: 5083668639452892386}
+  - component: {fileID: -1405569412771328072}
+  - component: {fileID: 7969215613553539181}
+  - component: {fileID: -6217794977742466554}
+  - component: {fileID: 1547968890858133061}
   m_Layer: 0
   m_Name: SMG_03_Cylinder.002
   m_TagString: Untagged
@@ -197,8 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef631768894ac9418722f25acd7f9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponItem: {fileID: -5922594083915912313}
-  _shotStrategy: {fileID: 5083668639452892386}
+  _shotStrategy: {fileID: -1405569412771328072}
 --- !u!114 &-5922594083915912313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,9 +213,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _force: 50
-  _rotationForce: 5
-  <Offset>k__BackingField: {x: -0.4, y: 0.4, z: 0}
+  _throwData:
+    <Force>k__BackingField: 50
+    <RotationForce>k__BackingField: 200
+    <RotationZ>k__BackingField: 90
+    <MeleeRotationY>k__BackingField: 0
+    <RangeRotationY>k__BackingField: 90
+    <RotationX>k__BackingField: 0
+  <IsTrackable>k__BackingField: 1
+  <Offset>k__BackingField: {x: -0.35, y: 0.4, z: 0}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 8630170202427134261}
   <RightHandPlaceHolder>k__BackingField: {fileID: 9183833118918376562}
 --- !u!114 &1182585881717424421
@@ -241,11 +249,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageData:
-    WeaponType: 0
-    Value: 0
-    IsKnockout: 1
-    IsLethal: 0
---- !u!114 &5083668639452892386
+    <WeaponType>k__BackingField: 0
+    <Value>k__BackingField: 0
+    <IsKnockout>k__BackingField: 1
+    <IsLethal>k__BackingField: 0
+--- !u!114 &-1405569412771328072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,10 +262,69 @@ MonoBehaviour:
   m_GameObject: {fileID: 5800304441430319337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7883593e6fbea894f87bb9623a16ecf6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7cb0759df9a0405c8534b28a82aab63c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletSpawnPoint: {fileID: 6226327626530749618}
+  _minAngle: -5
+  _maxAngle: 5
+--- !u!114 &7969215613553539181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800304441430319337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &-6217794977742466554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800304441430319337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5535415458a4a938e4322f7888bbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName:
+    _id: aaaae86e-d870-48fc-8c7c-a4a4402d3eee
+    _key: SmgFire2
+--- !u!114 &1547968890858133061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800304441430319337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8eb7f5fcf89384691a6b706de1530d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <AmmoIcon>k__BackingField: {fileID: 21300000, guid: d1d0f18e9c3704d449bd7602a71f4212, type: 3}
 --- !u!1 &8313071597021067271
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +381,7 @@ Transform:
   m_GameObject: {fileID: 8755856879049479720}
   serializedVersion: 2
   m_LocalRotation: {x: 0.32771122, y: -0.641672, z: -0.6445223, w: 0.2558386}
-  m_LocalPosition: {x: 0, y: 0.016, z: 0.282}
+  m_LocalPosition: {x: -0, y: -0.017, z: 0.068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

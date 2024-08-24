@@ -16,10 +16,12 @@ namespace Modules.LevelsSystem
 
         [field: SerializeField] public bool IsCompleted { get; private set; }
 
+        [field: SerializeField] public uint Score { get; private set; }
+
         public void SetNumber(uint number)
         {
             if (number < MinNumber)
-                throw new ArgumentException();
+                throw new ArgumentOutOfRangeException();
 
             Number = number;
         }
@@ -33,6 +35,12 @@ namespace Modules.LevelsSystem
         {
             IsCompleted = true;
             Completed?.Invoke();
+        }
+
+        public void UpdateScore(uint score)
+        {
+            if (score > Score)
+                Score = score;
         }
     }
 }

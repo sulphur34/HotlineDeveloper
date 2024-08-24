@@ -1,7 +1,7 @@
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.PlayerWeaponsHandler;
+using Modules.WeaponsHandler;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsArmed")]
@@ -16,7 +16,10 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Conditions
 
         public override TaskStatus OnUpdate()
         {
-            return _weaponHandler.WeaponInfo.CurrentWeaponItemIsEmpty ? TaskStatus.Failure : TaskStatus.Success ;
+            if (_weaponHandler.WeaponInfo == null)
+                return TaskStatus.Failure;
+
+            return _weaponHandler.WeaponInfo.IsCurrentWeaponItemEmpty ? TaskStatus.Failure : TaskStatus.Success;
         }
     }
 }

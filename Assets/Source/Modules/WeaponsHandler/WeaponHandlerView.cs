@@ -1,76 +1,71 @@
 using System;
-using Modules.DamageSystem;
-using Modules.Weapons.WeaponItemSystem;
-using Modules.Weapons.WeaponTypeSystem;
-using Source.Game.Scripts.Animations;
+using Modules.Ammunition;
+using Modules.AnimationSystem;
+using Modules.DamageReceiverSystem;
+using Modules.WeaponItemSystem;
+using Modules.WeaponsTypes;
 using UnityEngine;
 
-namespace Modules.PlayerWeaponsHandler
+namespace Modules.WeaponsHandler
 {
     public class WeaponHandlerView : MonoBehaviour
     {
         [SerializeField] private AnimationController _animationController;
         [SerializeField] private DamageReceiverView _damageReceiverView;
-        
+        [SerializeField] private AmmunitionUI _ammunitionUI;
+
+        private WeaponHandlerAnimator _weaponHandlerAnimator;
+        private AmmoUIHandler _ammoUIHandler;
+        private IAmmunitionView _currentAmmunitionView;
+
         public event Action RangeShotFired;
+
         public event Action Equipped;
-        public event Action Unequipped;
 
         public IWeaponHandlerInfo WeaponInfo { get; private set; }
 
-        public void Initialize(IWeaponHandlerInfo weaponHandlerInfo)
+        public void Initialize()
         {
-            WeaponInfo = weaponHandlerInfo;
+            _weaponHandlerAnimator = new WeaponHandlerAnimator(_animationController);
+            _ammoUIHandler = new AmmoUIHandler(_ammunitionUI, _currentAmmunitionView);
             _animationController = GetComponent<AnimationController>();
-            _damageReceiverView = GetComponent<DamageReceiverView>();
-            _damageReceiverView.FallenDown += UnequipWeapon;
+
+            _ammunitionUI?.Deactivate();
         }
 
         public void OnAttack(WeaponType weaponType)
         {
-            switch (weaponType)
-            {
-                case WeaponType.Melee:
-                    _animationController.AttackMelee();
-                    break;
-                case WeaponType.BareHands:
-                    _animationController.AttackBareHands();
-                    break;
-            }
+            _weaponHandlerAnimator.AnimateAttack(weaponType);
 
             if (weaponType == WeaponType.Range)
                 RangeShotFired?.Invoke();
         }
 
-        public void OnPick(IWeaponInfo weaponItem)
+        public void OnPick(IWeaponInfo weaponItem, IWeaponHandlerInfo handlerInfo)
         {
+            WeaponInfo = handlerInfo;
             Equipped?.Invoke();
+            _weaponHandlerAnimator.AnimatePick(WeaponInfo, weaponItem);
 
-            switch (WeaponInfo.CurrentWeaponType)
-            {
-                case WeaponType.Melee:
-                    _animationController.PickMelee(weaponItem.SelfTransform, weaponItem.LeftHandPlaceHolder);
-                    break;
-
-                case WeaponType.Range:
-                    _animationController.PickRange(weaponItem.RightHandPlaceHolder, weaponItem.LeftHandPlaceHolder);
-                    break;
-
-                case WeaponType.BareHands:
-                    _animationController.PickMelee(weaponItem.SelfTransform, weaponItem.LeftHandPlaceHolder);
-                    break;
-            }
+            if (weaponItem.WeaponType == WeaponType.Range)
+                _ammoUIHandler.SetAmmoUI(true, weaponItem.WeaponAmmunitionView);
+            else
+                _ammunitionUI?.Deactivate();
         }
 
-        public void UnequipWeapon()
+        public void UnequipWeapon(IWeaponHandlerInfo handlerInfo)
         {
+            WeaponInfo = handlerInfo;
+
+            if (!WeaponInfo.IsCurrentWeaponItemEmpty && WeaponInfo.CurrentWeaponType == WeaponType.Range)
+                _ammoUIHandler.SetAmmoUI(false, _currentAmmunitionView);
+
             ClearHands();
-            Unequipped?.Invoke();
         }
 
         public void ClearHands()
         {
-            _animationController.Unequip();
+            _weaponHandlerAnimator.AnimateClearHands();
         }
     }
 }

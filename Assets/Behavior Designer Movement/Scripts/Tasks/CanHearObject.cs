@@ -1,44 +1,46 @@
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Check to see if the any objects are within hearing range of the current agent.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("a464405df8e82b24db602534724b5e6f", "941bd88188259374d885440560f1a29d")]
     public class CanHearObject : Conditional
     {
-        [Tooltip("Should the 2D version be used?")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Should the 2D version be used?")]
         [UnityEngine.Serialization.FormerlySerializedAs("usePhysics2D")]
         public bool m_UsePhysics2D;
-        [Tooltip("Specifies the type of detection that should be used.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Specifies the type of detection that should be used.")]
         public SharedDetectionMode m_DetectionMode = DetectionMode.Object | DetectionMode.ObjectList | DetectionMode.Tag | DetectionMode.LayerMask;
-        [Tooltip("The object that we are searching for")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The object that we are searching for")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetObject")]
         public SharedGameObject m_TargetObject;
-        [Tooltip("The objects that we are searching for")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The objects that we are searching for")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetObjects")]
         public SharedGameObjectList m_TargetObjects;
-        [Tooltip("The tag of the object that we are searching for")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The tag of the object that we are searching for")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetTag")]
         public SharedString m_TargetTag;
-        [Tooltip("The LayerMask of the objects that we are searching for")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The LayerMask of the objects that we are searching for")]
         [UnityEngine.Serialization.FormerlySerializedAs("objectLayerMask")]
         public SharedLayerMask m_TargetLayerMask;
-        [Tooltip("If using the object layer mask, specifies the maximum number of colliders that the physics cast can collide with")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("If using the object layer mask, specifies the maximum number of colliders that the physics cast can collide with")]
         [UnityEngine.Serialization.FormerlySerializedAs("maxCollisionCount")]
         public int m_MaxCollisionCount = 200;
-        [Tooltip("How far away the unit can hear")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("How far away the unit can hear")]
         [UnityEngine.Serialization.FormerlySerializedAs("hearingRadius")]
         public SharedFloat m_HearingRadius = 50;
-        [Tooltip("The further away a sound source is the less likely the agent will be able to hear it. " +
-                 "Set a threshold for the the minimum audibility level that the agent can hear")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The further away a sound source is the less likely the agent will be able to hear it. " +
+                                                "Set a threshold for the the minimum audibility level that the agent can hear")]
         [UnityEngine.Serialization.FormerlySerializedAs("audibilityThreshold")]
         public SharedFloat m_AudibilityThreshold = 0.05f;
-        [Tooltip("The hearing offset relative to the pivot position")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The hearing offset relative to the pivot position")]
         [UnityEngine.Serialization.FormerlySerializedAs("offset")]
         public SharedVector3 m_Offset;
-        [Tooltip("The returned object that is heard")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The returned object that is heard")]
         [UnityEngine.Serialization.FormerlySerializedAs("returnedObject")]
         public SharedGameObject m_ReturnedObject;
 

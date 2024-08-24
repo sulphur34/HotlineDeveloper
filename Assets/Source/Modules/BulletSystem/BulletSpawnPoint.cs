@@ -2,5 +2,7 @@
 
 namespace Modules.BulletSystem
 {
-    public class BulletSpawnPoint : MonoBehaviour { }
+    public class BulletSpawnPoint : MonoBehaviour
+    {
+    }
 }

@@ -1,17 +1,18 @@
 using System;
+using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
-namespace Source.Game.Scripts.Animations
+namespace Modules.AnimationSystem
 {
     [Serializable]
     internal class ConstraintsData
     {
-        public RigBuilder RigBuilder;
-        public Rig RangeRig;
-        public TwoBoneIKConstraint RightHandRange;
-        public TwoBoneIKConstraint LeftHandRange;
-        public Rig MeleeRig;
-        public MultiParentConstraint RightHandMelee;
-        public TwoBoneIKConstraint LeftHandMelee;
+        [field: SerializeField] public RigBuilder RigBuilder { get; private set; }
+        [field: SerializeField] public Rig RangeRig { get; private set; }
+        [field: SerializeField] public TwoBoneIKConstraint RightHandRange { get; private set; }
+        [field: SerializeField] public TwoBoneIKConstraint LeftHandRange { get; private set; }
+        [field: SerializeField] public Rig MeleeRig { get; private set; }
+        [field: SerializeField] public MultiParentConstraint RightHandMelee { get; private set; }
+        [field: SerializeField] public TwoBoneIKConstraint LeftHandMelee { get; private set; }
     }
 }

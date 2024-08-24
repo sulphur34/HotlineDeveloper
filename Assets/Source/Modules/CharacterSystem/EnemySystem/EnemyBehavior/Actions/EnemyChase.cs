@@ -3,7 +3,7 @@ using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Actions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
 {
     [TaskCategory("CustomTask")]
     [TaskName("EnemyChase")]
@@ -29,7 +29,7 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
         {
             if (_navMeshAgent == null)
                 return TaskStatus.Failure;
-            
+
             _navMeshAgent.SetDestination(_targetTransform.position);
             return TaskStatus.Running;
         }

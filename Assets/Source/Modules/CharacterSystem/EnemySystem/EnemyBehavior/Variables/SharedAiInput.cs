@@ -1,10 +1,13 @@
 using BehaviorDesigner.Runtime;
 using Modules.InputSystem;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Variables
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables
 {
     public class SharedAiInput : SharedVariable<AiInput>
     {
-        public static implicit operator SharedAiInput(AiInput value) { return new SharedAiInput { Value = value }; }
+        public static implicit operator SharedAiInput(AiInput value)
+        {
+            return new SharedAiInput { Value = value };
+        }
     }
 }

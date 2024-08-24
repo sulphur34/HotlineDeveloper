@@ -422,11 +422,11 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -20
+    limit: -100
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 70
+    limit: 0
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
@@ -666,6 +666,8 @@ GameObject:
   - component: {fileID: 1191996825379296869}
   - component: {fileID: 5146112849817749531}
   - component: {fileID: 7291154123027153845}
+  - component: {fileID: 8551140916523778562}
+  - component: {fileID: 8650551019764613439}
   m_Layer: 0
   m_Name: ImpSimple 2
   m_TagString: Untagged
@@ -709,7 +711,10 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'Arm.R'\n\tFrom animation clip 'MeleeAttackDoubleHanded'\n\tFrom
+    animation clip 'MeleeAttack'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -926,6 +931,7 @@ MonoBehaviour:
     Rigidbody: {fileID: 1382573982666251858}
   - Collider: {fileID: 2995931559234343631}
     Rigidbody: {fileID: 7892452526595003618}
+  _hipBonePosition: {fileID: 5590459887692771352}
 --- !u!114 &333058390572041764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -982,6 +988,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 944e0e865bbf4e92acb21e892ffc2b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8551140916523778562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526306925852644456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &8650551019764613439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526306925852644456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faa3df855b840d9afc59484612d6751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName:
+    _id: 18afd331-92f5-4b30-9ad4-f2aab707453f
+    _key: MeleeHit
 --- !u!1 &1553456473178523528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3085,11 +3135,11 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -20
+    limit: -100
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 70
+    limit: 0
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:

@@ -20,6 +20,8 @@ GameObject:
   - component: {fileID: 8182525473690745196}
   - component: {fileID: -794837765819529707}
   - component: {fileID: 6179548357582240307}
+  - component: {fileID: 1057157287174928371}
+  - component: {fileID: 2589256166592180185}
   m_Layer: 0
   m_Name: HammerTypeTwo
   m_TagString: Untagged
@@ -132,9 +134,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984fac2298d7175459642d805d35b053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _force: 50
-  _rotationForce: 50
-  <Offset>k__BackingField: {x: 0, y: 0, z: 1}
+  _throwData:
+    <Force>k__BackingField: 30
+    <RotationForce>k__BackingField: 5000
+    <RotationZ>k__BackingField: 90
+    <MeleeRotationY>k__BackingField: 0
+    <RangeRotationY>k__BackingField: 90
+    <RotationX>k__BackingField: 0
+  <IsTrackable>k__BackingField: 1
+  <Offset>k__BackingField: {x: -1, y: 0, z: 0}
   <LeftHandPlaceHolder>k__BackingField: {fileID: 0}
   <RightHandPlaceHolder>k__BackingField: {fileID: 7318592127730779513}
 --- !u!114 &5479516695362830422
@@ -149,10 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42536d2e2082f84682a18c4582079dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponItem: {fileID: 2200328212986599487}
   _collider: {fileID: -280465796086505093}
-  _attakTime: 0.1
-  _rechargeTime: 1
+  _attakTime: 0.2
+  _rechargeTime: 0.8
 --- !u!114 &4622082467335475288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,10 +185,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageData:
-    WeaponType: 0
-    Value: 1
-    IsKnockout: 0
-    IsLethal: 0
+    <WeaponType>k__BackingField: 0
+    <Value>k__BackingField: 1
+    <IsKnockout>k__BackingField: 0
+    <IsLethal>k__BackingField: 0
 --- !u!65 &-280465796086505093
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -201,8 +208,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.071204245, y: 0.3156023, z: 0.113932684}
-  m_Center: {x: -0.0024071373, y: 0.11535586, z: -0.00000038184226}
+  m_Size: {x: 0.106662296, y: 0.36498407, z: 0.14123198}
+  m_Center: {x: -0.0030166842, y: 0.16511695, z: 0.0019988269}
 --- !u!199 &8182525473690745196
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5078,6 +5085,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5e4eb7b5bcfdf409da29c2f848dcf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1057157287174928371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6396209320589532248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994bd5a6b4cdde04cbc5b175f7662486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provider: 0
+  _volume: 1
+  _loop: 0
+  _mute: 0
+  _pitch: 1
+  _output: {fileID: -5239624081904210805, guid: 3f4719ba59cbf344b80b86aa91392e82, type: 2}
+  _bypassEffects: 0
+  _bypassListenerEffects: 0
+  _bypassReverbZones: 0
+  _stereoPan: 0
+  _spatialBlend: 0
+  _reverbZoneMix: 1
+  _dopplerLevel: 1
+  _spread: 0
+  _volumeRolloff: 0
+  _minDistance: 1
+  _maxDistance: 500
+--- !u!114 &2589256166592180185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6396209320589532248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5535415458a4a938e4322f7888bbb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioName:
+    _id: 6ef3bd45-09b7-4ea1-8e26-b88d88ba35b5
+    _key: MeleeSwing
 --- !u!1 &8156761793493951458
 GameObject:
   m_ObjectHideFlags: 0

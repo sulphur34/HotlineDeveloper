@@ -1,17 +1,19 @@
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Seek the target specified using the Unity NavMesh.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("3278c95539f686f47a519013713b31ac", "9f01c6fc9429bae4bacb3d426405ffe4")]
     public class Seek : NavMeshMovement
     {
-        [Tooltip("The GameObject that the agent is seeking")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The GameObject that the agent is seeking")]
         [UnityEngine.Serialization.FormerlySerializedAs("target")]
         public SharedGameObject m_Target;
-        [Tooltip("If target is null then use the target position")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("If target is null then use the target position")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetPosition")]
         public SharedVector3 m_TargetPosition;
 

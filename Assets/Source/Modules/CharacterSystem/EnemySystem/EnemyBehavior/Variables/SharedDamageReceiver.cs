@@ -1,10 +1,13 @@
 using BehaviorDesigner.Runtime;
-using Modules.DamageSystem;
+using Modules.DamageReceiverSystem;
 
-namespace Modules.DamageSystem.Enemies.EnemyBehavior.Variables
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables
 {
     public class SharedDamageReceiver : SharedVariable<DamageReceiverView>
     {
-        public static implicit operator SharedDamageReceiver(DamageReceiverView value) { return new SharedDamageReceiver { Value = value }; }
+        public static implicit operator SharedDamageReceiver(DamageReceiverView value)
+        {
+            return new SharedDamageReceiver { Value = value };
+        }
     }
 }

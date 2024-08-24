@@ -1,16 +1,18 @@
-﻿using Modules.BulletPoolSystem;
-using Modules.Weapons.Ammunition;
+﻿using Modules.Ammunition;
+using Modules.BulletSystem;
+using Modules.Weapons.ShotStrategies;
 using UnityEngine;
-using VContainer;
 
 namespace Modules.Weapons.Range
 {
+    [RequireComponent(typeof(WeaponAmmunitionView))]
     public class RangeWeaponSetup : WeaponSetup
     {
         [SerializeField] private ShotStrategy _shotStrategy;
 
         private WeaponAmmunitionPresenter _ammunitionPresenter;
         private BulletPool _bulletPool;
+        private RangeWeaponConfig _config;
 
         private void OnDestroy()
         {
@@ -18,18 +20,20 @@ namespace Modules.Weapons.Range
             _bulletPool.Dispose();
         }
 
-        [Inject]
-        private void Construct(RangeWeaponConfigFactory factory, WeaponAmmunitionView ammunitionView)
+        public void SetShotStrategy(RangeWeaponConfigFactory factory)
         {
-            RangeWeaponConfig config = factory.Get(_shotStrategy);
-            _bulletPool = new BulletPool(config.BulletPrefab);
-            _shotStrategy.Init(config, _bulletPool);
+            _config = factory.Get(_shotStrategy);
+            _bulletPool = new BulletPool(_config.BulletPrefab);
+            _shotStrategy.Init(_config, _bulletPool);
+        }
 
-            WeaponAmmunition ammunition = new WeaponAmmunition(config.BulletsCount);
+        public override void Initialize()
+        {
+            WeaponAmmunitionView ammunitionView = GetComponent<WeaponAmmunitionView>();
+            WeaponAmmunition ammunition = new WeaponAmmunition(_config.BulletsCount);
             _ammunitionPresenter = new WeaponAmmunitionPresenter(ammunition, ammunitionView);
-
             RangeAttackModule attackModule = new RangeAttackModule(_shotStrategy, ammunition);
-            Init(config.RechargeTime, attackModule);
+            SetWeapon(_config.RechargeTime, attackModule);
         }
     }
 }

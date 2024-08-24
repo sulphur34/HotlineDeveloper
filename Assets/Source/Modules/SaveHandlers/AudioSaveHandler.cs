@@ -1,18 +1,19 @@
-﻿using Modules.Audio;
+﻿using System;
+using Modules.Audio;
 using Modules.SavingsSystem;
-using System;
 using VContainer;
 
 namespace Modules.SaveHandlers
 {
     public class AudioSaveHandler : IDisposable
     {
-        private readonly SaveSystem _saveSystem = new SaveSystem();
+        private readonly SaveSystem _saveSystem;
         private readonly AudioSettings _audioSettings;
 
         [Inject]
         public AudioSaveHandler(AudioSettings audioSettings)
         {
+            _saveSystem = new SaveSystem();
             _audioSettings = audioSettings;
 
             _audioSettings.MusicSlider.Changed += OnMusicChanged;
@@ -27,18 +28,12 @@ namespace Modules.SaveHandlers
 
         private void OnMusicChanged()
         {
-            _saveSystem.Save(data =>
-            {
-                data.AudioSettingsData.MusicVolume = _audioSettings.MusicSlider.Volume;
-            });
+            _saveSystem.Save(data => { data.AudioSettingsData.SetMusicVolume(_audioSettings.MusicSlider.Volume); });
         }
 
         private void OnSoundChanged()
         {
-            _saveSystem.Save(data =>
-            {
-                data.AudioSettingsData.SoundVolume = _audioSettings.SoundSlider.Volume;
-            });
+            _saveSystem.Save(data => { data.AudioSettingsData.SetSoundVolume(_audioSettings.SoundSlider.Volume); });
         }
     }
 }

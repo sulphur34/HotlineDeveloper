@@ -1,11 +1,12 @@
-namespace Modules.Characters.Enemies.EnemyBehavior
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior
 {
-    public enum Behaviors
+    internal enum Behaviors
     {
-        Normal,
+        Melee,
+        Range,
         Strong,
         Boss,
         Peace,
-        Fanatic
+        Fanatic,
     }
 }

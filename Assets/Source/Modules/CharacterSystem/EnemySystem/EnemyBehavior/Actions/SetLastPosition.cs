@@ -2,7 +2,7 @@ using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace Modules.Characters.Enemies.EnemyBehavior.Actions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
 {
     [TaskCategory("CustomTask")]
     [TaskName("SetLastPosition")]
@@ -11,13 +11,6 @@ namespace Modules.Characters.Enemies.EnemyBehavior.Actions
         public SharedVector3 LastTargetPosition;
         public SharedGameObject Target;
         public SharedBool HasLastPosition;
-
-        private Transform _transform;
-
-        public override void OnAwake()
-        {
-            _transform = transform;
-        }
 
         public override TaskStatus OnUpdate()
         {

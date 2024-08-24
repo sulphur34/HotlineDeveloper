@@ -3,7 +3,6 @@ using DG.Tweening;
 using Modules.SceneLoaderSystem;
 using UnityEngine;
 using UnityEngine.UI;
-using VContainer;
 
 namespace Modules.FadeSystem
 {

@@ -1,20 +1,22 @@
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Flee from the target specified using the Unity NavMesh.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("e5f0ffa5bd82433428ba4d2dd58d57d8", "e1a2340aca5184f4ba0f3e3163864b8e")]
     public class Flee : NavMeshMovement
     {
-        [Tooltip("The agent has fleed when the magnitude is greater than this value")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The agent has fleed when the magnitude is greater than this value")]
         [UnityEngine.Serialization.FormerlySerializedAs("fleedDistance")]
         public SharedFloat m_FleedDistance = 20;
-        [Tooltip("The distance to look ahead when fleeing")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The distance to look ahead when fleeing")]
         [UnityEngine.Serialization.FormerlySerializedAs("lookAheadDistance")]
         public SharedFloat m_LookAheadDistance = 5;
-        [Tooltip("The GameObject that the agent is fleeing from")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The GameObject that the agent is fleeing from")]
         [UnityEngine.Serialization.FormerlySerializedAs("target")]
         public SharedGameObject m_Target;
 

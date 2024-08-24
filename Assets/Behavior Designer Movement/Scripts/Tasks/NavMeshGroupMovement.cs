@@ -1,17 +1,18 @@
-﻿using UnityEngine;
+﻿using BehaviorDesigner.Runtime;
+using UnityEngine;
 using UnityEngine.AI;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     public abstract class NavMeshGroupMovement : GroupMovement
     {
-        [Tooltip("All of the agents")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("All of the agents")]
         [UnityEngine.Serialization.FormerlySerializedAs("agents")]
         public SharedGameObject[] m_Agents;
-        [Tooltip("The speed of the agents")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The speed of the agents")]
         [UnityEngine.Serialization.FormerlySerializedAs("speed")]
         public SharedFloat m_Speed = 10;
-        [Tooltip("The angular speed of the agents")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The angular speed of the agents")]
         [UnityEngine.Serialization.FormerlySerializedAs("angularSpeed")]
         public SharedFloat m_AngularSpeed = 120;
 

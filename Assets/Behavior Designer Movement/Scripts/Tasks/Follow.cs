@@ -1,17 +1,19 @@
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Follows the specified target using the Unity NavMesh.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("815ba0528c01fe940bd4d5b51bf80773", "b17f9c5419e855948badb45ca05a4fcd")]
     public class Follow : NavMeshMovement
     {
-        [Tooltip("The GameObject that the agent is following")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The GameObject that the agent is following")]
         [UnityEngine.Serialization.FormerlySerializedAs("target")]
         public SharedGameObject m_Target;
-        [Tooltip("Start moving towards the target if the target is further than the specified distance")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Start moving towards the target if the target is further than the specified distance")]
         [UnityEngine.Serialization.FormerlySerializedAs("moveDistance")]
         public SharedFloat m_MoveDistance = 2;
 

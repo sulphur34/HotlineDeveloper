@@ -2,6 +2,8 @@
 using BehaviorDesigner.Editor;
 using System.Reflection;
 using System.Collections.Generic;
+using Behavior_Designer_Movement.Scripts;
+using Behavior_Designer_Movement.Scripts.Tasks;
 
 namespace BehaviorDesigner.Runtime.Tasks.Movement.Editor.ObjectDrawers
 {

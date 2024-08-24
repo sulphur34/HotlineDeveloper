@@ -1,18 +1,19 @@
-﻿using Modules.LevelSelectionSystem;
+﻿using System;
+using Modules.LevelSelectionSystem;
 using Modules.SavingsSystem;
-using System;
 using VContainer;
 
 namespace Modules.SaveHandlers
 {
     public class SelectedLevelSaveHandler : IDisposable
     {
-        private readonly SaveSystem _saveSystem = new SaveSystem();
+        private readonly SaveSystem _saveSystem;
         private readonly LevelSelectionElement[] _levelSelectionElements;
 
         [Inject]
         public SelectedLevelSaveHandler(LevelSelectionElement[] levelSelectionElements)
         {
+            _saveSystem = new SaveSystem();
             _levelSelectionElements = levelSelectionElements;
 
             foreach (var element in _levelSelectionElements)
@@ -27,10 +28,7 @@ namespace Modules.SaveHandlers
 
         private void OnSelected(LevelSelectionElement element)
         {
-            _saveSystem.Save(data =>
-            {
-                data.LevelsData.ForLoad = element.LevelNumberForLoad;
-            });
+            _saveSystem.Save(data => { data.LevelsData.SetForLoad(element.LevelNumberForLoad); });
         }
     }
 }
