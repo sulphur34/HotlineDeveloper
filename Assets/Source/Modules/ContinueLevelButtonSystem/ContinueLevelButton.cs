@@ -1,9 +1,8 @@
 using Modules.LevelSelectionSystem;
 using Modules.LevelsSystem;
 using Modules.PressedButtonSystem;
-using System.Linq;
 
-namespace Module.ContinueLevelButtonSystem
+namespace Modules.ContinueLevelButtonSystem
 {
     public class ContinueLevelButton : PressedButton
     {
@@ -24,7 +23,7 @@ namespace Module.ContinueLevelButtonSystem
 
         protected override void MakeOnClick()
         {
-            _levels.ForLoad = (int)_levelForLoad.Number;
+            _levels.SetForLoad((int)_levelForLoad.Number);
             _levelSceneLoader.Load((int)_levelForLoad.Number);
         }
     }

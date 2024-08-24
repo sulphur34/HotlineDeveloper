@@ -1,9 +1,9 @@
-﻿namespace Modules.WeaponTypes
+﻿namespace Modules.WeaponsTypes
 {
     public enum WeaponType
     {
         Melee,
         Range,
-        BareHands
+        BareHands,
     }
 }

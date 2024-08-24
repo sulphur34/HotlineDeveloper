@@ -1,6 +1,3 @@
-using Modules.AnimationSystem;
-using UnityEngine;
-
 namespace Modules.AnimationSystem
 {
     internal class RagdollController

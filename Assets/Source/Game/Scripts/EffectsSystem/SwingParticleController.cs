@@ -1,27 +1,33 @@
 using UnityEngine;
 
-public class SwingParticleController : MonoBehaviour
+namespace Game.Scripts.EffectsSystem
 {
-    private Collider _collider;
-    private ParticleSystem _particleSystem;
-
-    private void Start()
+    public class SwingParticleController : MonoBehaviour
     {
-        _collider = GetComponent<Collider>();
-        _particleSystem = GetComponent<ParticleSystem>();
-        SetParticleSystemState();
-    }
+        private Collider _collider;
+        private ParticleSystem _particleSystem;
 
-    private void Update()
-    {
-        SetParticleSystemState();
-    }
+        private void Start()
+        {
+            _collider = GetComponent<Collider>();
+            _particleSystem = GetComponent<ParticleSystem>();
+            SetParticleSystemState();
+        }
 
-    private void SetParticleSystemState()
-    {
-        if (_collider.enabled)
-            _particleSystem.Play();
-        else
-            _particleSystem.Stop();
+        private void Update()
+        {
+            SetParticleSystemState();
+        }
+
+        private void SetParticleSystemState()
+        {
+            if (_particleSystem == null)
+                return;
+
+            if (_collider.enabled)
+                _particleSystem.Play();
+            else
+                _particleSystem.Stop();
+        }
     }
 }

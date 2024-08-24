@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 
@@ -14,7 +15,13 @@ namespace Modules.GUISystem
         private void Awake()
         {
             _transform = GetComponent<RectTransform>();
-        
+
+            if (_transform == null)
+            {
+                throw new NullReferenceException(
+                    "RectTransform of UI element is null. Please set it in the inspector.");
+            }
+
             if (_isVertical)
                 AnimateVertical();
             else

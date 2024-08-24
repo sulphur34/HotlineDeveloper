@@ -1,4 +1,4 @@
-using Modules.DamagerSystem;
+using Modules.DamageReceiverSystem;
 using Modules.InputSystem.Interfaces;
 using Modules.WeaponItemSystem;
 using UnityEngine;
@@ -7,24 +7,28 @@ namespace Modules.WeaponsHandler
 {
     public class WeaponHandlerSetup : MonoBehaviour
     {
-        [SerializeField] protected WeaponHandlerData WeaponHandlerData;
-        [SerializeField] protected WeaponHandlerView WeaponHandlerView;
-
         private WeaponHandlerPresenter _weaponHandlerPresenter;
-        
-        protected void Initialize(IAttackInput attackInput, IPickInput pickInput,
+        private WeaponHandler _weaponHandler;
+
+        [field: SerializeField] protected WeaponHandlerData WeaponHandlerData { get; private set; }
+        [field: SerializeField] protected WeaponHandlerView WeaponHandlerView { get; private set; }
+
+        protected void Initialize(
+            IAttackInput attackInput,
+            IPickInput pickInput,
             WeaponItemInitializer weaponItemInitializer)
         {
             if (WeaponHandlerData.DefaultWeapon != null)
                 weaponItemInitializer.InitializeWeapon(WeaponHandlerData.DefaultWeapon);
-            
-            WeaponHandler weaponHandler = new(WeaponHandlerData, attackInput, pickInput);
+
+            _weaponHandler = new WeaponHandler(WeaponHandlerData, attackInput, pickInput);
             var damageReceiverView = GetComponent<DamageReceiverView>();
-            _weaponHandlerPresenter = new WeaponHandlerPresenter(weaponHandler, WeaponHandlerView, damageReceiverView);
+            _weaponHandlerPresenter = new WeaponHandlerPresenter(_weaponHandler, WeaponHandlerView, damageReceiverView);
         }
 
         private void OnDestroy()
         {
+            _weaponHandler.Dispose();
             _weaponHandlerPresenter.Dispose();
         }
     }

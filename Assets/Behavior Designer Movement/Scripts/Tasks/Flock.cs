@@ -1,26 +1,28 @@
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Flock around the scene using the Unity NavMesh.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("5c4c8ca7a2b26d648ad1b3009d8ee3d6", "29465febf85da33499a039c8ec393d64")]
     public class Flock : NavMeshGroupMovement
     {
-        [Tooltip("Agents less than this distance apart are neighbors")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Agents less than this distance apart are neighbors")]
         [UnityEngine.Serialization.FormerlySerializedAs("neighborDistance")]
         public SharedFloat m_NeighborDistance = 100;
-        [Tooltip("How far the agent should look ahead when determine its pathfinding destination")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("How far the agent should look ahead when determine its pathfinding destination")]
         [UnityEngine.Serialization.FormerlySerializedAs("lookAheadDistance")]
         public SharedFloat m_LookAheadDistance = 5;
-        [Tooltip("The greater the alignmentWeight is the more likely it is that the agents will be facing the same direction")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The greater the alignmentWeight is the more likely it is that the agents will be facing the same direction")]
         [UnityEngine.Serialization.FormerlySerializedAs("alignmentWeight")]
         public SharedFloat m_AlignmentWeight = 0.4f;
-        [Tooltip("The greater the cohesionWeight is the more likely it is that the agents will be moving towards a common position")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The greater the cohesionWeight is the more likely it is that the agents will be moving towards a common position")]
         [UnityEngine.Serialization.FormerlySerializedAs("cohesionWeight")]
         public SharedFloat m_CohesionWeight = 0.5f;
-        [Tooltip("The greater the separationWeight is the more likely it is that the agents will be separated")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The greater the separationWeight is the more likely it is that the agents will be separated")]
         [UnityEngine.Serialization.FormerlySerializedAs("separationWeight")]
         public SharedFloat m_SeparationWeight = 0.6f;
 

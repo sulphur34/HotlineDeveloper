@@ -1,23 +1,24 @@
-﻿using UnityEngine;
+﻿using BehaviorDesigner.Runtime;
+using UnityEngine;
 using UnityEngine.AI;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     public abstract class NavMeshMovement : Movement
     {
-        [Tooltip("The speed of the agent")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The speed of the agent")]
         [UnityEngine.Serialization.FormerlySerializedAs("speed")]
         public SharedFloat m_Speed = 10;
-        [Tooltip("The angular speed of the agent")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The angular speed of the agent")]
         [UnityEngine.Serialization.FormerlySerializedAs("angularSpeed")]
         public SharedFloat m_AngularSpeed = 120;
-        [Tooltip("The agent has arrived when the destination is less than the specified amount. This distance should be greater than or equal to the NavMeshAgent StoppingDistance.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The agent has arrived when the destination is less than the specified amount. This distance should be greater than or equal to the NavMeshAgent StoppingDistance.")]
         [UnityEngine.Serialization.FormerlySerializedAs("arriveDistance")]
         public SharedFloat m_ArriveDistance = 0.2f;
-        [Tooltip("Should the NavMeshAgent be stopped when the task ends?")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Should the NavMeshAgent be stopped when the task ends?")]
         [UnityEngine.Serialization.FormerlySerializedAs("stopOnTaskEnd")]
         public SharedBool m_StopOnTaskEnd = true;
-        [Tooltip("Should the NavMeshAgent rotation be updated when the task ends?")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Should the NavMeshAgent rotation be updated when the task ends?")]
         [UnityEngine.Serialization.FormerlySerializedAs("updateRotation")]
         public SharedBool m_UpdateRotation = true;
 

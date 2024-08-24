@@ -1,13 +1,12 @@
 using System.Linq;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
-using Modules.DamagerSystem;
+using Modules.DamageReceiverSystem;
 using Modules.WeaponsHandler;
-using Modules.WeaponTypes;
+using Modules.WeaponsTypes;
 using UnityEngine;
 
-namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsClearToFire")]
@@ -15,7 +14,7 @@ namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
     {
         public SharedFloat AttackDistance;
         public float FireAngle = 15f;
-        
+
         private Transform _transform;
         private WeaponHandlerView _weaponHandler;
         private Enemy _selfEnmey;
@@ -37,7 +36,7 @@ namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
                 .Select(collider => collider.GetComponent<Enemy>())
                 .Where(collider => collider?.GetComponent<DamageReceiverView>().IsDead == false)
                 .FirstOrDefault(enemy => enemy != null && enemy != _selfEnmey && IsInFireZone(enemy));
-            
+
             return enemy == null ? TaskStatus.Success : TaskStatus.Failure;
         }
 

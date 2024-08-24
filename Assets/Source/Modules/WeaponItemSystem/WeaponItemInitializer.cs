@@ -12,6 +12,17 @@ namespace Modules.WeaponItemSystem
         private List<WeaponItem> _weapons;
         private RangeWeaponConfigFactory _rangeWeaponConfigFactory;
 
+        public void InitializeWeapon(WeaponItem weaponItem)
+        {
+            WeaponSetup weaponSetup = weaponItem.GetComponent<WeaponSetup>();
+
+            if (weaponSetup.GetType() == typeof(RangeWeaponSetup))
+                ((RangeWeaponSetup)weaponSetup).SetShotStrategy(_rangeWeaponConfigFactory);
+
+            weaponSetup.Initialize();
+            weaponItem.Initialize(weaponSetup);
+        }
+
         [Inject]
         private void Construct(WeaponTracker weaponTracker, RangeWeaponConfigFactory rangeWeaponConfigFactory)
         {
@@ -21,17 +32,6 @@ namespace Modules.WeaponItemSystem
             weaponTracker.Initialize(_weapons);
         }
 
-        public void InitializeWeapon(WeaponItem weaponItem)
-        {
-            WeaponSetup weaponSetup = weaponItem.GetComponent<WeaponSetup>();
-
-            if (weaponSetup.GetType() == typeof(RangeWeaponSetup))
-                ((RangeWeaponSetup)weaponSetup).SetShotStrategy(_rangeWeaponConfigFactory);
-                
-            weaponSetup.Initialize();
-            weaponItem.Initialize(weaponSetup);
-        }
-        
         private void InitializeWeapons()
         {
             foreach (WeaponItem weapon in _weapons)

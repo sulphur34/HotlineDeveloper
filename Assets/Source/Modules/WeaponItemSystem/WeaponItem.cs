@@ -1,10 +1,10 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using Modules.DamagerSystem;
+using Modules.Ammunition;
+using Modules.DamagerSystem.DamageInflictStrategies;
 using Modules.Weapons;
-using Modules.Weapons.Ammunition;
-using Modules.WeaponTypes;
+using Modules.WeaponsTypes;
 using UnityEngine;
 
 namespace Modules.WeaponItemSystem
@@ -12,7 +12,7 @@ namespace Modules.WeaponItemSystem
     public class WeaponItem : MonoBehaviour, IWeaponInfo
     {
         [SerializeField] private ThrowData _throwData;
-        
+
         private Transform _startContainer;
         private Transform _selfTransform;
         private Transform _currentContainer;
@@ -24,16 +24,22 @@ namespace Modules.WeaponItemSystem
         private WeaponStrategy _weaponStrategy;
         private Thrower _thrower;
 
+        public event Action<WeaponType> Attacked;
+
         [field: SerializeField] public bool IsTrackable { get; private set; } = true;
+
         [field: SerializeField] public Vector3 Offset { get; private set; }
+
         [field: SerializeField] public Transform LeftHandPlaceHolder { get; private set; }
+
         [field: SerializeField] public Transform RightHandPlaceHolder { get; private set; }
-        
+
         public IAmmunitionView WeaponAmmunitionView { get; private set; }
 
-        public event Action<WeaponType> Attacked;
         public Transform SelfTransform => _selfTransform == null ? transform : _selfTransform;
+
         public WeaponType WeaponType { get; private set; }
+
         public bool IsEquipped { get; private set; }
 
         public void Initialize(WeaponSetup weaponSetup)
@@ -53,8 +59,8 @@ namespace Modules.WeaponItemSystem
 
         public void Attack()
         {
-            if(_attack())
-                Attacked?.Invoke(WeaponType);  
+            if (_attack())
+                Attacked?.Invoke(WeaponType);
         }
 
         public void Equip(Transform container)
@@ -88,17 +94,17 @@ namespace Modules.WeaponItemSystem
             IsEquipped = value;
             _collider.enabled = !value;
             var newContainer = value ? container : _startContainer;
-            
+
             if (newContainer == container)
                 newContainer.localPosition = Offset;
-            
+
             SelfTransform.SetParent(newContainer);
             _rigidbody.isKinematic = value;
             _rigidbody.useGravity = !value;
 
             if (!value)
                 return;
-            
+
             SelfTransform.position = container.position;
             SelfTransform.forward = container.forward;
         }

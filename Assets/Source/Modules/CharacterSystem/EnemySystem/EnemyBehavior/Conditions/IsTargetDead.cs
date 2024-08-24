@@ -1,8 +1,8 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.DamagerSystem;
+using Modules.DamageReceiverSystem;
 
-namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsTargetDead")]
@@ -14,12 +14,15 @@ namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
 
         public override void OnStart()
         {
-            if(_playerDamageReceiverView == null)
-                _playerDamageReceiverView = Target.Value .GetComponent<DamageReceiverView>();
+            if (_playerDamageReceiverView == null)
+                _playerDamageReceiverView = Target.Value.GetComponent<DamageReceiverView>();
         }
 
         public override TaskStatus OnUpdate()
         {
+            if (_playerDamageReceiverView == null)
+                return TaskStatus.Success;
+
             return _playerDamageReceiverView.IsDead ? TaskStatus.Success : TaskStatus.Failure;
         }
     }

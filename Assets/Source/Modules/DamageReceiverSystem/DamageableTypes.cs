@@ -1,4 +1,4 @@
-namespace Modules.DamagerSystem
+namespace Modules.DamageReceiverSystem
 {
     public enum DamageableTypes
     {
@@ -7,6 +7,6 @@ namespace Modules.DamagerSystem
         Boss,
         Immortal,
         AlwaysLethal,
-        LethalIsNormal
+        LethalIsNormal,
     }
 }

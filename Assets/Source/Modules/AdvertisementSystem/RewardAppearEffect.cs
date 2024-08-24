@@ -12,7 +12,7 @@ namespace Modules.AdvertisementSystem
         {
             gameObject.SetActive(false);
         }
-        
+
         private void OnEnable()
         {
             _effectInstance = Instantiate(_appearEffect, transform.position, Quaternion.identity);

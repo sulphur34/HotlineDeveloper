@@ -3,7 +3,7 @@ using Modules.LevelsSystem;
 using UnityEngine;
 using VContainer;
 
-namespace Modules.GUISystem
+namespace Modules.ScoreSystem
 {
     public class ScoreCounterView : MonoBehaviour
     {

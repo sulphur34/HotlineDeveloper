@@ -43,7 +43,7 @@ namespace Modules.GUISystem
             while (currentValue < endValue)
             {
                 currentValue += _step;
-                _textField.text = Mathf.Clamp(currentValue,0,endValue).ToString();
+                _textField.text = Mathf.Clamp(currentValue, 0, endValue).ToString();
                 await UniTask.WaitForSeconds(_delay, false, PlayerLoopTiming.Update, _cancellationTokenSource.Token);
             }
         }

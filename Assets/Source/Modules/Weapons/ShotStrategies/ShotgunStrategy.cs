@@ -2,12 +2,12 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Modules.Weapons
+namespace Modules.Weapons.ShotStrategies
 {
     internal class ShotgunStrategy : ShotStrategy
     {
         private readonly float _minFireDelay = 0f;
-        
+
         [SerializeField] private uint _bulletsNumber;
         [SerializeField] private float _maxFireDelay = 0.005f;
 

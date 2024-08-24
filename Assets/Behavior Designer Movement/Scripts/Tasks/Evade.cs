@@ -1,29 +1,31 @@
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Evade the target specified using the Unity NavMesh.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("cecc9277e75f9964e98d167be763695c", "992feefbe2d39f945b808bed5b4f0986")]
     public class Evade : NavMeshMovement
     {
-        [Tooltip("The agent has evaded when the magnitude is greater than this value")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The agent has evaded when the magnitude is greater than this value")]
         [UnityEngine.Serialization.FormerlySerializedAs("evadeDistance")]
         public SharedFloat m_EvadeDistance = 10;
-        [Tooltip("The distance to look ahead when evading")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The distance to look ahead when evading")]
         [UnityEngine.Serialization.FormerlySerializedAs("lookAheadDistance")]
         public SharedFloat m_LookAheadDistance = 5;
-        [Tooltip("How far to predict the distance ahead of the target. Lower values indicate less distance should be predicated")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("How far to predict the distance ahead of the target. Lower values indicate less distance should be predicated")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetDistPrediction")]
         public SharedFloat m_TargetDistPrediction = 20;
-        [Tooltip("Multiplier for predicting the look ahead distance")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Multiplier for predicting the look ahead distance")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetDistPredictionMult")]
         public SharedFloat m_TargetDistPredictionMult = 20;
-        [Tooltip("The GameObject that the agent is evading")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The GameObject that the agent is evading")]
         [UnityEngine.Serialization.FormerlySerializedAs("target")]
         public SharedGameObject m_Target;
-        [Tooltip("The maximum number of interations that the position should be set")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The maximum number of interations that the position should be set")]
         [UnityEngine.Serialization.FormerlySerializedAs("maxInterations")]
         public int m_MaxInterations = 1;
 

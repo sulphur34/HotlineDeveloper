@@ -1,7 +1,7 @@
 using System;
 using Modules.LevelsSystem;
 using Modules.SavingsSystem;
-using Modules.GUISystem;
+using Modules.ScoreSystem;
 using VContainer;
 
 namespace Modules.SaveHandlers

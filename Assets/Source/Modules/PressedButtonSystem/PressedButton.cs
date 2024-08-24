@@ -20,7 +20,9 @@ namespace Modules.PressedButtonSystem
             _button.onClick.RemoveListener(OnClick);
         }
 
-        protected virtual void MakeOnClick() { }
+        protected virtual void MakeOnClick()
+        {
+        }
 
         private void OnClick()
         {

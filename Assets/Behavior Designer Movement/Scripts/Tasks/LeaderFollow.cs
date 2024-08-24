@@ -1,27 +1,29 @@
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Follow the leader using the Unity NavMesh.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("9ef93ef9a60e48449a642b1b3b2b577d", "ceded4836fa9bc24f964ec6fadccdc40")]
     public class LeaderFollow : NavMeshGroupMovement
     {
-        [Tooltip("Agents less than this distance apart are neighbors")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Agents less than this distance apart are neighbors")]
         [UnityEngine.Serialization.FormerlySerializedAs("neighborDistance")]
         public SharedFloat m_NeighborDistance = 10;
-        [Tooltip("How far behind the leader the agents should follow the leader")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("How far behind the leader the agents should follow the leader")]
         [UnityEngine.Serialization.FormerlySerializedAs("leaderBehindDistance")]
         public SharedFloat m_LeaderBehindDistance = 2;
-        [Tooltip("The distance that the agents should be separated")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The distance that the agents should be separated")]
         [UnityEngine.Serialization.FormerlySerializedAs("separationDistance")]
         public SharedFloat m_SeparationDistance = 2;
-        [Tooltip("The agent is getting too close to the front of the leader if they are within the aheadDistance")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The agent is getting too close to the front of the leader if they are within the aheadDistance")]
         [UnityEngine.Serialization.FormerlySerializedAs("aheadDistance")]
         public SharedFloat m_AheadDistance = 2;
-        [Tooltip("The leader to follow")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The leader to follow")]
         [UnityEngine.Serialization.FormerlySerializedAs("leader")]
         public SharedGameObject m_Leader;
 

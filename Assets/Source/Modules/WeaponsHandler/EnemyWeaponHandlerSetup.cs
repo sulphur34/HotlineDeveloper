@@ -7,7 +7,7 @@ namespace Modules.WeaponsHandler
     {
         public void Initialize(AiInput aiInput, WeaponItemInitializer weaponItemInitializer)
         {
-            base.Initialize(aiInput, aiInput, weaponItemInitializer);
+            Initialize(aiInput, aiInput, weaponItemInitializer);
         }
     }
 }

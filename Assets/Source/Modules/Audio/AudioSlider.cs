@@ -14,9 +14,9 @@ namespace Modules.Audio
         [SerializeField] private AudioMixerGroup _audioMixerGroup;
         [SerializeField] private string _mixerName;
 
-        public float Volume => _slider.value;
-
         public event Action Changed;
+
+        public float Volume => _slider.value;
 
         private void OnDestroy()
         {

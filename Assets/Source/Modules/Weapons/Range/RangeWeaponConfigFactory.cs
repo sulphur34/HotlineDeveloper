@@ -1,4 +1,5 @@
 ﻿using System;
+using Modules.Weapons.ShotStrategies;
 using UnityEngine;
 
 namespace Modules.Weapons.Range
@@ -7,10 +8,14 @@ namespace Modules.Weapons.Range
     public class RangeWeaponConfigFactory : ScriptableObject
     {
         [field: SerializeField] internal RangeWeaponConfig Pistol { get; private set; }
+
         [field: SerializeField] internal RangeWeaponConfig Revolver { get; private set; }
         [field: SerializeField] internal RangeWeaponConfig SawedOffShotgun { get; private set; }
+
         [field: SerializeField] internal RangeWeaponConfig Shotgun { get; private set; }
+
         [field: SerializeField] internal RangeWeaponConfig AssaultRifle { get; private set; }
+
         [field: SerializeField] internal RangeWeaponConfig SubmachineGun { get; private set; }
 
         internal RangeWeaponConfig Get(ShotStrategy shotStrategy)
@@ -29,7 +34,7 @@ namespace Modules.Weapons.Range
                     return Pistol;
                 case ShotgunStrategy:
                     return Shotgun;
-               default:
+                default:
                     throw new ArgumentException();
             }
         }

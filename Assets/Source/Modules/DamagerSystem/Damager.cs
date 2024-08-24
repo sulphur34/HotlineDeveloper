@@ -1,3 +1,5 @@
+using Modules.DamageReceiverSystem;
+using Modules.DamagerSystem.DamageInflictStrategies;
 using UnityEngine;
 
 namespace Modules.DamagerSystem
@@ -6,9 +8,9 @@ namespace Modules.DamagerSystem
     internal class Damager : MonoBehaviour
     {
         [SerializeField] private DamageData _damageData;
-        
+
         private IDamageInflictStrategy _damageStrategy;
-        
+
         private void Awake()
         {
             _damageStrategy = GetComponent<IDamageInflictStrategy>();

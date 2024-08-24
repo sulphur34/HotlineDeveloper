@@ -1,64 +1,66 @@
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Check to see if the any objects are within sight of the agent.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("c3873913d6f08e44d8f24b80257edf45", "7f2d1486b1b44ec4b8c213df246534c5")]
     public class CanSeeObject : Conditional
     {
-        [Tooltip("Should the 2D version be used?")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Should the 2D version be used?")]
         [UnityEngine.Serialization.FormerlySerializedAs("usePhysics2D")]
         public bool m_UsePhysics2D;
-        [Tooltip("Specifies the type of detection that should be used.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Specifies the type of detection that should be used.")]
         public SharedDetectionMode m_DetectionMode = DetectionMode.Object | DetectionMode.ObjectList | DetectionMode.Tag | DetectionMode.LayerMask;
-        [Tooltip("If using the Object detection mode, specifies the target object that is being searched.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("If using the Object detection mode, specifies the target object that is being searched.")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetObject")]
         public SharedGameObject m_TargetObject;
-        [Tooltip("If using the Target Objects detection mode, specifies the objects that are being searched.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("If using the Target Objects detection mode, specifies the objects that are being searched.")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetObjects")]
         public SharedGameObjectList m_TargetObjects;
-        [Tooltip("If using the Tag detection mode, specifies the tag of the objects that are being searched.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("If using the Tag detection mode, specifies the tag of the objects that are being searched.")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetTag")]
         public SharedString m_TargetTag;
-        [Tooltip("If using the LayerMask detection mode, specifies the LayerMask of the objects that are being searched.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("If using the LayerMask detection mode, specifies the LayerMask of the objects that are being searched.")]
         [UnityEngine.Serialization.FormerlySerializedAs("objectLayerMask")]
         public SharedLayerMask m_TargetLayerMask;
-        [Tooltip("If using the LayerMask detection mode, specifies the maximum number of colliders that the physics cast can collide with.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("If using the LayerMask detection mode, specifies the maximum number of colliders that the physics cast can collide with.")]
         [UnityEngine.Serialization.FormerlySerializedAs("maxCollisionCount")]
         public int m_MaxCollisionCount = 200;
-        [Tooltip("The LayerMask of the objects to ignore when performing the line of sight check.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The LayerMask of the objects to ignore when performing the line of sight check.")]
         [UnityEngine.Serialization.FormerlySerializedAs("ignoreLayerMask")]
         public LayerMask m_IgnoreLayerMask;
-        [Tooltip("The field of view angle of the agent (in degrees).")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The field of view angle of the agent (in degrees).")]
         [UnityEngine.Serialization.FormerlySerializedAs("fieldOfViewAngle")]
         public SharedFloat m_FieldOfViewAngle = 90;
-        [Tooltip("The distance that the agent can see.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The distance that the agent can see.")]
         [UnityEngine.Serialization.FormerlySerializedAs("viewDistance")]
         public SharedFloat m_ViewDistance = 1000;
-        [Tooltip("The raycast offset relative to the pivot position.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The raycast offset relative to the pivot position.")]
         [UnityEngine.Serialization.FormerlySerializedAs("offset")]
         public SharedVector3 m_Offset;
-        [Tooltip("The target raycast offset relative to the pivot position.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The target raycast offset relative to the pivot position.")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetOffset")]
         public SharedVector3 m_TargetOffset;
-        [Tooltip("The offset to apply to 2D angles.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The offset to apply to 2D angles.")]
         [UnityEngine.Serialization.FormerlySerializedAs("angleOffset2D")]
         public SharedFloat m_AngleOffset2D;
-        [Tooltip("Should the target bone be used?")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Should the target bone be used?")]
         [UnityEngine.Serialization.FormerlySerializedAs("useTargetBone")]
         public SharedBool m_UseTargetBone;
-        [Tooltip("The target's bone if the target is a humanoid.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The target's bone if the target is a humanoid.")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetBone")]
         public SharedHumanBodyBones m_TargetBone;
-        [Tooltip("Should a debug look ray be drawn to the scene view?")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Should a debug look ray be drawn to the scene view?")]
         [UnityEngine.Serialization.FormerlySerializedAs("drawDebugRay")]
         public SharedBool m_DrawDebugRay;
-        [Tooltip("Should the agent's layer be disabled before the Can See Object check is executed?")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Should the agent's layer be disabled before the Can See Object check is executed?")]
         [UnityEngine.Serialization.FormerlySerializedAs("disableAgentColliderLayer")]
         public SharedBool m_DisableAgentColliderLayer;
-        [Tooltip("The object that is within sight.")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The object that is within sight.")]
         [UnityEngine.Serialization.FormerlySerializedAs("returnedObject")]
         public SharedGameObject m_ReturnedObject;
 

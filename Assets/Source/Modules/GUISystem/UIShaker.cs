@@ -7,6 +7,10 @@ namespace Modules.GUISystem
     [RequireComponent(typeof(RectTransform))]
     public class UIShaker : UITransformAnimator
     {
+        private readonly int _vibrato = 0;
+        private readonly float _offsetZ = 0f;
+        private readonly float _randomness = 60f;
+
         [SerializeField] private float _shakeDuration = 0.1f;
         [SerializeField] private float _shakeStrength = 1f;
 
@@ -14,8 +18,15 @@ namespace Modules.GUISystem
 
         protected override void Animate()
         {
-            Vector3 randomOffset = new Vector3(RandomStrength, RandomStrength, 0f);
-            Transform.DOShakePosition(_shakeDuration, randomOffset, 0, 60f, false, false, ShakeRandomnessMode.Harmonic)
+            Vector3 randomOffset = new (RandomStrength, RandomStrength, _offsetZ);
+            Transform.DOShakePosition(
+                    _shakeDuration,
+                    randomOffset,
+                    _vibrato,
+                    _randomness,
+                    false,
+                    false,
+                    ShakeRandomnessMode.Harmonic)
                 .SetLoops(-1, LoopType.Restart);
         }
     }

@@ -1,6 +1,6 @@
-﻿using TMPro;
+﻿using Lean.Localization;
+using TMPro;
 using UnityEngine;
-using Lean.Localization;
 
 namespace Modules.LeaderboardSystem
 {

@@ -1,6 +1,6 @@
-namespace Modules.Weapons
+namespace Modules.Weapons.ShotStrategies
 {
-    public class RevolverStrategy : PistolStrategy
+    internal class RevolverStrategy : PistolStrategy
     {
     }
 }

@@ -1,5 +1,5 @@
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables;
 
 namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
 {
@@ -8,7 +8,7 @@ namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
     public class Shoot : Action
     {
         public SharedAiInput AiInput;
-        
+
         public override TaskStatus OnUpdate()
         {
             AiInput.Value.ReceiveAttack();

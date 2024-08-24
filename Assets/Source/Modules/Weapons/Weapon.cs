@@ -10,9 +10,9 @@ namespace Modules.Weapons
         private readonly CancellationToken _cancellationToken;
 
         internal Weapon(
-            WeaponRechargeTime rechargeTime, 
-            IAttackModule attackModule, 
-            CancellationToken cancellationToken, 
+            WeaponRechargeTime rechargeTime,
+            IAttackModule attackModule,
+            CancellationToken cancellationToken,
             IInterruptModule interruptModule = null)
         {
             _rechargeTime = rechargeTime;
@@ -25,7 +25,7 @@ namespace Modules.Weapons
         {
             bool isRecharged = _rechargeTime.Recharged;
             bool canAttack = false;
-            
+
             if (isRecharged)
             {
                 canAttack = _attackModule.TryAttack();

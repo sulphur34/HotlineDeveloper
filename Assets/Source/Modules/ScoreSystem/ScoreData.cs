@@ -1,4 +1,4 @@
-namespace Modules.GUISystem
+namespace Modules.ScoreSystem
 {
     internal class ScoreData
     {
@@ -8,7 +8,8 @@ namespace Modules.GUISystem
             Multiplier = multiplier;
         }
 
-        internal float Time {get;}
-        internal uint Multiplier {get;}
+        internal float Time { get; }
+
+        internal uint Multiplier { get; }
     }
 }

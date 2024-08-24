@@ -7,7 +7,7 @@ namespace Modules.LevelsSystem
     {
         [SerializeField] private Canvas _winUI;
         [SerializeField] private Canvas _looseUI;
-    
+
         private LevelConditionManager _levelConditionManager;
 
         [Inject]

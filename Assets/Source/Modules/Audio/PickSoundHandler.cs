@@ -1,5 +1,5 @@
 using Modules.WeaponsHandler;
-using Modules.WeaponTypes;
+using Modules.WeaponsTypes;
 using Plugins.Audio.Utils;
 using UnityEngine;
 
@@ -19,7 +19,7 @@ namespace Modules.Audio
             _weaponHandler = GetComponent<WeaponHandlerView>();
             _weaponHandler.Equipped += OnReceive;
         }
-        
+
         private void OnDestroy()
         {
             _weaponHandler.Equipped -= OnReceive;

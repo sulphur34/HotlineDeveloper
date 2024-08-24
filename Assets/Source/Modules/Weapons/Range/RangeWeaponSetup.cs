@@ -1,5 +1,6 @@
-﻿using Modules.BulletSystem;
-using Modules.Weapons.Ammunition;
+﻿using Modules.Ammunition;
+using Modules.BulletSystem;
+using Modules.Weapons.ShotStrategies;
 using UnityEngine;
 
 namespace Modules.Weapons.Range

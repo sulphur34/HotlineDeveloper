@@ -11,10 +11,11 @@ namespace Modules.InputSystem.PlayerInput
             PlayerInput.Enable();
         }
 
-        private void OnDisable()
+        protected override void OnDisable()
         {
             PlayerInput.PlayerMobile.Pick.performed -= OnPick;
             PlayerInput.PlayerMobile.Finish.performed -= OnFinish;
+            base.OnDisable();
         }
 
         protected override Vector2 OnMove()
@@ -31,12 +32,12 @@ namespace Modules.InputSystem.PlayerInput
 
         protected override Vector2 OnLook()
         {
-            return AlignInputToScreen(PlayerInput.PlayerMobile.Look.ReadValue<Vector2>(),Width,Height);
+            return AlignInputToScreen(PlayerInput.PlayerMobile.Look.ReadValue<Vector2>(), Width, Height);
         }
 
         protected override Vector2 OnFarLook()
         {
-            return AlignInputToScreen(PlayerInput.PlayerMobile.FarLook.ReadValue<Vector2>(),Width,Height);
+            return AlignInputToScreen(PlayerInput.PlayerMobile.FarLook.ReadValue<Vector2>(), Width, Height);
         }
 
         protected override void OnAttack()

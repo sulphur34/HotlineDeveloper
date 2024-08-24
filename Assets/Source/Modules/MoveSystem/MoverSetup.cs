@@ -1,4 +1,4 @@
-using Modules.DamagerSystem;
+using Modules.DamageReceiverSystem;
 using Modules.InputSystem.Interfaces;
 using UnityEngine;
 using VContainer;
@@ -10,7 +10,7 @@ namespace Modules.MoveSystem
     {
         [SerializeField] private Transform _torsoRotator;
         [SerializeField] private DamageReceiverView _damageReceiverView;
-        
+
         private MoverPresenter _moverPresenter;
 
         [Inject]

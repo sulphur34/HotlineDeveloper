@@ -1,12 +1,11 @@
 using System;
-using Modules.CharacterSystem;
-using Modules.DamagerSystem;
 using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
+using Modules.DamageReceiverSystem;
 using Modules.WeaponItemSystem;
 using UnityEngine;
 using VContainer;
 
-namespace Modules.EnemySpawnSystem
+namespace Modules.CharacterSystem.EnemySpawnSystem
 {
     public class EnemySpawner : MonoBehaviour
     {
@@ -47,22 +46,28 @@ namespace Modules.EnemySpawnSystem
 
         private void BuildEnemy(EnemySpawnConfig enemySpawnConfig, Player player, WeaponTracker weaponTracker)
         {
-            GameObject instance = Instantiate(enemySpawnConfig.Prefab.gameObject, enemySpawnConfig.SpawnPoint.position,
+            GameObject instance = Instantiate(
+                enemySpawnConfig.Prefab.gameObject,
+                enemySpawnConfig.SpawnPoint.position,
                 Quaternion.identity);
-            
             SetBehavior(instance, enemySpawnConfig, player, weaponTracker);
-            
             SetDamageReceiver(instance, enemySpawnConfig);
-            
             Spawned?.Invoke(instance);
         }
 
-        private void SetBehavior(GameObject instance, EnemySpawnConfig enemySpawnConfig, Player player,
+        private void SetBehavior(
+            GameObject instance,
+            EnemySpawnConfig enemySpawnConfig,
+            Player player,
             WeaponTracker weaponTracker)
         {
             BehaviorSetup behaviorSetup = instance.GetComponent<BehaviorSetup>();
             BehaviorConfig behaviorConfig = _behaviorConfigFactory.GetBehavior(enemySpawnConfig.Behavior);
-            behaviorSetup.Initialize(behaviorConfig, enemySpawnConfig.PatrolRoute, weaponTracker, player,
+            behaviorSetup.Initialize(
+                behaviorConfig,
+                enemySpawnConfig.PatrolRoute,
+                weaponTracker,
+                player,
                 _weaponItemInitializer);
         }
 

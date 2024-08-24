@@ -1,18 +1,14 @@
 using System;
 using System.Threading;
-using Modules.DamagerSystem.DamageStrategy;
+using Modules.DamageReceiverSystem.DamageReceiveStrategies;
 
-namespace Modules.DamagerSystem
+namespace Modules.DamageReceiverSystem
 {
     internal class DamageReceiver
     {
         private readonly Health _health;
         private readonly Consciousness _consciousness;
         private readonly IDamageReceiveStrategy _damageReceiveStrategy;
-
-        public event Action Died;
-        public event Action Knocked;
-        public event Action Recovered; 
 
         public DamageReceiver(DamageableConfig damageableConfig, CancellationToken cancellationToken)
         {
@@ -21,11 +17,17 @@ namespace Modules.DamagerSystem
             _damageReceiveStrategy = damageableConfig.DamageReceiveStrategy;
         }
 
+        public event Action Died;
+
+        public event Action Knocked;
+
+        public event Action Recovered;
+
         public void Receive(DamageData damage)
         {
-            if(_health.IsDead)
+            if (_health.IsDead)
                 return;
-            
+
             DamageData modifiedDamage = _damageReceiveStrategy.GetDamage(damage);
 
             if (modifiedDamage.IsLethal || _consciousness.IsKnocked)
@@ -33,10 +35,10 @@ namespace Modules.DamagerSystem
                 _health.Execute(Died);
                 return;
             }
-            
-            if(modifiedDamage.IsKnockout && _consciousness.IsKnocked == false)
+
+            if (modifiedDamage.IsKnockout && _consciousness.IsKnocked == false)
                 _consciousness.Knockout(Knocked, Recovered);
-            
+
             _health.TakeDamage(modifiedDamage.Value, Died);
         }
     }

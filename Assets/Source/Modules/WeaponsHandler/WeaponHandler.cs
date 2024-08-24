@@ -1,26 +1,20 @@
 using System;
-using UnityEngine;
-using Modules.WeaponItemSystem;
 using Modules.InputSystem.Interfaces;
-using Modules.WeaponTypes;
+using Modules.WeaponItemSystem;
+using Modules.WeaponsTypes;
+using UnityEngine;
 
 namespace Modules.WeaponsHandler
 {
-    public class WeaponHandler : IWeaponHandlerInfo
+    public class WeaponHandler : IWeaponHandlerInfo, IDisposable
     {
         private readonly Transform _container;
         private readonly WeaponItem _defaultWeaponItem;
         private readonly IAttackInput _attackInput;
+        private readonly IPickInput _pickInput;
         private readonly Picker _picker;
 
         private WeaponItem _currentWeaponItem;
-
-        public event Action<IWeaponInfo, IWeaponHandlerInfo> WeaponPicked;
-        public event Action WeaponThrown;
-        public event Action<WeaponType> Attacked;
-
-        public bool IsCurrentWeaponItemEmpty => _currentWeaponItem == null || _currentWeaponItem == _defaultWeaponItem;
-        public WeaponType CurrentWeaponType => _currentWeaponItem.WeaponType;
 
         public WeaponHandler(WeaponHandlerData weaponHandlerData, IAttackInput attackInput, IPickInput pickInput)
         {
@@ -35,7 +29,24 @@ namespace Modules.WeaponsHandler
                 weaponHandlerData.PickRadius,
                 weaponHandlerData.LookHeight);
 
-            pickInput.PickReceived += OnPickInputReceived;
+            _pickInput = pickInput;
+            _pickInput.PickReceived += OnPickInputReceived;
+        }
+
+        public event Action<IWeaponInfo, IWeaponHandlerInfo> WeaponPicked;
+
+        public event Action WeaponThrown;
+
+        public event Action<WeaponType> Attacked;
+
+        public bool IsCurrentWeaponItemEmpty => _currentWeaponItem == null || _currentWeaponItem == _defaultWeaponItem;
+
+        public WeaponType CurrentWeaponType => _currentWeaponItem.WeaponType;
+
+        public void Dispose()
+        {
+            if (_pickInput != null)
+                _pickInput.PickReceived -= OnPickInputReceived;
         }
 
         public void DisarmWeaponItem()

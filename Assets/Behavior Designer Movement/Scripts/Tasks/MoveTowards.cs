@@ -1,30 +1,32 @@
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Move towards the specified position. The position can either be specified by a transform or position. If the transform " +
                      "is used then the position will not be used.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("c8e612848487a184f9090d416c932c47", "812dc79fe1e417548959f61845528372")]
     public class MoveTowards : Action
     {
-        [Tooltip("The speed of the agent")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The speed of the agent")]
         [UnityEngine.Serialization.FormerlySerializedAs("speed")]
         public SharedFloat m_Speed;
-        [Tooltip("The agent has arrived when the magnitude is less than this value")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The agent has arrived when the magnitude is less than this value")]
         [UnityEngine.Serialization.FormerlySerializedAs("arriveDistance")]
         public SharedFloat m_ArriveDistance = 0.1f;
-        [Tooltip("Should the agent be looking at the target position?")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Should the agent be looking at the target position?")]
         [UnityEngine.Serialization.FormerlySerializedAs("lookAtTarget")]
         public SharedBool m_LookAtTarget = true;
-        [Tooltip("Max rotation delta if lookAtTarget is enabled")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Max rotation delta if lookAtTarget is enabled")]
         [UnityEngine.Serialization.FormerlySerializedAs("maxLookAtRotationDelta")]
         public SharedFloat m_MaxLookAtRotationDelta;
-        [Tooltip("The GameObject that the agent is moving towards")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The GameObject that the agent is moving towards")]
         [UnityEngine.Serialization.FormerlySerializedAs("target")]
         public SharedGameObject m_Target;
-        [Tooltip("If target is null then use the target position")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("If target is null then use the target position")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetPosition")]
         public SharedVector3 m_TargetPosition;
 

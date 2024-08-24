@@ -1,9 +1,9 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.CharacterSystem.Enemies.EnemyBehavior.Variables;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables;
 using UnityEngine;
 
-namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsTargetShotHeard")]
@@ -17,7 +17,7 @@ namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
         {
             PlayerWeaponHandler.Value.RangeShotFired += OnShotFire;
         }
-        
+
         public override TaskStatus OnUpdate()
         {
             if (IsShotFired.Value)
@@ -27,19 +27,19 @@ namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
 
             return TaskStatus.Failure;
         }
-        
-        private void OnShotFire()
-        {
-            Vector3 _targetPosition = PlayerWeaponHandler.Value.transform.position;
-            float distance = Vector3.Magnitude(PlayerWeaponHandler.Value.transform.position - transform.position);
-            
-            if (distance <= AlertHearingDistance)
-                IsShotFired.Value = true;
-        }
 
         public override void OnBehaviorComplete()
         {
             PlayerWeaponHandler.Value.RangeShotFired -= OnShotFire;
+        }
+
+        private void OnShotFire()
+        {
+            Vector3 targetPosition = PlayerWeaponHandler.Value.transform.position;
+            float distance = Vector3.Magnitude(targetPosition - transform.position);
+
+            if (distance <= AlertHearingDistance)
+                IsShotFired.Value = true;
         }
     }
 }

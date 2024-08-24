@@ -4,7 +4,7 @@ using Modules.PauseMenu;
 using UnityEngine;
 using VContainer;
 
-namespace Source.Modules.FocusSystem
+namespace Game.Scripts.Utils
 {
     public class Focus : IDisposable
     {

@@ -2,11 +2,12 @@ using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Modules.CharacterSystem;
+using Modules.LevelsSystem;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
 
-namespace Modules.LevelsSystem
+namespace Modules.GUISystem
 {
     [RequireComponent(typeof(Image))]
     public class UIDirectionPointer : MonoBehaviour
@@ -26,6 +27,9 @@ namespace Modules.LevelsSystem
         private void OnDestroy()
         {
             StopRotation();
+
+            if (_enemyTracker != null)
+                _enemyTracker.AllEnemiesDied -= OnAllEnemyKilled;
         }
 
         [Inject]
@@ -63,7 +67,7 @@ namespace Modules.LevelsSystem
         {
             StopRotation();
             _cancellationTokenSource = new CancellationTokenSource();
-            RotatingTowardsTarget(() =>  _endLevelTriggerPosition);
+            RotatingTowardsTarget(() => _endLevelTriggerPosition);
         }
     }
 }

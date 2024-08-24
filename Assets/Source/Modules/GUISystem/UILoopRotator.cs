@@ -7,7 +7,7 @@ namespace Modules.GUISystem
     {
         [SerializeField] private float _rotationDuration = 1f;
         [SerializeField] private float _rotationSpeed = 9f;
-    
+
         protected override void Animate()
         {
             Vector3 rotation = new Vector3(0f, 0f, _rotationSpeed);

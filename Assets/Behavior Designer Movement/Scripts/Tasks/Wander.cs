@@ -1,28 +1,30 @@
+using BehaviorDesigner.Runtime;
+using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+namespace Behavior_Designer_Movement.Scripts.Tasks
 {
     [TaskDescription("Wander using the Unity NavMesh.")]
     [TaskCategory("Movement")]
-    [HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
+    [BehaviorDesigner.Runtime.Tasks.HelpURL("https://www.opsive.com/support/documentation/behavior-designer-movement-pack/")]
     [TaskIcon("c8e612848487a184f9090d416c932c47", "cc64e7434e679324c8cb39430f19eda8")]
     public class Wander : NavMeshMovement
     {
-        [Tooltip("Minimum distance ahead of the current position to look ahead for a destination")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Minimum distance ahead of the current position to look ahead for a destination")]
         [UnityEngine.Serialization.FormerlySerializedAs("minWanderDistance")]
         public SharedFloat m_MinWanderDistance = 20;
-        [Tooltip("Maximum distance ahead of the current position to look ahead for a destination")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("Maximum distance ahead of the current position to look ahead for a destination")]
         [UnityEngine.Serialization.FormerlySerializedAs("maxWanderDistance")]
         public SharedFloat m_MaxWanderDistance = 20;
-        [Tooltip("The maximum number of degrees that the agent can turn when wandering")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The maximum number of degrees that the agent can turn when wandering")]
         public SharedFloat m_MaxWanderDegrees = 5;
-        [Tooltip("The minimum length of time that the agent should pause at each destination")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The minimum length of time that the agent should pause at each destination")]
         [UnityEngine.Serialization.FormerlySerializedAs("minPauseDuration")]
         public SharedFloat m_MinPauseDuration = 0;
-        [Tooltip("The maximum length of time that the agent should pause at each destination (zero to disable)")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The maximum length of time that the agent should pause at each destination (zero to disable)")]
         [UnityEngine.Serialization.FormerlySerializedAs("maxPauseDuration")]
         public SharedFloat m_MaxPauseDuration = 0;
-        [Tooltip("The maximum number of retries per tick (set higher if using a slow tick time)")]
+        [BehaviorDesigner.Runtime.Tasks.Tooltip("The maximum number of retries per tick (set higher if using a slow tick time)")]
         [UnityEngine.Serialization.FormerlySerializedAs("targetRetries")]
         public SharedInt m_TargetRetries = 1;
 

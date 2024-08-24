@@ -1,8 +1,8 @@
 using System.Linq;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables;
 
-namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("HasPatrolRoute")]
@@ -11,7 +11,7 @@ namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
         public SharedVector3Array PatrolPoints;
 
         private bool _hasRoot;
-        
+
         public override void OnAwake()
         {
             _hasRoot = PatrolPoints.Value.ToList().Count > 0;

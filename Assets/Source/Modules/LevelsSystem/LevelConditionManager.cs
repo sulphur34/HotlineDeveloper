@@ -1,6 +1,6 @@
 ﻿using System;
 using Modules.CharacterSystem;
-using Modules.DamagerSystem;
+using Modules.DamageReceiverSystem;
 using Modules.InputSystem.PlayerInput;
 using UnityEngine;
 using VContainer;
@@ -15,16 +15,21 @@ namespace Modules.LevelsSystem
         private EndLevelTrigger _endLevelTrigger;
         private LevelsData _levels;
         private InputController _inputController;
+        private DamageReceiverView _damageReceiver;
 
         public event Action Won;
+
         public event Action Lost;
 
         public int LevelCompleteIndex { get; private set; }
 
         private void OnDestroy()
         {
-            _player.GetComponent<DamageReceiverView>().Died -= OnLoose;
-            _enemyTracker.AllEnemiesDied -= OnWin;
+            if (_damageReceiver != null)
+                _damageReceiver.Died += OnLoose;
+
+            if (_enemyTracker != null)
+                _enemyTracker.AllEnemiesDied -= OnWin;
         }
 
         [Inject]
@@ -36,11 +41,13 @@ namespace Modules.LevelsSystem
         {
             _levels = levels;
             _inputController = inputController;
-            LevelCompleteIndex = _levels.ForLoad - 1;
+            int levelIndexOffset = 1;
+            LevelCompleteIndex = _levels.ForLoad - levelIndexOffset;
             _level = _levels.Value[LevelCompleteIndex];
             _player = player;
             _endLevelTrigger = endLevelTrigger;
-            _player.GetComponent<DamageReceiverView>().Died += OnLoose;
+            _damageReceiver = _player.GetComponent<DamageReceiverView>();
+            _damageReceiver.Died += OnLoose;
             _endLevelTrigger.Reached += OnWin;
         }
 

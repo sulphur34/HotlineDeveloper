@@ -8,8 +8,9 @@ namespace Modules.AdvertisementSystem
     public class VideoAD : MonoBehaviour
     {
         private PauseSetter _pauseSetter;
-        
+
         public event Action RewardGained;
+
         public event Action Closed;
 
         [Inject]

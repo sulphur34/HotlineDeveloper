@@ -1,7 +1,7 @@
 using BehaviorDesigner.Runtime.Tasks;
 using Modules.WeaponsHandler;
 
-namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsArmed")]
@@ -18,8 +18,8 @@ namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
         {
             if (_weaponHandler.WeaponInfo == null)
                 return TaskStatus.Failure;
-            
-            return _weaponHandler.WeaponInfo.IsCurrentWeaponItemEmpty ? TaskStatus.Failure : TaskStatus.Success ;
+
+            return _weaponHandler.WeaponInfo.IsCurrentWeaponItemEmpty ? TaskStatus.Failure : TaskStatus.Success;
         }
     }
 }

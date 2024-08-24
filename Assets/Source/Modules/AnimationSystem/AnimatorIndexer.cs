@@ -18,8 +18,11 @@ namespace Modules.AnimationSystem
         }
 
         internal int TwoHandsAttackIndex { get; }
+
         internal int OneHandAttackIndex { get; }
+
         internal int BareHandsAttackIndex { get; }
+
         internal int SpeedIndex { get; }
     }
 }

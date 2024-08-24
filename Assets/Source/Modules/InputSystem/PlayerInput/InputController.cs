@@ -5,19 +5,28 @@ using UnityEngine.InputSystem;
 
 namespace Modules.InputSystem.PlayerInput
 {
-    public abstract class InputController : MonoBehaviour, IMoveInput, IAttackInput, IRotateInput, IPickInput, ILookInput, IFarLookInput
+    public abstract class InputController : MonoBehaviour, IMoveInput, IAttackInput, IRotateInput, IPickInput,
+        ILookInput, IFarLookInput
     {
-        protected global::PlayerInput PlayerInput;
-        protected float Width => Screen.width;
-        protected float Height => Screen.height;
-
         public event Action<Vector2> MoveReceived;
+
         public event Action<Vector2> RotationReceived;
+
         public event Action<Vector2> LookReceived;
+
         public event Action<Vector2> FarLookReceived;
+
         public event Action AttackReceived;
+
         public event Action PickReceived;
+
         public event Action FinishReceived;
+
+        protected global::PlayerInput PlayerInput { get; private set; }
+
+        protected float Width => Screen.width;
+
+        protected float Height => Screen.height;
 
         public void Awake()
         {
@@ -33,7 +42,7 @@ namespace Modules.InputSystem.PlayerInput
             OnAttack();
         }
 
-        private void OnDisable()
+        protected virtual void OnDisable()
         {
             PlayerInput.Disable();
         }
@@ -53,16 +62,24 @@ namespace Modules.InputSystem.PlayerInput
             FinishReceived?.Invoke();
         }
 
-        protected Vector2 AlignInputToScreen(Vector2 position, float widthRate = 1, float heightRate = 1, float directionRatio = 1f)
+        protected Vector2 AlignInputToScreen(
+            Vector2 position,
+            float widthRate = 1,
+            float heightRate = 1,
+            float directionRatio = 1f)
         {
             return new Vector2(position.x * widthRate + Width / 2 * directionRatio,
                 position.y * heightRate + Height / 2 * directionRatio);
         }
 
         protected abstract void OnAttack();
+
         protected abstract Vector2 OnMove();
+
         protected abstract Vector2 OnRotate();
+
         protected abstract Vector2 OnLook();
+
         protected abstract Vector2 OnFarLook();
     }
 }

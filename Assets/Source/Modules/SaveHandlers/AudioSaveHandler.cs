@@ -1,6 +1,6 @@
-﻿using Modules.Audio;
+﻿using System;
+using Modules.Audio;
 using Modules.SavingsSystem;
-using System;
 using VContainer;
 
 namespace Modules.SaveHandlers
@@ -28,18 +28,12 @@ namespace Modules.SaveHandlers
 
         private void OnMusicChanged()
         {
-            _saveSystem.Save(data =>
-            {
-                data.AudioSettingsData.MusicVolume = _audioSettings.MusicSlider.Volume;
-            });
+            _saveSystem.Save(data => { data.AudioSettingsData.SetMusicVolume(_audioSettings.MusicSlider.Volume); });
         }
 
         private void OnSoundChanged()
         {
-            _saveSystem.Save(data =>
-            {
-                data.AudioSettingsData.SoundVolume = _audioSettings.SoundSlider.Volume;
-            });
+            _saveSystem.Save(data => { data.AudioSettingsData.SetSoundVolume(_audioSettings.SoundSlider.Volume); });
         }
     }
 }

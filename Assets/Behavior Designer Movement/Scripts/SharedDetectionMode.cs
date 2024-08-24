@@ -1,5 +1,7 @@
 ﻿
-namespace BehaviorDesigner.Runtime.Tasks.Movement
+using BehaviorDesigner.Runtime;
+
+namespace Behavior_Designer_Movement.Scripts
 {
     [System.Flags]
     public enum DetectionMode : uint

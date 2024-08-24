@@ -2,7 +2,7 @@ using Modules.LevelsSystem;
 using TMPro;
 using UnityEngine;
 
-namespace Source.Modules.GUISystem
+namespace Modules.GUISystem
 {
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class TutorialTextDisable : MonoBehaviour
@@ -10,7 +10,7 @@ namespace Source.Modules.GUISystem
         [SerializeField] private EndLevelTrigger _endLevelTrigger;
 
         private TextMeshProUGUI _textMeshPro;
-        
+
         private void Awake()
         {
             _textMeshPro = GetComponent<TextMeshProUGUI>();

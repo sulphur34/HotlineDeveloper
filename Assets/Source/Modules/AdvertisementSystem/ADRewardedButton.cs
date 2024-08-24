@@ -13,6 +13,14 @@ namespace Modules.AdvertisementSystem
             VideoAD.RewardGained += OnRewardGained;
         }
 
+        protected override void OnDestroy()
+        {
+            if (VideoAD != null)
+                VideoAD.RewardGained -= OnRewardGained;
+
+            base.OnDestroy();
+        }
+
         protected override void ShowAD()
         {
 #if UNITY_EDITOR

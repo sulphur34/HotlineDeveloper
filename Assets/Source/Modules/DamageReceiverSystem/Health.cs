@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Modules.DamagerSystem
+namespace Modules.DamageReceiverSystem
 {
     internal class Health
     {
@@ -9,7 +9,6 @@ namespace Modules.DamagerSystem
         private readonly float _maxHealth;
 
         private float _currentHealth;
-        
 
         internal Health(float maxHealth, float minHealth = 0f)
         {
@@ -39,9 +38,9 @@ namespace Modules.DamagerSystem
             }
         }
 
-        internal void Execute(Action OnDieCallback)
+        internal void Execute(Action onDieCallback)
         {
-            TakeDamage(_currentHealth, OnDieCallback);
+            TakeDamage(_currentHealth, onDieCallback);
         }
     }
 }

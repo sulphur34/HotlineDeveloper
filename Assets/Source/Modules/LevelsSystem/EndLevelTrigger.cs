@@ -12,9 +12,17 @@ namespace Modules.LevelsSystem
         [SerializeField] private Canvas _activationCanvas;
 
         private Collider _collider;
+        private EnemyTracker _enemyTracker;
 
         public event Action Enabled;
+
         public event Action Reached;
+
+        private void OnDestroy()
+        {
+            if (_enemyTracker != null)
+                _enemyTracker.AllEnemiesDied -= Activate;
+        }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -27,7 +35,8 @@ namespace Modules.LevelsSystem
         [Inject]
         public void Construct(EnemyTracker enemyTracker)
         {
-            enemyTracker.AllEnemiesDied += Activate;
+            _enemyTracker = enemyTracker;
+            _enemyTracker.AllEnemiesDied += Activate;
             _collider = GetComponent<Collider>();
             Deactivate();
         }
@@ -47,7 +56,7 @@ namespace Modules.LevelsSystem
         {
             _collider.enabled = isActive;
             _activationCanvas.enabled = isActive;
-            
+
             if (isActive)
                 _activationParticle.Play();
             else

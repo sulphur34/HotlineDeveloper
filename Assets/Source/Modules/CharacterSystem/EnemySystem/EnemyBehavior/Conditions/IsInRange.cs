@@ -1,9 +1,8 @@
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.CharacterSystem;
 using UnityEngine;
 
-namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
+namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Conditions
 {
     [TaskCategory("CustomConditional")]
     [TaskName("IsInRange")]
@@ -39,7 +38,7 @@ namespace Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Conditions
 
             if (!LineOfSight)
                 return TaskStatus.Success;
-            
+
             if (!Physics.Linecast(selfPosition, targetPosition, out RaycastHit hitInfo))
                 return TaskStatus.Success;
 

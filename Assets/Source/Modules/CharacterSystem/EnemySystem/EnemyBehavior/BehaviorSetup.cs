@@ -1,14 +1,11 @@
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime;
-using Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables;
-using Modules.CharacterSystem;
-using Modules.DamagerSystem;
-using Modules.WeaponsHandler;
+using Modules.CharacterSystem.EnemySpawnSystem;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables;
+using Modules.DamageReceiverSystem;
 using Modules.InputSystem;
-using Modules.CharacterSystem.Enemies.EnemyBehavior.Variables;
-using Modules.EnemySpawnSystem;
-using Modules.CharacterSystem.EnemySystem.EnemyBehavior;
 using Modules.WeaponItemSystem;
+using Modules.WeaponsHandler;
 using UnityEngine;
 
 namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior
@@ -35,8 +32,12 @@ namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior
         private DamageReceiverView _damageReceiver;
         private PatrolRoute _patrolRoute;
 
-        internal void Initialize(BehaviorConfig behaviorConfig, PatrolRoute patrolRoute, WeaponTracker weaponTracker,
-            Player player, WeaponItemInitializer weaponItemInitializer)
+        internal void Initialize(
+            BehaviorConfig behaviorConfig,
+            PatrolRoute patrolRoute,
+            WeaponTracker weaponTracker,
+            Player player,
+            WeaponItemInitializer weaponItemInitializer)
         {
             _aiInput = new AiInput();
             _weaponHandlerSetup = GetComponent<EnemyWeaponHandlerSetup>();

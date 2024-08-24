@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime.Tasks;
-using Modules.CharacterSystem.EnemiySystem.EnemyBehavior.Variables;
+using Modules.CharacterSystem.EnemySystem.EnemyBehavior.Variables;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -30,7 +30,7 @@ namespace Modules.CharacterSystem.EnemySystem.EnemyBehavior.Actions
         {
             if (_navMeshAgent == null)
                 return TaskStatus.Failure;
-            
+
             if (_navMeshAgent.remainingDistance <= 0)
                 SetDestination();
 

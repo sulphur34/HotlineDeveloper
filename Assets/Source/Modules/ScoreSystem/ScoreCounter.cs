@@ -6,18 +6,18 @@ using Modules.LevelsSystem;
 using UnityEngine;
 using VContainer;
 
-namespace Modules.GUISystem
+namespace Modules.ScoreSystem
 {
     public class ScoreCounter : IDisposable
     {
         private const float Intercept = 5.7497f;
         private const float Slope = -0.9674f;
-        
+
         private readonly float _multiplierDelay = 2f;
         private readonly uint _defaultMultiplier = 1;
         private readonly float _killScore = 100f;
         private readonly EnemyTracker _enemyTracker;
-        
+
         private Stack<ScoreData> _scores;
         private float _timePassed;
         private CancellationTokenSource _cancellationTokenSource;
@@ -31,11 +31,17 @@ namespace Modules.GUISystem
         }
 
         public event Action<uint> KillScoreChanged;
+
         public event Action<uint> TimeScoreChanged;
 
         public uint TotalScore { get; private set; }
 
         private float TimeMultiplier => Intercept + Slope * Mathf.Log(_timePassed);
+
+        public void Dispose()
+        {
+            _cancellationTokenSource?.Dispose();
+        }
 
         private void Activate()
         {
@@ -60,7 +66,7 @@ namespace Modules.GUISystem
             _timePassed += Time.deltaTime;
             await UniTask.Yield(_cancellationTokenSource.Token);
         }
-        
+
         private void OnAllEnemiesDie()
         {
             Deactivate();
@@ -76,7 +82,7 @@ namespace Modules.GUISystem
         private void OnEnemyKill()
         {
             uint multiplier = _defaultMultiplier;
-            
+
             if (_scores.Count > 0)
                 multiplier = GetMultiplier();
 
@@ -101,11 +107,6 @@ namespace Modules.GUISystem
             ScoreData lastScoreData = _scores.Peek();
             float delay = Time.timeSinceLevelLoad - lastScoreData.Time;
             return delay < _multiplierDelay ? lastScoreData.Multiplier + 1 : _defaultMultiplier;
-        }
-
-        public void Dispose()
-        {
-            _cancellationTokenSource?.Dispose();
         }
     }
 }

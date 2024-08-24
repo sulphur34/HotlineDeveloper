@@ -1,4 +1,5 @@
-﻿using Modules.Weapons.Ammunition;
+﻿using Modules.Ammunition;
+using Modules.Weapons.ShotStrategies;
 
 namespace Modules.Weapons.Range
 {

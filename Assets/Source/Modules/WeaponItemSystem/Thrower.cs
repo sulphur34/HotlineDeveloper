@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using Modules.WeaponTypes;
+using Modules.WeaponsTypes;
 using UnityEngine;
 
 namespace Modules.WeaponItemSystem
@@ -15,12 +15,28 @@ namespace Modules.WeaponItemSystem
             _throwData = throwData;
         }
 
-        public void SetFly(Transform selfTransform, Transform currentContainer, Rigidbody rigidbody,
+        public void SetFly(
+            Transform selfTransform,
+            Transform currentContainer,
+            Rigidbody rigidbody,
             WeaponType weaponType)
         {
             SetPosition(selfTransform, currentContainer);
             SetRotation(selfTransform, weaponType);
             ApplyForces(selfTransform, currentContainer, rigidbody, weaponType);
+        }
+
+        public async UniTask WaitingThrowEnd(
+            Rigidbody rigidbody,
+            CancellationToken cancellationToken,
+            Action onThrowEndCallback)
+        {
+            while (rigidbody.IsSleeping() == false)
+            {
+                await UniTask.Yield(cancellationToken);
+            }
+
+            onThrowEndCallback.Invoke();
         }
 
         private void SetPosition(Transform selfTransform, Transform currentContainer)
@@ -35,24 +51,16 @@ namespace Modules.WeaponItemSystem
             selfTransform.Rotate(_throwData.RotationX, rotationY, _throwData.RotationZ);
         }
 
-        private void ApplyForces(Transform selfTransform, Transform currentContainer, Rigidbody rigidbody,
+        private void ApplyForces(
+            Transform selfTransform,
+            Transform currentContainer,
+            Rigidbody rigidbody,
             WeaponType weaponType)
         {
             Vector3 throwDirection = currentContainer.forward;
             Vector3 rotationDirection = weaponType == WeaponType.Range ? selfTransform.up : selfTransform.forward;
             rigidbody.AddTorque(rotationDirection * _throwData.RotationForce, ForceMode.VelocityChange);
             rigidbody.AddForce(throwDirection * _throwData.Force, ForceMode.Impulse);
-        }
-
-        public async UniTask WaitingThrowEnd(Rigidbody rigidbody, CancellationToken cancellationToken,
-            Action onThrowEndCallback)
-        {
-            while (rigidbody.IsSleeping() == false)
-            {
-                await UniTask.Yield(cancellationToken);
-            }
-
-            onThrowEndCallback.Invoke();
         }
     }
 }

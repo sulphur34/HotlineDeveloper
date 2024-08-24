@@ -1,25 +1,28 @@
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
-public class PlayerPrefsResetEditor : EditorWindow
+namespace Editor
 {
-    [MenuItem("Tools/Reset PlayerPrefs")]
-    public static void ShowWindow()
+    public class PlayerPrefsResetEditor : EditorWindow
     {
-        EditorWindow.GetWindow(typeof(PlayerPrefsResetEditor));
-    }
-
-    private void OnGUI()
-    {
-        GUILayout.Label("PlayerPrefs Reset Tool", EditorStyles.boldLabel);
-
-        if (GUILayout.Button("Reset All PlayerPrefs"))
+        [MenuItem("Tools/Reset PlayerPrefs")]
+        public static void ShowWindow()
         {
-            if (EditorUtility.DisplayDialog("Reset PlayerPrefs", "Are you sure you want to reset all PlayerPrefs? This action cannot be undone.", "Yes", "No"))
+            EditorWindow.GetWindow(typeof(PlayerPrefsResetEditor));
+        }
+
+        private void OnGUI()
+        {
+            GUILayout.Label("PlayerPrefs Reset Tool", EditorStyles.boldLabel);
+
+            if (GUILayout.Button("Reset All PlayerPrefs"))
             {
-                PlayerPrefs.DeleteAll();
-                PlayerPrefs.Save();
-                Debug.Log("All PlayerPrefs have been reset.");
+                if (EditorUtility.DisplayDialog("Reset PlayerPrefs", "Are you sure you want to reset all PlayerPrefs? This action cannot be undone.", "Yes", "No"))
+                {
+                    PlayerPrefs.DeleteAll();
+                    PlayerPrefs.Save();
+                    Debug.Log("All PlayerPrefs have been reset.");
+                }
             }
         }
     }

@@ -1,6 +1,7 @@
+using Modules.DamageReceiverSystem;
 using UnityEngine;
 
-namespace Modules.DamagerSystem
+namespace Modules.DamagerSystem.DamageInflictStrategies
 {
     internal class BulletStrategy : MonoBehaviour, IDamageInflictStrategy
     {

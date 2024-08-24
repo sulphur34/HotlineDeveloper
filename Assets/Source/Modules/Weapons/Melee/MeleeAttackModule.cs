@@ -9,7 +9,7 @@ namespace Modules.Weapons.Melee
     {
         private readonly Collider _collider;
         private readonly float _attackTime;
-        
+
         private CancellationTokenSource _cancellationTokenSource;
 
         public MeleeAttackModule(Collider collider, float attackTime)
@@ -17,6 +17,11 @@ namespace Modules.Weapons.Melee
             _collider = collider;
             _attackTime = attackTime;
             _cancellationTokenSource = new CancellationTokenSource();
+        }
+
+        public void Dispose()
+        {
+            _cancellationTokenSource?.Dispose();
         }
 
         public bool TryAttack()
@@ -36,11 +41,6 @@ namespace Modules.Weapons.Melee
         {
             await UniTask.Delay(TimeSpan.FromSeconds(_attackTime), cancellationToken: _cancellationTokenSource.Token);
             _collider.enabled = false;
-        }
-
-        public void Dispose()
-        {
-            _cancellationTokenSource?.Dispose();
         }
     }
 }

@@ -1,8 +1,7 @@
-using Plugins.Audio.Core;
 using Modules.InputSystem.PlayerInput;
+using Plugins.Audio.Core;
 using UnityEngine;
 using VContainer;
-using PauseState = Source.Modules.FocusSystem.PauseState;
 
 namespace Modules.PauseMenu
 {
@@ -12,7 +11,7 @@ namespace Modules.PauseMenu
         private readonly PauseState _pauseActiveState;
         private readonly PauseState _pauseInactiveState;
         private readonly InputController _inputController;
-        
+
         private uint _pauseQueueCounter;
 
         [Inject]

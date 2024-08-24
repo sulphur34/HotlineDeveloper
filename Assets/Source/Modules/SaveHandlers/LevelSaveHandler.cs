@@ -1,7 +1,6 @@
+using System;
 using Modules.LevelsSystem;
 using Modules.SavingsSystem;
-using System;
-using System.Linq;
 using VContainer;
 
 namespace Modules.SaveHandlers
@@ -41,7 +40,7 @@ namespace Modules.SaveHandlers
                     return;
 
                 nextLevel.Unlock();
-                data.LevelsData = _levels;
+                data.SetLevelData(_levels);
             });
         }
     }

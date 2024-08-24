@@ -1,4 +1,4 @@
-namespace Modules.DamagerSystem.DamageStrategy
+namespace Modules.DamageReceiverSystem.DamageReceiveStrategies
 {
     internal enum DamageReceiveStrategies
     {
@@ -7,6 +7,6 @@ namespace Modules.DamagerSystem.DamageStrategy
         AlwaysLethal,
         Normal,
         Immortal,
-        LethalAsNormal
+        LethalAsNormal,
     }
 }

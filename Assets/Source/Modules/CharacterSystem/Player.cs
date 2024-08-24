@@ -1,5 +1,4 @@
-using System;
-using Modules.DamagerSystem;
+using Modules.DamageReceiverSystem;
 using Modules.InputSystem.PlayerInput;
 using UnityEngine;
 
@@ -9,7 +8,7 @@ namespace Modules.CharacterSystem
     {
         private InputController _inputController;
         private DamageReceiverView _damageReceiverView;
-        
+
         private void Awake()
         {
             _inputController = GetComponent<InputController>();

@@ -1,4 +1,4 @@
-namespace Modules.Weapons
+namespace Modules.Weapons.ShotStrategies
 {
     internal class SubmachineGunStrategy : PistolStrategy
     {

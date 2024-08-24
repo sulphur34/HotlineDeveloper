@@ -15,9 +15,9 @@ namespace Modules.NextLevelButtonSystem
         private Fade _fade;
 
         internal void Initialize(
-            LevelsData levels, 
-            LevelSceneLoader levelSceneLoader, 
-            SceneLoader sceneLoader, 
+            LevelsData levels,
+            LevelSceneLoader levelSceneLoader,
+            SceneLoader sceneLoader,
             Fade fade,
             int currentLevelIndex)
         {
@@ -32,11 +32,11 @@ namespace Modules.NextLevelButtonSystem
         {
             if (_currentLevelIndex < _levels.Value.Count)
             {
-                _levels.ForLoad += 1;
+                _levels.AdvanceLevel();
                 _levelSceneLoader.Load(_currentLevelIndex + 1);
                 return;
             }
-            
+
             _fade.In();
             _sceneLoader.Load(SceneName.Menu.ToString(), _fade);
         }

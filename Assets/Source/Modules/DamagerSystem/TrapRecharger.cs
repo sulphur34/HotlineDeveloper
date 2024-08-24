@@ -1,5 +1,5 @@
 using System.Collections;
-using Modules.DamagerSystem;
+using Modules.DamagerSystem.DamageInflictStrategies;
 using UnityEngine;
 
 namespace Modules.DamagerSystem
@@ -24,7 +24,7 @@ namespace Modules.DamagerSystem
 
         private void OnDisable()
         {
-            if(_coroutine != null)
+            if (_coroutine != null)
                 StopCoroutine(_coroutine);
         }
 

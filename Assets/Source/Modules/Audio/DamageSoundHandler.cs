@@ -1,4 +1,5 @@
-using Modules.DamagerSystem;
+using System;
+using Modules.DamageReceiverSystem;
 using Plugins.Audio.Utils;
 using UnityEngine;
 
@@ -15,6 +16,10 @@ namespace Modules.Audio
         {
             base.Awake();
             _damageReceiverView = GetComponent<DamageReceiverView>();
+
+            if (_damageReceiverView == null)
+                throw new NullReferenceException("Character object does not contain DamageReceiverView component");
+
             _damageReceiverView.Received += OnReceive;
         }
 
