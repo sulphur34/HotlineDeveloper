@@ -1,7 +1,3 @@
-#if UNITY_EDITOR == false
-using Agava.YandexGames;
-#endif
-
 using Modules.SavingsSystem;
 using Modules.SceneLoaderSystem;
 using System.Collections;
@@ -13,7 +9,7 @@ public class Bootstrap : MonoBehaviour
 
     private IEnumerator Start()
     {
-        yield return StartCoroutine(InitSDK());
+        yield return null;
 
         _saveSystem.Load(data =>
         {
@@ -28,17 +24,8 @@ public class Bootstrap : MonoBehaviour
                 sceneLoader.Load(SceneName.Menu.ToString());
                 return;
             }
-            
+
             sceneLoader.Load(SceneName.Level.ToString() + data.LevelsData.Value[0].Number);
         });
-    }
-
-    private IEnumerator InitSDK()
-    {
-#if UNITY_EDITOR == false
-        yield return YandexGamesSdk.Initialize();
-#else
-        yield return null;
-#endif
     }
 }

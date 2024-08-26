@@ -1,5 +1,4 @@
-﻿using Agava.YandexGames;
-using Modules.PressedButtonSystem;
+﻿using Modules.PressedButtonSystem;
 using System;
 
 namespace Modules.LeaderboardSystem
@@ -10,7 +9,6 @@ namespace Modules.LeaderboardSystem
 
         protected override void MakeOnClick()
         {
-            PlayerAccount.Authorize(() => AuthorizationPerformed?.Invoke());
         }
     }
 }

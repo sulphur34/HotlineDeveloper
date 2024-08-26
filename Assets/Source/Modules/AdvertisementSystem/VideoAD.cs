@@ -9,7 +9,7 @@ namespace Modules.AdvertisementSystem
     public class VideoAD : MonoBehaviour
     {
         private PauseSetter _pauseSetter;
-        
+
         public event Action RewardGained;
         public event Action Closed;
 
@@ -21,12 +21,15 @@ namespace Modules.AdvertisementSystem
 
         public void ShowRewarded()
         {
-            Agava.YandexGames.VideoAd.Show(OnOpenCallBack, OnRewardCallBack, OnCloseCallBack);
+            OnOpenCallBack();
+            OnRewardCallBack();
+            OnCloseCallBack();
         }
 
         public void ShowInter()
         {
-            Agava.YandexGames.InterstitialAd.Show(OnOpenCallBack, OnCloseCallBack);
+            OnOpenCallBack();
+            OnCloseCallBack();
         }
 
         private void OnOpenCallBack()

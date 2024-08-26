@@ -1,5 +1,4 @@
-﻿using Agava.YandexGames;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using VContainer;
 
@@ -14,16 +13,16 @@ namespace Modules.LeaderboardSystem
 
         [Inject]
         public LeaderboardPresenter(
-            Leaderboard leaderboard, 
-            LeaderboardView leaderboardView, 
-            LeaderboardOpenButton openButton, 
+            Leaderboard leaderboard,
+            LeaderboardView leaderboardView,
+            LeaderboardOpenButton openButton,
             AuthorizationButton authorizationButton)
         {
             _leaderboard = leaderboard;
             _view = leaderboardView;
             _openButton = openButton;
             _authorizationButton = authorizationButton;
-            
+
             _openButton.AuthorizationRequested += OnAuthorizationRequested;
             _openButton.Authorized += OnAuthorized;
             _authorizationButton.AuthorizationPerformed += OnAuthorizationPerformed;
@@ -45,7 +44,6 @@ namespace Modules.LeaderboardSystem
 
         private void OnAuthorized()
         {
-            PlayerAccount.RequestPersonalProfileDataPermission();
             _leaderboard.Fill();
             _view.ShowLeaderboard();
         }

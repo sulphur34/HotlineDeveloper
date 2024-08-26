@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using Agava.YandexGames;
 using Modules.FocusSystem;
 
 public class YandexGameReady : MonoBehaviour
@@ -19,10 +17,5 @@ public class YandexGameReady : MonoBehaviour
 
     private void OnCallGameReadyButtonClick()
     {
-#if (UNITY_EDITOR)
-        Debug.Log("Game ready");
-#else
-        YandexGamesSdk.GameReady();
-#endif
     }
 }
