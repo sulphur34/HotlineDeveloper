@@ -1,3 +1,4 @@
+using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
 
 namespace Modules.SceneLoaderSystem
@@ -22,7 +23,8 @@ namespace Modules.SceneLoaderSystem
         private void OnExecuted(IOperationBeforeLoading operation)
         {
             operation.Executed -= OnExecuted;
-            SceneManager.LoadScene(_currentSceneNameForLoad);
+            Addressables.LoadSceneAsync(_currentSceneNameForLoad);
+            //SceneManager.LoadScene(_currentSceneNameForLoad);
         }
     }
 }
