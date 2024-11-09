@@ -13,7 +13,7 @@ namespace Modules.SceneLoaderSystem
 
             if (operation == null)
             {
-                SceneManager.LoadScene(_currentSceneNameForLoad);
+                Addressables.LoadSceneAsync(_currentSceneNameForLoad);
                 return;
             }
 
